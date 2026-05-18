@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opening 3D Project Tracker…</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 1.25rem;
+        background: #0c0c0e;
+        color: #e4e4e7;
+      }
+      a {
+        color: #ff8a80;
+      }
+    </style>
+    <script>
+      (function () {
+        var u = new URL("index.html", location.href);
+        u.searchParams.set("_", String(Date.now()));
+        location.replace(u.toString());
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Loading the app…</p>
+    <p>
+      If you are not redirected,
+      <a id="fallback" href="index.html">open the tracker</a>.
+    </p>
+    <script>
+      var a = document.getElementById("fallback");
+      if (a) {
+        var u = new URL("index.html", location.href);
+        u.searchParams.set("_", String(Date.now()));
+        a.href = u.toString();
+      }
+    </script>
+  </body>
+</html>

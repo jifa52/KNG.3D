@@ -546,6 +546,21 @@ body {
   margin: 0;
 }
 
+.footer__build {
+  margin: 0.55rem 0 0;
+  font-size: 0.72rem;
+  color: var(--muted-2);
+  line-height: 1.45;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__build strong {
+  color: var(--muted);
+  font-weight: 700;
+}
+
 /* --- Dialogs --- */
 
 .dialog {
