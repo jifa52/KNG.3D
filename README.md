@@ -17,7 +17,9 @@ streamlit run streamlit_app.py
 
 Then open the URL Streamlit prints (by default `http://127.0.0.1:8501`). In Cursor you can also run the task **Filament Log: Streamlit**.
 
-**Run without installing anything on your work PC:** deploy the repo to **[Streamlit Community Cloud](https://streamlit.io/cloud)** (free tier). Point the app entry to `streamlit_app.py`. You open the hosted URL in the browser like any other site—no local `streamlit` command required on your laptop.
+**Run without installing anything on your work PC:** deploy the repo to **[Streamlit Community Cloud](https://streamlit.io/cloud)** (free tier). In the deploy form, set **Main file path** to `streamlit_app.py` (or `app.py` if the UI claims the file is missing—both run the same app). Open the hosted URL in your browser.
+
+If Streamlit says the file does not exist even though you see it on GitHub: disconnect and reconnect GitHub in Streamlit, pick the repo again, confirm you are on branch **`main`**, wait a minute after the last push, then retry.
 
 **Important for Streamlit Cloud:** the filesystem there is **ephemeral**. The SQLite database may reset when the app sleeps or redeploys. For data you must not lose, use a hosted database (or keep running the app locally where `filament_usage.db` persists on disk).
 
