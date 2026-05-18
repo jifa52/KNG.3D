@@ -1,11 +1,11 @@
-"""Filament usage tracker — Streamlit + SQLite (local file DB)."""
+"""3D Project Tracker — Streamlit + SQLite (projects + printed parts / filament log)."""
 
 from __future__ import annotations
 
 import re
 import sqlite3
 import uuid
-from datetime import datetime
+from datetime import date, datetime
 from io import BytesIO
 from pathlib import Path
 from typing import Any
@@ -14,7 +14,16 @@ import streamlit as st
 
 DB_PATH = Path(__file__).resolve().parent / "filament_usage.db"
 
-FORM_KEYS = (
+STATUSES = ("Planned", "Queue", "WIP", "Done")
+STATUS_BADGE: dict[str, tuple[str, str]] = {
+    "Planned": ("#9e9e9e", "#121212"),
+    "Queue": ("#fdd835", "#121212"),
+    "WIP": ("#7e57c2", "#f5f5f5"),
+    "Done": ("#43a047", "#f5f5f5"),
+}
+
+PART_FORM_KEYS = (
+    "fm_part_name",
     "fm_brand",
     "fm_material",
     "fm_color",
@@ -30,15 +39,96 @@ FORM_KEYS = (
 def _conn() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH, check_same_thread=False)
     conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA foreign_keys = ON")
     return conn
+
+
+def migrate_legacy(c: sqlite3.Cursor) -> None:
+    cur = c.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name='entries'"
+    )
+    if not cur.fetchone():
+        return
+    cur = c.execute("SELECT COUNT(*) FROM parts")
+    if cur.fetchone()[0] > 0:
+        c.execute("DROP TABLE IF EXISTS entries")
+        return
+
+    pid = str(uuid.uuid4())
+    now = datetime.now().timestamp()
+    today = date.today().isoformat()
+    c.execute(
+        """
+        INSERT INTO projects (
+            id, name, notes, status, started_date, ended_date, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            pid,
+            "Imported filament log",
+            "Migrated from the previous single-table filament log.",
+            "Done",
+            today,
+            today,
+            now,
+            now,
+        ),
+    )
+    for row in c.execute("SELECT * FROM entries").fetchall():
+        d = dict(row)
+        desc = (d.get("description") or "").strip()
+        part_name = (desc.split("\n")[0][:120] if desc else "") or "Imported part"
+        c.execute(
+            """
+            INSERT INTO parts (
+                id, project_id, part_name, brand, material_type, color_hex, description,
+                quantity_grams, print_time_minutes, created_at, updated_at,
+                image_blob, image_name, stl_blob, stl_name
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                d["id"],
+                pid,
+                part_name,
+                d["brand"],
+                d["material_type"],
+                d["color_hex"],
+                d.get("description") or "",
+                d["quantity_grams"],
+                d["print_time_minutes"],
+                d["created_at"],
+                d["updated_at"],
+                d.get("image_blob"),
+                d.get("image_name"),
+                d.get("stl_blob"),
+                d.get("stl_name"),
+            ),
+        )
+    c.execute("DROP TABLE entries")
 
 
 def init_db() -> None:
     with _conn() as c:
         c.execute(
             """
-            CREATE TABLE IF NOT EXISTS entries (
+            CREATE TABLE IF NOT EXISTS projects (
                 id TEXT PRIMARY KEY,
+                name TEXT NOT NULL,
+                notes TEXT,
+                status TEXT NOT NULL DEFAULT 'Planned',
+                started_date TEXT NOT NULL,
+                ended_date TEXT,
+                created_at REAL NOT NULL,
+                updated_at REAL NOT NULL
+            )
+            """
+        )
+        c.execute(
+            """
+            CREATE TABLE IF NOT EXISTS parts (
+                id TEXT PRIMARY KEY,
+                project_id TEXT NOT NULL,
+                part_name TEXT NOT NULL,
                 brand TEXT NOT NULL,
                 material_type TEXT NOT NULL,
                 color_hex TEXT NOT NULL,
@@ -50,41 +140,93 @@ def init_db() -> None:
                 image_blob BLOB,
                 image_name TEXT,
                 stl_blob BLOB,
-                stl_name TEXT
+                stl_name TEXT,
+                FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
             )
             """
         )
+        migrate_legacy(c)
+        c.commit()
 
 
-def list_entries() -> list[dict[str, Any]]:
+def list_projects() -> list[dict[str, Any]]:
     with _conn() as c:
         cur = c.execute(
-            "SELECT * FROM entries ORDER BY created_at DESC, id DESC"
+            """
+            SELECT p.*,
+                   (SELECT COUNT(*) FROM parts x WHERE x.project_id = p.id) AS part_count,
+                   (SELECT COALESCE(SUM(quantity_grams), 0) FROM parts x WHERE x.project_id = p.id) AS total_grams
+            FROM projects p
+            ORDER BY p.updated_at DESC, p.id DESC
+            """
         )
         return [dict(r) for r in cur.fetchall()]
 
 
-def get_entry(entry_id: str) -> dict[str, Any] | None:
+def get_project(project_id: str) -> dict[str, Any] | None:
     with _conn() as c:
-        cur = c.execute("SELECT * FROM entries WHERE id = ?", (entry_id,))
+        cur = c.execute("SELECT * FROM projects WHERE id = ?", (project_id,))
         row = cur.fetchone()
         return dict(row) if row else None
 
 
-def upsert_entry(row: dict[str, Any]) -> None:
+def upsert_project(row: dict[str, Any]) -> None:
     with _conn() as c:
         c.execute(
             """
-            INSERT INTO entries (
-                id, brand, material_type, color_hex, description,
+            INSERT INTO projects (
+                id, name, notes, status, started_date, ended_date, created_at, updated_at
+            ) VALUES (
+                :id, :name, :notes, :status, :started_date, :ended_date, :created_at, :updated_at
+            )
+            ON CONFLICT(id) DO UPDATE SET
+                name = excluded.name,
+                notes = excluded.notes,
+                status = excluded.status,
+                started_date = excluded.started_date,
+                ended_date = excluded.ended_date,
+                updated_at = excluded.updated_at
+            """,
+            row,
+        )
+
+
+def delete_project(project_id: str) -> None:
+    with _conn() as c:
+        c.execute("DELETE FROM projects WHERE id = ?", (project_id,))
+
+
+def list_parts(project_id: str) -> list[dict[str, Any]]:
+    with _conn() as c:
+        cur = c.execute(
+            "SELECT * FROM parts WHERE project_id = ? ORDER BY created_at DESC, id DESC",
+            (project_id,),
+        )
+        return [dict(r) for r in cur.fetchall()]
+
+
+def get_part(part_id: str) -> dict[str, Any] | None:
+    with _conn() as c:
+        cur = c.execute("SELECT * FROM parts WHERE id = ?", (part_id,))
+        row = cur.fetchone()
+        return dict(row) if row else None
+
+
+def upsert_part(row: dict[str, Any]) -> None:
+    with _conn() as c:
+        c.execute(
+            """
+            INSERT INTO parts (
+                id, project_id, part_name, brand, material_type, color_hex, description,
                 quantity_grams, print_time_minutes, created_at, updated_at,
                 image_blob, image_name, stl_blob, stl_name
             ) VALUES (
-                :id, :brand, :material_type, :color_hex, :description,
+                :id, :project_id, :part_name, :brand, :material_type, :color_hex, :description,
                 :quantity_grams, :print_time_minutes, :created_at, :updated_at,
                 :image_blob, :image_name, :stl_blob, :stl_name
             )
             ON CONFLICT(id) DO UPDATE SET
+                part_name = excluded.part_name,
                 brand = excluded.brand,
                 material_type = excluded.material_type,
                 color_hex = excluded.color_hex,
@@ -101,13 +243,22 @@ def upsert_entry(row: dict[str, Any]) -> None:
         )
 
 
-def delete_entry(entry_id: str) -> None:
+def delete_part(part_id: str) -> None:
     with _conn() as c:
-        c.execute("DELETE FROM entries WHERE id = ?", (entry_id,))
+        c.execute("DELETE FROM parts WHERE id = ?", (part_id,))
 
 
-def unique_brands(entries: list[dict[str, Any]]) -> list[str]:
-    brands = {e["brand"] for e in entries if e.get("brand")}
+def touch_project_updated(project_id: str) -> None:
+    with _conn() as c:
+        c.execute(
+            "UPDATE projects SET updated_at = ? WHERE id = ?",
+            (datetime.now().timestamp(), project_id),
+        )
+
+
+def unique_brands_for_project(project_id: str) -> list[str]:
+    parts = list_parts(project_id)
+    brands = {p["brand"] for p in parts if p.get("brand")}
     return sorted(brands, key=str.lower)
 
 
@@ -141,32 +292,44 @@ def safe_hex_color(value: Any) -> str:
     return "#888888"
 
 
-def filter_entries(entries: list[dict[str, Any]], q: str) -> list[dict[str, Any]]:
+def status_badge_html(status: str) -> str:
+    stt = status if status in STATUS_BADGE else "Planned"
+    bg, fg = STATUS_BADGE[stt]
+    return (
+        f"<span style='display:inline-block;padding:0.2rem 0.55rem;border-radius:999px;"
+        f"font-size:0.78rem;font-weight:700;background:{bg};color:{fg};"
+        f"border:1px solid rgba(0,0,0,0.25);'>{stt}</span>"
+    )
+
+
+def filter_parts(parts: list[dict[str, Any]], q: str) -> list[dict[str, Any]]:
     q = (q or "").strip().lower()
     if not q:
-        return entries
+        return parts
 
-    def hay(e: dict[str, Any]) -> str:
-        parts = [
-            str(e.get("brand") or ""),
-            str(e.get("material_type") or ""),
-            str(e.get("description") or ""),
-            str(e.get("color_hex") or ""),
+    def hay(p: dict[str, Any]) -> str:
+        parts_ = [
+            str(p.get("part_name") or ""),
+            str(p.get("brand") or ""),
+            str(p.get("material_type") or ""),
+            str(p.get("description") or ""),
+            str(p.get("color_hex") or ""),
         ]
-        return " ".join(parts).lower()
+        return " ".join(parts_).lower()
 
-    return [e for e in entries if q in hay(e)]
+    return [p for p in parts if q in hay(p)]
 
 
-def clear_usage_form_state() -> None:
-    for k in FORM_KEYS:
+def clear_part_form_state() -> None:
+    for k in PART_FORM_KEYS:
         if k in st.session_state:
             del st.session_state[k]
-    st.session_state.edit_id = None
-    st.session_state._last_synced_edit = None
+    st.session_state.edit_part_id = None
+    st.session_state._last_synced_part = None
 
 
-def apply_row_to_form_state(row: dict[str, Any]) -> None:
+def apply_part_row_to_form(row: dict[str, Any]) -> None:
+    st.session_state.fm_part_name = row["part_name"]
     st.session_state.fm_brand = row["brand"]
     st.session_state.fm_material = row["material_type"]
     hexv = row["color_hex"] or "#e53935"
@@ -198,115 +361,250 @@ def inject_css() -> None:
     )
 
 
-@st.dialog("Entry details")
-def entry_dialog(entry: dict[str, Any]) -> None:
-    st.markdown(f"**{entry['brand']}** · {entry['material_type']}")
-    st.caption(f"Color `{entry['color_hex']}` · {format_grams(entry['quantity_grams'])} · {format_duration(entry['print_time_minutes'])}")
-    st.write(entry.get("description") or "—")
+@st.dialog("Printed part")
+def part_dialog(part: dict[str, Any]) -> None:
+    st.markdown(f"### {part['part_name']}")
+    st.caption(f"{part['brand']} · {part['material_type']} · `{part['color_hex']}`")
+    st.caption(f"{format_grams(part['quantity_grams'])} · {format_duration(part['print_time_minutes'])}")
+    st.write(part.get("description") or "—")
 
     c1, c2 = st.columns(2)
     with c1:
         st.caption("Logged")
-        st.write(datetime.fromtimestamp(entry["created_at"]).strftime("%Y-%m-%d %H:%M"))
+        st.write(datetime.fromtimestamp(part["created_at"]).strftime("%Y-%m-%d %H:%M"))
     with c2:
-        if entry.get("updated_at") and entry["updated_at"] != entry.get("created_at"):
+        if part.get("updated_at") and part["updated_at"] != part.get("created_at"):
             st.caption("Updated")
-            st.write(datetime.fromtimestamp(entry["updated_at"]).strftime("%Y-%m-%d %H:%M"))
+            st.write(datetime.fromtimestamp(part["updated_at"]).strftime("%Y-%m-%d %H:%M"))
 
-    if entry.get("image_blob"):
-        st.image(BytesIO(entry["image_blob"]), caption=entry.get("image_name") or "Photo")
+    if part.get("image_blob"):
+        st.image(BytesIO(part["image_blob"]), caption=part.get("image_name") or "Photo")
 
-    if entry.get("stl_blob") and entry.get("stl_name"):
+    if part.get("stl_blob") and part.get("stl_name"):
         st.download_button(
-            label=f"Download STL ({entry['stl_name']})",
-            data=entry["stl_blob"],
-            file_name=entry["stl_name"],
+            label=f"Download STL ({part['stl_name']})",
+            data=part["stl_blob"],
+            file_name=part["stl_name"],
             mime="model/stl",
-            key=f"dl_stl_{entry['id']}",
+            key=f"dl_stl_{part['id']}",
         )
 
     b1, b2, _ = st.columns([1, 1, 3])
     with b1:
-        if st.button("Edit in form", key=f"dlg_edit_{entry['id']}"):
-            st.session_state.edit_id = entry["id"]
-            st.session_state.needs_form_sync = True
+        if st.button("Edit in form", key=f"pdlg_edit_{part['id']}"):
+            st.session_state.edit_part_id = part["id"]
+            st.session_state.needs_part_form_sync = True
             st.rerun()
     with b2:
-        if st.button("Delete", type="secondary", key=f"dlg_del_{entry['id']}"):
-            delete_entry(entry["id"])
-            if st.session_state.get("edit_id") == entry["id"]:
-                clear_usage_form_state()
-            st.toast("Entry deleted.", icon="🗑️")
+        if st.button("Delete part", type="secondary", key=f"pdlg_del_{part['id']}"):
+            delete_part(part["id"])
+            if st.session_state.get("edit_part_id") == part["id"]:
+                clear_part_form_state()
+            touch_project_updated(part["project_id"])
+            st.toast("Part deleted.", icon="🗑️")
             st.rerun()
 
 
-def main() -> None:
-    st.set_page_config(
-        page_title="Filament Log — KNG.3D",
-        page_icon="🧵",
-        layout="wide",
-        initial_sidebar_state="collapsed",
-    )
-    inject_css()
-    init_db()
+@st.dialog("Edit project")
+def edit_project_dialog(project: dict[str, Any]) -> None:
+    with st.form(f"edit_proj_{project['id']}"):
+        name = st.text_input("Project name", value=project["name"])
+        notes = st.text_area("Notes", value=project.get("notes") or "", height=90)
+        status = st.selectbox("Status", STATUSES, index=STATUSES.index(project["status"]) if project["status"] in STATUSES else 0)
+        sd = st.date_input("Start date", value=date.fromisoformat(project["started_date"]))
+        has_end = st.checkbox("Project has ended", value=bool(project.get("ended_date")))
+        ed_val = date.fromisoformat(project["ended_date"]) if project.get("ended_date") else date.today()
+        ed = st.date_input("End date", value=ed_val) if has_end else None
+        save = st.form_submit_button("Save project", type="primary")
 
-    if "edit_id" not in st.session_state:
-        st.session_state.edit_id = None
-    if "_last_synced_edit" not in st.session_state:
-        st.session_state._last_synced_edit = None
+    if save:
+        if not (name or "").strip():
+            st.error("Project name is required.")
+            return
+        now = datetime.now().timestamp()
+        ended = ed.isoformat() if has_end and ed else None
+        upsert_project(
+            {
+                "id": project["id"],
+                "name": name.strip(),
+                "notes": (notes or "").strip(),
+                "status": status,
+                "started_date": sd.isoformat(),
+                "ended_date": ended,
+                "created_at": project["created_at"],
+                "updated_at": now,
+            }
+        )
+        st.toast("Project saved.", icon="✔")
+        st.rerun()
 
-    if st.session_state.pop("just_saved", False):
-        st.success("Saved. Open the **History** tab to review entries.")
 
-    if st.session_state.pop("needs_form_sync", False):
-        eid = st.session_state.get("edit_id")
-        if eid:
-            row = get_entry(eid)
-            if row:
-                apply_row_to_form_state(row)
-                st.session_state._last_synced_edit = eid
+def render_project_list() -> None:
+    projects = list_projects()
+    total_parts = sum(int(p.get("part_count") or 0) for p in projects)
+    total_g = sum(float(p.get("total_grams") or 0) for p in projects)
 
-    if st.session_state.get("edit_id") and st.session_state.get("_last_synced_edit") != st.session_state.get("edit_id"):
-        row = get_entry(st.session_state.edit_id)
-        if row:
-            apply_row_to_form_state(row)
-            st.session_state._last_synced_edit = st.session_state.edit_id
-
-    all_entries = list_entries()
-    brands = unique_brands(all_entries)
-    total_g = sum(float(e["quantity_grams"] or 0) for e in all_entries)
-
-    st.title("Filament Log")
-    st.caption("Track grams, brand, material, color, print time, notes, and optional photo + STL.")
-
-    m1, m2, _ = st.columns([1, 1, 2])
+    m1, m2, m3, _ = st.columns([1, 1, 1, 2])
     with m1:
-        st.metric("Total used", format_grams(total_g))
+        st.metric("Projects", len(projects))
     with m2:
-        st.metric("Entries", len(all_entries))
+        st.metric("Printed parts", total_parts)
+    with m3:
+        st.metric("Filament logged", format_grams(total_g))
 
-    tab_log, tab_hist = st.tabs(["Log usage", "History"])
+    st.subheader("Your projects")
+    c_new, c_filt = st.columns([1, 2])
+    with c_new:
+        if st.button("➕ New project", type="primary", key="btn_new_project"):
+            st.session_state.new_project_open = True
+            st.rerun()
 
-    with tab_log:
-        if st.session_state.edit_id:
-            st.info(f"Editing entry `{st.session_state.edit_id}`. Save to update, or cancel.")
-            if st.button("Cancel edit", key="cancel_edit"):
-                clear_usage_form_state()
+    with c_filt:
+        fstat = st.multiselect("Filter by status", STATUSES, default=[])
+
+    if st.session_state.get("new_project_open"):
+        with st.expander("Create project", expanded=True):
+            c_disc, _ = st.columns([1, 4])
+            with c_disc:
+                if st.button("Close", key="close_new_project"):
+                    st.session_state.new_project_open = False
+                    st.rerun()
+            with st.form("create_project_form"):
+                pn = st.text_input("Project name", placeholder="e.g. Voron 2.4 build")
+                pnotes = st.text_area("Notes (optional)", height=80)
+                pst = st.selectbox("Starting status", STATUSES, index=0)
+                psd = st.date_input("Start date", value=date.today())
+                has_end = st.checkbox("Set end date now", value=False)
+                ped = st.date_input("End date", value=date.today()) if has_end else None
+                if st.form_submit_button("Create", type="primary"):
+                    if not (pn or "").strip():
+                        st.error("Project name is required.")
+                    else:
+                        pid = str(uuid.uuid4())
+                        now = datetime.now().timestamp()
+                        upsert_project(
+                            {
+                                "id": pid,
+                                "name": pn.strip(),
+                                "notes": (pnotes or "").strip(),
+                                "status": pst,
+                                "started_date": psd.isoformat(),
+                                "ended_date": ped.isoformat() if has_end and ped else None,
+                                "created_at": now,
+                                "updated_at": now,
+                            }
+                        )
+                        st.session_state.new_project_open = False
+                        st.session_state.current_project_id = pid
+                        st.rerun()
+
+    rows = projects
+    if fstat:
+        rows = [p for p in rows if p["status"] in fstat]
+
+    if not projects:
+        st.info("No projects yet — use **➕ New project** to create your first build.")
+        return
+
+    if not rows:
+        st.info("No projects match the selected status filters.")
+        return
+
+    for p in rows:
+        cc = st.columns([0.22, 0.28, 0.18, 0.14, 0.18])
+        with cc[0]:
+            st.markdown(status_badge_html(p["status"]), unsafe_allow_html=True)
+            st.caption(f"{p.get('part_count', 0)} parts")
+        with cc[1]:
+            st.markdown(f"**{p['name']}**")
+            snip = (p.get("notes") or "").strip()
+            if len(snip) > 90:
+                snip = snip[:87] + "…"
+            st.caption(snip or "—")
+        with cc[2]:
+            st.caption("Started")
+            st.write(p.get("started_date") or "—")
+        with cc[3]:
+            st.caption("Ended")
+            st.write(p.get("ended_date") or "—")
+        with cc[4]:
+            if st.button("Open", key=f"open_proj_{p['id']}", type="primary"):
+                st.session_state.current_project_id = p["id"]
+                st.session_state.confirm_delete_project_id = None
+                clear_part_form_state()
+                st.rerun()
+            if st.button("Edit", key=f"edit_proj_{p['id']}"):
+                edit_project_dialog(p)
+        st.divider()
+
+
+def render_project_workspace(project: dict[str, Any]) -> None:
+    pid = project["id"]
+    parts = list_parts(pid)
+    brands = unique_brands_for_project(pid)
+    total_g = sum(float(x["quantity_grams"] or 0) for x in parts)
+
+    b1, b2, _ = st.columns([1, 1, 4])
+    with b1:
+        if st.button("← All projects", key="back_projects"):
+            st.session_state.current_project_id = None
+            st.session_state.confirm_delete_project_id = None
+            clear_part_form_state()
+            st.rerun()
+    with b2:
+        if st.button("Edit project", key="edit_proj_inline"):
+            edit_project_dialog(project)
+
+    st.markdown(f"# {project['name']}")
+    st.markdown(status_badge_html(project["status"]), unsafe_allow_html=True)
+    st.caption(f"Started **{project.get('started_date') or '—'}** · Ended **{project.get('ended_date') or '—'}**")
+
+    if (project.get("notes") or "").strip():
+        st.write(project["notes"])
+
+    m1, m2, _ = st.columns([1, 1, 3])
+    with m1:
+        st.metric("Parts in this project", len(parts))
+    with m2:
+        st.metric("Filament in this project", format_grams(total_g))
+
+    danger_cols = st.columns([1, 1, 4])
+    with danger_cols[0]:
+        if st.button("Delete project", type="secondary", key="del_proj"):
+            st.session_state.confirm_delete_project_id = pid
+    if st.session_state.get("confirm_delete_project_id") == pid:
+        st.warning("This deletes the project and **all** printed parts inside it.")
+        c_y, c_n = st.columns(2)
+        with c_y:
+            if st.button("Yes, delete", type="primary", key="del_proj_yes"):
+                delete_project(pid)
+                st.session_state.current_project_id = None
+                st.session_state.confirm_delete_project_id = None
+                clear_part_form_state()
+                st.rerun()
+        with c_n:
+            if st.button("Cancel", key="del_proj_no"):
+                st.session_state.confirm_delete_project_id = None
                 st.rerun()
 
-        with st.form("usage_form", clear_on_submit=False):
-            st.subheader("New entry" if not st.session_state.edit_id else "Update entry")
+    tab_parts, tab_about = st.tabs(["Printed parts", "Project summary"])
 
-            brand = st.text_input(
-                "Brand",
-                placeholder="e.g. Polymaker",
-                key="fm_brand",
+    with tab_parts:
+        if st.session_state.get("edit_part_id"):
+            st.info("Editing a printed part — save the form below or cancel.")
+            if st.button("Cancel part edit", key="cancel_part_edit"):
+                clear_part_form_state()
+                st.rerun()
+
+        with st.form("part_form", clear_on_submit=False):
+            st.subheader("Add printed part" if not st.session_state.edit_part_id else "Update printed part")
+            part_name = st.text_input(
+                "Part name",
+                placeholder="e.g. Front left motor mount",
+                key="fm_part_name",
             )
-            material = st.text_input(
-                "Material type",
-                placeholder="e.g. PLA",
-                key="fm_material",
-            )
+            brand = st.text_input("Filament brand", placeholder="e.g. Polymaker", key="fm_brand")
+            material = st.text_input("Material", placeholder="e.g. PLA", key="fm_material")
 
             c1, c2, c3 = st.columns([1, 1, 2])
             with c1:
@@ -337,48 +635,56 @@ def main() -> None:
                 )
 
             description = st.text_area(
-                "Description / what it was for",
-                placeholder="Part name, project, notes…",
+                "Notes",
+                placeholder="Slicer settings, failures, assembly notes…",
                 key="fm_description",
-                height=110,
+                height=100,
             )
 
             img = st.file_uploader("Photo (optional)", type=["png", "jpg", "jpeg", "webp", "gif"], key="fm_image")
             stl = st.file_uploader("STL reference (optional)", type=["stl"], key="fm_stl")
 
             submitted = st.form_submit_button(
-                "Save entry" if not st.session_state.edit_id else "Update entry",
+                "Save part" if not st.session_state.edit_part_id else "Update part",
                 type="primary",
             )
 
         if brands:
-            st.markdown('<p class="hint">Tip: brands you have used before: ' + ", ".join(brands[:12]) + ("…" if len(brands) > 12 else "") + "</p>", unsafe_allow_html=True)
+            st.markdown(
+                '<p class="hint">Brands used in this project: '
+                + ", ".join(brands[:14])
+                + ("…" if len(brands) > 14 else "")
+                + "</p>",
+                unsafe_allow_html=True,
+            )
 
         if submitted:
-            if not (brand or "").strip() or not (material or "").strip():
-                st.error("Brand and material are required.")
+            if not (part_name or "").strip() or not (brand or "").strip() or not (material or "").strip():
+                st.error("Part name, brand, and material are required.")
             else:
                 now = datetime.now().timestamp()
-                eid = st.session_state.edit_id or str(uuid.uuid4())
-                old = get_entry(eid) if st.session_state.edit_id else None
+                part_id = st.session_state.edit_part_id or str(uuid.uuid4())
+                old = get_part(part_id) if st.session_state.edit_part_id else None
                 created = old["created_at"] if old else now
 
                 img_bytes = img.getvalue() if img else None
                 img_name = img.name if img else None
-                if st.session_state.edit_id and img_bytes is None and old:
+                if st.session_state.edit_part_id and img_bytes is None and old:
                     img_bytes = old.get("image_blob")
                     img_name = old.get("image_name")
 
                 stl_bytes = stl.getvalue() if stl else None
                 stl_name = stl.name if stl else None
-                if st.session_state.edit_id and stl_bytes is None and old:
+                if st.session_state.edit_part_id and stl_bytes is None and old:
                     stl_bytes = old.get("stl_blob")
                     stl_name = old.get("stl_name")
 
                 print_mins = int(hours or 0) * 60 + int(minutes or 0)
 
                 row = {
-                    "id": eid,
+                    "id": part_id,
+                    "project_id": pid,
+                    "part_name": part_name.strip(),
                     "brand": brand.strip(),
                     "material_type": material.strip(),
                     "color_hex": color,
@@ -392,20 +698,23 @@ def main() -> None:
                     "stl_blob": stl_bytes,
                     "stl_name": stl_name,
                 }
-                upsert_entry(row)
-                clear_usage_form_state()
-                st.session_state.just_saved = True
+                upsert_part(row)
+                touch_project_updated(pid)
+                clear_part_form_state()
+                st.session_state.just_saved_part = True
                 st.rerun()
 
-    with tab_hist:
-        q = st.text_input("Search", placeholder="Brand, material, description, color…", key="search_q")
-        rows = filter_entries(all_entries, st.session_state.get("search_q", ""))
+        if st.session_state.pop("just_saved_part", False):
+            st.success("Printed part saved.")
 
-        if not rows:
-            st.write("No entries match your search." if q else "No entries yet — add one under **Log usage**.")
+        q = st.text_input("Search parts", placeholder="Name, brand, material, notes…", key="part_search_q")
+        filtered = filter_parts(parts, st.session_state.get("part_search_q", ""))
+
+        if not filtered:
+            st.write("No parts match your search." if q else "No printed parts yet — add one with the form above.")
         else:
-            for e in rows:
-                cc = st.columns([0.12, 0.35, 0.35, 0.18])
+            for e in filtered:
+                cc = st.columns([0.12, 0.38, 0.34, 0.16])
                 with cc[0]:
                     hx = safe_hex_color(e.get("color_hex"))
                     st.markdown(
@@ -414,17 +723,66 @@ def main() -> None:
                         unsafe_allow_html=True,
                     )
                 with cc[1]:
-                    st.markdown(f"**{e['brand']}** · {e['material_type']}")
-                    desc = (e.get("description") or "").strip() or "—"
-                    if len(desc) > 100:
-                        desc = desc[:97] + "…"
-                    st.caption(desc)
+                    st.markdown(f"**{e['part_name']}**")
+                    st.caption(f"{e['brand']} · {e['material_type']}")
                 with cc[2]:
                     st.write(format_grams(e["quantity_grams"]))
                     st.caption(format_duration(e["print_time_minutes"]))
                 with cc[3]:
-                    if st.button("Open", key=f"open_{e['id']}"):
-                        entry_dialog(e)
+                    if st.button("Open", key=f"open_part_{e['id']}"):
+                        part_dialog(e)
+
+    with tab_about:
+        st.write("Statuses use these colors:")
+        for s in STATUSES:
+            st.markdown(status_badge_html(s) + f" — **{s}**", unsafe_allow_html=True)
+
+
+def main() -> None:
+    st.set_page_config(
+        page_title="3D Project Tracker — KNG.3D",
+        page_icon="📦",
+        layout="wide",
+        initial_sidebar_state="collapsed",
+    )
+    inject_css()
+    init_db()
+
+    if "current_project_id" not in st.session_state:
+        st.session_state.current_project_id = None
+    if "edit_part_id" not in st.session_state:
+        st.session_state.edit_part_id = None
+    if "_last_synced_part" not in st.session_state:
+        st.session_state._last_synced_part = None
+
+    if st.session_state.pop("needs_part_form_sync", False):
+        pe = st.session_state.get("edit_part_id")
+        if pe:
+            row = get_part(pe)
+            if row:
+                apply_part_row_to_form(row)
+                st.session_state._last_synced_part = pe
+
+    if st.session_state.get("edit_part_id") and st.session_state.get("_last_synced_part") != st.session_state.get("edit_part_id"):
+        row = get_part(st.session_state.edit_part_id)
+        if row:
+            apply_part_row_to_form(row)
+            st.session_state._last_synced_part = st.session_state.edit_part_id
+
+    st.title("3D Project Tracker")
+    st.caption("Organize builds into projects. Each **printed part** is a filament log entry (brand, material, color, grams, time, STL, photo).")
+
+    pid = st.session_state.current_project_id
+    if pid:
+        project = get_project(pid)
+        if not project:
+            st.error("That project no longer exists.")
+            st.session_state.current_project_id = None
+            clear_part_form_state()
+            st.stop()
+        render_project_workspace(project)
+    else:
+        render_project_list()
 
 
 if __name__ == "__main__":
