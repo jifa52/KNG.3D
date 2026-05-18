@@ -1,8 +1,9 @@
 [theme]
-primaryColor = "#d32f2f"
-backgroundColor = "#0d0d0d"
-secondaryBackgroundColor = "#161616"
-textColor = "#f5f5f5"
+# Premium SaaS: deep indigo accent, light shell, slate neutrals (not aggressive red)
+primaryColor = "#4338ca"
+backgroundColor = "#f1f5f9"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#0f172a"
 font = "sans serif"
 
 [server]

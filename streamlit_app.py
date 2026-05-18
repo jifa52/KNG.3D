@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import html
 import re
 import sqlite3
 import uuid
@@ -369,7 +370,7 @@ def apply_part_row_to_form(row: dict[str, Any]) -> None:
     st.session_state.fm_part_name = row["part_name"]
     st.session_state.fm_brand = row["brand"]
     st.session_state.fm_material = row["material_type"]
-    hexv = row["color_hex"] or "#e53935"
+    hexv = row["color_hex"] or "#6366f1"
     if not str(hexv).startswith("#"):
         hexv = f"#{hexv}"
     st.session_state.fm_color = hexv
@@ -388,40 +389,170 @@ def inject_css() -> None:
     st.markdown(
         """
         <style>
-          div[data-testid="stMetricValue"] { font-weight: 700; }
-          .block-container { padding-top: 1.25rem; }
-          h1 { letter-spacing: -0.02em; }
-          .hint { color: #9a9a9a; font-size: 0.85rem; margin-top: -0.5rem; }
-          .notion-wrap {
-            background: #ffffff;
-            color: #37352f;
-            border: 1px solid #e8e7e4;
-            border-radius: 12px;
-            padding: 10px 14px 14px;
-            margin-bottom: 14px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+          :root {
+            --saas-border: #e2e8f0;
+            --saas-border-strong: #cbd5e1;
+            --saas-muted: #64748b;
+            --saas-muted-2: #94a3b8;
+            --saas-surface: #ffffff;
+            --saas-indigo: #4338ca;
+            --saas-indigo-hover: #3730a3;
+            --saas-slate-700: #334155;
           }
-          .notion-wrap .stCaption { color: #9b9a97 !important; }
-          .notion-head {
-            display: grid;
-            grid-template-columns: 2.1fr 1.05fr 0.85fr 1.2fr 1.35fr;
-            gap: 8px;
-            font-size: 0.72rem;
+          .block-container {
+            padding-top: 1.5rem;
+            max-width: 1180px;
+          }
+          h1 {
+            letter-spacing: -0.035em;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.15rem;
+            font-size: 2rem;
+          }
+          .saas-page-lead {
+            margin: 0 0 1.35rem 0;
+            color: var(--saas-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+          }
+          .saas-section-title {
+            margin: 0 0 0.35rem 0;
+            font-size: 1.15rem;
             font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+          }
+          .saas-section-hint {
+            margin: 0 0 1rem 0;
+            color: var(--saas-muted-2);
+            font-size: 0.82rem;
+            line-height: 1.45;
+          }
+          /* Stats — equal visual weight, strict card grid */
+          div[data-testid="stMetric"] {
+            background: var(--saas-surface);
+            border: 1px solid var(--saas-border);
+            border-radius: 12px;
+            padding: 1rem 1.2rem 1.15rem;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+            min-height: 5.5rem;
+            box-sizing: border-box;
+          }
+          div[data-testid="stMetric"] label {
+            color: var(--saas-muted) !important;
+            font-size: 0.72rem !important;
+            font-weight: 600 !important;
             text-transform: uppercase;
             letter-spacing: 0.06em;
-            color: #9b9a97;
-            border-bottom: 1px solid #ececea;
-            padding: 4px 2px 8px;
-            margin-bottom: 4px;
           }
-          .part-panel {
-            background: linear-gradient(180deg, #1e1e24 0%, #16161a 100%);
-            border: 1px solid #2e2e36;
-            border-radius: 12px;
-            padding: 12px 14px 14px;
+          div[data-testid="stMetricValue"] {
+            font-weight: 700 !important;
+            font-size: 1.55rem !important;
+            color: #0f172a !important;
+            letter-spacing: -0.02em;
           }
-          .part-panel h3 { margin-top: 0; }
+          /* Primary CTA — deep indigo (not red) */
+          button[data-testid="baseButton-primary"] {
+            background-color: var(--saas-indigo) !important;
+            border-color: var(--saas-indigo-hover) !important;
+            color: #f8fafc !important;
+            font-weight: 600 !important;
+            border-radius: 10px !important;
+            padding: 0.5rem 1.1rem !important;
+          }
+          button[data-testid="baseButton-primary"]:hover {
+            background-color: var(--saas-indigo-hover) !important;
+            border-color: #312e81 !important;
+            color: #ffffff !important;
+          }
+          /* Secondary / neutral — industrial slate */
+          button[data-testid="baseButton-secondary"] {
+            background-color: #f8fafc !important;
+            color: var(--saas-slate-700) !important;
+            border: 1px solid var(--saas-border-strong) !important;
+            font-weight: 600 !important;
+            border-radius: 10px !important;
+            padding: 0.5rem 1rem !important;
+          }
+          button[data-testid="baseButton-secondary"]:hover {
+            background-color: #e2e8f0 !important;
+            border-color: #94a3b8 !important;
+            color: #0f172a !important;
+          }
+          /* Project & selection cards */
+          div[data-testid="stVerticalBlockBorderWrapper"] {
+            background: var(--saas-surface) !important;
+            border: 1px solid var(--saas-border) !important;
+            border-radius: 14px !important;
+            padding: 1.15rem 1.3rem 1.25rem !important;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+            margin-bottom: 0.85rem;
+          }
+          .saas-grid-head {
+            display: grid;
+            grid-template-columns: 2fr 1.05fr 0.95fr 1.15fr 0.95fr 1.1fr;
+            gap: 10px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: #94a3b8;
+            margin: 0 0 12px 0;
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 10px 12px;
+            border: 1px solid var(--saas-border);
+            box-sizing: border-box;
+          }
+          p.saas-project-title {
+            margin: 0 0 0.35rem 0;
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+          }
+          p.saas-meta-notes {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--saas-muted);
+            line-height: 1.4;
+          }
+          p.saas-meta-dim {
+            margin: 0;
+            font-size: 0.78rem;
+            color: var(--saas-muted-2);
+            font-weight: 500;
+          }
+          p.saas-meta-strong {
+            margin: 0;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--saas-muted);
+          }
+          div[data-testid="stMultiSelect"] {
+            margin-bottom: 1rem !important;
+          }
+          div[data-testid="stMultiSelect"] label p {
+            font-size: 0.78rem !important;
+            font-weight: 600 !important;
+            color: var(--saas-muted) !important;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+          .hint {
+            color: var(--saas-muted) !important;
+            font-size: 0.85rem;
+            margin-top: -0.35rem;
+          }
+          h2.saas-h2-project {
+            margin: 0 0 0.35rem 0;
+            font-size: 1.65rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #0f172a;
+          }
         </style>
         """,
         unsafe_allow_html=True,
@@ -467,19 +598,39 @@ def make_status_save_callback(project_id: str):
 
 
 def render_part_side_panel(part: dict[str, Any]) -> None:
-    st.markdown("##### Part detail")
-    st.caption(f"{part['brand']} · {part['material_type']} · `{part['color_hex']}`")
-    st.caption(f"{format_grams(part['quantity_grams'])} · {format_duration(part['print_time_minutes'])}")
-    st.write(part.get("description") or "—")
+    st.markdown(
+        f'<p class="saas-section-title" style="font-size:1.05rem">{html.escape(part["part_name"])}</p>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f'<p class="saas-meta-dim">{html.escape(part["brand"])} · {html.escape(part["material_type"])} · '
+        f'<code style="color:#64748b">{html.escape(str(part.get("color_hex") or ""))}</code></p>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f'<p class="saas-meta-strong">{html.escape(format_grams(part["quantity_grams"]))} · '
+        f'{html.escape(format_duration(part["print_time_minutes"]))}</p>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f'<p class="saas-meta-notes">{html.escape(part.get("description") or "—")}</p>',
+        unsafe_allow_html=True,
+    )
 
     c1, c2 = st.columns(2)
     with c1:
-        st.caption("Logged")
-        st.write(datetime.fromtimestamp(part["created_at"]).strftime("%Y-%m-%d %H:%M"))
+        st.markdown('<p class="saas-meta-dim">Logged</p>', unsafe_allow_html=True)
+        st.markdown(
+            f'<p class="saas-meta-strong">{html.escape(datetime.fromtimestamp(part["created_at"]).strftime("%Y-%m-%d %H:%M"))}</p>',
+            unsafe_allow_html=True,
+        )
     with c2:
         if part.get("updated_at") and part["updated_at"] != part.get("created_at"):
-            st.caption("Updated")
-            st.write(datetime.fromtimestamp(part["updated_at"]).strftime("%Y-%m-%d %H:%M"))
+            st.markdown('<p class="saas-meta-dim">Updated</p>', unsafe_allow_html=True)
+            st.markdown(
+                f'<p class="saas-meta-strong">{html.escape(datetime.fromtimestamp(part["updated_at"]).strftime("%Y-%m-%d %H:%M"))}</p>',
+                unsafe_allow_html=True,
+            )
 
     if part.get("image_blob"):
         st.image(BytesIO(part["image_blob"]), caption=part.get("image_name") or "Photo")
@@ -504,7 +655,7 @@ def render_part_side_panel(part: dict[str, Any]) -> None:
             st.session_state.expanded_project_id = None
             st.rerun()
     with b2:
-        if st.button("Close", key=f"side_close_{part['id']}"):
+        if st.button("Close", key=f"side_close_{part['id']}", type="secondary"):
             st.session_state.detail_part_id = None
             st.session_state.detail_part_project_id = None
             st.rerun()
@@ -550,7 +701,7 @@ def part_dialog(part: dict[str, Any]) -> None:
 
     b1, b2, _ = st.columns([1, 1, 3])
     with b1:
-        if st.button("Edit in form", key=f"pdlg_edit_{part['id']}"):
+        if st.button("Edit in form", type="primary", key=f"pdlg_edit_{part['id']}"):
             st.session_state.edit_part_id = part["id"]
             st.session_state.needs_part_form_sync = True
             st.rerun()
@@ -618,12 +769,12 @@ def render_project_list() -> None:
     total_parts = sum(int(p.get("part_count") or 0) for p in projects)
     total_g = sum(float(p.get("total_grams") or 0) for p in projects)
 
-    m1, m2, m3, _ = st.columns([1, 1, 1, 2])
-    with m1:
+    g1, g2, g3 = st.columns(3, gap="large")
+    with g1:
         st.metric("Projects", len(projects))
-    with m2:
+    with g2:
         st.metric("Printed parts", total_parts)
-    with m3:
+    with g3:
         st.metric("Filament logged", format_grams(total_g))
 
     detail_id = st.session_state.get("detail_part_id")
@@ -634,26 +785,30 @@ def render_project_list() -> None:
         side_zone = None
 
     with main_zone:
-        st.subheader("Your projects")
-        st.caption(
-            "Use **parts** to expand a project’s list. **View** opens the right-hand detail panel. "
-            "**Workspace** opens the full page with the printed-part form."
+        st.markdown('<p class="saas-section-title">Your projects</p>', unsafe_allow_html=True)
+        st.markdown(
+            '<p class="saas-section-hint">Expand <strong>parts</strong> to browse. <strong>View</strong> opens the '
+            "detail panel. <strong>Workspace</strong> opens the full printed-part form.</p>",
+            unsafe_allow_html=True,
         )
 
-        c_new, c_filt = st.columns([1, 2])
-        with c_new:
-            if st.button("➕ New project", type="primary", key="btn_new_project"):
-                st.session_state.new_project_open = True
-                st.rerun()
+        if st.button("New project", type="primary", key="btn_new_project"):
+            st.session_state.new_project_open = True
+            st.rerun()
 
-        with c_filt:
-            fstat = st.multiselect("Filter by status", STATUSES, default=[])
+        fstat = st.multiselect(
+            "Filter by status",
+            list(STATUSES),
+            default=[],
+            key="filter_status_projects",
+            help="Show only projects in these statuses. Leave empty to show all.",
+        )
 
         if st.session_state.get("new_project_open"):
             with st.expander("Create project", expanded=True):
                 c_disc, _ = st.columns([1, 4])
                 with c_disc:
-                    if st.button("Close", key="close_new_project"):
+                    if st.button("Close", key="close_new_project", type="secondary"):
                         st.session_state.new_project_open = False
                         st.rerun()
                 with st.form("create_project_form"):
@@ -706,15 +861,15 @@ def render_project_list() -> None:
             st.session_state.expanded_project_id = None
 
         if not projects:
-            st.info("No projects yet — use **➕ New project** to create your first build.")
+            st.info("No projects yet — click **New project** above to create your first build.")
         elif not rows:
             st.info("No projects match the selected status filters.")
         else:
             st.markdown(
-                '<div class="notion-wrap"><div class="notion-head">'
+                '<div class="saas-grid-head">'
                 "<span>Project</span><span>Status</span><span>Date</span>"
                 "<span>Opened by</span><span>Parts</span><span>Actions</span>"
-                "</div></div>",
+                "</div>",
                 unsafe_allow_html=True,
             )
 
@@ -725,13 +880,16 @@ def render_project_list() -> None:
                     c1, c2, c3, c4, c5, c6 = st.columns([2.0, 1.05, 0.95, 1.15, 0.95, 1.1])
                     with c1:
                         st.markdown(
-                            f'<p style="margin:0;font-weight:700;color:#1f1f1f">{p["name"]}</p>',
+                            f'<p class="saas-project-title">{html.escape(p["name"])}</p>',
                             unsafe_allow_html=True,
                         )
                         snip = (p.get("notes") or "").strip()
                         if len(snip) > 100:
                             snip = snip[:97] + "…"
-                        st.caption(snip or "—")
+                        st.markdown(
+                            f'<p class="saas-meta-notes">{html.escape(snip or "—")}</p>',
+                            unsafe_allow_html=True,
+                        )
                     with c2:
                         si = STATUSES.index(p["status"]) if p["status"] in STATUSES else 0
                         st.selectbox(
@@ -743,7 +901,10 @@ def render_project_list() -> None:
                             on_change=make_status_save_callback(pid),
                         )
                     with c3:
-                        st.write(format_started_display(p.get("started_date")))
+                        st.markdown(
+                            f'<p class="saas-meta-strong">{html.escape(format_started_display(p.get("started_date")))}</p>',
+                            unsafe_allow_html=True,
+                        )
                     with c4:
                         ob = (p.get("opened_by_name") or "").strip() or "You"
                         av = p.get("opened_by_avatar")
@@ -752,22 +913,26 @@ def render_project_list() -> None:
                             if av:
                                 st.image(BytesIO(av), width=34)
                             else:
-                                ini = initials_from_name(ob)
+                                ini = html.escape(initials_from_name(ob))
                                 st.markdown(
                                     "<div style='width:34px;height:34px;border-radius:50%;display:flex;"
-                                    "align-items:center;justify-content:center;background:#ececea;"
-                                    f"border:1px solid #ddd;font-weight:800;font-size:0.68rem;color:#555'>{ini}</div>",
+                                    "align-items:center;justify-content:center;background:#e2e8f0;"
+                                    f"border:1px solid #cbd5e1;font-weight:800;font-size:0.68rem;color:#475569'>{ini}</div>",
                                     unsafe_allow_html=True,
                                 )
                         with avc2:
-                            st.write(ob)
+                            st.markdown(
+                                f'<p class="saas-meta-dim">{html.escape(ob)}</p>',
+                                unsafe_allow_html=True,
+                            )
                     with c5:
-                        label = "▲ Hide" if exp_id == pid else f"▼ {int(p.get('part_count') or 0)} parts"
-                        if st.button(label, key=f"parts_exp_{pid}"):
+                        n_parts = int(p.get("part_count") or 0)
+                        label = "Hide parts" if exp_id == pid else f"{n_parts} parts"
+                        if st.button(label, key=f"parts_exp_{pid}", type="secondary"):
                             st.session_state.expanded_project_id = None if exp_id == pid else pid
                             st.rerun()
                     with c6:
-                        if st.button("Workspace", key=f"ws_{pid}", help="Full printed-part form"):
+                        if st.button("Workspace", key=f"ws_{pid}", type="secondary", help="Full printed-part form"):
                             st.session_state.current_project_id = pid
                             st.session_state.confirm_delete_project_id = None
                             st.session_state.expanded_project_id = None
@@ -775,13 +940,20 @@ def render_project_list() -> None:
                             st.session_state.detail_part_project_id = None
                             clear_part_form_state()
                             st.rerun()
-                        if st.button("Edit", key=f"row_edit_{pid}"):
+                        if st.button("Edit", key=f"row_edit_{pid}", type="secondary"):
                             edit_project_dialog(p)
 
                     if st.session_state.get("expanded_project_id") == pid:
+                        st.markdown(
+                            f'<p class="saas-meta-dim" style="margin:0.75rem 0 0.5rem 0">Parts in {html.escape(p["name"])}</p>',
+                            unsafe_allow_html=True,
+                        )
                         plist = list_parts(pid)
                         if not plist:
-                            st.caption("No parts yet — use **Workspace** to add printed parts.")
+                            st.markdown(
+                                '<p class="saas-meta-notes">No parts yet — use <strong>Workspace</strong> to add printed parts.</p>',
+                                unsafe_allow_html=True,
+                            )
                         else:
                             for pr in plist:
                                 pc1, pc2, pc3, pc4 = st.columns([0.14, 0.36, 0.34, 0.16])
@@ -789,33 +961,46 @@ def render_project_list() -> None:
                                     hx = safe_hex_color(pr.get("color_hex"))
                                     st.markdown(
                                         f"<div style='width:32px;height:32px;border-radius:8px;background:{hx};"
-                                        "border:1px solid #ccc;margin-top:4px'></div>",
+                                        "border:1px solid #e2e8f0;margin-top:4px'></div>",
                                         unsafe_allow_html=True,
                                     )
                                 with pc2:
-                                    st.markdown(f"**{pr['part_name']}**")
-                                    st.caption(f"{pr['brand']} · {pr['material_type']}")
+                                    st.markdown(
+                                        f'<p class="saas-project-title" style="font-size:0.95rem">{html.escape(pr["part_name"])}</p>',
+                                        unsafe_allow_html=True,
+                                    )
+                                    st.markdown(
+                                        f'<p class="saas-meta-dim">{html.escape(pr["brand"])} · {html.escape(pr["material_type"])}</p>',
+                                        unsafe_allow_html=True,
+                                    )
                                 with pc3:
-                                    st.caption(format_grams(pr["quantity_grams"]))
-                                    st.caption(format_duration(pr["print_time_minutes"]))
+                                    st.markdown(
+                                        f'<p class="saas-meta-strong">{html.escape(format_grams(pr["quantity_grams"]))}</p>',
+                                        unsafe_allow_html=True,
+                                    )
+                                    st.markdown(
+                                        f'<p class="saas-meta-dim">{html.escape(format_duration(pr["print_time_minutes"]))}</p>',
+                                        unsafe_allow_html=True,
+                                    )
                                 with pc4:
-                                    if st.button("View", key=f"pv_{pr['id']}"):
+                                    if st.button("View", key=f"pv_{pr['id']}", type="secondary"):
                                         st.session_state.detail_part_id = pr["id"]
                                         st.session_state.detail_part_project_id = pid
                                         st.rerun()
 
     if side_zone is not None:
         with side_zone:
-            st.markdown("##### Part detail")
-            part = get_part(str(detail_id)) if detail_id else None
-            if not part:
-                st.warning("That part could not be loaded.")
-                if st.button("Close", key="side_close_missing"):
-                    st.session_state.detail_part_id = None
-                    st.session_state.detail_part_project_id = None
-                    st.rerun()
-            else:
-                render_part_side_panel(part)
+            with st.container(border=True):
+                st.markdown('<p class="saas-section-title" style="font-size:1rem">Selection</p>', unsafe_allow_html=True)
+                part = get_part(str(detail_id)) if detail_id else None
+                if not part:
+                    st.warning("That part could not be loaded.")
+                    if st.button("Close", key="side_close_missing", type="secondary"):
+                        st.session_state.detail_part_id = None
+                        st.session_state.detail_part_project_id = None
+                        st.rerun()
+                else:
+                    render_part_side_panel(part)
 
 
 def render_project_workspace(project: dict[str, Any]) -> None:
@@ -826,7 +1011,7 @@ def render_project_workspace(project: dict[str, Any]) -> None:
 
     b1, b2, _ = st.columns([1, 1, 4])
     with b1:
-        if st.button("← All projects", key="back_projects"):
+        if st.button("← All projects", key="back_projects", type="secondary"):
             st.session_state.current_project_id = None
             st.session_state.confirm_delete_project_id = None
             st.session_state.expanded_project_id = None
@@ -835,22 +1020,35 @@ def render_project_workspace(project: dict[str, Any]) -> None:
             clear_part_form_state()
             st.rerun()
     with b2:
-        if st.button("Edit project", key="edit_proj_inline"):
+        if st.button("Edit project", key="edit_proj_inline", type="secondary"):
             edit_project_dialog(project)
 
-    st.markdown(f"# {project['name']}")
+    st.markdown(
+        f'<h2 class="saas-h2-project">{html.escape(project["name"])}</h2>',
+        unsafe_allow_html=True,
+    )
     st.markdown(status_badge_html(project["status"]), unsafe_allow_html=True)
-    st.caption(f"Started **{project.get('started_date') or '—'}** · Ended **{project.get('ended_date') or '—'}**")
+    st.markdown(
+        f'<p class="saas-meta-notes">Started <strong>{html.escape(str(project.get("started_date") or "—"))}</strong> · '
+        f'Ended <strong>{html.escape(str(project.get("ended_date") or "—"))}</strong></p>',
+        unsafe_allow_html=True,
+    )
     ob = (project.get("opened_by_name") or "").strip() or "You"
-    st.caption(f"Opened by: **{ob}**")
+    st.markdown(
+        f'<p class="saas-meta-dim">Opened by <strong style="color:#475569">{html.escape(ob)}</strong></p>',
+        unsafe_allow_html=True,
+    )
 
     if (project.get("notes") or "").strip():
-        st.write(project["notes"])
+        st.markdown(
+            f'<p class="saas-meta-notes">{html.escape(project["notes"].strip())}</p>',
+            unsafe_allow_html=True,
+        )
 
-    m1, m2, _ = st.columns([1, 1, 3])
-    with m1:
+    wm1, wm2 = st.columns(2, gap="large")
+    with wm1:
         st.metric("Parts in this project", len(parts))
-    with m2:
+    with wm2:
         st.metric("Filament in this project", format_grams(total_g))
 
     danger_cols = st.columns([1, 1, 4])
@@ -871,7 +1069,7 @@ def render_project_workspace(project: dict[str, Any]) -> None:
                 clear_part_form_state()
                 st.rerun()
         with c_n:
-            if st.button("Cancel", key="del_proj_no"):
+            if st.button("Cancel", key="del_proj_no", type="secondary"):
                 st.session_state.confirm_delete_project_id = None
                 st.rerun()
 
@@ -880,7 +1078,7 @@ def render_project_workspace(project: dict[str, Any]) -> None:
     with tab_parts:
         if st.session_state.get("edit_part_id"):
             st.info("Editing a printed part — save the form below or cancel.")
-            if st.button("Cancel part edit", key="cancel_part_edit"):
+            if st.button("Cancel part edit", key="cancel_part_edit", type="secondary"):
                 clear_part_form_state()
                 st.rerun()
 
@@ -1017,7 +1215,7 @@ def render_project_workspace(project: dict[str, Any]) -> None:
                     st.write(format_grams(e["quantity_grams"]))
                     st.caption(format_duration(e["print_time_minutes"]))
                 with cc[3]:
-                    if st.button("Open", key=f"open_part_{e['id']}"):
+                    if st.button("Open", key=f"open_part_{e['id']}", type="secondary"):
                         part_dialog(e)
 
     with tab_about:
@@ -1064,7 +1262,11 @@ def main() -> None:
             st.session_state._last_synced_part = st.session_state.edit_part_id
 
     st.title("3D Project Tracker")
-    st.caption("Organize builds into projects. Each **printed part** is a filament log entry (brand, material, color, grams, time, STL, photo).")
+    st.markdown(
+        '<p class="saas-page-lead">Organize builds into projects. Each <strong>printed part</strong> is a '
+        "filament log entry (brand, material, color, grams, time, STL, photo).</p>",
+        unsafe_allow_html=True,
+    )
 
     pid = st.session_state.current_project_id
     if pid:
