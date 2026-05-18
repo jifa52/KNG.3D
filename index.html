@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <div class="app">
@@ -66,12 +66,21 @@
                     <input type="date" id="pc-ended" />
                   </label>
                 </div>
+                <label class="field">
+                  <span class="field__label">Opened by</span>
+                  <input type="text" id="pc-opened-by" placeholder="Your name" />
+                </label>
+                <label class="field field--file">
+                  <span class="field__label">Photo (optional)</span>
+                  <input type="file" id="pc-opened-avatar" accept="image/*" />
+                  <span class="file-hint" id="pc-opened-avatar-hint">No file chosen</span>
+                </label>
                 <label class="field field--full">
                   <span class="field__label">Notes (optional)</span>
                   <textarea id="pc-notes" rows="2" placeholder="Goals, links, reminders…"></textarea>
                 </label>
                 <div class="form__actions">
-                  <button type="submit" class="btn btn--primary">Create &amp; open</button>
+                  <button type="submit" class="btn btn--primary">Create project</button>
                 </div>
               </form>
             </details>
@@ -83,7 +92,18 @@
               </label>
             </div>
 
-            <ul class="project-list" id="project-list"></ul>
+            <div class="project-table-shell" id="project-table-shell" hidden>
+              <div class="project-table" role="table" aria-label="Projects">
+                <div class="project-table__head" role="row">
+                  <div class="project-table__th project-table__th--name" role="columnheader">Project name</div>
+                  <div class="project-table__th project-table__th--status" role="columnheader">Status</div>
+                  <div class="project-table__th project-table__th--date" role="columnheader">Date</div>
+                  <div class="project-table__th project-table__th--owner" role="columnheader">Opened by</div>
+                  <div class="project-table__th project-table__th--actions" role="columnheader"><span class="sr-only">Actions</span></div>
+                </div>
+                <div class="project-table__body" id="project-list"></div>
+              </div>
+            </div>
             <p class="empty-state" id="empty-projects" hidden>No projects yet — create one above.</p>
           </div>
         </section>
@@ -221,19 +241,20 @@
       </footer>
     </div>
 
-    <dialog id="part-dialog" class="dialog">
-      <form method="dialog" class="dialog__shell">
-        <header class="dialog__head">
-          <h2 class="dialog__title" id="part-dialog-title">Part</h2>
-          <button type="submit" class="dialog__close" value="close" aria-label="Close">×</button>
+    <div id="part-drawer-layer" class="part-drawer-layer" hidden>
+      <button type="button" class="part-drawer-layer__backdrop" id="part-drawer-backdrop" aria-label="Close panel"></button>
+      <aside class="part-drawer" id="part-drawer" aria-labelledby="part-drawer-title-text">
+        <header class="part-drawer__head">
+          <h2 class="part-drawer__title" id="part-drawer-title-text">Part</h2>
+          <button type="button" class="part-drawer__close" id="part-drawer-close" aria-label="Close">×</button>
         </header>
-        <div class="dialog__body" id="part-dialog-body"></div>
-        <footer class="dialog__foot">
-          <button type="button" class="btn btn--ghost" id="part-dialog-edit">Edit</button>
-          <button type="button" class="btn btn--danger" id="part-dialog-delete">Delete</button>
+        <div class="part-drawer__body" id="part-drawer-body"></div>
+        <footer class="part-drawer__foot">
+          <button type="button" class="btn btn--ghost" id="part-drawer-edit">Edit in workspace</button>
+          <button type="button" class="btn btn--danger" id="part-drawer-delete">Delete</button>
         </footer>
-      </form>
-    </dialog>
+      </aside>
+    </div>
 
     <dialog id="project-dialog" class="dialog">
       <div class="dialog__shell">
@@ -264,6 +285,15 @@
               <span class="field__label">End date</span>
               <input type="date" id="pe-ended" />
             </label>
+            <label class="field">
+              <span class="field__label">Opened by</span>
+              <input type="text" id="pe-opened-by" placeholder="Name" />
+            </label>
+            <label class="field field--file">
+              <span class="field__label">Photo (optional)</span>
+              <input type="file" id="pe-opened-avatar" accept="image/*" />
+              <span class="file-hint" id="pe-opened-avatar-hint">No file chosen</span>
+            </label>
             <label class="field field--full">
               <span class="field__label">Notes</span>
               <textarea id="pe-notes" rows="3"></textarea>
@@ -276,6 +306,6 @@
       </div>
     </dialog>
 
-    <script src="app.js?v=2"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>
