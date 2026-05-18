@@ -27,10 +27,10 @@ Theming: `.streamlit/config.toml` (red / white / black shell); project status ba
 
 ---
 
-### Legacy static “Filament Log” (HTML + IndexedDB)
+### Static web app (HTML + IndexedDB)
 
-Files: `index.html`, `styles.css`, `app.js`. This is still a **single global list** (no projects). Use the Streamlit app for the full project tracker.
+Files: `index.html`, `styles.css`, `app.js`. This is the **same 3D project model** as Streamlit (projects with statuses and dates, printed parts as filament logs), stored entirely in your browser’s **IndexedDB** (`kng-filament-log`, version 2). If you had the older single-list filament log in this browser, it is **migrated** once into an “Imported filament log” project.
 
-**Run inside Cursor:** Live Preview on `index.html`, or the task **Filament Log: local server** + Simple Browser.
+**Run inside Cursor:** Live Preview on `index.html`, or the task **3D Project Tracker: static server** + Simple Browser at `http://127.0.0.1:5173/index.html`.
 
 **GitHub Pages:** deploy from `main` root; public repos do not require a paid GitHub plan.

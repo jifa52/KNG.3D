@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Filament Log: local server",
+      "label": "3D Project Tracker: static server",
       "type": "shell",
       "command": "python3 -u -m http.server 5173 --bind 127.0.0.1",
       "options": {
