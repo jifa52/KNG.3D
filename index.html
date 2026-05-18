@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Filament Log — KNG.3D</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="header__brand">
+          <span class="header__logo" aria-hidden="true"></span>
+          <div>
+            <h1 class="header__title">Filament Log</h1>
+            <p class="header__tagline">Track every gram, brand, and print</p>
+          </div>
+        </div>
+        <dl class="header__stats" aria-label="Summary">
+          <div class="header__stat">
+            <dt>Total used</dt>
+            <dd id="stat-grams">0 g</dd>
+          </div>
+          <div class="header__stat">
+            <dt>Entries</dt>
+            <dd id="stat-count">0</dd>
+          </div>
+        </dl>
+      </header>
+
+      <nav class="tabs" role="tablist" aria-label="Main">
+        <button type="button" class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="log" id="tab-log">
+          Log usage
+        </button>
+        <button type="button" class="tabs__btn" role="tab" aria-selected="false" data-tab="history" id="tab-history">
+          History
+        </button>
+      </nav>
+
+      <main>
+        <section class="panel is-active" id="panel-log" role="tabpanel" aria-labelledby="tab-log">
+          <form id="entry-form" class="form" autocomplete="off">
+            <input type="hidden" id="edit-id" name="editId" value="" />
+
+            <div class="form__grid">
+              <label class="field">
+                <span class="field__label">Brand</span>
+                <input type="text" id="brand" name="brand" required placeholder="e.g. Polymaker" list="brand-suggestions" />
+                <datalist id="brand-suggestions"></datalist>
+              </label>
+
+              <label class="field">
+                <span class="field__label">Material</span>
+                <input type="text" id="material" name="material" required placeholder="e.g. PLA" list="material-suggestions" />
+                <datalist id="material-suggestions">
+                  <option value="PLA"></option>
+                  <option value="PLA+"></option>
+                  <option value="PETG"></option>
+                  <option value="ABS"></option>
+                  <option value="ASA"></option>
+                  <option value="TPU"></option>
+                  <option value="PA"></option>
+                  <option value="PC"></option>
+                  <option value="Resin"></option>
+                </datalist>
+              </label>
+
+              <div class="field field--color">
+                <span class="field__label">Color</span>
+                <div class="color-row">
+                  <input type="color" id="color" name="color" value="#e53935" aria-label="Filament color" />
+                  <output class="color-hex" id="color-hex" for="color">#e53935</output>
+                </div>
+              </div>
+
+              <label class="field">
+                <span class="field__label">Quantity (g)</span>
+                <input type="number" id="quantity" name="quantity" min="0" step="0.1" required placeholder="12.5" />
+              </label>
+
+              <fieldset class="field field--time">
+                <legend class="field__label">Print time</legend>
+                <div class="time-row">
+                  <label class="time-part">
+                    <span class="sr-only">Hours</span>
+                    <input type="number" id="hours" name="hours" min="0" max="999" value="0" />
+                    <span class="time-suffix">h</span>
+                  </label>
+                  <label class="time-part">
+                    <span class="sr-only">Minutes</span>
+                    <input type="number" id="minutes" name="minutes" min="0" max="59" value="0" />
+                    <span class="time-suffix">m</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <label class="field field--full">
+              <span class="field__label">Description / what it was for</span>
+              <textarea id="description" name="description" rows="3" placeholder="Part name, project, notes…"></textarea>
+            </label>
+
+            <div class="form__grid form__grid--files">
+              <label class="field field--file">
+                <span class="field__label">Photo (optional)</span>
+                <input type="file" id="image" name="image" accept="image/*" />
+                <span class="file-hint" id="image-hint">No file chosen</span>
+              </label>
+              <label class="field field--file">
+                <span class="field__label">STL reference (optional)</span>
+                <input type="file" id="stl" name="stl" accept=".stl,.STL" />
+                <span class="file-hint" id="stl-hint">No file chosen</span>
+              </label>
+            </div>
+
+            <div class="form__actions">
+              <button type="submit" class="btn btn--primary" id="submit-btn">Save entry</button>
+              <button type="button" class="btn btn--ghost" id="reset-form">Clear form</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel" id="panel-history" role="tabpanel" aria-labelledby="tab-history" hidden>
+          <div class="history-toolbar">
+            <label class="field field--search">
+              <span class="field__label sr-only">Search</span>
+              <input type="search" id="history-search" placeholder="Search brand, material, description…" />
+            </label>
+          </div>
+          <ul class="entry-list" id="entry-list"></ul>
+          <p class="empty-state" id="empty-history">No entries yet. Log your first print on the Log usage tab.</p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Data stays in this browser (IndexedDB). Open this file from disk or serve locally.</p>
+      </footer>
+    </div>
+
+    <dialog id="detail-dialog" class="dialog">
+      <form method="dialog" class="dialog__shell">
+        <header class="dialog__head">
+          <h2 class="dialog__title" id="detail-title">Entry</h2>
+          <button type="submit" class="dialog__close" value="close" aria-label="Close">×</button>
+        </header>
+        <div class="dialog__body" id="detail-body"></div>
+        <footer class="dialog__foot">
+          <button type="button" class="btn btn--ghost" id="detail-edit">Edit</button>
+          <button type="button" class="btn btn--danger" id="detail-delete">Delete</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
