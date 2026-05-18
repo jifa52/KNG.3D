@@ -16,6 +16,12 @@ import streamlit as st
 DB_PATH = Path(__file__).resolve().parent / "filament_usage.db"
 
 STATUSES = ("Planned", "Queue", "WIP", "Done")
+STATUS_BADGE: dict[str, tuple[str, str]] = {
+    "Planned": ("#9e9e9e", "#121212"),
+    "Queue": ("#fdd835", "#121212"),
+    "WIP": ("#7e57c2", "#f5f5f5"),
+    "Done": ("#43a047", "#f5f5f5"),
+}
 
 PART_FORM_KEYS = (
     "fm_part_name",
@@ -325,8 +331,13 @@ def safe_hex_color(value: Any) -> str:
 
 
 def status_badge_html(status: str) -> str:
-    stt = status if status in STATUSES else "Planned"
-    return f'<span class="kb-status-badge">{html.escape(stt)}</span>'
+    stt = status if status in STATUS_BADGE else "Planned"
+    bg, fg = STATUS_BADGE[stt]
+    return (
+        f"<span style='display:inline-block;padding:0.2rem 0.55rem;border-radius:999px;"
+        f"font-size:0.78rem;font-weight:700;background:{bg};color:{fg};"
+        f"border:1px solid rgba(0,0,0,0.25);'>{stt}</span>"
+    )
 
 
 def filter_parts(parts: list[dict[str, Any]], q: str) -> list[dict[str, Any]]:
@@ -359,7 +370,7 @@ def apply_part_row_to_form(row: dict[str, Any]) -> None:
     st.session_state.fm_part_name = row["part_name"]
     st.session_state.fm_brand = row["brand"]
     st.session_state.fm_material = row["material_type"]
-    hexv = row["color_hex"] or "#D4AF37"
+    hexv = row["color_hex"] or "#6366f1"
     if not str(hexv).startswith("#"):
         hexv = f"#{hexv}"
     st.session_state.fm_color = hexv
@@ -377,292 +388,170 @@ def apply_part_row_to_form(row: dict[str, Any]) -> None:
 def inject_css() -> None:
     st.markdown(
         """
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
         <style>
           :root {
-            --kb-stone-950: #0c0a09;
-            --kb-stone-900: #1c1917;
-            --kb-stone-800: #292524;
-            --kb-stone-400: #a8a29e;
-            --kb-stone-300: #d6d3d1;
-            --kb-gold: #D4AF37;
-            --kb-gold-dim: #b6912f;
-            --kb-gold-glow: rgba(212, 175, 55, 0.5);
-            --kb-chamfer-light: rgba(245, 230, 180, 0.14);
-            --kb-chamfer-dark: rgba(0, 0, 0, 0.55);
-          }
-          html, body, .stApp, [data-testid="stAppViewContainer"], section.main {
-            background-color: var(--kb-stone-950) !important;
-            font-family: 'Montserrat', 'Inter', ui-sans-serif, system-ui, sans-serif !important;
-            color: #e7e5e4 !important;
+            --saas-border: #e2e8f0;
+            --saas-border-strong: #cbd5e1;
+            --saas-muted: #64748b;
+            --saas-muted-2: #94a3b8;
+            --saas-surface: #ffffff;
+            --saas-indigo: #4338ca;
+            --saas-indigo-hover: #3730a3;
+            --saas-slate-700: #334155;
           }
           .block-container {
             padding-top: 1.5rem;
-            max-width: 1200px;
+            max-width: 1180px;
           }
           h1 {
-            font-family: 'Montserrat', sans-serif !important;
-            font-weight: 800 !important;
-            font-size: 1.12rem !important;
-            letter-spacing: 0.24em !important;
-            text-transform: uppercase !important;
-            color: var(--kb-gold) !important;
-            margin-bottom: 0.35rem !important;
-            text-shadow: 0 0 22px rgba(212, 175, 55, 0.35);
+            letter-spacing: -0.035em;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.15rem;
+            font-size: 2rem;
           }
           .saas-page-lead {
-            margin: 0 0 1.5rem 0;
-            font-size: 0.84rem;
-            line-height: 1.55;
-            color: var(--kb-stone-400);
-            letter-spacing: 0.05em;
+            margin: 0 0 1.35rem 0;
+            color: var(--saas-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
           }
-          .saas-page-lead strong { color: var(--kb-stone-300); font-weight: 600; }
           .saas-section-title {
-            margin: 0 0 0.4rem 0;
-            font-size: 0.68rem !important;
-            font-weight: 700 !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.2em !important;
-            color: var(--kb-stone-400) !important;
+            margin: 0 0 0.35rem 0;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
           }
           .saas-section-hint {
-            margin: 0 0 1.1rem 0;
-            font-size: 0.8rem;
-            line-height: 1.5;
-            color: #78716c;
+            margin: 0 0 1rem 0;
+            color: var(--saas-muted-2);
+            font-size: 0.82rem;
+            line-height: 1.45;
           }
-          .saas-section-hint strong { color: var(--kb-stone-300); }
+          /* Stats — equal visual weight, strict card grid */
           div[data-testid="stMetric"] {
-            background: var(--kb-stone-800) !important;
-            border-radius: 0 !important;
-            border-top: 1px solid var(--kb-chamfer-light) !important;
-            border-left: 1px solid rgba(245, 230, 180, 0.1) !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.55) !important;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.35);
-            padding: 1rem 1.15rem 1.1rem !important;
+            background: var(--saas-surface);
+            border: 1px solid var(--saas-border);
+            border-radius: 12px;
+            padding: 1rem 1.2rem 1.15rem;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
             min-height: 5.5rem;
             box-sizing: border-box;
           }
           div[data-testid="stMetric"] label {
-            color: var(--kb-stone-400) !important;
-            font-size: 0.64rem !important;
-            font-weight: 700 !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.16em !important;
-          }
-          div[data-testid="stMetricValue"] {
-            font-family: 'Montserrat', sans-serif !important;
-            font-weight: 800 !important;
-            font-size: 1.78rem !important;
-            color: var(--kb-gold) !important;
-            letter-spacing: 0.02em !important;
-          }
-          button[data-testid="baseButton-primary"] {
-            background: linear-gradient(180deg, #e8c84a 0%, var(--kb-gold) 38%, var(--kb-gold-dim) 100%) !important;
-            color: #14110a !important;
-            font-family: 'Montserrat', sans-serif !important;
-            font-weight: 700 !important;
-            border-radius: 0 !important;
-            border-top: 1px solid rgba(255, 250, 210, 0.55) !important;
-            border-left: 1px solid rgba(255, 248, 200, 0.35) !important;
-            border-bottom: 2px solid #5c4810 !important;
-            border-right: 2px solid #3d3008 !important;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-            text-transform: uppercase;
-            letter-spacing: 0.07em;
-            font-size: 0.7rem !important;
-          }
-          button[data-testid="baseButton-primary"]:hover {
-            box-shadow: 0 0 18px var(--kb-gold-glow), 0 0 36px rgba(212, 175, 55, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
-            filter: brightness(1.08);
-          }
-          button[data-testid="baseButton-secondary"] {
-            background: var(--kb-stone-900) !important;
-            color: var(--kb-stone-300) !important;
-            font-family: 'Montserrat', sans-serif !important;
+            color: var(--saas-muted) !important;
+            font-size: 0.72rem !important;
             font-weight: 600 !important;
-            border-radius: 0 !important;
-            border-top: 1px solid #57534e !important;
-            border-left: 1px solid #44403c !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.55) !important;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
             text-transform: uppercase;
             letter-spacing: 0.06em;
-            font-size: 0.68rem !important;
+          }
+          div[data-testid="stMetricValue"] {
+            font-weight: 700 !important;
+            font-size: 1.55rem !important;
+            color: #0f172a !important;
+            letter-spacing: -0.02em;
+          }
+          /* Primary CTA — deep indigo (not red) */
+          button[data-testid="baseButton-primary"] {
+            background-color: var(--saas-indigo) !important;
+            border-color: var(--saas-indigo-hover) !important;
+            color: #f8fafc !important;
+            font-weight: 600 !important;
+            border-radius: 10px !important;
+            padding: 0.5rem 1.1rem !important;
+          }
+          button[data-testid="baseButton-primary"]:hover {
+            background-color: var(--saas-indigo-hover) !important;
+            border-color: #312e81 !important;
+            color: #ffffff !important;
+          }
+          /* Secondary / neutral — industrial slate */
+          button[data-testid="baseButton-secondary"] {
+            background-color: #f8fafc !important;
+            color: var(--saas-slate-700) !important;
+            border: 1px solid var(--saas-border-strong) !important;
+            font-weight: 600 !important;
+            border-radius: 10px !important;
+            padding: 0.5rem 1rem !important;
           }
           button[data-testid="baseButton-secondary"]:hover {
-            color: var(--kb-gold) !important;
-            box-shadow: 0 0 16px var(--kb-gold-glow), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
-            border-top-color: #78716c !important;
-            border-left-color: #57534e !important;
+            background-color: #e2e8f0 !important;
+            border-color: #94a3b8 !important;
+            color: #0f172a !important;
           }
+          /* Project & selection cards */
           div[data-testid="stVerticalBlockBorderWrapper"] {
-            background: var(--kb-stone-900) !important;
-            border-radius: 0 !important;
-            border-top: 1px solid var(--kb-chamfer-light) !important;
-            border-left: 1px solid rgba(245, 230, 180, 0.08) !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.55) !important;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 -1px 0 rgba(0, 0, 0, 0.35);
+            background: var(--saas-surface) !important;
+            border: 1px solid var(--saas-border) !important;
+            border-radius: 14px !important;
             padding: 1.15rem 1.3rem 1.25rem !important;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
             margin-bottom: 0.85rem;
           }
           .saas-grid-head {
             display: grid;
             grid-template-columns: 2fr 1.05fr 0.95fr 1.15fr 0.95fr 1.1fr;
             gap: 10px;
-            font-size: 0.6rem;
+            font-size: 0.68rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: var(--kb-stone-400);
+            letter-spacing: 0.07em;
+            color: #94a3b8;
             margin: 0 0 12px 0;
-            background: var(--kb-stone-800);
-            border-radius: 0 !important;
-            border-top: 1px solid var(--kb-chamfer-light) !important;
-            border-left: 1px solid rgba(245, 230, 180, 0.08) !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.5) !important;
+            background: #f8fafc;
+            border-radius: 10px;
             padding: 10px 12px;
+            border: 1px solid var(--saas-border);
             box-sizing: border-box;
           }
           p.saas-project-title {
             margin: 0 0 0.35rem 0;
-            font-family: 'Montserrat', sans-serif !important;
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--kb-gold) !important;
-            letter-spacing: 0.03em;
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
             line-height: 1.25;
           }
           p.saas-meta-notes {
             margin: 0;
-            font-size: 0.78rem;
-            color: #78716c;
-            line-height: 1.45;
+            font-size: 0.8rem;
+            color: var(--saas-muted);
+            line-height: 1.4;
           }
           p.saas-meta-dim {
             margin: 0;
-            font-size: 0.74rem;
-            color: #78716c;
+            font-size: 0.78rem;
+            color: var(--saas-muted-2);
             font-weight: 500;
           }
-          p.saas-meta-dim code { color: var(--kb-stone-400) !important; }
           p.saas-meta-strong {
             margin: 0;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 600;
-            color: var(--kb-stone-300);
+            color: var(--saas-muted);
           }
-          .kb-gold-strong { color: var(--kb-gold) !important; font-weight: 700 !important; }
-          h2.saas-h2-project {
-            margin: 0 0 0.4rem 0;
-            font-family: 'Montserrat', sans-serif !important;
-            font-size: 1.52rem;
-            font-weight: 800;
-            letter-spacing: 0.02em;
-            color: var(--kb-gold) !important;
-            text-shadow: 0 0 18px rgba(212, 175, 55, 0.2);
+          div[data-testid="stMultiSelect"] {
+            margin-bottom: 1rem !important;
           }
-          span.kb-status-badge {
-            display: inline-block;
-            padding: 0.28rem 0.75rem;
-            font-family: 'Montserrat', sans-serif !important;
-            font-size: 0.66rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--kb-gold) !important;
-            background: var(--kb-stone-800);
-            border-radius: 0 !important;
-            border-top: 1px solid var(--kb-chamfer-light) !important;
-            border-left: 1px solid rgba(245, 230, 180, 0.1) !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.55) !important;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-          }
-          div[data-testid="stMultiSelect"] { margin-bottom: 1rem !important; }
           div[data-testid="stMultiSelect"] label p {
-            font-size: 0.64rem !important;
-            font-weight: 700 !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.16em !important;
-            color: var(--kb-stone-400) !important;
-          }
-          div[data-testid="stMultiSelect"] [data-baseweb="select"] > div,
-          div[data-testid="stSelectbox"] [data-baseweb="select"] > div {
-            border-radius: 0 !important;
-            background-color: var(--kb-stone-800) !important;
-            border-top: 1px solid var(--kb-chamfer-light) !important;
-            border-left: 1px solid rgba(245, 230, 180, 0.08) !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.55) !important;
-            color: #e7e5e4 !important;
-          }
-          div[data-testid="stMultiSelect"]:hover [data-baseweb="select"] > div,
-          div[data-testid="stSelectbox"]:hover [data-baseweb="select"] > div {
-            box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.35), 0 0 20px rgba(212, 175, 55, 0.12);
-          }
-          div[data-testid="stTextInput"] input,
-          div[data-testid="stNumberInput"] input,
-          div[data-testid="stTextArea"] textarea {
-            border-radius: 0 !important;
-            background-color: var(--kb-stone-800) !important;
-            color: #fafaf9 !important;
-            border-top: 1px solid var(--kb-chamfer-light) !important;
-            border-left: 1px solid rgba(245, 230, 180, 0.08) !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.55) !important;
-          }
-          div[data-testid="stTextInput"] label p,
-          div[data-testid="stNumberInput"] label p,
-          div[data-testid="stTextArea"] label p {
-            color: var(--kb-stone-400) !important;
-            font-size: 0.64rem !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.12em !important;
-            font-weight: 700 !important;
-          }
-          .hint { color: #78716c !important; font-size: 0.82rem; }
-          div[data-testid="stTabs"] [data-baseweb="tab-list"] {
-            gap: 0 !important;
-            border-bottom: 1px solid #292524 !important;
-          }
-          div[data-testid="stTabs"] button[data-baseweb="tab"] {
-            border-radius: 0 !important;
-            font-family: 'Montserrat', sans-serif !important;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            font-size: 0.66rem !important;
-            font-weight: 700;
-            color: var(--kb-stone-400) !important;
-          }
-          div[data-testid="stTabs"] button[aria-selected="true"] {
-            color: var(--kb-gold) !important;
-            border-bottom: 2px solid var(--kb-gold) !important;
-          }
-          div[data-testid="stAlert"] {
-            border-radius: 0 !important;
-            border-top: 1px solid var(--kb-chamfer-light) !important;
-            border-left: 1px solid rgba(245, 230, 180, 0.08) !important;
-            border-bottom: 2px solid var(--kb-chamfer-dark) !important;
-            border-right: 2px solid rgba(0, 0, 0, 0.45) !important;
-          }
-          details[data-testid="stExpander"] {
-            border-radius: 0 !important;
-            border: 1px solid #292524 !important;
-            background: var(--kb-stone-900) !important;
-          }
-          .stDownloadButton button {
-            border-radius: 0 !important;
-            font-family: 'Montserrat', sans-serif !important;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            font-size: 0.68rem !important;
+            font-size: 0.78rem !important;
             font-weight: 600 !important;
+            color: var(--saas-muted) !important;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+          .hint {
+            color: var(--saas-muted) !important;
+            font-size: 0.85rem;
+            margin-top: -0.35rem;
+          }
+          h2.saas-h2-project {
+            margin: 0 0 0.35rem 0;
+            font-size: 1.65rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #0f172a;
           }
         </style>
         """,
@@ -715,7 +604,7 @@ def render_part_side_panel(part: dict[str, Any]) -> None:
     )
     st.markdown(
         f'<p class="saas-meta-dim">{html.escape(part["brand"])} · {html.escape(part["material_type"])} · '
-        f'<code style="color:#a8a29e">{html.escape(str(part.get("color_hex") or ""))}</code></p>',
+        f'<code style="color:#64748b">{html.escape(str(part.get("color_hex") or ""))}</code></p>',
         unsafe_allow_html=True,
     )
     st.markdown(
@@ -1026,9 +915,9 @@ def render_project_list() -> None:
                             else:
                                 ini = html.escape(initials_from_name(ob))
                                 st.markdown(
-                                    "<div style='width:34px;height:34px;border-radius:0;display:flex;"
-                                    "align-items:center;justify-content:center;background:#292524;"
-                                    f"border:1px solid #57534e;font-weight:800;font-size:0.68rem;color:#D4AF37'>{ini}</div>",
+                                    "<div style='width:34px;height:34px;border-radius:50%;display:flex;"
+                                    "align-items:center;justify-content:center;background:#e2e8f0;"
+                                    f"border:1px solid #cbd5e1;font-weight:800;font-size:0.68rem;color:#475569'>{ini}</div>",
                                     unsafe_allow_html=True,
                                 )
                         with avc2:
@@ -1071,8 +960,8 @@ def render_project_list() -> None:
                                 with pc1:
                                     hx = safe_hex_color(pr.get("color_hex"))
                                     st.markdown(
-                                        f"<div style='width:32px;height:32px;border-radius:0;background:{hx};"
-                                        "border:1px solid #44403c;margin-top:4px'></div>",
+                                        f"<div style='width:32px;height:32px;border-radius:8px;background:{hx};"
+                                        "border:1px solid #e2e8f0;margin-top:4px'></div>",
                                         unsafe_allow_html=True,
                                     )
                                 with pc2:
@@ -1146,7 +1035,7 @@ def render_project_workspace(project: dict[str, Any]) -> None:
     )
     ob = (project.get("opened_by_name") or "").strip() or "You"
     st.markdown(
-        f'<p class="saas-meta-dim">Opened by <strong class="kb-gold-strong">{html.escape(ob)}</strong></p>',
+        f'<p class="saas-meta-dim">Opened by <strong style="color:#475569">{html.escape(ob)}</strong></p>',
         unsafe_allow_html=True,
     )
 
@@ -1315,8 +1204,8 @@ def render_project_workspace(project: dict[str, Any]) -> None:
                 with cc[0]:
                     hx = safe_hex_color(e.get("color_hex"))
                     st.markdown(
-                        f"<div style='width:36px;height:36px;border-radius:0;background:{hx};"
-                        f"border:1px solid #44403c;margin-top:4px'></div>",
+                        f"<div style='width:36px;height:36px;border-radius:8px;background:{hx};"
+                        f"border:1px solid #2e2e2e;margin-top:4px'></div>",
                         unsafe_allow_html=True,
                     )
                 with cc[1]:
