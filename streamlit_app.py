@@ -60,8 +60,9 @@ def migrate_legacy(c: sqlite3.Cursor) -> None:
     c.execute(
         """
         INSERT INTO projects (
-            id, name, notes, status, started_date, ended_date, created_at, updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            id, name, notes, status, started_date, ended_date, created_at, updated_at,
+            opened_by_name
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             pid,
@@ -72,6 +73,7 @@ def migrate_legacy(c: sqlite3.Cursor) -> None:
             today,
             now,
             now,
+            "You",
         ),
     )
     for row in c.execute("SELECT * FROM entries").fetchall():
@@ -107,6 +109,23 @@ def migrate_legacy(c: sqlite3.Cursor) -> None:
     c.execute("DROP TABLE entries")
 
 
+def _table_columns(c: sqlite3.Cursor, table: str) -> set[str]:
+    if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", table):
+        raise ValueError("invalid table name")
+    cur = c.execute(f"PRAGMA table_info({table})")
+    return {str(r[1]) for r in cur.fetchall()}
+
+
+def ensure_project_profile_columns(c: sqlite3.Cursor) -> None:
+    cols = _table_columns(c, "projects")
+    if "opened_by_name" not in cols:
+        c.execute("ALTER TABLE projects ADD COLUMN opened_by_name TEXT")
+    if "opened_by_avatar" not in cols:
+        c.execute("ALTER TABLE projects ADD COLUMN opened_by_avatar BLOB")
+    if "opened_by_avatar_name" not in cols:
+        c.execute("ALTER TABLE projects ADD COLUMN opened_by_avatar_name TEXT")
+
+
 def init_db() -> None:
     with _conn() as c:
         c.execute(
@@ -119,7 +138,10 @@ def init_db() -> None:
                 started_date TEXT NOT NULL,
                 ended_date TEXT,
                 created_at REAL NOT NULL,
-                updated_at REAL NOT NULL
+                updated_at REAL NOT NULL,
+                opened_by_name TEXT,
+                opened_by_avatar BLOB,
+                opened_by_avatar_name TEXT
             )
             """
         )
@@ -145,7 +167,11 @@ def init_db() -> None:
             )
             """
         )
+        ensure_project_profile_columns(c)
         migrate_legacy(c)
+        c.execute(
+            "UPDATE projects SET opened_by_name = 'You' WHERE opened_by_name IS NULL OR TRIM(opened_by_name) = ''"
+        )
         c.commit()
 
 
@@ -171,13 +197,21 @@ def get_project(project_id: str) -> dict[str, Any] | None:
 
 
 def upsert_project(row: dict[str, Any]) -> None:
+    row = dict(row)
+    row.setdefault("opened_by_name", "You")
+    if "opened_by_avatar" not in row:
+        row["opened_by_avatar"] = None
+    if "opened_by_avatar_name" not in row:
+        row["opened_by_avatar_name"] = None
     with _conn() as c:
         c.execute(
             """
             INSERT INTO projects (
-                id, name, notes, status, started_date, ended_date, created_at, updated_at
+                id, name, notes, status, started_date, ended_date, created_at, updated_at,
+                opened_by_name, opened_by_avatar, opened_by_avatar_name
             ) VALUES (
-                :id, :name, :notes, :status, :started_date, :ended_date, :created_at, :updated_at
+                :id, :name, :notes, :status, :started_date, :ended_date, :created_at, :updated_at,
+                :opened_by_name, :opened_by_avatar, :opened_by_avatar_name
             )
             ON CONFLICT(id) DO UPDATE SET
                 name = excluded.name,
@@ -185,7 +219,10 @@ def upsert_project(row: dict[str, Any]) -> None:
                 status = excluded.status,
                 started_date = excluded.started_date,
                 ended_date = excluded.ended_date,
-                updated_at = excluded.updated_at
+                updated_at = excluded.updated_at,
+                opened_by_name = excluded.opened_by_name,
+                opened_by_avatar = excluded.opened_by_avatar,
+                opened_by_avatar_name = excluded.opened_by_avatar_name
             """,
             row,
         )
@@ -355,10 +392,132 @@ def inject_css() -> None:
           .block-container { padding-top: 1.25rem; }
           h1 { letter-spacing: -0.02em; }
           .hint { color: #9a9a9a; font-size: 0.85rem; margin-top: -0.5rem; }
+          .notion-wrap {
+            background: #ffffff;
+            color: #37352f;
+            border: 1px solid #e8e7e4;
+            border-radius: 12px;
+            padding: 10px 14px 14px;
+            margin-bottom: 14px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+          }
+          .notion-wrap .stCaption { color: #9b9a97 !important; }
+          .notion-head {
+            display: grid;
+            grid-template-columns: 2.1fr 1.05fr 0.85fr 1.2fr 1.35fr;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #9b9a97;
+            border-bottom: 1px solid #ececea;
+            padding: 4px 2px 8px;
+            margin-bottom: 4px;
+          }
+          .part-panel {
+            background: linear-gradient(180deg, #1e1e24 0%, #16161a 100%);
+            border: 1px solid #2e2e36;
+            border-radius: 12px;
+            padding: 12px 14px 14px;
+          }
+          .part-panel h3 { margin-top: 0; }
         </style>
         """,
         unsafe_allow_html=True,
     )
+
+
+def format_started_display(iso: str | None) -> str:
+    s = (iso or "").strip()
+    if not s:
+        return "—"
+    try:
+        d = date.fromisoformat(s[:10])
+        return d.strftime("%b %d, %Y")
+    except ValueError:
+        return s
+
+
+def initials_from_name(name: str) -> str:
+    parts = [x for x in (name or "").strip().split() if x]
+    if not parts:
+        return "?"
+    if len(parts) == 1:
+        return parts[0][:2].upper()
+    return (parts[0][0] + parts[-1][0]).upper()
+
+
+def make_status_save_callback(project_id: str):
+    def _cb() -> None:
+        key = f"status_sel_{project_id}"
+        nv = st.session_state.get(key)
+        if nv is None:
+            return
+        old = get_project(project_id)
+        if not old or old.get("status") == nv:
+            return
+        d = dict(old)
+        d["status"] = nv
+        d["updated_at"] = datetime.now().timestamp()
+        upsert_project(d)
+        st.toast("Status updated", icon="✔")
+
+    return _cb
+
+
+def render_part_side_panel(part: dict[str, Any]) -> None:
+    st.markdown("##### Part detail")
+    st.caption(f"{part['brand']} · {part['material_type']} · `{part['color_hex']}`")
+    st.caption(f"{format_grams(part['quantity_grams'])} · {format_duration(part['print_time_minutes'])}")
+    st.write(part.get("description") or "—")
+
+    c1, c2 = st.columns(2)
+    with c1:
+        st.caption("Logged")
+        st.write(datetime.fromtimestamp(part["created_at"]).strftime("%Y-%m-%d %H:%M"))
+    with c2:
+        if part.get("updated_at") and part["updated_at"] != part.get("created_at"):
+            st.caption("Updated")
+            st.write(datetime.fromtimestamp(part["updated_at"]).strftime("%Y-%m-%d %H:%M"))
+
+    if part.get("image_blob"):
+        st.image(BytesIO(part["image_blob"]), caption=part.get("image_name") or "Photo")
+
+    if part.get("stl_blob") and part.get("stl_name"):
+        st.download_button(
+            label=f"Download STL ({part['stl_name']})",
+            data=part["stl_blob"],
+            file_name=part["stl_name"],
+            mime="model/stl",
+            key=f"side_dl_stl_{part['id']}",
+        )
+
+    b1, b2, b3 = st.columns([1, 1, 1])
+    with b1:
+        if st.button("Edit in workspace", type="primary", key=f"side_edit_{part['id']}"):
+            st.session_state.current_project_id = part["project_id"]
+            st.session_state.detail_part_id = None
+            st.session_state.detail_part_project_id = None
+            st.session_state.edit_part_id = part["id"]
+            st.session_state.needs_part_form_sync = True
+            st.session_state.expanded_project_id = None
+            st.rerun()
+    with b2:
+        if st.button("Close", key=f"side_close_{part['id']}"):
+            st.session_state.detail_part_id = None
+            st.session_state.detail_part_project_id = None
+            st.rerun()
+    with b3:
+        if st.button("Delete", type="secondary", key=f"side_del_{part['id']}"):
+            delete_part(part["id"])
+            if st.session_state.get("edit_part_id") == part["id"]:
+                clear_part_form_state()
+            touch_project_updated(part["project_id"])
+            st.session_state.detail_part_id = None
+            st.session_state.detail_part_project_id = None
+            st.toast("Part deleted.", icon="🗑️")
+            st.rerun()
 
 
 @st.dialog("Printed part")
@@ -415,6 +574,14 @@ def edit_project_dialog(project: dict[str, Any]) -> None:
         has_end = st.checkbox("Project has ended", value=bool(project.get("ended_date")))
         ed_val = date.fromisoformat(project["ended_date"]) if project.get("ended_date") else date.today()
         ed = st.date_input("End date", value=ed_val) if has_end else None
+        opened_by = st.text_input(
+            "Opened by",
+            value=(project.get("opened_by_name") or "You").strip() or "You",
+        )
+        new_av = st.file_uploader(
+            "Replace opened-by photo (optional)",
+            type=["png", "jpg", "jpeg", "webp", "gif"],
+        )
         save = st.form_submit_button("Save project", type="primary")
 
     if save:
@@ -423,6 +590,10 @@ def edit_project_dialog(project: dict[str, Any]) -> None:
             return
         now = datetime.now().timestamp()
         ended = ed.isoformat() if has_end and ed else None
+        av_bytes = new_av.getvalue() if new_av else None
+        av_name = new_av.name if new_av else None
+        merged_av = av_bytes if av_bytes is not None else project.get("opened_by_avatar")
+        merged_av_name = av_name if av_name is not None else project.get("opened_by_avatar_name")
         upsert_project(
             {
                 "id": project["id"],
@@ -433,6 +604,9 @@ def edit_project_dialog(project: dict[str, Any]) -> None:
                 "ended_date": ended,
                 "created_at": project["created_at"],
                 "updated_at": now,
+                "opened_by_name": (opened_by or "").strip() or "You",
+                "opened_by_avatar": merged_av,
+                "opened_by_avatar_name": merged_av_name,
             }
         )
         st.toast("Project saved.", icon="✔")
@@ -452,90 +626,196 @@ def render_project_list() -> None:
     with m3:
         st.metric("Filament logged", format_grams(total_g))
 
-    st.subheader("Your projects")
-    c_new, c_filt = st.columns([1, 2])
-    with c_new:
-        if st.button("➕ New project", type="primary", key="btn_new_project"):
-            st.session_state.new_project_open = True
-            st.rerun()
+    detail_id = st.session_state.get("detail_part_id")
+    if detail_id:
+        main_zone, side_zone = st.columns([3.0, 1.05], gap="medium")
+    else:
+        main_zone = st.container()
+        side_zone = None
 
-    with c_filt:
-        fstat = st.multiselect("Filter by status", STATUSES, default=[])
+    with main_zone:
+        st.subheader("Your projects")
+        st.caption(
+            "Use **parts** to expand a project’s list. **View** opens the right-hand detail panel. "
+            "**Workspace** opens the full page with the printed-part form."
+        )
 
-    if st.session_state.get("new_project_open"):
-        with st.expander("Create project", expanded=True):
-            c_disc, _ = st.columns([1, 4])
-            with c_disc:
-                if st.button("Close", key="close_new_project"):
-                    st.session_state.new_project_open = False
-                    st.rerun()
-            with st.form("create_project_form"):
-                pn = st.text_input("Project name", placeholder="e.g. Voron 2.4 build")
-                pnotes = st.text_area("Notes (optional)", height=80)
-                pst = st.selectbox("Starting status", STATUSES, index=0)
-                psd = st.date_input("Start date", value=date.today())
-                has_end = st.checkbox("Set end date now", value=False)
-                ped = st.date_input("End date", value=date.today()) if has_end else None
-                if st.form_submit_button("Create", type="primary"):
-                    if not (pn or "").strip():
-                        st.error("Project name is required.")
-                    else:
-                        pid = str(uuid.uuid4())
-                        now = datetime.now().timestamp()
-                        upsert_project(
-                            {
-                                "id": pid,
-                                "name": pn.strip(),
-                                "notes": (pnotes or "").strip(),
-                                "status": pst,
-                                "started_date": psd.isoformat(),
-                                "ended_date": ped.isoformat() if has_end and ped else None,
-                                "created_at": now,
-                                "updated_at": now,
-                            }
-                        )
-                        st.session_state.new_project_open = False
-                        st.session_state.current_project_id = pid
-                        st.rerun()
-
-    rows = projects
-    if fstat:
-        rows = [p for p in rows if p["status"] in fstat]
-
-    if not projects:
-        st.info("No projects yet — use **➕ New project** to create your first build.")
-        return
-
-    if not rows:
-        st.info("No projects match the selected status filters.")
-        return
-
-    for p in rows:
-        cc = st.columns([0.22, 0.28, 0.18, 0.14, 0.18])
-        with cc[0]:
-            st.markdown(status_badge_html(p["status"]), unsafe_allow_html=True)
-            st.caption(f"{p.get('part_count', 0)} parts")
-        with cc[1]:
-            st.markdown(f"**{p['name']}**")
-            snip = (p.get("notes") or "").strip()
-            if len(snip) > 90:
-                snip = snip[:87] + "…"
-            st.caption(snip or "—")
-        with cc[2]:
-            st.caption("Started")
-            st.write(p.get("started_date") or "—")
-        with cc[3]:
-            st.caption("Ended")
-            st.write(p.get("ended_date") or "—")
-        with cc[4]:
-            if st.button("Open", key=f"open_proj_{p['id']}", type="primary"):
-                st.session_state.current_project_id = p["id"]
-                st.session_state.confirm_delete_project_id = None
-                clear_part_form_state()
+        c_new, c_filt = st.columns([1, 2])
+        with c_new:
+            if st.button("➕ New project", type="primary", key="btn_new_project"):
+                st.session_state.new_project_open = True
                 st.rerun()
-            if st.button("Edit", key=f"edit_proj_{p['id']}"):
-                edit_project_dialog(p)
-        st.divider()
+
+        with c_filt:
+            fstat = st.multiselect("Filter by status", STATUSES, default=[])
+
+        if st.session_state.get("new_project_open"):
+            with st.expander("Create project", expanded=True):
+                c_disc, _ = st.columns([1, 4])
+                with c_disc:
+                    if st.button("Close", key="close_new_project"):
+                        st.session_state.new_project_open = False
+                        st.rerun()
+                with st.form("create_project_form"):
+                    pn = st.text_input("Project name", placeholder="e.g. Voron 2.4 build")
+                    pnotes = st.text_area("Notes (optional)", height=80)
+                    pst = st.selectbox("Starting status", STATUSES, index=0)
+                    psd = st.date_input("Start date", value=date.today())
+                    opened_by = st.text_input("Opened by", value="You")
+                    pavatar = st.file_uploader(
+                        "Opened-by photo (optional)",
+                        type=["png", "jpg", "jpeg", "webp", "gif"],
+                    )
+                    has_end = st.checkbox("Set end date now", value=False)
+                    ped = st.date_input("End date", value=date.today()) if has_end else None
+                    if st.form_submit_button("Create", type="primary"):
+                        if not (pn or "").strip():
+                            st.error("Project name is required.")
+                        else:
+                            pid = str(uuid.uuid4())
+                            now = datetime.now().timestamp()
+                            av_bytes = pavatar.getvalue() if pavatar else None
+                            av_name = pavatar.name if pavatar else None
+                            upsert_project(
+                                {
+                                    "id": pid,
+                                    "name": pn.strip(),
+                                    "notes": (pnotes or "").strip(),
+                                    "status": pst,
+                                    "started_date": psd.isoformat(),
+                                    "ended_date": ped.isoformat() if has_end and ped else None,
+                                    "created_at": now,
+                                    "updated_at": now,
+                                    "opened_by_name": (opened_by or "").strip() or "You",
+                                    "opened_by_avatar": av_bytes,
+                                    "opened_by_avatar_name": av_name,
+                                }
+                            )
+                            st.session_state.new_project_open = False
+                            st.session_state.expanded_project_id = pid
+                            st.session_state.detail_part_id = None
+                            st.session_state.detail_part_project_id = None
+                            st.rerun()
+
+        rows = projects
+        if fstat:
+            rows = [p for p in rows if p["status"] in fstat]
+
+        exp = st.session_state.get("expanded_project_id")
+        if exp and not any(r["id"] == exp for r in rows):
+            st.session_state.expanded_project_id = None
+
+        if not projects:
+            st.info("No projects yet — use **➕ New project** to create your first build.")
+        elif not rows:
+            st.info("No projects match the selected status filters.")
+        else:
+            st.markdown(
+                '<div class="notion-wrap"><div class="notion-head">'
+                "<span>Project</span><span>Status</span><span>Date</span>"
+                "<span>Opened by</span><span>Parts</span><span>Actions</span>"
+                "</div></div>",
+                unsafe_allow_html=True,
+            )
+
+            for p in rows:
+                pid = p["id"]
+                exp_id = st.session_state.get("expanded_project_id")
+                with st.container(border=True):
+                    c1, c2, c3, c4, c5, c6 = st.columns([2.0, 1.05, 0.95, 1.15, 0.95, 1.1])
+                    with c1:
+                        st.markdown(
+                            f'<p style="margin:0;font-weight:700;color:#1f1f1f">{p["name"]}</p>',
+                            unsafe_allow_html=True,
+                        )
+                        snip = (p.get("notes") or "").strip()
+                        if len(snip) > 100:
+                            snip = snip[:97] + "…"
+                        st.caption(snip or "—")
+                    with c2:
+                        si = STATUSES.index(p["status"]) if p["status"] in STATUSES else 0
+                        st.selectbox(
+                            "Status",
+                            STATUSES,
+                            index=si,
+                            key=f"status_sel_{pid}",
+                            label_visibility="collapsed",
+                            on_change=make_status_save_callback(pid),
+                        )
+                    with c3:
+                        st.write(format_started_display(p.get("started_date")))
+                    with c4:
+                        ob = (p.get("opened_by_name") or "").strip() or "You"
+                        av = p.get("opened_by_avatar")
+                        avc1, avc2 = st.columns([0.35, 0.65])
+                        with avc1:
+                            if av:
+                                st.image(BytesIO(av), width=34)
+                            else:
+                                ini = initials_from_name(ob)
+                                st.markdown(
+                                    "<div style='width:34px;height:34px;border-radius:50%;display:flex;"
+                                    "align-items:center;justify-content:center;background:#ececea;"
+                                    f"border:1px solid #ddd;font-weight:800;font-size:0.68rem;color:#555'>{ini}</div>",
+                                    unsafe_allow_html=True,
+                                )
+                        with avc2:
+                            st.write(ob)
+                    with c5:
+                        label = "▲ Hide" if exp_id == pid else f"▼ {int(p.get('part_count') or 0)} parts"
+                        if st.button(label, key=f"parts_exp_{pid}"):
+                            st.session_state.expanded_project_id = None if exp_id == pid else pid
+                            st.rerun()
+                    with c6:
+                        if st.button("Workspace", key=f"ws_{pid}", help="Full printed-part form"):
+                            st.session_state.current_project_id = pid
+                            st.session_state.confirm_delete_project_id = None
+                            st.session_state.expanded_project_id = None
+                            st.session_state.detail_part_id = None
+                            st.session_state.detail_part_project_id = None
+                            clear_part_form_state()
+                            st.rerun()
+                        if st.button("Edit", key=f"row_edit_{pid}"):
+                            edit_project_dialog(p)
+
+                    if st.session_state.get("expanded_project_id") == pid:
+                        plist = list_parts(pid)
+                        if not plist:
+                            st.caption("No parts yet — use **Workspace** to add printed parts.")
+                        else:
+                            for pr in plist:
+                                pc1, pc2, pc3, pc4 = st.columns([0.14, 0.36, 0.34, 0.16])
+                                with pc1:
+                                    hx = safe_hex_color(pr.get("color_hex"))
+                                    st.markdown(
+                                        f"<div style='width:32px;height:32px;border-radius:8px;background:{hx};"
+                                        "border:1px solid #ccc;margin-top:4px'></div>",
+                                        unsafe_allow_html=True,
+                                    )
+                                with pc2:
+                                    st.markdown(f"**{pr['part_name']}**")
+                                    st.caption(f"{pr['brand']} · {pr['material_type']}")
+                                with pc3:
+                                    st.caption(format_grams(pr["quantity_grams"]))
+                                    st.caption(format_duration(pr["print_time_minutes"]))
+                                with pc4:
+                                    if st.button("View", key=f"pv_{pr['id']}"):
+                                        st.session_state.detail_part_id = pr["id"]
+                                        st.session_state.detail_part_project_id = pid
+                                        st.rerun()
+
+    if side_zone is not None:
+        with side_zone:
+            st.markdown("##### Part detail")
+            part = get_part(str(detail_id)) if detail_id else None
+            if not part:
+                st.warning("That part could not be loaded.")
+                if st.button("Close", key="side_close_missing"):
+                    st.session_state.detail_part_id = None
+                    st.session_state.detail_part_project_id = None
+                    st.rerun()
+            else:
+                render_part_side_panel(part)
 
 
 def render_project_workspace(project: dict[str, Any]) -> None:
@@ -549,6 +829,9 @@ def render_project_workspace(project: dict[str, Any]) -> None:
         if st.button("← All projects", key="back_projects"):
             st.session_state.current_project_id = None
             st.session_state.confirm_delete_project_id = None
+            st.session_state.expanded_project_id = None
+            st.session_state.detail_part_id = None
+            st.session_state.detail_part_project_id = None
             clear_part_form_state()
             st.rerun()
     with b2:
@@ -558,6 +841,8 @@ def render_project_workspace(project: dict[str, Any]) -> None:
     st.markdown(f"# {project['name']}")
     st.markdown(status_badge_html(project["status"]), unsafe_allow_html=True)
     st.caption(f"Started **{project.get('started_date') or '—'}** · Ended **{project.get('ended_date') or '—'}**")
+    ob = (project.get("opened_by_name") or "").strip() or "You"
+    st.caption(f"Opened by: **{ob}**")
 
     if (project.get("notes") or "").strip():
         st.write(project["notes"])
@@ -580,6 +865,9 @@ def render_project_workspace(project: dict[str, Any]) -> None:
                 delete_project(pid)
                 st.session_state.current_project_id = None
                 st.session_state.confirm_delete_project_id = None
+                st.session_state.expanded_project_id = None
+                st.session_state.detail_part_id = None
+                st.session_state.detail_part_project_id = None
                 clear_part_form_state()
                 st.rerun()
         with c_n:
@@ -754,6 +1042,12 @@ def main() -> None:
         st.session_state.edit_part_id = None
     if "_last_synced_part" not in st.session_state:
         st.session_state._last_synced_part = None
+    if "expanded_project_id" not in st.session_state:
+        st.session_state.expanded_project_id = None
+    if "detail_part_id" not in st.session_state:
+        st.session_state.detail_part_id = None
+    if "detail_part_project_id" not in st.session_state:
+        st.session_state.detail_part_project_id = None
 
     if st.session_state.pop("needs_part_form_sync", False):
         pe = st.session_state.get("edit_part_id")
