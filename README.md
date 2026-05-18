@@ -23,6 +23,6 @@ Set **Main file path** to `streamlit_app.py` or `app.py`. If the deploy form say
 
 **Ephemeral disk:** on the free Cloud tier the SQLite file may reset when the app sleeps or redeploys. Use a hosted database for data you cannot lose.
 
-Theming: `.streamlit/config.toml` (light slate shell, indigo primary, white surfaces); status badges keep semantic colors in the UI.
+Theming: **King Bearings** — warm stone/bronze shell (`#0c0a09` / `#1c1917`), **King Gold** `#D4AF37` accents, chamfered “milled plate” UI via custom CSS in `streamlit_app.py` (Montserrat). Streamlit does not ship Tailwind; the theme replicates the requested industrial spec in CSS.
 
 On the **All projects** page, the layout matches the newer tracker UX: **Name → Status → start date → Opened by**, expand **parts** under a project, **View** opens a **right-hand part detail** column, and **Workspace** jumps to the full printed-part form for that project. **Opened by** (name + optional photo) is stored in SQLite with each project.

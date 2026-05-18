@@ -1,9 +1,9 @@
 [theme]
-# Premium SaaS: deep indigo accent, light shell, slate neutrals (not aggressive red)
-primaryColor = "#4338ca"
-backgroundColor = "#f1f5f9"
-secondaryBackgroundColor = "#ffffff"
-textColor = "#0f172a"
+# King Bearings — brushed bronze shell, King Gold primary (matches inject_css)
+primaryColor = "#D4AF37"
+backgroundColor = "#0c0a09"
+secondaryBackgroundColor = "#1c1917"
+textColor = "#e7e5e4"
 font = "sans serif"
 
 [server]
