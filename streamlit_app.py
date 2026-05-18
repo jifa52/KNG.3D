@@ -715,7 +715,7 @@ def render_part_side_panel(part: dict[str, Any]) -> None:
     )
     st.markdown(
         f'<p class="saas-meta-dim">{html.escape(part["brand"])} · {html.escape(part["material_type"])} · '
-        f'<code style="color:#64748b">{html.escape(str(part.get("color_hex") or ""))}</code></p>',
+        f'<code style="color:#a8a29e">{html.escape(str(part.get("color_hex") or ""))}</code></p>',
         unsafe_allow_html=True,
     )
     st.markdown(
