@@ -16,6 +16,7 @@ import streamlit as st
 DB_PATH = Path(__file__).resolve().parent / "filament_usage.db"
 
 STATUSES = ("Planned", "Queue", "WIP", "Done")
+MATERIAL_PRESETS = ("PLA", "PETG", "ABS", "TPU")
 STATUS_BADGE: dict[str, tuple[str, str]] = {
     "Planned": ("#9e9e9e", "#121212"),
     "Queue": ("#fdd835", "#121212"),
@@ -553,6 +554,37 @@ def inject_css() -> None:
             letter-spacing: -0.03em;
             color: #0f172a;
           }
+          /* Status popover trigger — Tailwind palette parity:
+             Planned: bg-slate-100 text-slate-700 | Queue: bg-yellow-100 text-yellow-800
+             WIP: bg-purple-100 text-purple-800 | Done: bg-green-100 text-green-800 */
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-Planned)
+            [data-testid="stPopover"] button {
+            background-color: #f1f5f9 !important;
+            color: #334155 !important;
+            border-color: #e2e8f0 !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-Queue)
+            [data-testid="stPopover"] button {
+            background-color: #fef9c3 !important;
+            color: #854d0e !important;
+            border-color: #fde047 !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-WIP)
+            [data-testid="stPopover"] button {
+            background-color: #f3e8ff !important;
+            color: #6b21a8 !important;
+            border-color: #e9d5ff !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-Done)
+            [data-testid="stPopover"] button {
+            background-color: #dcfce7 !important;
+            color: #166534 !important;
+            border-color: #bbf7d0 !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"] [data-testid="stPopover"] button {
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+          }
         </style>
         """,
         unsafe_allow_html=True,
@@ -579,22 +611,21 @@ def initials_from_name(name: str) -> str:
     return (parts[0][0] + parts[-1][0]).upper()
 
 
-def make_status_save_callback(project_id: str):
-    def _cb() -> None:
-        key = f"status_sel_{project_id}"
-        nv = st.session_state.get(key)
-        if nv is None:
-            return
-        old = get_project(project_id)
-        if not old or old.get("status") == nv:
-            return
-        d = dict(old)
-        d["status"] = nv
-        d["updated_at"] = datetime.now().timestamp()
-        upsert_project(d)
-        st.toast("Status updated", icon="✔")
+def toggle_expanded_project_row(project_id: str) -> None:
+    cur = st.session_state.get("expanded_project_id")
+    st.session_state.expanded_project_id = None if cur == project_id else project_id
+    st.rerun()
 
-    return _cb
+
+def save_project_status_if_changed(project_id: str, new_status: str) -> None:
+    old = get_project(project_id)
+    if not old or old.get("status") == new_status:
+        return
+    d = dict(old)
+    d["status"] = new_status
+    d["updated_at"] = datetime.now().timestamp()
+    upsert_project(d)
+    st.toast("Status updated", icon="✔")
 
 
 def render_part_side_panel(part: dict[str, Any]) -> None:
@@ -787,8 +818,9 @@ def render_project_list() -> None:
     with main_zone:
         st.markdown('<p class="saas-section-title">Your projects</p>', unsafe_allow_html=True)
         st.markdown(
-            '<p class="saas-section-hint">Expand <strong>parts</strong> to browse. <strong>View</strong> opens the '
-            "detail panel. <strong>Workspace</strong> opens the full printed-part form.</p>",
+            '<p class="saas-section-hint">Click the <strong>chevron</strong> or <strong>project name</strong> to expand '
+            "a row. Use <strong>Status</strong> for a popover menu. <strong>View</strong> opens the detail panel. "
+            "<strong>Workspace</strong> opens the full printed-part form.</p>",
             unsafe_allow_html=True,
         )
 
@@ -876,13 +908,34 @@ def render_project_list() -> None:
             for p in rows:
                 pid = p["id"]
                 exp_id = st.session_state.get("expanded_project_id")
+                is_open = exp_id == pid
+                st_current = p["status"] if p["status"] in STATUSES else "Planned"
+                anchor_cls = html.escape(st_current.replace(" ", "-"))
+
                 with st.container(border=True):
                     c1, c2, c3, c4, c5, c6 = st.columns([2.0, 1.05, 0.95, 1.15, 0.95, 1.1])
                     with c1:
-                        st.markdown(
-                            f'<p class="saas-project-title">{html.escape(p["name"])}</p>',
-                            unsafe_allow_html=True,
-                        )
+                        ch_lbl = "▼" if is_open else "▶"
+                        r1, r2 = st.columns([0.11, 0.89], gap="small")
+                        with r1:
+                            if st.button(
+                                ch_lbl,
+                                key=f"proj_row_chev_{pid}",
+                                type="tertiary",
+                                help="Expand or collapse row",
+                            ):
+                                toggle_expanded_project_row(pid)
+                        with r2:
+                            name_plain = (p.get("name") or "Untitled").strip() or "Untitled"
+                            short = name_plain if len(name_plain) <= 60 else name_plain[:57] + "…"
+                            if st.button(
+                                short,
+                                key=f"proj_row_name_{pid}",
+                                type="tertiary",
+                                use_container_width=True,
+                                help="Expand or collapse row",
+                            ):
+                                toggle_expanded_project_row(pid)
                         snip = (p.get("notes") or "").strip()
                         if len(snip) > 100:
                             snip = snip[:97] + "…"
@@ -891,15 +944,26 @@ def render_project_list() -> None:
                             unsafe_allow_html=True,
                         )
                     with c2:
-                        si = STATUSES.index(p["status"]) if p["status"] in STATUSES else 0
-                        st.selectbox(
-                            "Status",
-                            STATUSES,
-                            index=si,
-                            key=f"status_sel_{pid}",
-                            label_visibility="collapsed",
-                            on_change=make_status_save_callback(pid),
+                        st.markdown(
+                            f'<span class="proj-status-anchor proj-status-{anchor_cls}" aria-hidden="true"></span>',
+                            unsafe_allow_html=True,
                         )
+                        with st.popover(
+                            f"{st_current} ▾",
+                            type="secondary",
+                            use_container_width=True,
+                            key=f"status_pop_{pid}",
+                            help="Change project status",
+                        ):
+                            st.caption("Set status")
+                            for opt in STATUSES:
+                                if st.button(
+                                    opt,
+                                    key=f"status_opt_{pid}_{opt}",
+                                    use_container_width=True,
+                                ):
+                                    save_project_status_if_changed(pid, opt)
+                                    st.rerun()
                     with c3:
                         st.markdown(
                             f'<p class="saas-meta-strong">{html.escape(format_started_display(p.get("started_date")))}</p>',
@@ -927,10 +991,11 @@ def render_project_list() -> None:
                             )
                     with c5:
                         n_parts = int(p.get("part_count") or 0)
-                        label = "Hide parts" if exp_id == pid else f"{n_parts} parts"
-                        if st.button(label, key=f"parts_exp_{pid}", type="secondary"):
-                            st.session_state.expanded_project_id = None if exp_id == pid else pid
-                            st.rerun()
+                        st.markdown(
+                            f'<p class="saas-meta-strong" style="margin-top:0.35rem">{n_parts}</p>'
+                            '<p class="saas-meta-dim" style="margin:0">parts logged</p>',
+                            unsafe_allow_html=True,
+                        )
                     with c6:
                         if st.button("Workspace", key=f"ws_{pid}", type="secondary", help="Full printed-part form"):
                             st.session_state.current_project_id = pid
@@ -943,20 +1008,49 @@ def render_project_list() -> None:
                         if st.button("Edit", key=f"row_edit_{pid}", type="secondary"):
                             edit_project_dialog(p)
 
-                    if st.session_state.get("expanded_project_id") == pid:
+                    if is_open:
+                        total_pg = float(p.get("total_grams") or 0)
+                        st.metric("Project Filament Log", format_grams(total_pg))
+                        if st.button(
+                            "Add part",
+                            type="primary",
+                            key=f"inline_add_part_{pid}",
+                            use_container_width=True,
+                        ):
+                            st.session_state.current_project_id = pid
+                            st.session_state.confirm_delete_project_id = None
+                            st.session_state.expanded_project_id = None
+                            st.session_state.detail_part_id = None
+                            st.session_state.detail_part_project_id = None
+                            clear_part_form_state()
+                            st.rerun()
+
+                        plist = list_parts(pid)
                         st.markdown(
-                            f'<p class="saas-meta-dim" style="margin:0.75rem 0 0.5rem 0">Parts in {html.escape(p["name"])}</p>',
+                            '<p class="saas-meta-dim" style="margin:0.75rem 0 0.5rem 0">Printed parts</p>',
                             unsafe_allow_html=True,
                         )
-                        plist = list_parts(pid)
                         if not plist:
                             st.markdown(
-                                '<p class="saas-meta-notes">No parts yet — use <strong>Workspace</strong> to add printed parts.</p>',
+                                '<p class="saas-meta-notes">No parts yet — use <strong>Add part</strong> above or '
+                                "<strong>Workspace</strong>.</p>",
                                 unsafe_allow_html=True,
                             )
                         else:
+                            gh = st.columns([0.1, 0.3, 0.24, 0.13, 0.13, 0.1])
+                            headers = ("", "Part", "Brand / material", "Filament", "Time", "")
+                            for i, h in enumerate(headers):
+                                with gh[i]:
+                                    st.markdown(
+                                        '<p class="saas-meta-dim" style="margin:0;font-size:0.72rem;font-weight:700;'
+                                        'text-transform:uppercase;letter-spacing:0.06em">'
+                                        f"{html.escape(h)}</p>",
+                                        unsafe_allow_html=True,
+                                    )
                             for pr in plist:
-                                pc1, pc2, pc3, pc4 = st.columns([0.14, 0.36, 0.34, 0.16])
+                                pc1, pc2, pc3, pc4, pc5, pc6 = st.columns(
+                                    [0.1, 0.3, 0.24, 0.13, 0.13, 0.1]
+                                )
                                 with pc1:
                                     hx = safe_hex_color(pr.get("color_hex"))
                                     st.markdown(
@@ -966,23 +1060,29 @@ def render_project_list() -> None:
                                     )
                                 with pc2:
                                     st.markdown(
-                                        f'<p class="saas-project-title" style="font-size:0.95rem">{html.escape(pr["part_name"])}</p>',
-                                        unsafe_allow_html=True,
-                                    )
-                                    st.markdown(
-                                        f'<p class="saas-meta-dim">{html.escape(pr["brand"])} · {html.escape(pr["material_type"])}</p>',
+                                        f'<p class="saas-project-title" style="font-size:0.95rem;margin:0">'
+                                        f"{html.escape(pr['part_name'])}</p>",
                                         unsafe_allow_html=True,
                                     )
                                 with pc3:
                                     st.markdown(
-                                        f'<p class="saas-meta-strong">{html.escape(format_grams(pr["quantity_grams"]))}</p>',
-                                        unsafe_allow_html=True,
-                                    )
-                                    st.markdown(
-                                        f'<p class="saas-meta-dim">{html.escape(format_duration(pr["print_time_minutes"]))}</p>',
+                                        f'<p class="saas-meta-dim" style="margin:0">'
+                                        f"{html.escape(pr['brand'])} · {html.escape(pr['material_type'])}</p>",
                                         unsafe_allow_html=True,
                                     )
                                 with pc4:
+                                    st.markdown(
+                                        f'<p class="saas-meta-strong" style="margin:0">'
+                                        f"{html.escape(format_grams(pr['quantity_grams']))}</p>",
+                                        unsafe_allow_html=True,
+                                    )
+                                with pc5:
+                                    st.markdown(
+                                        f'<p class="saas-meta-dim" style="margin:0">'
+                                        f"{html.escape(format_duration(pr['print_time_minutes']))}</p>",
+                                        unsafe_allow_html=True,
+                                    )
+                                with pc6:
                                     if st.button("View", key=f"pv_{pr['id']}", type="secondary"):
                                         st.session_state.detail_part_id = pr["id"]
                                         st.session_state.detail_part_project_id = pid
@@ -1084,13 +1184,21 @@ def render_project_workspace(project: dict[str, Any]) -> None:
 
         with st.form("part_form", clear_on_submit=False):
             st.subheader("Add printed part" if not st.session_state.edit_part_id else "Update printed part")
+            mat_choices = list(MATERIAL_PRESETS)
+            edit_ref = st.session_state.get("edit_part_id")
+            if edit_ref:
+                erow = get_part(edit_ref)
+                if erow and (erow.get("material_type") or "").strip():
+                    mt = erow["material_type"].strip()
+                    if mt not in mat_choices:
+                        mat_choices = [mt] + mat_choices
             part_name = st.text_input(
                 "Part name",
                 placeholder="e.g. Front left motor mount",
                 key="fm_part_name",
             )
             brand = st.text_input("Filament brand", placeholder="e.g. Polymaker", key="fm_brand")
-            material = st.text_input("Material", placeholder="e.g. PLA", key="fm_material")
+            material = st.selectbox("Material", mat_choices, key="fm_material")
 
             c1, c2, c3 = st.columns([1, 1, 2])
             with c1:
