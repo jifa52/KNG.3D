@@ -1,17 +1,36 @@
 # KNG.3D
 
-## Filament Log (local web app)
+## Filament Log
 
-The filament tracker lives in `index.html`, `styles.css`, and `app.js`. Data is stored in your browser’s IndexedDB.
+You can use either the **Streamlit** app (Python + SQLite file) or the **static** web app (HTML + IndexedDB in the browser).
 
-### Run inside Cursor (recommended)
+### Streamlit (good for work laptops and Streamlit Cloud)
 
-1. When Cursor prompts you, install the recommended **Live Preview** extension (`ms-vscode.live-server`), or install it from the Extensions view.
-2. Open `index.html`, then use the Command Palette (**Live Preview: Show Preview**) or the **Show Preview** affordance the extension adds to the editor. The page opens in Cursor’s embedded preview over `http://localhost`, which keeps IndexedDB working reliably.
+**What you get:** the same fields (brand, material, color, grams, print time, description, optional photo and STL), search, totals, and edit/delete via a detail dialog. Data is stored in a SQLite file named `filament_usage.db` next to `streamlit_app.py`.
 
-### Run with a manual local server (optional)
+**Run on your machine (when Python is allowed):**
 
-1. **Tasks: Run Task** → **Filament Log: local server** (starts `http://127.0.0.1:5173`).
-2. Command Palette → **Simple Browser: Show** → enter `http://127.0.0.1:5173/index.html`.
+```bash
+python3 -m pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
 
-You can also open that URL in an external browser if you prefer.
+Then open the URL Streamlit prints (by default `http://127.0.0.1:8501`). In Cursor you can also run the task **Filament Log: Streamlit**.
+
+**Run without installing anything on your work PC:** deploy the repo to **[Streamlit Community Cloud](https://streamlit.io/cloud)** (free tier). Point the app entry to `streamlit_app.py`. You open the hosted URL in the browser like any other site—no local `streamlit` command required on your laptop.
+
+**Important for Streamlit Cloud:** the filesystem there is **ephemeral**. The SQLite database may reset when the app sleeps or redeploys. For data you must not lose, use a hosted database (or keep running the app locally where `filament_usage.db` persists on disk).
+
+Theming uses `.streamlit/config.toml` (red / white / black).
+
+---
+
+### Static web app (HTML + IndexedDB)
+
+Files: `index.html`, `styles.css`, `app.js`. Data stays in **that browser’s** IndexedDB.
+
+**Run inside Cursor:** install the recommended **Live Preview** extension, open `index.html`, then **Live Preview: Show Preview** from the Command Palette.
+
+**Run with a manual local server:** task **Filament Log: local server**, then **Simple Browser: Show** → `http://127.0.0.1:5173/index.html`.
+
+**Host on GitHub Pages:** enable Pages from the repo root; open the `github.io` URL. No paid GitHub plan is required for **public** repositories.
