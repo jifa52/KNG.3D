@@ -37,6 +37,45 @@ PART_FORM_KEYS = (
     "fm_stl",
 )
 
+LS_EXPAND_KEY = "kng3d_expanded_project_id"
+
+
+def persist_expanded_project_to_storage(project_id: str | None) -> None:
+    """Persist accordion row id to localStorage (browser survives refresh / revisit)."""
+    try:
+        from streamlit_js_eval import remove_local_storage, set_local_storage
+    except ImportError:
+        return
+    if project_id:
+        set_local_storage(LS_EXPAND_KEY, project_id, component_key="persist_expanded_set")
+    else:
+        remove_local_storage(LS_EXPAND_KEY, component_key="persist_expanded_remove")
+
+
+def reconcile_expanded_project_from_storage(
+    rows: list[dict[str, Any]], projects: list[dict[str, Any]]
+) -> None:
+    """If nothing is expanded in session but localStorage has a visible id, restore it."""
+    try:
+        from streamlit_js_eval import get_local_storage, remove_local_storage
+    except ImportError:
+        return
+    known = {p["id"] for p in projects}
+    visible = {r["id"] for r in rows}
+    raw = get_local_storage(LS_EXPAND_KEY, component_key="reconcile_expanded_ls_read")
+    if raw is None or raw == "":
+        return
+    if not isinstance(raw, str):
+        return
+    if raw not in known:
+        remove_local_storage(LS_EXPAND_KEY, component_key="prune_deleted_expanded")
+        return
+    if raw not in visible:
+        return
+    if st.session_state.get("expanded_project_id") is None:
+        st.session_state.expanded_project_id = raw
+        st.rerun()
+
 
 def _conn() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH, check_same_thread=False)
@@ -585,6 +624,54 @@ def inject_css() -> None:
             border-radius: 8px !important;
             font-weight: 600 !important;
           }
+          /* Tailwind parity: whitespace-nowrap + flex-shrink-0 on button stacks (project rows + detail panel) */
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root) [data-testid^="baseButton"],
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-detail-panel-root) [data-testid^="baseButton"] {
+            white-space: nowrap !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root) [data-testid="stElementContainer"],
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-detail-panel-root) [data-testid="stElementContainer"] {
+            flex-shrink: 0 !important;
+          }
+          div[data-testid="column"]:has(.saas-detail-column-shell) {
+            min-width: 300px !important;
+            max-width: 380px !important;
+            flex: 0 1 340px !important;
+          }
+          p.saas-parts-thead {
+            margin: 0;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: #0f172a;
+          }
+          p.saas-parts-data-title {
+            margin: 0;
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.25;
+          }
+          p.saas-parts-data-meta {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1e293b;
+            line-height: 1.35;
+          }
+          p.saas-parts-data-strong {
+            margin: 0;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #0f172a;
+          }
+          p.saas-parts-data-dim {
+            margin: 0;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #334155;
+          }
         </style>
         """,
         unsafe_allow_html=True,
@@ -613,7 +700,9 @@ def initials_from_name(name: str) -> str:
 
 def toggle_expanded_project_row(project_id: str) -> None:
     cur = st.session_state.get("expanded_project_id")
-    st.session_state.expanded_project_id = None if cur == project_id else project_id
+    new_val = None if cur == project_id else project_id
+    st.session_state.expanded_project_id = new_val
+    persist_expanded_project_to_storage(new_val)
     st.rerun()
 
 
@@ -675,7 +764,7 @@ def render_part_side_panel(part: dict[str, Any]) -> None:
             key=f"side_dl_stl_{part['id']}",
         )
 
-    b1, b2, b3 = st.columns([1, 1, 1])
+    b1, b2 = st.columns(2)
     with b1:
         if st.button("Edit in workspace", type="primary", key=f"side_edit_{part['id']}"):
             st.session_state.current_project_id = part["project_id"]
@@ -686,11 +775,6 @@ def render_part_side_panel(part: dict[str, Any]) -> None:
             st.session_state.expanded_project_id = None
             st.rerun()
     with b2:
-        if st.button("Close", key=f"side_close_{part['id']}", type="secondary"):
-            st.session_state.detail_part_id = None
-            st.session_state.detail_part_project_id = None
-            st.rerun()
-    with b3:
         if st.button("Delete", type="secondary", key=f"side_del_{part['id']}"):
             delete_part(part["id"])
             if st.session_state.get("edit_part_id") == part["id"]:
@@ -810,7 +894,7 @@ def render_project_list() -> None:
 
     detail_id = st.session_state.get("detail_part_id")
     if detail_id:
-        main_zone, side_zone = st.columns([3.0, 1.05], gap="medium")
+        main_zone, side_zone = st.columns([2.65, 1.35], gap="medium")
     else:
         main_zone = st.container()
         side_zone = None
@@ -880,6 +964,7 @@ def render_project_list() -> None:
                             )
                             st.session_state.new_project_open = False
                             st.session_state.expanded_project_id = pid
+                            persist_expanded_project_to_storage(pid)
                             st.session_state.detail_part_id = None
                             st.session_state.detail_part_project_id = None
                             st.rerun()
@@ -891,6 +976,8 @@ def render_project_list() -> None:
         exp = st.session_state.get("expanded_project_id")
         if exp and not any(r["id"] == exp for r in rows):
             st.session_state.expanded_project_id = None
+
+        reconcile_expanded_project_from_storage(rows, projects)
 
         if not projects:
             st.info("No projects yet — click **New project** above to create your first build.")
@@ -913,6 +1000,10 @@ def render_project_list() -> None:
                 anchor_cls = html.escape(st_current.replace(" ", "-"))
 
                 with st.container(border=True):
+                    st.markdown(
+                        '<div class="saas-proj-card-root" aria-hidden="true"></div>',
+                        unsafe_allow_html=True,
+                    )
                     c1, c2, c3, c4, c5, c6 = st.columns([2.0, 1.05, 0.95, 1.15, 0.95, 1.1])
                     with c1:
                         ch_lbl = "▼" if is_open else "▶"
@@ -1037,48 +1128,46 @@ def render_project_list() -> None:
                                 unsafe_allow_html=True,
                             )
                         else:
-                            gh = st.columns([0.1, 0.3, 0.24, 0.13, 0.13, 0.1])
-                            headers = ("", "Part", "Brand / material", "Filament", "Time", "")
+                            gh = st.columns([0.26, 0.3, 0.11, 0.13, 0.12, 0.08])
+                            headers = ("Part", "Brand / material", "Color", "Filament", "Time", "")
                             for i, h in enumerate(headers):
                                 with gh[i]:
-                                    st.markdown(
-                                        '<p class="saas-meta-dim" style="margin:0;font-size:0.72rem;font-weight:700;'
-                                        'text-transform:uppercase;letter-spacing:0.06em">'
-                                        f"{html.escape(h)}</p>",
-                                        unsafe_allow_html=True,
-                                    )
+                                    if h:
+                                        st.markdown(
+                                            f'<p class="saas-parts-thead">{html.escape(h)}</p>',
+                                            unsafe_allow_html=True,
+                                        )
                             for pr in plist:
                                 pc1, pc2, pc3, pc4, pc5, pc6 = st.columns(
-                                    [0.1, 0.3, 0.24, 0.13, 0.13, 0.1]
+                                    [0.26, 0.3, 0.11, 0.13, 0.12, 0.08]
                                 )
                                 with pc1:
-                                    hx = safe_hex_color(pr.get("color_hex"))
                                     st.markdown(
-                                        f"<div style='width:32px;height:32px;border-radius:8px;background:{hx};"
-                                        "border:1px solid #e2e8f0;margin-top:4px'></div>",
+                                        f'<p class="saas-parts-data-title">{html.escape(pr["part_name"])}</p>',
                                         unsafe_allow_html=True,
                                     )
                                 with pc2:
                                     st.markdown(
-                                        f'<p class="saas-project-title" style="font-size:0.95rem;margin:0">'
-                                        f"{html.escape(pr['part_name'])}</p>",
+                                        f'<p class="saas-parts-data-meta">'
+                                        f"{html.escape(pr['brand'])} · {html.escape(pr['material_type'])}</p>",
                                         unsafe_allow_html=True,
                                     )
                                 with pc3:
+                                    hx = safe_hex_color(pr.get("color_hex"))
                                     st.markdown(
-                                        f'<p class="saas-meta-dim" style="margin:0">'
-                                        f"{html.escape(pr['brand'])} · {html.escape(pr['material_type'])}</p>",
+                                        f"<div style='width:32px;height:32px;border-radius:8px;background:{hx};"
+                                        "border:1px solid #94a3b8;margin-top:4px'></div>",
                                         unsafe_allow_html=True,
                                     )
                                 with pc4:
                                     st.markdown(
-                                        f'<p class="saas-meta-strong" style="margin:0">'
+                                        f'<p class="saas-parts-data-strong">'
                                         f"{html.escape(format_grams(pr['quantity_grams']))}</p>",
                                         unsafe_allow_html=True,
                                     )
                                 with pc5:
                                     st.markdown(
-                                        f'<p class="saas-meta-dim" style="margin:0">'
+                                        f'<p class="saas-parts-data-dim">'
                                         f"{html.escape(format_duration(pr['print_time_minutes']))}</p>",
                                         unsafe_allow_html=True,
                                     )
@@ -1090,15 +1179,35 @@ def render_project_list() -> None:
 
     if side_zone is not None:
         with side_zone:
+            st.markdown(
+                '<div class="saas-detail-column-shell" aria-hidden="true"></div>',
+                unsafe_allow_html=True,
+            )
             with st.container(border=True):
-                st.markdown('<p class="saas-section-title" style="font-size:1rem">Selection</p>', unsafe_allow_html=True)
-                part = get_part(str(detail_id)) if detail_id else None
-                if not part:
-                    st.warning("That part could not be loaded.")
-                    if st.button("Close", key="side_close_missing", type="secondary"):
+                st.markdown(
+                    '<div class="saas-detail-panel-root" aria-hidden="true"></div>',
+                    unsafe_allow_html=True,
+                )
+                hdr_l, hdr_r = st.columns([1, 0.22])
+                with hdr_l:
+                    st.markdown(
+                        '<p class="saas-section-title" style="font-size:1rem;margin:0">Selection</p>',
+                        unsafe_allow_html=True,
+                    )
+                with hdr_r:
+                    if st.button(
+                        " ",
+                        key="detail_panel_close_x",
+                        type="tertiary",
+                        help="Close panel",
+                        icon=":material/close:",
+                    ):
                         st.session_state.detail_part_id = None
                         st.session_state.detail_part_project_id = None
                         st.rerun()
+                part = get_part(str(detail_id)) if detail_id else None
+                if not part:
+                    st.warning("That part could not be loaded.")
                 else:
                     render_part_side_panel(part)
 
@@ -1161,6 +1270,8 @@ def render_project_workspace(project: dict[str, Any]) -> None:
         with c_y:
             if st.button("Yes, delete", type="primary", key="del_proj_yes"):
                 delete_project(pid)
+                if st.session_state.get("expanded_project_id") == pid:
+                    persist_expanded_project_to_storage(None)
                 st.session_state.current_project_id = None
                 st.session_state.confirm_delete_project_id = None
                 st.session_state.expanded_project_id = None
