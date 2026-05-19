@@ -38,6 +38,8 @@ PART_FORM_KEYS = (
 )
 
 LS_EXPAND_KEY = "kng3d_expanded_project_id"
+# Printed-parts subtable (expanded row): last column holds View — keep ≥ ~20% so it does not crush when the side panel opens.
+PARTS_SUBTABLE_COL_RATIOS = [0.22, 0.26, 0.10, 0.12, 0.10, 0.20]
 
 
 def persist_expanded_project_to_storage(project_id: str | None) -> None:
@@ -672,6 +674,22 @@ def inject_css() -> None:
             font-weight: 500;
             color: #334155;
           }
+          /* Printed-parts grid: last column + View must not collapse (narrow main + side panel) */
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-parts-grid-root)
+            div[data-testid="stHorizontalBlock"]
+            > div[data-testid="column"]:last-child {
+            flex: 0 0 auto !important;
+            min-width: 5.75rem !important;
+            max-width: none !important;
+            overflow: visible !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-parts-grid-root)
+            div[data-testid="stHorizontalBlock"]
+            > div[data-testid="column"]:last-child
+            [data-testid^="baseButton"] {
+            white-space: nowrap !important;
+            min-width: 4.5rem !important;
+          }
         </style>
         """,
         unsafe_allow_html=True,
@@ -1128,7 +1146,11 @@ def render_project_list() -> None:
                                 unsafe_allow_html=True,
                             )
                         else:
-                            gh = st.columns([0.26, 0.3, 0.11, 0.13, 0.12, 0.08])
+                            st.markdown(
+                                '<div class="saas-parts-grid-root" aria-hidden="true"></div>',
+                                unsafe_allow_html=True,
+                            )
+                            gh = st.columns(PARTS_SUBTABLE_COL_RATIOS)
                             headers = ("Part", "Brand / material", "Color", "Filament", "Time", "")
                             for i, h in enumerate(headers):
                                 with gh[i]:
@@ -1138,9 +1160,7 @@ def render_project_list() -> None:
                                             unsafe_allow_html=True,
                                         )
                             for pr in plist:
-                                pc1, pc2, pc3, pc4, pc5, pc6 = st.columns(
-                                    [0.26, 0.3, 0.11, 0.13, 0.12, 0.08]
-                                )
+                                pc1, pc2, pc3, pc4, pc5, pc6 = st.columns(PARTS_SUBTABLE_COL_RATIOS)
                                 with pc1:
                                     st.markdown(
                                         f'<p class="saas-parts-data-title">{html.escape(pr["part_name"])}</p>',
@@ -1172,7 +1192,12 @@ def render_project_list() -> None:
                                         unsafe_allow_html=True,
                                     )
                                 with pc6:
-                                    if st.button("View", key=f"pv_{pr['id']}", type="secondary"):
+                                    if st.button(
+                                        "View",
+                                        key=f"pv_{pr['id']}",
+                                        type="secondary",
+                                        width="content",
+                                    ):
                                         st.session_state.detail_part_id = pr["id"]
                                         st.session_state.detail_part_project_id = pid
                                         st.rerun()
