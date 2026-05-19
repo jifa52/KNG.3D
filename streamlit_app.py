@@ -440,10 +440,25 @@ def inject_css() -> None:
             --saas-indigo: #4338ca;
             --saas-indigo-hover: #3730a3;
             --saas-slate-700: #334155;
+            --saas-chassis-max: min(1920px, 96vw);
+            --saas-chassis-px: clamp(1rem, 2.5vw, 3rem);
+          }
+          /* Fluid chassis — use most of the viewport (Tailwind: w-full + responsive px / max-w-[95%] parity) */
+          section[data-testid="stMain"] .block-container {
+            padding-top: 1.5rem !important;
+            max-width: var(--saas-chassis-max) !important;
+            width: 100% !important;
+            padding-left: var(--saas-chassis-px) !important;
+            padding-right: var(--saas-chassis-px) !important;
+            box-sizing: border-box !important;
           }
           .block-container {
-            padding-top: 1.5rem;
-            max-width: 1180px;
+            padding-top: 1.5rem !important;
+            max-width: var(--saas-chassis-max) !important;
+            width: 100% !important;
+            padding-left: var(--saas-chassis-px) !important;
+            padding-right: var(--saas-chassis-px) !important;
+            box-sizing: border-box !important;
           }
           h1 {
             letter-spacing: -0.035em;
@@ -533,7 +548,13 @@ def inject_css() -> None:
           }
           .saas-grid-head {
             display: grid;
-            grid-template-columns: 2fr 1.05fr 0.95fr 1.15fr 0.95fr 1.1fr;
+            grid-template-columns:
+              minmax(11rem, 1fr)
+              minmax(9.5rem, auto)
+              minmax(6.5rem, auto)
+              minmax(9rem, auto)
+              minmax(6rem, auto)
+              minmax(12rem, auto);
             gap: 10px;
             font-size: 0.68rem;
             font-weight: 700;
@@ -546,6 +567,12 @@ def inject_css() -> None:
             padding: 10px 12px;
             border: 1px solid var(--saas-border);
             box-sizing: border-box;
+            align-items: center;
+          }
+          .saas-grid-head > span {
+            white-space: nowrap !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           p.saas-project-title {
             margin: 0 0 0.35rem 0;
@@ -572,6 +599,9 @@ def inject_css() -> None:
             font-size: 0.82rem;
             font-weight: 600;
             color: var(--saas-muted);
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root) p.saas-meta-strong {
+            white-space: nowrap !important;
           }
           div[data-testid="stMultiSelect"] {
             margin-bottom: 1rem !important;
@@ -625,11 +655,75 @@ def inject_css() -> None:
           div[data-testid="stVerticalBlockBorderWrapper"] [data-testid="stPopover"] button {
             border-radius: 8px !important;
             font-weight: 600 !important;
+            white-space: nowrap !important;
           }
-          /* Tailwind parity: whitespace-nowrap + flex-shrink-0 on button stacks (project rows + detail panel) */
+          /* Six-column project + printed-parts rows: flex-1 on first column, strict mins on controls */
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
+            div[data-testid="stHorizontalBlock"]:has(
+              > div[data-testid="column"]:nth-child(6):last-child
+            ) {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            align-items: flex-start !important;
+            width: 100% !important;
+            min-width: 0 !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
+            div[data-testid="stHorizontalBlock"]:has(
+              > div[data-testid="column"]:nth-child(6):last-child
+            )
+            > div[data-testid="column"]:nth-child(1) {
+            flex: 1 1 0% !important;
+            min-width: 11rem !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
+            div[data-testid="stHorizontalBlock"]:has(
+              > div[data-testid="column"]:nth-child(6):last-child
+            )
+            > div[data-testid="column"]:nth-child(2) {
+            flex: 0 0 auto !important;
+            min-width: 9.5rem !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
+            div[data-testid="stHorizontalBlock"]:has(
+              > div[data-testid="column"]:nth-child(6):last-child
+            )
+            > div[data-testid="column"]:nth-child(3) {
+            flex: 0 0 auto !important;
+            min-width: 6.5rem !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
+            div[data-testid="stHorizontalBlock"]:has(
+              > div[data-testid="column"]:nth-child(6):last-child
+            )
+            > div[data-testid="column"]:nth-child(4) {
+            flex: 0 0 auto !important;
+            min-width: 9rem !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
+            div[data-testid="stHorizontalBlock"]:has(
+              > div[data-testid="column"]:nth-child(6):last-child
+            )
+            > div[data-testid="column"]:nth-child(5) {
+            flex: 0 0 auto !important;
+            min-width: 6rem !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
+            div[data-testid="stHorizontalBlock"]:has(
+              > div[data-testid="column"]:nth-child(6):last-child
+            )
+            > div[data-testid="column"]:nth-child(6) {
+            flex: 0 0 auto !important;
+            min-width: 12.5rem !important;
+          }
+          /* Tailwind parity: whitespace-nowrap + flex-shrink-0 on buttons (project rows + detail panel) */
           div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root) [data-testid^="baseButton"],
           div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-detail-panel-root) [data-testid^="baseButton"] {
             white-space: nowrap !important;
+          }
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root) [data-testid="stPopover"] button,
+          div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root) [data-testid="stPopover"] {
+            flex-shrink: 0 !important;
           }
           div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root) [data-testid="stElementContainer"],
           div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-detail-panel-root) [data-testid="stElementContainer"] {
@@ -647,6 +741,7 @@ def inject_css() -> None:
             text-transform: uppercase;
             letter-spacing: 0.09em;
             color: #0f172a;
+            white-space: nowrap !important;
           }
           p.saas-parts-data-title {
             margin: 0;
@@ -654,6 +749,9 @@ def inject_css() -> None:
             font-weight: 700;
             color: #0f172a;
             line-height: 1.25;
+            white-space: nowrap !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           p.saas-parts-data-meta {
             margin: 0;
@@ -661,18 +759,23 @@ def inject_css() -> None:
             font-weight: 500;
             color: #1e293b;
             line-height: 1.35;
+            white-space: nowrap !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           p.saas-parts-data-strong {
             margin: 0;
             font-size: 0.98rem;
             font-weight: 700;
             color: #0f172a;
+            white-space: nowrap !important;
           }
           p.saas-parts-data-dim {
             margin: 0;
             font-size: 0.88rem;
             font-weight: 500;
             color: #334155;
+            white-space: nowrap !important;
           }
           /* Printed-parts grid: last column + View must not collapse (narrow main + side panel) */
           div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-parts-grid-root)
@@ -912,7 +1015,7 @@ def render_project_list() -> None:
 
     detail_id = st.session_state.get("detail_part_id")
     if detail_id:
-        main_zone, side_zone = st.columns([2.65, 1.35], gap="medium")
+        main_zone, side_zone = st.columns([2.85, 1.15], gap="medium")
     else:
         main_zone = st.container()
         side_zone = None
@@ -1022,7 +1125,7 @@ def render_project_list() -> None:
                         '<div class="saas-proj-card-root" aria-hidden="true"></div>',
                         unsafe_allow_html=True,
                     )
-                    c1, c2, c3, c4, c5, c6 = st.columns([2.0, 1.05, 0.95, 1.15, 0.95, 1.1])
+                    c1, c2, c3, c4, c5, c6 = st.columns([2.35, 1.08, 0.98, 1.12, 0.92, 1.15])
                     with c1:
                         ch_lbl = "▼" if is_open else "▶"
                         r1, r2 = st.columns([0.11, 0.89], gap="small")
