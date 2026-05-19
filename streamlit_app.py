@@ -40,6 +40,8 @@ PART_FORM_KEYS = (
 LS_EXPAND_KEY = "kng3d_expanded_project_id"
 # Printed-parts subtable (expanded row): last column holds View — keep ≥ ~20% so it does not crush when the side panel opens.
 PARTS_SUBTABLE_COL_RATIOS = [0.22, 0.26, 0.10, 0.12, 0.10, 0.20]
+# Project list main row — must match header row exactly for column alignment.
+PROJECT_ROW_COL_RATIOS = [2.35, 1.08, 0.98, 1.12, 0.92, 1.15]
 
 
 def persist_expanded_project_to_storage(project_id: str | None) -> None:
@@ -546,30 +548,25 @@ def inject_css() -> None:
             box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
             margin-bottom: 0.85rem;
           }
-          .saas-grid-head {
-            display: grid;
-            grid-template-columns:
-              minmax(11rem, 1fr)
-              minmax(9.5rem, auto)
-              minmax(6.5rem, auto)
-              minmax(9rem, auto)
-              minmax(6rem, auto)
-              minmax(12rem, auto);
-            gap: 10px;
+          /* Project list header row — same Streamlit columns as data rows (see render_project_list) */
+          div[data-testid="element-container"]:has(.saas-proj-list-head-anchor)
+            + div[data-testid="element-container"]
+            [data-testid="stHorizontalBlock"] {
+            background: #f8fafc !important;
+            border: 1px solid var(--saas-border) !important;
+            border-radius: 10px !important;
+            padding: 8px 10px 10px 10px !important;
+            margin: 0 0 12px 0 !important;
+            box-sizing: border-box !important;
+          }
+          p.saas-proj-col-head {
+            margin: 0;
+            padding: 2px 2px 0 2px;
             font-size: 0.68rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.07em;
-            color: #94a3b8;
-            margin: 0 0 12px 0;
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 10px 12px;
-            border: 1px solid var(--saas-border);
-            box-sizing: border-box;
-            align-items: center;
-          }
-          .saas-grid-head > span {
+            color: #64748b;
             white-space: nowrap !important;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -625,37 +622,103 @@ def inject_css() -> None:
             letter-spacing: -0.03em;
             color: #0f172a;
           }
-          /* Status popover trigger — Tailwind palette parity:
-             Planned: bg-slate-100 text-slate-700 | Queue: bg-yellow-100 text-yellow-800
-             WIP: bg-purple-100 text-purple-800 | Done: bg-green-100 text-green-800 */
+          /* Status popover trigger — filled chips (Tailwind palette parity) */
           div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-Planned)
-            [data-testid="stPopover"] button {
-            background-color: #f1f5f9 !important;
-            color: #334155 !important;
-            border-color: #e2e8f0 !important;
+            [data-testid="stPopover"]
+            button {
+            background-color: #e2e8f0 !important;
+            background-image: none !important;
+            color: #1e293b !important;
+            border: 1px solid #94a3b8 !important;
+            box-shadow: none !important;
           }
           div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-Queue)
-            [data-testid="stPopover"] button {
-            background-color: #fef9c3 !important;
+            [data-testid="stPopover"]
+            button {
+            background-color: #fef08a !important;
+            background-image: none !important;
             color: #854d0e !important;
-            border-color: #fde047 !important;
+            border: 1px solid #eab308 !important;
+            box-shadow: none !important;
           }
           div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-WIP)
-            [data-testid="stPopover"] button {
-            background-color: #f3e8ff !important;
-            color: #6b21a8 !important;
-            border-color: #e9d5ff !important;
+            [data-testid="stPopover"]
+            button {
+            background-color: #e9d5ff !important;
+            background-image: none !important;
+            color: #5b21b6 !important;
+            border: 1px solid #c084fc !important;
+            box-shadow: none !important;
           }
           div[data-testid="stVerticalBlockBorderWrapper"]:has(span.proj-status-anchor.proj-status-Done)
-            [data-testid="stPopover"] button {
-            background-color: #dcfce7 !important;
+            [data-testid="stPopover"]
+            button {
+            background-color: #bbf7d0 !important;
+            background-image: none !important;
             color: #166534 !important;
-            border-color: #bbf7d0 !important;
+            border: 1px solid #4ade80 !important;
+            box-shadow: none !important;
           }
           div[data-testid="stVerticalBlockBorderWrapper"] [data-testid="stPopover"] button {
             border-radius: 8px !important;
             font-weight: 600 !important;
             white-space: nowrap !important;
+          }
+          /* Status menu items (popover body) — filled by label */
+          div[data-testid="stPopoverBody"] button[aria-label="Planned"] {
+            background-color: #e2e8f0 !important;
+            background-image: none !important;
+            color: #1e293b !important;
+            border: 1px solid #94a3b8 !important;
+          }
+          div[data-testid="stPopoverBody"] button[aria-label="Queue"] {
+            background-color: #fef08a !important;
+            background-image: none !important;
+            color: #854d0e !important;
+            border: 1px solid #eab308 !important;
+          }
+          div[data-testid="stPopoverBody"] button[aria-label="WIP"] {
+            background-color: #e9d5ff !important;
+            background-image: none !important;
+            color: #5b21b6 !important;
+            border: 1px solid #c084fc !important;
+          }
+          div[data-testid="stPopoverBody"] button[aria-label="Done"] {
+            background-color: #bbf7d0 !important;
+            background-image: none !important;
+            color: #166534 !important;
+            border: 1px solid #4ade80 !important;
+          }
+          div[data-testid="stPopoverBody"] button[aria-label="Planned"]:hover,
+          div[data-testid="stPopoverBody"] button[aria-label="Queue"]:hover,
+          div[data-testid="stPopoverBody"] button[aria-label="WIP"]:hover,
+          div[data-testid="stPopoverBody"] button[aria-label="Done"]:hover {
+            filter: brightness(0.97);
+          }
+          /* Fallback when aria-label differs — caption row then four status buttons */
+          div[data-testid="stPopoverBody"] div[data-testid="element-container"]:nth-child(2) button {
+            background-color: #e2e8f0 !important;
+            background-image: none !important;
+            color: #1e293b !important;
+            border: 1px solid #94a3b8 !important;
+          }
+          div[data-testid="stPopoverBody"] div[data-testid="element-container"]:nth-child(3) button {
+            background-color: #fef08a !important;
+            background-image: none !important;
+            color: #854d0e !important;
+            border: 1px solid #eab308 !important;
+          }
+          div[data-testid="stPopoverBody"] div[data-testid="element-container"]:nth-child(4) button {
+            background-color: #e9d5ff !important;
+            background-image: none !important;
+            color: #5b21b6 !important;
+            border: 1px solid #c084fc !important;
+          }
+          div[data-testid="stPopoverBody"] div[data-testid="element-container"]:nth-child(5) button {
+            background-color: #bbf7d0 !important;
+            background-image: none !important;
+            color: #166534 !important;
+            border: 1px solid #4ade80 !important;
           }
           /* Six-column project + printed-parts rows: flex-1 on first column, strict mins on controls */
           div[data-testid="stVerticalBlockBorderWrapper"]:has(.saas-proj-card-root)
@@ -1000,6 +1063,22 @@ def edit_project_dialog(project: dict[str, Any]) -> None:
         st.rerun()
 
 
+def render_project_list_column_headers() -> None:
+    """Match Streamlit column widths to project rows so labels line up with cells."""
+    st.markdown(
+        '<div class="saas-proj-list-head-anchor" aria-hidden="true"></div>',
+        unsafe_allow_html=True,
+    )
+    labels = ("Project", "Status", "Date", "Opened by", "Parts", "Actions")
+    head_cols = st.columns(PROJECT_ROW_COL_RATIOS)
+    for hc, lab in zip(head_cols, labels):
+        with hc:
+            st.markdown(
+                f'<p class="saas-proj-col-head">{html.escape(lab)}</p>',
+                unsafe_allow_html=True,
+            )
+
+
 def render_project_list() -> None:
     projects = list_projects()
     total_parts = sum(int(p.get("part_count") or 0) for p in projects)
@@ -1105,13 +1184,7 @@ def render_project_list() -> None:
         elif not rows:
             st.info("No projects match the selected status filters.")
         else:
-            st.markdown(
-                '<div class="saas-grid-head">'
-                "<span>Project</span><span>Status</span><span>Date</span>"
-                "<span>Opened by</span><span>Parts</span><span>Actions</span>"
-                "</div>",
-                unsafe_allow_html=True,
-            )
+            render_project_list_column_headers()
 
             for p in rows:
                 pid = p["id"]
@@ -1125,7 +1198,7 @@ def render_project_list() -> None:
                         '<div class="saas-proj-card-root" aria-hidden="true"></div>',
                         unsafe_allow_html=True,
                     )
-                    c1, c2, c3, c4, c5, c6 = st.columns([2.35, 1.08, 0.98, 1.12, 0.92, 1.15])
+                    c1, c2, c3, c4, c5, c6 = st.columns(PROJECT_ROW_COL_RATIOS)
                     with c1:
                         ch_lbl = "▼" if is_open else "▶"
                         r1, r2 = st.columns([0.11, 0.89], gap="small")
