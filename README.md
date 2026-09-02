@@ -25,15 +25,47 @@ Tonight’s Close is also at:
 index.html                         latest Close
 assets/brief.css                   two-lane phone-first styles
 assets/lanes.js                    News / Markets switch
+assets/cards.js                    optional Marshall photo thumbnails
+assets/briefing.schema.json        copy overlay, including image { url, credit }
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-02-2300/         frozen Close snapshot
+briefings/2026-09-02-2300/         frozen Close snapshot + briefing.json
 404.html
 ```
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
 This Close (Wednesday, 2 September 2026, 23:00 IDT / 16:00 ET US cash close) was copied from the live briefing. Numbers were not invented.
+
+## Card photos
+
+Cards stay text-first. A small inline thumbnail appears only when Marshall-approved copy includes a real source photo:
+
+```json
+{
+  "id": "centcom-irgc",
+  "image": {
+    "url": "https://example.test/photo.jpg",
+    "credit": "CENTCOM",
+    "caption": "optional alt text"
+  }
+}
+```
+
+Add that object to the matching card in `briefings/<edition>/briefing.json` (`id` must match `data-story-id` on the HTML card). `assets/cards.js` renders a real `<img>` plus the credit in small type. Omit `image` when there is no shipped photo — do not scrape, stock, or generate pictures, and do not leave an empty image box.
+
+Tonight’s 23:00 IDT Close has no Marshall-shipped photos. Those cards stay copy-only.
+
+You can also paste the same chrome by hand:
+
+```html
+<figure class="card-photo">
+  <img src="PHOTO_URL" alt="CREDIT" decoding="async" loading="lazy">
+  <figcaption class="card-photo-credit">CREDIT</figcaption>
+</figure>
+```
+
+Never use a raw URL or an “open photo” link as the visual.
 
 ## Run locally
 

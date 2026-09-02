@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jifa52.github.io/KNG.3D/assets/briefing.schema.json",
+  "title": "TheJls Market Brief copy schema",
+  "description": "Copy overlay for a published briefing. Cards are rendered as static HTML. Optional Marshall-approved photos are dropped in via image { url, credit } — never scraped, stocked, or generated.",
+  "type": "object",
+  "required": ["id", "cards"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Edition folder id, e.g. 2026-09-02-2300"
+    },
+    "cards": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/card" }
+    }
+  },
+  "$defs": {
+    "card": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Matches data-story-id on the HTML card"
+        },
+        "headline": {
+          "type": "string",
+          "description": "Shipped headline, for Marshall lookup only"
+        },
+        "image": { "$ref": "#/$defs/image" }
+      }
+    },
+    "image": {
+      "type": "object",
+      "description": "Render a visible thumbnail only when url and credit or caption are both present. Omit this object when Marshall did not ship a source photo.",
+      "required": ["url"],
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Absolute http(s) URL or page-relative path to the source photo"
+        },
+        "credit": {
+          "type": "string",
+          "description": "Source name as shipped, shown in small type next to the thumbnail"
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional caption; used for img alt when present"
+        }
+      }
+    }
+  }
+}

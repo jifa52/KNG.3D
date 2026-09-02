@@ -31,13 +31,34 @@ jobs:
             .nojekyll \
             assets/brief.css \
             assets/lanes.js \
+            assets/cards.js \
+            assets/briefing.schema.json \
             assets/favicon.svg \
             archive/index.html \
-            briefings/2026-09-02-2300/index.html
+            briefings/2026-09-02-2300/index.html \
+            briefings/2026-09-02-2300/briefing.json
           do
             test -f "$f"
             echo "ok $f"
           done
+
+      - name: Close copy has no invented photos
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("briefings/2026-09-02-2300/briefing.json").read_text())
+          for card in data.get("cards", []):
+              image = card.get("image") or {}
+              if image.get("url"):
+                  raise SystemExit(f"unexpected photo on {card.get('id')}")
+          css = Path("assets/brief.css").read_text()
+          js = Path("assets/cards.js").read_text()
+          assert ".card-photo" in css
+          assert "<img" in Path("index.html").read_text()
+          assert "open photo" not in js.lower()
+          print("ok photo chrome; tonight's Close has no shipped photos")
+          PY
 
   deploy:
     name: Deploy GitHub Pages

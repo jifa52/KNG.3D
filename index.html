@@ -10,6 +10,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/brief.css">
   <script src="assets/lanes.js" defer></script>
+  <script src="assets/cards.js" defer></script>
   
   <meta property="og:title" content="Wednesday, 2 September 2026 · Close">
   <meta property="og:description" content="CENTCOM struck IRGC after Hormuz shipping attacks. Soft ADP, oil ~$90, Dell raised FY, PANW dumped, Broadcom still unprinted.">
@@ -36,7 +37,7 @@
 
 
 
-<article class="deck" id="briefing" data-lane="news">
+<article class="deck" id="briefing" data-lane="news" data-briefing-src="briefings/2026-09-02-2300/briefing.json">
   <header class="mast">
     <p class="brand">© TheJls · Original Content</p>
     <h1 class="mast-title">Market Brief</h1>
@@ -71,7 +72,7 @@
     <p class="lane-kicker">CENTCOM struck IRGC after attempted attacks on Hormuz shipping and US personnel. The strait is still disputed.</p>
     <div class="stack">
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="centcom-irgc">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   
@@ -93,7 +94,7 @@
           
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="hormuz-disputed">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   
@@ -240,7 +241,7 @@
 
     <div class="stack">
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="adp-factory">
           <p class="story-tags">
   <span class="fresh fresh-new-today">NEW TODAY</span>
   
@@ -258,7 +259,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="oil-wti">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   
@@ -278,7 +279,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="dell-fy">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   <span class="ticker">DELL</span>
@@ -296,7 +297,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="panw-q4">
           <p class="story-tags">
   <span class="fresh fresh-new-today">NEW TODAY</span>
   <span class="ticker">PANW</span>
@@ -314,7 +315,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="avgo-after-bell">
           <p class="story-tags">
   <span class="fresh fresh-developing">DEVELOPING</span>
   <span class="ticker">AVGO</span>
@@ -425,6 +426,13 @@
     </p>
   
 </main>
+
+  <template id="card-photo-template">
+    <figure class="card-photo">
+      <img alt="" decoding="async" loading="lazy">
+      <figcaption class="card-photo-credit"></figcaption>
+    </figure>
+  </template>
 
   </div>
 </body>
