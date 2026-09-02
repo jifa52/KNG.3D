@@ -53,6 +53,6 @@ The site files are already on `main` at the repo root (`index.html`, `assets/`, 
 2. **Settings → Pages → Build and deployment → Deploy from a branch**
 3. Branch **`main`**, folder **`/` (root)** → **Save**
 
-Optional: source **GitHub Actions** instead, then re-run **Actions → Deploy GitHub Pages**. The workflow in `.github/workflows/pages.yml` is already on `main`.
+Optional: set source to **GitHub Actions**, then run **Actions → GitHub Pages → Run workflow**. Push to `main` only verifies the static files; it does not try to create Pages (this token cannot).
 
 No Vercel.

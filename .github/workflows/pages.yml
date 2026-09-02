@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: GitHub Pages
 
 on:
   push:
@@ -15,7 +15,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  verify:
+    name: Verify static site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Required files
+        run: |
+          set -euo pipefail
+          for f in \
+            index.html \
+            404.html \
+            .nojekyll \
+            assets/brief.css \
+            assets/lanes.js \
+            assets/favicon.svg \
+            archive/index.html \
+            briefings/2026-09-02-2300/index.html
+          do
+            test -f "$f"
+            echo "ok $f"
+          done
+
   deploy:
+    name: Deploy GitHub Pages
+    if: github.event_name == 'workflow_dispatch'
+    needs: verify
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
