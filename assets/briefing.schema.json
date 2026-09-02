@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jifa52.github.io/KNG.3D/assets/briefing.schema.json",
-  "title": "TheJls Market Brief copy schema",
+  "title": "Market Brief copy schema",
   "description": "Copy overlay for a published briefing. Cards are rendered as static HTML. Optional Marshall-approved photos are dropped in via image { url, credit } — never scraped, stocked, or generated.",
   "type": "object",
   "required": ["id", "cards"],
