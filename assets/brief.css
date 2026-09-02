@@ -397,6 +397,34 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
+.short-card::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card-photo {
+  float: right;
+  width: 5.4rem;
+  margin: 0.05rem 0 0.4rem 0.7rem;
+}
+
+.card-photo img {
+  display: block;
+  width: 5.4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-photo-credit {
+  margin: 0.2rem 0 0;
+  font-size: 0.62rem;
+  line-height: 1.3;
+  color: var(--faint);
+  letter-spacing: 0.02em;
+}
+
 .short-body {
   margin: 0;
   color: var(--text);

@@ -1,0 +1,18 @@
+{
+  "id": "chrome-card-photo",
+  "cards": [
+    {
+      "id": "with-photo",
+      "headline": "Chrome check: Marshall-approved photo",
+      "image": {
+        "url": "../../assets/fixtures/card-photo.svg",
+        "credit": "Market Brief fixture",
+        "caption": "Chrome fixture, not a news photo"
+      }
+    },
+    {
+      "id": "without-photo",
+      "headline": "Chrome check: no photo fields"
+    }
+  ]
+}

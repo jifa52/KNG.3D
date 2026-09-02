@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="color-scheme" content="dark">
+  <title>Card photo chrome · Market Brief</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/brief.css">
+  <script src="../../assets/lanes.js" defer></script>
+  <script src="../../assets/cards.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <main id="main">
+      <article class="deck" id="briefing" data-lane="news" data-briefing-src="briefing.json">
+        <header class="mast">
+          <p class="brand">Chrome fixture · not a briefing</p>
+          <h1 class="mast-title">Card photo</h1>
+          <p class="mast-date">Visible thumbnail only when image.url and credit ship.</p>
+        </header>
+
+        <div class="lane-switch" role="tablist" aria-label="Briefing lanes">
+          <button type="button" class="lane-btn lane-btn-news" role="tab" aria-selected="true" data-lane="news" id="tab-news">News</button>
+          <button type="button" class="lane-btn lane-btn-markets" role="tab" aria-selected="false" data-lane="markets" id="tab-markets">Markets</button>
+        </div>
+
+        <section class="lane lane-news" id="lane-news" role="tabpanel" aria-labelledby="tab-news">
+          <p class="lane-kicker">Same card chrome as Close. The fixture SVG is not a news photo.</p>
+          <div class="stack">
+            <article class="card short-card" data-story-id="with-photo">
+              <p class="story-tags">
+                <span class="fresh fresh-continuation">CONTINUATION</span>
+                <span class="chip chip-source">Market Brief fixture</span>
+                <span class="chip chip-conf chip-conf-confirmed">Confirmed</span>
+              </p>
+              <h3>Chrome check: Marshall-approved photo</h3>
+              <p class="short-body">This card has image.url and credit in briefing.json. The photo must render as a real image on the card, not a URL or an open-photo link.</p>
+              <div class="why-beat">
+                <p class="why-label">Why it matters</p>
+                <p class="why-text">The picture should appear in the card chrome.</p>
+              </div>
+            </article>
+
+            <article class="card short-card" data-story-id="without-photo">
+              <p class="story-tags">
+                <span class="fresh fresh-continuation">CONTINUATION</span>
+                <span class="chip chip-source">Market Brief fixture</span>
+                <span class="chip chip-conf chip-conf-confirmed">Confirmed</span>
+              </p>
+              <h3>Chrome check: no photo fields</h3>
+              <p class="short-body">This card omits image. It must look like tonight’s Close cards: no empty image, no placeholder poster, no raw URL.</p>
+              <div class="why-beat">
+                <p class="why-label">Why it matters</p>
+                <p class="why-text">Missing photo fields skip the thumbnail entirely.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="lane lane-markets" id="lane-markets" role="tabpanel" aria-labelledby="tab-markets" hidden>
+          <p class="lane-kicker">Markets cards use the same thumbnail chrome when Marshall ships a photo.</p>
+          <div class="stack">
+            <article class="card short-card">
+              <p class="story-tags">
+                <span class="fresh fresh-new-today">NEW TODAY</span>
+                <span class="chip chip-source">Market Brief fixture</span>
+                <span class="chip chip-conf chip-conf-confirmed">Confirmed</span>
+              </p>
+              <h3>Markets card without a photo</h3>
+              <p class="short-body">Two or three sentences stay the lead. Source and confidence chips stay on the card.</p>
+              <div class="why-beat">
+                <p class="why-label">Why it matters</p>
+                <p class="why-text">No trade rec. No invented tape.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <template id="card-photo-template">
+    <figure class="card-photo">
+      <img alt="" decoding="async" loading="lazy">
+      <figcaption class="card-photo-credit"></figcaption>
+    </figure>
+  </template>
+</body>
+</html>

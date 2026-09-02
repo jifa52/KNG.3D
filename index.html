@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b0c0f">
   <meta name="color-scheme" content="dark">
-  <title>Wednesday, 2 September 2026 · Close · TheJls Market Brief</title>
+  <title>Wednesday, 2 September 2026 · Close · Market Brief</title>
   <meta name="description" content="CENTCOM struck IRGC after Hormuz shipping attacks. Soft ADP, oil ~$90, Dell raised FY, PANW dumped, Broadcom still unprinted.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/brief.css">
   <script src="assets/lanes.js" defer></script>
+  <script src="assets/cards.js" defer></script>
   
   <meta property="og:title" content="Wednesday, 2 September 2026 · Close">
   <meta property="og:description" content="CENTCOM struck IRGC after Hormuz shipping attacks. Soft ADP, oil ~$90, Dell raised FY, PANW dumped, Broadcom still unprinted.">
@@ -21,7 +22,7 @@
     
 
 <nav class="nav" aria-label="Site">
-  <a class="nav-mark" href="./">TheJls</a>
+  <a class="nav-mark" href="./">Brief</a>
   <div class="nav-links">
     <a href="./" aria-current="page">Latest</a>
     <a href="archive/" >Archive</a>
@@ -36,9 +37,9 @@
 
 
 
-<article class="deck" id="briefing" data-lane="news">
+<article class="deck" id="briefing" data-lane="news" data-briefing-src="briefings/2026-09-02-2300/briefing.json">
   <header class="mast">
-    <p class="brand">© TheJls · Original Content</p>
+    <p class="brand">© Market Brief</p>
     <h1 class="mast-title">Market Brief</h1>
     <p class="mast-date">Wednesday, 2 September 2026</p>
     <dl class="mast-meta">
@@ -71,7 +72,7 @@
     <p class="lane-kicker">CENTCOM struck IRGC after attempted attacks on Hormuz shipping and US personnel. The strait is still disputed.</p>
     <div class="stack">
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="centcom-irgc">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   
@@ -93,7 +94,7 @@
           
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="hormuz-disputed">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   
@@ -240,7 +241,7 @@
 
     <div class="stack">
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="adp-factory">
           <p class="story-tags">
   <span class="fresh fresh-new-today">NEW TODAY</span>
   
@@ -258,7 +259,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="oil-wti">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   
@@ -278,7 +279,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="dell-fy">
           <p class="story-tags">
   <span class="fresh fresh-continuation">CONTINUATION</span>
   <span class="ticker">DELL</span>
@@ -296,7 +297,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="panw-q4">
           <p class="story-tags">
   <span class="fresh fresh-new-today">NEW TODAY</span>
   <span class="ticker">PANW</span>
@@ -314,7 +315,7 @@
           </div>
         </article>
       
-        <article class="card short-card">
+        <article class="card short-card" data-story-id="avgo-after-bell">
           <p class="story-tags">
   <span class="fresh fresh-developing">DEVELOPING</span>
   <span class="ticker">AVGO</span>
@@ -415,7 +416,7 @@
   <footer class="foot">
     <p class="sources-line">CENTCOM / CNBC (US–Iran / Hormuz) · ADP Research (2 September 2026) · Reuters / Yahoo (ADP, factory orders) · CNBC (Williams, FedWatch as of Tuesday, 10Y, oil) · Yahoo Finance At close 16:01 ET · Yahoo CL=F last 15:51 ET (WTI, not a settle) · Dell figures as reported by Reuters, CNBC, and IR · Palo Alto Networks IR · Broadcom IR schedule (no results at this freeze) · BLS / Fed calendar (Thu–Fri prints)</p>
     <p class="disclaimer">Educational briefing, not investment advice. US cash close as of 16:01 ET via Yahoo except WTI last 15:51 ET. Not a live trading feed.</p>
-    <p class="brand-foot">© TheJls · Original Content</p>
+    <p class="brand-foot">© Market Brief</p>
   </footer>
 </article>
 
@@ -425,6 +426,13 @@
     </p>
   
 </main>
+
+  <template id="card-photo-template">
+    <figure class="card-photo">
+      <img alt="" decoding="async" loading="lazy">
+      <figcaption class="card-photo-credit"></figcaption>
+    </figure>
+  </template>
 
   </div>
 </body>
