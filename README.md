@@ -1,28 +1,50 @@
-# KNG.3D
+# TheJls Market Brief
 
-## 3D Project Tracker (Streamlit)
+This repository is **TheJls Market Brief** — a public English news deck. It is **not** a 3D printer or filament tracker. The unused Streamlit tracker that used to live here has been removed.
 
-The **Streamlit** app is a **3D project tracker**: each **project** has a status, start/end dates, and notes. Inside a project you add **printed parts** — each part is a full **filament log** (brand, material, color, grams, print time, notes, optional photo and STL).
+The site is a phone-first, two-lane static briefing:
 
-**Project statuses (colors in the UI):** Planned (grey), Queue (yellow), WIP (purple), Done (green).
+- **News** (teal) — geopolitics overlay
+- **Markets** (amber) — tape, earnings, calendar, watch
 
-Data is stored in **`filament_usage.db`** (SQLite) next to `streamlit_app.py`. If you used the older single-table filament log, the app **migrates** those rows into a default “Imported filament log” project the first time it runs.
+Tape is data. There are no trade recommendations.
 
-### Run locally
+## Public URL
 
-```bash
-python3 -m pip install -r requirements.txt
-streamlit run streamlit_app.py
+GitHub Pages (from `main`, site root):
+
+**https://jifa52.github.io/KNG.3D/**
+
+Tonight’s Close is also at:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-02-2300/**
+
+## Layout
+
+```
+index.html                         latest Close
+assets/brief.css                   two-lane phone-first styles
+assets/lanes.js                    News / Markets switch
+assets/favicon.svg
+archive/index.html                 every published briefing
+briefings/2026-09-02-2300/         frozen Close snapshot
+404.html
 ```
 
-In Cursor you can use the task **3D Project Tracker: Streamlit** (same command).
+Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-### Streamlit Community Cloud
+This Close (Wednesday, 2 September 2026, 23:00 IDT / 16:00 ET US cash close) was copied from the live briefing. Numbers were not invented.
 
-Set **Main file path** to `streamlit_app.py` or `app.py`. If the deploy form says the file is missing, reconnect GitHub, confirm branch **`main`**, and retry.
+## Run locally
 
-**Ephemeral disk:** on the free Cloud tier the SQLite file may reset when the app sleeps or redeploys. Use a hosted database for data you cannot lose.
+```bash
+python3 -m http.server 8080
+```
 
-Theming: `.streamlit/config.toml` (light slate shell, indigo primary, white surfaces); status badges keep semantic colors in the UI.
+Then open http://127.0.0.1:8080/
 
-On the **All projects** page, the layout matches the newer tracker UX: **Name → Status → start date → Opened by**, expand **parts** under a project, **View** opens a **right-hand part detail** column, and **Workspace** jumps to the full printed-part form for that project. **Opened by** (name + optional photo) is stored in SQLite with each project.
+## GitHub Pages
+
+A workflow in `.github/workflows/pages.yml` deploys the static files from `main`. If Pages is not yet enabled, turn it on under **Settings → Pages**: source **GitHub Actions**, or deploy from branch **main** / root (or `/docs`). The repo should be **public** so the Pages URL is reachable without GitHub Pro.
+
+No Vercel.

@@ -1,6 +1,7 @@
-filament_usage.db
-__pycache__/
-*.pyc
-.streamlit/secrets.toml
+.DS_Store
+Thumbs.db
+*.log
 .venv/
 venv/
+__pycache__/
+*.pyc
