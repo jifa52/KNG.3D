@@ -45,6 +45,13 @@ Then open http://127.0.0.1:8080/
 
 ## GitHub Pages
 
-A workflow in `.github/workflows/pages.yml` deploys the static files from `main`. If Pages is not yet enabled, turn it on under **Settings → Pages**: source **GitHub Actions**, or deploy from branch **main** / root (or `/docs`). The repo should be **public** so the Pages URL is reachable without GitHub Pro.
+A workflow in `.github/workflows/pages.yml` deploys the static files from `main` and will try to enable Pages (GitHub Actions source).
+
+This deck is meant to be **public**. If `https://jifa52.github.io/KNG.3D/` 404s:
+
+1. **Settings → General → Danger Zone → Change repository visibility → Public**
+2. **Settings → Pages → Build and deployment → Source: GitHub Actions** (or Deploy from a branch: `main` / `/` root)
+
+Then re-run **Actions → Deploy GitHub Pages**.
 
 No Vercel.
