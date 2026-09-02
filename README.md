@@ -45,13 +45,14 @@ Then open http://127.0.0.1:8080/
 
 ## GitHub Pages
 
-A workflow in `.github/workflows/pages.yml` deploys the static files from `main` and will try to enable Pages (GitHub Actions source).
+Public URL: **https://jifa52.github.io/KNG.3D/**
 
-This deck is meant to be **public**. If `https://jifa52.github.io/KNG.3D/` 404s:
+The site files are already on `main` at the repo root (`index.html`, `assets/`, `archive/`, `briefings/`). GitHub’s API token in this project cannot create a Pages site, so enable it once in the UI:
 
-1. **Settings → General → Danger Zone → Change repository visibility → Public**
-2. **Settings → Pages → Build and deployment → Source: GitHub Actions** (or Deploy from a branch: `main` / `/` root)
+1. **Settings → General → Change repository visibility → Public** (required for a public news deck)
+2. **Settings → Pages → Build and deployment → Deploy from a branch**
+3. Branch **`main`**, folder **`/` (root)** → **Save**
 
-Then re-run **Actions → Deploy GitHub Pages**.
+Optional: source **GitHub Actions** instead, then re-run **Actions → Deploy GitHub Pages**. The workflow in `.github/workflows/pages.yml` is already on `main`.
 
 No Vercel.
