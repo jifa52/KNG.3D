@@ -1,6 +1,6 @@
-# TheJls Market Brief
+# Market Brief
 
-This repository is **TheJls Market Brief** — a public English news deck. It is **not** a 3D printer or filament tracker. The unused Streamlit tracker that used to live here has been removed.
+This repository is **Market Brief** — a public English news deck. It is **not** a 3D printer or filament tracker. The unused Streamlit tracker that used to live here has been removed.
 
 The site is a phone-first, two-lane static briefing:
 
