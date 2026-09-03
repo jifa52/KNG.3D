@@ -1,13 +1,19 @@
 # Brief
 
-This repository is **Brief** — a public English news deck. It is **not** a 3D printer or filament tracker. The unused Streamlit tracker that used to live here has been removed.
+This repository is **Brief** — a public, phone-first news deck. Hebrew is the default language (`dir=rtl`). English is an optional switcher on the **same URL**. It is **not** a 3D printer or filament tracker.
 
-The site is a phone-first, two-lane static briefing:
+The site is a two-lane static briefing:
 
-- **News** (teal) — geopolitics overlay
-- **Markets** (amber) — tape, earnings, calendar, watch
+- **News / חדשות** (teal) — geopolitics overlay
+- **Markets / שווקים** (amber) — tape, earnings, calendar, watch
 
 Tape is data. There are no trade recommendations.
+
+## Language
+
+First visit is Hebrew. A switcher (`עברית | English`) sits above the News/Markets tabs (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
+
+Optional `#he` / `#en` hashes set the language once without replacing the page. News/Markets still use `#news` / `#markets`. On `file://`, hash writes are skipped so `replaceState` cannot break local opens.
 
 ## Public URL
 
@@ -26,19 +32,20 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning
-assets/brief.css                   two-lane phone-first styles
-assets/lanes.js                    News / Markets switch
+index.html                         latest Morning (Hebrew default, English switcher)
+assets/brief.css                   two-lane phone-first + RTL
+assets/i18n.js                     language switch, localStorage, optional #he/#en
+assets/lanes.js                    News / Markets switch (file://-safe)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-03-0830/         frozen Morning snapshot
+briefings/2026-09-03-0830/         frozen Morning snapshot (matches home)
 briefings/2026-09-02-2300/         frozen Close snapshot
 404.html
 ```
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Thursday, 3 September 2026, 08:30 IDT / 01:30 EDT, overnight futures freeze) was copied from the live briefing. Numbers were not invented.
+This Morning (Thursday, 3 September 2026, 08:30 Jerusalem / 01:30 ET, overnight futures freeze) was copied from the live briefing. Numbers were not invented.
 
 ## Run locally
 
@@ -47,6 +54,8 @@ python3 -m http.server 8080
 ```
 
 Then open http://127.0.0.1:8080/
+
+`file://` also works: open `index.html` directly.
 
 ## GitHub Pages
 

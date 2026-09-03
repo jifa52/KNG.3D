@@ -2,11 +2,24 @@
   var deck = document.getElementById("briefing");
   if (!deck) return;
 
-  var buttons = deck.querySelectorAll("[data-lane]");
+  var buttons = deck.querySelectorAll(".lane-btn[data-lane]");
   var news = document.getElementById("lane-news");
   var markets = document.getElementById("lane-markets");
 
-  function show(lane) {
+  function isLangHash(hash) {
+    return hash === "#en" || hash === "#he";
+  }
+
+  function setHash(hash) {
+    if (location.protocol === "file:") return;
+    if (location.hash === hash) return;
+    try {
+      history.replaceState(null, "", hash);
+    } catch (err) {}
+  }
+
+  function show(lane, opts) {
+    opts = opts || {};
     var isNews = lane !== "markets";
     deck.dataset.lane = isNews ? "news" : "markets";
     document.body.dataset.lane = deck.dataset.lane;
@@ -16,10 +29,8 @@
       var on = btn.getAttribute("data-lane") === deck.dataset.lane;
       btn.setAttribute("aria-selected", on ? "true" : "false");
     });
-    var hash = isNews ? "#news" : "#markets";
-    if (location.hash !== hash) {
-      history.replaceState(null, "", hash);
-    }
+    if (opts.skipHash) return;
+    setHash(isNews ? "#news" : "#markets");
   }
 
   buttons.forEach(function (btn) {
@@ -29,8 +40,13 @@
   });
 
   window.addEventListener("hashchange", function () {
-    show(location.hash === "#markets" ? "markets" : "news");
+    if (isLangHash(location.hash)) return;
+    show(location.hash === "#markets" ? "markets" : "news", { skipHash: true });
   });
 
-  show(location.hash === "#markets" ? "markets" : "news");
+  if (location.hash === "#markets") {
+    show("markets", { skipHash: true });
+  } else {
+    show("news", { skipHash: true });
+  }
 })();
