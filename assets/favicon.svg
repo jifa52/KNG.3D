@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Market Brief">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Brief">
   <rect width="32" height="32" rx="6" fill="#0b0c0f"/>
   <rect x="1" y="1" width="30" height="30" rx="5" fill="none" stroke="#3ee0d2" stroke-width="1.5"/>
-  <text x="16" y="22" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f4f6f8">MB</text>
+  <text x="16" y="22" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" fill="#f4f6f8">B</text>
 </svg>
