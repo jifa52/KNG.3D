@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 3 September 2026:
+Latest is Midday, 3 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1400/**
+
+Prior Morning (3 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-03-0830/**
 
@@ -32,20 +36,21 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Midday (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-03-0830/         frozen Morning snapshot (matches home)
+briefings/2026-09-03-1400/         frozen Midday snapshot (matches home)
+briefings/2026-09-03-0830/         frozen Morning snapshot
 briefings/2026-09-02-2300/         frozen Close snapshot
 404.html
 ```
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Thursday, 3 September 2026, 08:30 Jerusalem / 01:30 ET, overnight futures freeze) was copied from the live briefing. Numbers were not invented.
+This Midday (Thursday, 3 September 2026, 14:00 Jerusalem / 07:00 ET, US premarket freeze) was copied from the live briefing. Numbers were not invented.
 
 ## Run locally
 
