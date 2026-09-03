@@ -10,6 +10,16 @@
     return hash === "#en" || hash === "#he";
   }
 
+  function laneFromHash(hash) {
+    if (hash === "#markets") return "markets";
+    if (hash === "#news") return "news";
+    return null;
+  }
+
+  function deckLane() {
+    return deck.dataset.lane === "markets" ? "markets" : "news";
+  }
+
   function setHash(hash) {
     if (location.protocol === "file:") return;
     if (location.hash === hash) return;
@@ -41,12 +51,9 @@
 
   window.addEventListener("hashchange", function () {
     if (isLangHash(location.hash)) return;
-    show(location.hash === "#markets" ? "markets" : "news", { skipHash: true });
+    var fromHash = laneFromHash(location.hash);
+    show(fromHash || deckLane(), { skipHash: true });
   });
 
-  if (location.hash === "#markets") {
-    show("markets", { skipHash: true });
-  } else {
-    show("news", { skipHash: true });
-  }
+  show(laneFromHash(location.hash) || deckLane(), { skipHash: true });
 })();

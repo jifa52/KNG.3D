@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday, 3 September 2026:
+Latest is Pre-open, 3 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1545/**
+
+Prior Midday (3 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1400/**
 
@@ -36,13 +40,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Midday (Hebrew default, English switcher)
+index.html                         latest Pre-open (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
-assets/lanes.js                    News / Markets switch (file://-safe)
+assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-03-1400/         frozen Midday snapshot (matches home)
+briefings/2026-09-03-1545/         frozen Pre-open snapshot (matches home)
+briefings/2026-09-03-1400/         frozen Midday snapshot
 briefings/2026-09-03-0830/         frozen Morning snapshot
 briefings/2026-09-02-2300/         frozen Close snapshot
 404.html
@@ -50,7 +55,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Midday (Thursday, 3 September 2026, 14:00 Jerusalem / 07:00 ET, US premarket freeze) was copied from the live briefing. Numbers were not invented.
+This Pre-open (Thursday, 3 September 2026, 15:45 Jerusalem / 08:45 ET, US pre-open freeze) was copied from the live briefing. Numbers were not invented. Markets is the default home lane.
 
 ## Run locally
 
