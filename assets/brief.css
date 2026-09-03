@@ -882,3 +882,67 @@ html[lang="he"] .watch-strip h2 {
   direction: ltr;
   unicode-bidi: isolate;
 }
+
+/* Glossary collapsible block */
+.glossary-block {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border, #2a2b30);
+  padding-top: 1rem;
+}
+
+.glossary-block summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted, #8b8d96);
+  user-select: none;
+  padding: 0.3rem 0;
+}
+
+.glossary-block summary:hover {
+  color: var(--text, #e4e5ea);
+}
+
+.glossary-list {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.glossary-list div {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  align-items: baseline;
+}
+
+.glossary-list dt {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--text, #e4e5ea);
+  white-space: nowrap;
+}
+
+.glossary-list dd {
+  font-size: 0.82rem;
+  color: var(--text-muted, #8b8d96);
+  margin: 0;
+}
+
+/* Story source line */
+.story-sources {
+  font-size: 0.75rem;
+  color: var(--text-muted, #8b8d96);
+  margin-top: 0.4rem;
+}
+
+.story-sources a {
+  color: var(--accent, #5b9cf6);
+  text-decoration: none;
+}
+
+.story-sources a:hover {
+  text-decoration: underline;
+}
