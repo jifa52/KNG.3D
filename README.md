@@ -1,6 +1,6 @@
-# Market Brief
+# Brief
 
-This repository is **Market Brief** — a public English news deck. It is **not** a 3D printer or filament tracker. The unused Streamlit tracker that used to live here has been removed.
+This repository is **Brief** — a public English news deck. It is **not** a 3D printer or filament tracker. The unused Streamlit tracker that used to live here has been removed.
 
 The site is a phone-first, two-lane static briefing:
 
@@ -38,7 +38,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Thursday, 3 September 2026, 08:30 IDT / 01:30 EDT, overnight futures freeze) was copied from the live briefing. Numbers were not invented.
+This Morning (Thursday, 3 September 2026, 08:30 (01:30 ET), overnight futures freeze) was copied from the live briefing. Numbers were not invented.
 
 ## Run locally
 
