@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl"
+  data-title-he="הדף לא נמצא · Brief"
+  data-title-en="Page not found · Brief"
+  data-desc-he="תידרוך יומי לטלפון: חדשות (טראמפ והמזרח התיכון) ושווקים (טייפ, דוחות, הפד). שני מסלולים, כרטיסים קצרים."
+  data-desc-en="Phone-first daily brief: News (Trump and the Middle East) and Markets (tape, earnings, Fed). Two lanes, short cards.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b0c0f">
   <meta name="color-scheme" content="dark">
-  <title>Page not found · Brief</title>
-  <meta name="description" content="Phone-first daily brief: News (Trump and the Middle East) and Markets (tape, earnings, Fed). Two lanes, short cards.">
+  <title>הדף לא נמצא · Brief</title>
+  <meta name="description" content="תידרוך יומי לטלפון: חדשות (טראמפ והמזרח התיכון) ושווקים (טייפ, דוחות, הפד). שני מסלולים, כרטיסים קצרים.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="assets/i18n.js"></script>
   <link rel="stylesheet" href="assets/brief.css">
-  <script src="assets/lanes.js" defer></script>
-  
-  <meta property="og:title" content="Page not found · Brief">
-  <meta property="og:description" content="Phone-first daily brief: News (Trump and the Middle East) and Markets (tape, earnings, Fed). Two lanes, short cards.">
+
+  <meta property="og:title" content="הדף לא נמצא · Brief">
+  <meta property="og:description" content="תידרוך יומי לטלפון: חדשות (טראמפ והמזרח התיכון) ושווקים (טייפ, דוחות, הפד). שני מסלולים, כרטיסים קצרים.">
   <meta property="og:type" content="article">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to briefing</a>
+  <a class="skip" href="#main"><span data-lang="he">דלג לתידרוך</span><span data-lang="en">Skip to briefing</span></a>
   <div class="app">
-    <nav class="nav" aria-label="Site">
+    <nav class="nav" aria-labelledby="nav-label">
+  <span id="nav-label" class="visually-hidden"><span data-lang="he">אתר</span><span data-lang="en">Site</span></span>
   <a class="nav-mark" href="./">Brief</a>
   <div class="nav-links">
-    <a href="./" >Latest</a>
-    <a href="archive/" >Archive</a>
+    <a href="./"><span data-lang="he">אחרון</span><span data-lang="en">Latest</span></a>
+    <a href="archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
   </div>
 </nav>
 
+  <div class="switch-bar">
+    <div class="lang-switch" role="group" aria-labelledby="lang-label">
+      <span id="lang-label" class="visually-hidden"><span data-lang="he">שפה</span><span data-lang="en">Language</span></span>
+      <button type="button" class="lang-btn" data-lang-set="he" lang="he" aria-pressed="true">עברית</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang-set="en" lang="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+
 <main id="main" class="empty">
-  <h1>Page not found</h1>
-  <p>That briefing is not on this site. See the <a href="archive/">archive</a> or the <a href="./">latest briefing</a>.</p>
+  <h1 data-lang="he">הדף לא נמצא</h1>
+  <h1 data-lang="en">Page not found</h1>
+  <p data-lang="he">התידרוך הזה לא נמצא באתר. ראו את <a href="archive/">הארכיון</a> או את <a href="./">התידרוך האחרון</a>.</p>
+  <p data-lang="en">That briefing is not on this site. See the <a href="archive/">archive</a> or the <a href="./">latest briefing</a>.</p>
 </main>
 
   </div>

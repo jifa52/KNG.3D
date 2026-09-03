@@ -31,13 +31,23 @@ jobs:
             .nojekyll \
             assets/brief.css \
             assets/lanes.js \
+            assets/i18n.js \
             assets/favicon.svg \
             archive/index.html \
+            briefings/2026-09-03-0830/index.html \
             briefings/2026-09-02-2300/index.html
           do
             test -f "$f"
             echo "ok $f"
           done
+          grep -q 'lang="he"' index.html
+          grep -q 'dir="rtl"' index.html
+          grep -q 'data-lang-set="he"' index.html
+          grep -q 'data-lang-set="en"' index.html
+          grep -q 'lang="he"' briefings/2026-09-03-0830/index.html
+          grep -q 'brief-lang' assets/i18n.js
+          grep -q 'location.protocol === "file:"' assets/lanes.js
+          echo "ok i18n checks"
 
   deploy:
     name: Deploy GitHub Pages
