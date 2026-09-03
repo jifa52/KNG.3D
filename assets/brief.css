@@ -507,11 +507,18 @@ html[dir="rtl"] .lane-markets .short-card {
 
 @media (min-width: 480px) {
   .card-thumb {
+    float: right;
     float: inline-end;
     width: 7.2rem;
     max-width: 7.2rem;
+    margin: 0.08rem 0 0.45rem 0.75rem;
     margin-block: 0.08rem 0.45rem;
     margin-inline: 0.75rem 0;
+  }
+
+  html[dir="rtl"] .card-thumb {
+    float: left;
+    margin: 0.08rem 0.75rem 0.45rem 0;
   }
 
   .card-thumb img {
