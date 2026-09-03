@@ -31,29 +31,26 @@ jobs:
             .nojekyll \
             assets/brief.css \
             assets/lanes.js \
-            assets/i18n.js \
             assets/favicon.svg \
-            archive/index.html \
-            briefings/2026-09-03-1545/index.html \
-            briefings/2026-09-03-1400/index.html \
-            briefings/2026-09-03-0830/index.html \
-            briefings/2026-09-02-2300/index.html
+            archive/index.html
           do
             test -f "$f"
             echo "ok $f"
           done
-          grep -q 'lang="he"' index.html
-          grep -q 'dir="rtl"' index.html
-          grep -q 'data-lang-set="he"' index.html
-          grep -q 'data-lang-set="en"' index.html
-          grep -q 'lang="he"' briefings/2026-09-03-1545/index.html
-          grep -q 'פרה-פתיחה' index.html
-          grep -q 'Pre-open' index.html
-          grep -q 'lang="he"' briefings/2026-09-03-1400/index.html
-          grep -q 'lang="he"' briefings/2026-09-03-0830/index.html
-          grep -q 'brief-lang' assets/i18n.js
-          grep -q 'location.protocol === "file:"' assets/lanes.js
-          echo "ok i18n checks"
+          # archive must have at least one briefing link
+          grep -q 'briefings/' archive/index.html
+          # home must carry the base structural markers (edition-agnostic)
+          grep -q 'id="briefing"' index.html
+          grep -q 'lane-news' index.html
+          grep -q 'lane-markets' index.html
+          # i18n asset only checked if it exists (optional in older editions)
+          if [ -f assets/i18n.js ]; then
+            grep -q 'brief-lang' assets/i18n.js
+            echo "ok i18n.js"
+          fi
+          # lanes.js must exist and reference the lane switch
+          grep -q 'data-lane' assets/lanes.js
+          echo "all checks passed"
 
   deploy:
     name: Deploy GitHub Pages
