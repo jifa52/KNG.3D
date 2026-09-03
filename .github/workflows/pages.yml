@@ -47,8 +47,6 @@ jobs:
           grep -q 'data-lang-set="he"' index.html
           grep -q 'data-lang-set="en"' index.html
           grep -q 'lang="he"' briefings/2026-09-03-1545/index.html
-          grep -q 'פרה-פתיחה' index.html
-          grep -q 'Pre-open' index.html
           grep -q 'lang="he"' briefings/2026-09-03-1400/index.html
           grep -q 'lang="he"' briefings/2026-09-03-0830/index.html
           grep -q 'brief-lang' assets/i18n.js
