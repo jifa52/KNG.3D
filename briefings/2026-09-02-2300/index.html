@@ -67,6 +67,8 @@
       <span id="lanes-label" class="visually-hidden"><span data-lang="he">מסלולי תידרוך</span><span data-lang="en">Briefing lanes</span></span>
       <button type="button" class="lane-btn lane-btn-news" role="tab" aria-selected="true" data-lane="news" id="tab-news"><span data-lang="he">חדשות</span><span data-lang="en">News</span></button>
       <button type="button" class="lane-btn lane-btn-markets" role="tab" aria-selected="false" data-lane="markets" id="tab-markets"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></button>
+      <button type="button" class="lane-btn lane-btn-premarket" role="tab" aria-selected="false" data-lane="premarket" id="tab-premarket"><span data-lang="he">טרום-שוק</span><span data-lang="en">Pre-market</span></button>
+      <button type="button" class="lane-btn lane-btn-ai" role="tab" aria-selected="false" data-lane="ai" id="tab-ai"><span data-lang="he">AI</span><span data-lang="en">AI</span></button>
     </div>
   </div>
 
@@ -381,6 +383,28 @@
         </ul>
       </section>
 
+  </section>
+
+  <section class="lane lane-premarket" id="lane-premarket" role="tabpanel" aria-labelledby="tab-premarket" hidden>
+    <div class="stack">
+      <article class="card pending-card">
+        <h3 class="pending-title" data-lang="he">טרום-שוק — תוכן בהכנה</h3>
+        <h3 class="pending-title" data-lang="en">Pre-market — content pending</h3>
+        <p class="pending-body" data-lang="he">תידרוך טרום-שוק יתפרסם לפני פתיחת המסחר הבאה. אין נתונים ממציאים — הלשונית תתאכלס בתוכן אמיתי בלבד.</p>
+        <p class="pending-body" data-lang="en">Pre-market briefing will appear before the next open. No invented data — this tab will be populated with real content only.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="lane lane-ai" id="lane-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
+    <div class="stack">
+      <article class="card pending-card">
+        <h3 class="pending-title" data-lang="he">עדכון AI — תוכן בהכנה</h3>
+        <h3 class="pending-title" data-lang="en">AI — content pending</h3>
+        <p class="pending-body" data-lang="he">עדכון ה־AI יתפרסם בהמשך. אין נתונים ממציאים — הלשונית תתאכלס בתוכן אמיתי בלבד.</p>
+        <p class="pending-body" data-lang="en">AI digest will appear in a later edition. No invented data — this tab will be populated with real content only.</p>
+      </article>
+    </div>
   </section>
 
   <footer class="foot">
