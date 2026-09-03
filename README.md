@@ -15,25 +15,30 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Tonight’s Close is also at:
+Latest is Morning, 3 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-0830/**
+
+Prior Close (2 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-02-2300/**
 
 ## Layout
 
 ```
-index.html                         latest Close
+index.html                         latest Morning
 assets/brief.css                   two-lane phone-first styles
 assets/lanes.js                    News / Markets switch
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-03-0830/         frozen Morning snapshot
 briefings/2026-09-02-2300/         frozen Close snapshot
 404.html
 ```
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Close (Wednesday, 2 September 2026, 23:00 IDT / 16:00 ET US cash close) was copied from the live briefing. Numbers were not invented.
+This Morning (Thursday, 3 September 2026, 08:30 IDT / 01:30 EDT, overnight futures freeze) was copied from the live briefing. Numbers were not invented.
 
 ## Run locally
 
