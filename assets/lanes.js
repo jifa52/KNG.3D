@@ -3,21 +3,22 @@
   if (!deck) return;
 
   var buttons = deck.querySelectorAll(".lane-btn[data-lane]");
-  var news = document.getElementById("lane-news");
-  var markets = document.getElementById("lane-markets");
+  var LANES = ["news", "markets", "premarket", "ai"];
 
   function isLangHash(hash) {
     return hash === "#en" || hash === "#he";
   }
 
   function laneFromHash(hash) {
-    if (hash === "#markets") return "markets";
-    if (hash === "#news") return "news";
+    for (var i = 0; i < LANES.length; i++) {
+      if (hash === "#" + LANES[i]) return LANES[i];
+    }
     return null;
   }
 
   function deckLane() {
-    return deck.dataset.lane === "markets" ? "markets" : "news";
+    var dl = deck.dataset.lane;
+    return LANES.indexOf(dl) >= 0 ? dl : "markets";
   }
 
   function setHash(hash) {
@@ -30,17 +31,19 @@
 
   function show(lane, opts) {
     opts = opts || {};
-    var isNews = lane !== "markets";
-    deck.dataset.lane = isNews ? "news" : "markets";
-    document.body.dataset.lane = deck.dataset.lane;
-    if (news) news.hidden = !isNews;
-    if (markets) markets.hidden = isNews;
+    if (LANES.indexOf(lane) < 0) lane = "markets";
+    deck.dataset.lane = lane;
+    document.body.dataset.lane = lane;
+    LANES.forEach(function (l) {
+      var panel = document.getElementById("lane-" + l);
+      if (panel) panel.hidden = l !== lane;
+    });
     buttons.forEach(function (btn) {
-      var on = btn.getAttribute("data-lane") === deck.dataset.lane;
+      var on = btn.getAttribute("data-lane") === lane;
       btn.setAttribute("aria-selected", on ? "true" : "false");
     });
     if (opts.skipHash) return;
-    setHash(isNews ? "#news" : "#markets");
+    setHash("#" + lane);
   }
 
   buttons.forEach(function (btn) {

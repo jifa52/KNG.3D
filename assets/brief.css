@@ -75,6 +75,30 @@ html[dir="rtl"] body[data-lane="markets"] {
     var(--bg);
 }
 
+body[data-lane="premarket"] {
+  background:
+    radial-gradient(900px 420px at 8% -12%, rgba(217, 140, 255, 0.10), transparent 52%),
+    var(--bg);
+}
+
+html[dir="rtl"] body[data-lane="premarket"] {
+  background:
+    radial-gradient(900px 420px at 92% -12%, rgba(217, 140, 255, 0.10), transparent 52%),
+    var(--bg);
+}
+
+body[data-lane="ai"] {
+  background:
+    radial-gradient(900px 420px at 8% -12%, rgba(62, 224, 210, 0.10), transparent 52%),
+    var(--bg);
+}
+
+html[dir="rtl"] body[data-lane="ai"] {
+  background:
+    radial-gradient(900px 420px at 92% -12%, rgba(62, 224, 210, 0.10), transparent 52%),
+    var(--bg);
+}
+
 html[lang="he"] body {
   line-height: 1.5;
 }
@@ -309,6 +333,12 @@ a:hover {
   padding: 0;
 }
 
+@media (min-width: 400px) {
+  .lane-switch {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .lane-btn {
   min-height: 48px;
   border-radius: 12px;
@@ -336,6 +366,20 @@ a:hover {
   box-shadow: 0 0 18px rgba(245, 185, 66, 0.18);
 }
 
+.lane-btn-premarket[aria-selected="true"] {
+  background: var(--magenta-dim);
+  color: var(--magenta);
+  border-color: rgba(217, 140, 255, 0.45);
+  box-shadow: 0 0 18px rgba(217, 140, 255, 0.18);
+}
+
+.lane-btn-ai[aria-selected="true"] {
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  border-color: rgba(62, 224, 210, 0.45);
+  box-shadow: 0 0 18px rgba(62, 224, 210, 0.18);
+}
+
 .lane-kicker {
   margin: 0 0 0.85rem;
   color: var(--muted);
@@ -358,6 +402,53 @@ html[dir="rtl"] .lane-news .short-card {
 
 html[dir="rtl"] .lane-markets .short-card {
   background: linear-gradient(-90deg, var(--markets-dim), var(--bg-card) 28%);
+}
+
+.lane-premarket .pending-card {
+  border-inline-start: 3px solid var(--magenta);
+  background: linear-gradient(90deg, var(--magenta-dim), var(--bg-card) 28%);
+}
+
+html[dir="rtl"] .lane-premarket .pending-card {
+  background: linear-gradient(-90deg, var(--magenta-dim), var(--bg-card) 28%);
+}
+
+.lane-ai .pending-card {
+  border-inline-start: 3px solid var(--cyan);
+  background: linear-gradient(90deg, var(--cyan-dim), var(--bg-card) 28%);
+}
+
+html[dir="rtl"] .lane-ai .pending-card {
+  background: linear-gradient(-90deg, var(--cyan-dim), var(--bg-card) 28%);
+}
+
+.pending-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--pad);
+}
+
+.pending-title {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.pending-body {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.lane-premarket .why-label {
+  color: var(--magenta);
+}
+
+.lane-ai .why-label {
+  color: var(--cyan);
 }
 
 .zone-head {
@@ -407,6 +498,11 @@ html[dir="rtl"] .lane-markets .short-card {
   border-radius: 10px;
   padding: 0.5rem 0.55rem 0.45rem;
   min-width: 0;
+}
+
+.tape-cell[hidden],
+.tape-cell[data-omit] {
+  display: none !important;
 }
 
 .tape-top {
@@ -534,6 +630,14 @@ html[dir="rtl"] .lane-markets .short-card {
 .short-body {
   margin: 0;
   color: var(--text);
+}
+
+.lane-markets .short-body {
+  overflow: visible;
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  max-height: none;
 }
 
 .cross-ref {
