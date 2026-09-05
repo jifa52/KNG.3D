@@ -21,7 +21,15 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Pre-open, 3 September 2026:
+Latest is Morning, 5 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-05-0830/**
+
+Prior Intraday (3 September 2026):
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1814/**
+
+Prior Pre-open (3 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1545/**
 
@@ -40,13 +48,15 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Pre-open (Hebrew default, English switcher)
+index.html                         latest Morning (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-03-1545/         frozen Pre-open snapshot (matches home)
+briefings/2026-09-05-0830/         frozen Saturday Morning snapshot (matches home)
+briefings/2026-09-03-1814/         frozen Intraday snapshot
+briefings/2026-09-03-1545/         frozen Pre-open snapshot
 briefings/2026-09-03-1400/         frozen Midday snapshot
 briefings/2026-09-03-0830/         frozen Morning snapshot
 briefings/2026-09-02-2300/         frozen Close snapshot
@@ -55,7 +65,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Pre-open (Thursday, 3 September 2026, 15:45 Jerusalem / 08:45 ET, US pre-open freeze) was copied from the live briefing. Numbers were not invented. Markets is the default home lane.
+This Morning (Saturday, 5 September 2026, 08:30 Jerusalem / 01:30 ET) is a lean news-and-weather drop. Numbers were not invented. News is the default home lane. Weekend Markets / Pre-market / AI tabs are honest pending placeholders.
 
 ## Run locally
 

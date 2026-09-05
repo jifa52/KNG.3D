@@ -404,6 +404,15 @@ html[dir="rtl"] .lane-markets .short-card {
   background: linear-gradient(-90deg, var(--markets-dim), var(--bg-card) 28%);
 }
 
+.lane-markets .pending-card {
+  border-inline-start: 3px solid var(--amber);
+  background: linear-gradient(90deg, var(--markets-dim), var(--bg-card) 28%);
+}
+
+html[dir="rtl"] .lane-markets .pending-card {
+  background: linear-gradient(-90deg, var(--markets-dim), var(--bg-card) 28%);
+}
+
 .lane-premarket .pending-card {
   border-inline-start: 3px solid var(--magenta);
   background: linear-gradient(90deg, var(--magenta-dim), var(--bg-card) 28%);
@@ -725,6 +734,60 @@ html[dir="rtl"] .lane-ai .pending-card {
   color: var(--text);
 }
 
+.weather-strip {
+  margin: 0 0 0.9rem;
+  padding: 0.65rem 0.75rem 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(62, 224, 210, 0.28);
+  background: var(--bg-elev);
+}
+
+.weather-strip h2 {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--news);
+}
+
+.weather-rows {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.weather-rows li {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.2rem 0.75rem;
+  align-items: baseline;
+  padding: 0.28rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+}
+
+.weather-rows li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.weather-city {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.weather-facts {
+  color: var(--muted);
+}
+
+.weather-note {
+  margin: 0.4rem 0 0;
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+
 .calendar-strip {
   margin-top: 1rem;
   padding: 0.65rem 0.75rem 0.45rem;
@@ -978,6 +1041,7 @@ html[lang="he"] .chip,
 html[lang="he"] .why-label,
 html[lang="he"] .zone-head h2,
 html[lang="he"] .calendar-strip h2,
+html[lang="he"] .weather-strip h2,
 html[lang="he"] .watch-strip h2 {
   letter-spacing: 0.02em;
 }
