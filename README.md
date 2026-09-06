@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 6 September 2026:
+Latest is Evening, 6 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-06-1830/**
+
+Prior Morning (6 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-06-0830/**
 
@@ -52,13 +56,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Evening (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-06-0830/         frozen Sunday Morning snapshot (matches home)
+briefings/2026-09-06-1830/         frozen Sunday Evening snapshot (matches home)
+briefings/2026-09-06-0830/         frozen Sunday Morning snapshot
 briefings/2026-09-05-0830/         frozen Saturday Morning snapshot
 briefings/2026-09-03-1814/         frozen Intraday snapshot
 briefings/2026-09-03-1545/         frozen Pre-open snapshot
@@ -70,7 +75,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Sunday, 6 September 2026, 08:30 Jerusalem / 01:30 ET) is a lean news-and-weather drop. Numbers were not invented. News is the default home lane. Weekend Markets / Pre-market / AI tabs are honest pending placeholders.
+This Evening (Sunday, 6 September 2026, 18:30 Jerusalem / 11:30 ET) is a news-only afternoon catch-up. No weather strip. Numbers were not invented. News is the default home lane. Weekend Markets / Pre-market / AI tabs are honest pending placeholders.
 
 ## Run locally
 
