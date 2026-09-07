@@ -431,6 +431,15 @@ html[dir="rtl"] .lane-ai .pending-card {
   background: linear-gradient(-90deg, var(--cyan-dim), var(--bg-card) 28%);
 }
 
+.lane-ai .short-card {
+  border-inline-start: 3px solid var(--cyan);
+  background: linear-gradient(90deg, var(--cyan-dim), var(--bg-card) 28%);
+}
+
+html[dir="rtl"] .lane-ai .short-card {
+  background: linear-gradient(-90deg, var(--cyan-dim), var(--bg-card) 28%);
+}
+
 .pending-card {
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -960,6 +969,11 @@ html[dir="rtl"] .lane-ai .pending-card {
 .tag-markets {
   background: var(--markets-dim);
   color: var(--markets);
+}
+
+.tag-ai {
+  background: var(--cyan-dim);
+  color: var(--cyan);
 }
 
 .archive-meta {

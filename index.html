@@ -52,7 +52,7 @@
       </div>
       <div>
         <dt><span data-lang="he">נכון ל-</span><span data-lang="en">Cut-off</span></dt>
-        <dd><span data-lang="he">~08:50 (01:50 ET) — חדשות בלבד</span><span data-lang="en">~08:50 (01:50 ET) — news only</span></dd>
+        <dd><span data-lang="he">~08:50 (01:50 ET) — חדשות; עדכון AI ~09:00</span><span data-lang="en">~08:50 (01:50 ET) — news; AI digest ~09:00</span></dd>
       </div>
     </dl>
   </header>
@@ -222,21 +222,109 @@
   </section>
 
   <section class="lane lane-ai" id="lane-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
+    <p class="lane-kicker" data-lang="he">שופיפיי מאמנת מודל 0.8B שמכה את GPT-5.6 במשימה צרה; Cursor מאפשר סוכני ענן באירוח עצמי; Anthropic פותחת Claude Commerce Agents; אנדרו אנג: היגוי סוכני קוד הוא מיומנות הליבה שמתפתחת הכי מהר; Claude Fable 5.1 ב־73.4% ב־CursorBench.</p>
+    <p class="lane-kicker" data-lang="en">Shopify fine-tunes a 0.8B model that beats GPT-5.6 on a narrow task; Cursor lets you run cloud coding agents on your own infrastructure; Anthropic open-sources Claude Commerce Agents; Andrew Ng: steering coding agents is the fastest-evolving core AI engineering skill; Claude Fable 5.1 hits 73.4% on CursorBench.</p>
+
     <div class="stack">
-      <article class="card pending-card">
-        <h3 class="pending-title" data-lang="he">עדכון AI — תוכן בהכנה</h3>
-        <h3 class="pending-title" data-lang="en">AI — content pending</h3>
-        <p class="pending-body" data-lang="he">עדכון ה־AI יתפרסם בהמשך. לא יוצגו נתונים מומצאים — הלשונית תתאכלס בתוכן אמיתי בלבד.</p>
-        <p class="pending-body" data-lang="en">AI digest will appear in a later edition. No invented data — this tab will be populated with real content only.</p>
+
+      <article class="card short-card">
+        <p class="story-tags">
+          <span class="chip chip-source">Alpha Signal</span>
+          <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
+        </p>
+        <h3 data-lang="he">שופיפיי מאמנת מודל 0.8B שמכה את GPT-5.6 במשימה צרה — ומקפיצה תפוקה פי ~36</h3>
+        <h3 data-lang="en">Shopify fine-tunes a 0.8B model that beats GPT-5.6 on a narrow task — and lifts throughput ~36×</h3>
+        <p class="short-body" data-lang="he">ב־Alpha Signal (6 בספטמבר) תיאר בן דיקסון ניסוי פנימי שציין מנכ״ל שופיפיי טובי לוטקה: מודל Qwen3.5 בגודל 0.8B שעבר כיוונון (fine-tune) היכה את GPT-5.6 Sol במשימת יצירת פרופילי קונים צרה; הפרומפט המערכתי קוצר מכ־9,100 לכ־1,100 טוקנים, והתפוקה עלתה מכ־2 מיליון לכ־72 מיליון פרופילים ביום. בסוכן GraphQL של Sidekick, כשלונות בפרודקשן הופכים לנתוני אימון: מודל חזית (frontier) מבקר מסלולים גרועים, מתקן אותם, ואז מאמן מומחה קטן יותר ב־SFT ו־GRPO — עם הערכת עלות שירות של כ־1 מיליון דולר לשנה מול כ־27 מיליון לסוכן חזית.</p>
+        <p class="short-body" data-lang="en">In Alpha Signal (Sep 6), Ben Dickson covered an internal Shopify experiment flagged by CEO Tobi Lütke: a fine-tuned Qwen3.5 0.8B model beat GPT-5.6 Sol on a narrow buyer-profile task; the system prompt shrank from ~9,100 to ~1,100 tokens and throughput rose from ~2 million to ~72 million profiles per day. On the Sidekick GraphQL agent, production failures feed training: a frontier model critiques bad trajectories, repairs them, then a smaller specialist is trained with SFT and GRPO — with Shopify estimating ~$1M/year specialist serving versus ~$27M for frontier.</p>
+        <div class="why-beat">
+          <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
+          <p class="why-text" data-lang="he">זה הדפוס של עידן התשתית — מודל חזית כמורה, מומחה קטן כעובד — ברגע שהמשימה חסומה ומדידה.</p>
+          <p class="why-text" data-lang="en">It is the infrastructure-era pattern — frontier as teacher, small specialist as worker — once the workload is bounded and scored.</p>
+        </div>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (6 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-06)</p>
       </article>
+
+      <article class="card short-card">
+        <p class="story-tags">
+          <span class="chip chip-source">Alpha Signal</span>
+          <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
+        </p>
+        <h3 data-lang="he">Cursor מאפשר להריץ סוכני ענן על תשתית פנימית — הקוד נשאר ברשת שלכם</h3>
+        <h3 data-lang="en">Cursor lets you run cloud coding agents on your own infrastructure — code stays on your network</h3>
+        <p class="short-body" data-lang="he">לפי Alpha Signal (4 בספטמבר), Cursor השיק סוכני ענן באירוח עצמי (self-hosted): התכנון נשאר בענן של Cursor, אבל הרצת קוד, גישה ל־API פנימיים וסודות נשארים במכונות של הארגון — חיבור יוצא ב־HTTPS בלבד, בלי פתיחת פורטים נכנסים. זה פותח סוכנים לצוותים רגולטוריים, מחבר אותם למסדי נתונים וצינורות בנייה פרטיים, ומאפשר לסוכנים להמשיך לעבוד אחרי שהמחשב הנייד נסגר.</p>
+        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 4), Cursor shipped self-hosted cloud agents: planning stays in Cursor’s cloud, but code execution, internal APIs, and secrets stay on the org’s machines — outbound HTTPS only, no inbound ports. That unlocks regulated teams, connects agents to private databases and build pipelines, and lets agents keep working after the laptop closes.</p>
+        <div class="why-beat">
+          <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
+          <p class="why-text" data-lang="he">מסיר את החסימה הארגונית העיקרית לסוכני קוד — קוד שיוצא מהרשת.</p>
+          <p class="why-text" data-lang="en">It removes the main enterprise blocker for coding agents — code leaving the network.</p>
+        </div>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (4 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-04)</p>
+      </article>
+
+      <article class="card short-card">
+        <p class="story-tags">
+          <span class="chip chip-source">Alpha Signal</span>
+          <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
+        </p>
+        <h3 data-lang="he">Anthropic פותחת את Claude Commerce Agents — עגלות גדולות ב־35% בפיילוטים</h3>
+        <h3 data-lang="en">Anthropic open-sources Claude Commerce Agents — 35% larger carts in pilots</h3>
+        <p class="short-body" data-lang="he">Alpha Signal דיווח (3–4 בספטמבר) שאנתרופיק שחררה בלופרינט בקוד פתוח לסוכני מסחר: סוכן קניות שמדבר עם לקוחות, מוצא מוצרים וממלא עגלה, וסוכן סוחר לצוות החנות שמנטר מלאי ומכין מבצעים — שינויים עולים לאוויר רק אחרי אישור אדם. יש ארבעה דמואים (קמעונאות, נסיעות, טלקום, בידור) ותוסף Claude Code שבונה סוכן מול הבקאנד שלכם. בפיילוטים נטען: עגלות גדולות ב־35% והסתברות להשלמת רכישה גבוהה ב־60%.</p>
+        <p class="short-body" data-lang="en">Alpha Signal reported (Sep 3–4) that Anthropic open-sourced a Claude Commerce Agents blueprint: a shopping agent that chats, finds products, and fills carts, plus a merchant agent for staff that tracks inventory and drafts promotions — nothing goes live without human approval. Four demos (retail, travel, telecom, entertainment) and a Claude Code plugin scaffold against your backend. Pilot claims: carts +35% and shoppers 60% more likely to check out.</p>
+        <div class="why-beat">
+          <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
+          <p class="why-text" data-lang="he">הופך ״סוכן קניות״ ממצגת מחקר לערכת התחלה שאפשר לשכפל ולהריץ.</p>
+          <p class="why-text" data-lang="en">It turns “shopping agent” from a research talk into a clone-and-run starter kit.</p>
+        </div>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/news/anthropic-s-claude-blueprint-boosts-retailer-carts-by-35-with-shopping-agents" rel="noopener" target="_blank">Alpha Signal</a> (3–4 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/news/anthropic-s-claude-blueprint-boosts-retailer-carts-by-35-with-shopping-agents" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-03 / 2026-09-04)</p>
+      </article>
+
+      <article class="card short-card">
+        <p class="story-tags">
+          <span class="chip chip-source">DeepLearning.AI The Batch</span>
+          <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
+        </p>
+        <h3 data-lang="he">אנדרו אנג: היגוי סוכני קוד הוא מיומנות הליבה שמתפתחת הכי מהר בהנדסת AI</h3>
+        <h3 data-lang="en">Andrew Ng: steering coding agents is the fastest-evolving core AI engineering skill</h3>
+        <p class="short-body" data-lang="he">ב־The Batch של DeepLearning.AI (4 בספטמבר) כתב אנדרו אנג שאחרי ראיונות עם עשרות מהנדסי AI, זרימת העבודה החוזרת היא תכנון (סיעור מוחות + מפרט) → ביצוע ובדיקה עם איזון אוטונומיה/פיקוח → פריסה וניטור. המיומנויות: לכוון את הזרימה, לאפשר אוטונומיה, לבדוק תוצרים, להתאים את הסוכן והסביבה — ופחות לכתוב קוד שורה־שורה. סוכנים קנייניים (Claude Code, Codex, Cursor) ופתוחים (OpenCode, Pi) מתקדמים גם בהרנס וגם במודל.</p>
+        <p class="short-body" data-lang="en">In DeepLearning.AI’s The Batch (Sep 4), Andrew Ng wrote that after interviewing dozens of AI engineers, the recurring workflow is planning (brainstorm + spec) → build/test with a calibrated autonomy/oversight mix → deploy and monitor. The skills: directing the workflow, enabling autonomy, reviewing outputs, customizing the agent and its environment — less line-by-line coding. Proprietary agents (Claude Code, Codex, Cursor) and open ones (OpenCode, Pi) advance via both harness and model.</p>
+        <div class="why-beat">
+          <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
+          <p class="why-text" data-lang="he">ממסגר את תפקיד האדם סביב סוכנים — מפרט ואימות — לא רשימת טיפים לקידוד.</p>
+          <p class="why-text" data-lang="en">It reframes the human job around agents — specs and verification — not a coding tip sheet.</p>
+        </div>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://www.deeplearning.ai/the-batch/the-ai-engineering-skills-map-in-detail-using-coding-agents" rel="noopener" target="_blank">DeepLearning.AI The Batch</a> (4 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://www.deeplearning.ai/the-batch/the-ai-engineering-skills-map-in-detail-using-coding-agents" rel="noopener" target="_blank">DeepLearning.AI The Batch</a> (2026-09-04)</p>
+      </article>
+
+      <article class="card short-card">
+        <p class="story-tags">
+          <span class="chip chip-source">Alpha Signal</span>
+          <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
+        </p>
+        <h3 data-lang="he">Claude Fable 5.1 ב־Cursor: 73.4% ב־CursorBench עם אימות עצמי של הקוד</h3>
+        <h3 data-lang="en">Claude Fable 5.1 live in Cursor: 73.4% on CursorBench with self-verification</h3>
+        <p class="short-body" data-lang="he">לפי Alpha Signal (3 בספטמבר), Claude Fable 5.1 עלה ב־Cursor וקיבל 73.4% ב־CursorBench 3.2 — הנקודה הגבוהה ביותר שבדק Cursor עד אז. בניגוד למודלים שכותבים ועוצרים, Fable 5.1 מאמת את מה שכתב, תופס טעויות וממשיך במשימות ארוכות; קריאות מטמון (cache) זולות ב־75% מ־Fable 5.</p>
+        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 3), Claude Fable 5.1 landed in Cursor at 73.4% on CursorBench 3.2 — the best score Cursor had tested. Unlike models that write and stop, Fable 5.1 verifies what it wrote, catches mistakes, and keeps going on long tasks; cache reads are 75% cheaper than Fable 5.</p>
+        <div class="why-beat">
+          <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
+          <p class="why-text" data-lang="he">מודלי קוד שבודקים את עצמם מקטינים את הצורך לשמור על הסוכן במשימות ארוכות.</p>
+          <p class="why-text" data-lang="en">Self-checking coding models cut the babysitting load on long multi-step tasks.</p>
+        </div>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (3 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-03)</p>
+      </article>
+
     </div>
   </section>
 
   <footer class="foot">
-    <p class="sources-line" data-lang="he">AP / AFP (אזור אסור בהורמוז; דרום לבנון; וויטקוף/קושנר; קושנר על עזה) · Reuters/Kpler דרך Business Times (תנועת ספינות בהורמוז) · AFP דרך France 24 (דיר זהראני)</p>
-    <p class="sources-line" data-lang="en">AP / AFP (Hormuz exclusion zone; southern Lebanon; Witkoff/Kushner; Kushner on Gaza) · Reuters/Kpler via Business Times (Hormuz ship traffic) · AFP via France 24 (Deir Zahrani)</p>
-    <p class="disclaimer" data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות. מהדורת בוקר רזה — חדשות בלבד. יום העבודה בארה״ב, אין טייפ שווקים. לא יוצגו נתונים מומצאים.</p>
-    <p class="disclaimer" data-lang="en">Educational briefing, not investment advice. Lean morning edition — news only. US Labor Day, no markets tape. No invented data.</p>
+    <p class="sources-line" data-lang="he">AP / AFP (אזור אסור בהורמוז; דרום לבנון; וויטקוף/קושנר; קושנר על עזה) · Reuters/Kpler דרך Business Times (תנועת ספינות בהורמוז) · AFP דרך France 24 (דיר זהראני) · Alpha Signal (שופיפיי; Cursor באירוח עצמי; Claude Commerce; Fable 5.1) · DeepLearning.AI The Batch (היגוי סוכני קוד)</p>
+    <p class="sources-line" data-lang="en">AP / AFP (Hormuz exclusion zone; southern Lebanon; Witkoff/Kushner; Kushner on Gaza) · Reuters/Kpler via Business Times (Hormuz ship traffic) · AFP via France 24 (Deir Zahrani) · Alpha Signal (Shopify; Cursor self-hosted; Claude Commerce; Fable 5.1) · DeepLearning.AI The Batch (steering coding agents)</p>
+    <p class="disclaimer" data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות. מהדורת בוקר רזה — חדשות + עדכון AI. יום העבודה בארה״ב, אין טייפ שווקים. לא יוצגו נתונים מומצאים.</p>
+    <p class="disclaimer" data-lang="en">Educational briefing, not investment advice. Lean morning edition — news plus AI digest. US Labor Day, no markets tape. No invented data.</p>
     <p class="brand-foot">© Brief · <span data-lang="he">תוכן מקורי</span><span data-lang="en">Original Content</span></p>
   </footer>
 </article>
