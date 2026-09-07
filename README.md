@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 7 September 2026:
+Latest is Afternoon, 7 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-07-1545/**
+
+Prior Morning (7 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-07-0850/**
 
@@ -60,13 +64,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Afternoon (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-07-0850/         frozen Monday Morning snapshot (matches home)
+briefings/2026-09-07-1545/         frozen Monday Afternoon snapshot (matches home)
+briefings/2026-09-07-0850/         frozen Monday Morning snapshot
 briefings/2026-09-06-1830/         frozen Sunday Evening snapshot
 briefings/2026-09-06-0830/         frozen Sunday Morning snapshot
 briefings/2026-09-05-0830/         frozen Saturday Morning snapshot
@@ -80,7 +85,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Monday, 7 September 2026, 08:50 Jerusalem / 01:50 ET) is a lean drop. No weather strip. Numbers were not invented. News is the default home lane. AI digest filled ~09:00 Jerusalem. US Labor Day — cash holiday. Markets / Pre-market tabs are honest pending placeholders; Markets joins afternoon if the desk files.
+This Afternoon (Monday, 7 September 2026, 15:45 Jerusalem / 08:45 ET) is news plus a Labor Day / Tuesday-reopen Pre-market pack. No weather strip. Numbers were not invented. News is the default home lane. Four Monday news cards. Morning AI digest (five cards) is kept. US Labor Day — cash holiday. Markets stays an honest pending placeholder (no invented Monday cash). Pre-market carries Friday settlement, Monday Asia oil, and the Tuesday reopen calendar.
 
 ## Run locally
 

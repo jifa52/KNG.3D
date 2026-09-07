@@ -413,13 +413,20 @@ html[dir="rtl"] .lane-markets .pending-card {
   background: linear-gradient(-90deg, var(--markets-dim), var(--bg-card) 28%);
 }
 
-.lane-premarket .pending-card {
+.lane-premarket .pending-card,
+.lane-premarket .short-card {
   border-inline-start: 3px solid var(--magenta);
   background: linear-gradient(90deg, var(--magenta-dim), var(--bg-card) 28%);
 }
 
-html[dir="rtl"] .lane-premarket .pending-card {
+html[dir="rtl"] .lane-premarket .pending-card,
+html[dir="rtl"] .lane-premarket .short-card {
   background: linear-gradient(-90deg, var(--magenta-dim), var(--bg-card) 28%);
+}
+
+.lane-premarket .fresh-new-today {
+  background: var(--magenta-dim);
+  color: var(--magenta);
 }
 
 .lane-ai .pending-card {
@@ -974,6 +981,11 @@ html[dir="rtl"] .lane-ai .short-card {
 .tag-ai {
   background: var(--cyan-dim);
   color: var(--cyan);
+}
+
+.tag-premarket {
+  background: var(--magenta-dim);
+  color: var(--magenta);
 }
 
 .archive-meta {
