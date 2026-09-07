@@ -80,7 +80,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Monday, 7 September 2026, 08:50 Jerusalem / 01:50 ET) is a lean news-only drop. No weather strip. Numbers were not invented. News is the default home lane. US Labor Day — cash holiday. Markets / Pre-market / AI tabs are honest pending placeholders; Markets joins afternoon if the desk files.
+This Morning (Monday, 7 September 2026, 08:50 Jerusalem / 01:50 ET) is a lean drop. No weather strip. Numbers were not invented. News is the default home lane. AI digest filled ~09:00 Jerusalem. US Labor Day — cash holiday. Markets / Pre-market tabs are honest pending placeholders; Markets joins afternoon if the desk files.
 
 ## Run locally
 
