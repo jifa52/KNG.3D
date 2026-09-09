@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 9 September 2026:
+Latest is Afternoon, 9 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-09-1545/**
+
+Prior Morning (9 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-09-0850/**
 
@@ -76,13 +80,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Afternoon (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-09-0850/         frozen Wednesday Morning snapshot (matches home)
+briefings/2026-09-09-1545/         frozen Wednesday Afternoon snapshot (matches home)
+briefings/2026-09-09-0850/         frozen Wednesday Morning snapshot
 briefings/2026-09-08-1545/         frozen Tuesday Afternoon snapshot
 briefings/2026-09-08-0850/         frozen Tuesday Morning snapshot
 briefings/2026-09-07-1545/         frozen Monday Afternoon snapshot
@@ -100,7 +105,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Wednesday, 9 September 2026, 08:50 Jerusalem / 01:50 ET) is a lean late fill: four confirmed news cards (US destroys five Iranian oil tankers after IRGC missiles at a Navy warship; Iran fires at US targets in Jordan — 18 of 20 intercepted; Rubio tanker-for-missile line; Economic Outcast aviation sanctions). No weather strip. Numbers were not invented. News is the default home lane. Markets/Pre-market wait for a real Wednesday tape (Brent stays on Markets). The Wednesday five-card Alpha Signal AI digest is kept.
+This Afternoon (Wednesday, 9 September 2026, 15:45 Jerusalem / 08:45 ET) is a full drop: six news topic cards (one Hormuz card consolidating the five-tanker hit, Jordan intercepts, Rubio tanker-for-try, aviation sanctions, and attributed Wednesday IRGC claims on a base and ships; Gaza ≥10 killed after Kushner’s draw-down ask; Canada–US $20B tariff war; Ali Taher operational control plus Rome; AI software selloff; Houthi/Saudi 73 with a temporary oil-ops pause) plus Markets/Pre-market (Brent above $100, soft futures, Tuesday cash, Apple Surprise and Shine today, PPI–CPI–FOMC, QCOM–AMZN, TTAN). No weather strip. Numbers were not invented. News is the default home lane. Barrel and index levels sit on Markets. The Wednesday five-card Alpha Signal AI digest is kept.
 
 ## Run locally
 
