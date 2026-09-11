@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon, 10 September 2026:
+Latest is Morning, 11 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-11-0850/**
+
+Prior Afternoon (10 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-10-1545/**
 
@@ -88,13 +92,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Afternoon (Hebrew default, English switcher)
+index.html                         latest Morning (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-10-1545/         frozen Thursday Afternoon snapshot (matches home)
+briefings/2026-09-11-0850/         frozen Friday Morning snapshot (matches home)
+briefings/2026-09-10-1545/         frozen Thursday Afternoon snapshot
 briefings/2026-09-10-0850/         frozen Thursday Morning snapshot
 briefings/2026-09-09-1545/         frozen Wednesday Afternoon snapshot
 briefings/2026-09-09-0850/         frozen Wednesday Morning snapshot
@@ -115,7 +120,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Afternoon (Thursday, 10 September 2026, 15:45 Jerusalem / 08:45 ET) is the standing full desk: seven news topic cards (Hormuz traffic in single digits after the shipping-attack wave — US destroyed five tankers, Riesco ablaze/sinking only where sourced, UKMTO/New Andros; Houthis seize Mocha and push toward Bab el-Mandeb; Trump bundles a $5,000 “Trump dividend” if GOP keeps Congress, an after-midterms war end, and a Pickaxe threat; AFP Gaza Beit Lahia family of four including two children, IDF checking; China seeks $30bn reciprocal tariff cuts ahead of Sep 24 Trump–Xi; ECB lifts the key rate to 2.50% citing Middle East energy inflation; White House copper tariff plan stalls on affordability) plus Markets/Pre-market (Brent $104.85 / WTI $99.70, soft NQ, PPI day with August MoM/YoY Unverified, Apple Duo $1,999 Confirmed, AEO after-hours ~−10%, ORCL/ADBE AMC, China NBS CPI +0.8% / PPI +3.8%). No weather strip. No oil-barrel or US-index prints on News. Canada and Apple are off News (Duo stays Markets M3). Numbers were not invented. News is the default home lane. The Wednesday five-card Alpha Signal AI digest is kept.
+This Morning (Friday, 11 September 2026, 08:50 Jerusalem / 01:50 ET) is a news-only late fill: five bilingual news topic cards (Hormuz seven Thursday transits plus first Qatar-linked LNG exit since late July, and a US official via Reuters on Jordan’s Muwaffaq Salti — A-10 missing a wing, ~8 F-15s light damage, ~30 Patriots — with destroy ≠ sink for all tankers; Mocha with Iranian arms / IRGC guidance per a Reuters investigation, Bab el-Mandeb, and an Axios MBS strike ask marked Unverified; Trump bundled no-regret, a post-midterms war end, a $5,000 dividend, Pickaxe, and Vance; Israel destroyed Hezbollah tunnels at Ali al-Taher plus AFP Beit Lahia family of four with IDF checking; China $30bn reciprocal tariff cuts ahead of Sep 24 Trump–Xi). ECB is off News. No weather strip. No oil-barrel or US-index prints on News. Numbers were not invented. News is the default home lane. Thursday afternoon Markets / Pre-market tape is kept. The Friday five-card AI digest is kept.
 
 ## Run locally
 
