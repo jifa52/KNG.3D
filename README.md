@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 13 September 2026:
+Latest is Afternoon, 13 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-13-1545/**
+
+Prior Morning (13 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-13-0850/**
 
@@ -108,13 +112,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Afternoon (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-13-0850/         frozen Sunday Morning snapshot (matches home)
+briefings/2026-09-13-1545/         frozen Sunday Afternoon snapshot (matches home)
+briefings/2026-09-13-0850/         frozen Sunday Morning snapshot
 briefings/2026-09-12-1545/         frozen Saturday Afternoon snapshot
 briefings/2026-09-12-0850/         frozen Saturday Morning snapshot
 briefings/2026-09-11-1545/         frozen Friday Afternoon snapshot
@@ -140,7 +145,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Sunday, 13 September 2026, 08:50 Jerusalem / 01:50 ET) is a weekend news-only drop: six bilingual news topic cards (UKMTO Warning 134-26: a vessel transiting Hormuz was struck by an unidentified projectile — struck/hit, not sunk or destroyed, crew and damage unknown; Houthis claim a Sharurah ballistic-and-drone strike, Saudi Civil Defense confirms two wounded in Jazan, and Yemeni government forces say they hit Houthis near Mocha; Pezeshkian says ministers will “sign Monday” in Muscat versus a senior Iranian official telling Reuters no signed Hormuz deal is expected, with Bahrain skipping — one hedged diplomacy card; in Dublin Trump would “love” a united Ireland and says the Iran war ends after the midterms; Aoun in Nabatieh says there are no new Israel talks for now; East-West is still shut and Iraq closed the Shalamcheh crossing). Saturday cards stay in the Saturday archive and are not refiled as the Sunday lead. Friday afternoon Markets / Pre-market tape is kept and not refreshed. No weather strip. No oil-barrel or US-index prints on News. News is the default home lane. The Friday five-card AI digest is kept.
+This Afternoon (Sunday, 13 September 2026, 15:45 Jerusalem / 08:45 ET) is a weekend news-only drop: five bilingual news topic cards (UKMTO Warning 134-26 update: fire aboard the Hormuz-struck vessel and local authorities evacuating the crew — struck/hit, not sunk or destroyed; Iran separately reports one dead near Qeshm — wires file the two lines separately and they are not merged as the same vessel; Iraq reopens passenger traffic at Shalamcheh and al-Shib while East-West stays shut; Gaza Tel al-Hawa vehicle strike: two killed and 13 wounded per Reuters/medics, IDF says Hamas militants; Iranian FM attributes Monday talks to Salalah — Oman unconfirmed — plus the Reuters no-signed-deal hedge and Bahrain skip; Yemeni government forces claim Taiz/Dhubab strikes and five drones downed, and IOM says more than 2,000 have reached Djibouti). Morning Sunday cards stay in the morning archive and are not refiled as the afternoon lead. Friday afternoon Markets / Pre-market tape is kept and not refreshed. No weather strip. No oil-barrel or US-index prints on News. News is the default home lane. The Friday five-card AI digest is kept.
 
 ## Run locally
 
