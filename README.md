@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon, 13 September 2026:
+Latest is Morning, 14 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-14-0850/**
+
+Prior Afternoon (13 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-13-1545/**
 
@@ -112,13 +116,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Afternoon (Hebrew default, English switcher)
+index.html                         latest Morning (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-13-1545/         frozen Sunday Afternoon snapshot (matches home)
+briefings/2026-09-14-0850/         frozen Monday Morning snapshot (matches home)
+briefings/2026-09-13-1545/         frozen Sunday Afternoon snapshot
 briefings/2026-09-13-0850/         frozen Sunday Morning snapshot
 briefings/2026-09-12-1545/         frozen Saturday Afternoon snapshot
 briefings/2026-09-12-0850/         frozen Saturday Morning snapshot
@@ -145,7 +150,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Afternoon (Sunday, 13 September 2026, 15:45 Jerusalem / 08:45 ET) is a weekend news-only drop: five bilingual news topic cards (UKMTO Warning 134-26 update: fire aboard the Hormuz-struck vessel and local authorities evacuating the crew — struck/hit, not sunk or destroyed; Iran separately reports one dead near Qeshm — wires file the two lines separately and they are not merged as the same vessel; Iraq reopens passenger traffic at Shalamcheh and al-Shib while East-West stays shut; Gaza Tel al-Hawa vehicle strike: two killed and 13 wounded per Reuters/medics, IDF says Hamas militants; Iranian FM attributes Monday talks to Salalah — Oman unconfirmed — plus the Reuters no-signed-deal hedge and Bahrain skip; Yemeni government forces claim Taiz/Dhubab strikes and five drones downed, and IOM says more than 2,000 have reached Djibouti). Morning Sunday cards stay in the morning archive and are not refiled as the afternoon lead. Friday afternoon Markets / Pre-market tape is kept and not refreshed. No weather strip. No oil-barrel or US-index prints on News. News is the default home lane. The Friday five-card AI digest is kept.
+This Morning (Monday, 14 September 2026, 08:50 Jerusalem / 01:50 ET) is a weekday news-only drop — Markets later: five bilingual news topic cards (Oman postpones the Salalah Hormuz meeting, Confirmed as Oman, with the Saturday Pezeshkian–Abu Dhabi BRICS spine; East-West still shut as last official, Yanbu stocks 5–7 days Confirmed as Reuters-attributed, plus Vantor/Guardian satellite damage imagery at al-Mesabaah; Doonbeg: Trump scraps the Irish whiskey tariff as a quote, tells Zelenskyy to stop diesel strikes, and on Qeshm says “I don’t want to say”; Saudi Civil Defense Monday alert cycle in Najran/Khamis Mushait/Jazan/Abha — thin, no intercept detail; Katz says whoever approaches Ali al-Taher will be destroyed/eliminated, plus Sunday NNA Nabatieh strikes). Sunday cards stay in the Sunday archive and are not refiled as the Monday lead. Friday afternoon Markets / Pre-market tape is kept and not refreshed. No weather strip. No oil-barrel or US-index prints on News. News is the default home lane. The Monday five-card AI digest is kept.
 
 ## Run locally
 
