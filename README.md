@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 14 September 2026:
+Latest is Afternoon, 14 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-14-1545/**
+
+Prior Morning (14 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-14-0850/**
 
@@ -116,13 +120,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Afternoon (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-14-0850/         frozen Monday Morning snapshot (matches home)
+briefings/2026-09-14-1545/         frozen Monday Afternoon snapshot (matches home)
+briefings/2026-09-14-0850/         frozen Monday Morning snapshot
 briefings/2026-09-13-1545/         frozen Sunday Afternoon snapshot
 briefings/2026-09-13-0850/         frozen Sunday Morning snapshot
 briefings/2026-09-12-1545/         frozen Saturday Afternoon snapshot
@@ -150,7 +155,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Monday, 14 September 2026, 08:50 Jerusalem / 01:50 ET) is a weekday news-only drop — Markets later: five bilingual news topic cards (Oman postpones the Salalah Hormuz meeting, Confirmed as Oman, with the Saturday Pezeshkian–Abu Dhabi BRICS spine; East-West still shut as last official, Yanbu stocks 5–7 days Confirmed as Reuters-attributed, plus Vantor/Guardian satellite damage imagery at al-Mesabaah; Doonbeg: Trump scraps the Irish whiskey tariff as a quote, tells Zelenskyy to stop diesel strikes, and on Qeshm says “I don’t want to say”; Saudi Civil Defense Monday alert cycle in Najran/Khamis Mushait/Jazan/Abha — thin, no intercept detail; Katz says whoever approaches Ali al-Taher will be destroyed/eliminated, plus Sunday NNA Nabatieh strikes). Sunday cards stay in the Sunday archive and are not refiled as the Monday lead. Friday afternoon Markets / Pre-market tape is kept and not refreshed. No weather strip. No oil-barrel or US-index prints on News. News is the default home lane. The Monday five-card AI digest is kept.
+This Afternoon (Monday, 14 September 2026, 15:45 Jerusalem / 08:45 ET) ships News + Markets / Pre-market together as a one-time ~15:45 IL demo: eight bilingual news cards (Salalah postpone + 77-ship blacklist + weekend Hormuz traffic in single digits; Houthi claim on Khamis Mushait; East-West still shut with a Yanbu 5–7 day clock; Yahodyn passenger-train strike with Petraeus at the station and a diesel-ask spine; Tillis–Gallego CLARITY ethics package ahead of Tuesday cloture; AI slowdown wires; Katz on Ali al-Taher; Viasat–Space42 Equatys). Irish whiskey and Euronext–Deutsche Börse are not MAIN cards. Markets tape is Yahoo futures ~14:36 (07:36 ET), not Monday cash (open 16:30 / 09:30 ET). FedWatch ~87% is Likely only. No weather strip. No oil-barrel or US-index prints inside News cards (short stamped strip at top of News only). News is the default home lane. The Monday five-card AI digest is kept.
 
 ## Run locally
 
