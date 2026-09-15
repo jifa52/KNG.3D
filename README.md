@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 15 September 2026:
+Latest is Midday MAIN, 15 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-15-1400/**
+
+Prior Morning (15 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-15-0850/**
 
@@ -124,13 +128,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Midday MAIN (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-15-0850/         frozen Tuesday Morning snapshot (matches home)
+briefings/2026-09-15-1400/         frozen Tuesday Midday MAIN snapshot (matches home)
+briefings/2026-09-15-0850/         frozen Tuesday Morning snapshot
 briefings/2026-09-14-1545/         frozen Monday Afternoon snapshot
 briefings/2026-09-14-0850/         frozen Monday Morning snapshot
 briefings/2026-09-13-1545/         frozen Sunday Afternoon snapshot
@@ -160,7 +165,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Tuesday, 15 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: three bilingual cards only (Houthi wave on Saudi Arabia as Riyadh huddles; Zelenskyy energy-ceasefire condition plus doubt of Trump’s mutual-deal claim; Rezaei no-talks lock plus conflicting El Gaia tanker accounts — fail closed on a confirmed new Hormuz mine strike). Monday MAIN cards (Salalah/77-ship, East-West, Yahodyn, CLARITY, AI slowdown, Katz, Viasat) are not refiled as leads. Markets + Pre-market stay honest pending and point to Monday afternoon as the prior session — no invented Tuesday cash or futures. The Monday five-card AI digest is kept. No weather strip. No oil-barrel or US-index prints inside News cards. News is the default home lane.
+This Midday MAIN (Tuesday, 15 September 2026, 14:00 Jerusalem / 07:00 ET) is seven bilingual News cards: East-West mostly offline 3–5 weeks (AP) versus Wright “soon” (Likely; reopen fail closed); Houthi wave on Saudi Arabia as MBS meets CENTCOM’s Cooper; Zelenskyy energy-pause conditionality after Trump’s mutual-deal claim; Senate CLARITY cloture Tuesday (vote-day, not a result); Anthropic Nasdaq IPO push versus Amodei slowdown and Trump’s “perfect little angel”; Netanyahu on the Gaza documentary NAZA; GSK–Chimagen T-cell engager up to $750 million. Overnight Rezaei/El Gaia is not refiled as a lead. Markets + Pre-market stay honest pending — Markets owns 15:45; last tape stays on Monday afternoon as the prior session; no invented Tuesday cash, futures, or oil prints. The Monday five-card AI digest is kept. No weather strip. No oil-barrel or US-index prints inside News cards. News is the default home lane.
 
 ## Run locally
 
