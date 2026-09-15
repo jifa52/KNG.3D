@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon, 14 September 2026:
+Latest is Morning, 15 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-15-0850/**
+
+Prior Afternoon (14 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-14-1545/**
 
@@ -120,13 +124,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Afternoon (Hebrew default, English switcher)
+index.html                         latest Morning (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-14-1545/         frozen Monday Afternoon snapshot (matches home)
+briefings/2026-09-15-0850/         frozen Tuesday Morning snapshot (matches home)
+briefings/2026-09-14-1545/         frozen Monday Afternoon snapshot
 briefings/2026-09-14-0850/         frozen Monday Morning snapshot
 briefings/2026-09-13-1545/         frozen Sunday Afternoon snapshot
 briefings/2026-09-13-0850/         frozen Sunday Morning snapshot
@@ -155,7 +160,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Afternoon (Monday, 14 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the same permalink and News + AI cards. Markets + Pre-market were refreshed in place from a superseding ~08:18 ET pack (Yahoo futures ~15:18 / 08:18 ET), not a second news dump: NQ −1.51% / ES −0.59%, WTI $102.96 / Brent $107.97, plus Monday single-name pre bars labeled Likely (ORCL ~−5% vs Fri). News remains eight bilingual cards (Salalah postpone + 77-ship blacklist + weekend Hormuz traffic in single digits; Houthi claim on Khamis Mushait; East-West still shut with a Yanbu 5–7 day clock; Yahodyn passenger-train strike with Petraeus at the station and a diesel-ask spine; Tillis–Gallego CLARITY ethics package ahead of Tuesday cloture; AI slowdown wires; Katz on Ali al-Taher; Viasat–Space42 Equatys). Irish whiskey and Euronext–Deutsche Börse are not MAIN cards. Tape is futures / overnight / pre-session, not Monday cash (open 16:30 / 09:30 ET). FedWatch ~87% is Likely only. No weather strip. No oil-barrel or US-index prints inside News cards (short stamped strip at top of News only). News is the default home lane. The Monday five-card AI digest is kept.
+This Morning (Tuesday, 15 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: three bilingual cards only (Houthi wave on Saudi Arabia as Riyadh huddles; Zelenskyy energy-ceasefire condition plus doubt of Trump’s mutual-deal claim; Rezaei no-talks lock plus conflicting El Gaia tanker accounts — fail closed on a confirmed new Hormuz mine strike). Monday MAIN cards (Salalah/77-ship, East-West, Yahodyn, CLARITY, AI slowdown, Katz, Viasat) are not refiled as leads. Markets + Pre-market stay honest pending and point to Monday afternoon as the prior session — no invented Tuesday cash or futures. The Monday five-card AI digest is kept. No weather strip. No oil-barrel or US-index prints inside News cards. News is the default home lane.
 
 ## Run locally
 
