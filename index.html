@@ -196,8 +196,8 @@
   </section>
 
   <section class="lane lane-ai" id="lane-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
-    <p class="lane-kicker" data-lang="he">DeepSeek משחררת V4.1-Flash (552B) ומפעילה את ה־Pro; Anthropic מפרסמת דוח ניצול Claude המפורט ביותר; OpenAI משחררת ChatGPT לשירותים פיננסיים; מטמון KV קל פי ארבעה; GPT-Live-1 לקול דו־כיווני.</p>
-    <p class="lane-kicker" data-lang="en">DeepSeek ships V4.1-Flash (552B) and retires Pro; Anthropic’s most detailed Claude-misuse report; OpenAI ChatGPT for Financial Services; 4× lighter KV cache; GPT-Live-1 for simultaneous voice.</p>
+    <p class="lane-kicker" data-lang="he">OpenAI: פרומפטים ישנים מאטים את GPT-6 Astra; VoiceStudio משכפל קול ומדובב ל־646 שפות על המחשב; מפת מוח זבוב פירות על רובוט הליכה; טרנספורמר מלופף לעומק חשיבה; שיבוט Codex על מכסת ChatGPT.</p>
+    <p class="lane-kicker" data-lang="en">OpenAI: old prompts slow GPT-6 Astra; VoiceStudio clones voices and dubs 646 languages on-device; fruit-fly brain map on a walking robot; looped transformer for reasoning depth; a Codex clone on the ChatGPT quota.</p>
 
     <div class="stack">
 
@@ -206,17 +206,17 @@
           <span class="chip chip-source">Alpha Signal</span>
           <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
         </p>
-        <h3 data-lang="he">DeepSeek משחררת V4.1-Flash עם 552B פרמטרים — מנצחת את ה־Pro שלה ואז מוציאה אותו לגמלאות</h3>
-        <h3 data-lang="en">DeepSeek ships V4.1-Flash (552B) — beats its own Pro, then retires it</h3>
-        <p class="short-body" data-lang="he">לפי Alpha Signal (11 בספטמבר), DeepSeek השיקה את V4.1-Flash: מודל MoE עם כ־552 מיליארד פרמטרים, שמפעיל רק כ־8B בקריאת הקלט ו־16B בכתיבת הפלט. לפי הדיווח הוא עוקף את V4-Pro במהירות, עלות וביצועים — ולכן V4-Pro יוצא לגמלאות. המודל רואה תמונות באופן מובנה, מדורג #1 ב־Terminal-Bench 2.1 מול Claude Opus 5 ו־GPT-5.6 לפי הדיווח, והמטמון (KV) דורש כ־4× פחות RAM ו־8× פחות אחסון. תמחור מחוץ לשעות השיא זול ב־50%; ב־API השם הוא deepseek-flash (שמות ישנים מנותבים אליו).</p>
-        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 11), DeepSeek shipped V4.1-Flash: a ~552B MoE model that activates only ~8B parameters on input and ~16B on output. The write-up says it beats V4-Pro on speed, cost, and performance — so V4-Pro is being retired. It sees images natively, ranks #1 on Terminal-Bench 2.1 ahead of Claude Opus 5 and GPT-5.6 per the report, and needs ~4× less RAM and ~8× less storage for the KV cache. Off-peak pricing is cut 50%; the API name is deepseek-flash (old names still route there).</p>
+        <h3 data-lang="he">OpenAI: פרומפטים ישנים מאטים את GPT-6 Astra — פחות פיגום, תוצאות נקיות יותר</h3>
+        <h3 data-lang="en">OpenAI: old prompts slow GPT-6 Astra — less scaffolding, cleaner results</h3>
+        <p class="short-body" data-lang="he">לפי Alpha Signal (14 בספטמבר), OpenAI פרסמה הנחיות לסוכני GPT-4o: הוראות שנכתבו למודלים ישנים יותר עלולות להאט את GPT-6 Astra — לבזבז זיכרון ולהפעיל התנהגויות שגויות. Astra חכם יותר ולכן זקוק לפחות ״בייביסיטר״. שלושה תיקונים לפי הדיווח: ב־Skills — תיאורי טריגר צרים ומדויקים כדי שהמודל יתפוס את הקובץ הנכון; ב־AGENTS.md (נטען בכל משימה) — להוריד קריאת-חובה מראש ותזכורות גנריות ״הרץ בדיקות״, כי Astra כבר עושה זאת; ובפרומפט המשימה — להגדיר במפורש איך נראה ״סיום״, כדי שלא יעצור לשאול. Alpha Signal ממליץ לבקש מ־Astra עצמו לבקר את קבצי ה־Skills ו־AGENTS.md הקיימים.</p>
+        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 14), OpenAI published guidance for GPT-4o agents: instructions written for older models can slow GPT-6 Astra — wasting memory and triggering the wrong behaviors. Astra is smarter, so it needs less babysitting. Three fixes in the write-up: Skills need narrow, precise trigger descriptions so Astra grabs the right file; AGENTS.md (loaded on every task) should drop mandatory pre-reading and generic “run your tests” reminders, because Astra already does that; task prompts should define what “done” looks like so it stops instead of pausing to ask. Alpha Signal’s move: ask Astra itself to audit existing skills and AGENTS.md files.</p>
         <div class="why-beat">
           <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
-          <p class="why-text" data-lang="he">דגל ״החכם״ של אותו ספק נעלם כשה־Flash הזול עוקף אותו — הלחץ על מחירי מודלים קנייניים עולה.</p>
-          <p class="why-text" data-lang="en">A vendor’s own “smart” tier vanishes when its cheaper Flash beats it — pressure on proprietary model pricing rises.</p>
+          <p class="why-text" data-lang="he">הפיגום שנבנה סביב מודלים חלשים יותר הופך לצוואר הבקבוק — לא חוסר יכולת של המודל.</p>
+          <p class="why-text" data-lang="en">The scaffolding built around weaker models is now the bottleneck — not a missing model capability.</p>
         </div>
-        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (11 בספטמבר 2026)</p>
-        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-11)</p>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (14 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-14)</p>
       </article>
 
       <article class="card short-card">
@@ -224,17 +224,17 @@
           <span class="chip chip-source">Alpha Signal</span>
           <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
         </p>
-        <h3 data-lang="he">Anthropic מפרסמת את דוח ניצול־הלרע המפורט ביותר של Claude — שבעה תחומי נזק, כולם נעצרו</h3>
-        <h3 data-lang="en">Anthropic’s most detailed Claude-misuse report — seven harm areas, all disrupted</h3>
-        <p class="short-body" data-lang="he">Alpha Signal דיווח (11 בספטמבר) שאנתרופיק פרסמה את המבט המפורט ביותר עד כה על ניסיונות לנצל את Claude: שבעה תחומים — סייבר, השפעה, מעקב, הונאות, שימוש ביולוגי דו־שימושי, פיתוח נשק, וגניבת מודל. לפי הדיווח, תוקפים השתמשו ב־Claude לא רק כייעוץ אלא לביצוע התקפות; קבוצה שיוחסה לסין חדרה לכ־30 יעדים גלובליים; באירוע אחד Claude דירג פוסטים לפי רגישות פוליטית וסימן אנשים לבקרה ממשלתית. המסר: AI מוחק את יתרון המיומנות שהפריד פעם בין האקרים מדינתיים לעבריינים בודדים. כל המבצעים שתוארו נעצרו, ההגנות הוחמרו, ומידע שותף עם רשויות.</p>
-        <p class="short-body" data-lang="en">Alpha Signal reported (Sep 11) that Anthropic published its most detailed look yet at attempts to weaponize Claude across seven harm areas: cyber ops, influence, surveillance, scams/fraud, dual-use biological misuse, weapons development, and model theft. Attackers used Claude not only as an advisor but to execute attacks; a suspected China-linked group infiltrated ~30 global targets; in one case Claude scored social posts by political sensitivity and flagged people for government control. The point: AI has erased the skill gap that once separated state hackers from lone criminals. Every described operation was disrupted, safeguards tightened, and intelligence shared with authorities.</p>
+        <h3 data-lang="he">מפתח יחיד משחרר יריב חינמי ל־ElevenLabs — שכפול קול ודיבוב ל־646 שפות על המחשב</h3>
+        <h3 data-lang="en">Solo dev open-sources a free ElevenLabs rival — clone voices and dub 646 languages on-device</h3>
+        <p class="short-body" data-lang="he">לפי Alpha Signal (14 בספטמבר), VoiceStudio הוא כלי קוד-פתוח חינמי שרץ במלואו על המחשב המקומי — בלי חיוב, בלי תקרה, והאודיו לא עובר בשרת. לפי הדיווח כבר כ־25K כוכבים ב־GitHub. מה שהוא עושה: שכפול קול מקליפ נקי אחד; דיבוב וידאו ל־646 שפות (מול 32 אצל ElevenLabs לפי הדיווח); ספרי שמע, תמלול ודיקטציה; בחירה מ־14 מנועי TTS במקום נעילה למנוע אחד. התקנה לפי Alpha Signal: git clone, bun install, אחר כך bun run desktop — עם קונפיגורציית Python אוטומטית בהפעלה הראשונה. הסייג בכנות: האיכות תלויה בחומרה ובמנוע שנבחר.</p>
+        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 14), VoiceStudio is a free open-source tool that runs 100% on the local machine — no billing, no caps, and audio never touches a server. The write-up puts it at ~25K GitHub stars. What it does: clone a voice from one clean clip; dub video into 646 languages (vs 32 for ElevenLabs, per the report); audiobooks, transcription, and dictation; pick from 14 text-to-speech engines instead of one lock-in. Setup per Alpha Signal: git clone, bun install, then bun run desktop, with Python dependencies auto-configured on first launch. The honest tradeoff: quality depends on hardware and the engine chosen.</p>
         <div class="why-beat">
           <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
-          <p class="why-text" data-lang="he">בטיחות מודל כבר לא PR — זה דו״ח מבצעים שמקשר שימוש לרע לסייבר ולמעקב מדינתי.</p>
-          <p class="why-text" data-lang="en">Model safety is no longer PR — it is an ops report tying misuse to cyber and state surveillance.</p>
+          <p class="why-text" data-lang="he">כיסוי שפות ופרטיות יוצאים מה־API המדוד — עבודת קול יכולה להישאר על המכונה.</p>
+          <p class="why-text" data-lang="en">Language coverage and privacy move off the metered API — voice work can stay on the machine.</p>
         </div>
-        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (11 בספטמבר 2026)</p>
-        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-11)</p>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (14 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-14)</p>
       </article>
 
       <article class="card short-card">
@@ -242,17 +242,17 @@
           <span class="chip chip-source">Alpha Signal</span>
           <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
         </p>
-        <h3 data-lang="he">OpenAI משחררת ChatGPT לשירותים פיננסיים עם GPT-6 ונתוני שוק חיים</h3>
-        <h3 data-lang="en">OpenAI ships ChatGPT for Financial Services with GPT-6 and live market data</h3>
-        <p class="short-body" data-lang="he">לפי Alpha Signal (11 בספטמבר), OpenAI השיקה ChatGPT for Financial Services — סביבת עבודה ייעודית על GPT-6 Astra, שנבנתה עם Morgan Stanley ו־Evercore. במקום לחבר מקורות בנפרד, כלולים מהקופסה נתונים מ־Daloopa, PitchBook, LSEG News ו־Crunchbase (תמלילי רווחים, דוחות כספיים, מידע על חברות פרטיות); הערות מחקר, מודלים פיננסיים ו־pitchbooks ניתנים לעריכה על תבניות Excel/Word/PowerPoint של הפירמה; וציטוטים גרנולריים שמחזירים כל מספר לפסקה או לטבלה המדויקת. GPT-6 Astra כוונן לשליפה, חשיבה פיננסית ויצירת ארטיפקטים. גישה למוסדות כשירים דרך מכירות OpenAI; מחיר לא פורסם.</p>
-        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 11), OpenAI launched ChatGPT for Financial Services — a dedicated workspace on GPT-6 Astra, built with Morgan Stanley and Evercore. Instead of stitching connectors, built-in data from Daloopa, PitchBook, LSEG News, and Crunchbase covers earnings transcripts, financials, and private-company info; research notes, models, and pitchbooks edit against the firm’s own Excel/Word/PowerPoint templates; granular citations trace every figure to the exact paragraph or table. GPT-6 Astra is tuned for retrieval, financial reasoning, and artifact generation. Eligible institutions get access via OpenAI sales; pricing unpublished.</p>
+        <h3 data-lang="he">ממפים מוח זבוב פירות — 166,700 נוירונים — ומחברים אותו לרובוט הליכה</h3>
+        <h3 data-lang="en">Fruit-fly brain map — 166,700 neurons — wired into a walking robot</h3>
+        <p class="short-body" data-lang="he">לפי Alpha Signal (15 בספטמבר), מדענים בגוגל וב־HHMI Janelia פרסמו את מפת החיווט המלאה הראשונה של מערכת העצבים של זבוב פירות: 166,700 נוירונים ו־125 מיליון חיבורים. מישהו לקח את התרשים, דימה אותו בתוכנה, וחיבר אותו לרובוט הליכה מסוג Strandbeest — פעילות המוח המדומה מתורגמת לפקודות מנוע לרגליים. לפי הדיווח, אותו מוח כבר שיחק Doom ו־Chrome Dino לפני הרובוט. הסייג: זה לא מוח חי — קונקטום הוא תצלום של חיווט מת, לא תודעה; הסימולציה משתמשת במודלי נוירון מפושטים. הקוד הפתוח לגישור ב־GitHub: Frankweb33/flybrain-robot-bridge (פקודות מנוע ב־UDP; קלט מצלמה/חיישן כאותות תחושתיים מדומים).</p>
+        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 15), scientists at Google and HHMI Janelia published the first complete wiring map of a fruit fly’s nervous system: 166,700 neurons and 125 million connections. Someone simulated that blueprint in software and plugged it into a Strandbeest walking robot — simulated-brain activity becomes motor commands for the legs. The same brain had already played Doom and Chrome Dino before the robot, per the report. The caveat: this is not a living brain. A connectome is a snapshot of dead wiring, not a mind; the simulation uses simplified neuron models. Open-source bridge code is on GitHub at Frankweb33/flybrain-robot-bridge (UDP motor commands; camera/sensor input as simulated sensory signals).</p>
         <div class="why-beat">
           <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
-          <p class="why-text" data-lang="he">וול סטריט מקבלת AI עם נתונים מובנים וציטוטים — לא עוד צ׳אט גנרי על גבי קבצים שהועלו ידנית.</p>
-          <p class="why-text" data-lang="en">Wall Street gets AI with built-in data and citations — not another generic chat bolted onto uploaded files.</p>
+          <p class="why-text" data-lang="he">תרשים חיווט ביולוגי אמיתי הפך ללולאת שליטה ברובוט — גם אם זו עדיין קירוב, לא תודעה.</p>
+          <p class="why-text" data-lang="en">A real biological wiring diagram is now a robot control loop — even if it is still an approximation, not a mind.</p>
         </div>
-        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (11 בספטמבר 2026)</p>
-        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-11)</p>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (15 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-15)</p>
       </article>
 
       <article class="card short-card">
@@ -260,17 +260,17 @@
           <span class="chip chip-source">Alpha Signal</span>
           <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
         </p>
-        <h3 data-lang="he">DeepSeek: מודל כמעט כפול בגודל — עם מטמון KV קל פי ארבעה</h3>
-        <h3 data-lang="en">DeepSeek’s efficiency playbook: nearly 2× bigger model, 4× lighter KV cache</h3>
-        <p class="short-body" data-lang="he">ב־Sunday Deep Dive של Alpha Signal (13 בספטמבר) פורט איך V4.1-Flash (יצא 10 בספטמבר) מפריד קיבולת מעלות הגשה: כמעט כפול מגודל V4-Flash אך עם כ־890 בתים לטוקן במטמון KV לעומת ~3,514 ב־V4-Flash. ארכיטקטורת Causal Encoder-Decoder (20 שכבות קידוד + 20 פענוח) מפעילה רק 8B על קלט ו־16B על פלט; Sliding-Window Attention עם Bounded Replay מצמצם שחזור מצב מקומי; Compressed Sparse Attention 2 משתף זיכרון היסטורי בין שכבות; ואינדקס היררכי מגביל את עלות החיפוש בחלון של עד מיליון טוקנים. לפי הדיווח זה כרבע מדרישת HBM של V4-Flash ושמינית מאחסון SSD של המטמון — קריטי לסוכנים עם הקשר ארוך.</p>
-        <p class="short-body" data-lang="en">In Alpha Signal’s Sunday Deep Dive (Sep 13), V4.1-Flash (released Sep 10) separates model capacity from serving cost: nearly twice V4-Flash’s size yet ~890 bytes of KV cache per token vs ~3,514 for V4-Flash. A Causal Encoder-Decoder (20 encoder + 20 decoder layers) activates only 8B on input and 16B on output; Sliding-Window Attention with Bounded Replay cheaply rebuilds local state; Compressed Sparse Attention 2 shares historical memory across layers; a hierarchical indexer bounds search cost over up to a million-token window. The write-up pegs HBM need at ~¼ of V4-Flash and SSD cache storage at ~⅛ — decisive for long-running agents.</p>
+        <h3 data-lang="he">תכנון טרנספורמר מלופף — עומק חשיבה בלי תקרת שכבות קבועה</h3>
+        <h3 data-lang="en">Looped transformer design — reasoning depth without a fixed layer cap</h3>
+        <p class="short-body" data-lang="he">לפי Alpha Signal (15 בספטמבר), ה־Recurrent Looped Transformer (RLT) הופך את ערימת השכבות הקבועה של טרנספורמר רגיל: במקום עוד טוקנים בכל ״מחשבה״ נוספת, המודל מלופף את השכבות על כל טוקן ובונה זיכרון פנימי שגדל עם הרצף — עומק החשיבה נגזר מאורך הרצף, לא מהארכיטקטורה. שלושה יעדים לפי הדיווח: חשיבה עמוקה יותר בלי טוקנים עודפים; עיצוב ידידותי לחומרה עם קידוד מקבילי ושימוש חוזר בזיכרון; אימון נקי יותר, שבו ההתנהגות זהה בלמידה ובשימוש. הסייג של Alpha Signal: זה מפרט תכנון, לא מוצר שנבדק; ניסויים מוקדמים מעורבים, והמאמר עצמו אומר שצריך עדיין לאמת יעילות וסקייל.</p>
+        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 15), the Recurrent Looped Transformer (RLT) flips a normal transformer’s fixed layer stack: instead of emitting more tokens for extra thought, the model loops its layers across every token and builds a growing internal memory as the sequence lengthens — reasoning depth scales with the sequence, not the architecture. Three targets in the write-up: deeper reasoning without extra tokens; hardware-friendly parallel encoding and memory reuse; cleaner training, where the model behaves the same during learning and real use. Alpha Signal’s caveat: this is a design spec, not a tested product. Early experiments are mixed, and the paper itself says efficiency and scaling gains still need validation.</p>
         <div class="why-beat">
           <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
-          <p class="why-text" data-lang="he">מספר הפרמטרים כבר לא מנבא עלות — מה שקובע הוא כמה זיכרון הקשר נשאר חי בין קריאות סוכן.</p>
-          <p class="why-text" data-lang="en">Parameter count no longer predicts cost — what matters is how much context memory stays alive between agent calls.</p>
+          <p class="why-text" data-lang="he">אם העומק גדל עם הרצף במקום עם הערימה, סוכן ארוך-טווח מפסיק לשלם מס טוקנים על כל מחשבה נוספת.</p>
+          <p class="why-text" data-lang="en">If depth can scale with the sequence instead of the stack, a long-horizon agent stops paying a token tax for every extra thought.</p>
         </div>
-        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (13 בספטמבר 2026)</p>
-        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-13)</p>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (15 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-15)</p>
       </article>
 
       <article class="card short-card">
@@ -278,27 +278,27 @@
           <span class="chip chip-source">Alpha Signal</span>
           <span class="chip chip-conf chip-conf-confirmed"><span data-lang="he">מאומת</span><span data-lang="en">Confirmed</span></span>
         </p>
-        <h3 data-lang="he">OpenAI משחררת GPT-Live-1 — סוכני קול שמקשיבים ומדברים באותו זמן</h3>
-        <h3 data-lang="en">OpenAI ships GPT-Live-1 — voice agents that listen and speak at once</h3>
-        <p class="short-body" data-lang="he">Alpha Signal ציין (11 בספטמבר) ש־OpenAI השיקה את GPT-Live-1 API — ממשק שמאפשר לסוכני קול להקשיב ולדבר בו־זמנית, במקום תורות שיחה קשיחים של ״דבר־ואז־המתן״. זה מסמן מעבר מסוכני טקסט עם תוסף דיבור לסוכנים שנבנים מראש לשיחה רציפה בזמן אמת.</p>
-        <p class="short-body" data-lang="en">Alpha Signal flagged (Sep 11) that OpenAI shipped the GPT-Live-1 API so voice agents can listen and speak simultaneously, instead of rigid turn-taking. It marks a shift from text agents with a speech bolt-on toward agents designed for continuous real-time conversation.</p>
+        <h3 data-lang="he">שיבוט קוד-פתוח ל־Codex שרץ על מכסת ChatGPT הקיימת</h3>
+        <h3 data-lang="en">Open-source Codex clone that runs on an existing ChatGPT plan</h3>
+        <p class="short-body" data-lang="he">לפי Alpha Signal (15 בספטמבר), Codex של OpenAI עובד ישירות על קבצי הפרויקט — אבל עם מכסת שימוש נפרדת. Chat On Steroids הופך את זה: הוא רץ על שיחת ChatGPT הרגילה ולכן לא צורך את מכסת Codex. לפי הדיווח אפשר לקרוא ולערוך קבצים בתיקיית הפרויקט, לשלוח תיקונים בזמן שהעבודה רצה, לפצל משימות בין כמה סוכנים במקביל, ולחדש סשן בצ׳אט חדש בלי לאבד הקשר. התחלה לפי Alpha Signal: להתקין את CoS, לאשר את תיקיית הפרויקט בהגדרות, ולהתחבר דרך מצב המפתחים של ChatGPT (צימוד אוטומטי). נדרשים Windows / macOS / Linux, Chrome או Edge, וחשבון ChatGPT עם מצב מפתחים. הקוד פתוח ב־GitHub.</p>
+        <p class="short-body" data-lang="en">Per Alpha Signal (Sep 15), OpenAI’s Codex works directly on project files — but it has a separate usage limit. Chat On Steroids flips that: it uses the regular ChatGPT conversation, so it does not consume the Codex quota. The write-up says it can read and edit files in the project folder, send corrections while work is still running, split tasks across multiple agents in parallel, and resume a session in a fresh chat without losing context. Setup per Alpha Signal: install CoS, approve the project folder in Settings, then connect through ChatGPT’s Developer mode (pairing is automatic). It needs Windows, macOS, or Linux, plus Chrome or Edge and a ChatGPT account that supports Developer mode. The code is open source on GitHub.</p>
         <div class="why-beat">
           <p class="why-label"><span data-lang="he">למה זה חשוב</span><span data-lang="en">Why it matters</span></p>
-          <p class="why-text" data-lang="he">שיחה דו־כיוונית בזמן אמת היא הבסיס לסוכן קולי שמרגיש כמו שיחה — לא כמו הקלטה.</p>
-          <p class="why-text" data-lang="en">Simultaneous listen-and-speak is the baseline for a voice agent that feels like a conversation — not a recording.</p>
+          <p class="why-text" data-lang="he">קיר המכסה סביב סוכן הקוד הרשמי הופך לבחירת ניתוב — אותם קבצים, דלי אחר.</p>
+          <p class="why-text" data-lang="en">The quota wall around the official coding agent is now a routing choice — same files, different bucket.</p>
         </div>
-        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (11 בספטמבר 2026)</p>
-        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-11)</p>
+        <p class="story-sources" data-lang="he">מקור: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (15 בספטמבר 2026)</p>
+        <p class="story-sources" data-lang="en">Source: <a href="https://alphasignal.ai/" rel="noopener" target="_blank">Alpha Signal</a> (2026-09-15)</p>
       </article>
 
     </div>
   </section>
 
   <footer class="foot">
-    <p class="sources-line" data-lang="he">Senate LIS (הצבעה 234 · בעד 49 / נגד 50 / לא הצביע 1 — סגירת דיון נדחתה — מאומת; גובר על נוסח Reuters שכתב 50 בעד מול 49 נגד) · Reuters (ארבעה רפובליקנים נגד + היפוך טיליס — מאומת) · Reuters (טענת קואליציה על רחפן מדרום למכה — מאומת; כוונת חות׳ים — סביר / שנוי במחלוקת דרך סבא) · CNBC + Bloomberg (שיחות בטיחות OpenAI / אנתרופיק / גוגל — מאומת; גוף / עסקה — סביר חקירתי) · AP דרך WTOP (תוכנית ~40,000 פצצות / ~$2.8 מיליארד — מאומת רב-מקור; חבילה סופית — סביר, עדיין לא סופית) · טייפ יום ג׳ אחר הצהריים נשמר כמפגש קודם · Alpha Signal (דיג׳סט AI קודם נשמר)</p>
-    <p class="sources-line" data-lang="en">Senate LIS (vote 234 · YEAs 49 / NAYs 50 / Not Voting 1 — cloture rejected — Confirmed; overrides Reuters 50–49-in-favor line) · Reuters (four GOP nos + Tillis flip — Confirmed) · Reuters (coalition claim of a drone south of Mecca — Confirmed; Houthi intent — Likely / contested via SABA) · CNBC + Bloomberg (OpenAI / Anthropic / Google safety talks — Confirmed; body / deal — Likely exploratory) · AP via WTOP (~40,000 bombs / ~$2.8bn plan — Confirmed multi-source; final package — Likely, not yet final) · Tuesday afternoon tape kept as prior session · Alpha Signal (prior AI digest kept)</p>
-    <p class="disclaimer" data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות. מהדורת בוקר רזה — חדשות לילה בלבד. אין מזג אוויר. טייפ יום ד׳ ממתין לדסק השווקים. יום הפד אחר כך. דיג׳סט AI קודם נשמר. לא יוצגו נתונים מומצאים.</p>
-    <p class="disclaimer" data-lang="en">Educational briefing, not investment advice. Thin morning edition — overnight news only. No weather strip. Wednesday tape waits for the Markets desk. Fed day later. Prior AI digest kept. No invented data.</p>
+    <p class="sources-line" data-lang="he">Senate LIS (הצבעה 234 · בעד 49 / נגד 50 / לא הצביע 1 — סגירת דיון נדחתה — מאומת; גובר על נוסח Reuters שכתב 50 בעד מול 49 נגד) · Reuters (ארבעה רפובליקנים נגד + היפוך טיליס — מאומת) · Reuters (טענת קואליציה על רחפן מדרום למכה — מאומת; כוונת חות׳ים — סביר / שנוי במחלוקת דרך סבא) · CNBC + Bloomberg (שיחות בטיחות OpenAI / אנתרופיק / גוגל — מאומת; גוף / עסקה — סביר חקירתי) · AP דרך WTOP (תוכנית ~40,000 פצצות / ~$2.8 מיליארד — מאומת רב-מקור; חבילה סופית — סביר, עדיין לא סופית) · טייפ יום ג׳ אחר הצהריים נשמר כמפגש קודם · Alpha Signal (דיג׳סט AI מיום ד׳ · 14–15 בספטמבר)</p>
+    <p class="sources-line" data-lang="en">Senate LIS (vote 234 · YEAs 49 / NAYs 50 / Not Voting 1 — cloture rejected — Confirmed; overrides Reuters 50–49-in-favor line) · Reuters (four GOP nos + Tillis flip — Confirmed) · Reuters (coalition claim of a drone south of Mecca — Confirmed; Houthi intent — Likely / contested via SABA) · CNBC + Bloomberg (OpenAI / Anthropic / Google safety talks — Confirmed; body / deal — Likely exploratory) · AP via WTOP (~40,000 bombs / ~$2.8bn plan — Confirmed multi-source; final package — Likely, not yet final) · Tuesday afternoon tape kept as prior session · Alpha Signal (Wednesday AI digest · Sep 14–15)</p>
+    <p class="disclaimer" data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות. מהדורת בוקר רזה — חדשות לילה בלבד. אין מזג אוויר. טייפ יום ד׳ ממתין לדסק השווקים. יום הפד אחר כך. דיג׳סט AI מיום ד׳. לא יוצגו נתונים מומצאים.</p>
+    <p class="disclaimer" data-lang="en">Educational briefing, not investment advice. Thin morning edition — overnight news only. No weather strip. Wednesday tape waits for the Markets desk. Fed day later. Wednesday AI digest. No invented data.</p>
     <p class="brand-foot">© Brief · <span data-lang="he">תוכן מקורי</span><span data-lang="en">Original Content</span></p>
   </footer>
 </article>
