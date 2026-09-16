@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday MAIN, 16 September 2026:
+Latest is Afternoon, 16 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-16-1545/**
+
+Prior Midday MAIN (16 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-16-1400/**
 
@@ -140,13 +144,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Midday MAIN (Hebrew default, English switcher)
+index.html                         latest Afternoon (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-16-1400/         frozen Wednesday Midday MAIN snapshot (matches home; eight News cards; Markets / Pre-market pending for 15:45)
+briefings/2026-09-16-1545/         frozen Wednesday Afternoon snapshot (matches home; eight News cards kept; Markets / Pre-market filled)
+briefings/2026-09-16-1400/         frozen Wednesday Midday MAIN snapshot (eight News cards; Markets / Pre-market were pending)
 briefings/2026-09-16-0850/         frozen Wednesday Morning snapshot (thin overnight News)
 briefings/2026-09-15-1545/         frozen Tuesday Afternoon snapshot (Markets + Pre-market)
 briefings/2026-09-15-1400/         frozen Tuesday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:08 tape)
@@ -180,7 +185,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Midday MAIN (Wednesday, 16 September 2026, 14:00 Jerusalem / 07:00 ET) is an eight-card News drop. Hormuz Tuesday traffic falls to four vessels. U.S. Energy Secretary Wright says East-West should be back “within days” versus AP’s 3–5 week window — FAIL CLOSED on reopen; official Saudi timeline Unverified. The Saudi-led coalition says it downed a Houthi drone south of Mecca; Houthis via SABA deny. Russian drones hit a Ukrainian bus and train, killing five. Senate LIS vote 234 rejects CLARITY cloture (YEAs 49, NAYs 50, Not Voting 1 — overrides a Reuters 50–49-in-favor line). OpenAI talks safety standards with Anthropic and Google as Nvidia’s Huang rejects antitrust waivers. Trump administration plans a ~$2.8bn / ~40,000-bomb package for Israel (AP; not yet final). Australia’s Reliance Worldwide agrees a ~$2.9bn Brookfield buyout. Markets / Pre-market stay pending for the 15:45 Fed-day desk — no invented Wednesday tape; last tape stays on Tuesday afternoon as the prior session. The morning five-card AI digest is kept. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
+This Afternoon (Wednesday, 16 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the eight midday MAIN News cards and the morning five-card AI digest. Markets / Pre-market are filled from Yahoo futures ~15:28 (08:28 ET): modest green (ES +0.33%, NQ +0.61%) after Tuesday cash soft; WTI still through $100 and session-soft; August Census retail in hand ($773.9B, +1.2% MoM); FOMC decision 21:00 (14:00 ET) still ahead — FAIL CLOSED on the funds-rate; FedWatch omitted. Oracle digestion versus Adobe; CPRT/ACVA near the $10.50 cash deal. Yields stamped in basis points / percentage points, not a bare Yahoo percent. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
