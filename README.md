@@ -151,7 +151,7 @@ assets/lanes.js                    News / Markets switch (file://-safe; empty ha
 assets/favicon.svg
 archive/index.html                 every published briefing
 briefings/2026-09-16-1545/         frozen Wednesday Afternoon snapshot (matches home; eight News cards kept; Markets / Pre-market filled)
-briefings/2026-09-16-1400/         frozen Wednesday Midday MAIN snapshot (eight News cards; Markets / Pre-market were pending)
+briefings/2026-09-16-1400/         frozen Wednesday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:28 tape)
 briefings/2026-09-16-0850/         frozen Wednesday Morning snapshot (thin overnight News)
 briefings/2026-09-15-1545/         frozen Tuesday Afternoon snapshot (Markets + Pre-market)
 briefings/2026-09-15-1400/         frozen Tuesday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:08 tape)
