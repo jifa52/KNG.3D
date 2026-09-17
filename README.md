@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday MAIN, 17 September 2026:
+Latest is Afternoon, 17 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-17-1545/**
+
+Prior Midday MAIN (17 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-17-1400/**
 
@@ -152,12 +156,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Midday MAIN (Hebrew default, English switcher)
+index.html                         latest Afternoon (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-17-1545/         frozen Thursday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
 briefings/2026-09-17-1400/         frozen Thursday Midday MAIN snapshot (News + AI kept; Markets / Pre-market pending for ~15:45)
 briefings/2026-09-17-0850/         frozen Thursday Morning snapshot (thin overnight News)
 briefings/2026-09-16-1545/         frozen Wednesday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
@@ -195,7 +200,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Midday MAIN (Thursday, 17 September 2026, 14:00 Jerusalem / 07:00 ET) is eight News cards. Hormuz commodity transits fall to three on Wednesday (from 12; 10-day avg ~17). Trump hopes the Iran war is nearing an end as Houthi–Saudi fighting escalates — no ceasefire; deal path Likely. East-West pumping stations 8 and 9 damaged, repair unclear, as Riyadh offers Oman ship-to-ship crude and Yanbu loadings stay suspended — FAIL CLOSED on pipeline reopen versus Wright “days.” The House vote 262–159 for Russia sanctions/tariffs stays on the MAIN deck (Act title + sent to the White House Confirmed; will-sign stays Likely). Russian overnight barrage injures more than two dozen across Ukraine, including Kyiv and Odesa; Wednesday’s bus/train five-dead is not refiled as the lead. Paris hosts European and Arab military chiefs on post-UNIFIL Lebanon options. Brookings–Tsinghua experts propose nuclear-style military-AI safeguards ahead of Trump–Xi; official adoption Unverified. NSE’s ~$2.3bn IPO opens Thursday (early take-up 0.09×; anchors ~$703m). Markets / Pre-market stay pending for ~15:45 and point to Wednesday afternoon as the prior session — no invented Thursday cash, futures, or oil prints; Wednesday-evening FOMC waits for the Markets desk. Thursday is not an AI digest day; the prior five-card digest is kept. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
+This Afternoon (Thursday, 17 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the eight midday MAIN News cards and the Wednesday AI digest. Markets / Pre-market are filled from the ~15:28 (08:28 ET) Yahoo stamp: broad green futures after soft Wednesday cash (ES +1.21%; NQ +1.57%); FOMC hiked +25 bp to 3.75%–4.00% with the SEP path raised (2026 median 4.1 vs 3.8 in June); WTI $99.30 under $100; Oracle bounce versus Adobe still soft; CPRT/ACVA near the $10.50 cash deal. 10-year yield stamped as about −5.5 bp versus 5.006%, not Yahoo’s bare −1.10% alone. US cash opens 16:30 (09:30 ET) — futures are not Thursday cash. Thursday 08:30 ET claims / housing / Philly Fed levels stay Unverified this filing. FedWatch omitted. Thursday is not an AI digest day; the prior five-card digest is kept. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
