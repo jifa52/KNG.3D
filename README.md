@@ -162,8 +162,8 @@ assets/i18n.js                     language switch, localStorage, optional #he/#
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-17-1545/         frozen Thursday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
-briefings/2026-09-17-1400/         frozen Thursday Midday MAIN snapshot (News + AI kept; Markets / Pre-market pending for ~15:45)
+briefings/2026-09-17-1545/         frozen Thursday Afternoon snapshot (matches home; eight News cards kept; Markets / Pre-market filled)
+briefings/2026-09-17-1400/         frozen Thursday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:28 tape)
 briefings/2026-09-17-0850/         frozen Thursday Morning snapshot (thin overnight News)
 briefings/2026-09-16-1545/         frozen Wednesday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
 briefings/2026-09-16-1400/         frozen Wednesday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:28 tape)
@@ -200,7 +200,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Afternoon (Thursday, 17 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the eight midday MAIN News cards and the Wednesday AI digest. Markets / Pre-market are filled from the ~15:28 (08:28 ET) Yahoo stamp: broad green futures after soft Wednesday cash (ES +1.21%; NQ +1.57%); FOMC hiked +25 bp to 3.75%–4.00% with the SEP path raised (2026 median 4.1 vs 3.8 in June); WTI $99.30 under $100; Oracle bounce versus Adobe still soft; CPRT/ACVA near the $10.50 cash deal. 10-year yield stamped as about −5.5 bp versus 5.006%, not Yahoo’s bare −1.10% alone. US cash opens 16:30 (09:30 ET) — futures are not Thursday cash. Thursday 08:30 ET claims / housing / Philly Fed levels stay Unverified this filing. FedWatch omitted. Thursday is not an AI digest day; the prior five-card digest is kept. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
+This Afternoon (Thursday, 17 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the eight midday MAIN News cards and the Wednesday five-card AI digest. Markets / Pre-market are filled from Yahoo futures ~15:28 (08:28 ET): broad green (ES +1.21%, NQ +1.57%) after Wednesday cash soft; WTI back under $100 (~$99.30, session ~−3%); FOMC hike Confirmed (+25 bp to 3.75%–4.00%, 12–0) with SEP funds median 4.1% end-2026 / 2027; FedWatch omitted (no CME primary). Oracle bounce versus Adobe; CPRT/ACVA near the $10.50 cash deal. Thursday claims / housing / Philly levels Unverified — date only. Yields stamped in basis points / percentage points, not a bare Yahoo percent. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
