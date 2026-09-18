@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon, 17 September 2026:
+Latest is Morning, 18 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-18-0850/**
+
+Prior Afternoon (17 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-17-1545/**
 
@@ -156,13 +160,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Afternoon (Hebrew default, English switcher)
+index.html                         latest Morning (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-17-1545/         frozen Thursday Afternoon snapshot (matches home; eight News cards kept; Markets / Pre-market filled)
+briefings/2026-09-18-0850/         frozen Friday Morning snapshot (thin overnight News; Friday AI digest kept)
+briefings/2026-09-17-1545/         frozen Thursday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
 briefings/2026-09-17-1400/         frozen Thursday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:28 tape)
 briefings/2026-09-17-0850/         frozen Thursday Morning snapshot (thin overnight News)
 briefings/2026-09-16-1545/         frozen Wednesday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
@@ -200,7 +205,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Afternoon (Thursday, 17 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the eight midday MAIN News cards and the Wednesday five-card AI digest. Markets / Pre-market are filled from Yahoo futures ~15:28 (08:28 ET): broad green (ES +1.21%, NQ +1.57%) after Wednesday cash soft; WTI back under $100 (~$99.30, session ~−3%); FOMC hike Confirmed (+25 bp to 3.75%–4.00%, 12–0) with SEP funds median 4.1% end-2026 / 2027; FedWatch omitted (no CME primary). Oracle bounce versus Adobe; CPRT/ACVA near the $10.50 cash deal. Thursday claims / housing / Philly levels Unverified — date only. Yields stamped in basis points / percentage points, not a bare Yahoo percent. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
+This Morning (Friday, 18 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: three cards only (China privately asks Iran to curb Houthis after a Saudi appeal; IRGC says it struck a Togo-flagged tanker in Hormuz — struck, not sunk; Kremlin says extra U.S. sanctions, if signed, would make a Ukraine peace deal harder). Thursday MAIN is not refiled. No East-West third-station card. No oil prices on News. Markets / Pre-market stay pending and point to Thursday afternoon as the prior session — no invented Friday cash or futures. Friday six-card AI digest kept. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
