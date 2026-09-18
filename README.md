@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 18 September 2026:
+Latest is Midday MAIN, 18 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-18-1400/**
+
+Prior Morning (18 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-18-0850/**
 
@@ -160,12 +164,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Midday MAIN (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-18-1400/         frozen Friday Midday MAIN snapshot (five News cards; Friday AI digest kept; Markets / Pre-market pending for 15:45)
 briefings/2026-09-18-0850/         frozen Friday Morning snapshot (thin overnight News; Friday AI digest kept)
 briefings/2026-09-17-1545/         frozen Thursday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
 briefings/2026-09-17-1400/         frozen Thursday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:28 tape)
@@ -205,7 +210,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning (Friday, 18 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: three cards only (China privately asks Iran to curb Houthis after a Saudi appeal; IRGC says it struck a Togo-flagged tanker in Hormuz — struck, not sunk; Kremlin says extra U.S. sanctions, if signed, would make a Ukraine peace deal harder). Thursday MAIN is not refiled. No East-West third-station card. No oil prices on News. Markets / Pre-market stay pending and point to Thursday afternoon as the prior session — no invented Friday cash or futures. Friday six-card AI digest kept. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
+This Midday MAIN (Friday, 18 September 2026, 14:00 Jerusalem / 07:00 ET) replaces overnight News with five MAIN cards (Thursday Hormuz commodity count still below the 10-day average as three LNG carriers reappear outside the strait; traders say Saudi Arabia sold about 60 million barrels from Ras Tanura for Sohar ship-to-ship; Reuters on RM48U training missiles and Patriot interceptors; Anthropic says Claude leads 26% of next-model work; Berkshire names Warren Buffett chairman emeritus). Overnight cards (China/Houthis, IRGC tanker claim, Kremlin sanctions) are not refiled. No East-West third-station card. No oil prices on News. Markets / Pre-market stay pending for ~15:45 and point to Thursday afternoon as the prior session — no invented Friday cash or futures. Friday six-card AI digest kept. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
