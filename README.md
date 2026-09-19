@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon, 18 September 2026:
+Latest is Morning, 19 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-19-0850/**
+
+Prior Afternoon (18 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-18-1545/**
 
@@ -168,12 +172,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Afternoon (Hebrew default, English switcher)
+index.html                         latest Morning (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-19-0850/         frozen Saturday Morning snapshot (thin overnight News; Friday AI digest kept)
 briefings/2026-09-18-1545/         frozen Friday Afternoon snapshot (five News cards kept; Markets / Pre-market filled; Friday AI digest kept)
 briefings/2026-09-18-1400/         frozen Friday Midday MAIN snapshot (five News cards; Friday AI digest kept; Markets / Pre-market filled from ~15:25 tape)
 briefings/2026-09-18-0850/         frozen Friday Morning snapshot (thin overnight News; Friday AI digest kept)
@@ -215,7 +220,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Afternoon edition (Friday, 18 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the five midday MAIN News cards and the Friday six-card AI digest. Markets / Pre-market are filled from the Yahoo ~15:25–15:26 (08:25–08:26 ET) tape: mixed futures after strong Thursday cash (ES −0.11% · NQ +0.11%); WTI ~$96.71, deeper under $100; FOMC hike Confirmed; Thursday claims / Philly / housing in hand (claims Likely, wire citing DOL); Friday G.17 date Confirmed, August IP levels not printed; Berkshire IR names Buffett chairman emeritus. 10-year stamped as ~+3.5 bp vs 4.947%, not Yahoo’s bare +0.71%. VIX 15.58 near Thursday close 15.44 — not a crush versus Wednesday. FedWatch omitted. No invented Friday cash. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
+This Morning edition (Saturday, 19 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: four cards only (Saudi capital alerts then all-clear; US–Houthi Oman meeting; Putin on Ukraine / Duma vote; Anduril / Taiwan $14bn delay). Friday MAIN and Friday overnight cards are not refiled. Weekend Markets / Pre-market stay honest-pending and point at Friday afternoon as the prior session — no invented Saturday futures or cash. No oil prices on News. No East-West third-station card. No geopolitics essay on Markets. Friday six-card AI digest kept (Saturday is not a digest day). No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
