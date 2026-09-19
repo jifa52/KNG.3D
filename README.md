@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 19 September 2026:
+Latest is Midday MAIN, 19 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-19-1400/**
+
+Prior Morning (19 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-19-0850/**
 
@@ -172,12 +176,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning (Hebrew default, English switcher)
+index.html                         latest Midday MAIN (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-19-1400/         frozen Saturday Midday MAIN snapshot (seven News cards; Friday AI digest kept)
 briefings/2026-09-19-0850/         frozen Saturday Morning snapshot (thin overnight News; Friday AI digest kept)
 briefings/2026-09-18-1545/         frozen Friday Afternoon snapshot (five News cards kept; Markets / Pre-market filled; Friday AI digest kept)
 briefings/2026-09-18-1400/         frozen Friday Midday MAIN snapshot (five News cards; Friday AI digest kept; Markets / Pre-market filled from ~15:25 tape)
@@ -220,7 +225,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning edition (Saturday, 19 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: four cards only (Saudi capital alerts then all-clear; US–Houthi Oman meeting; Putin on Ukraine / Duma vote; Anduril / Taiwan $14bn delay). Friday MAIN and Friday overnight cards are not refiled. Weekend Markets / Pre-market stay honest-pending and point at Friday afternoon as the prior session — no invented Saturday futures or cash. No oil prices on News. No East-West third-station card. No geopolitics essay on Markets. Friday six-card AI digest kept (Saturday is not a digest day). No trade recommendations. No weather strip. News is the default home lane.
+This Midday MAIN edition (Saturday, 19 September 2026, 14:00 Jerusalem / 07:00 ET) is seven News cards: Trump signs the Russia sanctions bill; a potential $2.7bn Ukraine air-defense sale for congressional review; a US–Denmark–Greenland security deal with a sovereignty fight; Anthropic weighing a new model ahead of IPO; Altman to brief the UN Security Council; an Iranian judiciary execution claim as carried; Paramount–states talks on the Warner Bros. deal. Overnight Saturday cards (Riyadh alerts, Oman meeting, Putin election, Anduril/Taiwan) are not refiled. House 262–159 is not refiled as the lead. Weekend Markets / Pre-market stay honest-pending and point at Friday afternoon as the prior session — no invented Saturday futures or cash. No oil prices on News. No East-West third-station card. No geopolitics essay on Markets. Friday six-card AI digest kept (Saturday is not a digest day). No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
