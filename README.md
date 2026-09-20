@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 20 September 2026:
+Latest is Midday MAIN, 20 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-20-1400/**
+
+Prior Morning (20 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-20-0850/**
 
@@ -180,12 +184,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Morning thin (Hebrew default, English switcher)
+index.html                         latest Midday MAIN (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-20-1400/         frozen Sunday Midday MAIN snapshot (six News cards; Friday AI digest kept)
 briefings/2026-09-20-0850/         frozen Sunday Morning snapshot (thin overnight News; Friday AI digest kept)
 briefings/2026-09-19-1400/         frozen Saturday Midday MAIN snapshot (seven News cards; Friday AI digest kept)
 briefings/2026-09-19-0850/         frozen Saturday Morning snapshot (thin overnight News; Friday AI digest kept)
@@ -230,7 +235,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning edition (Sunday, 20 September 2026, 08:50 Jerusalem / 01:50 ET) is a weekend thin overnight drop: four News cards (Saudi-led coalition intercept of a Houthi ballistic missile aimed at Riyadh plus an Aramco-logo fuel-tank fire near the airport and a US escalation warning; Russia cyber claims on Duma voting systems plus Moldova’s row over 15 Transdniestria polling stations; Poland’s preventive air/air-defence readiness with no airspace violation; Bessent–He–Greer talks at JPMorgan on AI guard rails, tariffs, and critical minerals ahead of Trump–Xi). Saturday MAIN and Saturday overnight bare cards are not refiled. Weekend Markets / Pre-market stay honest-pending and point at Friday afternoon as the prior session — no invented Sunday futures or cash. No oil prices on News. No East-West third-station card. No geopolitics essay on Markets. Friday six-card AI digest kept (Sunday is not a digest day). No trade recommendations. No weather strip. News is the default home lane.
+This Midday MAIN edition (Sunday, 20 September 2026, 14:00 Jerusalem / 07:00 ET) is a weekend news-only drop: six News cards (biggest reported Ukrainian drone attack on Moscow killing two and damaging a refinery as the Duma vote ends; Trump’s “AI Force” / AI czar pledge with no structure or nominee; Politico report that Trump seeks a political-appointee board over NIH grants; N12: two IDF troops lightly wounded by a Hezbollah IED in south Lebanon with IDF strikes in response; UNGA opening with Trump on the rostrum, Xi skipping New York for Trump–Xi, and AI/ME/Ukraine on the agenda; Tim Cook calling Australia’s social-media curbs “world-leading,” Albanese says). Overnight cards (Riyadh ballistic, cyber/Moldova, Poland, Bessent–He schedule) and Saturday MAIN cards are not refiled. Weekend Markets / Pre-market stay honest-pending and point at Friday afternoon as the prior session — no invented Sunday futures or cash. No oil or share prices on News. No East-West third-station card. No geopolitics essay on Markets. Verb lock: refinery damaged not destroyed; drones downed as claim; lightly wounded / struck infrastructure not “destroyed Hezbollah.” Friday six-card AI digest kept (Sunday is not a digest day). No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
