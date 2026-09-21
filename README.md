@@ -194,7 +194,7 @@ assets/i18n.js                     language switch, localStorage, optional #he/#
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-21-0850/         frozen Monday Morning snapshot (thin overnight News; Friday AI digest kept)
+briefings/2026-09-21-0850/         frozen Monday Morning snapshot (thin overnight News; Monday AI digest kept)
 briefings/2026-09-20-1400/         frozen Sunday Midday MAIN snapshot (six News cards; Friday AI digest kept)
 briefings/2026-09-20-0850/         frozen Sunday Morning snapshot (thin overnight News; Friday AI digest kept)
 briefings/2026-09-19-1400/         frozen Saturday Midday MAIN snapshot (seven News cards; Friday AI digest kept)
@@ -240,7 +240,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning edition (Monday, 21 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight news drop: four News cards (Bessent hails “very successful” Sunday talks with China’s He and proposes a US–China AI dialogue plus national-security incident notification ahead of Trump–Xi; Ukraine says a Russian drone attack killed three children and a woman in Kyiv region, with deaths also in Sumy and Kramatorsk; Zelenskiy says he and Trump agree to meet in New York during UN week; SoftBank launches $10 billion dollar notes plus €1 billion euro notes to fund its $10 billion OpenAI third tranche). Bessent is a material upgrade of Sunday’s schedule-only card — not a refile. Kyiv is not a Sunday Moscow-drones refile. Sunday overnight and Sunday MAIN bare cards are not refiled. Weekday Markets / Pre-market stay honest-pending for the ~15:45 reopen and point at Friday afternoon as the prior session — no invented Monday futures or cash. No oil or share prices on News. No East-West third-station card. No geopolitics essay on Markets. Friday six-card AI digest kept. No trade recommendations. No weather strip. News is the default home lane.
+This Morning edition (Monday, 21 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight news drop: four News cards (Bessent hails “very successful” Sunday talks with China’s He and proposes a US–China AI dialogue plus national-security incident notification ahead of Trump–Xi; Ukraine says a Russian drone attack killed three children and a woman in Kyiv region, with deaths also in Sumy and Kramatorsk; Zelenskiy says he and Trump agree to meet in New York during UN week; SoftBank launches $10 billion dollar notes plus €1 billion euro notes to fund its $10 billion OpenAI third tranche). Bessent is a material upgrade of Sunday’s schedule-only card — not a refile. Kyiv is not a Sunday Moscow-drones refile. Sunday overnight and Sunday MAIN bare cards are not refiled. Weekday Markets / Pre-market stay honest-pending for the ~15:45 reopen and point at Friday afternoon as the prior session — no invented Monday futures or cash. No oil or share prices on News. No East-West third-station card. No geopolitics essay on Markets. Monday six-card AI digest kept (landed on main after this branch opened; not reverted to Friday). No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
