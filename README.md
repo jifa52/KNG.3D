@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday MAIN, 20 September 2026:
+Latest is Morning, 21 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-21-0850/**
+
+Prior Midday MAIN (20 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-20-1400/**
 
@@ -184,12 +188,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Midday MAIN (Hebrew default, English switcher)
+index.html                         latest Morning (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-21-0850/         frozen Monday Morning snapshot (thin overnight News; Monday AI digest kept)
 briefings/2026-09-20-1400/         frozen Sunday Midday MAIN snapshot (six News cards; Friday AI digest kept)
 briefings/2026-09-20-0850/         frozen Sunday Morning snapshot (thin overnight News; Friday AI digest kept)
 briefings/2026-09-19-1400/         frozen Saturday Midday MAIN snapshot (seven News cards; Friday AI digest kept)
@@ -235,7 +240,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Midday MAIN edition (Sunday, 20 September 2026, 14:00 Jerusalem / 07:00 ET) is a weekend news-only drop: six News cards (biggest reported Ukrainian drone attack on Moscow kills two and damages an oil refinery as the Duma vote ends; Trump AI Force / AI czar with no structure or nominee; Politico via Reuters on an NIH grant board of political appointees; N12: two IDF troops lightly wounded by a Hezbollah IED in south Lebanon with IDF strikes on observation posts and terror infrastructure; UNGA high-level week with Trump on the rostrum and Xi skipping New York for Trump–Xi; Tim Cook calling Australia’s social-media curbs “world-leading,” per Albanese). Moscow is a material kinetic upgrade (two dead + refinery damaged), not an overnight cyber refile. Overnight thin and Saturday MAIN bare cards are not refiled. Weekend Markets / Pre-market stay honest-pending and point at Friday afternoon as the prior session — no invented Sunday futures or cash. No oil or share prices on News. No East-West third-station card. No geopolitics essay on Markets. Friday six-card AI digest kept (Sunday is not a digest day). No trade recommendations. No weather strip. News is the default home lane.
+This Morning edition (Monday, 21 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight news drop: four News cards (Bessent hails “very successful” Sunday talks with China’s He and proposes a US–China AI dialogue plus national-security incident notification ahead of Trump–Xi; Ukraine says a Russian drone attack killed three children and a woman in Kyiv region, with deaths also in Sumy and Kramatorsk; Zelenskiy says he and Trump agree to meet in New York during UN week; SoftBank launches $10 billion dollar notes plus €1 billion euro notes to fund its $10 billion OpenAI third tranche). Bessent is a material upgrade of Sunday’s schedule-only card — not a refile. Kyiv is not a Sunday Moscow-drones refile. Sunday overnight and Sunday MAIN bare cards are not refiled. Weekday Markets / Pre-market stay honest-pending for the ~15:45 reopen and point at Friday afternoon as the prior session — no invented Monday futures or cash. No oil or share prices on News. No East-West third-station card. No geopolitics essay on Markets. Monday six-card AI digest kept (landed on main after this branch opened; not reverted to Friday). No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
