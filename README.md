@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday MAIN, 21 September 2026:
+Latest is Afternoon Markets, 21 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-21-1545/**
+
+Prior Midday MAIN (21 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-21-1400/**
 
@@ -192,13 +196,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Midday MAIN (Hebrew default, English switcher)
+index.html                         latest Afternoon Markets refresh (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-21-1400/         frozen Monday Midday MAIN snapshot (seven News cards; Monday AI digest kept)
+briefings/2026-09-21-1545/         frozen Monday Afternoon snapshot (seven News cards kept; Markets / Pre-market filled from ~15:38 tape; Monday AI digest kept)
+briefings/2026-09-21-1400/         frozen Monday Midday MAIN snapshot (seven News cards; Monday AI digest kept; Markets / Pre-market filled from ~15:38 tape)
 briefings/2026-09-21-0850/         frozen Monday Morning snapshot (thin overnight News; Monday AI digest kept)
 briefings/2026-09-20-1400/         frozen Sunday Midday MAIN snapshot (six News cards; Friday AI digest kept)
 briefings/2026-09-20-0850/         frozen Sunday Morning snapshot (thin overnight News; Friday AI digest kept)
@@ -245,7 +250,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Midday MAIN edition (Monday, 21 September 2026, 14:00 Jerusalem / 07:00 ET) replaces overnight thin News with seven cards: United Russia wins the wartime Duma vote at 57.83% / 355 seats on near-complete CEC results; Trump’s UNGA slate is pinned (Monday Gracie Mansion with Mamdani; Tuesday address plus expected Zelenskiy sit-down, first Burnham meeting, and Takaichi; Rodriguez at GCC); Trump warns Iran’s leaders to deal, “rot,” or be wiped out and is open to Pezeshkian while the Iranian military says a strike is being prepared; N12: IDF significantly reinforces Gaza-border forces for Yom Kippur; AFP: an Israeli settler is killed near Neveh Tzuf on Yom Kippur eve, with a Jenin ramming attempt in the same cycle; Taiwan breaks ground on a Kaohsiung advanced-packaging park anchored by TSMC; CNN, MS NOW and Politico file a First Amendment lawsuit after a White House grounds ban. The Duma card is a material upgrade vs Sunday election-final-day / overnight HOLD on seat tallies. The UNGA-slate card is a material upgrade vs overnight unpinned Zelenskiy meet. Overnight thin cards (Bessent–He outcomes, Kyiv drones, unpinned Zelenskiy meet, SoftBank bonds) and Sunday MAIN are not refiled. Weekday Markets / Pre-market stay honest-pending for the ~15:45 desk and point at Friday afternoon as the prior session — no invented Monday futures or cash. No oil or share prices on News. No East-West third-station card. No geopolitics essay on Markets. Monday six-card AI digest kept. No trade recommendations. No weather strip. News is the default home lane.
+This Afternoon Markets edition (Monday, 21 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the midday MAIN News cards and Monday AI digest, and fills Markets / Pre-market from the ~15:38 (08:38 ET) Yahoo tape: broad-green index futures vs Friday settles (NQ +2.09% / ES +1.39%); WTI ~$93.57, deeper under $100 (continuous/roll flagged; levels only); 10-year ~4.959% (about −3.9 bp vs Friday 4.998%); Confirmed FOMC hike (+25 bp to 3.75%–4.00%, 12–0; SEP medians 4.1 / 4.1 / 3.9 / 3.6 / 3.2) and Friday G.17 (total IP unchanged; manufacturing −0.3%; utilization 76.3%). AI / semis lead Monday pre (Likely 1-minute bars); ACN pre is soft (~−3.5%) despite Friday’s Confirmed Accenture–Anthropic partnership. Costco IR call Thursday 24 Sep Confirmed. News cards are not rewritten. No invented Monday cash. FedWatch omitted (no dated CME %). No oil or share prices on News. No East-West third-station card. No geopolitics essay on Markets. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
