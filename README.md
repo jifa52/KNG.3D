@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning, 22 September 2026:
+Latest is Midday MAIN, 22 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-22-1400/**
+
+Prior Morning (22 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-22-0850/**
 
