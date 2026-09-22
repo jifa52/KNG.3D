@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday MAIN, 22 September 2026:
+Latest is Afternoon Markets / Pre-market, 22 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-22-1545/**
+
+Prior Midday MAIN (22 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-22-1400/**
 
