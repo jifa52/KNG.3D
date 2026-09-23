@@ -218,7 +218,7 @@ assets/i18n.js                     language switch, localStorage, optional #he/#
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-23-0850/         frozen Wednesday Morning snapshot (thin overnight News; Tuesday afternoon Markets / Pre-market kept as prior session; Monday AI digest kept)
+briefings/2026-09-23-0850/         frozen Wednesday Morning snapshot (thin overnight News; Tuesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept)
 briefings/2026-09-22-1545/         frozen Tuesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:37 tape; Monday AI digest kept)
 briefings/2026-09-22-1400/         frozen Tuesday Midday MAIN snapshot (six News cards; Monday AI digest kept; Markets / Pre-market filled from ~15:37 tape)
 briefings/2026-09-22-0850/         frozen Tuesday Morning snapshot (thin overnight News; Monday afternoon tape kept as prior session; Monday AI digest kept)
@@ -270,7 +270,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning edition (Wednesday, 23 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: four cards only (US–Denmark–Greenland security deal signed, Trump UNGA address delivered, Zelenskiy–Trump sit-down closed, US–Iran UN sideline talks). Tuesday overnight cards and Tuesday MAIN cards are not bare-refiled. Markets and Pre-market stay the Tuesday afternoon tape as the prior session — no invented Wednesday futures or cash. No oil, index, or share prices on News, and no Hormuz vessel-traffic counts. No East-West third-station card. Monday AI digest kept (six cards) until the Wednesday AI desk. No trade recommendations. No weather strip. News is the default home lane.
+This Morning edition (Wednesday, 23 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: four cards only (US–Denmark–Greenland security deal signed, Trump UNGA address delivered, Zelenskiy–Trump sit-down closed, US–Iran UN sideline talks). Tuesday overnight cards and Tuesday MAIN cards are not bare-refiled. Markets and Pre-market stay the Tuesday afternoon tape as the prior session — no invented Wednesday futures or cash. No oil, index, or share prices on News, and no Hormuz vessel-traffic counts. No East-West third-station card. Wednesday AI digest kept (six cards). No invented AI cards. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
