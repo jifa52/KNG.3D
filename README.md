@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday MAIN, 23 September 2026:
+Latest is Afternoon Markets / Pre-market, 23 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-23-1545/**
+
+Prior Midday MAIN (23 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-23-1400/**
 
@@ -216,13 +220,14 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Midday MAIN refresh (Hebrew default, English switcher)
+index.html                         latest Afternoon Markets / Pre-market refresh (Hebrew default, English switcher)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-23-1400/         frozen Wednesday Midday MAIN snapshot (six News cards; Tuesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept)
+briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
+briefings/2026-09-23-1400/         frozen Wednesday Midday MAIN snapshot (six News cards; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
 briefings/2026-09-23-0850/         frozen Wednesday Morning snapshot (thin overnight News; Tuesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept)
 briefings/2026-09-22-1545/         frozen Tuesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:37 tape; Monday AI digest kept)
 briefings/2026-09-22-1400/         frozen Tuesday Midday MAIN snapshot (six News cards; Monday AI digest kept; Markets / Pre-market filled from ~15:37 tape)
@@ -275,7 +280,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Midday MAIN edition (Wednesday, 23 September 2026, 14:00 Jerusalem / 07:00 ET) replaces News with six cards (Kyiv jet-drone strike, Odesa Antigua-flag cargo captain, Khan Younis airstrike, SoftBank OpenAI demand densify, DOJ White House access defense, GM’s Mary Barra expected at the Trump–Xi dinner). Wednesday morning thin cards and Tuesday MAIN cards are not bare-refiled. Markets and Pre-market stay the Tuesday afternoon tape as the prior session — no invented Wednesday futures or cash. No oil, index, or share prices on News, and no Hormuz vessel-traffic counts. No East-West third-station card. Wednesday AI digest kept (six cards). No invented AI cards. No trade recommendations. No weather strip. News is the default home lane.
+This Afternoon Markets / Pre-market edition (Wednesday, 23 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the midday MAIN News cards and the Wednesday AI digest, and replaces Markets and Pre-market from the ~15:45 (08:45 ET) tape. Futures are soft versus Tuesday settles (ES −0.13%, NQ −0.24%, YM −0.32%, RTY −0.50%). Tuesday cash was split (S&P flat, Dow −0.36%, Nasdaq +0.45%). The 10-year is 4.988% (about +2.0 bp versus Tuesday’s 4.968% close). WTI continuous is $90.96, with the daily-bar roll flagged. Flash US PMI (~16:45 / 09:45 ET) and Governor Barr (17:05 / 10:05 ET) are Confirmed clocks. Costco’s IR call remains Thursday. FedWatch probabilities are omitted. No oil, index, or share prices on News, and no Hormuz vessel-traffic counts. No East-West third-station card. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
