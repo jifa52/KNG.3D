@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon Markets / Pre-market, 22 September 2026:
+Latest is Morning, 23 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-23-0850/**
+
+Prior Afternoon Markets / Pre-market (22 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-22-1545/**
 
@@ -214,6 +218,9 @@ assets/i18n.js                     language switch, localStorage, optional #he/#
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-23-0850/         frozen Wednesday Morning snapshot (thin overnight News; Tuesday afternoon Markets / Pre-market kept as prior session; Monday AI digest kept)
+briefings/2026-09-22-1545/         frozen Tuesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:37 tape; Monday AI digest kept)
+briefings/2026-09-22-1400/         frozen Tuesday Midday MAIN snapshot (six News cards; Monday AI digest kept; Markets / Pre-market filled from ~15:37 tape)
 briefings/2026-09-22-0850/         frozen Tuesday Morning snapshot (thin overnight News; Monday afternoon tape kept as prior session; Monday AI digest kept)
 briefings/2026-09-21-1545/         frozen Monday Afternoon snapshot (seven News cards kept; Markets / Pre-market filled from ~15:38 tape; Monday AI digest kept)
 briefings/2026-09-21-1400/         frozen Monday Midday MAIN snapshot (seven News cards; Monday AI digest kept; Markets / Pre-market filled from ~15:38 tape)
@@ -263,7 +270,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Morning edition (Tuesday, 22 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: four cards only (Greenland bases to be signed, Hormuz inbound strike, Monday multi-region Ukraine deaths, Gaza Yellow Line IED). Monday overnight cards and Monday MAIN cards are not refiled. Markets and Pre-market stay pending for today’s ~15:45 desk; the Monday ~15:38 tape remains on the Monday afternoon edition as the prior session. No invented Tuesday futures or cash. No oil or share prices on News. No East-West third-station card. Monday AI digest kept (six cards) until Wednesday. No trade recommendations. No weather strip. News is the default home lane.
+This Morning edition (Wednesday, 23 September 2026, 08:50 Jerusalem / 01:50 ET) is a thin overnight News drop: four cards only (US–Denmark–Greenland security deal signed, Trump UNGA address delivered, Zelenskiy–Trump sit-down closed, US–Iran UN sideline talks). Tuesday overnight cards and Tuesday MAIN cards are not bare-refiled. Markets and Pre-market stay the Tuesday afternoon tape as the prior session — no invented Wednesday futures or cash. No oil, index, or share prices on News, and no Hormuz vessel-traffic counts. No East-West third-station card. Monday AI digest kept (six cards) until the Wednesday AI desk. No trade recommendations. No weather strip. News is the default home lane.
 
 ## Run locally
 
