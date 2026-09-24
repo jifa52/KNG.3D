@@ -12,6 +12,17 @@ The **Pre-market** tab is gone. Calendar rows and any tape notes that were only 
 
 Tape is data. There are no trade recommendations.
 
+## Reader layout
+
+The live homepage is still the previous card layout, so a Markets content publish can land on it without a template change mid-slot. The reader layout for the next edition is separate:
+
+- Preview (real 24 Sep 2026 copy, labeled PREVIEW, not an archive edition): `preview/ux-2026-09-24/`
+- Empty structure: `templates/edition.html`
+- Rules for the next publish: `templates/PUBLISH.md`
+- Styles and type: `assets/paper.css` and `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
+
+News is one lead, about two supporting stories, then a quieter list. One language is on screen. Markets is a session line, a snapshot table, a short story, up to three companies, and the next 48 hours. Do not add the preview to the archive.
+
 ## Language
 
 First visit is Hebrew. A switcher (`עברית | English`) sits above the section tabs (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
@@ -231,8 +242,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Thursday Midday MAIN News (Hebrew default, English switcher; News / Markets / AI; Wednesday tape kept on Markets as pre-market)
-assets/brief.css                   phone-first + RTL
+index.html                         latest Thursday Midday MAIN News (previous card layout; left in place so a Markets publish can still land)
+assets/brief.css                   phone-first + RTL, used by the live edition and the archive
+assets/paper.css                   reader layout (preview and the next edition)
+assets/fonts/                      Frank Ruhl Libre + Heebo subsets (SIL OFL)
+preview/ux-2026-09-24/             labeled reader preview for 24 Sep 2026 — not an archive edition
+templates/edition.html             empty publish structure
+templates/PUBLISH.md               how the next edition is rendered
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets / AI switch (file://-safe; #premarket falls through to Markets when that panel is absent)
 assets/favicon.svg

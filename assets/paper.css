@@ -1,0 +1,753 @@
+/* Brief paper — reader layout (UX spec v1.1).
+   Loaded only by the preview and the publish template.
+   Historical editions keep assets/brief.css.
+
+   Type: Frank Ruhl Libre (headlines) + Heebo (body), SIL OFL.
+   Files: assets/fonts/. If a webfont fails, the stack below is the fallback.
+   Body starts at 19px. */
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/FrankRuhlLibre-500-hebrew.woff2") format("woff2");
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/FrankRuhlLibre-500-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/FrankRuhlLibre-700-hebrew.woff2") format("woff2");
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/FrankRuhlLibre-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Heebo-400-hebrew.woff2") format("woff2");
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Heebo-400-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/Heebo-500-hebrew.woff2") format("woff2");
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/Heebo-500-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/Heebo-600-hebrew.woff2") format("woff2");
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/Heebo-600-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --bg: #141210;
+  --bg-elev: #1c1916;
+  --bg-row: #221f1b;
+  --line: rgba(244, 236, 220, 0.14);
+  --line-strong: rgba(244, 236, 220, 0.38);
+  --text: #f6f1e8;
+  --muted: #cfc6b8;
+  --faint: #b3a898;
+  --rule: #d7c4a2;
+  --link: #f0e2c8;
+  --up: #c6e6d4;
+  --down: #f3c9c2;
+  --flat: #ddd4c6;
+  --focus: #f3e2bc;
+  --max: 44rem;
+  --wide: 52rem;
+  --serif: "Frank Ruhl Libre", "Noto Serif Hebrew", "Times New Roman", Times, serif;
+  --sans: "Heebo", "Noto Sans Hebrew", "Arial Hebrew", Arial, sans-serif;
+  --pad: 1.15rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 19px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.55;
+  background: var(--bg);
+  min-height: 100dvh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: #fff;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  inset-inline-start: 0.75rem;
+  top: -4rem;
+  background: var(--focus);
+  color: #1a140c;
+  padding: 0.45rem 0.75rem;
+  z-index: 30;
+  font-weight: 600;
+}
+
+.skip:focus {
+  top: 0.75rem;
+}
+
+bdi,
+.num {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.app {
+  width: min(var(--wide), calc(100% - 1.5rem));
+  margin: 0 auto;
+  padding: 0 0 3rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0 0.65rem;
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.nav-mark {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--text);
+}
+
+.preview-flag {
+  margin: 0.2rem 0 0;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--line-strong);
+  background: #2a2218;
+  color: var(--rule);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+html[lang="he"] .preview-flag {
+  letter-spacing: 0.01em;
+}
+
+.mast {
+  padding: 1.1rem 0 0.85rem;
+  border-bottom: 1px solid var(--text);
+  box-shadow: 0 4px 0 -3px var(--rule);
+}
+
+.mast-kicker {
+  margin: 0 0 0.35rem;
+  color: var(--rule);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+html[lang="he"] .mast-kicker {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.92rem;
+}
+
+.mast-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.mast-date {
+  margin: 0.45rem 0 0;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.mast-status {
+  margin: 0.85rem 0 0;
+  display: grid;
+  gap: 0.35rem 1.25rem;
+}
+
+.mast-status div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.mast-status dt {
+  color: var(--faint);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+html[lang="he"] .mast-status dt {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+.mast-status dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.switch-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.lang-switch,
+.lane-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.lang-btn,
+.lane-btn {
+  appearance: none;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: 0.95rem;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+
+.lang-btn[aria-pressed="true"],
+.lane-btn[aria-selected="true"] {
+  color: var(--text);
+  border-color: var(--line-strong);
+  background: var(--bg-elev);
+}
+
+.lang-sep {
+  color: var(--faint);
+}
+
+.lane {
+  padding-top: 1.35rem;
+}
+
+.lane[hidden] {
+  display: none;
+}
+
+.section-label {
+  margin: 0 0 0.8rem;
+  color: var(--rule);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+html[lang="he"] .section-label {
+  letter-spacing: 0.03em;
+  text-transform: none;
+  font-size: 0.92rem;
+}
+
+.story {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.story h2,
+.story h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.45rem;
+  line-height: 1.2;
+}
+
+.story p {
+  margin: 0;
+}
+
+.story-body {
+  max-width: var(--max);
+  color: var(--text);
+}
+
+.story-sources {
+  margin-top: 0.65rem !important;
+  color: var(--faint);
+  font-size: 0.82rem;
+  max-width: var(--max);
+}
+
+.story-lead {
+  padding-bottom: 1.35rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.story-lead h2 {
+  font-size: clamp(1.85rem, 4.6vw, 2.55rem);
+  line-height: 1.12;
+  max-width: 36rem;
+}
+
+.story-lead .story-body {
+  font-size: 1.05rem;
+  line-height: 1.58;
+}
+
+.support-grid {
+  display: grid;
+  gap: 1.35rem;
+  margin-bottom: 1.4rem;
+}
+
+.story-support {
+  padding-bottom: 0.2rem;
+}
+
+.story-support h3 {
+  font-size: clamp(1.28rem, 2.5vw, 1.55rem);
+}
+
+.brief-list {
+  border-top: 1px solid var(--line);
+}
+
+.story-brief {
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.story-brief h3 {
+  font-size: 1.18rem;
+  font-weight: 500;
+}
+
+.story-brief .story-body,
+.story-support .story-body {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.more {
+  margin-top: 0.7rem;
+  max-width: var(--max);
+}
+
+.more summary {
+  cursor: pointer;
+  color: var(--faint);
+  font-size: 0.86rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.more p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.block {
+  margin: 0 0 1.6rem;
+}
+
+.block h2 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0 0 0.55rem;
+}
+
+.lede {
+  margin: 0 0 0.75rem;
+  max-width: var(--max);
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.status-grid {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.status-grid div {
+  padding: 0.75rem 0.85rem;
+  background: var(--bg-elev);
+  border-inline-start: 3px solid var(--rule);
+}
+
+.status-grid dt {
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.status-grid dd {
+  margin: 0.15rem 0 0;
+}
+
+.snap {
+  width: 100%;
+}
+
+.snap table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.snap caption {
+  text-align: start;
+  caption-side: top;
+  padding: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.snap th {
+  text-align: start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 0.35rem 0.45rem 0.5rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+html[lang="he"] .snap th {
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+.snap td {
+  padding: 0.62rem 0.45rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  font-size: 0.95rem;
+}
+
+.snap td.val {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: start;
+  font-variant-numeric: tabular-nums;
+}
+
+.snap td.chg,
+.snap td.when {
+  font-variant-numeric: tabular-nums;
+}
+
+.snap .group th {
+  padding-top: 1rem;
+  color: var(--rule);
+  font-family: var(--serif);
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 700;
+  border-bottom-color: var(--line);
+}
+
+.snap tr.missing td {
+  color: var(--faint);
+}
+
+.chg-down {
+  color: var(--down);
+}
+
+.chg-up {
+  color: var(--up);
+}
+
+.chg-flat {
+  color: var(--flat);
+}
+
+.note {
+  margin: 0.75rem 0 0;
+  max-width: var(--max);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.market-story {
+  max-width: var(--max);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.companies,
+.agenda {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.companies li,
+.agenda li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.companies h3,
+.agenda h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.companies p,
+.agenda p {
+  margin: 0;
+  color: var(--muted);
+  max-width: var(--max);
+}
+
+.foot {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-strong);
+  color: var(--faint);
+  font-size: 0.82rem;
+}
+
+.foot p {
+  margin: 0.4rem 0;
+  max-width: 65rem;
+}
+
+.permalink {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html[lang="he"] [data-lang="en"],
+html[lang="en"] [data-lang="he"] {
+  display: none !important;
+}
+
+.snap-key {
+  display: block;
+  color: var(--faint);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.12rem;
+}
+
+html[lang="he"] .snap-key {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 759px) {
+  .snap thead {
+    display: none;
+  }
+
+  .snap tr {
+    display: block;
+    padding: 0.35rem 0 0.55rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .snap tr.group {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .snap td {
+    display: block;
+    border: 0;
+    padding: 0.28rem 0;
+  }
+
+  .snap .group th {
+    display: block;
+    padding: 0.9rem 0 0.2rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .snap-key {
+    display: none;
+  }
+
+  .mast-status {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .status-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .support-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
