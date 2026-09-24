@@ -2,11 +2,11 @@
 
 This repository is **Brief** — a public, phone-first news deck. Hebrew is the default language (`dir=rtl`). English is an optional switcher on the **same URL**. It is **not** a 3D printer or filament tracker.
 
-The live edition is one scrolling page. News, then Markets, then AI. Hebrew is the default; English is the switcher.
+The live edition is one scrolling page. News, then Markets, then AI. Hebrew is the default; English is the switcher. The nav is חדשות · שווקים · AI · ארכיון.
 
-- **News / חדשות** — one lead, two supports, then a quieter band
-- **Markets / שווקים** — the business section after News: an open table, a short story, companies, and the next 48 hours
-- **AI** — the AI digest on its cadence
+- **News / חדשות** — one lead, two supports, then a quieter band. A photograph only when it is licensed and credited. Otherwise the story is text-first.
+- **Markets / שווקים** — the business section after News, in six parts: session, six primary quotes, a short story, secondary figures, a cash close when one was stamped, then companies and the next 48 hours. VIX is the index. USD/ILS is the FX spot rate.
+- **AI** — the digest on the same newspaper sheet, one lead then a list
 
 Older permalinks from before this cutover are still the card deck and may show a Pre-market tab. On the current edition, `#premarket` opens Markets.
 
@@ -14,15 +14,17 @@ Tape is data. There are no trade recommendations.
 
 ## Reader layout
 
-The live homepage is the Modern editorial edition (`assets/edition.css`): a white page, a light masthead, crimson only on kickers, one rule, and a small badge when a page needs one. News is an asymmetric front. Markets follows News. One language is on screen.
+The live homepage is the Modern editorial polish (`assets/edition.css` and `assets/polish.css`): a white page, a light masthead, crimson on kickers, the nav rule, and a small badge. News is an asymmetric front. Markets follows News as quote boards, not a table. One language is on screen.
 
 - Live: `index.html` and `briefings/2026-09-24-1545/`
-- Labeled study (PREVIEW, Wednesday tape, not an archive edition): `preview/ux-2026-09-24/`
+- Approved study (kept): `preview/ux-2026-09-24-polish/`
+- Earlier Modern study (PREVIEW, Wednesday tape, not an archive edition): `preview/ux-2026-09-24/`
 - Empty structure: `templates/edition.html`
+- Image-credit pattern: `templates/IMAGE-CREDITS.md`
 - Rules: `templates/PUBLISH.md`
 - Type: `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
 
-Earlier permalinks and the archive index stay on `assets/brief.css`. Do not add the preview to the archive.
+The archive index uses the same light sheet. Earlier permalinks stay on `assets/brief.css`. Do not add the preview to the archive.
 
 ## Language
 
@@ -247,18 +249,22 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         live Modern editorial edition (assets/edition.css): Thursday News front, Thu ~15:45 pre-market tape, Wednesday AI
-assets/brief.css                   card sheet for earlier permalinks, the archive index, and 404
-assets/edition.css                 Modern editorial layout (live homepage, 15:45 permalink, preview, template)
+index.html                         live Modern editorial polish: Thursday News front, Thu ~15:45 pre-open snapshot, Wednesday AI
+assets/brief.css                   card sheet for earlier permalinks and 404
+assets/edition.css                 Modern editorial base (homepage, permalink, archive index, template)
+assets/polish.css                  approved polish: nav, photos, markets boards, newspaper AI and archive
+assets/images/                     licensed photographs for the current edition
 assets/fonts/                      Frank Ruhl Libre + Heebo subsets (SIL OFL)
-preview/ux-2026-09-24/             labeled reader preview for 24 Sep 2026 — not an archive edition
-templates/edition.html             empty publish structure
+preview/ux-2026-09-24-polish/      approved polish study — kept, not an archive edition
+preview/ux-2026-09-24/             earlier Modern study — not an archive edition
+templates/edition.html             empty publish structure (overnight, main news, markets, AI)
+templates/IMAGE-CREDITS.md         credit pattern copied into an edition that uses a photograph
 templates/PUBLISH.md               how the next edition is rendered
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    card-deck lane switch for earlier permalinks; not loaded on the editorial page
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-24-1545/         Thursday afternoon permalink on the editorial sheet (same edition as the homepage; midday News, Thu ~15:45 tape, Wednesday AI)
+briefings/2026-09-24-1545/         Thursday afternoon permalink on the polish sheet (same edition as the homepage; midday News, Thu ~15:45 snapshot, Wednesday AI, IMAGE-CREDITS.md)
 briefings/2026-09-24-1400/         frozen Thursday Midday MAIN snapshot (six News cards and an opening summary; Markets refreshed in place to the Thursday ~15:45 pre-market tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)

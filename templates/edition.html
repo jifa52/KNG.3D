@@ -13,20 +13,33 @@
   <title>תבנית · Brief</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/edition.css">
+  <link rel="stylesheet" href="../assets/polish.css">
 </head>
 <!--
   PUBLISH TEMPLATE. Not an edition. Do not ship this file as the homepage.
-  Modern editorial (UX spec v1.2). White page, crimson used sparingly,
-  News first, Markets after News.
+  Modern editorial polish (the sheet approved 24 Sep 2026). White page,
+  crimson used sparingly, News first, Markets A–F after News, newspaper AI.
 
-  The 24 Sep 2026 afternoon edition already cut index.html over.
-  See templates/PUBLISH.md. Copy this structure for the next edition.
-  Fill {{tokens}} from the approved pack.
-  Delete this comment block. Do not leave tokens in a published edition.
-  Do not invent a number when the pack has no stamp — use the missing-row pattern.
+  Copy this file to index.html and to briefings/YYYY-MM-DD-HHMM/index.html.
+  Both stylesheets stay. Fill {{tokens}} from the approved pack. Delete this
+  comment. Do not leave tokens in a published edition.
+
+  Cadence — same sheet, different blocks:
+  - Overnight thin: one lead, fewer supports, no quiet band if the pack is short.
+    Markets is the previous stamp, labeled as carried, or omitted if the pack has none.
+  - Main news: full front (lead, two supports, quiet band). Keep the prior Markets
+    stamp if this drop does not replace it. Do not call an older stamp today.
+  - Markets: refresh A–F from the new tape. Keep the news front unless the pack replaces it.
+  - AI digest: refresh .ai-carry, .ai-lead, and .ai-list. Text-first unless a licensed image exists.
+
+  Images: no gray placeholder. A figure exists only with a license, a credit in the
+  caption, alt text, and a block in IMAGE-CREDITS.md (copy templates/IMAGE-CREDITS.md
+  into the edition folder). There is no image-fetch script. Do not invent a photograph.
+  Do not invent a market number. A missing stamp uses the missing-row pattern.
   Strip internal notes, hard gates, verb locks, card IDs, and confidence essays.
-  Keep material caveats inside the paragraph.
-  Delete the image placeholder unless a licensed, credited picture exists.
+  Keep a material caveat inside the paragraph.
+  VIX is the index, not futures. USD/ILS is FX spot, not a future.
+  Do not load lanes.js or brief.css. Do not bring paper.css back.
 -->
 <body>
   <a class="skip" href="#main"><span data-lang="he">דלג לתידרוך</span><span data-lang="en">Skip to briefing</span></a>
@@ -38,7 +51,7 @@
       </div>
       <div class="mast-meta">
         <p><strong><span data-lang="he">{{תאריך_עברית}}</span><span data-lang="en">{{date_english}}</span></strong></p>
-        <p><span data-lang="he">{{שעת_מהדורה}}</span><span data-lang="en">{{edition_time}}</span></p>
+        <p><span data-lang="he">שעת המהדורה <bdi class="num">{{HH:MM}}</bdi> בישראל (<bdi class="num">{{HH:MM}} ET</bdi>)</span><span data-lang="en">Edition time <bdi class="num">{{HH:MM}}</bdi> Israel (<bdi class="num">{{HH:MM}} ET</bdi>)</span></p>
         <div class="lang" role="group" aria-labelledby="lang-label">
           <span id="lang-label" class="lang-label">Language</span>
           <button type="button" class="lang-btn" data-lang-set="he" lang="he" aria-pressed="true">עברית</button>
@@ -47,16 +60,36 @@
         </div>
       </div>
     </header>
-    <p class="quotes"><span data-lang="he">{{חותמת_ציטוט_ומצב}}</span><span data-lang="en">{{quote_stamp_and_status}}</span></p>
+    <nav class="edition-nav" aria-label="Sections">
+      <a href="#news"><span data-lang="he">חדשות</span><span data-lang="en">News</span></a>
+      <a href="#markets"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></a>
+      <a href="#ai">AI</a>
+      <a href="../archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
+    </nav>
+    <p class="quotes"><span data-lang="he">{{חדשות: חותמת}}. {{שווקים: חותמת, לא ציטוט חי}}</span><span data-lang="en">{{news stamp}}. {{markets stamp, not a live quote}}</span></p>
 
     <main id="main">
       <section class="section" id="news" aria-labelledby="news-kicker">
-        <h2 class="kicker" id="news-kicker"><span data-lang="he">חדשות</span><span data-lang="en">News</span></h2>
+        <header class="section-head">
+          <h2 class="kicker" id="news-kicker"><span data-lang="he">חדשות</span><span data-lang="en">News</span></h2>
+          <p class="section-when"><span data-lang="he">{{מתי עודכן}}</span><span data-lang="en">{{when it was updated}}</span></p>
+        </header>
         <div class="front">
           <article class="lead">
-            <div class="img-ph"><span data-lang="he">תמונה · אין צילום מורשה במהדורה</span><span data-lang="en">Photograph · no licensed image in this edition</span></div>
             <h2 data-lang="he">{{כותרת_מובילה}}</h2>
             <h2 data-lang="en">{{lead_headline}}</h2>
+            <!--
+              Licensed photo only. Paste this figure under the headline when a credit exists.
+              Otherwise leave the lead text-first. Do not insert a gray placeholder.
+              <figure class="photo">
+                <img src="../assets/images/{{file}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" fetchpriority="high" decoding="async">
+                <figcaption>
+                  <span data-lang="he">{{קרדיט, רישיון, ולמה זה לא בהכרח צילום האירוע}}</span>
+                  <span data-lang="en">{{credit, license, and why this may not be the event itself}}</span>
+                </figcaption>
+              </figure>
+              A support portrait, when licensed, uses figure.photo.photo--portrait inside that article.
+            -->
             <p class="body" data-lang="he">{{פסקה_אחת_כולל_סייג_אם_הוא_משנה_משמעות}}</p>
             <p class="body" data-lang="en">{{one_paragraph_including_any_caveat_that_changes_the_meaning}}</p>
             <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
@@ -94,69 +127,139 @@
       </section>
 
       <section class="section" id="markets" aria-labelledby="markets-kicker">
-        <h2 class="kicker" id="markets-kicker"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></h2>
-        <p class="session" data-lang="he">{{שעת_מהדורה}}. {{מצב_המסחר}}. השורות למטה אינן ציטוט אחר מזה שכתוב בחותמת.</p>
-        <p class="session" data-lang="en">{{edition_clock}}. {{pre-market | market open | latest close | market closed}}. The rows below are not a different tape from the stamp.</p>
-        <div class="mkt-layout">
-          <div class="mkt-wrap">
-            <table class="mkt-table">
-              <caption>{{quote_stamp_carried_or_current_never_call_a_delay_live}}</caption>
-              <thead>
-                <tr>
-                  <th scope="col"><span data-lang="he">סימול</span><span data-lang="en">Symbol</span></th>
-                  <th scope="col"><span data-lang="he">מכשיר</span><span data-lang="en">Instrument</span></th>
-                  <th scope="col"><span data-lang="he">שער</span><span data-lang="en">Last</span></th>
-                  <th scope="col"><span data-lang="he">שינוי</span><span data-lang="en">Change</span></th>
-                  <th scope="col"><span data-lang="he">בסיס · מצב</span><span data-lang="en">Basis · status</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="group"><th colspan="5" scope="colgroup"><span data-lang="he">ראשי</span><span data-lang="en">Primary</span></th></tr>
-                <tr>
-                  <td class="sym"><span class="mkt-key" data-lang="he">סימול</span><span class="mkt-key" data-lang="en">Symbol</span>{{symbol}}</td>
-                  <td><span class="mkt-key" data-lang="he">מכשיר</span><span class="mkt-key" data-lang="en">Instrument</span>{{exact_instrument_name}}</td>
-                  <td class="num"><span class="mkt-key" data-lang="he">שער</span><span class="mkt-key" data-lang="en">Last</span><bdi class="num">{{last}}</bdi></td>
-                  <td class="num"><span class="mkt-key" data-lang="he">שינוי</span><span class="mkt-key" data-lang="en">Change</span><bdi class="num">{{one_change}}</bdi></td>
-                  <td class="basis"><span class="mkt-key" data-lang="he">בסיס · מצב</span><span class="mkt-key" data-lang="en">Basis · status</span>{{basis_stamp_and_status}} <a href="{{url}}">{{source}}</a></td>
-                </tr>
-                <tr class="missing">
-                  <td class="sym"><span class="mkt-key" data-lang="he">סימול</span><span class="mkt-key" data-lang="en">Symbol</span>{{symbol}}</td>
-                  <td><span class="mkt-key" data-lang="he">מכשיר</span><span class="mkt-key" data-lang="en">Instrument</span>{{name_with_no_stamp}}</td>
-                  <td class="num"><span class="mkt-key" data-lang="he">שער</span><span class="mkt-key" data-lang="en">Last</span>—</td>
-                  <td class="num"><span class="mkt-key" data-lang="he">שינוי</span><span class="mkt-key" data-lang="en">Change</span>—</td>
-                  <td class="basis"><span class="mkt-key" data-lang="he">בסיס · מצב</span><span class="mkt-key" data-lang="en">Basis · status</span><span data-lang="he">אין חותמת בחבילה הזו</span><span data-lang="en">Not in this tape</span></td>
-                </tr>
-                <tr class="group"><th colspan="5" scope="colgroup"><span data-lang="he">משני</span><span data-lang="en">Secondary</span></th></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="pull" data-lang="he">{{40_עד_60_מילים}}</p>
-          <p class="pull" data-lang="en">{{forty_to_sixty_words}}</p>
+        <header class="section-head">
+          <h2 class="kicker" id="markets-kicker"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></h2>
+          <p class="section-when"><span data-lang="he">{{תמונת מצב · תאריך · שעה}}</span><span data-lang="en">{{snapshot · date · time}}</span></p>
+        </header>
+
+        <!-- A. Session. Name pre-market, open, latest close, or closed. Print the real stamp. -->
+        <div class="mkt-session">
+          <p><span data-lang="he">{{יום ושעת המהדורה}}</span><span data-lang="en">{{edition day and clock}}</span></p>
+          <p class="mkt-state"><span data-lang="he">{{מצב_המסחר}}</span><span data-lang="en">{{pre-market | market open | latest close | market closed}}</span></p>
+          <p><span data-lang="he">{{טווח הציטוטים, ושהזו תמונת מצב}}</span><span data-lang="en">{{quote window, and that this is a snapshot}}</span></p>
+        </div>
+
+        <!-- B. Primary six: ES, NQ, YM, VIX (index, not futures), USD/ILS (FX spot, not futures), WTI. -->
+        <h3 class="mkt-label"><span data-lang="he">השערים העיקריים</span><span data-lang="en">Primary snapshot</span></h3>
+        <div class="mkt-board mkt-board-primary">
+          <article class="mkt-line">
+            <div class="mkt-id">
+              <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
+              <span class="mkt-name"><span data-lang="he">{{שם בעברית פשוטה}}</span><span data-lang="en">{{plain English name}}</span></span>
+            </div>
+            <div class="mkt-pxchg">
+              <span class="mkt-px"><bdi>{{last}}</bdi></span>
+              <span class="mkt-chg"><bdi>{{one_change}}</bdi></span>
+            </div>
+            <div class="mkt-meta">
+              <span class="mkt-flag"><span data-lang="he">{{חוזה או מדד או שער מט״ח}} · ~<bdi class="num">{{HH:MM}}</bdi></span><span data-lang="en">{{future, index, or FX spot}} · ~<bdi class="num">{{HH:MM}}</bdi></span></span>
+              <details class="mkt-detail">
+                <summary><span data-lang="he"><bdi>{{symbol}}</bdi> · פירוט</span><span data-lang="en"><bdi>{{symbol}}</bdi> · Details</span></summary>
+                <p data-lang="he">{{בסיס, סימול, חותמת UTC}} <a href="{{url}}">{{source}}</a>.</p>
+                <p data-lang="en">{{basis, symbol, UTC stamp}} <a href="{{url}}">{{source}}</a>.</p>
+              </details>
+            </div>
+          </article>
+          <article class="mkt-line mkt-line--missing">
+            <div class="mkt-id">
+              <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
+              <span class="mkt-name"><span data-lang="he">{{שם בלי חותמת}}</span><span data-lang="en">{{name with no stamp}}</span></span>
+            </div>
+            <div class="mkt-meta">
+              <span class="mkt-flag"><span data-lang="he">אין חותמת בחבילה הזו</span><span data-lang="en">Not in this tape</span></span>
+            </div>
+          </article>
+        </div>
+
+        <!-- C. Story, then any basis note that changes a number. -->
+        <div class="mkt-story">
+          <p data-lang="he">{{40_עד_60_מילים}}</p>
+          <p data-lang="en">{{forty_to_sixty_words}}</p>
         </div>
         <p class="note">{{visible_basis_note_if_a_second_basis_exists}}</p>
+
+        <!-- D. Secondary: yields in basis points, Bitcoin, and anything else the pack stamped. -->
+        <h3 class="mkt-label"><span data-lang="he">נתונים נוספים מאותה תמונה</span><span data-lang="en">More from the same snapshot</span></h3>
+        <p class="mkt-aside"><span data-lang="he">{{למה השורות האלה לא למעלה}}</span><span data-lang="en">{{why these rows are not above}}</span></p>
+        <div class="mkt-board mkt-board-secondary">
+          <article class="mkt-line">
+            <div class="mkt-id">
+              <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
+              <span class="mkt-name"><span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span></span>
+            </div>
+            <div class="mkt-pxchg">
+              <span class="mkt-px"><bdi>{{last}}</bdi></span>
+              <span class="mkt-chg"><bdi>{{change_or_bp}}</bdi></span>
+            </div>
+            <div class="mkt-meta">
+              <span class="mkt-flag"><span data-lang="he">{{בסיס קצר}}</span><span data-lang="en">{{short basis}}</span></span>
+              <details class="mkt-detail">
+                <summary><span data-lang="he"><bdi>{{symbol}}</bdi> · פירוט</span><span data-lang="en"><bdi>{{symbol}}</bdi> · Details</span></summary>
+                <p data-lang="he">{{פירוט}} <a href="{{url}}">{{source}}</a>.</p>
+                <p data-lang="en">{{detail}} <a href="{{url}}">{{source}}</a>.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+
+        <!-- E. Cash close only when the pack stamped one. Delete the block if it did not. Do not reconstruct it. -->
+        <h3 class="mkt-label"><span data-lang="he">{{סגירת מניות, התאריך האמיתי}}</span><span data-lang="en">{{stock close, the real date}}</span></h3>
+        <p class="mkt-aside"><span data-lang="he">{{אלה מדדים במזומן, לא החוזים למעלה}}</span><span data-lang="en">{{cash indexes, not the futures above}}</span></p>
+        <div class="mkt-board mkt-board-cash">
+          <article class="mkt-line">
+            <div class="mkt-id">
+              <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
+              <span class="mkt-name"><span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span></span>
+            </div>
+            <div class="mkt-pxchg">
+              <span class="mkt-px"><bdi>{{last}}</bdi></span>
+              <span class="mkt-chg"><bdi>{{change}}</bdi></span>
+            </div>
+            <div class="mkt-meta">
+              <span class="mkt-flag"><span data-lang="he">{{סגירה, לא החוזה}}</span><span data-lang="en">{{close, not the future}}</span></span>
+              <details class="mkt-detail">
+                <summary><span data-lang="he"><bdi>{{symbol}}</bdi> · פירוט</span><span data-lang="en"><bdi>{{symbol}}</bdi> · Details</span></summary>
+                <p data-lang="he">{{פירוט}} <a href="{{url}}">{{source}}</a>.</p>
+                <p data-lang="en">{{detail}} <a href="{{url}}">{{source}}</a>.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+
+        <!-- F. Companies, zero to three, then the next 48 hours. Drop events whose time has passed. -->
+        <h3 class="mkt-label"><span data-lang="he">חברות</span><span data-lang="en">Companies</span></h3>
         <div class="companies">
           <article>
-            <h3>{{name}} · <bdi>{{ticker}}</bdi></h3>
+            <h3><span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span> · <bdi>{{ticker}}</bdi></h3>
             <p data-lang="he">{{אירוע_וחשיבות}}</p>
             <p data-lang="en">{{event_and_why_it_matters}}</p>
+            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+            <p class="sources" data-lang="en">Sources: {{links}}</p>
           </article>
         </div>
         <div class="upcoming">
-          <h3 class="label"><span data-lang="he">48 השעות הבאות</span><span data-lang="en">Next 48 hours</span></h3>
+          <h3 class="label" id="next-heading"><span data-lang="he">48 השעות הבאות</span><span data-lang="en">The next 48 hours</span></h3>
+          <p class="lede" data-lang="he">{{מתי הרשימה מתחילה, ואיזה שעון קיץ בתוקף}}</p>
+          <p class="lede" data-lang="en">{{when the list starts, and which daylight-saving offset is in force}}</p>
           <ol>
             <li>
-              <strong class="when">{{date_and_confirmed_time}} · {{event}}</strong>
-              <p>{{relevance_one_line}}</p>
+              <strong class="when"><span data-lang="he">{{תאריך ושעה מאושרת}} · {{אירוע}}</span><span data-lang="en">{{date and confirmed time}} · {{event}}</span></strong>
+              <p data-lang="he">{{שורה אחת}}</p>
+              <p data-lang="en">{{one line}}</p>
             </li>
           </ol>
         </div>
       </section>
 
       <section class="section" id="ai" aria-labelledby="ai-kicker">
-        <h2 class="kicker" id="ai-kicker">AI</h2>
+        <header class="section-head">
+          <h2 class="kicker" id="ai-kicker">AI</h2>
+          <p class="section-when"><span data-lang="he">{{נישא או חדש, והתאריך האמיתי}}</span><span data-lang="en">{{carried or fresh, and the real date}}</span></p>
+        </header>
         <div class="ai-block">
-          <p class="note">{{carried_or_fresh_and_the_real_date}}</p>
-          <article>
+          <p class="ai-carry" data-lang="he">{{אם נישא: מאיזו מהדורה, ומה לא אומת מחדש}}</p>
+          <p class="ai-carry" data-lang="en">{{if carried: from which edition, and what was not re-checked}}</p>
+          <article class="ai-lead">
             <h2 data-lang="he">{{כותרת}}</h2>
             <h2 data-lang="en">{{headline}}</h2>
             <p class="body" data-lang="he">{{פסקה}}</p>
@@ -176,8 +279,10 @@
       </section>
 
       <footer class="page-foot">
-        <p data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות.</p>
-        <p data-lang="en">Educational briefing, not investment advice.</p>
+        <p data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות. {{מה נשמר ומה חותמת השווקים}}</p>
+        <p data-lang="en">Educational briefing, not investment advice. {{what was kept, and the markets stamp}}</p>
+        <p data-lang="he"><a href="../archive/">ארכיון</a> · <a href="IMAGE-CREDITS.md">קרדיטים לתמונות</a></p>
+        <p data-lang="en"><a href="../archive/">Archive</a> · <a href="IMAGE-CREDITS.md">Image credits</a></p>
         <p>© Brief</p>
       </footer>
     </main>

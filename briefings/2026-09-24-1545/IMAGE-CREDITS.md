@@ -1,12 +1,12 @@
-# Image credits — polish preview, 24 September 2026
+# Image credits — afternoon edition, 24 September 2026
 
-This study shipped. The live homepage and `briefings/2026-09-24-1545/` use the same photographs. Production credits: `briefings/2026-09-24-1545/IMAGE-CREDITS.md`. The pattern for the next edition is `templates/IMAGE-CREDITS.md`. This file stays so the study still documents its own pictures.
+Only the two photographs below are used. Both are on Wikimedia Commons with a license that allows publication. Files live in `assets/images/` so the homepage and this permalink share them. No other image is embedded. Stories without a picture are text-first: there is no gray placeholder.
 
-Only the two photographs below are used. Both are on Wikimedia Commons with a license that allows publication. No other image is embedded. Stories without a picture are text-first: there is no gray placeholder.
+The study that approved this sheet remains at `preview/ux-2026-09-24-polish/`, including its own `IMAGE-CREDITS.md`. The pattern for the next edition is `templates/IMAGE-CREDITS.md`.
 
 ## Lead — Trump greets Xi
 
-- File: `images/trump-xi-1280.jpg`, `images/trump-xi-720.jpg`
+- File: `assets/images/trump-xi-1280.jpg`, `assets/images/trump-xi-720.jpg`
 - What it shows: President Donald Trump greets Xi Jinping before a bilateral meeting at Gimhae International Airport, Busan, 30 October 2025.
 - Why it is not Wednesday’s picture: the edition’s story is Wednesday’s welcome in Washington. This is an earlier official greeting of the same two people. The caption says so.
 - Creator: Daniel Torok, official White House photograph
@@ -17,7 +17,7 @@ Only the two photographs below are used. Both are on Wikimedia Commons with a li
 
 ## Support — Anthony Albanese
 
-- File: `images/albanese-800.jpg`, `images/albanese-480.jpg`
+- File: `assets/images/albanese-800.jpg`, `assets/images/albanese-480.jpg`
 - What it shows: official portrait of Prime Minister Anthony Albanese, photographed 14 February 2022.
 - Why it is not Thursday’s picture: the story is his 24 September 2026 press conference in New York. This is the official portrait of the person who spoke. The caption says so.
 - Creator: David Foote (AUSPIC / Department of Parliamentary Services)
