@@ -2,30 +2,31 @@
 
 This repository is **Brief** — a public, phone-first news deck. Hebrew is the default language (`dir=rtl`). English is an optional switcher on the **same URL**. It is **not** a 3D printer or filament tracker.
 
-The live deck has three sections:
+The live edition is one scrolling page. News, then Markets, then AI. Hebrew is the default; English is the switcher.
 
-- **News / חדשות** (teal) — what changed, and why it matters
-- **Markets / שווקים** (amber) — one tape, with a session-state label: `pre-market`, `open`, or `latest close`
+- **News / חדשות** — one lead, two supports, then a quieter band
+- **Markets / שווקים** — the business section after News: an open table, a short story, companies, and the next 48 hours
 - **AI** — the AI digest on its cadence
 
-The **Pre-market** tab is gone. Calendar rows and any tape notes that were only on that tab now sit in Markets. Older permalinks from before 24 September 2026 may still show a Pre-market tab. On a current edition, `#premarket` opens Markets.
+Older permalinks from before this cutover are still the card deck and may show a Pre-market tab. On the current edition, `#premarket` opens Markets.
 
 Tape is data. There are no trade recommendations.
 
 ## Reader layout
 
-The live homepage is still the previous card layout, so a Markets content publish can land on it without a template change mid-slot. The reader layout for the next edition is separate:
+The live homepage is the Modern editorial edition (`assets/edition.css`): a white page, a light masthead, crimson only on kickers, one rule, and a small badge when a page needs one. News is an asymmetric front. Markets follows News. One language is on screen.
 
-- Preview (real 24 Sep 2026 copy, labeled PREVIEW, not an archive edition): `preview/ux-2026-09-24/`
+- Live: `index.html` and `briefings/2026-09-24-1545/`
+- Labeled study (PREVIEW, Wednesday tape, not an archive edition): `preview/ux-2026-09-24/`
 - Empty structure: `templates/edition.html`
-- Rules for the next publish: `templates/PUBLISH.md`
-- Styles and type: `assets/edition.css` and `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
+- Rules: `templates/PUBLISH.md`
+- Type: `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
 
-The preview is the locked Modern editorial direction: a white page, a light masthead, crimson only on kickers, one rule, and the preview badge. News is an asymmetric front (one lead, two supports, then a quieter band). Markets follows News as a business section: an open table, a short story, companies, and the next 48 hours. One language is on screen. Do not add the preview to the archive. Cutover of `index.html` is Marshal’s next step, after the Markets slot, and is written up in `templates/PUBLISH.md`.
+Earlier permalinks and the archive index stay on `assets/brief.css`. Do not add the preview to the archive.
 
 ## Language
 
-First visit is Hebrew. A switcher (`עברית | English`) sits above the section tabs (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
+First visit is Hebrew. A switcher (`עברית | English`) sits in the masthead (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
 
 Optional `#he` / `#en` hashes set the language once without replacing the page. Sections use `#news`, `#markets`, and `#ai`. On `file://`, hash writes are skipped so `replaceState` cannot break local opens.
 
@@ -246,18 +247,18 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Thursday Midday MAIN on the card layout (assets/brief.css); Markets tape refreshed Thu ~15:45 IL, session pre-market
-assets/brief.css                   phone-first + RTL, used by the live edition and the archive
-assets/edition.css                 Modern editorial layout (preview and the next edition)
+index.html                         live Modern editorial edition (assets/edition.css): Thursday News front, Thu ~15:45 pre-market tape, Wednesday AI
+assets/brief.css                   card sheet for earlier permalinks, the archive index, and 404
+assets/edition.css                 Modern editorial layout (live homepage, 15:45 permalink, preview, template)
 assets/fonts/                      Frank Ruhl Libre + Heebo subsets (SIL OFL)
 preview/ux-2026-09-24/             labeled reader preview for 24 Sep 2026 — not an archive edition
 templates/edition.html             empty publish structure
 templates/PUBLISH.md               how the next edition is rendered
 assets/i18n.js                     language switch, localStorage, optional #he/#en
-assets/lanes.js                    News / Markets / AI switch (file://-safe; #premarket falls through to Markets when that panel is absent)
+assets/lanes.js                    card-deck lane switch for earlier permalinks; not loaded on the editorial page
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-24-1545/         frozen Thursday Afternoon Markets refresh (midday News and Wednesday AI kept; one Markets section, session pre-market, Thursday ~15:45 tape, quotes ~15:28–15:38 IL)
+briefings/2026-09-24-1545/         Thursday afternoon permalink on the editorial sheet (same edition as the homepage; midday News, Thu ~15:45 tape, Wednesday AI)
 briefings/2026-09-24-1400/         frozen Thursday Midday MAIN snapshot (six News cards and an opening summary; Markets refreshed in place to the Thursday ~15:45 pre-market tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
@@ -314,7 +315,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-Home is the Thursday midday edition (24 September 2026, ~14:00 Jerusalem / 07:00 ET). News opens with a short summary of what changed since the overnight edition, then six cards: the US–China trade truce extended through January 10 as Trump welcomes Xi; an OpenAI agent’s unauthorized access to Australia’s Medicare statistics portal; a projectile attack on the Cape Dao near Hormuz; a $2.45 billion Gaza recovery plan; Pezeshkian’s General Assembly address with a far-apart US–Iran readout and Safavi’s Indian Ocean warning; and a Kharkiv-region farm strike that killed six, with Kyiv’s earlier ballistic toll of two dead and six injured. Markets is one section on the current card layout (`assets/brief.css`): Thursday’s pre-market tape, edition ~15:45 Jerusalem (08:45 ET), quotes ~15:28–15:38 Jerusalem (~08:30 ET). Futures versus Wednesday settle: ES 7,733.25 (−0.51%), NQ 30,472.00 (−0.95%), YM 51,726 (−0.28%), RTY 2,849.8 (−0.36%). VIX 15.94 (+5.0%). USD/ILS 3.0467 (+0.39%). The 10-year is 5.116% (+0.2 basis points versus Wednesday’s 5.114% close, after Wednesday’s +14.6 basis points versus Tuesday). WTI continuous is $93.80 (November 26, roll flagged, +1.78%). Wednesday cash, labeled: S&P −0.76%, Dow −0.68%, Nasdaq −1.13%. Wednesday flash PMI composite 58.4 versus August 56.0 is attribution, not a live hinge. Claims and new-home sales are Likely clocks with no invented print. Costco’s IR call is today, Confirmed. The Wednesday AI digest stays. News is the default section.
+Home is the Thursday 24 September 2026 editorial edition, clock ~15:45 Jerusalem (08:45 ET). News is the midday six-story front, rewritten as one lead, two supports, and a quieter band: the US–China truce extended through January 10 as Trump welcomes Xi; an OpenAI agent’s unauthorized access to Australia’s Medicare statistics portal; the Cape Dao attack near Hormuz; a $2.45 billion Gaza plan; Pezeshkian and the far-apart US–Iran readout, with Safavi’s Indian Ocean warning; and a Kharkiv-region farm strike that killed six, with Kyiv’s earlier ballistic toll. Markets follows, pre-market, quotes ~15:28–15:38 Jerusalem (~08:30 ET). Futures versus Wednesday settle: ES 7,733.25 (−0.51%), NQ 30,472.00 (−0.95%), YM 51,726 (−0.28%), RTY 2,849.8 (−0.36%). VIX 15.94 (+5.0%). USD/ILS 3.0467 (+0.39%). The 10-year is 5.116% (+0.2 basis points versus Wednesday’s 5.114% close). WTI continuous is 93.80 (November 26, roll flagged, +1.78%). Wednesday cash is a separate group. Thursday cash is not open. The ~15:30 claims clock has no print in this pack. The Wednesday AI digest is carried. One language is on screen.
 
 ## Run locally
 
