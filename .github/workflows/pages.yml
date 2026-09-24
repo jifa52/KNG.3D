@@ -30,13 +30,21 @@ jobs:
             404.html \
             .nojekyll \
             assets/brief.css \
+            assets/paper.css \
             assets/lanes.js \
             assets/favicon.svg \
-            archive/index.html
+            assets/fonts/FrankRuhlLibre-700-hebrew.woff2 \
+            assets/fonts/Heebo-400-hebrew.woff2 \
+            archive/index.html \
+            preview/ux-2026-09-24/index.html \
+            templates/edition.html \
+            templates/PUBLISH.md
           do
             test -f "$f"
             echo "ok $f"
           done
+          grep -q 'PREVIEW' preview/ux-2026-09-24/index.html
+          grep -q 'Frank Ruhl Libre' assets/paper.css
           # archive must have at least one briefing link
           grep -q 'briefings/' archive/index.html
           # home must carry the base structural markers (edition-agnostic)
@@ -73,7 +81,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html 404.html .nojekyll _site/
-          cp -R assets archive briefings _site/
+          cp -R assets archive briefings preview templates _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
