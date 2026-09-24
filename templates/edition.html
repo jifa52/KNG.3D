@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="paper"
+<html lang="he" dir="rtl" class="edition"
   data-title-he="תבנית · Brief"
   data-title-en="Template · Brief"
   data-desc-he="תבנית פרסום. לא מהדורה."
@@ -7,226 +7,205 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#141210">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
   <meta name="robots" content="noindex">
   <title>תבנית · Brief</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <script src="../assets/i18n.js"></script>
-  <link rel="stylesheet" href="../assets/paper.css">
-  <script src="../assets/lanes.js" defer></script>
+  <link rel="stylesheet" href="../assets/edition.css">
 </head>
 <!--
   PUBLISH TEMPLATE. Not an edition. Do not ship this file as the homepage.
-  Copy the structure into index.html and briefings/YYYY-MM-DD-HHMM/index.html
-  only when the Markets slot is clear. See templates/PUBLISH.md.
+  Modern editorial (UX spec v1.2). White page, crimson used sparingly,
+  News first, Markets after News.
 
-  Fill {{tokens}} from the approved pack. Delete this comment block.
-  Do not leave tokens in a published edition.
+  Cutover of index.html is Marshal's next step, after the Markets slot is
+  clear. This file does not perform that cutover. See templates/PUBLISH.md.
+
+  Copy the structure into index.html and briefings/YYYY-MM-DD-HHMM/index.html
+  only when that slot is clear. Fill {{tokens}} from the approved pack.
+  Delete this comment block. Do not leave tokens in a published edition.
   Do not invent a number when the pack has no stamp — use the missing-row pattern.
   Strip internal notes, hard gates, verb locks, card IDs, and confidence essays.
   Keep material caveats inside the paragraph.
+  Delete the image placeholder unless a licensed, credited picture exists.
 -->
-<body data-lane="news">
+<body>
   <a class="skip" href="#main"><span data-lang="he">דלג לתידרוך</span><span data-lang="en">Skip to briefing</span></a>
-  <div class="app">
-    <nav class="nav" aria-labelledby="nav-label">
-      <span id="nav-label" class="visually-hidden"><span data-lang="he">אתר</span><span data-lang="en">Site</span></span>
-      <a class="nav-mark" href="../">Brief</a>
-      <div class="nav-links">
-        <a href="../" aria-current="page"><span data-lang="he">אחרון</span><span data-lang="en">Latest</span></a>
-        <a href="../archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
+  <div class="wrap">
+    <header class="mast">
+      <div>
+        <h1 class="brand">Brief</h1>
+        <p class="badge"><span data-lang="he">תבנית פרסום · לא מהדורה</span><span data-lang="en">PUBLISH TEMPLATE · not an edition</span></p>
       </div>
-    </nav>
-    <p class="preview-flag" role="status"><span data-lang="he">תבנית פרסום · לא מהדורה</span><span data-lang="en">PUBLISH TEMPLATE · not an edition</span></p>
-    <main id="main">
-      <article class="deck" id="briefing" data-lane="news">
-        <header class="mast">
-          <p class="mast-kicker"><span data-lang="he">{{מהדורה}}</span><span data-lang="en">{{edition_label}}</span></p>
-          <h1 class="mast-title">Brief</h1>
-          <p class="mast-date"><span data-lang="he">{{תאריך_עברית}}</span><span data-lang="en">{{date_english}}</span></p>
-          <dl class="mast-status">
-            <div>
-              <dt><span data-lang="he">מהדורה</span><span data-lang="en">Edition</span></dt>
-              <dd><span data-lang="he">{{שעת_מהדורה}}</span><span data-lang="en">{{edition_time}}</span></dd>
-            </div>
-            <div>
-              <dt><span data-lang="he">ציטוטי שוק</span><span data-lang="en">Market quotes</span></dt>
-              <dd><span data-lang="he">{{חותמת_ציטוט_ומצב}}</span><span data-lang="en">{{quote_stamp_and_status}}</span></dd>
-            </div>
-            <div>
-              <dt><span data-lang="he">הבא</span><span data-lang="en">Next</span></dt>
-              <dd><span data-lang="he">{{האירוע_הבא}}</span><span data-lang="en">{{next_event}}</span></dd>
-            </div>
-          </dl>
-        </header>
-        <div class="switch-bar">
-          <div class="lang-switch" role="group" aria-labelledby="lang-label">
-            <span id="lang-label" class="visually-hidden"><span data-lang="he">שפה</span><span data-lang="en">Language</span></span>
-            <button type="button" class="lang-btn" data-lang-set="he" lang="he" aria-pressed="true">עברית</button>
-            <span class="lang-sep" aria-hidden="true">|</span>
-            <button type="button" class="lang-btn" data-lang-set="en" lang="en" aria-pressed="false">English</button>
-          </div>
-          <div class="lane-switch" role="tablist" aria-labelledby="lanes-label">
-            <span id="lanes-label" class="visually-hidden"><span data-lang="he">מדורים</span><span data-lang="en">Sections</span></span>
-            <button type="button" class="lane-btn" role="tab" id="tab-news" data-lane="news" aria-selected="true"><span data-lang="he">חדשות</span><span data-lang="en">News</span></button>
-            <button type="button" class="lane-btn" role="tab" id="tab-markets" data-lane="markets" aria-selected="false"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></button>
-            <button type="button" class="lane-btn" role="tab" id="tab-ai" data-lane="ai" aria-selected="false"><span data-lang="he">AI</span><span data-lang="en">AI</span></button>
-          </div>
+      <div class="mast-meta">
+        <p><strong><span data-lang="he">{{תאריך_עברית}}</span><span data-lang="en">{{date_english}}</span></strong></p>
+        <p><span data-lang="he">{{שעת_מהדורה}}</span><span data-lang="en">{{edition_time}}</span></p>
+        <div class="lang" role="group" aria-labelledby="lang-label">
+          <span id="lang-label" class="lang-label">Language</span>
+          <button type="button" class="lang-btn" data-lang-set="he" lang="he" aria-pressed="true">עברית</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang-set="en" lang="en" aria-pressed="false">English</button>
         </div>
+      </div>
+    </header>
+    <p class="quotes"><span data-lang="he">{{חותמת_ציטוט_ומצב}}</span><span data-lang="en">{{quote_stamp_and_status}}</span></p>
 
-        <section class="lane lane-news" id="lane-news" role="tabpanel" aria-labelledby="tab-news">
-          <p class="section-label"><span data-lang="he">חדשות</span><span data-lang="en">News</span></p>
-          <article class="story story-lead">
+    <main id="main">
+      <section class="section" id="news" aria-labelledby="news-kicker">
+        <h2 class="kicker" id="news-kicker"><span data-lang="he">חדשות</span><span data-lang="en">News</span></h2>
+        <div class="front">
+          <article class="lead">
+            <div class="img-ph"><span data-lang="he">תמונה · אין צילום מורשה במהדורה</span><span data-lang="en">Photograph · no licensed image in this edition</span></div>
             <h2 data-lang="he">{{כותרת_מובילה}}</h2>
             <h2 data-lang="en">{{lead_headline}}</h2>
-            <p class="story-body" data-lang="he">{{פסקה_אחת_כולל_סייג_אם_הוא_משנה_משמעות}}</p>
-            <p class="story-body" data-lang="en">{{one_paragraph_including_any_caveat_that_changes_the_meaning}}</p>
-            <p class="story-sources" data-lang="he">מקורות: {{קישורים}}</p>
-            <p class="story-sources" data-lang="en">Sources: {{links}}</p>
+            <p class="body" data-lang="he">{{פסקה_אחת_כולל_סייג_אם_הוא_משנה_משמעות}}</p>
+            <p class="body" data-lang="en">{{one_paragraph_including_any_caveat_that_changes_the_meaning}}</p>
+            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+            <p class="sources" data-lang="en">Sources: {{links}}</p>
           </article>
-          <div class="support-grid">
-            <article class="story story-support">
+          <div class="side-stack">
+            <article>
               <h3 data-lang="he">{{כותרת_תומכת_1}}</h3>
               <h3 data-lang="en">{{support_headline_1}}</h3>
-              <p class="story-body" data-lang="he">{{פסקה}}</p>
-              <p class="story-body" data-lang="en">{{paragraph}}</p>
-              <p class="story-sources" data-lang="he">מקורות: {{קישורים}}</p>
-              <p class="story-sources" data-lang="en">Sources: {{links}}</p>
+              <p class="body" data-lang="he">{{פסקה}}</p>
+              <p class="body" data-lang="en">{{paragraph}}</p>
+              <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+              <p class="sources" data-lang="en">Sources: {{links}}</p>
             </article>
-            <article class="story story-support">
+            <article>
               <h3 data-lang="he">{{כותרת_תומכת_2}}</h3>
               <h3 data-lang="en">{{support_headline_2}}</h3>
-              <p class="story-body" data-lang="he">{{פסקה}}</p>
-              <p class="story-body" data-lang="en">{{paragraph}}</p>
-              <p class="story-sources" data-lang="he">מקורות: {{קישורים}}</p>
-              <p class="story-sources" data-lang="en">Sources: {{links}}</p>
+              <p class="body" data-lang="he">{{פסקה}}</p>
+              <p class="body" data-lang="en">{{paragraph}}</p>
+              <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+              <p class="sources" data-lang="en">Sources: {{links}}</p>
             </article>
           </div>
-          <div class="brief-list">
-            <article class="story story-brief">
-              <h3 data-lang="he">{{כותרת_שקטה}}</h3>
-              <h3 data-lang="en">{{brief_headline}}</h3>
-              <p class="story-body" data-lang="he">{{פסקה}}</p>
-              <p class="story-body" data-lang="en">{{paragraph}}</p>
-              <p class="story-sources" data-lang="he">מקורות: {{קישורים}}</p>
-              <p class="story-sources" data-lang="en">Sources: {{links}}</p>
-            </article>
+        </div>
+        <div class="quiet-band">
+          <article>
+            <h3 data-lang="he">{{כותרת_שקטה}}</h3>
+            <h3 data-lang="en">{{brief_headline}}</h3>
+            <p class="body" data-lang="he">{{פסקה}}</p>
+            <p class="body" data-lang="en">{{paragraph}}</p>
+            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+            <p class="sources" data-lang="en">Sources: {{links}}</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="markets" aria-labelledby="markets-kicker">
+        <h2 class="kicker" id="markets-kicker"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></h2>
+        <p class="session" data-lang="he">{{שעת_מהדורה}}. {{מצב_המסחר}}. השורות למטה אינן ציטוט אחר מזה שכתוב בחותמת.</p>
+        <p class="session" data-lang="en">{{edition_clock}}. {{pre-market | market open | latest close | market closed}}. The rows below are not a different tape from the stamp.</p>
+        <div class="mkt-layout">
+          <div class="mkt-wrap">
+            <table class="mkt-table">
+              <caption>{{quote_stamp_carried_or_current_never_call_a_delay_live}}</caption>
+              <thead>
+                <tr>
+                  <th scope="col"><span data-lang="he">סימול</span><span data-lang="en">Symbol</span></th>
+                  <th scope="col"><span data-lang="he">מכשיר</span><span data-lang="en">Instrument</span></th>
+                  <th scope="col"><span data-lang="he">שער</span><span data-lang="en">Last</span></th>
+                  <th scope="col"><span data-lang="he">שינוי</span><span data-lang="en">Change</span></th>
+                  <th scope="col"><span data-lang="he">בסיס · מצב</span><span data-lang="en">Basis · status</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group"><th colspan="5" scope="colgroup"><span data-lang="he">ראשי</span><span data-lang="en">Primary</span></th></tr>
+                <tr>
+                  <td class="sym"><span class="mkt-key" data-lang="he">סימול</span><span class="mkt-key" data-lang="en">Symbol</span>{{symbol}}</td>
+                  <td><span class="mkt-key" data-lang="he">מכשיר</span><span class="mkt-key" data-lang="en">Instrument</span>{{exact_instrument_name}}</td>
+                  <td class="num"><span class="mkt-key" data-lang="he">שער</span><span class="mkt-key" data-lang="en">Last</span><bdi class="num">{{last}}</bdi></td>
+                  <td class="num"><span class="mkt-key" data-lang="he">שינוי</span><span class="mkt-key" data-lang="en">Change</span><bdi class="num">{{one_change}}</bdi></td>
+                  <td class="basis"><span class="mkt-key" data-lang="he">בסיס · מצב</span><span class="mkt-key" data-lang="en">Basis · status</span>{{basis_stamp_and_status}} <a href="{{url}}">{{source}}</a></td>
+                </tr>
+                <tr class="missing">
+                  <td class="sym"><span class="mkt-key" data-lang="he">סימול</span><span class="mkt-key" data-lang="en">Symbol</span>{{symbol}}</td>
+                  <td><span class="mkt-key" data-lang="he">מכשיר</span><span class="mkt-key" data-lang="en">Instrument</span>{{name_with_no_stamp}}</td>
+                  <td class="num"><span class="mkt-key" data-lang="he">שער</span><span class="mkt-key" data-lang="en">Last</span>—</td>
+                  <td class="num"><span class="mkt-key" data-lang="he">שינוי</span><span class="mkt-key" data-lang="en">Change</span>—</td>
+                  <td class="basis"><span class="mkt-key" data-lang="he">בסיס · מצב</span><span class="mkt-key" data-lang="en">Basis · status</span><span data-lang="he">אין חותמת בחבילה הזו</span><span data-lang="en">Not in this tape</span></td>
+                </tr>
+                <tr class="group"><th colspan="5" scope="colgroup"><span data-lang="he">משני</span><span data-lang="en">Secondary</span></th></tr>
+              </tbody>
+            </table>
           </div>
-        </section>
+          <p class="pull" data-lang="he">{{40_עד_60_מילים}}</p>
+          <p class="pull" data-lang="en">{{forty_to_sixty_words}}</p>
+        </div>
+        <p class="note">{{visible_basis_note_if_a_second_basis_exists}}</p>
+        <div class="companies">
+          <article>
+            <h3>{{name}} · <bdi>{{ticker}}</bdi></h3>
+            <p data-lang="he">{{אירוע_וחשיבות}}</p>
+            <p data-lang="en">{{event_and_why_it_matters}}</p>
+          </article>
+        </div>
+        <div class="upcoming">
+          <h3 class="label"><span data-lang="he">48 השעות הבאות</span><span data-lang="en">Next 48 hours</span></h3>
+          <ol>
+            <li>
+              <strong class="when">{{date_and_confirmed_time}} · {{event}}</strong>
+              <p>{{relevance_one_line}}</p>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-        <section class="lane lane-markets" id="lane-markets" role="tabpanel" aria-labelledby="tab-markets" hidden>
-          <p class="section-label"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></p>
-          <section class="block" aria-labelledby="session-heading">
-            <h2 id="session-heading"><span data-lang="he">מצב המסחר והנתונים</span><span data-lang="en">Session and data status</span></h2>
-            <dl class="status-grid">
-              <div>
-                <dt><span data-lang="he">שעת המהדורה</span><span data-lang="en">Edition time</span></dt>
-                <dd>{{edition_clock}}</dd>
-              </div>
-              <div>
-                <dt><span data-lang="he">מצב המסחר בשעה הזו</span><span data-lang="en">Session at that clock</span></dt>
-                <dd>{{pre-market | market open | latest close | market closed}}</dd>
-              </div>
-              <div>
-                <dt><span data-lang="he">שעת הציטוט</span><span data-lang="en">Quote time</span></dt>
-                <dd>{{actual_stamp_not_the_word_today}}</dd>
-              </div>
-              <div>
-                <dt><span data-lang="he">מצב הנתון</span><span data-lang="en">Data status</span></dt>
-                <dd>{{carried_or_current_never_call_a_delay_live}}</dd>
-              </div>
-            </dl>
-          </section>
-          <section class="block" aria-labelledby="snap-heading">
-            <h2 id="snap-heading"><span data-lang="he">תמונת שוק</span><span data-lang="en">Snapshot</span></h2>
-            <div class="snap">
-              <table>
-                <caption>{{what_the_rows_are_and_that_they_are_or_are_not_live}}</caption>
-                <thead>
-                  <tr>
-                    <th scope="col"><span data-lang="he">מכשיר</span><span data-lang="en">Instrument</span></th>
-                    <th scope="col"><span data-lang="he">שער</span><span data-lang="en">Last</span></th>
-                    <th scope="col"><span data-lang="he">שינוי</span><span data-lang="en">Change</span></th>
-                    <th scope="col"><span data-lang="he">זמן ומצב</span><span data-lang="en">Time and status</span></th>
-                    <th scope="col"><span data-lang="he">מקור</span><span data-lang="en">Source</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="group"><th colspan="5" scope="colgroup"><span data-lang="he">ראשי</span><span data-lang="en">Primary</span></th></tr>
-                  <tr>
-                    <td><span class="snap-key" data-lang="he">מכשיר</span><span class="snap-key" data-lang="en">Instrument</span>{{exact_instrument_name}}</td>
-                    <td class="val"><span class="snap-key" data-lang="he">שער</span><span class="snap-key" data-lang="en">Last</span><bdi class="num">{{last}}</bdi></td>
-                    <td class="chg"><span class="snap-key" data-lang="he">שינוי</span><span class="snap-key" data-lang="en">Change</span><bdi class="num">{{one_change_and_its_basis}}</bdi></td>
-                    <td class="when"><span class="snap-key" data-lang="he">זמן ומצב</span><span class="snap-key" data-lang="en">Time and status</span>{{stamp_and_status}}</td>
-                    <td><span class="snap-key" data-lang="he">מקור</span><span class="snap-key" data-lang="en">Source</span><a href="{{url}}">{{source}}</a></td>
-                  </tr>
-                  <tr class="missing">
-                    <td><span class="snap-key" data-lang="he">מכשיר</span><span class="snap-key" data-lang="en">Instrument</span>{{name_with_no_stamp}}</td>
-                    <td class="val"><span class="snap-key" data-lang="he">שער</span><span class="snap-key" data-lang="en">Last</span>—</td>
-                    <td class="chg"><span class="snap-key" data-lang="he">שינוי</span><span class="snap-key" data-lang="en">Change</span>—</td>
-                    <td class="when"><span class="snap-key" data-lang="he">זמן ומצב</span><span class="snap-key" data-lang="en">Time and status</span><span data-lang="he">אין חותמת בחבילה הזו</span><span data-lang="en">Not in this tape</span></td>
-                    <td><span class="snap-key" data-lang="he">מקור</span><span class="snap-key" data-lang="en">Source</span>—</td>
-                  </tr>
-                  <tr class="group"><th colspan="5" scope="colgroup"><span data-lang="he">משני</span><span data-lang="en">Secondary</span></th></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="note">{{visible_basis_note_if_a_second_basis_exists}}</p>
-          </section>
-          <section class="block" aria-labelledby="story-heading">
-            <h2 id="story-heading"><span data-lang="he">השוק בקצרה</span><span data-lang="en">The market</span></h2>
-            <p class="market-story" data-lang="he">{{40_עד_60_מילים}}</p>
-            <p class="market-story" data-lang="en">{{forty_to_sixty_words}}</p>
-          </section>
-          <section class="block" aria-labelledby="names-heading">
-            <h2 id="names-heading"><span data-lang="he">חברות</span><span data-lang="en">Companies</span></h2>
-            <ul class="companies">
-              <li>
-                <h3>{{name}} (<bdi>{{ticker}}</bdi>)</h3>
-                <p data-lang="he">{{אירוע_וחשיבות}}</p>
-                <p data-lang="en">{{event_and_why_it_matters}}</p>
-              </li>
-            </ul>
-          </section>
-          <section class="block" aria-labelledby="next-heading">
-            <h2 id="next-heading"><span data-lang="he">48 השעות הבאות</span><span data-lang="en">Next 48 hours</span></h2>
-            <ol class="agenda">
-              <li>
-                <h3>{{date_and_confirmed_time}} · {{event}}</h3>
-                <p>{{relevance_one_line}}</p>
-              </li>
-            </ol>
-          </section>
-        </section>
-
-        <section class="lane lane-ai" id="lane-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
-          <p class="section-label">AI</p>
-          <article class="story story-lead">
+      <section class="section" id="ai" aria-labelledby="ai-kicker">
+        <h2 class="kicker" id="ai-kicker">AI</h2>
+        <div class="ai-block">
+          <p class="note">{{carried_or_fresh_and_the_real_date}}</p>
+          <article>
             <h2 data-lang="he">{{כותרת}}</h2>
             <h2 data-lang="en">{{headline}}</h2>
-            <p class="story-body" data-lang="he">{{פסקה}}</p>
-            <p class="story-body" data-lang="en">{{paragraph}}</p>
-            <p class="story-sources">{{source}}</p>
+            <p class="body" data-lang="he">{{פסקה}}</p>
+            <p class="body" data-lang="en">{{paragraph}}</p>
+            <p class="sources">{{source}}</p>
           </article>
-          <div class="brief-list">
-            <article class="story story-brief">
+          <div class="ai-list">
+            <article>
               <h3 data-lang="he">{{כותרת}}</h3>
               <h3 data-lang="en">{{headline}}</h3>
-              <p class="story-body" data-lang="he">{{פסקה}}</p>
-              <p class="story-body" data-lang="en">{{paragraph}}</p>
-              <p class="story-sources">{{source}}</p>
+              <p class="body" data-lang="he">{{פסקה}}</p>
+              <p class="body" data-lang="en">{{paragraph}}</p>
+              <p class="sources">{{source}}</p>
             </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <footer class="foot">
-          <p data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות.</p>
-          <p data-lang="en">Educational briefing, not investment advice.</p>
-          <p>© Brief</p>
-        </footer>
-      </article>
+      <footer class="page-foot">
+        <p data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות.</p>
+        <p data-lang="en">Educational briefing, not investment advice.</p>
+        <p>© Brief</p>
+      </footer>
     </main>
   </div>
+  <script src="../assets/i18n.js"></script>
+  <script>
+    (function () {
+      var map = {
+        "#premarket": "markets",
+        "#lane-news": "news",
+        "#lane-markets": "markets",
+        "#lane-ai": "ai"
+      };
+      function go() {
+        var id = map[location.hash];
+        if (!id) return;
+        var el = document.getElementById(id);
+        if (!el) return;
+        if (location.protocol !== "file:") {
+          try { history.replaceState(null, "", "#" + id); } catch (err) {}
+        }
+        el.scrollIntoView();
+      }
+      go();
+      window.addEventListener("hashchange", go);
+    })();
+  </script>
 </body>
 </html>
