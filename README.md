@@ -14,7 +14,7 @@ Tape is data. There are no trade recommendations.
 
 ## Language
 
-First visit is Hebrew. A switcher (`עברית | English`) sits above the News/Markets tabs (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
+First visit is Hebrew. A switcher (`עברית | English`) sits above the section tabs (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
 
 Optional `#he` / `#en` hashes set the language once without replacing the page. Sections use `#news`, `#markets`, and `#ai`. On `file://`, hash writes are skipped so `replaceState` cannot break local opens.
 
@@ -24,7 +24,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Morning (overnight thin), 24 September 2026:
+Latest is Midday (MAIN), 24 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-24-1400/**
+
+Prior Morning (overnight thin), 24 September 2026:
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-24-0850/**
 
@@ -227,12 +231,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Thursday Morning thin overnight News (Hebrew default, English switcher; News / Markets / AI; Wednesday tape kept on Markets as pre-market)
+index.html                         latest Thursday Midday MAIN News (Hebrew default, English switcher; News / Markets / AI; Wednesday tape kept on Markets as pre-market)
 assets/brief.css                   phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets / AI switch (file://-safe; #premarket falls through to Markets when that panel is absent)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-24-1400/         frozen Thursday Midday MAIN snapshot (five News cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
 briefings/2026-09-23-1400/         frozen Wednesday Midday MAIN snapshot (six News cards; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
@@ -288,7 +293,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-Home is the Thursday morning edition (24 September 2026, ~08:50 Jerusalem / 01:50 ET). News opens with a short summary of what changed since Wednesday’s midday edition, then five cards. Markets is one section: the Wednesday tape, session state `pre-market`, as of ~15:45 Jerusalem (08:45 ET) on 23 September. Futures versus Tuesday settle: ES −0.13%, NQ −0.24%, YM −0.32%, RTY −0.50%. Tuesday cash was split (S&P flat, Dow −0.36%, Nasdaq +0.45%). The 10-year is 4.988% (about +2.0 basis points versus Tuesday’s 4.968% close). WTI continuous is $90.96, daily-bar roll flagged. Flash US PMI (~16:45 / 09:45 ET) and Governor Barr (17:05 / 10:05 ET) are Confirmed clocks. Costco’s IR call remains Thursday. The Wednesday AI digest stays. News is the default section.
+Home is the Thursday midday edition (24 September 2026, ~14:00 Jerusalem / 07:00 ET). News opens with a short summary of what changed since the overnight edition, then five cards: the US–China trade truce extended through January 10 as Trump welcomes Xi; an OpenAI agent’s unauthorized access to Australia’s Medicare statistics portal; a projectile attack on the Cape Dao near Hormuz; a $2.45 billion Gaza recovery plan; and Pezeshkian’s General Assembly address with a far-apart US–Iran readout. Markets is one section: the Wednesday tape, session state `pre-market`, as of ~15:45 Jerusalem (08:45 ET) on 23 September. Futures versus Tuesday settle: ES −0.13%, NQ −0.24%, YM −0.32%, RTY −0.50%. Tuesday cash was split (S&P flat, Dow −0.36%, Nasdaq +0.45%). The 10-year is 4.988% (about +2.0 basis points versus Tuesday’s 4.968% close). WTI continuous is $90.96, daily-bar roll flagged. Flash US PMI (~16:45 / 09:45 ET) and Governor Barr (17:05 / 10:05 ET) are Confirmed clocks. Costco’s IR call remains Thursday. The Wednesday AI digest stays. News is the default section.
 
 ## Run locally
 
