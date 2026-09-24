@@ -1,0 +1,496 @@
+/* Polish preview (2026-09-24). New components only.
+   The live homepage does not use these classes, and it does not
+   carry html.polish, so this block does not restyle production. */
+
+html.polish .brand {
+  font-size: clamp(3.15rem, 8vw, 5.4rem);
+  letter-spacing: -0.02em;
+}
+
+html.polish .mast {
+  align-items: flex-end;
+  border-bottom: 0;
+  padding-bottom: 0.35rem;
+}
+
+html.polish .mast-meta {
+  font-size: 15px;
+  color: var(--body);
+}
+
+html.polish .quotes {
+  color: var(--body);
+  font-size: 15.5px;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+html.polish .sources {
+  font-size: 14.5px;
+  color: var(--body);
+}
+
+html.polish .sources a {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+html.polish .lead h2 {
+  font-size: clamp(2.15rem, 4.4vw, 3.35rem);
+  line-height: 1.08;
+}
+
+html.polish .section {
+  scroll-margin-top: 4.75rem;
+}
+
+html.polish .page-foot {
+  color: var(--body);
+  font-size: 14.5px;
+}
+
+html.polish .more summary {
+  color: var(--ink);
+  font-size: 15.5px;
+  font-weight: 500;
+}
+
+html.polish .more p {
+  font-size: 16.5px;
+}
+
+.preview-banner {
+  margin: 0;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  padding: 0.4rem 1rem;
+}
+
+html[lang="he"] .preview-banner {
+  letter-spacing: 0.01em;
+}
+
+.preview-banner a {
+  color: #fff;
+}
+
+.edition-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.35rem;
+  margin-top: 0.85rem;
+  padding: 0.55rem 0;
+  background: var(--page);
+  border-top: 1px solid var(--ink);
+  border-bottom: 3px solid var(--accent);
+}
+
+.edition-nav a {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1.02rem;
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.edition-nav a:hover {
+  color: var(--accent);
+}
+
+.edition-nav a[aria-current="true"] {
+  color: var(--accent);
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.3rem 1.25rem;
+  margin: 2.15rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.section-head .kicker {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+}
+
+html[lang="he"] .section-head .kicker {
+  letter-spacing: 0.06em;
+}
+
+.section-when {
+  margin: 0;
+  color: var(--body);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.photo {
+  margin: 0 0 1rem;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 42%;
+  background: transparent;
+  max-height: 280px;
+}
+
+.photo--portrait {
+  margin: 0 0 0.75rem;
+  max-width: 220px;
+}
+
+.photo--portrait img {
+  aspect-ratio: 4 / 5;
+  object-position: center 18%;
+}
+
+.photo figcaption {
+  margin-top: 0.45rem;
+  color: var(--body);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.photo figcaption a {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.mkt-session {
+  margin: 0 0 1.35rem;
+  max-width: 46rem;
+}
+
+.mkt-session p {
+  margin: 0.15rem 0;
+  color: var(--body);
+  font-size: 15.5px;
+  line-height: 1.45;
+}
+
+.mkt-session .mkt-state {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0.2rem 0 0.25rem;
+}
+
+.mkt-label {
+  margin: 1.35rem 0 0.45rem;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.mkt-aside {
+  margin: 0 0 0.55rem;
+  max-width: 46rem;
+  color: var(--body);
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+.mkt-board {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--ink);
+}
+
+.mkt-line {
+  --quote: 8.75rem;
+  position: relative;
+  display: block;
+  padding-top: 0.16rem;
+  padding-bottom: 0.08rem;
+  border-bottom: 1px solid var(--rule);
+  min-width: 0;
+}
+
+.mkt-id {
+  min-width: 0;
+  line-height: 1.2;
+}
+
+html[dir="rtl"] .mkt-id {
+  padding-left: var(--quote);
+}
+
+html[dir="ltr"] .mkt-id {
+  padding-right: var(--quote);
+}
+
+.mkt-sym {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 1.05rem;
+  margin-inline-end: 0.45rem;
+}
+
+.mkt-name {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.mkt-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.1rem 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.mkt-flag {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--body);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.mkt-pxchg {
+  position: absolute;
+  top: 0.16rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  direction: ltr;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+html[dir="rtl"] .mkt-pxchg {
+  left: 0;
+}
+
+html[dir="ltr"] .mkt-pxchg {
+  right: 0;
+}
+
+.mkt-px {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1.08rem;
+  line-height: 1.15;
+}
+
+.mkt-chg {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1.15;
+}
+
+.mkt-detail {
+  display: contents;
+}
+
+.mkt-detail summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.25;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mkt-detail p {
+  flex: 1 0 100%;
+}
+
+.mkt-detail p {
+  margin: 0 0 0.45rem;
+  color: var(--body);
+  font-size: 15px;
+  line-height: 1.55;
+  max-width: 42rem;
+}
+
+.mkt-detail a {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.mkt-story {
+  margin: 1.15rem 0 0.2rem;
+  max-width: 44rem;
+  padding-top: 0.15rem;
+}
+
+.mkt-story p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.28rem;
+  line-height: 1.45;
+  color: #1a1a1a;
+}
+
+html.polish .companies {
+  grid-template-columns: 1fr 1fr;
+}
+
+html.polish .companies h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+html.polish .companies p,
+html.polish .upcoming li,
+html.polish .upcoming .lede,
+html.polish .note {
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ai-carry {
+  margin: 0 0 0.85rem;
+  max-width: 44rem;
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.ai-lead h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  line-height: 1.18;
+  margin: 0.2rem 0 0.65rem;
+}
+
+@media (min-width: 860px) {
+  .mkt-board-primary,
+  .mkt-board-secondary,
+  .mkt-board-cash {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 860px) {
+  html.polish .companies {
+    grid-template-columns: 1fr;
+  }
+
+  html.polish .wrap {
+    padding-top: 1.05rem;
+  }
+
+  html.polish .lead .photo img {
+    max-height: 168px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .photo--portrait {
+    max-width: 148px;
+  }
+
+  .photo--portrait img {
+    max-height: 180px;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 861px) {
+  html.polish .lead .photo img {
+    max-height: 168px;
+  }
+}
+
+.edition-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.edition-list li {
+  padding: 1.05rem 0 1.15rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.edition-list h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  line-height: 1.25;
+  margin: 0.25rem 0 0.35rem;
+}
+
+.edition-list h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.edition-list h2 a:hover {
+  color: var(--accent);
+}
+
+.edition-when {
+  margin: 0;
+  color: var(--accent);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+html[lang="he"] .edition-when {
+  letter-spacing: 0.01em;
+}
+
+.edition-list p {
+  margin: 0.15rem 0 0;
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 42rem;
+}
+
+@media (max-width: 420px) {
+  .mkt-px {
+    font-size: 1.05rem;
+  }
+
+  .mkt-chg {
+    font-size: 0.95rem;
+  }
+
+  .mkt-pxchg {
+    gap: 0.4rem;
+  }
+}
