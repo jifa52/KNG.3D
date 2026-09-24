@@ -30,7 +30,7 @@ jobs:
             404.html \
             .nojekyll \
             assets/brief.css \
-            assets/paper.css \
+            assets/edition.css \
             assets/lanes.js \
             assets/favicon.svg \
             assets/fonts/FrankRuhlLibre-700-hebrew.woff2 \
@@ -44,7 +44,17 @@ jobs:
             echo "ok $f"
           done
           grep -q 'PREVIEW' preview/ux-2026-09-24/index.html
-          grep -q 'Frank Ruhl Libre' assets/paper.css
+          grep -q 'Frank Ruhl Libre' assets/edition.css
+          grep -q '#8b1e2d' assets/edition.css
+          grep -q '#ffffff' assets/edition.css
+          if grep -q 'edition.css' index.html; then
+            echo "homepage must stay on brief.css"
+            exit 1
+          fi
+          if grep -q 'paper.css' index.html preview/ux-2026-09-24/index.html templates/edition.html; then
+            echo "paper.css is retired"
+            exit 1
+          fi
           # archive must have at least one briefing link
           grep -q 'briefings/' archive/index.html
           # home must carry the base structural markers (edition-agnostic)

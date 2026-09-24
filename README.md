@@ -19,9 +19,9 @@ The live homepage is still the previous card layout, so a Markets content publis
 - Preview (real 24 Sep 2026 copy, labeled PREVIEW, not an archive edition): `preview/ux-2026-09-24/`
 - Empty structure: `templates/edition.html`
 - Rules for the next publish: `templates/PUBLISH.md`
-- Styles and type: `assets/paper.css` and `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
+- Styles and type: `assets/edition.css` and `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
 
-News is one lead, about two supporting stories, then a quieter list. One language is on screen. Markets is a session line, a snapshot table, a short story, up to three companies, and the next 48 hours. Do not add the preview to the archive.
+The preview is the locked Modern editorial direction: a white page, a light masthead, crimson only on kickers, one rule, and the preview badge. News is an asymmetric front (one lead, two supports, then a quieter band). Markets follows News as a business section: an open table, a short story, companies, and the next 48 hours. One language is on screen. Do not add the preview to the archive. Cutover of `index.html` is Marshal’s next step, after the Markets slot, and is written up in `templates/PUBLISH.md`.
 
 ## Language
 
@@ -244,7 +244,7 @@ Prior Close (2 September 2026):
 ```
 index.html                         latest Thursday Midday MAIN News (previous card layout; left in place so a Markets publish can still land)
 assets/brief.css                   phone-first + RTL, used by the live edition and the archive
-assets/paper.css                   reader layout (preview and the next edition)
+assets/edition.css                 Modern editorial layout (preview and the next edition)
 assets/fonts/                      Frank Ruhl Libre + Heebo subsets (SIL OFL)
 preview/ux-2026-09-24/             labeled reader preview for 24 Sep 2026 — not an archive edition
 templates/edition.html             empty publish structure
