@@ -31,13 +31,20 @@ jobs:
             .nojekyll \
             assets/brief.css \
             assets/edition.css \
+            assets/polish.css \
             assets/lanes.js \
             assets/favicon.svg \
+            assets/images/trump-xi-1280.jpg \
+            assets/images/albanese-800.jpg \
             assets/fonts/FrankRuhlLibre-700-hebrew.woff2 \
             assets/fonts/Heebo-400-hebrew.woff2 \
             archive/index.html \
             preview/ux-2026-09-24/index.html \
+            preview/ux-2026-09-24-polish/index.html \
+            preview/ux-2026-09-24-polish/IMAGE-CREDITS.md \
+            briefings/2026-09-24-1545/IMAGE-CREDITS.md \
             templates/edition.html \
+            templates/IMAGE-CREDITS.md \
             templates/PUBLISH.md
           do
             test -f "$f"
@@ -48,29 +55,52 @@ jobs:
           grep -q 'Frank Ruhl Libre' assets/edition.css
           grep -q '#8b1e2d' assets/edition.css
           grep -q '#ffffff' assets/edition.css
-          # Live homepage is the Modern editorial edition (cut over 24 Sep 2026).
-          grep -q 'edition.css' index.html
-          grep -q 'id="news"' index.html
-          grep -q 'id="markets"' index.html
-          grep -q 'id="ai"' index.html
-          grep -q '#premarket' index.html
-          grep -q 'edition.css' briefings/2026-09-24-1545/index.html
-          if grep -q 'lanes.js' index.html briefings/2026-09-24-1545/index.html; then
-            echo "editorial pages must not load lanes.js"
+          grep -q 'mkt-board-primary' assets/polish.css
+          # Live homepage is the approved polish sheet.
+          for page in index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
+            grep -q 'edition.css' "$page"
+            grep -q 'polish.css' "$page"
+            grep -q 'edition-nav' "$page"
+            grep -q 'id="news"' "$page"
+            grep -q 'id="markets"' "$page"
+            grep -q 'id="ai"' "$page"
+            grep -q 'mkt-board-primary' "$page"
+            grep -q 'mkt-board-secondary' "$page"
+            grep -q 'mkt-board-cash' "$page"
+            grep -q 'ai-lead' "$page"
+            grep -q '#premarket' "$page"
+            if grep -q 'img-ph' "$page"; then
+              echo "no gray photo placeholder on $page"
+              exit 1
+            fi
+            if grep -q 'mkt-table' "$page"; then
+              echo "markets boards, not a table, on $page"
+              exit 1
+            fi
+          done
+          grep -q 'מדד, לא חוזה' index.html
+          grep -q 'שער מט״ח' index.html
+          grep -q 'Index, not futures' index.html
+          grep -q 'FX spot' index.html
+          if grep -E -q '(href|src)="[^"]*(lanes\.js|brief\.css|paper\.css)"' \
+            index.html \
+            briefings/2026-09-24-1545/index.html \
+            templates/edition.html \
+            archive/index.html \
+            preview/ux-2026-09-24/index.html
+          then
+            echo "editorial pages load edition.css and polish.css, not the card sheet"
             exit 1
           fi
-          if grep -q 'brief.css' index.html briefings/2026-09-24-1545/index.html; then
-            echo "editorial pages use edition.css"
-            exit 1
-          fi
-          if grep -q 'paper.css' index.html preview/ux-2026-09-24/index.html templates/edition.html briefings/2026-09-24-1545/index.html; then
-            echo "paper.css is retired"
-            exit 1
-          fi
-          # Older permalinks and the archive stay on the card sheet.
-          grep -q 'brief.css' briefings/2026-09-24-1400/index.html
-          grep -q 'brief.css' archive/index.html
+          # Archive index is the newspaper sheet and still lists permalinks.
+          grep -q 'edition.css' archive/index.html
+          grep -q 'polish.css' archive/index.html
+          grep -q 'edition-list' archive/index.html
           grep -q 'briefings/' archive/index.html
+          grep -q 'color-scheme" content="light"' archive/index.html
+          # Older permalinks stay on the card sheet.
+          grep -q 'brief.css' briefings/2026-09-24-1400/index.html
+          grep -q 'brief.css' 404.html
           if [ -f assets/i18n.js ]; then
             grep -q 'brief-lang' assets/i18n.js
             echo "ok i18n.js"

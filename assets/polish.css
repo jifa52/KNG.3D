@@ -1,62 +1,67 @@
-/* Polish study sheet (2026-09-24). The study page still loads this file.
-   Production uses assets/polish.css (html.edition) on the homepage,
-   the current permalink, the archive index, and the publish template.
-   This copy stays so the study renders on its own. */
+/* Brief polish sheet. Loaded with assets/edition.css by the live homepage,
+   the current permalink, the archive index, and templates/edition.html.
+   Selectors target html.edition. The labeled study keeps its own copy at
+   preview/ux-2026-09-24-polish/polish.css (html.polish). Do not load this
+   file on earlier card-layout briefings.
 
-html.polish .brand {
+   Markets order on the page: A session, B primary six, C story and basis
+   note, D secondary, E cash close when stamped, F companies and 48 hours.
+*/
+
+html.edition .brand {
   font-size: clamp(3.15rem, 8vw, 5.4rem);
   letter-spacing: -0.02em;
 }
 
-html.polish .mast {
+html.edition .mast {
   align-items: flex-end;
   border-bottom: 0;
   padding-bottom: 0.35rem;
 }
 
-html.polish .mast-meta {
+html.edition .mast-meta {
   font-size: 15px;
   color: var(--body);
 }
 
-html.polish .quotes {
+html.edition .quotes {
   color: var(--body);
   font-size: 15.5px;
   border-bottom: 0;
   padding-bottom: 0;
 }
 
-html.polish .sources {
+html.edition .sources {
   font-size: 14.5px;
   color: var(--body);
 }
 
-html.polish .sources a {
+html.edition .sources a {
   color: var(--ink);
   font-weight: 500;
 }
 
-html.polish .lead h2 {
+html.edition .lead h2 {
   font-size: clamp(2.15rem, 4.4vw, 3.35rem);
   line-height: 1.08;
 }
 
-html.polish .section {
+html.edition .section {
   scroll-margin-top: 4.75rem;
 }
 
-html.polish .page-foot {
+html.edition .page-foot {
   color: var(--body);
   font-size: 14.5px;
 }
 
-html.polish .more summary {
+html.edition .more summary {
   color: var(--ink);
   font-size: 15.5px;
   font-weight: 500;
 }
 
-html.polish .more p {
+html.edition .more p {
   font-size: 16.5px;
 }
 
@@ -357,11 +362,11 @@ html[dir="ltr"] .mkt-pxchg {
   color: #1a1a1a;
 }
 
-html.polish .companies {
+html.edition .companies {
   grid-template-columns: 1fr 1fr;
 }
 
-html.polish .companies h3 {
+html.edition .companies h3 {
   font-family: var(--serif);
   font-size: 1.2rem;
   letter-spacing: 0;
@@ -369,10 +374,10 @@ html.polish .companies h3 {
   font-weight: 700;
 }
 
-html.polish .companies p,
-html.polish .upcoming li,
-html.polish .upcoming .lede,
-html.polish .note {
+html.edition .companies p,
+html.edition .upcoming li,
+html.edition .upcoming .lede,
+html.edition .note {
   color: var(--body);
   font-size: 16px;
   line-height: 1.6;
@@ -406,15 +411,15 @@ html.polish .note {
 }
 
 @media (max-width: 860px) {
-  html.polish .companies {
+  html.edition .companies {
     grid-template-columns: 1fr;
   }
 
-  html.polish .wrap {
+  html.edition .wrap {
     padding-top: 1.05rem;
   }
 
-  html.polish .lead .photo img {
+  html.edition .lead .photo img {
     max-height: 168px;
     aspect-ratio: 16 / 9;
   }
@@ -429,7 +434,7 @@ html.polish .note {
 }
 
 @media (max-height: 820px) and (min-width: 861px) {
-  html.polish .lead .photo img {
+  html.edition .lead .photo img {
     max-height: 168px;
   }
 }

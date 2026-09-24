@@ -1,7 +1,9 @@
-/* Brief edition — Modern editorial (UX spec v1.2, locked 2026-09-24).
-   Loaded by the live homepage, the 24 Sep 2026 15:45 permalink,
-   the labeled preview, and the publish template.
-   Earlier briefings and the archive index keep assets/brief.css.
+/* Brief edition — Modern editorial base (UX spec v1.2, locked 2026-09-24).
+   Loaded with assets/polish.css by the live homepage, the current permalink,
+   the archive index, and templates/edition.html.
+   polish.css is the approved 24 Sep 2026 sheet: nav, photographs, markets
+   boards A–F, newspaper AI, archive list. Do not load it on card-layout
+   briefings. Earlier permalinks keep assets/brief.css. 404.html does too.
    White page, ink, crimson used only for kickers, one rule, and badges.
    Type: Frank Ruhl Libre (headlines) + Heebo (body), SIL OFL, assets/fonts/.
    Local files are weights 500 and 700. Body size is 18.5px. */
