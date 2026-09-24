@@ -2,15 +2,17 @@
 
 This note is the publish path for the Modern editorial layout in UX spec v1.2 (locked 2026-09-24). Owner rejected Classic cream and Business Markets-first. It does not replace verification, agenda, confidence, or cadence rules. Those still live with the desk. This file wins on what a reader sees.
 
-The filled reference is `preview/ux-2026-09-24/index.html`. The empty structure is `templates/edition.html`. Both use `assets/edition.css`. Historical pages under `briefings/` stay on `assets/brief.css`. Do not restyle old editions to chase this layout, and do not change their facts.
+The filled reference is `preview/ux-2026-09-24/index.html` (a labeled study; its Markets tape is the Wednesday carry, not the live Thursday tape). The empty structure is `templates/edition.html`. Both use `assets/edition.css`. The live homepage and `briefings/2026-09-24-1545/` are the cutover edition on that same sheet. Earlier pages under `briefings/` stay on `assets/brief.css`. Do not restyle those older editions to chase this layout, and do not change their facts.
 
 `assets/paper.css` is retired. Do not bring the dark newspaper sheet back.
 
-## Cutover is not this template
+## Cutover
 
-`index.html` is the live homepage. It stays on the current card layout (`assets/brief.css`, `assets/lanes.js`) through the weekday ~15:45 Israel Markets publish.
+The 24 September 2026 afternoon edition is the cutover. `index.html` and `briefings/2026-09-24-1545/index.html` render from this template (`assets/edition.css`). They carry the midday News cards and the Thursday ~15:45 Markets tape that had already landed on the card sheet. `assets/brief.css` and `assets/lanes.js` stay for earlier permalinks and for `archive/index.html`.
 
-**Cutover is Marshal’s next step, not a side effect of editing this file.** After that Markets slot has landed cleanly, and after the preview at `preview/ux-2026-09-24/` has been checked, render the next edition from `templates/edition.html` into `index.html` and `briefings/YYYY-MM-DD-HHMM/index.html`. Do not merge a content overwrite of `index.html` in the same moment as the template swap, and do not swap the template while a Markets publish is in flight.
+The card rendering of that 15:45 tape is in git history. Do not delete `brief.css` while those archives still link it.
+
+**Next editions** render from `templates/edition.html` into `index.html` and `briefings/YYYY-MM-DD-HHMM/index.html`. Do not put `lanes.js` back on an editorial page. Do not swap the template while a Markets publish is in flight, and do not merge a fresh content pack in the same change as a template experiment.
 
 The preview is not an archive edition. Do not add it to `archive/index.html`. One canonical preview URL is enough:
 
@@ -42,7 +44,7 @@ News hierarchy, in this order, on the open page:
 
 Same calm type on AI: one lead, then `.ai-list`. No equal-weight card stack.
 
-Section ids are `#news`, `#markets`, and `#ai`. `#premarket`, `#lane-news`, `#lane-markets`, and `#lane-ai` scroll to the matching section. The live card homepage still uses `assets/lanes.js` to switch panels. This template does not. Do not put `lanes.js` back on the editorial page or it will hide Markets and AI.
+Section ids are `#news`, `#markets`, and `#ai`. `#premarket`, `#lane-news`, `#lane-markets`, and `#lane-ai` scroll to the matching section. Card-layout archives still use `assets/lanes.js` to switch panels. This template does not. Do not put `lanes.js` back on the editorial page or it will hide Markets and AI.
 
 ## Markets, after News
 
@@ -81,7 +83,7 @@ Use a picture only with a license, a credit, and alt text. Otherwise leave the g
 - The Markets table can be scanned without reading a paragraph to find the level.
 - Expired calendar rows are gone.
 - No internal desk labels in the HTML.
-- `#premarket` still reaches Markets. `assets/lanes.js` stays on the live card homepage only.
+- `#premarket` still reaches Markets. `assets/lanes.js` stays on card-layout archives only. Do not load it on an editorial page.
 
 ## Pages deploy
 

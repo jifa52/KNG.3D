@@ -44,29 +44,38 @@ jobs:
             echo "ok $f"
           done
           grep -q 'PREVIEW' preview/ux-2026-09-24/index.html
+          grep -q 'edition.css' preview/ux-2026-09-24/index.html
           grep -q 'Frank Ruhl Libre' assets/edition.css
           grep -q '#8b1e2d' assets/edition.css
           grep -q '#ffffff' assets/edition.css
-          if grep -q 'edition.css' index.html; then
-            echo "homepage must stay on brief.css"
+          # Live homepage is the Modern editorial edition (cut over 24 Sep 2026).
+          grep -q 'edition.css' index.html
+          grep -q 'id="news"' index.html
+          grep -q 'id="markets"' index.html
+          grep -q 'id="ai"' index.html
+          grep -q '#premarket' index.html
+          grep -q 'edition.css' briefings/2026-09-24-1545/index.html
+          if grep -q 'lanes.js' index.html briefings/2026-09-24-1545/index.html; then
+            echo "editorial pages must not load lanes.js"
             exit 1
           fi
-          if grep -q 'paper.css' index.html preview/ux-2026-09-24/index.html templates/edition.html; then
+          if grep -q 'brief.css' index.html briefings/2026-09-24-1545/index.html; then
+            echo "editorial pages use edition.css"
+            exit 1
+          fi
+          if grep -q 'paper.css' index.html preview/ux-2026-09-24/index.html templates/edition.html briefings/2026-09-24-1545/index.html; then
             echo "paper.css is retired"
             exit 1
           fi
-          # archive must have at least one briefing link
+          # Older permalinks and the archive stay on the card sheet.
+          grep -q 'brief.css' briefings/2026-09-24-1400/index.html
+          grep -q 'brief.css' archive/index.html
           grep -q 'briefings/' archive/index.html
-          # home must carry the base structural markers (edition-agnostic)
-          grep -q 'id="briefing"' index.html
-          grep -q 'lane-news' index.html
-          grep -q 'lane-markets' index.html
-          # i18n asset only checked if it exists (optional in older editions)
           if [ -f assets/i18n.js ]; then
             grep -q 'brief-lang' assets/i18n.js
             echo "ok i18n.js"
           fi
-          # lanes.js must exist and reference the lane switch
+          # lanes.js stays for card archives
           grep -q 'data-lane' assets/lanes.js
           echo "all checks passed"
 
