@@ -18,6 +18,8 @@ The preview is not an archive edition. Do not add it to `archive/index.html`. On
 
 `https://jifa52.github.io/KNG.3D/preview/ux-2026-09-24/`
 
+A later labeled study, `preview/ux-2026-09-24-polish/`, is the 24 Sep evening polish (markets snapshot, licensed photos, newspaper archive index). It is not the publish path and it does not replace `index.html`. Pages serves `main` only, so that folder is reachable at `https://jifa52.github.io/KNG.3D/preview/ux-2026-09-24-polish/` after it is merged. Do not cut the homepage over from that folder until the owner says so.
+
 ## What the reader sees
 
 One scrolling page. News, then Markets, then AI. One language at a time. Hebrew is the default; English is the switcher in the masthead (`assets/i18n.js`, `data-lang`). Do not print a full Hebrew story and then the full English story in the same view.

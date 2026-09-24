@@ -37,6 +37,9 @@ jobs:
             assets/fonts/Heebo-400-hebrew.woff2 \
             archive/index.html \
             preview/ux-2026-09-24/index.html \
+            preview/ux-2026-09-24-polish/index.html \
+            preview/ux-2026-09-24-polish/archive.html \
+            preview/ux-2026-09-24-polish/IMAGE-CREDITS.md \
             templates/edition.html \
             templates/PUBLISH.md
           do
@@ -45,6 +48,18 @@ jobs:
           done
           grep -q 'PREVIEW' preview/ux-2026-09-24/index.html
           grep -q 'edition.css' preview/ux-2026-09-24/index.html
+          grep -q 'edition.css' preview/ux-2026-09-24-polish/index.html
+          grep -q 'id="markets"' preview/ux-2026-09-24-polish/index.html
+          grep -q 'mkt-board' preview/ux-2026-09-24-polish/index.html
+          if grep -q 'אין צילום מורשה' preview/ux-2026-09-24-polish/index.html; then
+            echo "polish preview must not use the unlicensed-image placeholder"
+            exit 1
+          fi
+          # Root homepage stays the current edition.
+          if grep -q 'ux-2026-09-24-polish' index.html; then
+            echo "root index.html must not point at the polish preview"
+            exit 1
+          fi
           grep -q 'Frank Ruhl Libre' assets/edition.css
           grep -q '#8b1e2d' assets/edition.css
           grep -q '#ffffff' assets/edition.css
