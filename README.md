@@ -35,7 +35,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday (MAIN), 24 September 2026:
+Latest is Afternoon Markets, 24 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-24-1545/**
+
+Prior Midday (MAIN), 24 September 2026:
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-24-1400/**
 
@@ -242,7 +246,7 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Thursday Midday MAIN News (previous card layout; left in place so a Markets publish can still land)
+index.html                         latest Thursday Midday MAIN on the card layout (assets/brief.css); Markets tape refreshed Thu ~15:45 IL, session pre-market
 assets/brief.css                   phone-first + RTL, used by the live edition and the archive
 assets/edition.css                 Modern editorial layout (preview and the next edition)
 assets/fonts/                      Frank Ruhl Libre + Heebo subsets (SIL OFL)
@@ -253,7 +257,8 @@ assets/i18n.js                     language switch, localStorage, optional #he/#
 assets/lanes.js                    News / Markets / AI switch (file://-safe; #premarket falls through to Markets when that panel is absent)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-24-1400/         frozen Thursday Midday MAIN snapshot (six News cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
+briefings/2026-09-24-1545/         frozen Thursday Afternoon Markets refresh (midday News and Wednesday AI kept; one Markets section, session pre-market, Thursday ~15:45 tape, quotes ~15:28–15:38 IL)
+briefings/2026-09-24-1400/         frozen Thursday Midday MAIN snapshot (six News cards and an opening summary; Markets refreshed in place to the Thursday ~15:45 pre-market tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
 briefings/2026-09-23-1400/         frozen Wednesday Midday MAIN snapshot (six News cards; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
@@ -309,7 +314,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-Home is the Thursday midday edition (24 September 2026, ~14:00 Jerusalem / 07:00 ET). News opens with a short summary of what changed since the overnight edition, then six cards: the US–China trade truce extended through January 10 as Trump welcomes Xi; an OpenAI agent’s unauthorized access to Australia’s Medicare statistics portal; a projectile attack on the Cape Dao near Hormuz; a $2.45 billion Gaza recovery plan; Pezeshkian’s General Assembly address with a far-apart US–Iran readout and Safavi’s Indian Ocean warning; and a Kharkiv-region farm strike that killed six, with Kyiv’s earlier ballistic toll of two dead and six injured. Markets is one section: the Wednesday tape, session state `pre-market`, as of ~15:45 Jerusalem (08:45 ET) on 23 September. Futures versus Tuesday settle: ES −0.13%, NQ −0.24%, YM −0.32%, RTY −0.50%. Tuesday cash was split (S&P flat, Dow −0.36%, Nasdaq +0.45%). The 10-year is 4.988% (about +2.0 basis points versus Tuesday’s 4.968% close). WTI continuous is $90.96, daily-bar roll flagged. Flash US PMI (~16:45 / 09:45 ET) and Governor Barr (17:05 / 10:05 ET) are Confirmed clocks. Costco’s IR call remains Thursday. The Wednesday AI digest stays. News is the default section.
+Home is the Thursday midday edition (24 September 2026, ~14:00 Jerusalem / 07:00 ET). News opens with a short summary of what changed since the overnight edition, then six cards: the US–China trade truce extended through January 10 as Trump welcomes Xi; an OpenAI agent’s unauthorized access to Australia’s Medicare statistics portal; a projectile attack on the Cape Dao near Hormuz; a $2.45 billion Gaza recovery plan; Pezeshkian’s General Assembly address with a far-apart US–Iran readout and Safavi’s Indian Ocean warning; and a Kharkiv-region farm strike that killed six, with Kyiv’s earlier ballistic toll of two dead and six injured. Markets is one section on the current card layout (`assets/brief.css`): Thursday’s pre-market tape, edition ~15:45 Jerusalem (08:45 ET), quotes ~15:28–15:38 Jerusalem (~08:30 ET). Futures versus Wednesday settle: ES 7,733.25 (−0.51%), NQ 30,472.00 (−0.95%), YM 51,726 (−0.28%), RTY 2,849.8 (−0.36%). VIX 15.94 (+5.0%). USD/ILS 3.0467 (+0.39%). The 10-year is 5.116% (+0.2 basis points versus Wednesday’s 5.114% close, after Wednesday’s +14.6 basis points versus Tuesday). WTI continuous is $93.80 (November 26, roll flagged, +1.78%). Wednesday cash, labeled: S&P −0.76%, Dow −0.68%, Nasdaq −1.13%. Wednesday flash PMI composite 58.4 versus August 56.0 is attribution, not a live hinge. Claims and new-home sales are Likely clocks with no invented print. Costco’s IR call is today, Confirmed. The Wednesday AI digest stays. News is the default section.
 
 ## Run locally
 
