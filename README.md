@@ -2,10 +2,13 @@
 
 This repository is **Brief** — a public, phone-first news deck. Hebrew is the default language (`dir=rtl`). English is an optional switcher on the **same URL**. It is **not** a 3D printer or filament tracker.
 
-The site is a two-lane static briefing:
+The live deck has three sections:
 
-- **News / חדשות** (teal) — geopolitics overlay
-- **Markets / שווקים** (amber) — tape, earnings, calendar, watch
+- **News / חדשות** (teal) — what changed, and why it matters
+- **Markets / שווקים** (amber) — one tape, with a session-state label: `pre-market`, `open`, or `latest close`
+- **AI** — the AI digest on its cadence
+
+The **Pre-market** tab is gone. Calendar rows and any tape notes that were only on that tab now sit in Markets. Older permalinks from before 24 September 2026 may still show a Pre-market tab. On a current edition, `#premarket` opens Markets.
 
 Tape is data. There are no trade recommendations.
 
@@ -13,7 +16,7 @@ Tape is data. There are no trade recommendations.
 
 First visit is Hebrew. A switcher (`עברית | English`) sits above the News/Markets tabs (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
 
-Optional `#he` / `#en` hashes set the language once without replacing the page. News/Markets still use `#news` / `#markets`. On `file://`, hash writes are skipped so `replaceState` cannot break local opens.
+Optional `#he` / `#en` hashes set the language once without replacing the page. Sections use `#news`, `#markets`, and `#ai`. On `file://`, hash writes are skipped so `replaceState` cannot break local opens.
 
 ## Public URL
 
@@ -224,13 +227,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Thursday Morning thin overnight News (Hebrew default, English switcher; Wednesday afternoon Markets / Pre-market kept; Wednesday AI digest kept)
-assets/brief.css                   two-lane phone-first + RTL
+index.html                         latest Thursday Morning thin overnight News (Hebrew default, English switcher; News / Markets / AI; Wednesday tape kept on Markets as pre-market)
+assets/brief.css                   phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
-assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
+assets/lanes.js                    News / Markets / AI switch (file://-safe; #premarket falls through to Markets when that panel is absent)
 assets/favicon.svg
 archive/index.html                 every published briefing
-briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards; Wednesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept; next AI digest Friday)
+briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
 briefings/2026-09-23-1400/         frozen Wednesday Midday MAIN snapshot (six News cards; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
 briefings/2026-09-23-0850/         frozen Wednesday Morning snapshot (thin overnight News; Tuesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept)
@@ -285,7 +288,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-This Afternoon Markets / Pre-market edition (Wednesday, 23 September 2026, 15:45 Jerusalem / 08:45 ET) keeps the midday MAIN News cards and the Wednesday AI digest, and replaces Markets and Pre-market from the ~15:45 (08:45 ET) tape. Futures are soft versus Tuesday settles (ES −0.13%, NQ −0.24%, YM −0.32%, RTY −0.50%). Tuesday cash was split (S&P flat, Dow −0.36%, Nasdaq +0.45%). The 10-year is 4.988% (about +2.0 bp versus Tuesday’s 4.968% close). WTI continuous is $90.96, with the daily-bar roll flagged. Flash US PMI (~16:45 / 09:45 ET) and Governor Barr (17:05 / 10:05 ET) are Confirmed clocks. Costco’s IR call remains Thursday. FedWatch probabilities are omitted. No oil, index, or share prices on News, and no Hormuz vessel-traffic counts. No East-West third-station card. No trade recommendations. No weather strip. News is the default home lane.
+Home is the Thursday morning edition (24 September 2026, ~08:50 Jerusalem / 01:50 ET). News opens with a short summary of what changed since Wednesday’s midday edition, then five cards. Markets is one section: the Wednesday tape, session state `pre-market`, as of ~15:45 Jerusalem (08:45 ET) on 23 September. Futures versus Tuesday settle: ES −0.13%, NQ −0.24%, YM −0.32%, RTY −0.50%. Tuesday cash was split (S&P flat, Dow −0.36%, Nasdaq +0.45%). The 10-year is 4.988% (about +2.0 basis points versus Tuesday’s 4.968% close). WTI continuous is $90.96, daily-bar roll flagged. Flash US PMI (~16:45 / 09:45 ET) and Governor Barr (17:05 / 10:05 ET) are Confirmed clocks. Costco’s IR call remains Thursday. The Wednesday AI digest stays. News is the default section.
 
 ## Run locally
 
