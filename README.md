@@ -21,7 +21,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon Markets / Pre-market, 23 September 2026:
+Latest is Morning (overnight thin), 24 September 2026:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-24-0850/**
+
+Prior Afternoon Markets / Pre-market (23 September 2026):
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-23-1545/**
 
@@ -220,12 +224,13 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         latest Afternoon Markets / Pre-market refresh (Hebrew default, English switcher)
+index.html                         latest Thursday Morning thin overnight News (Hebrew default, English switcher; Wednesday afternoon Markets / Pre-market kept; Wednesday AI digest kept)
 assets/brief.css                   two-lane phone-first + RTL
 assets/i18n.js                     language switch, localStorage, optional #he/#en
 assets/lanes.js                    News / Markets switch (file://-safe; empty hash honors data-lane)
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards; Wednesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
 briefings/2026-09-23-1400/         frozen Wednesday Midday MAIN snapshot (six News cards; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
 briefings/2026-09-23-0850/         frozen Wednesday Morning snapshot (thin overnight News; Tuesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept)
