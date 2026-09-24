@@ -254,6 +254,70 @@ a:hover {
   color: var(--amber);
 }
 
+.session-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  margin: 0.9rem 0 0;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(245, 185, 66, 0.62);
+  background: var(--markets-dim);
+  box-shadow: 0 0 22px rgba(245, 185, 66, 0.2);
+}
+
+.session-banner-section {
+  margin: 0 0 0.9rem;
+}
+
+.session-banner-kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--markets);
+  font-weight: 700;
+}
+
+.session-banner-value {
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  color: #ffe2a3;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.session-banner-asof {
+  flex-basis: 100%;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.opening-summary {
+  margin: 0 0 0.9rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--news);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.opening-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--news);
+  font-weight: 700;
+}
+
+.opening-summary .opening-text {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
 .run-label {
   display: inline-block;
   margin: 0.75rem 0 0;
@@ -336,6 +400,10 @@ a:hover {
 @media (min-width: 400px) {
   .lane-switch {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .lane-switch:not(:has(.lane-btn-premarket)) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

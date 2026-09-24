@@ -29,13 +29,18 @@
     } catch (err) {}
   }
 
+  function panelFor(lane) {
+    return document.getElementById("lane-" + lane);
+  }
+
   function show(lane, opts) {
     opts = opts || {};
     if (LANES.indexOf(lane) < 0) lane = "markets";
+    if (!panelFor(lane)) lane = "markets";
     deck.dataset.lane = lane;
     document.body.dataset.lane = lane;
     LANES.forEach(function (l) {
-      var panel = document.getElementById("lane-" + l);
+      var panel = panelFor(l);
       if (panel) panel.hidden = l !== lane;
     });
     buttons.forEach(function (btn) {
@@ -55,8 +60,12 @@
   window.addEventListener("hashchange", function () {
     if (isLangHash(location.hash)) return;
     var fromHash = laneFromHash(location.hash);
-    show(fromHash || deckLane(), { skipHash: true });
+    var missing = fromHash && !panelFor(fromHash);
+    show(fromHash || deckLane(), { skipHash: !missing });
   });
 
-  show(laneFromHash(location.hash) || deckLane(), { skipHash: true });
+  var requested = laneFromHash(location.hash);
+  var initial = requested || deckLane();
+  var missingPanel = requested && !panelFor(requested);
+  show(initial, { skipHash: !missingPanel });
 })();
