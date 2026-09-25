@@ -1106,6 +1106,35 @@ html[lang="he"] #markets .section-head .kicker {
   line-height: 1.35;
 }
 
+.photo .illus-label {
+  margin: 0 0 0.4rem;
+}
+
+/* Quiet cards and the AI digest are 16:9 illustrations. The support
+   crop stays 3:2. A Markets drop does not remove these figures. */
+html.home .quiet-band .photo img,
+html.edition .ai-list .photo img {
+  aspect-ratio: 16 / 9;
+  max-height: 210px;
+  object-position: center center;
+}
+
+html.edition .ai-lead .photo {
+  max-width: 720px;
+}
+
+html.edition .ai-lead .photo img {
+  aspect-ratio: 16 / 9;
+  max-height: 405px;
+  object-position: center center;
+}
+
+html.home .quiet-band .photo figcaption,
+html.edition .ai-list .photo figcaption {
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
 html.edition .page-foot {
   color: var(--body);
 }
