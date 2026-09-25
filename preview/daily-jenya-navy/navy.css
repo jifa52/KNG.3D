@@ -1,11 +1,11 @@
 /* Isolated navy preview. Does not load edition.css or polish.css.
    Live chrome stays cream / forest / lime. This sheet is the preview only.
 
-   LOGO: assets/daily-jenya-logo.png has a cream background. Grayscale, invert,
-   contrast, and mix-blend-mode: screen hide that box on navy. The art window
-   crops the baked tagline. YOUR MORNING EDITION is the gold HTML line (#dfc481).
-   Brand width is 350px desktop and 245px below 700px. Not a transparent file
-   and not a redraw. Deep navy anchor #102333 remains in the token list.
+   LOGO: assets/daily-jenya-logo.png is the cream lockup, including the baked
+   YOUR MORNING EDITION line. Grayscale, invert, contrast, and mix-blend-mode:
+   screen turn that mark light on navy. The full image is shown. There is no
+   second HTML tagline. Brand width is 350px, and 245px below 700px. Not a
+   transparent file and not a redraw. Deep navy anchor #102333 remains listed.
    Night electric is #91c4eb (the handoff pale #a5d5ff is not the surface color).
 
    Surfaces follow the local night edition: paper #101f2c, page #09141e,
@@ -122,6 +122,7 @@
   --n-markets-rule: #608d70;
   --n-ai: #c1a1ed;
   --n-ai-rule: #786393;
+  --n-purple: #b7a5d5;
   --edition-accent: var(--n-news);
   --edition-rule: var(--n-news-rule);
   --n-sans: "Heebo", "Arial Hebrew", Arial, sans-serif;
@@ -255,30 +256,13 @@ a { color: var(--n-blue); }
   color: #c4d4de;
 }
 
-.n-logo-art {
-  display: block;
-  aspect-ratio: 2.16;
-  overflow: hidden;
-}
-
 .n-logo {
   width: 100%;
   height: auto;
   display: block;
-  opacity: 0.87;
-  /* Cream box suppression. Not a transparent asset. */
+  /* Cream box suppression on the full lockup, including the baked tagline. */
   filter: grayscale(1) invert(1) contrast(2.4);
   mix-blend-mode: screen;
-}
-
-.n-tagline {
-  display: block;
-  direction: ltr;
-  font: 500 12px/1.8 var(--n-sans);
-  letter-spacing: 3.5px;
-  margin-top: 11px;
-  white-space: nowrap;
-  color: var(--n-gold);
 }
 
 .n-edition {
@@ -541,6 +525,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 .n-lead {
   background: #152c3e;
   color: #dde5ea;
+  border: 1px solid #344b5b;
   border-top: 3px solid var(--edition-accent);
 }
 
@@ -1021,8 +1006,6 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   .n-mast { padding: 19px 20px; gap: 14px; }
 
   .n-brand { width: 245px; max-width: calc(100% - 67px); }
-
-  .n-tagline { font-size: 10px; letter-spacing: 2px; margin-top: 9px; }
 
   .n-crawl-head { padding: 3px 14px; gap: 9px; }
 
