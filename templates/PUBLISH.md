@@ -16,9 +16,9 @@ The 24 September 2026 afternoon edition is the polish cutover. `index.html` and 
 
 Same sheet for every cadence. What changes is which blocks are filled:
 
-- **Overnight thin.** One lead, fewer supports, quiet band only if the pack has the stories. Markets is the previous stamp, with that stamp printed, or the section is omitted when the pack has no tape. AI is carried or omitted the same way.
-- **Main news.** Full front: lead, about two supports, quiet band. If this drop does not replace Markets, keep the prior board and print the real stamp. Do not say “today” for an older stamp.
-- **Markets.** Refresh A–F from the new tape. Keep the news front unless the pack replaces a story.
+- **Overnight thin.** One lead, fewer supports, quiet band only if the pack has the stories. Markets is the previous news-first block, with that stamp printed, or the section is omitted when the pack has no tape. AI is carried or omitted the same way.
+- **Main news.** Full front: lead, about two supports, quiet band. If this drop does not replace Markets, keep the prior news-first block and print the real stamp. Do not say “today” for an older stamp.
+- **Markets.** Refresh the snapshot strip, drivers, catalysts, today/next, and the optional story. Keep the news front unless the pack replaces a story.
 - **AI digest.** Refresh `.ai-carry`, `.ai-lead`, and `.ai-list`. Text-first unless a licensed image exists.
 
 The polish preview is not an archive edition. Do not add it to `archive/index.html`. It stays as the study that shipped:
@@ -53,16 +53,26 @@ AI uses the same calm newspaper type: `.ai-carry` when the digest is carried, th
 
 Section ids are `#news`, `#markets`, and `#ai`. `#premarket`, `#lane-news`, `#lane-markets`, and `#lane-ai` scroll to the matching section. Card-layout archives still use `assets/lanes.js` to switch panels. This template does not. Do not put `lanes.js` back on the editorial page or it will hide Markets and AI.
 
-## Markets A–F, after News
+## Markets, after News
 
-Markets is the business section under the news, not the front of the page and not a ticker strip. It is not an HTML table. Each quote is an `article.mkt-line` on a `.mkt-board`: symbol and plain name, price and change on one line, a short flag, and provenance inside `details.mkt-detail`. On a phone the six primary quotes stack. From 860px the primary, secondary, and cash boards are two columns. The page does not scroll sideways.
+From 25 September 2026 the reader hierarchy is a market news brief, not a quote dashboard. Prices are supporting context. The empty structure is the `#markets` block in `templates/edition.html`. Older permalinks that still use quote boards stay as they were. Do not rebuild those pages.
 
-1. **A. Session** (`.mkt-session`). Name the session at the edition clock: pre-market, market open, latest close, or market closed. The edition time is in the masthead. The quote time is the session line and the section head. If the tape is carried, print the actual stamp. Do not say “today” for an older stamp. Do not call delayed data live.
-2. **B. Primary snapshot** (`.mkt-board-primary`). Six rows when the pack has them: S&P 500 future, Nasdaq (the exact future, not the Composite), Dow future, VIX, USD/ILS, WTI. VIX is the **index**, not futures — the flag says so. USD/ILS is **FX spot**, not a future, and a rise means a stronger dollar — the flag says so. Do not swap futures with cash, Nasdaq-100 with the Composite, or WTI with Brent. If a primary instrument has no stamp, show the missing-row pattern (“not in this tape”) and do not invent the number.
-3. **C. Story and basis note** (`.mkt-story`, then `.note` when a second basis changes a number). About 40–60 words. Pattern, what the sources attribute, what is next. Do not restate every cell. Separate what was observed from what was reported from what is interpretation. No invented cause. The note is visible. A details block can repeat the definition. It cannot replace the note.
-4. **D. Secondary** (`.mkt-board-secondary`). Yields, Bitcoin, and any other instrument the pack actually stamped, so they do not bury the six. Yield changes are in basis points, not percent, when that is the pack’s unit.
-5. **E. Cash close** (`.mkt-board-cash`). Only when the pack stamped a cash close. Label it as cash, and as not the futures above. If a newer cash close exists and the pack does not contain it, say the close is absent. Do not reconstruct it. Delete this block when there is no stamp.
-6. **F. Companies and the next 48 hours** (`.companies`, `.upcoming`). Zero to three companies. Name, ticker, the event, why it matters. A price is not a reason to include a name. If the same event is a News story, give only the market implication and a link. Then a chronological list: event, date, confirmed time, one line of relevance. Israel and US Eastern, including which daylight-saving offset is in force. Drop rows whose time has already passed. Do not add heatmaps, gauges, or a watchlist.
+Reader order, top to bottom. Do not reverse it. On a phone the snapshot wraps; it does not become a second story. The page does not scroll sideways.
+
+1. **Snapshot** (`.mkt-snap`). Secondary. A compact strip.
+   - `.mkt-snap-note` is one short freshness note, and only when a real limitation exists: futures are not cash, the US cash session is closed, or a yield is the prior close. No methodology essay. No per-quote timestamp paragraph.
+   - `.mkt-strip` holds up to six `.mkt-chip` items: S&P 500 / ES, Nasdaq / NQ, Dow / YM, VIX, USD/ILS, WTI. Label a future as a future. NQ is not the Composite. VIX is the **index** — the flag says `מדד, לא חוזה` / `Index, not futures`. USD/ILS is **FX spot** — the flag says `שער מט״ח` / `FX spot`, and a rise means a stronger dollar. If the pack stamped cash instead of futures, label those chips as cash. Do not print both.
+   - `.mkt-strip-tuck` is optional and smaller. At most Bitcoin and the US 10-year, when the pack stamped them. If the 10-year stamp is a prior cash close, the flag says so. Do not print a percent change unless that is the pack’s unit.
+   - Do not print RTY, DXY, gold, Brent, or the 30-year as equal peers. Do not add a cash grid. A missing primary stamp is `.mkt-chip--missing` (“אין חותמת בחבילה הזו” / “Not in this tape”). Do not invent the number.
+   - Each chip: symbol linked to the stamp, a plain name, the price, one change, a short flag. The section head prints the real stamp. If the tape is carried, do not say “today.” Do not call delayed data live.
+2. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. Each article: a bilingual headline, one or two short sentences (what happened, and why a market participant may care), and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
+3. **Company catalysts** (`#mkt-catalysts-heading`, `.mkt-catalysts`). About four to eight. Ticker in `.mkt-tick`, the name, the event, why it matters, and `.sources`. A price move is not a reason to include a name. Do not default to the same megacaps unless they have a real event. Cover other sectors when the day has them.
+4. **Today / next** (`.mkt-next`). About two to four items that could matter. Israel time first. US Eastern beside it when the hour is confirmed, including which daylight-saving offset is in force. One short reason only when it is not obvious. Drop rows whose time has already passed. Do not invent an hour.
+5. **Market story** (`.mkt-brief`). Optional, and last. At most three sentences. Do not force a cause for a small move. Delete the block on a quiet day. Do not restate every chip.
+
+Desk pack, in this order, before HTML: SESSION (one label and the real stamp); SNAPSHOT_PRIMARY (the six); SNAPSHOT_SECONDARY (optional Bitcoin and 10-year only); MARKET_DRIVERS; COMPANY_CATALYSTS; TODAY_NEXT; MARKET_STORY (optional); INTERNAL NOTES. Do not print the internal notes.
+
+DOM hooks: `#markets`, `.mkt-snap`, `.mkt-strip`, `.mkt-chip`, `.mkt-strip-tuck`, `.mkt-drivers`, `.mkt-catalysts`, `.mkt-next`, `.mkt-brief`. `#premarket` still scrolls to `#markets`.
 
 ## Freshness
 
@@ -70,7 +80,7 @@ Carried blocks show the real date and time. Replace stale “today / tomorrow”
 
 ## Type
 
-Frank Ruhl Libre (headlines) and Heebo (body) are the faces in use. Both are SIL Open Font License; the license texts and the Hebrew plus Latin woff2 subsets are in `assets/fonts/`. `assets/edition.css` loads them. `assets/polish.css` sets the larger wordmark, the section nav, photographs, the markets boards, and the newspaper AI and archive list. Weights on disk are 500 and 700 (there is no 900 file). Body size is 18.5px, line-height about 1.65–1.7. The lead stays at that size; supports and the quiet band are set smaller on purpose.
+Frank Ruhl Libre (headlines) and Heebo (body) are the faces in use. Both are SIL Open Font License; the license texts and the Hebrew plus Latin woff2 subsets are in `assets/fonts/`. `assets/edition.css` loads them. `assets/polish.css` sets the larger wordmark, the section nav, photographs, the news-first markets brief, and the newspaper AI and archive list. Older polish permalinks still use the quote-board rules in that file. Weights on disk are 500 and 700 (there is no 900 file). Body size is 18.5px, line-height about 1.65–1.7. The lead stays at that size; supports and the quiet band are set smaller on purpose.
 
 Fallback, if a file fails: `"Noto Serif Hebrew", "Times New Roman", Times` for headlines, and `"Noto Sans Hebrew", "Arial Hebrew", Arial` for body. Do not switch faces unless a real load or shaping failure shows up.
 
@@ -89,7 +99,7 @@ There is no publish script that fetches images for a new story. Choosing and cre
 - The page is white. The masthead is the wordmark. The nav is חדשות · שווקים · AI · ארכיון. Crimson is the kicker, the nav rule, and the badge.
 - Both `edition.css` and `polish.css` are linked. `lanes.js`, `brief.css`, and `paper.css` are not.
 - News is the asymmetric front. There is no gray photo placeholder.
-- Markets is A–F, not an HTML table. VIX is labeled as an index. USD/ILS is labeled as FX spot. The six primary quotes can be scanned without reading a paragraph to find the level.
+- Markets is the news-first order above, not quote boards and not an HTML table. The snapshot strip is shorter than the drivers. VIX is labeled as an index. USD/ILS is labeled as FX spot. The six levels can be scanned without reading a paragraph.
 - A carried AI digest says so, in `.ai-carry`, with the real date.
 - Every embedded image has a caption and a row in `IMAGE-CREDITS.md`.
 - Expired calendar rows are gone.

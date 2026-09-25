@@ -5,7 +5,7 @@ This repository is **Brief** — a public, phone-first news deck. Hebrew is the 
 The live edition is one scrolling page. News, then Markets, then AI. Hebrew is the default; English is the switcher. The nav is חדשות · שווקים · AI · ארכיון.
 
 - **News / חדשות** — one lead, two supports, then a quieter band. A photograph only when it is licensed and credited. Otherwise the story is text-first.
-- **Markets / שווקים** — the business section after News, in six parts: session, six primary quotes, a short story, secondary figures, a cash close when one was stamped, then companies and the next 48 hours. VIX is the index. USD/ILS is the FX spot rate.
+- **Markets / שווקים** — a market news brief after News: a compact snapshot strip (ES, NQ, YM, VIX, USD/ILS, WTI), then market drivers, company catalysts, today/next, and an optional short story. VIX is the index. USD/ILS is the FX spot rate. Bitcoin and the 10-year, when stamped, sit smaller under the strip.
 - **AI** — the digest on the same newspaper sheet, one lead then a list
 
 Older permalinks from before this cutover are still the card deck and may show a Pre-market tab. On the current edition, `#premarket` opens Markets.
@@ -14,7 +14,7 @@ Tape is data. There are no trade recommendations.
 
 ## Reader layout
 
-The live homepage is the Modern editorial polish (`assets/edition.css` and `assets/polish.css`): a white page, a light masthead, crimson on kickers, the nav rule, and a small badge. News is an asymmetric front. Markets follows News as quote boards, not a table. One language is on screen.
+The live homepage is the Modern editorial polish (`assets/edition.css` and `assets/polish.css`): a white page, a light masthead, crimson on kickers, the nav rule, and a small badge. News is an asymmetric front. Markets follows News as a news brief, with a compact snapshot strip, not a quote board or a table. One language is on screen.
 
 - Live: `index.html` and `briefings/2026-09-24-1545/`
 - Approved study (kept): `preview/ux-2026-09-24-polish/`
@@ -252,7 +252,7 @@ Prior Close (2 September 2026):
 index.html                         live Modern editorial polish: Thursday News front, Thu ~15:45 pre-open snapshot, Wednesday AI
 assets/brief.css                   card sheet for earlier permalinks and 404
 assets/edition.css                 Modern editorial base (homepage, permalink, archive index, template)
-assets/polish.css                  approved polish: nav, photos, markets boards, newspaper AI and archive
+assets/polish.css                  approved polish: nav, photos, news-first markets, newspaper AI and archive
 assets/images/                     licensed photographs for the current edition
 assets/fonts/                      Frank Ruhl Libre + Heebo subsets (SIL OFL)
 preview/ux-2026-09-24-polish/      approved polish study — kept, not an archive edition

@@ -55,8 +55,10 @@ jobs:
           grep -q 'Frank Ruhl Libre' assets/edition.css
           grep -q '#8b1e2d' assets/edition.css
           grep -q '#ffffff' assets/edition.css
+          grep -q 'mkt-snap' assets/polish.css
+          grep -q 'mkt-drivers' assets/polish.css
+          # Older polish permalinks keep the quote boards. Live and the template are news-first.
           grep -q 'mkt-board-primary' assets/polish.css
-          # Live homepage is the approved polish sheet.
           for page in index.html briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
             grep -q 'edition.css' "$page"
             grep -q 'polish.css' "$page"
@@ -64,9 +66,6 @@ jobs:
             grep -q 'id="news"' "$page"
             grep -q 'id="markets"' "$page"
             grep -q 'id="ai"' "$page"
-            grep -q 'mkt-board-primary' "$page"
-            grep -q 'mkt-board-secondary' "$page"
-            grep -q 'mkt-board-cash' "$page"
             grep -q 'ai-lead' "$page"
             grep -q '#premarket' "$page"
             if grep -q 'img-ph' "$page"; then
@@ -74,7 +73,24 @@ jobs:
               exit 1
             fi
             if grep -q 'mkt-table' "$page"; then
-              echo "markets boards, not a table, on $page"
+              echo "markets is not an HTML table on $page"
+              exit 1
+            fi
+          done
+          for page in briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html; do
+            grep -q 'mkt-board-primary' "$page"
+            grep -q 'mkt-board-secondary' "$page"
+            grep -q 'mkt-board-cash' "$page"
+          done
+          for page in index.html templates/edition.html; do
+            grep -q 'mkt-snap' "$page"
+            grep -q 'mkt-strip' "$page"
+            grep -q 'mkt-drivers' "$page"
+            grep -q 'mkt-catalysts' "$page"
+            grep -q 'mkt-next' "$page"
+            grep -q 'mkt-brief' "$page"
+            if grep -q 'mkt-board-primary' "$page"; then
+              echo "live markets is a news brief, not quote boards, on $page"
               exit 1
             fi
           done
