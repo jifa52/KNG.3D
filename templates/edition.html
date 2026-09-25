@@ -54,8 +54,9 @@
   Each card has a kicker, the facts, .why (למה זה חשוב / Why it matters),
   .card-meta (confidence, source, Jerusalem time), and .sources.
   מאומת / Confirmed needs two independent sources. One newsletter is סביר / Likely at most.
-  An AI picture uses p.illus-label inside figure.photo:
-  המחשה (AI) · לא צילום חדשות / AI illustration · not a news photograph.
+  An AI picture has no badge. Under the image, figcaption.illus-caption
+  reads only המחשה (AI) / AI Illustration. Do not add a pill, and do not
+  write a long “not the event” sentence in that caption.
   Do not present generated art as a photograph of the event or of a real person.
   Keep a material caveat in the prose. No in-site long read.
   VIX is the index, not futures. USD/ILS is FX spot, not a future.
@@ -177,13 +178,12 @@
         </div>
         <div class="quiet-band">
           <article>
-            <!-- keep-photo-slot: quiet. Copy EVERY keep-photo-slot from the live index.html onto the homepage and the same-day permalinks, including cards that are not in this sample. A Markets drop does not delete them. Remove illus-label only when the file is a licensed photograph, and then write a photo credit. An illustration is never captioned as a news photograph. Do not invent a photograph of the event or of a person. -->
+            <!-- keep-photo-slot: quiet. Copy EVERY keep-photo-slot from the live index.html onto the homepage and the same-day permalinks, including cards that are not in this sample. A Markets drop does not delete them. A licensed photograph uses a photo credit in figcaption and has no illus-caption. An illustration uses only figcaption.illus-caption under the image: המחשה (AI) / AI Illustration. No badge, and no long “not the event” sentence. Do not invent a photograph of the event or of a person. -->
             <figure class="photo photo--support">
-              <p class="illus-label"><span data-lang="he">המחשה (AI) · לא צילום חדשות</span><span data-lang="en">AI illustration · not a news photograph</span></p>
               <img src="../assets/images/{{quiet_file}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" decoding="async">
-              <figcaption>
-                <span data-lang="he">המחשה (AI) · לא צילום חדשות. {{מה רואים, ולמה זה לא האירוע ולא אדם אמיתי}}</span>
-                <span data-lang="en">AI illustration · not a news photograph. {{what it shows, and why it is not the event and not a real person}}</span>
+              <figcaption class="illus-caption">
+                <span data-lang="he">המחשה (AI)</span>
+                <span data-lang="en">AI Illustration</span>
               </figcaption>
             </figure>
             <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
@@ -299,11 +299,10 @@
           <article class="ai-lead">
             <!-- keep-photo-slot: ai-lead. Keep on a carried digest and on a Markets drop. Delete only when this item has no credited picture. -->
             <figure class="photo">
-              <p class="illus-label"><span data-lang="he">המחשה (AI) · לא צילום חדשות</span><span data-lang="en">AI illustration · not a news photograph</span></p>
               <img src="../assets/images/{{ai_lead_file}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" decoding="async">
-              <figcaption>
-                <span data-lang="he">המחשה (AI) · לא צילום חדשות. {{מה רואים, ולמה זה לא מעבדה ולא מוצר}}</span>
-                <span data-lang="en">AI illustration · not a news photograph. {{what it shows, and why it is not a lab and not a product}}</span>
+              <figcaption class="illus-caption">
+                <span data-lang="he">המחשה (AI)</span>
+                <span data-lang="en">AI Illustration</span>
               </figcaption>
             </figure>
             <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
@@ -319,11 +318,10 @@
             <article>
               <!-- keep-photo-slot: ai-list. Optional. Keep it when the live item already has a figure. -->
               <figure class="photo photo--support">
-                <p class="illus-label"><span data-lang="he">המחשה (AI) · לא צילום חדשות</span><span data-lang="en">AI illustration · not a news photograph</span></p>
                 <img src="../assets/images/{{ai_list_file}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" decoding="async">
-                <figcaption>
-                  <span data-lang="he">המחשה (AI) · לא צילום חדשות. {{מה רואים}}</span>
-                  <span data-lang="en">AI illustration · not a news photograph. {{what it shows}}</span>
+                <figcaption class="illus-caption">
+                  <span data-lang="he">המחשה (AI)</span>
+                  <span data-lang="en">AI Illustration</span>
                 </figcaption>
               </figure>
               <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>

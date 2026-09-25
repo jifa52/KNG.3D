@@ -123,8 +123,8 @@ jobs:
           grep -q 'datacenter-racks-1280.jpg' index.html
           grep -q 'photo--support' index.html
           grep -q 'keep-photo-slot' templates/edition.html
-          grep -q 'המחשה (AI) · לא צילום חדשות' templates/edition.html
-          grep -q 'AI illustration · not a news photograph' templates/edition.html
+          grep -q 'class="illus-caption"' templates/edition.html
+          grep -q 'AI Illustration' templates/edition.html
           for page in index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-1545/index.html; do
             for needle in \
               yanbu-nasa-1920.jpg \
@@ -139,8 +139,9 @@ jobs:
               ai-opus-chip.jpg \
               'keep-photo-slot: news-01' \
               'keep-photo-slot: news-08' \
-              'המחשה (AI) · לא צילום חדשות' \
-              'AI illustration · not a news photograph'
+              'class="illus-caption"' \
+              'המחשה (AI)' \
+              'AI Illustration'
             do
               grep -q "$needle" "$page"
             done
@@ -149,6 +150,33 @@ jobs:
           grep -q 'photo--support' briefings/2026-09-25-1400/index.html
           grep -q 'photo--support' templates/edition.html
           grep -q 'figure class="photo"' templates/edition.html
+          # AI pictures: a quiet caption under the image. No forest badge and no long disclaimer.
+          for page in index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
+            if grep -q 'illus-label' "$page"; then
+              echo "no AI badge on $page"
+              exit 1
+            fi
+            if grep -q 'לא צילום חדשות' "$page" || grep -q 'not a news photograph' "$page"; then
+              echo "no long AI disclaimer on $page"
+              exit 1
+            fi
+            grep -q 'class="illus-caption"' "$page"
+            grep -q 'המחשה (AI)' "$page"
+            grep -q 'AI Illustration' "$page"
+          done
+          for page in index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html; do
+            test "$(grep -c 'class="illus-caption"' "$page")" -eq 6
+            grep -q 'צילום: הצי האמריקאי' "$page"
+            grep -q 'Carl Lender' "$page"
+            grep -q 'NASA' "$page"
+          done
+          test "$(grep -c 'class="illus-caption"' templates/edition.html)" -eq 3
+          if grep -q 'illus-label' assets/polish.css; then
+            echo "polish.css does not style an AI badge"
+            exit 1
+          fi
+          grep -q 'figcaption.illus-caption' assets/polish.css
+          grep -q 'var(--muted)' assets/polish.css
           grep -q 'למה זה חשוב' index.html
           grep -q 'Why it matters' index.html
           grep -q 'crawl-track' index.html
