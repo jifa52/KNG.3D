@@ -3,7 +3,12 @@
 
    LOGO: assets/daily-jenya-logo.png has a cream background. The rules below
    (grayscale, invert, contrast, mix-blend-mode: screen) hide that box on navy.
-   This is a CSS treatment, not a transparent logo file.
+   The mast renders it up to 480px wide so YOUR MORNING EDITION can be read.
+   This is a CSS treatment, not a transparent logo file and not a redraw.
+
+   Surfaces: deep navy #102333 stays the anchor. Supporting paper, ice, and
+   catalyst bands are a darker cool set so the page reads as dark mode.
+   Pale blue #a5d5ff is for text and hierarchy. #2068e8 is the ticker rule.
 
    Type: Heebo has 400/500/600 on disk. Frank Ruhl Libre has 500/700.
    Lead uses Heebo 600. There is no Heebo 700 file, so the lead is not
@@ -103,14 +108,16 @@
   --n-night: #102333;
   --n-blue: #a5d5ff;
   --n-electric: #2068e8;
-  --n-paper: #f2f5f7;
-  --n-ink: #152839;
-  --n-muted: #536474;
-  --n-ice: #dceafb;
-  --n-support: #dbe7ed;
+  --n-paper: #162a3a;
+  --n-ink: #e7f0f7;
+  --n-muted: #b7cce0;
+  --n-ice: #1c3d56;
+  --n-support: #1a3548;
+  --n-catalyst: #1a3a4e;
+  --n-line: #6a8da6;
   --n-sans: "Heebo", "Arial Hebrew", Arial, sans-serif;
   --n-serif: "Frank Ruhl Libre", "Times New Roman", Times, serif;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html:not([lang="en"]) [data-lang="en"] { display: none !important; }
@@ -128,7 +135,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #d5e0e8;
+  background: #0b1620;
   color: var(--n-ink);
   font-family: var(--n-sans);
   font-weight: 400;
@@ -138,7 +145,7 @@ body {
 
 img { max-width: 100%; }
 
-a { color: var(--n-electric); }
+a { color: var(--n-blue); }
 
 .skip {
   position: absolute;
@@ -146,8 +153,8 @@ a { color: var(--n-electric); }
   top: 8px;
   z-index: 5;
   transform: translateY(-140%);
-  background: #fff;
-  color: var(--n-ink);
+  background: var(--n-night);
+  color: #f5f8fc;
   padding: 8px 12px;
 }
 
@@ -188,7 +195,7 @@ a { color: var(--n-electric); }
   margin: 0;
   padding: 10px 32px;
   background: #183247;
-  color: var(--n-ice);
+  color: #d7e7f3;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -204,14 +211,22 @@ a { color: var(--n-electric); }
 .n-mast {
   display: flex;
   direction: ltr;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 17px 0 13px;
+  gap: 16px 28px;
+  padding: 18px 0 14px;
+}
+
+.n-brand {
+  flex: 1 1 320px;
+  min-width: 0;
+  margin: 0;
 }
 
 .n-logo {
-  width: min(190px, 42vw);
+  width: 100%;
+  max-width: 480px;
   height: auto;
   display: block;
   /* Cream box suppression. Not a transparent asset. */
@@ -307,6 +322,90 @@ html[lang="en"] .n-edition { direction: ltr; }
   padding: 8px 0;
 }
 
+.n-crawl {
+  background: #0c1c29;
+  color: #e7f0f7;
+  border-top: 2px solid var(--n-electric);
+}
+
+.n-crawl-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 32px 0;
+}
+
+.n-crawl-kicker {
+  margin: 0;
+  color: var(--n-blue);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+html[lang="he"] .n-crawl-kicker { letter-spacing: 0.01em; }
+
+.n-crawl-pause {
+  flex: 0 0 auto;
+  padding: 0 2px;
+  color: #d7e7f3;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.n-crawl-viewport { overflow: hidden; }
+
+.n-crawl-track {
+  display: flex;
+  width: max-content;
+  animation: n-crawl 42s linear infinite;
+}
+
+.n-crawl.is-paused .n-crawl-track { animation-play-state: paused; }
+
+.n-crawl-seq {
+  display: flex;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0.45rem 0.9rem 0.65rem;
+  list-style: none;
+}
+
+.n-crawl-seq li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  white-space: nowrap;
+  font-size: 14.5px;
+}
+
+.n-crawl-sym {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.n-crawl-px {
+  font-family: var(--n-serif);
+  font-weight: 700;
+  color: var(--n-blue);
+  font-size: 1.05rem;
+}
+
+.n-crawl-chg { font-weight: 600; color: #e7f0f7; }
+
+.n-crawl-flag {
+  color: #b7cce0;
+  font-size: 12px;
+}
+
+@keyframes n-crawl {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 .n-issue {
   display: none;
   justify-content: space-between;
@@ -356,7 +455,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   font-size: 12px;
   letter-spacing: .04em;
   line-height: 1.5;
-  color: #346daa;
+  color: #8ec4f0;
   margin-bottom: 12px;
 }
 
@@ -463,7 +562,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 .n-why {
   font-size: 15px;
   line-height: 1.7;
-  border-inline-start: 2px solid var(--n-electric);
+  border-inline-start: 2px solid var(--n-blue);
   padding-inline-start: 14px;
 }
 
@@ -471,7 +570,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   display: block;
   font-size: 12px;
   letter-spacing: .02em;
-  color: #20569d;
+  color: var(--n-blue);
   margin-bottom: 4px;
   font-weight: 600;
 }
@@ -487,7 +586,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   min-width: 0;
 }
 
-.n-confidence { color: #385672; font-weight: 500; }
+.n-confidence { color: #cfe0ee; font-weight: 500; }
 
 .n-sources { font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
 
@@ -496,7 +595,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 .n-credit {
   font-size: 12.5px;
   line-height: 1.55;
-  color: #3d5364;
+  color: #9eb6c8;
 }
 
 .n-support,
@@ -511,7 +610,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   gap: 16px;
   padding-bottom: 14px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #c4cfd9;
+  border-bottom: 1px solid var(--n-line);
 }
 
 .n-sectiontitle h2 {
@@ -522,7 +621,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 
 .n-sectiontitle span {
   font-size: 12px;
-  color: #5d7182;
+  color: #9eb6c8;
   text-align: end;
 }
 
@@ -559,7 +658,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 .n-story .n-why { margin-top: 16px; }
 
 .n-story .n-meta {
-  border-top: 1px solid #ccd6df;
+  border-top: 1px solid var(--n-line);
   margin-top: 16px;
   padding-top: 12px;
 }
@@ -593,7 +692,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 
 .n-stack .n-story {
   padding-bottom: 18px;
-  border-bottom: 1px solid #c5d1da;
+  border-bottom: 1px solid var(--n-line);
 }
 
 .n-stack .n-story:last-child { border-bottom: 0; padding-bottom: 0; }
@@ -641,14 +740,14 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 
 .n-grid .n-story {
   padding-bottom: 18px;
-  border-bottom: 1px solid #becbd5;
+  border-bottom: 1px solid var(--n-line);
 }
 
 #mkt-catalysts .n-grid { gap: 14px; }
 
 #mkt-catalysts .n-story {
   padding: 20px 18px 16px;
-  background: #e2ebf0;
+  background: var(--n-catalyst);
   border-bottom: 0;
 }
 
@@ -656,7 +755,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   display: inline-block;
   direction: ltr;
   font-weight: 600;
-  color: #20569d;
+  color: var(--n-blue);
   margin-inline-end: 6px;
 }
 
@@ -670,7 +769,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 .n-snapshot {
   margin-top: 28px;
   padding-top: 18px;
-  border-top: 1px solid #bbcbd5;
+  border-top: 1px solid var(--n-line);
 }
 
 .n-snapshot h2 {
@@ -697,9 +796,9 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 .n-chip {
   min-width: 0;
   padding-top: 8px;
-  border-top: 1px solid #c5d1da;
+  border-top: 1px solid var(--n-line);
   font-size: 13px;
-  color: #3e5262;
+  color: var(--n-muted);
 }
 
 .n-chip a {
@@ -794,6 +893,7 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
 @container (max-width: 420px) {
   .n-flag,
   .n-header,
+  .n-crawl-head,
   .n-issue,
   .n-lead-copy,
   .n-lead-bottom,
@@ -806,8 +906,6 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   .n-footer { padding-left: 16px; padding-right: 16px; }
 
   .n-header { padding-top: 0; padding-bottom: 0; }
-
-  .n-logo { width: 148px; }
 
   .n-nav { gap: 4px 16px; }
 
@@ -841,4 +939,19 @@ html[data-section="ai"] .n-issue[data-for="ai"] {
   }
 
   .n-photo:hover img { transform: none; }
+
+  .n-crawl-track {
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .n-crawl-seq[aria-hidden="true"] { display: none; }
+
+  .n-crawl-seq {
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 0.35rem;
+  }
+
+  .n-crawl-pause { display: none; }
 }
