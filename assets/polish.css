@@ -281,26 +281,39 @@ html[dir="ltr"] .mkt-id {
   line-height: 1.25;
 }
 
+/* Flow by default. Absolute pinning is only for quote lines below.
+   A global absolute + left/right piles every snapshot chip on one edge. */
 .mkt-pxchg {
-  position: absolute;
-  top: 0.16rem;
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: baseline;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 0.55rem;
   direction: ltr;
+  unicode-bidi: isolate;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
-html[dir="rtl"] .mkt-pxchg {
-  left: 0;
+.mkt-line .mkt-pxchg {
+  position: absolute;
+  top: 0.16rem;
+  justify-content: flex-end;
 }
 
-html[dir="ltr"] .mkt-pxchg {
+html[dir="rtl"] .mkt-line .mkt-pxchg {
+  left: 0;
+  right: auto;
+}
+
+html[dir="ltr"] .mkt-line .mkt-pxchg {
   right: 0;
+  left: auto;
 }
 
 .mkt-px {
@@ -577,16 +590,28 @@ a.mkt-sym:hover {
   font-weight: 500;
 }
 
-html[dir="rtl"] .mkt-chip .mkt-pxchg,
-html[dir="ltr"] .mkt-chip .mkt-pxchg {
+.mkt-chip .mkt-pxchg {
   position: static;
+  top: auto;
   left: auto;
   right: auto;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   flex: 1 0 100%;
+  align-items: baseline;
   justify-content: flex-start;
-  gap: 0.4rem;
+  gap: 0.45rem;
+  direction: ltr;
+  unicode-bidi: isolate;
+  white-space: nowrap;
   margin-top: 0.02rem;
+}
+
+.mkt-chip .mkt-px,
+.mkt-chip .mkt-chg {
+  position: static;
+  display: inline-block;
 }
 
 .mkt-chip .mkt-px {
