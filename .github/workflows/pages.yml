@@ -48,6 +48,9 @@ jobs:
             preview/ux-2026-09-24/index.html \
             preview/ux-2026-09-24-polish/index.html \
             preview/ux-2026-09-24-polish/IMAGE-CREDITS.md \
+            preview/daily-jenya-navy/index.html \
+            preview/daily-jenya-navy/navy.css \
+            preview/daily-jenya-navy/navy.js \
             briefings/2026-09-24-1545/IMAGE-CREDITS.md \
             templates/edition.html \
             templates/IMAGE-CREDITS.md \
@@ -56,6 +59,24 @@ jobs:
             test -f "$f"
             echo "ok $f"
           done
+          grep -q '#102333' preview/daily-jenya-navy/navy.css
+          grep -q '#A5D5FF' preview/daily-jenya-navy/navy.css || grep -q '#a5d5ff' preview/daily-jenya-navy/navy.css
+          grep -q 'Your Morning Edition' preview/daily-jenya-navy/index.html
+          grep -q 'id="mkt-drivers"' preview/daily-jenya-navy/index.html
+          grep -q 'id="mkt-catalysts"' preview/daily-jenya-navy/index.html
+          grep -q 'id="mkt-next"' preview/daily-jenya-navy/index.html
+          grep -q 'id="mkt-snap"' preview/daily-jenya-navy/index.html
+          if grep -E -q 'window\.openai|new Tweak|harbor\.webp|chip\.webp' \
+            preview/daily-jenya-navy/index.html \
+            preview/daily-jenya-navy/navy.js
+          then
+            echo "navy preview must not ship the handoff sandbox or sample art"
+            exit 1
+          fi
+          if grep -q 'edition.css' preview/daily-jenya-navy/index.html; then
+            echo "navy preview must not load the live sheet"
+            exit 1
+          fi
           grep -q 'PREVIEW' preview/ux-2026-09-24/index.html
           grep -q 'edition.css' preview/ux-2026-09-24/index.html
           grep -q 'Frank Ruhl Libre' assets/edition.css
