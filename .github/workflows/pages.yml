@@ -3,6 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -41,6 +42,14 @@ jobs:
             assets/images/yanbu-nasa-960.jpg \
             assets/images/tanker-abot-1280.jpg \
             assets/images/datacenter-racks-1280.jpg \
+            assets/images/hormuz-nasa-1600.jpg \
+            assets/images/hormuz-nasa-960.jpg \
+            assets/images/ai-medicare-security.jpg \
+            assets/images/ai-muse-charm.jpg \
+            assets/images/ai-kyiv-memorial.jpg \
+            assets/images/ai-drone-grounded.jpg \
+            assets/images/ai-claude-art.jpg \
+            assets/images/ai-opus-chip.jpg \
             briefings/2026-09-25-1400/IMAGE-CREDITS.md \
             assets/fonts/FrankRuhlLibre-700-hebrew.woff2 \
             assets/fonts/Heebo-400-hebrew.woff2 \
@@ -113,6 +122,30 @@ jobs:
           grep -q 'tanker-abot-1280.jpg' index.html
           grep -q 'datacenter-racks-1280.jpg' index.html
           grep -q 'photo--support' index.html
+          grep -q 'keep-photo-slot' templates/edition.html
+          grep -q 'המחשה (AI) · לא צילום חדשות' templates/edition.html
+          grep -q 'AI illustration · not a news photograph' templates/edition.html
+          for page in index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-1545/index.html; do
+            for needle in \
+              yanbu-nasa-1920.jpg \
+              tanker-abot-1280.jpg \
+              datacenter-racks-1280.jpg \
+              hormuz-nasa-1600.jpg \
+              ai-medicare-security.jpg \
+              ai-muse-charm.jpg \
+              ai-kyiv-memorial.jpg \
+              ai-drone-grounded.jpg \
+              ai-claude-art.jpg \
+              ai-opus-chip.jpg \
+              'keep-photo-slot: news-01' \
+              'keep-photo-slot: news-08' \
+              'המחשה (AI) · לא צילום חדשות' \
+              'AI illustration · not a news photograph'
+            do
+              grep -q "$needle" "$page"
+            done
+            test "$(grep -c 'keep-photo-slot:' "$page")" -ge 10
+          done
           grep -q 'photo--support' briefings/2026-09-25-1400/index.html
           grep -q 'photo--support' templates/edition.html
           grep -q 'figure class="photo"' templates/edition.html

@@ -4,9 +4,9 @@ This repository is **The Daily Jenya** — a public, phone-first morning edition
 
 The live edition is one scrolling page. News, then Markets, then AI. Hebrew is the default; English is the switcher. The nav is חדשות · שווקים · AI · ארכיון.
 
-- **News / חדשות** — short cards: one lead, supports, then a quieter band. Each card has a kicker, the facts, and **למה זה חשוב / Why it matters**. A photograph only when it is licensed and credited. Otherwise the story is text-first.
+- **News / חדשות** — short cards: one lead, supports, then a quieter band. Each card has a kicker, the facts, and **למה זה חשוב / Why it matters**. A photograph only when it is licensed and credited. An illustration is allowed only with **המחשה (AI) · לא צילום חדשות** / **AI illustration · not a news photograph**. Otherwise the story is text-first. A Markets-only drop keeps every picture slot already on the page.
 - **Markets / שווקים** — a market news brief after News: drivers, company catalysts, today/next, an optional short story, then a compact snapshot (ES, NQ, YM, VIX, USD/ILS, WTI). The same six also crawl under the nav. VIX is the index. USD/ILS is the FX spot rate. Bitcoin and the 10-year, when stamped, sit smaller under the strip.
-- **AI** — the digest on the same sheet, one lead then a list. An AI picture, when used, is labeled **המחשה (AI)** / **AI illustration**.
+- **AI** — the digest on the same sheet, one lead then a list. An AI picture, when used, is labeled **המחשה (AI) · לא צילום חדשות** / **AI illustration · not a news photograph**.
 
 Older permalinks from before this cutover are still the card deck and may show a Pre-market tab. On the current edition, `#premarket` opens Markets.
 
