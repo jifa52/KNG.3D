@@ -4,8 +4,9 @@
    preview/ux-2026-09-24-polish/polish.css (html.polish). Do not load this
    file on earlier card-layout briefings.
 
-   Markets order on the page: A session, B primary six, C story and basis
-   note, D secondary, E cash close when stamped, F companies and 48 hours.
+   Markets on the live page is news-first: a compact .mkt-snap strip, then
+   .mkt-drivers, .mkt-catalysts, .mkt-next, and an optional .mkt-brief.
+   Older polish permalinks still use the quote boards (.mkt-board-*).
 */
 
 html.edition .brand {
@@ -488,15 +489,242 @@ html[lang="he"] .edition-when {
 }
 
 @media (max-width: 420px) {
-  .mkt-px {
+  .mkt-line .mkt-px {
     font-size: 1.05rem;
   }
 
-  .mkt-chg {
+  .mkt-line .mkt-chg {
     font-size: 0.95rem;
   }
 
-  .mkt-pxchg {
+  .mkt-line .mkt-pxchg {
     gap: 0.4rem;
+  }
+}
+
+/* News-first markets. Snapshot is a strip. Drivers and catalysts take the column.
+   Quote-board rules above stay for older polish permalinks. */
+
+.mkt-snap {
+  margin: 0 0 0.25rem;
+}
+
+.mkt-snap-kicker {
+  margin: 0 0 0.3rem;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+html[lang="he"] .mkt-snap-kicker {
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.mkt-snap-note {
+  margin: 0 0 0.45rem;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.mkt-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin: 0;
+  padding: 0.4rem 0 0.15rem;
+  border-top: 1px solid var(--rule);
+}
+
+.mkt-chip {
+  flex: 1 1 8.75rem;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.4rem;
+  row-gap: 0.05rem;
+  padding: 0.12rem 0 0.35rem;
+}
+
+a.mkt-sym {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+a.mkt-sym:hover {
+  color: var(--accent);
+}
+
+.mkt-chip .mkt-sym {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-inline-end: 0;
+}
+
+.mkt-chip .mkt-name {
+  flex: 1 1 auto;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .mkt-chip .mkt-pxchg,
+html[dir="ltr"] .mkt-chip .mkt-pxchg {
+  position: static;
+  left: auto;
+  right: auto;
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  margin-top: 0.02rem;
+}
+
+.mkt-chip .mkt-px {
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.mkt-chip .mkt-chg {
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.mkt-chip .mkt-flag {
+  flex: 1 0 100%;
+  color: var(--faint);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.mkt-strip-tuck {
+  border-top: 0;
+  padding-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+.mkt-strip-tuck .mkt-chip {
+  flex: 0 1 11rem;
+}
+
+.mkt-strip-tuck .mkt-px,
+.mkt-strip-tuck .mkt-chg,
+.mkt-strip-tuck .mkt-name,
+.mkt-strip-tuck .mkt-sym {
+  font-size: 0.78rem;
+}
+
+.mkt-chip--missing .mkt-pxchg {
+  display: none;
+}
+
+.mkt-drivers article,
+.mkt-catalysts article {
+  padding: 0.95rem 0 1.05rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.mkt-drivers h3,
+.mkt-catalysts h3,
+.mkt-brief p {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+.mkt-drivers h3,
+.mkt-catalysts h3 {
+  font-size: clamp(1.28rem, 2.5vw, 1.62rem);
+  line-height: 1.22;
+  margin: 0 0 0.4rem;
+}
+
+.mkt-drivers .body,
+.mkt-catalysts .body {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: var(--body);
+}
+
+.mkt-tick {
+  font-family: var(--sans);
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.mkt-next {
+  margin-top: 0.35rem;
+}
+
+.mkt-next .lede {
+  margin: 0 0 0.35rem;
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.mkt-next ol {
+  margin: 0.2rem 0 0;
+  padding-inline-start: 1.15rem;
+}
+
+.mkt-next li {
+  margin: 0.65rem 0;
+}
+
+.mkt-next .when {
+  display: block;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.08rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.mkt-next li p {
+  margin: 0.15rem 0 0;
+  max-width: 42rem;
+  color: var(--body);
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+
+.mkt-brief {
+  margin: 1.15rem 0 0;
+  max-width: 42rem;
+  padding-top: 0.15rem;
+}
+
+.mkt-brief p {
+  margin: 0.25rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+@media (min-width: 860px) {
+  .mkt-strip .mkt-chip {
+    flex: 1 1 0;
+  }
+
+  .mkt-strip-tuck .mkt-chip {
+    flex: 0 1 14rem;
   }
 }

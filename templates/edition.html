@@ -129,125 +129,86 @@
       <section class="section" id="markets" aria-labelledby="markets-kicker">
         <header class="section-head">
           <h2 class="kicker" id="markets-kicker"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></h2>
-          <p class="section-when"><span data-lang="he">{{תמונת מצב · תאריך · שעה}}</span><span data-lang="en">{{snapshot · date · time}}</span></p>
+          <p class="section-when"><span data-lang="he">{{תמונת מצב · תאריך · שעה אמיתית}}</span><span data-lang="en">{{snapshot · date · real time}}</span></p>
         </header>
 
-        <!-- A. Session. Name pre-market, open, latest close, or closed. Print the real stamp. -->
-        <div class="mkt-session">
-          <p><span data-lang="he">{{יום ושעת המהדורה}}</span><span data-lang="en">{{edition day and clock}}</span></p>
-          <p class="mkt-state"><span data-lang="he">{{מצב_המסחר}}</span><span data-lang="en">{{pre-market | market open | latest close | market closed}}</span></p>
-          <p><span data-lang="he">{{טווח הציטוטים, ושהזו תמונת מצב}}</span><span data-lang="en">{{quote window, and that this is a snapshot}}</span></p>
-        </div>
-
-        <!-- B. Primary six: ES, NQ, YM, VIX (index, not futures), USD/ILS (FX spot, not futures), WTI. -->
-        <h3 class="mkt-label"><span data-lang="he">השערים העיקריים</span><span data-lang="en">Primary snapshot</span></h3>
-        <div class="mkt-board mkt-board-primary">
-          <article class="mkt-line">
-            <div class="mkt-id">
-              <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
-              <span class="mkt-name"><span data-lang="he">{{שם בעברית פשוטה}}</span><span data-lang="en">{{plain English name}}</span></span>
-            </div>
-            <div class="mkt-pxchg">
-              <span class="mkt-px"><bdi>{{last}}</bdi></span>
-              <span class="mkt-chg"><bdi>{{one_change}}</bdi></span>
-            </div>
-            <div class="mkt-meta">
-              <span class="mkt-flag"><span data-lang="he">{{חוזה או מדד או שער מט״ח}} · ~<bdi class="num">{{HH:MM}}</bdi></span><span data-lang="en">{{future, index, or FX spot}} · ~<bdi class="num">{{HH:MM}}</bdi></span></span>
-              <details class="mkt-detail">
-                <summary><span data-lang="he"><bdi>{{symbol}}</bdi> · פירוט</span><span data-lang="en"><bdi>{{symbol}}</bdi> · Details</span></summary>
-                <p data-lang="he">{{בסיס, סימול, חותמת UTC}} <a href="{{url}}">{{source}}</a>.</p>
-                <p data-lang="en">{{basis, symbol, UTC stamp}} <a href="{{url}}">{{source}}</a>.</p>
-              </details>
-            </div>
-          </article>
-          <article class="mkt-line mkt-line--missing">
-            <div class="mkt-id">
+        <!-- 1. SNAPSHOT. Compact strip. Six chips, then at most BTC and 10Y tucked smaller.
+             Label futures as futures. VIX flag: מדד, לא חוזה / Index, not futures.
+             USD/ILS flag: שער מט״ח / FX spot. If the pack stamped cash instead, label the chips as cash.
+             One freshness note only when a real limitation exists. No methodology essay.
+             Do not print RTY, DXY, gold, Brent, or the 30-year as peers. Do not add a cash grid.
+             Missing stamp: mkt-chip--missing, and do not invent the number. -->
+        <div class="mkt-snap">
+          <p class="mkt-snap-kicker"><span data-lang="he">תמונת מצב</span><span data-lang="en">Snapshot</span></p>
+          <p class="mkt-snap-note"><span data-lang="he">{{הערת טריות אחת, אם יש מגבלה אמיתית}}</span><span data-lang="en">{{one freshness note, if a real limitation exists}}</span></p>
+          <div class="mkt-strip">
+            <article class="mkt-chip">
+              <a class="mkt-sym" href="{{quote_url}}"><bdi>{{ES}}</bdi></a>
+              <span class="mkt-name"><span data-lang="he">{{שם קצר}}</span><span data-lang="en">{{short name}}</span></span>
+              <span class="mkt-pxchg"><span class="mkt-px"><bdi class="num">{{last}}</bdi></span><span class="mkt-chg"><bdi class="num">{{one_change}}</bdi></span></span>
+              <span class="mkt-flag"><span data-lang="he">{{חוזה, לא המדד}}</span><span data-lang="en">{{future, not the index}}</span></span>
+            </article>
+            <article class="mkt-chip mkt-chip--missing">
               <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
               <span class="mkt-name"><span data-lang="he">{{שם בלי חותמת}}</span><span data-lang="en">{{name with no stamp}}</span></span>
-            </div>
-            <div class="mkt-meta">
               <span class="mkt-flag"><span data-lang="he">אין חותמת בחבילה הזו</span><span data-lang="en">Not in this tape</span></span>
-            </div>
-          </article>
-        </div>
-
-        <!-- C. Story, then any basis note that changes a number. -->
-        <div class="mkt-story">
-          <p data-lang="he">{{40_עד_60_מילים}}</p>
-          <p data-lang="en">{{forty_to_sixty_words}}</p>
-        </div>
-        <p class="note">{{visible_basis_note_if_a_second_basis_exists}}</p>
-
-        <!-- D. Secondary: yields in basis points, Bitcoin, and anything else the pack stamped. -->
-        <h3 class="mkt-label"><span data-lang="he">נתונים נוספים מאותה תמונה</span><span data-lang="en">More from the same snapshot</span></h3>
-        <p class="mkt-aside"><span data-lang="he">{{למה השורות האלה לא למעלה}}</span><span data-lang="en">{{why these rows are not above}}</span></p>
-        <div class="mkt-board mkt-board-secondary">
-          <article class="mkt-line">
-            <div class="mkt-id">
-              <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
+            </article>
+          </div>
+          <div class="mkt-strip mkt-strip-tuck">
+            <article class="mkt-chip">
+              <a class="mkt-sym" href="{{quote_url}}"><bdi>{{BTC_or_10Y}}</bdi></a>
               <span class="mkt-name"><span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span></span>
-            </div>
-            <div class="mkt-pxchg">
-              <span class="mkt-px"><bdi>{{last}}</bdi></span>
-              <span class="mkt-chg"><bdi>{{change_or_bp}}</bdi></span>
-            </div>
-            <div class="mkt-meta">
+              <span class="mkt-pxchg"><span class="mkt-px"><bdi class="num">{{last}}</bdi></span><span class="mkt-chg"><bdi class="num">{{change_if_the_pack_has_one}}</bdi></span></span>
               <span class="mkt-flag"><span data-lang="he">{{בסיס קצר}}</span><span data-lang="en">{{short basis}}</span></span>
-              <details class="mkt-detail">
-                <summary><span data-lang="he"><bdi>{{symbol}}</bdi> · פירוט</span><span data-lang="en"><bdi>{{symbol}}</bdi> · Details</span></summary>
-                <p data-lang="he">{{פירוט}} <a href="{{url}}">{{source}}</a>.</p>
-                <p data-lang="en">{{detail}} <a href="{{url}}">{{source}}</a>.</p>
-              </details>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
 
-        <!-- E. Cash close only when the pack stamped one. Delete the block if it did not. Do not reconstruct it. -->
-        <h3 class="mkt-label"><span data-lang="he">{{סגירת מניות, התאריך האמיתי}}</span><span data-lang="en">{{stock close, the real date}}</span></h3>
-        <p class="mkt-aside"><span data-lang="he">{{אלה מדדים במזומן, לא החוזים למעלה}}</span><span data-lang="en">{{cash indexes, not the futures above}}</span></p>
-        <div class="mkt-board mkt-board-cash">
-          <article class="mkt-line">
-            <div class="mkt-id">
-              <span class="mkt-sym"><bdi>{{symbol}}</bdi></span>
-              <span class="mkt-name"><span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span></span>
-            </div>
-            <div class="mkt-pxchg">
-              <span class="mkt-px"><bdi>{{last}}</bdi></span>
-              <span class="mkt-chg"><bdi>{{change}}</bdi></span>
-            </div>
-            <div class="mkt-meta">
-              <span class="mkt-flag"><span data-lang="he">{{סגירה, לא החוזה}}</span><span data-lang="en">{{close, not the future}}</span></span>
-              <details class="mkt-detail">
-                <summary><span data-lang="he"><bdi>{{symbol}}</bdi> · פירוט</span><span data-lang="en"><bdi>{{symbol}}</bdi> · Details</span></summary>
-                <p data-lang="he">{{פירוט}} <a href="{{url}}">{{source}}</a>.</p>
-                <p data-lang="en">{{detail}} <a href="{{url}}">{{source}}</a>.</p>
-              </details>
-            </div>
-          </article>
-        </div>
-
-        <!-- F. Companies, zero to three, then the next 48 hours. Drop events whose time has passed. -->
-        <h3 class="mkt-label"><span data-lang="he">חברות</span><span data-lang="en">Companies</span></h3>
-        <div class="companies">
+        <!-- 2. MARKET DRIVERS. About 4–7 articles. Headline, one or two sentences, sources.
+             Do not fill weak items. Caveat stays in the sentence. -->
+        <h3 class="mkt-label" id="mkt-drivers-heading"><span data-lang="he">מניעי שוק</span><span data-lang="en">Market drivers</span></h3>
+        <div class="mkt-drivers">
           <article>
-            <h3><span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span> · <bdi>{{ticker}}</bdi></h3>
-            <p data-lang="he">{{אירוע_וחשיבות}}</p>
-            <p data-lang="en">{{event_and_why_it_matters}}</p>
+            <h3><span data-lang="he">{{כותרת}}</span><span data-lang="en">{{headline}}</span></h3>
+            <p class="body" data-lang="he">{{מה קרה, ולמה זה עשוי לעניין את השוק. משפט או שניים.}}</p>
+            <p class="body" data-lang="en">{{what happened, and why the market may care. One or two sentences.}}</p>
             <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
             <p class="sources" data-lang="en">Sources: {{links}}</p>
           </article>
         </div>
-        <div class="upcoming">
-          <h3 class="label" id="next-heading"><span data-lang="he">48 השעות הבאות</span><span data-lang="en">The next 48 hours</span></h3>
-          <p class="lede" data-lang="he">{{מתי הרשימה מתחילה, ואיזה שעון קיץ בתוקף}}</p>
-          <p class="lede" data-lang="en">{{when the list starts, and which daylight-saving offset is in force}}</p>
+
+        <!-- 3. COMPANY CATALYSTS. About 4–8. Ticker, name, event, why it matters, sources.
+             A price is not a reason to include a name. -->
+        <h3 class="mkt-label" id="mkt-catalysts-heading"><span data-lang="he">קטליזטורים בחברות</span><span data-lang="en">Company catalysts</span></h3>
+        <div class="mkt-catalysts">
+          <article>
+            <h3><span class="mkt-tick"><bdi>{{ticker}}</bdi></span> · <span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span></h3>
+            <p class="body" data-lang="he">{{אירוע, ולמה זה חשוב.}}</p>
+            <p class="body" data-lang="en">{{event, and why it matters.}}</p>
+            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+            <p class="sources" data-lang="en">Sources: {{links}}</p>
+          </article>
+        </div>
+
+        <!-- 4. TODAY / NEXT. About 2–4. Israel time first. Drop events whose time has passed. -->
+        <div class="mkt-next">
+          <h3 class="mkt-label" id="mkt-next-heading"><span data-lang="he">היום / בהמשך</span><span data-lang="en">Today / next</span></h3>
+          <p class="lede" data-lang="he">{{שעון ישראל ושעון מזרח ארה״ב, כולל שעון הקיץ שבתוקף}}</p>
+          <p class="lede" data-lang="en">{{Israel and US Eastern clocks, including which daylight-saving offset is in force}}</p>
           <ol>
             <li>
-              <strong class="when"><span data-lang="he">{{תאריך ושעה מאושרת}} · {{אירוע}}</span><span data-lang="en">{{date and confirmed time}} · {{event}}</span></strong>
-              <p data-lang="he">{{שורה אחת}}</p>
-              <p data-lang="en">{{one line}}</p>
+              <strong class="when"><span data-lang="he"><bdi class="num">{{HH:MM}}</bdi> בישראל — {{אירוע}}</span><span data-lang="en"><bdi class="num">{{HH:MM}}</bdi> Israel — {{event}}</span></strong>
+              <p data-lang="he">{{שורה אחת, רק אם הסיבה אינה מובנת מאליה}}</p>
+              <p data-lang="en">{{one line, only when the reason is not obvious}}</p>
             </li>
           </ol>
+        </div>
+
+        <!-- 5. MARKET STORY. Optional. Delete the block on a quiet day. At most three sentences. -->
+        <div class="mkt-brief">
+          <h3 class="mkt-label" id="mkt-brief-heading"><span data-lang="he">סיפור שוק</span><span data-lang="en">Market story</span></h3>
+          <p data-lang="he">{{עד שלושה משפטים}}</p>
+          <p data-lang="en">{{at most three sentences}}</p>
         </div>
       </section>
 
