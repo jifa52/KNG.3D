@@ -85,4 +85,63 @@
       if (en) en.textContent = paused ? "Play" : "Pause";
     });
   });
+
+  /* Home sheet: one section at a time. #premarket and the lane hashes open the same views. */
+  if (root.classList.contains("home")) {
+    var sections = ["news", "markets", "ai"];
+    var alias = {
+      premarket: "markets",
+      "lane-news": "news",
+      "lane-markets": "markets",
+      "lane-ai": "ai"
+    };
+
+    function sectionFromHash() {
+      var raw = (location.hash || "").replace("#", "");
+      if (alias[raw]) return alias[raw];
+      if (sections.indexOf(raw) !== -1) return raw;
+      return null;
+    }
+
+    function showSection(id, scroll) {
+      if (sections.indexOf(id) === -1) id = "news";
+      root.setAttribute("data-section", id);
+      sections.forEach(function (sid) {
+        var panel = document.getElementById(sid);
+        if (!panel) return;
+        if (sid === id) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+      });
+      document.querySelectorAll('.edition-nav a[href^="#"]').forEach(function (a) {
+        if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      });
+      if (scroll) window.scrollTo(0, 0);
+    }
+
+    document.querySelectorAll('.edition-nav a[href^="#"]').forEach(function (a) {
+      a.addEventListener("click", function (ev) {
+        var id = a.getAttribute("href").slice(1);
+        if (sections.indexOf(id) === -1) return;
+        ev.preventDefault();
+        showSection(id, true);
+        try { history.pushState(null, "", "#" + id); } catch (err) {}
+      });
+    });
+
+    window.addEventListener("hashchange", function () {
+      var id = sectionFromHash();
+      if (id) showSection(id, false);
+    });
+    window.addEventListener("popstate", function () {
+      showSection(sectionFromHash() || "news", false);
+    });
+
+    var initial = sectionFromHash() || "news";
+    var rawHash = (location.hash || "").replace("#", "");
+    showSection(initial, false);
+    if (alias[rawHash]) {
+      try { history.replaceState(null, "", "#" + initial); } catch (err) {}
+    }
+  }
 })();

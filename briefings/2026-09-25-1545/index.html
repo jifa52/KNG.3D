@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="edition home"
+<html lang="he" dir="rtl" class="edition home" data-section="news"
   data-title-he="יום שישי, 25 בספטמבר 2026 · The Daily Jenya"
   data-title-en="Friday, 25 September 2026 · The Daily Jenya"
   data-desc-he="יו״ר הפרלמנט הטורקי: ברית מכה עשויה לכלול את איראן. מקרון ישלח הגנה לינבו. שווקים: תמונת מצב של יום שישי סביב 15:45, ציטוטים 15:04–15:19, חוזים ולא מזומן."
@@ -30,10 +30,6 @@
         <h1 class="brand">
           <img class="brand-logo" src="../../assets/daily-jenya-logo.png" width="921" height="472" alt="The Daily Jenya — Your Morning Edition">
         </h1>
-      </div>
-      <div class="lead-display">
-        <p class="card-kicker"><span data-lang="he">מזרח תיכון</span><span data-lang="en">Middle East</span></p>
-        <h2 id="lead-title"><span data-lang="he">יו״ר הפרלמנט הטורקי: ברית מכה עשויה לכלול את איראן; מקרון ישלח הגנה לינבו</span><span data-lang="en">Turkish speaker: Mecca pact could include Iran; Macron will protect Yanbu</span></h2>
       </div>
       <div class="mast-meta">
         <p class="badge"><span data-lang="he">מהדורת צהריים</span><span data-lang="en">Midday edition</span></p>
@@ -86,6 +82,10 @@
         </header>
         <div class="front">
           <article class="lead" aria-labelledby="lead-title">
+            <div class="lead-display">
+              <p class="card-kicker"><span data-lang="he">מזרח תיכון</span><span data-lang="en">Middle East</span></p>
+              <h2 id="lead-title"><span data-lang="he">יו״ר הפרלמנט הטורקי: ברית מכה עשויה לכלול את איראן; מקרון ישלח הגנה לינבו</span><span data-lang="en">Turkish speaker: Mecca pact could include Iran; Macron will protect Yanbu</span></h2>
+            </div>
             <p class="lead-index"><span data-lang="he">חדשות · <bdi class="num">01 — 08</bdi></span><span data-lang="en">News · <bdi class="num">01 — 08</bdi></span></p>
             <!-- keep-photo-slot: news-01 -->
 <figure class="photo">
@@ -562,51 +562,7 @@
   </div>
   <script src="../../assets/i18n.js"></script>
   <script>
-    (function () {
-      var map = {
-        "#premarket": "markets",
-        "#lane-news": "news",
-        "#lane-markets": "markets",
-        "#lane-ai": "ai"
-      };
-      function go() {
-        var id = map[location.hash];
-        if (!id) return;
-        var el = document.getElementById(id);
-        if (!el) return;
-        if (location.protocol !== "file:") {
-          try { history.replaceState(null, "", "#" + id); } catch (err) {}
-        }
-        el.scrollIntoView();
-      }
-      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", go);
-      else go();
-      window.addEventListener("hashchange", go);
-    })();
-
-    (function () {
-      var links = Array.prototype.slice.call(document.querySelectorAll('.edition-nav a[href^="#"]'));
-      if (!links.length || !("IntersectionObserver" in window)) return;
-      var byId = {};
-      links.forEach(function (a) {
-        var id = a.getAttribute("href").slice(1);
-        if (document.getElementById(id)) byId[id] = a;
-      });
-      var ratio = {};
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          ratio[entry.target.id] = entry.isIntersecting ? entry.intersectionRatio : 0;
-        });
-        var current = null;
-        var best = 0;
-        Object.keys(byId).forEach(function (id) {
-          if (ratio[id] > best) { best = ratio[id]; current = id; }
-        });
-        links.forEach(function (a) { a.removeAttribute("aria-current"); });
-        if (current && byId[current]) byId[current].setAttribute("aria-current", "true");
-      }, { rootMargin: "-12% 0px -40% 0px", threshold: [0.05, 0.2, 0.45, 0.7] });
-      Object.keys(byId).forEach(function (id) { obs.observe(document.getElementById(id)); });
-    })();
-  </script>
+  /* One section at a time. #news #markets #ai. #premarket, #lane-news, #lane-markets, #lane-ai open the same views via assets/i18n.js. */
+</script>
 </body>
 </html>

@@ -46,15 +46,15 @@ Strip from the HTML: internal notes, hard gates, verb locks, card IDs, agent rou
 
 News hierarchy, in this order, on the open page. The live sheet carries `class="home"` on `<html>` (with `edition`). Archive and older briefings do not.
 
-1. The lead headline (`.lead-display`) sits in the night mast, beside the logo. One kicker, one `h2#lead-title`.
-2. The navy story panel (`article.lead` inside `.front`) is the story: index line, `figure.photo` when a licensed credit exists, two to four sentences, `.why`, meta, sources. About 60% of the row. The publish template keeps that figure in the panel. Fill it, or, on a Markets refresh, copy the figure already on the live page. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph. Do not comment the figure out and ship a text-only front when the previous edition already had a credited lead.
+1. The mast is the logo once, the edition date, and the language switch. No story headline in that band.
+2. The navy story panel (`article.lead` inside `.front`) opens with the lead headline (`.lead-display`, one kicker, one `h2#lead-title`), then the index line, `figure.photo` when a licensed credit exists, two to four sentences, `.why`, meta, sources. About 60% of the row. The publish template keeps that figure in the panel. Fill it, or, on a Markets refresh, copy the figure already on the live page. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph. Do not comment the figure out and ship a text-only front when the previous edition already had a credited lead.
 3. About two supporting stories (`.side-stack`), about 40%. Each support in the template has `figure.photo.photo--support` (a landscape). A portrait (`figure.photo.photo--portrait`) is only for a licensed portrait of a person. Keep both support figures on a Markets refresh. Each picture needs its own license and caption.
 4. The rest quieter (`.quiet-band`), three across on a wide screen, stacked on a phone. Each quiet card that already has a `figure.photo` keeps it. The template shows one sample slot. A Markets refresh copies every quiet figure from the live page, licensed or labeled illustration.
 5. The edition dek (`.quotes`) comes after that band, not between the nav and the lead.
 
 AI uses the same calm newspaper type: `.ai-carry` when the digest is carried, then `article.ai-lead`, then `.ai-list`. No equal-weight card stack. A picture on an AI card is a labeled illustration or a licensed photograph, inside `figure.photo`, and it stays when the digest is carried. No product image passed off as a photograph.
 
-Section ids are `#news`, `#markets`, and `#ai`. `#premarket`, `#lane-news`, `#lane-markets`, and `#lane-ai` scroll to the matching section. Card-layout archives still use `assets/lanes.js` to switch panels. This template does not. Do not put `lanes.js` back on the editorial page or it will hide Markets and AI.
+Section ids are `#news`, `#markets`, and `#ai`. On the home sheet the nav shows one of those sections at a time. `#premarket`, `#lane-news`, `#lane-markets`, and `#lane-ai` open the matching section. Card-layout archives still use `assets/lanes.js` to switch panels. This template does not. Do not put `lanes.js` back on the editorial page.
 
 ## Markets, after News
 
@@ -76,7 +76,7 @@ Do not restate every chip inside the market story.
 
 Desk pack, in this order, before HTML: SESSION (one label and the real stamp); SNAPSHOT_PRIMARY (the six); SNAPSHOT_SECONDARY (optional Bitcoin and 10-year only); MARKET_DRIVERS; COMPANY_CATALYSTS; TODAY_NEXT; MARKET_STORY (optional); INTERNAL NOTES. Do not print the internal notes.
 
-DOM hooks: `#markets`, `.mkt-snap`, `.mkt-strip`, `.mkt-chip`, `.mkt-strip-tuck`, `.mkt-drivers`, `.mkt-catalysts`, `.mkt-next`, `.mkt-brief`. `#premarket` still scrolls to `#markets`.
+DOM hooks: `#markets`, `.mkt-snap`, `.mkt-strip`, `.mkt-chip`, `.mkt-strip-tuck`, `.mkt-drivers`, `.mkt-catalysts`, `.mkt-next`, `.mkt-brief`. `#premarket` still opens Markets.
 
 ## Freshness
 
@@ -102,7 +102,7 @@ There is no publish script that fetches images for a new story. Choosing and cre
 - The paragraph states the point and any caveat that changes the meaning.
 - Jargon is plain, or glossed once. Hebrew reads as a sentence, not a tape label.
 - Hebrew and English are not both visible.
-- The page is night paper `#101f2c` on `#09141e`. The masthead is the Daily Jenya logo once, beside the lead headline, with **YOUR MORNING EDITION** only inside the artwork. The nav is חדשות · שווקים · AI · ארכיון. News gold is a kicker, markets green is the markets title, AI purple is the digest accent. The snapshot figures stay smaller than the drivers.
+- The page is night paper `#101f2c` on `#09141e`. The masthead is the Daily Jenya logo once, with the date and the language switch, and **YOUR MORNING EDITION** only inside the artwork. The lead headline is in the news panel. The nav is חדשות · שווקים · AI · ארכיון, and it shows one section at a time. News gold is a kicker, markets green is the markets title, AI purple is the digest accent. The snapshot figures stay smaller than the drivers.
 - Every story card has `.why` (למה זה חשוב / Why it matters). There is no dive-in reader.
 - The indices crawl is present, duplicated, and still readable with `prefers-reduced-motion`.
 - An AI picture’s only on-page label is `figcaption.illus-caption` (**המחשה (AI)** / **AI Illustration**) under the image. There is no badge. Do not present generated art as a photograph of the event or of a real person.
