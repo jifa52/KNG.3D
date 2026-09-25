@@ -89,11 +89,15 @@ jobs:
           grep -q 'PREVIEW' preview/ux-2026-09-24/index.html
           grep -q 'edition.css' preview/ux-2026-09-24/index.html
           grep -q 'Frank Ruhl Libre' assets/edition.css
-          grep -q '#8b1e2d' assets/edition.css
-          grep -q '#f3f0e7' assets/edition.css
-          grep -q '#143e33' assets/edition.css
-          grep -q '#dae8a4' assets/edition.css
-          grep -q '#15251f' assets/edition.css
+          grep -q '#101f2c' assets/edition.css
+          grep -q '#09141e' assets/edition.css
+          grep -q '#d4dce1' assets/edition.css
+          grep -q '#a1b1bd' assets/edition.css
+          grep -q '#344653' assets/edition.css
+          grep -q '#91c4eb' assets/edition.css
+          grep -q 'theme-color" content="#101f2c"' index.html
+          grep -q 'crawl-pause' index.html
+          grep -q '52s' assets/polish.css
           grep -q 'mkt-snap' assets/polish.css
           grep -q 'mkt-drivers' assets/polish.css
           # Older polish permalinks keep the quote boards. Live and the template are news-first.
@@ -221,7 +225,7 @@ jobs:
           grep -q 'polish.css' archive/index.html
           grep -q 'edition-list' archive/index.html
           grep -q 'briefings/' archive/index.html
-          grep -q 'color-scheme" content="light"' archive/index.html
+          grep -q 'color-scheme" content="dark"' archive/index.html
           # Older permalinks stay on the card sheet.
           grep -q 'brief.css' briefings/2026-09-24-1400/index.html
           grep -q 'brief.css' 404.html

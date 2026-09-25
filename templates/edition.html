@@ -7,8 +7,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#143e33">
-  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#101f2c">
+  <meta name="color-scheme" content="dark">
   <meta name="robots" content="noindex">
   <title>תבנית · The Daily Jenya</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
@@ -17,12 +17,13 @@
 </head>
 <!--
   PUBLISH TEMPLATE. Not an edition. Do not ship this file as the homepage.
-  The Daily Jenya, Direction 02 (25 Sep 2026). Cream paper, forest, lime.
+  The Daily Jenya night sheet (cutover 25 Sep 2026). Page #09141e, paper #101f2c.
   class "home" is the live sheet only. The lead headline sits in .lead-display
-  in the mast, beside the logo. The forest panel is article.lead (body, .why).
+  in the mast, beside the logo. Show the logo once. Do not add an HTML tagline.
+  The navy panel is article.lead (body, .why).
   Two supports in .side-stack. The rest in .quiet-band. Markets: a large title,
-  then drivers on the forest slab, catalysts, today/next, optional story,
-  then the compact snapshot. Indices crawl under the nav.
+  then drivers on the navy slab, catalysts, today/next, optional story,
+  then the compact snapshot. Indices crawl under the nav (52s, pause, reduced-motion).
 
   Copy this file to index.html and to briefings/YYYY-MM-DD-HHMM/index.html.
   Both stylesheets stay. Fill {{tokens}} from the approved pack. Delete this
@@ -31,7 +32,7 @@
   Cadence — same sheet, different blocks:
   - Overnight thin: one lead, fewer supports, no quiet band if the pack is short.
     Markets is the previous stamp, labeled as carried, or omitted if the pack has none.
-  - Main news: full front (lead display + forest panel, two supports, quiet band).
+  - Main news: full front (lead display + navy panel, two supports, quiet band).
     Keep the prior Markets stamp if this drop does not replace it. Do not call an older stamp today.
   - Markets: refresh A–F from the new tape. Keep the news front, including every
     <!-- keep-photo-slot --> already on index.html — lead, supports, quiet band,
@@ -97,9 +98,10 @@
         <a href="../archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
       </nav>
     </header>
-    <!-- Crawl: duplicate .crawl-seq. Copy the six primary stamps. Do not invent a price. prefers-reduced-motion is in polish.css. -->
+    <!-- Crawl: duplicate .crawl-seq. Copy the six primary stamps. Do not invent a price. Add class "negative" on a down change. Pause is .crawl-pause. prefers-reduced-motion is in polish.css. No separate HTML tagline under the logo. -->
     <div class="crawl" aria-label="Index snapshot">
       <p class="crawl-kicker"><span data-lang="he">מדדים · {{תאריך ושעה של התמונה}} · לא ציטוט חי</span><span data-lang="en">Indices · {{snapshot date and time}} · not a live quote</span></p>
+      <button type="button" class="crawl-pause" aria-pressed="false"><span data-lang="he">השהה</span><span data-lang="en">Pause</span></button>
       <div class="crawl-viewport" dir="ltr">
         <div class="crawl-track">
           <ul class="crawl-seq">
