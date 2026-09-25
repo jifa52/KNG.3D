@@ -14,7 +14,7 @@ Tape is data. There are no trade recommendations.
 
 ## Reader layout
 
-The live homepage is The Daily Jenya (`assets/edition.css` and `assets/polish.css`): cream paper `#f3f0e7`, forest `#143e33`, lime `#dae8a4`, ink `#15251f`. News is an asymmetric front of short cards with **Why it matters / למה זה חשוב**. Markets follows News as a news brief: drivers, company catalysts, today/next, then a compact snapshot. One language is on screen.
+The live homepage is The Daily Jenya (`assets/edition.css` and `assets/polish.css`): night paper `#101f2c` on `#09141e`, ink `#d4dce1`, news gold `#dfbd72`, markets `#a9e0b5`, AI `#c1a1ed`. News is an asymmetric front of short cards with **Why it matters / למה זה חשוב**. Markets follows News as a news brief: drivers, company catalysts, today/next, then a compact snapshot. One language is on screen.
 
 - Live: `index.html`, `briefings/2026-09-25-1545/`, and `briefings/2026-09-25-1400/` (Markets refreshed in place)
 - Approved study (kept): `preview/ux-2026-09-24-polish/`
@@ -24,7 +24,7 @@ The live homepage is The Daily Jenya (`assets/edition.css` and `assets/polish.cs
 - Rules: `templates/PUBLISH.md`
 - Type: `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
 
-The archive index uses the same light sheet. Earlier permalinks stay on `assets/brief.css`. Do not add the preview to the archive.
+The archive index uses the same night sheet. Earlier permalinks that link `assets/brief.css` stay on that card sheet. The navy study at `preview/daily-jenya-navy/` is a labeled archive of the look that shipped. Do not add study folders to the archive index.
 
 ## Language
 

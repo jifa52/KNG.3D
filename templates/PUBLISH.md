@@ -1,10 +1,10 @@
 # Publishing a The Daily Jenya edition
 
-This note is the publish path after the 25 September 2026 cutover. The locked sheet is Direction 02: paper `#f3f0e7`, ink `#15251f`, forest `#143e33`, lime `#dae8a4`, soft AI purple `#ded5ec`, rules `#cfcfc2`. Crimson `#8b1e2d` is only a secondary news accent. Frank Ruhl Libre headlines, Heebo body, asymmetric news front. Do not switch the identity to crimson/gold. This file does not replace verification, agenda, confidence, or cadence rules. Those still live with the desk. This file wins on what a reader sees.
+This note is the publish path after the 25 September 2026 night cutover. The locked sheet is night: page `#09141e`, paper `#101f2c`, ink `#d4dce1`, muted `#a1b1bd`, line `#344653`, pale `#1b3040`, electric `#91c4eb`. News gold `#dfbd72`, markets `#a9e0b5`, AI `#c1a1ed`. Frank Ruhl Libre headlines, Heebo body, asymmetric news front. Do not switch the identity back to cream Direction 02. This file does not replace verification, agenda, confidence, or cadence rules. Those still live with the desk. This file wins on what a reader sees.
 
 The empty structure is `templates/edition.html`. It loads `assets/edition.css` and `assets/polish.css`. The filled cutover is `index.html`, `briefings/2026-09-25-1545/`, and `briefings/2026-09-25-1400/` (Friday midday News, the Friday ~15:45 markets refresh with quotes ~15:04–15:19, Friday morning AI). The masthead logo is `assets/daily-jenya-logo.png`. The labeled study that was approved earlier is `preview/ux-2026-09-24-polish/` — leave that folder in place. An earlier study, `preview/ux-2026-09-24/`, is the pre-polish Modern page and is not the template. Earlier pages under `briefings/` stay on `assets/brief.css`. Do not restyle those older editions, and do not change their facts.
 
-`assets/paper.css` is retired. Do not bring the dark newspaper sheet back. The archive **index** (`archive/index.html`) is the light sheet. The pages it links to, before this cutover, stay on the card sheet. `404.html` is still the dark card chrome.
+`assets/paper.css` is retired. The live sheet is the night edition in `assets/edition.css` and `assets/polish.css`. The archive **index** uses that same night sheet. Permalink pages from before this cutover that still link `assets/brief.css` stay on the card sheet. `404.html` is still the dark card chrome.
 
 ## Cutover
 
@@ -29,9 +29,9 @@ The polish preview is not an archive edition. Do not add it to `archive/index.ht
 
 One scrolling page. News, then Markets, then AI. One language at a time. Hebrew is the default; English is the switcher in the masthead (`assets/i18n.js`, `data-lang`). Do not print a full Hebrew story and then the full English story in the same view.
 
-The page is cream paper (`#f3f0e7`). Ink is `#15251f`. Forest `#143e33` is the mast bar, the nav rule, and the markets snapshot band. Lime `#dae8a4` is the Why-it-matters wash and the crawl prices. AI sits on `#ded5ec`. Rules are `#cfcfc2`. Crimson `#8b1e2d` is only a news kicker accent. No dark app bar, no quote-board dashboard, no crimson/gold identity.
+The page is night paper (`#101f2c`) on `#09141e`. Ink is `#d4dce1`. The mast is the navy gradient (`#102637` to `#142e43`) with gold rule `#b99a55`. Nav is `#132635`. Why-it-matters sits on pale `#1b3040`. Crawl prices use `#9bc9ba` up and `#e6a5b1` down. AI sits on `#262e42`. Rules are `#344653`. News kickers are gold `#dfbd72`. No cream paper, no forest-and-lime chrome, no quote-board dashboard.
 
-Masthead: the supplied logo (J and globe, **The Daily Jenya**, **YOUR MORNING EDITION**), the edition date, and Jerusalem time before any other clock, plus the language switcher. Under that, the section nav: חדשות · שווקים · AI · ארכיון. Then the indices crawl, then one quotes line (what the news cut is, and that the markets figure is a snapshot, not a live quote).
+Masthead: the supplied logo once (J and globe, **The Daily Jenya**, **YOUR MORNING EDITION** baked into the artwork). Do not add a second HTML tagline. The cream PNG is lightened for navy in CSS. Then the edition date, Jerusalem time before any other clock, and the language switcher. Under that, the section nav: חדשות · שווקים · AI · ארכיון. Then the indices crawl (duplicated row, 52s, pause, reduced-motion static), then one quotes line (what the news cut is, and that the markets figure is a snapshot, not a live quote).
 
 Each story, in this order:
 
@@ -46,8 +46,8 @@ Strip from the HTML: internal notes, hard gates, verb locks, card IDs, agent rou
 
 News hierarchy, in this order, on the open page. The live sheet carries `class="home"` on `<html>` (with `edition`). Archive and older briefings do not.
 
-1. The lead headline (`.lead-display`) sits in the mast, on the cream, beside the logo. One kicker, one `h2#lead-title`.
-2. The forest panel (`article.lead` inside `.front`) is the story: index line, `figure.photo` when a licensed credit exists, two to four sentences, `.why`, meta, sources. About 60% of the row. The publish template keeps that figure in the panel. Fill it, or, on a Markets refresh, copy the figure already on the live page. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph. Do not comment the figure out and ship a text-only front when the previous edition already had a credited lead.
+1. The lead headline (`.lead-display`) sits in the night mast, beside the logo. One kicker, one `h2#lead-title`.
+2. The navy story panel (`article.lead` inside `.front`) is the story: index line, `figure.photo` when a licensed credit exists, two to four sentences, `.why`, meta, sources. About 60% of the row. The publish template keeps that figure in the panel. Fill it, or, on a Markets refresh, copy the figure already on the live page. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph. Do not comment the figure out and ship a text-only front when the previous edition already had a credited lead.
 3. About two supporting stories (`.side-stack`), about 40%. Each support in the template has `figure.photo.photo--support` (a landscape). A portrait (`figure.photo.photo--portrait`) is only for a licensed portrait of a person. Keep both support figures on a Markets refresh. Each picture needs its own license and caption.
 4. The rest quieter (`.quiet-band`), three across on a wide screen, stacked on a phone. Each quiet card that already has a `figure.photo` keeps it. The template shows one sample slot. A Markets refresh copies every quiet figure from the live page, licensed or labeled illustration.
 5. The edition dek (`.quotes`) comes after that band, not between the nav and the lead.
@@ -62,7 +62,7 @@ From 25 September 2026 the reader hierarchy is a market news brief, not a quote 
 
 Reader order, top to bottom. Do not reverse it. On a phone the snapshot wraps; it does not become the hero. The page does not scroll sideways.
 
-1. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. On the home sheet the section title is large cream type and this block is the forest slab; the first driver is the display line. Prices stay in the snapshot below. Each article: a bilingual headline, one or two short sentences, `.why`, and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
+1. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. On the home sheet the section title is large markets-green type and this block is the navy slab; the first driver is the display line. Prices stay in the snapshot below. Each article: a bilingual headline, one or two short sentences, `.why`, and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
 2. **Company catalysts** (`#mkt-catalysts-heading`, `.mkt-catalysts`). About four to eight. Ticker in `.mkt-tick`, the name, the event, `.why`, and `.sources`. A price move is not a reason to include a name. Do not default to the same megacaps unless they have a real event. Cover other sectors when the day has them.
 3. **Today / next** (`.mkt-next`). About two to four items that could matter. Israel time first. US Eastern beside it when the hour is confirmed, including which daylight-saving offset is in force. One short reason only when it is not obvious. Drop rows whose time has already passed. Do not invent an hour.
 4. **Market story** (`.mkt-brief`). Optional. At most three sentences. Do not force a cause for a small move. Delete the block on a quiet day.
@@ -102,7 +102,7 @@ There is no publish script that fetches images for a new story. Choosing and cre
 - The paragraph states the point and any caveat that changes the meaning.
 - Jargon is plain, or glossed once. Hebrew reads as a sentence, not a tape label.
 - Hebrew and English are not both visible.
-- The page is cream `#f3f0e7`. The masthead is the Daily Jenya logo beside the lead headline. The nav is חדשות · שווקים · AI · ארכיון. Forest is the top bar, the lead panel, and the drivers slab. Crimson is only a news kicker. The snapshot figures stay smaller than the drivers.
+- The page is night paper `#101f2c` on `#09141e`. The masthead is the Daily Jenya logo once, beside the lead headline, with **YOUR MORNING EDITION** only inside the artwork. The nav is חדשות · שווקים · AI · ארכיון. News gold is a kicker, markets green is the markets title, AI purple is the digest accent. The snapshot figures stay smaller than the drivers.
 - Every story card has `.why` (למה זה חשוב / Why it matters). There is no dive-in reader.
 - The indices crawl is present, duplicated, and still readable with `prefers-reduced-motion`.
 - An AI picture’s only on-page label is `figcaption.illus-caption` (**המחשה (AI)** / **AI Illustration**) under the image. There is no badge. Do not present generated art as a photograph of the event or of a real person.

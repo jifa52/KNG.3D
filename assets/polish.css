@@ -384,7 +384,7 @@ html[dir="ltr"] .mkt-line .mkt-pxchg {
   font-family: var(--serif);
   font-size: 1.28rem;
   line-height: 1.45;
-  color: #1a1a1a;
+  color: var(--ink);
 }
 
 html.edition .companies {
@@ -756,7 +756,7 @@ a.mkt-sym:hover {
   font-size: 1.05rem;
   font-weight: 500;
   line-height: 1.5;
-  color: #1a1a1a;
+  color: var(--ink);
 }
 
 @media (min-width: 860px) {
@@ -769,7 +769,7 @@ a.mkt-sym:hover {
   }
 }
 
-/* Direction 02 chrome — paper, forest, lime. News crimson stays secondary. */
+/* Shared edition chrome. Night colors are applied in the cutover block below. */
 
 .topbar {
   display: flex;
@@ -846,7 +846,7 @@ html[lang="he"] .crawl-kicker {
 .crawl-track {
   display: flex;
   width: max-content;
-  animation: dj-crawl 42s linear infinite;
+  animation: dj-crawl 52s linear infinite;
 }
 
 .crawl-seq {
@@ -1079,19 +1079,19 @@ html[lang="he"] #markets .section-head .kicker {
 }
 
 #ai .section-head {
-  border-bottom-color: #c9bfd8;
+  border-bottom-color: #786393;
 }
 
 #ai .section-head .kicker {
-  color: #3c3354;
+  color: var(--ai-accent);
 }
 
 #ai .card-kicker {
-  color: #3c3354;
+  color: var(--ai-accent);
 }
 
 #ai .why {
-  background: #f3f0e7;
+  background: var(--pale);
 }
 
 /* Quiet cards and the AI digest are 16:9 illustrations. The support
@@ -1150,10 +1150,9 @@ html.edition .page-foot {
   }
 }
 
-/* Home sheet rhythm. Direction 02 frames: cream mast with the lead
-   headline beside the logo, a hairline, then a forest story panel.
-   Markets: a large section title, a forest drivers slab, snapshot last.
-   Archive and older editions do not carry class "home". */
+/* Home sheet rhythm. Night mast with the lead headline beside the logo,
+   then a navy story panel. Markets: a large section title, a navy drivers
+   slab, snapshot last. Archive and older editions do not carry class "home". */
 
 html.home .wrap {
   padding-top: 1.35rem;
@@ -1515,4 +1514,211 @@ html.home #markets .mkt-strip-tuck .mkt-px {
   .photo--support img {
     max-height: 200px;
   }
+}
+
+/* Night cutover. Full logo once (cream PNG, night filter). No HTML tagline.
+   Crawl is the Friday snapshot, 52s, pause on hover or the button. */
+
+.topbar {
+  background: #0c1d2b;
+  color: #c9d8e2;
+  border-top: 2px solid #b99a55;
+}
+
+html.edition .mast,
+html.home .mast {
+  background:
+    radial-gradient(ellipse at 8% 10%, #293147 0, transparent 56%),
+    linear-gradient(110deg, #102637, #142e43);
+  border-top: 0;
+  border-bottom-color: #415869;
+}
+
+html.edition .brand-logo,
+html.home .brand-logo {
+  width: min(350px, 100%);
+  height: auto;
+  filter: grayscale(1) invert(1) contrast(2.4);
+  mix-blend-mode: screen;
+}
+
+html.edition .edition-nav,
+html.home .edition-nav {
+  background: #132635;
+  border-bottom: 1px solid #415869;
+  box-shadow: 0 4px 14px #05111b35;
+}
+
+html.edition .edition-nav a,
+html.home .edition-nav a {
+  color: #c9d8e2;
+}
+
+html.edition .edition-nav a::before,
+html.home .edition-nav a::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-inline-end: 7px;
+  border-radius: 50%;
+  background: #8195a6;
+  vertical-align: 0.12em;
+}
+
+html.edition .edition-nav a[href="#news"]::before,
+html.home .edition-nav a[href="#news"]::before { background: #dfbd72; }
+
+html.edition .edition-nav a[href="#markets"]::before,
+html.home .edition-nav a[href="#markets"]::before { background: #a9e0b5; }
+
+html.edition .edition-nav a[href="#ai"]::before,
+html.home .edition-nav a[href="#ai"]::before { background: #c1a1ed; }
+
+html.edition .edition-nav a[href="#news"][aria-current="true"],
+html.home .edition-nav a[href="#news"][aria-current="true"],
+html.edition .edition-nav a[href="#news"]:hover,
+html.home .edition-nav a[href="#news"]:hover {
+  color: #dfbd72;
+  box-shadow: inset 0 -3px #dfbd72;
+}
+
+html.edition .edition-nav a[href="#markets"][aria-current="true"],
+html.home .edition-nav a[href="#markets"][aria-current="true"],
+html.edition .edition-nav a[href="#markets"]:hover,
+html.home .edition-nav a[href="#markets"]:hover {
+  color: #a9e0b5;
+  box-shadow: inset 0 -3px #a9e0b5;
+}
+
+html.edition .edition-nav a[href="#ai"][aria-current="true"],
+html.home .edition-nav a[href="#ai"][aria-current="true"],
+html.edition .edition-nav a[href="#ai"]:hover,
+html.home .edition-nav a[href="#ai"]:hover {
+  color: #c1a1ed;
+  box-shadow: inset 0 -3px #c1a1ed;
+}
+
+.crawl {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  margin-top: 0;
+  background: #0b1c29;
+  color: #c9d7e1;
+  border-bottom: 1px solid #344653;
+}
+
+.crawl-kicker {
+  color: #a5b9c8;
+  font-weight: 500;
+}
+
+.crawl-pause {
+  margin-inline-end: 0.9rem;
+  min-height: 36px;
+  padding: 0 8px;
+  border: 0;
+  background: none;
+  color: #c8deee;
+  font: inherit;
+  font-size: 11px;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.crawl-viewport {
+  grid-column: 1 / -1;
+  border-top: 1px solid #ffffff0a;
+}
+
+.crawl-px { color: #c9d7e1; }
+
+.crawl-chg { color: #9bc9ba; }
+
+.crawl-chg.negative { color: #e6a5b1; }
+
+.crawl-flag { color: #96adbe; }
+
+.crawl.is-paused .crawl-track,
+.crawl-viewport:hover .crawl-track { animation-play-state: paused; }
+
+.why,
+html.home .lead .why,
+html.home .mkt-drivers .why,
+#ai .why {
+  background: #1b3040;
+  color: #d4dce1;
+}
+
+.why-label,
+html.home .lead .why-label {
+  color: #dfbd72;
+}
+
+#markets .why-label,
+html.home .mkt-drivers .why-label,
+#markets .mkt-tick,
+#markets .section-head .kicker {
+  color: #a9e0b5;
+}
+
+html.home #markets .section-head .kicker { color: #a9e0b5; }
+
+#news .card-kicker,
+html.home .lead-display .card-kicker,
+html.edition .lead .card-kicker,
+html.home .lead-index {
+  color: #dfbd72;
+}
+
+html.edition .lead .sources a,
+html.edition .lead .photo figcaption a {
+  color: #91c4eb;
+}
+
+#ai .why-label { color: #c1a1ed; }
+
+html.home .edition-nav {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+html.edition .edition-nav a[href*="archive"]:hover,
+html.home .edition-nav a[href*="archive"]:hover,
+html.edition .edition-nav a[href*="archive"][aria-current="page"],
+html.home .edition-nav a[href*="archive"][aria-current="page"] {
+  color: #d4dce1;
+  box-shadow: inset 0 -3px #b99a55;
+}
+
+#markets .mkt-strip {
+  border-top-color: #344653;
+}
+
+html.home .mkt-drivers article {
+  border-bottom-color: #344653;
+}
+
+html.home #markets .mkt-chip {
+  border-top-color: #415869;
+}
+
+@media (max-width: 700px) {
+  html.edition .brand-logo,
+  html.home .brand-logo {
+    width: min(245px, calc(100% - 67px));
+  }
+
+  .crawl-pause {
+    min-height: 44px;
+    min-width: 49px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crawl-pause { display: none; }
 }

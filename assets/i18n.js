@@ -71,4 +71,18 @@
     saveLang(fromHash);
     apply(fromHash);
   });
+
+  document.querySelectorAll(".crawl").forEach(function (crawl) {
+    var btn = crawl.querySelector(".crawl-pause");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var paused = !crawl.classList.contains("is-paused");
+      crawl.classList.toggle("is-paused", paused);
+      btn.setAttribute("aria-pressed", paused ? "true" : "false");
+      var he = btn.querySelector('[data-lang="he"]');
+      var en = btn.querySelector('[data-lang="en"]');
+      if (he) he.textContent = paused ? "המשך" : "השהה";
+      if (en) en.textContent = paused ? "Play" : "Pause";
+    });
+  });
 })();
