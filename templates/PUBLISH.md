@@ -1,14 +1,14 @@
-# Publishing a Brief edition (Modern editorial polish)
+# Publishing a The Daily Jenya edition
 
-This note is the publish path for the Modern editorial polish approved on 24 September 2026. The locked sheet is still white, crimson `#8b1e2d`, Frank Ruhl Libre headlines, and an asymmetric news front. Owner rejected Classic cream and Business Markets-first. This file does not replace verification, agenda, confidence, or cadence rules. Those still live with the desk. This file wins on what a reader sees.
+This note is the publish path after the 25 September 2026 cutover. The locked sheet is Direction 02: paper `#f3f0e7`, ink `#15251f`, forest `#143e33`, lime `#dae8a4`, soft AI purple `#ded5ec`, rules `#cfcfc2`. Crimson `#8b1e2d` is only a secondary news accent. Frank Ruhl Libre headlines, Heebo body, asymmetric news front. Do not switch the identity to crimson/gold. This file does not replace verification, agenda, confidence, or cadence rules. Those still live with the desk. This file wins on what a reader sees.
 
-The empty structure is `templates/edition.html`. It loads `assets/edition.css` and `assets/polish.css`. The filled cutover is `index.html` and `briefings/2026-09-24-1545/` (midday News, the Thursday ~15:45 markets snapshot, Wednesday AI). The labeled study that was approved is `preview/ux-2026-09-24-polish/` — leave that folder in place. An earlier study, `preview/ux-2026-09-24/`, is the pre-polish Modern page and is not the template. Earlier pages under `briefings/` stay on `assets/brief.css`. Do not restyle those older editions, and do not change their facts.
+The empty structure is `templates/edition.html`. It loads `assets/edition.css` and `assets/polish.css`. The filled cutover is `index.html` and `briefings/2026-09-25-1400/` (Friday midday News, the Friday ~11:35–11:45 markets snapshot, Friday morning AI). The masthead logo is `assets/daily-jenya-logo.png`. The labeled study that was approved earlier is `preview/ux-2026-09-24-polish/` — leave that folder in place. An earlier study, `preview/ux-2026-09-24/`, is the pre-polish Modern page and is not the template. Earlier pages under `briefings/` stay on `assets/brief.css`. Do not restyle those older editions, and do not change their facts.
 
 `assets/paper.css` is retired. Do not bring the dark newspaper sheet back. The archive **index** (`archive/index.html`) is the light sheet. The pages it links to, before this cutover, stay on the card sheet. `404.html` is still the dark card chrome.
 
 ## Cutover
 
-The 24 September 2026 afternoon edition is the polish cutover. `index.html` and `briefings/2026-09-24-1545/index.html` render from this template. They carry the midday News and the Thursday ~15:45 markets snapshot that had already landed, in the approved wording (a tariff truce, not a stop to trade; VIX is the index; USD/ILS is FX spot). Licensed photographs and their credits are in `assets/images/` and `briefings/2026-09-24-1545/IMAGE-CREDITS.md`.
+The 25 September 2026 midday edition is the Daily Jenya cutover. `index.html` and `briefings/2026-09-25-1400/index.html` render from this template. They carry the Friday MAIN News (eight cards), the Friday markets snapshot already on the site (~11:35–11:45 Israel, futures not cash), and the Friday morning AI digest. Do not invent stories or prices when remounting. VIX is the index. USD/ILS is FX spot. A tariff truce is not a stop to trade.
 
 `assets/brief.css` and `assets/lanes.js` stay for earlier permalinks. The card rendering of that 15:45 tape is in git history. Do not delete `brief.css` while those archives still link it.
 
@@ -29,19 +29,20 @@ The polish preview is not an archive edition. Do not add it to `archive/index.ht
 
 One scrolling page. News, then Markets, then AI. One language at a time. Hebrew is the default; English is the switcher in the masthead (`assets/i18n.js`, `data-lang`). Do not print a full Hebrew story and then the full English story in the same view.
 
-The page is white (`#ffffff`). Ink is `#121212`, body text `#3a3a3a`, muted text `#6b6b6b`. Crimson `#8b1e2d` is for kickers, the rule under the section nav, and the small badge. No dark app bar, no card grid, no cream paper, no gold ticker.
+The page is cream paper (`#f3f0e7`). Ink is `#15251f`. Forest `#143e33` is the mast bar, the nav rule, and the markets snapshot band. Lime `#dae8a4` is the Why-it-matters wash and the crawl prices. AI sits on `#ded5ec`. Rules are `#cfcfc2`. Crimson `#8b1e2d` is only a news kicker accent. No dark app bar, no quote-board dashboard, no crimson/gold identity.
 
-Masthead: a large Frank Ruhl Libre “Brief” wordmark, the edition date and clock beside it, the language switcher. Under that, the section nav: חדשות · שווקים · AI · ארכיון. Then one quotes line (what the news cut is, and that the markets figure is a snapshot, not a live quote).
+Masthead: the supplied logo (J and globe, **The Daily Jenya**, **YOUR MORNING EDITION**), the edition date, and Jerusalem time before any other clock, plus the language switcher. Under that, the section nav: חדשות · שווקים · AI · ארכיון. Then the indices crawl, then one quotes line (what the news cut is, and that the markets figure is a snapshot, not a live quote).
 
-Each story:
+Each story, in this order:
 
+- Category kicker.
 - Headline, about 8–14 words where that is natural. Ordinary Hebrew, not tape jargon.
-- One paragraph. Ordinary stories about 45–75 words; the lead may run to about 100. Targets, not quotas.
-- A compact sources line with links and dates.
+- What happened, in two to four short sentences.
+- A structural **למה זה חשוב / Why it matters** (`.why`), one or two sentences drawn from the sourced pack. Do not hide that point only inside the body.
+- Confidence, source, and time (`.card-meta`). Jerusalem time first. **מאומת / Confirmed** needs two independent sources. A single newsletter is **סביר / Likely** at most. Do not print a stack of confidence essays.
+- A sources line with links. The link is to the external original only. There is no in-site long article and no “continue reading.”
 
-What changed and why it matters belong **in that paragraph**. Do not print public headings “What / Why / Next” or “למה זה חשוב / Why it matters” under a card.
-
-Strip from the HTML: internal notes, hard gates, verb locks, card IDs, agent routing, and confidence essays (stacks of מאומת / סביר / לא מאומת). Keep a material caveat in the paragraph itself. Uncertain claims stay qualified in prose. A collapsed “more” block is only for extra sourced detail, never the only place a caveat lives.
+Strip from the HTML: internal notes, hard gates, verb locks, card IDs, agent routing (including “→ Markets”), and desk words such as stamp when a plain “at this hour” will do. Keep a material caveat in the prose. Uncertain claims stay qualified. A collapsed “more” block is only for extra sourced detail, never the only place a caveat lives.
 
 News hierarchy, in this order, on the open page:
 
@@ -55,20 +56,21 @@ Section ids are `#news`, `#markets`, and `#ai`. `#premarket`, `#lane-news`, `#la
 
 ## Markets, after News
 
-From 25 September 2026 the reader hierarchy is a market news brief, not a quote dashboard. Prices are supporting context. The empty structure is the `#markets` block in `templates/edition.html`. Older permalinks that still use quote boards stay as they were. Do not rebuild those pages.
+From 25 September 2026 the reader hierarchy is a market news brief, not a quote dashboard. Prices are supporting context and come last. The empty structure is the `#markets` block in `templates/edition.html`. Older permalinks that still use quote boards stay as they were. Do not rebuild those pages.
 
-Reader order, top to bottom. Do not reverse it. On a phone the snapshot wraps; it does not become a second story. The page does not scroll sideways.
+Reader order, top to bottom. Do not reverse it. On a phone the snapshot wraps; it does not become the hero. The page does not scroll sideways.
 
-1. **Snapshot** (`.mkt-snap`). Secondary. A compact strip.
+1. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. Each article: a bilingual headline, one or two short sentences, `.why`, and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
+2. **Company catalysts** (`#mkt-catalysts-heading`, `.mkt-catalysts`). About four to eight. Ticker in `.mkt-tick`, the name, the event, `.why`, and `.sources`. A price move is not a reason to include a name. Do not default to the same megacaps unless they have a real event. Cover other sectors when the day has them.
+3. **Today / next** (`.mkt-next`). About two to four items that could matter. Israel time first. US Eastern beside it when the hour is confirmed, including which daylight-saving offset is in force. One short reason only when it is not obvious. Drop rows whose time has already passed. Do not invent an hour.
+4. **Market story** (`.mkt-brief`). Optional. At most three sentences. Do not force a cause for a small move. Delete the block on a quiet day.
+5. **Snapshot** (`.mkt-snap`). Secondary. A compact strip, after the news. The same six primary levels also run in the mast crawl (`.crawl`), duplicated for a seamless right-to-left loop. `prefers-reduced-motion` stops the animation and shows one static row. The crawl is the stamped snapshot, not a live quote.
    - `.mkt-snap-note` is one short freshness note, and only when a real limitation exists: futures are not cash, the US cash session is closed, or a yield is the prior close. No methodology essay. No per-quote timestamp paragraph.
    - `.mkt-strip` holds up to six `.mkt-chip` items: S&P 500 / ES, Nasdaq / NQ, Dow / YM, VIX, USD/ILS, WTI. Label a future as a future. NQ is not the Composite. VIX is the **index** — the flag says `מדד, לא חוזה` / `Index, not futures`. USD/ILS is **FX spot** — the flag says `שער מט״ח` / `FX spot`, and a rise means a stronger dollar. If the pack stamped cash instead of futures, label those chips as cash. Do not print both.
    - `.mkt-strip-tuck` is optional and smaller. At most Bitcoin and the US 10-year, when the pack stamped them. If the 10-year stamp is a prior cash close, the flag says so. Do not print a percent change unless that is the pack’s unit.
    - Do not print RTY, DXY, gold, Brent, or the 30-year as equal peers. Do not add a cash grid. A missing primary stamp is `.mkt-chip--missing` (“אין חותמת בחבילה הזו” / “Not in this tape”). Do not invent the number.
    - Each chip: symbol linked to the stamp, a plain name, the price, one change, a short flag. The section head prints the real stamp. If the tape is carried, do not say “today.” Do not call delayed data live.
-2. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. Each article: a bilingual headline, one or two short sentences (what happened, and why a market participant may care), and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
-3. **Company catalysts** (`#mkt-catalysts-heading`, `.mkt-catalysts`). About four to eight. Ticker in `.mkt-tick`, the name, the event, why it matters, and `.sources`. A price move is not a reason to include a name. Do not default to the same megacaps unless they have a real event. Cover other sectors when the day has them.
-4. **Today / next** (`.mkt-next`). About two to four items that could matter. Israel time first. US Eastern beside it when the hour is confirmed, including which daylight-saving offset is in force. One short reason only when it is not obvious. Drop rows whose time has already passed. Do not invent an hour.
-5. **Market story** (`.mkt-brief`). Optional, and last. At most three sentences. Do not force a cause for a small move. Delete the block on a quiet day. Do not restate every chip.
+Do not restate every chip inside the market story.
 
 Desk pack, in this order, before HTML: SESSION (one label and the real stamp); SNAPSHOT_PRIMARY (the six); SNAPSHOT_SECONDARY (optional Bitcoin and 10-year only); MARKET_DRIVERS; COMPANY_CATALYSTS; TODAY_NEXT; MARKET_STORY (optional); INTERNAL NOTES. Do not print the internal notes.
 
@@ -86,7 +88,7 @@ Fallback, if a file fails: `"Noto Serif Hebrew", "Times New Roman", Times` for h
 
 ## Images
 
-Use a picture only with a license, a credit in the caption, alt text (`data-alt-he` / `data-alt-en`), and a block in that edition’s `IMAGE-CREDITS.md`. Put shared files in `assets/images/`. Put a file that only one edition uses in `briefings/YYYY-MM-DD-HHMM/images/`. Otherwise leave the story text-first. Do not generate a documentary fake. Do not draw a chart from memory. A market chart is allowed only when the series, source, range, units, and timestamps are real. Missing art does not block the edition.
+Use a story picture only with a license, a credit in the caption, alt text (`data-alt-he` / `data-alt-en`), and a block in that edition’s `IMAGE-CREDITS.md`. The masthead file `assets/daily-jenya-logo.png` is the brand lockup, not a story photograph. An illustration that is not a photo of the event is allowed only with `<p class="illus-label">` reading **המחשה (AI)** / **AI illustration**. Put shared files in `assets/images/`. Put a file that only one edition uses in `briefings/YYYY-MM-DD-HHMM/images/`. Otherwise leave the story text-first. Do not generate a documentary fake. Do not draw a chart from memory. A market chart is allowed only when the series, source, range, units, and timestamps are real. Missing art does not block the edition.
 
 There is no publish script that fetches images for a new story. Choosing and crediting a photograph is a manual step. Do not hotlink an unlicensed wire photo to fill the lead.
 
@@ -96,7 +98,10 @@ There is no publish script that fetches images for a new story. Choosing and cre
 - The paragraph states the point and any caveat that changes the meaning.
 - Jargon is plain, or glossed once. Hebrew reads as a sentence, not a tape label.
 - Hebrew and English are not both visible.
-- The page is white. The masthead is the wordmark. The nav is חדשות · שווקים · AI · ארכיון. Crimson is the kicker, the nav rule, and the badge.
+- The page is cream `#f3f0e7`. The masthead is the Daily Jenya logo. The nav is חדשות · שווקים · AI · ארכיון. Forest is the bar and the nav rule. Crimson is only a news kicker.
+- Every story card has `.why` (למה זה חשוב / Why it matters). There is no dive-in reader.
+- The indices crawl is present, duplicated, and still readable with `prefers-reduced-motion`.
+- An AI picture carries `.illus-label` (**המחשה (AI)** / **AI illustration**). Do not present generated art as a photograph of the event.
 - Both `edition.css` and `polish.css` are linked. `lanes.js`, `brief.css`, and `paper.css` are not.
 - News is the asymmetric front. There is no gray photo placeholder.
 - Markets is the news-first order above, not quote boards and not an HTML table. The snapshot strip is shorter than the drivers. VIX is labeled as an index. USD/ILS is labeled as FX spot. The six levels can be scanned without reading a paragraph.

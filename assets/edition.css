@@ -1,10 +1,9 @@
-/* Brief edition — Modern editorial base (UX spec v1.2, locked 2026-09-24).
+/* The Daily Jenya — Direction 02 editorial base (cutover 2026-09-25).
    Loaded with assets/polish.css by the live homepage, the current permalink,
    the archive index, and templates/edition.html.
-   polish.css is the approved sheet: nav, photographs, the news-first
-   markets brief, newspaper AI, archive list. Do not load it on card-layout
-   briefings. Earlier permalinks keep assets/brief.css. 404.html does too.
-   White page, ink, crimson used only for kickers, one rule, and badges.
+   Paper, ink, forest, and lime are the identity. Crimson stays a secondary
+   news accent. Do not load this sheet on older card-layout briefings.
+   Those keep assets/brief.css. 404.html does too.
    Type: Frank Ruhl Libre (headlines) + Heebo (body), SIL OFL, assets/fonts/.
    Local files are weights 500 and 700. Body size is 18.5px. */
 
@@ -99,13 +98,17 @@
 }
 
 :root {
-  --page: #ffffff;
-  --ink: #121212;
-  --body: #3a3a3a;
-  --muted: #6b6b6b;
-  --faint: #888888;
+  --page: #f3f0e7;
+  --paper: #f3f0e7;
+  --ink: #15251f;
+  --body: #24352e;
+  --muted: #4e6158;
+  --faint: #6a7b73;
   --accent: #8b1e2d;
-  --rule: #e6e6e6;
+  --forest: #143e33;
+  --lime: #dae8a4;
+  --ai: #ded5ec;
+  --rule: #cfcfc2;
   --serif: "Frank Ruhl Libre", "Noto Serif Hebrew", "Times New Roman", Times, serif;
   --sans: "Heebo", "Noto Sans Hebrew", "Arial Hebrew", Arial, sans-serif;
 }
