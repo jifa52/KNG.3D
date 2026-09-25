@@ -4,6 +4,8 @@ Copy this file into `briefings/YYYY-MM-DD-HHMM/IMAGE-CREDITS.md` when the editio
 
 There is no image-fetch step in the publish path. A picture is placed by hand, only after the license, the creator, and the caption are known.
 
+The publish template keeps a `figure.photo` on the lead and a `figure.photo.photo--support` on each of the two supports. When a Markets or AI drop does not replace those stories, copy this file forward with the same rows. Do not publish a text-only front by omitting the figures.
+
 ## {{lead or support}} — {{what the picture shows}}
 
 - File: `assets/images/{{file}}` (shared) or `briefings/YYYY-MM-DD-HHMM/images/{{file}}` (this edition only)

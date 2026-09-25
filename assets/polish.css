@@ -174,6 +174,16 @@ html[lang="he"] .section-head .kicker {
   object-position: center 18%;
 }
 
+.photo--support {
+  margin: 0 0 0.7rem;
+}
+
+.photo--support img {
+  aspect-ratio: 3 / 2;
+  max-height: 230px;
+  object-position: center 46%;
+}
+
 .photo figcaption {
   margin-top: 0.45rem;
   color: var(--body);
@@ -435,8 +445,12 @@ html.edition .note {
   }
 
   html.edition .lead .photo img {
-    max-height: 168px;
+    max-height: 220px;
     aspect-ratio: 16 / 9;
+  }
+
+  .photo--support img {
+    max-height: 210px;
   }
 
   .photo--portrait {
@@ -450,7 +464,7 @@ html.edition .note {
 
 @media (max-height: 820px) and (min-width: 861px) {
   html.edition .lead .photo img {
-    max-height: 168px;
+    max-height: 300px;
   }
 }
 
@@ -975,6 +989,20 @@ html.edition .lead .sources a {
   color: var(--lime);
 }
 
+html.edition .lead .photo img {
+  max-height: 420px;
+  aspect-ratio: 16 / 9;
+  object-position: center 40%;
+}
+
+html.edition .lead .photo figcaption {
+  color: #d5e3db;
+}
+
+html.edition .lead .photo figcaption a {
+  color: var(--lime);
+}
+
 html.edition .side-stack {
   background: var(--page);
   padding: 0.35rem 1.15rem 0.2rem;
@@ -1457,5 +1485,13 @@ html.home #markets .mkt-strip-tuck .mkt-px {
   html.home #markets .mkt-strip-tuck {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     max-width: none;
+  }
+
+  html.edition .lead .photo img {
+    max-height: 240px;
+  }
+
+  .photo--support img {
+    max-height: 200px;
   }
 }

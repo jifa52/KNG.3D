@@ -33,12 +33,18 @@
     Markets is the previous stamp, labeled as carried, or omitted if the pack has none.
   - Main news: full front (lead display + forest panel, two supports, quiet band).
     Keep the prior Markets stamp if this drop does not replace it. Do not call an older stamp today.
-  - Markets: refresh A–F from the new tape. Keep the news front unless the pack replaces it.
+  - Markets: refresh A–F from the new tape. Keep the news front, including every
+    figure.photo already on index.html, unless the pack replaces a story. Do not
+    delete photographs on a markets-only drop.
   - AI digest: refresh .ai-carry, .ai-lead, and .ai-list. Text-first unless a licensed image exists.
 
-  Images: no gray placeholder. A figure exists only with a license, a credit in the
-  caption, alt text, and a block in IMAGE-CREDITS.md (copy templates/IMAGE-CREDITS.md
-  into the edition folder). There is no image-fetch script. Do not invent a photograph.
+  Images: the lead and both supports below include figure.photo. Keep those slots.
+  Fill src, alt, and figcaption only with a licensed file and a visible credit.
+  A Markets or AI publish copies the figures already on the live page; it does not
+  comment them out or drop them to match an empty card. No gray placeholder.
+  Caption, alt text (data-alt-he / data-alt-en), and a block in IMAGE-CREDITS.md
+  (copy templates/IMAGE-CREDITS.md into the edition folder). There is no image-fetch
+  script. Do not invent a photograph.
   Do not invent a market number. A missing stamp uses the missing-row pattern.
   Strip internal notes, hard gates, verb locks, card IDs, and agent routing.
   Each card has a kicker, the facts, .why (למה זה חשוב / Why it matters),
@@ -107,19 +113,14 @@
         <div class="front">
           <article class="lead" aria-labelledby="lead-title">
             <p class="lead-index"><span data-lang="he">חדשות · <bdi class="num">01 — {{NN}}</bdi></span><span data-lang="en">News · <bdi class="num">01 — {{NN}}</bdi></span></p>
-            <!--
-              Licensed photo only. Paste this figure in the forest panel when a credit exists.
-              The headline stays in .lead-display. Otherwise leave the lead text-first.
-              Do not insert a gray placeholder. Do not invent a photograph.
-              <figure class="photo">
-                <img src="../assets/images/{{file}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" fetchpriority="high" decoding="async">
-                <figcaption>
-                  <span data-lang="he">{{קרדיט, רישיון, ולמה זה לא בהכרח צילום האירוע}}</span>
-                  <span data-lang="en">{{credit, license, and why this may not be the event itself}}</span>
-                </figcaption>
-              </figure>
-              A support portrait, when licensed, uses figure.photo.photo--portrait inside that article.
-            -->
+            <!-- Keep this figure. A Markets refresh copies the live src. Delete the figure only when this story has no licensed credit, and say so in IMAGE-CREDITS.md. Do not invent a photograph. Do not use a gray placeholder. -->
+            <figure class="photo">
+              <img src="../assets/images/{{lead_file}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" fetchpriority="high" decoding="async">
+              <figcaption>
+                <span data-lang="he">צילום: {{קרדיט}}. {{רישיון}}. {{למה זה לא בהכרח צילום האירוע}}. <a href="{{commons_or_license_url}}">{{וויקישיתוף או הרישיון}}</a></span>
+                <span data-lang="en">Photo: {{credit}}. {{license}}. {{why this may not be the event itself}}. <a href="{{commons_or_license_url}}">{{Wikimedia Commons or the license}}</a></span>
+              </figcaption>
+            </figure>
             <p class="body" data-lang="he">{{מה_קרה_2_עד_4_משפטים}}</p>
             <p class="body" data-lang="en">{{what_happened_2_to_4_sentences}}</p>
             <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה_זה_חשוב}}</span><span data-lang="en">{{why_it_matters}}</span></p>
@@ -129,6 +130,14 @@
           </article>
           <div class="side-stack">
             <article>
+              <!-- Keep this figure on a Markets refresh. photo--portrait is only for a licensed portrait of a person. -->
+              <figure class="photo photo--support">
+                <img src="../assets/images/{{support_file_1}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" decoding="async">
+                <figcaption>
+                  <span data-lang="he">צילום: {{קרדיט}}. {{רישיון}}. {{למה זה לא בהכרח צילום האירוע}}. <a href="{{commons_or_license_url}}">{{וויקישיתוף או הרישיון}}</a></span>
+                  <span data-lang="en">Photo: {{credit}}. {{license}}. {{why this may not be the event itself}}. <a href="{{commons_or_license_url}}">{{Wikimedia Commons or the license}}</a></span>
+                </figcaption>
+              </figure>
               <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
               <h3 data-lang="he">{{כותרת_תומכת_1}}</h3>
               <h3 data-lang="en">{{support_headline_1}}</h3>
@@ -140,6 +149,14 @@
               <p class="sources" data-lang="en">Sources: {{links}}</p>
             </article>
             <article>
+              <!-- Keep this figure on a Markets refresh. -->
+              <figure class="photo photo--support">
+                <img src="../assets/images/{{support_file_2}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" decoding="async">
+                <figcaption>
+                  <span data-lang="he">צילום: {{קרדיט}}. {{רישיון}}. {{למה זה לא בהכרח צילום האירוע}}. <a href="{{commons_or_license_url}}">{{וויקישיתוף או הרישיון}}</a></span>
+                  <span data-lang="en">Photo: {{credit}}. {{license}}. {{why this may not be the event itself}}. <a href="{{commons_or_license_url}}">{{Wikimedia Commons or the license}}</a></span>
+                </figcaption>
+              </figure>
               <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
               <h3 data-lang="he">{{כותרת_תומכת_2}}</h3>
               <h3 data-lang="en">{{support_headline_2}}</h3>

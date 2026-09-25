@@ -37,6 +37,11 @@ jobs:
             assets/daily-jenya-logo.png \
             assets/images/trump-xi-1280.jpg \
             assets/images/albanese-800.jpg \
+            assets/images/yanbu-nasa-1920.jpg \
+            assets/images/yanbu-nasa-960.jpg \
+            assets/images/tanker-abot-1280.jpg \
+            assets/images/datacenter-racks-1280.jpg \
+            briefings/2026-09-25-1400/IMAGE-CREDITS.md \
             assets/fonts/FrankRuhlLibre-700-hebrew.woff2 \
             assets/fonts/Heebo-400-hebrew.woff2 \
             archive/index.html \
@@ -104,6 +109,13 @@ jobs:
           grep -q 'FX spot' index.html
           grep -q 'The Daily Jenya' index.html
           grep -q 'daily-jenya-logo.png' index.html
+          grep -q 'yanbu-nasa-1920.jpg' index.html
+          grep -q 'tanker-abot-1280.jpg' index.html
+          grep -q 'datacenter-racks-1280.jpg' index.html
+          grep -q 'photo--support' index.html
+          grep -q 'photo--support' briefings/2026-09-25-1400/index.html
+          grep -q 'photo--support' templates/edition.html
+          grep -q 'figure class="photo"' templates/edition.html
           grep -q 'למה זה חשוב' index.html
           grep -q 'Why it matters' index.html
           grep -q 'crawl-track' index.html
