@@ -18,7 +18,7 @@ Same sheet for every cadence. What changes is which blocks are filled:
 
 - **Overnight thin.** One lead, fewer supports, quiet band only if the pack has the stories. Markets is the previous news-first block, with that stamp printed, or the section is omitted when the pack has no tape. AI is carried or omitted the same way.
 - **Main news.** Full front: lead, about two supports, quiet band. If this drop does not replace Markets, keep the prior news-first block and print the real stamp. Do not say “today” for an older stamp.
-- **Markets.** Refresh the snapshot strip, drivers, catalysts, today/next, and the optional story. Keep the news front unless the pack replaces a story.
+- **Markets.** Refresh the snapshot strip, drivers, catalysts, today/next, and the optional story. Keep the news front, including every `figure.photo` already on `index.html`, unless the pack replaces a story. A markets drop does not delete lead or support photographs.
 - **AI digest.** Refresh `.ai-carry`, `.ai-lead`, and `.ai-list`. Text-first unless a licensed image exists.
 
 The polish preview is not an archive edition. Do not add it to `archive/index.html`. It stays as the study that shipped:
@@ -47,8 +47,8 @@ Strip from the HTML: internal notes, hard gates, verb locks, card IDs, agent rou
 News hierarchy, in this order, on the open page. The live sheet carries `class="home"` on `<html>` (with `edition`). Archive and older briefings do not.
 
 1. The lead headline (`.lead-display`) sits in the mast, on the cream, beside the logo. One kicker, one `h2#lead-title`.
-2. The forest panel (`article.lead` inside `.front`) is the story: index line, two to four sentences, `.why`, meta, sources. About 60% of the row. A `figure.photo` only when a licensed credit exists. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph.
-3. About two supporting stories (`.side-stack`), about 40%. A portrait (`figure.photo.photo--portrait`) only with its own license and caption.
+2. The forest panel (`article.lead` inside `.front`) is the story: index line, `figure.photo` when a licensed credit exists, two to four sentences, `.why`, meta, sources. About 60% of the row. The publish template keeps that figure in the panel. Fill it, or, on a Markets refresh, copy the figure already on the live page. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph. Do not comment the figure out and ship a text-only front when the previous edition already had a credited lead.
+3. About two supporting stories (`.side-stack`), about 40%. Each support in the template has `figure.photo.photo--support` (a landscape). A portrait (`figure.photo.photo--portrait`) is only for a licensed portrait of a person. Keep both support figures on a Markets refresh. Each picture needs its own license and caption.
 4. The rest quieter (`.quiet-band`), three across on a wide screen, stacked on a phone.
 5. The edition dek (`.quotes`) comes after that band, not between the nav and the lead.
 
@@ -90,7 +90,9 @@ Fallback, if a file fails: `"Noto Serif Hebrew", "Times New Roman", Times` for h
 
 ## Images
 
-Use a story picture only with a license, a credit in the caption, alt text (`data-alt-he` / `data-alt-en`), and a block in that edition’s `IMAGE-CREDITS.md`. The masthead file `assets/daily-jenya-logo.png` is the brand lockup, not a story photograph. An illustration that is not a photo of the event is allowed only with `<p class="illus-label">` reading **המחשה (AI)** / **AI illustration**. Put shared files in `assets/images/`. Put a file that only one edition uses in `briefings/YYYY-MM-DD-HHMM/images/`. Otherwise leave the story text-first. Do not generate a documentary fake. Do not draw a chart from memory. A market chart is allowed only when the series, source, range, units, and timestamps are real. Missing art does not block the edition.
+Use a story picture only with a license, a credit in the caption, alt text (`data-alt-he` / `data-alt-en`), and a block in that edition’s `IMAGE-CREDITS.md`. The masthead file `assets/daily-jenya-logo.png` is the brand lockup, not a story photograph. An illustration that is not a photo of the event is allowed only with `<p class="illus-label">` reading **המחשה (AI)** / **AI illustration**. Put shared files in `assets/images/`. Put a file that only one edition uses in `briefings/YYYY-MM-DD-HHMM/images/`. Otherwise leave that one story text-first. Do not generate a documentary fake. Do not draw a chart from memory. A market chart is allowed only when the series, source, range, units, and timestamps are real. Missing art on a brand-new story does not block the edition. It does not license deleting photographs the live page already shows.
+
+The template’s lead and both supports include `figure.photo`. Those slots stay in the published HTML whenever a credit exists. A Markets publish, or any drop that does not replace the news front, copies the figures from the current `index.html` (src, srcset, caption, alt). Do not rebuild the news front from the empty tokens and drop the pictures. Do not hotlink. Download the file into `assets/images/` or the edition `images/` folder.
 
 There is no publish script that fetches images for a new story. Choosing and crediting a photograph is a manual step. Do not hotlink an unlicensed wire photo to fill the lead.
 
@@ -108,7 +110,8 @@ There is no publish script that fetches images for a new story. Choosing and cre
 - News is the asymmetric front. There is no gray photo placeholder.
 - Markets is the news-first order above, not quote boards and not an HTML table. The snapshot strip is shorter than the drivers. VIX is labeled as an index. USD/ILS is labeled as FX spot. The six levels can be scanned without reading a paragraph.
 - A carried AI digest says so, in `.ai-carry`, with the real date.
-- Every embedded image has a caption and a row in `IMAGE-CREDITS.md`.
+- Every embedded image has a visible caption and a row in `IMAGE-CREDITS.md`.
+- The lead `figure.photo` and both support `figure.photo` are still in the HTML when those stories kept their credits. A Markets-only change did not strip them.
 - Expired calendar rows are gone.
 - No internal desk labels in the HTML.
 - `#premarket` still reaches Markets.
