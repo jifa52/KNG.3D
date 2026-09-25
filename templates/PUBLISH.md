@@ -44,11 +44,13 @@ Each story, in this order:
 
 Strip from the HTML: internal notes, hard gates, verb locks, card IDs, agent routing (including “→ Markets”), and desk words such as stamp when a plain “at this hour” will do. Keep a material caveat in the prose. Uncertain claims stay qualified. A collapsed “more” block is only for extra sourced detail, never the only place a caveat lives.
 
-News hierarchy, in this order, on the open page:
+News hierarchy, in this order, on the open page. The live sheet carries `class="home"` on `<html>` (with `edition`). Archive and older briefings do not.
 
-1. One lead (`article.lead` inside `.front`), about 60% of the row. A `figure.photo` only when a licensed credit exists. Otherwise the lead is text-first. Do not print the gray “no licensed image” line.
-2. About two supporting stories (`.side-stack`), about 40%. A portrait (`figure.photo.photo--portrait`) only with its own license and caption.
-3. The rest quieter (`.quiet-band`), three across on a wide screen, stacked on a phone.
+1. The lead headline (`.lead-display`) sits in the mast, on the cream, beside the logo. One kicker, one `h2#lead-title`.
+2. The forest panel (`article.lead` inside `.front`) is the story: index line, two to four sentences, `.why`, meta, sources. About 60% of the row. A `figure.photo` only when a licensed credit exists. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph.
+3. About two supporting stories (`.side-stack`), about 40%. A portrait (`figure.photo.photo--portrait`) only with its own license and caption.
+4. The rest quieter (`.quiet-band`), three across on a wide screen, stacked on a phone.
+5. The edition dek (`.quotes`) comes after that band, not between the nav and the lead.
 
 AI uses the same calm newspaper type: `.ai-carry` when the digest is carried, then `article.ai-lead`, then `.ai-list`. No equal-weight card stack. No product image without a license.
 
@@ -60,7 +62,7 @@ From 25 September 2026 the reader hierarchy is a market news brief, not a quote 
 
 Reader order, top to bottom. Do not reverse it. On a phone the snapshot wraps; it does not become the hero. The page does not scroll sideways.
 
-1. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. Each article: a bilingual headline, one or two short sentences, `.why`, and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
+1. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. On the home sheet the section title is large cream type and this block is the forest slab; the first driver is the display line. Prices stay in the snapshot below. Each article: a bilingual headline, one or two short sentences, `.why`, and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
 2. **Company catalysts** (`#mkt-catalysts-heading`, `.mkt-catalysts`). About four to eight. Ticker in `.mkt-tick`, the name, the event, `.why`, and `.sources`. A price move is not a reason to include a name. Do not default to the same megacaps unless they have a real event. Cover other sectors when the day has them.
 3. **Today / next** (`.mkt-next`). About two to four items that could matter. Israel time first. US Eastern beside it when the hour is confirmed, including which daylight-saving offset is in force. One short reason only when it is not obvious. Drop rows whose time has already passed. Do not invent an hour.
 4. **Market story** (`.mkt-brief`). Optional. At most three sentences. Do not force a cause for a small move. Delete the block on a quiet day.
@@ -98,7 +100,7 @@ There is no publish script that fetches images for a new story. Choosing and cre
 - The paragraph states the point and any caveat that changes the meaning.
 - Jargon is plain, or glossed once. Hebrew reads as a sentence, not a tape label.
 - Hebrew and English are not both visible.
-- The page is cream `#f3f0e7`. The masthead is the Daily Jenya logo. The nav is חדשות · שווקים · AI · ארכיון. Forest is the bar and the nav rule. Crimson is only a news kicker.
+- The page is cream `#f3f0e7`. The masthead is the Daily Jenya logo beside the lead headline. The nav is חדשות · שווקים · AI · ארכיון. Forest is the top bar, the lead panel, and the drivers slab. Crimson is only a news kicker. The snapshot figures stay smaller than the drivers.
 - Every story card has `.why` (למה זה חשוב / Why it matters). There is no dive-in reader.
 - The indices crawl is present, duplicated, and still readable with `prefers-reduced-motion`.
 - An AI picture carries `.illus-label` (**המחשה (AI)** / **AI illustration**). Do not present generated art as a photograph of the event.

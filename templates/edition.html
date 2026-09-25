@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="edition"
+<html lang="he" dir="rtl" class="edition home"
   data-title-he="תבנית · The Daily Jenya"
   data-title-en="Template · The Daily Jenya"
   data-desc-he="תבנית פרסום. לא מהדורה."
@@ -18,8 +18,11 @@
 <!--
   PUBLISH TEMPLATE. Not an edition. Do not ship this file as the homepage.
   The Daily Jenya, Direction 02 (25 Sep 2026). Cream paper, forest, lime.
-  News first. Short cards with .why. Markets: drivers, catalysts, today/next,
-  optional story, then the compact snapshot. Indices crawl under the nav.
+  class "home" is the live sheet only. The lead headline sits in .lead-display
+  in the mast, beside the logo. The forest panel is article.lead (body, .why).
+  Two supports in .side-stack. The rest in .quiet-band. Markets: a large title,
+  then drivers on the forest slab, catalysts, today/next, optional story,
+  then the compact snapshot. Indices crawl under the nav.
 
   Copy this file to index.html and to briefings/YYYY-MM-DD-HHMM/index.html.
   Both stylesheets stay. Fill {{tokens}} from the approved pack. Delete this
@@ -28,8 +31,8 @@
   Cadence — same sheet, different blocks:
   - Overnight thin: one lead, fewer supports, no quiet band if the pack is short.
     Markets is the previous stamp, labeled as carried, or omitted if the pack has none.
-  - Main news: full front (lead, two supports, quiet band). Keep the prior Markets
-    stamp if this drop does not replace it. Do not call an older stamp today.
+  - Main news: full front (lead display + forest panel, two supports, quiet band).
+    Keep the prior Markets stamp if this drop does not replace it. Do not call an older stamp today.
   - Markets: refresh A–F from the new tape. Keep the news front unless the pack replaces it.
   - AI digest: refresh .ai-carry, .ai-lead, and .ai-list. Text-first unless a licensed image exists.
 
@@ -58,9 +61,13 @@
         <h1 class="brand">
           <img class="brand-logo" src="../assets/daily-jenya-logo.png" width="921" height="472" alt="The Daily Jenya — Your Morning Edition">
         </h1>
-        <p class="badge"><span data-lang="he">תבנית פרסום · לא מהדורה</span><span data-lang="en">PUBLISH TEMPLATE · not an edition</span></p>
+      </div>
+      <div class="lead-display">
+        <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
+        <h2 id="lead-title"><span data-lang="he">{{כותרת_מובילה}}</span><span data-lang="en">{{lead_headline}}</span></h2>
       </div>
       <div class="mast-meta">
+        <p class="badge"><span data-lang="he">תבנית פרסום · לא מהדורה</span><span data-lang="en">PUBLISH TEMPLATE · not an edition</span></p>
         <p><strong><span data-lang="he">{{תאריך_עברית}}</span><span data-lang="en">{{date_english}}</span></strong></p>
         <p><span data-lang="he">שעת המהדורה <bdi class="num">{{HH:MM}}</bdi> בישראל (<bdi class="num">{{HH:MM}} ET</bdi>)</span><span data-lang="en">Edition time <bdi class="num">{{HH:MM}}</bdi> Israel (<bdi class="num">{{HH:MM}} ET</bdi>)</span></p>
         <div class="lang" role="group" aria-labelledby="lang-label">
@@ -70,13 +77,13 @@
           <button type="button" class="lang-btn" data-lang-set="en" lang="en" aria-pressed="false">English</button>
         </div>
       </div>
+      <nav class="edition-nav" aria-label="Sections">
+        <a href="#news" aria-current="true"><span data-lang="he">חדשות</span><span data-lang="en">News</span></a>
+        <a href="#markets"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></a>
+        <a href="#ai">AI</a>
+        <a href="../archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
+      </nav>
     </header>
-    <nav class="edition-nav" aria-label="Sections">
-      <a href="#news"><span data-lang="he">חדשות</span><span data-lang="en">News</span></a>
-      <a href="#markets"><span data-lang="he">שווקים</span><span data-lang="en">Markets</span></a>
-      <a href="#ai">AI</a>
-      <a href="../archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
-    </nav>
     <!-- Crawl: duplicate .crawl-seq. Copy the six primary stamps. Do not invent a price. prefers-reduced-motion is in polish.css. -->
     <div class="crawl" aria-label="Index snapshot">
       <p class="crawl-kicker"><span data-lang="he">מדדים · {{תאריך ושעה של התמונה}} · לא ציטוט חי</span><span data-lang="en">Indices · {{snapshot date and time}} · not a live quote</span></p>
@@ -91,8 +98,6 @@
         </div>
       </div>
     </div>
-    <p class="quotes"><span data-lang="he">{{חדשות: חותמת}}. {{שווקים: חותמת, לא ציטוט חי}}</span><span data-lang="en">{{news stamp}}. {{markets stamp, not a live quote}}</span></p>
-
     <main id="main">
       <section class="section" id="news" aria-labelledby="news-kicker">
         <header class="section-head">
@@ -100,13 +105,12 @@
           <p class="section-when"><span data-lang="he">{{מתי עודכן}}</span><span data-lang="en">{{when it was updated}}</span></p>
         </header>
         <div class="front">
-          <article class="lead">
-            <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
-            <h2 data-lang="he">{{כותרת_מובילה}}</h2>
-            <h2 data-lang="en">{{lead_headline}}</h2>
+          <article class="lead" aria-labelledby="lead-title">
+            <p class="lead-index"><span data-lang="he">חדשות · <bdi class="num">01 — {{NN}}</bdi></span><span data-lang="en">News · <bdi class="num">01 — {{NN}}</bdi></span></p>
             <!--
-              Licensed photo only. Paste this figure under the headline when a credit exists.
-              Otherwise leave the lead text-first. Do not insert a gray placeholder.
+              Licensed photo only. Paste this figure in the forest panel when a credit exists.
+              The headline stays in .lead-display. Otherwise leave the lead text-first.
+              Do not insert a gray placeholder. Do not invent a photograph.
               <figure class="photo">
                 <img src="../assets/images/{{file}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" fetchpriority="high" decoding="async">
                 <figcaption>
@@ -161,6 +165,7 @@
             <p class="sources" data-lang="en">Sources: {{links}}</p>
           </article>
         </div>
+        <p class="quotes"><span data-lang="he">{{חדשות: חותמת}}. {{שווקים: חותמת, לא ציטוט חי}}</span><span data-lang="en">{{news stamp}}. {{markets stamp, not a live quote}}</span></p>
       </section>
 
       <section class="section" id="markets" aria-labelledby="markets-kicker">
@@ -315,6 +320,29 @@
       }
       go();
       window.addEventListener("hashchange", go);
+    })();
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.edition-nav a[href^="#"]'));
+      if (!links.length || !("IntersectionObserver" in window)) return;
+      var byId = {};
+      links.forEach(function (a) {
+        var id = a.getAttribute("href").slice(1);
+        if (document.getElementById(id)) byId[id] = a;
+      });
+      var ratio = {};
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          ratio[entry.target.id] = entry.isIntersecting ? entry.intersectionRatio : 0;
+        });
+        var current = null;
+        var best = 0;
+        Object.keys(byId).forEach(function (id) {
+          if (ratio[id] > best) { best = ratio[id]; current = id; }
+        });
+        links.forEach(function (a) { a.removeAttribute("aria-current"); });
+        if (current && byId[current]) byId[current].setAttribute("aria-current", "true");
+      }, { rootMargin: "-12% 0px -40% 0px", threshold: [0.05, 0.2, 0.45, 0.7] });
+      Object.keys(byId).forEach(function (id) { obs.observe(document.getElementById(id)); });
     })();
   </script>
 </body>

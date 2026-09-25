@@ -1100,3 +1100,362 @@ html.edition .page-foot {
     padding-inline: 1rem;
   }
 }
+
+/* Home sheet rhythm. Direction 02 frames: cream mast with the lead
+   headline beside the logo, a hairline, then a forest story panel.
+   Markets: a large section title, a forest drivers slab, snapshot last.
+   Archive and older editions do not carry class "home". */
+
+html.home .wrap {
+  padding-top: 1.35rem;
+}
+
+html.home .mast {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  grid-template-areas:
+    "brand display"
+    "nav meta";
+  column-gap: 0;
+  row-gap: 0;
+  align-items: end;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+html.home .mast-brand,
+html.home .lead-display {
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+html.home .mast-brand {
+  grid-area: brand;
+  justify-self: start;
+  align-self: end;
+  padding-inline-end: 1.35rem;
+}
+
+html.home .brand-logo {
+  width: min(280px, 100%);
+}
+
+html.home .lead-display {
+  grid-area: display;
+  align-self: end;
+  min-width: 0;
+  padding-inline-start: 1.5rem;
+}
+
+html.home .lead-display .card-kicker {
+  margin-bottom: 0.45rem;
+  color: var(--accent);
+}
+
+html.home .lead-display h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+html.home .mast-meta {
+  grid-area: meta;
+  align-self: end;
+  min-width: 0;
+  padding: 0.7rem 0 0.45rem;
+  padding-inline-start: 1.5rem;
+  text-align: end;
+}
+
+html.home .edition-nav {
+  grid-area: nav;
+  position: static;
+  align-self: end;
+  margin-top: 0;
+  padding: 0.55rem 0 0.15rem;
+  padding-inline-end: 1.35rem;
+  background: transparent;
+  border: 0;
+  gap: 0.2rem 1.05rem;
+}
+
+html.home .edition-nav a {
+  color: var(--ink);
+  font-size: 0.98rem;
+  box-shadow: inset 0 -2px 0 transparent;
+}
+
+html.home .edition-nav a:hover,
+html.home .edition-nav a[aria-current="true"] {
+  color: var(--forest);
+  box-shadow: inset 0 -2px 0 var(--forest);
+}
+
+html.home .crawl {
+  margin-top: 0.7rem;
+}
+
+html.home #news {
+  position: relative;
+}
+
+html.home #news > .section-head {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html.home .front {
+  grid-template-columns: minmax(0, 1.42fr) minmax(0, 1fr);
+  gap: 0;
+  margin-top: 0.85rem;
+  background: transparent;
+  align-items: stretch;
+}
+
+html.home .lead {
+  background: var(--forest);
+  padding: 1.45rem 1.4rem 1.55rem;
+}
+
+html.home .lead-index {
+  margin: 0 0 0.85rem;
+  color: var(--lime);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+html.home .lead .why {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+html.home .lead .why-label {
+  color: var(--forest);
+}
+
+html.home .side-stack {
+  background: var(--page);
+  height: 100%;
+  margin: 0;
+  padding: 0.15rem 1.15rem 0.4rem;
+  border-inline-start: 1px solid var(--rule);
+}
+
+html.home .quiet-band {
+  margin-top: 1.75rem;
+}
+
+html.home .quotes {
+  margin-top: 1.35rem;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+html.home #markets .section-head {
+  align-items: end;
+  margin: 2.6rem 0 0.75rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+html.home #markets .section-head .kicker {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(4.2rem, 9.5vw, 7.1rem);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+html.home[lang="en"] #markets .section-head .kicker::after {
+  content: ".";
+}
+
+html.home #markets .section-when {
+  max-width: 16rem;
+  margin: 0;
+  padding-bottom: 0.55rem;
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+html.home #mkt-drivers-heading {
+  margin: 0;
+  padding: 1.15rem 1.4rem 0.2rem;
+  background: var(--forest);
+  color: var(--lime);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+}
+
+html.home[lang="he"] #mkt-drivers-heading {
+  letter-spacing: 0.02em;
+}
+
+html.home .mkt-drivers {
+  margin: 0;
+  padding: 0.15rem 1.4rem 0.45rem;
+  background: var(--forest);
+  color: var(--paper);
+}
+
+html.home .mkt-drivers h3,
+html.home .mkt-drivers .body,
+html.home .mkt-drivers .sources,
+html.home .mkt-drivers .sources a {
+  color: var(--paper);
+}
+
+html.home .mkt-drivers .body {
+  color: #e4eee8;
+}
+
+html.home .mkt-drivers .sources,
+html.home .mkt-drivers .sources a {
+  color: #d5e3db;
+}
+
+html.home .mkt-drivers article {
+  border-bottom-color: rgba(218, 232, 164, 0.35);
+}
+
+html.home .mkt-drivers article:last-child {
+  border-bottom: 0;
+}
+
+html.home .mkt-drivers article:first-of-type h3 {
+  font-size: clamp(1.85rem, 3.1vw, 2.55rem);
+  line-height: 1.12;
+  color: var(--paper);
+}
+
+html.home .mkt-drivers .why {
+  background: rgba(218, 232, 164, 0.16);
+  color: var(--lime);
+}
+
+html.home .mkt-drivers .why-label {
+  color: var(--lime);
+}
+
+html.home .mkt-catalysts {
+  margin-top: 0.35rem;
+}
+
+html.home #markets .mkt-snap {
+  margin-top: 1.5rem;
+  padding: 1.15rem 1.25rem 0.85rem;
+}
+
+html.home #markets .mkt-snap-kicker {
+  color: var(--lime);
+  letter-spacing: 0.08em;
+}
+
+html.home #markets .mkt-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 1.35rem;
+  border-top: 0;
+  padding-top: 0.2rem;
+}
+
+html.home #markets .mkt-chip {
+  flex: none;
+  display: block;
+  padding: 0.65rem 0 0.75rem;
+  border-top: 1px solid rgba(218, 232, 164, 0.55);
+}
+
+html.home #markets .mkt-chip .mkt-px {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+html.home #markets .mkt-chip .mkt-name,
+html.home #markets .mkt-chip .mkt-flag {
+  display: block;
+}
+
+html.home #markets .mkt-strip-tuck {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 66%;
+  margin-top: 0.15rem;
+}
+
+html.home #markets .mkt-strip-tuck .mkt-px {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 860px) {
+  html.home .mast {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "brand"
+      "display"
+      "meta"
+      "nav";
+  }
+
+  html.home .mast-brand,
+  html.home .lead-display,
+  html.home .mast-meta,
+  html.home .edition-nav {
+    padding-inline: 0;
+  }
+
+  html.home .lead-display h2 {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+  }
+
+  html.home .front,
+  html.home .quiet-band {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html.home .side-stack {
+    border-inline-start: 0;
+    border-top: 1px solid var(--rule);
+    height: auto;
+    padding-inline: 0;
+  }
+
+  html.home #markets .section-head .kicker {
+    font-size: clamp(3.1rem, 16vw, 4.4rem);
+  }
+
+  html.home #markets .section-when {
+    max-width: none;
+    padding-bottom: 0;
+  }
+
+  html.home #markets .mkt-strip,
+  html.home #markets .mkt-strip-tuck {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    max-width: none;
+  }
+}
