@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#102333">
+  <meta name="theme-color" content="#101f2c">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="noindex">
   <title>תצוגת נייבי · יום שישי, 25 בספטמבר 2026 · The Daily Jenya</title>
@@ -25,7 +25,10 @@
     <header class="n-header">
       <div class="n-mast">
         <p class="n-brand">
-          <img class="n-logo" src="../../assets/daily-jenya-logo.png" width="921" height="472" alt="The Daily Jenya — Your Morning Edition">
+          <span class="n-logo-art">
+            <img class="n-logo" src="../../assets/daily-jenya-logo.png" width="921" height="472" alt="The Daily Jenya — Your Morning Edition">
+          </span>
+          <span class="n-tagline" aria-hidden="true">YOUR MORNING EDITION</span>
         </p>
         <div class="n-edition">
           <strong><span data-lang="he">יום שישי, 25 בספטמבר 2026</span><span data-lang="en">Friday, 25 September 2026</span></strong>
@@ -50,26 +53,27 @@
 
     <div class="n-crawl">
       <div class="n-crawl-head">
-        <p class="n-crawl-kicker"><span data-lang="he">מדדים · תמונת מצב של יום שישי, ~<bdi class="num">15:04–15:19</bdi> בישראל · לא ציטוט חי</span><span data-lang="en">Indices · Friday snapshot, ~<bdi class="num">15:04–15:19</bdi> Israel · not a live quote</span></p>
+        <strong><span data-lang="he">מדדים</span><span data-lang="en">Indices</span></strong>
+        <p class="n-crawl-kicker"><span data-lang="he">תמונת מצב של יום שישי, ~<bdi class="num">15:04–15:19</bdi> בישראל · לא ציטוט חי</span><span data-lang="en">Friday snapshot, ~<bdi class="num">15:04–15:19</bdi> Israel · not a live quote</span></p>
         <button type="button" class="n-crawl-pause" aria-pressed="false"><span data-lang="he">השהה</span><span data-lang="en">Pause</span></button>
       </div>
       <div class="n-crawl-viewport" dir="ltr">
         <div class="n-crawl-track">
           <ul class="n-crawl-seq">
-            <li><span class="n-crawl-sym"><bdi>ES</bdi></span><span class="n-crawl-px"><bdi class="num">7,794.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.36%</bdi></span><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>NQ</bdi></span><span class="n-crawl-px"><bdi class="num">30,967.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.65%</bdi></span><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המורכב</span><span data-lang="en">Future, not the Composite</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>YM</bdi></span><span class="n-crawl-px"><bdi class="num">51,877</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.31%</bdi></span><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>VIX</bdi></span><span class="n-crawl-px"><bdi class="num">15.04</bdi></span><span class="n-crawl-chg"><bdi class="num">−4.0%</bdi></span><span class="n-crawl-flag"><span data-lang="he">מדד, לא חוזה</span><span data-lang="en">Index, not futures</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>USD/ILS</bdi></span><span class="n-crawl-px"><bdi class="num">3.0346</bdi></span><span class="n-crawl-chg"><bdi class="num">−0.31%</bdi></span><span class="n-crawl-flag"><span data-lang="he">שער מט״ח</span><span data-lang="en">FX spot</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>WTI</bdi></span><span class="n-crawl-px"><bdi class="num">92.56</bdi></span><span class="n-crawl-chg"><bdi class="num">−2.17%</bdi></span><span class="n-crawl-flag"><span data-lang="he">נוב׳ 26, גלגול מסומן</span><span data-lang="en">Nov 26, roll flagged</span></span></li>
+            <li><span class="n-crawl-sym"><bdi>ES</bdi><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></span><span class="n-crawl-px"><bdi class="num">7,794.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.36%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>NQ</bdi><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המורכב</span><span data-lang="en">Future, not the Composite</span></span></span><span class="n-crawl-px"><bdi class="num">30,967.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.65%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>YM</bdi><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></span><span class="n-crawl-px"><bdi class="num">51,877</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.31%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>VIX</bdi><span class="n-crawl-flag"><span data-lang="he">מדד, לא חוזה</span><span data-lang="en">Index, not futures</span></span></span><span class="n-crawl-px"><bdi class="num">15.04</bdi></span><span class="n-crawl-chg is-down"><bdi class="num">−4.0%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>USD/ILS</bdi><span class="n-crawl-flag"><span data-lang="he">שער מט״ח</span><span data-lang="en">FX spot</span></span></span><span class="n-crawl-px"><bdi class="num">3.0346</bdi></span><span class="n-crawl-chg is-down"><bdi class="num">−0.31%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>WTI</bdi><span class="n-crawl-flag"><span data-lang="he">נוב׳ 26, גלגול מסומן</span><span data-lang="en">Nov 26, roll flagged</span></span></span><span class="n-crawl-px"><bdi class="num">92.56</bdi></span><span class="n-crawl-chg is-down"><bdi class="num">−2.17%</bdi></span></li>
           </ul>
           <ul class="n-crawl-seq" aria-hidden="true">
-            <li><span class="n-crawl-sym"><bdi>ES</bdi></span><span class="n-crawl-px"><bdi class="num">7,794.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.36%</bdi></span><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>NQ</bdi></span><span class="n-crawl-px"><bdi class="num">30,967.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.65%</bdi></span><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המורכב</span><span data-lang="en">Future, not the Composite</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>YM</bdi></span><span class="n-crawl-px"><bdi class="num">51,877</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.31%</bdi></span><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>VIX</bdi></span><span class="n-crawl-px"><bdi class="num">15.04</bdi></span><span class="n-crawl-chg"><bdi class="num">−4.0%</bdi></span><span class="n-crawl-flag"><span data-lang="he">מדד, לא חוזה</span><span data-lang="en">Index, not futures</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>USD/ILS</bdi></span><span class="n-crawl-px"><bdi class="num">3.0346</bdi></span><span class="n-crawl-chg"><bdi class="num">−0.31%</bdi></span><span class="n-crawl-flag"><span data-lang="he">שער מט״ח</span><span data-lang="en">FX spot</span></span></li>
-            <li><span class="n-crawl-sym"><bdi>WTI</bdi></span><span class="n-crawl-px"><bdi class="num">92.56</bdi></span><span class="n-crawl-chg"><bdi class="num">−2.17%</bdi></span><span class="n-crawl-flag"><span data-lang="he">נוב׳ 26, גלגול מסומן</span><span data-lang="en">Nov 26, roll flagged</span></span></li>
+            <li><span class="n-crawl-sym"><bdi>ES</bdi><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></span><span class="n-crawl-px"><bdi class="num">7,794.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.36%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>NQ</bdi><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המורכב</span><span data-lang="en">Future, not the Composite</span></span></span><span class="n-crawl-px"><bdi class="num">30,967.75</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.65%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>YM</bdi><span class="n-crawl-flag"><span data-lang="he">חוזה, לא המדד</span><span data-lang="en">Future, not the index</span></span></span><span class="n-crawl-px"><bdi class="num">51,877</bdi></span><span class="n-crawl-chg"><bdi class="num">+0.31%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>VIX</bdi><span class="n-crawl-flag"><span data-lang="he">מדד, לא חוזה</span><span data-lang="en">Index, not futures</span></span></span><span class="n-crawl-px"><bdi class="num">15.04</bdi></span><span class="n-crawl-chg is-down"><bdi class="num">−4.0%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>USD/ILS</bdi><span class="n-crawl-flag"><span data-lang="he">שער מט״ח</span><span data-lang="en">FX spot</span></span></span><span class="n-crawl-px"><bdi class="num">3.0346</bdi></span><span class="n-crawl-chg is-down"><bdi class="num">−0.31%</bdi></span></li>
+            <li><span class="n-crawl-sym"><bdi>WTI</bdi><span class="n-crawl-flag"><span data-lang="he">נוב׳ 26, גלגול מסומן</span><span data-lang="en">Nov 26, roll flagged</span></span></span><span class="n-crawl-px"><bdi class="num">92.56</bdi></span><span class="n-crawl-chg is-down"><bdi class="num">−2.17%</bdi></span></li>
           </ul>
         </div>
       </div>
@@ -633,8 +637,8 @@
       <em dir="ltr">The Daily Jenya</em>
       <p data-lang="he">תידרוך חינוכי, לא ייעוץ השקעות. תצוגת נייבי בלבד — העמוד הראשי לא הוחלף. חדשות: צהריים 25 בספטמבר, <bdi class="num">14:00</bdi> בישראל. שווקים: תמונת מצב ~<bdi class="num">15:45</bdi>, ציטוטים <bdi class="num">15:04–15:19</bdi>, חוזים ולא מזומן. AI: נישא מבוקר 25 בספטמבר.</p>
       <p data-lang="en">Educational briefing, not investment advice. Navy preview only — the homepage was not replaced. News: Friday 25 September midday, <bdi class="num">14:00</bdi> Israel. Markets: snapshot ~<bdi class="num">15:45</bdi>, quotes <bdi class="num">15:04–15:19</bdi>, futures not cash. AI: carried from the morning of 25 September.</p>
-      <p data-lang="he">הלוגו במאסטהד הוגדל. על הרקע הכהה זה עדיין טיפול CSS שמסתיר את רקע הקרם של הקובץ. אין כאן קובץ לוגו שקוף, ואין ציור מחדש של הסימן.</p>
-      <p data-lang="en">The masthead mark is larger. On the dark ground it is still a CSS treatment that hides the file’s cream background. There is no transparent logo file here, and the mark was not redrawn.</p>
+      <p data-lang="he">הסימן במאסטהד ברוחב 350px (245px במסך צר). שורת YOUR MORNING EDITION זהובה היא טקסט. רקע הקרם של קובץ הלוגו מוסתר ב־CSS. אין קובץ שקוף ואין ציור מחדש.</p>
+      <p data-lang="en">The masthead mark is 350px wide (245px on a narrow screen). The gold YOUR MORNING EDITION line is text. The logo file’s cream background is hidden with CSS. There is no transparent file and the mark was not redrawn.</p>
       <p><a href="../../"><span data-lang="he">המהדורה החיה</span><span data-lang="en">Live edition</span></a> · <a href="../../archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a> · <a href="../../briefings/2026-09-25-1400/IMAGE-CREDITS.md"><span data-lang="he">קרדיטים לתמונות</span><span data-lang="en">Image credits</span></a></p>
       <p>© The Daily Jenya</p>
     </footer>
