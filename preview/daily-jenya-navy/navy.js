@@ -91,10 +91,26 @@
     window.addEventListener("resize", placeIndicator);
   }
 
+  var crawl = shell.querySelector(".n-crawl");
+  var pauseBtn = crawl && crawl.querySelector(".n-crawl-pause");
+  if (crawl && pauseBtn) {
+    function paintPause(paused) {
+      crawl.classList.toggle("is-paused", paused);
+      pauseBtn.setAttribute("aria-pressed", paused ? "true" : "false");
+      var he = pauseBtn.querySelector('[data-lang="he"]');
+      var en = pauseBtn.querySelector('[data-lang="en"]');
+      if (he) he.textContent = paused ? "המשך" : "השהה";
+      if (en) en.textContent = paused ? "Play" : "Pause";
+    }
+    pauseBtn.addEventListener("click", function () {
+      paintPause(!crawl.classList.contains("is-paused"));
+    });
+  }
+
   function syncNavLabel() {
     var nav = shell.querySelector(".n-nav");
-    if (!nav) return;
-    nav.setAttribute("aria-label", root.lang === "en" ? "Newspaper sections" : "מדורי העיתון");
+    if (nav) nav.setAttribute("aria-label", root.lang === "en" ? "Newspaper sections" : "מדורי העיתון");
+    if (crawl) crawl.setAttribute("aria-label", root.lang === "en" ? "Index snapshot" : "תמונת מדדים");
   }
 
   if ("MutationObserver" in window) {
