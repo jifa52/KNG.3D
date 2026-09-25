@@ -16,7 +16,7 @@ Tape is data. There are no trade recommendations.
 
 The live homepage is The Daily Jenya (`assets/edition.css` and `assets/polish.css`): cream paper `#f3f0e7`, forest `#143e33`, lime `#dae8a4`, ink `#15251f`. News is an asymmetric front of short cards with **Why it matters / למה זה חשוב**. Markets follows News as a news brief: drivers, company catalysts, today/next, then a compact snapshot. One language is on screen.
 
-- Live: `index.html` and `briefings/2026-09-25-1400/`
+- Live: `index.html`, `briefings/2026-09-25-1545/`, and `briefings/2026-09-25-1400/` (Markets refreshed in place)
 - Approved study (kept): `preview/ux-2026-09-24-polish/`
 - Earlier Modern study (PREVIEW, Wednesday tape, not an archive edition): `preview/ux-2026-09-24/`
 - Empty structure: `templates/edition.html`
@@ -38,7 +38,11 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Midday (MAIN), 25 September 2026:
+Latest is the Friday markets refresh, 25 September 2026, ~15:45 Israel:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-25-1545/**
+
+Friday Midday (MAIN), with Markets refreshed in place to the same tape:
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-25-1400/**
 
@@ -249,7 +253,7 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         live Modern editorial polish: Thursday News front, Thu ~15:45 pre-open snapshot, Wednesday AI
+index.html                         live Daily Jenya edition: Friday midday News, Fri ~15:45 pre-market snapshot, Friday morning AI
 assets/brief.css                   card sheet for earlier permalinks and 404
 assets/edition.css                 Modern editorial base (homepage, permalink, archive index, template)
 assets/polish.css                  approved polish: nav, photos, news-first markets, newspaper AI and archive
@@ -264,6 +268,9 @@ assets/i18n.js                     language switch, localStorage, optional #he/#
 assets/lanes.js                    card-deck lane switch for earlier permalinks; not loaded on the editorial page
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-25-1545/         Friday markets refresh on the Daily Jenya sheet (midday News kept, Fri ~15:45 pre-market tape, Friday morning AI kept)
+briefings/2026-09-25-1400/         Friday Midday MAIN (News kept; Markets refreshed in place to the Friday ~15:45 tape; Friday morning AI kept)
+briefings/2026-09-25-0850/         Friday Morning snapshot (overnight News; Markets carried from Thursday ~15:45)
 briefings/2026-09-24-1545/         Thursday afternoon permalink on the polish sheet (same edition as the homepage; midday News, Thu ~15:45 snapshot, Wednesday AI, IMAGE-CREDITS.md)
 briefings/2026-09-24-1400/         frozen Thursday Midday MAIN snapshot (six News cards and an opening summary; Markets refreshed in place to the Thursday ~15:45 pre-market tape; Wednesday AI digest kept; next AI digest Friday)
 briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
@@ -321,7 +328,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-Home is the Thursday 24 September 2026 editorial edition, clock ~15:45 Jerusalem (08:45 ET). News is the midday six-story front, rewritten as one lead, two supports, and a quieter band: the US–China truce extended through January 10 as Trump welcomes Xi; an OpenAI agent’s unauthorized access to Australia’s Medicare statistics portal; the Cape Dao attack near Hormuz; a $2.45 billion Gaza plan; Pezeshkian and the far-apart US–Iran readout, with Safavi’s Indian Ocean warning; and a Kharkiv-region farm strike that killed six, with Kyiv’s earlier ballistic toll. Markets follows, pre-market, quotes ~15:28–15:38 Jerusalem (~08:30 ET). Futures versus Wednesday settle: ES 7,733.25 (−0.51%), NQ 30,472.00 (−0.95%), YM 51,726 (−0.28%), RTY 2,849.8 (−0.36%). VIX 15.94 (+5.0%). USD/ILS 3.0467 (+0.39%). The 10-year is 5.116% (+0.2 basis points versus Wednesday’s 5.114% close). WTI continuous is 93.80 (November 26, roll flagged, +1.78%). Wednesday cash is a separate group. Thursday cash is not open. The ~15:30 claims clock has no print in this pack. The Wednesday AI digest is carried. One language is on screen.
+Home is the Friday 25 September 2026 editorial edition. News is the midday front, clock ~14:00 Jerusalem (07:00 ET). Markets is the pre-market refresh, edition ~15:45 Jerusalem (08:45 ET), quotes ~15:04–15:19 Jerusalem (08:04–08:19 ET). Futures versus the prior futures settle: ES 7,794.75 (+0.36%), NQ 30,967.75 (+0.65%), YM 51,877 (+0.31%). VIX is 15.04 (−4.0%), the index. USD/ILS is 3.0346 (−0.31%), FX spot. WTI continuous is 92.56 (November 26, roll flagged, −2.17%). Bitcoin is 83,955 (−0.50%). The 10-year is Thursday’s cash close, 5.162% (+4.8 basis points versus Wednesday’s 5.114%). The 30-year Thursday close is 5.461% (+6.0 basis points). Thursday cash is labeled and is not Friday cash: S&P 500 7,704.13 (−0.02%), Dow 51,349.98 (−0.31%), Nasdaq Composite 26,939.37 (+0.01%). US cash was not open. Durable goods (15:30 Israel) and final Michigan sentiment (17:00 Israel) are clocks only. The Friday morning AI digest is carried. One language is on screen.
 
 ## Run locally
 
