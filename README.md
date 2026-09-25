@@ -1,12 +1,12 @@
-# Brief
+# The Daily Jenya
 
-This repository is **Brief** — a public, phone-first news deck. Hebrew is the default language (`dir=rtl`). English is an optional switcher on the **same URL**. It is **not** a 3D printer or filament tracker.
+This repository is **The Daily Jenya** — a public, phone-first morning edition. Hebrew is the default language (`dir=rtl`). English is an optional switcher on the **same URL**. It is **not** a 3D printer or filament tracker. The masthead lockup is `assets/daily-jenya-logo.png` (J and globe, with YOUR MORNING EDITION).
 
 The live edition is one scrolling page. News, then Markets, then AI. Hebrew is the default; English is the switcher. The nav is חדשות · שווקים · AI · ארכיון.
 
-- **News / חדשות** — one lead, two supports, then a quieter band. A photograph only when it is licensed and credited. Otherwise the story is text-first.
-- **Markets / שווקים** — a market news brief after News: a compact snapshot strip (ES, NQ, YM, VIX, USD/ILS, WTI), then market drivers, company catalysts, today/next, and an optional short story. VIX is the index. USD/ILS is the FX spot rate. Bitcoin and the 10-year, when stamped, sit smaller under the strip.
-- **AI** — the digest on the same newspaper sheet, one lead then a list
+- **News / חדשות** — short cards: one lead, supports, then a quieter band. Each card has a kicker, the facts, and **למה זה חשוב / Why it matters**. A photograph only when it is licensed and credited. Otherwise the story is text-first.
+- **Markets / שווקים** — a market news brief after News: drivers, company catalysts, today/next, an optional short story, then a compact snapshot (ES, NQ, YM, VIX, USD/ILS, WTI). The same six also crawl under the nav. VIX is the index. USD/ILS is the FX spot rate. Bitcoin and the 10-year, when stamped, sit smaller under the strip.
+- **AI** — the digest on the same sheet, one lead then a list. An AI picture, when used, is labeled **המחשה (AI)** / **AI illustration**.
 
 Older permalinks from before this cutover are still the card deck and may show a Pre-market tab. On the current edition, `#premarket` opens Markets.
 
@@ -14,9 +14,9 @@ Tape is data. There are no trade recommendations.
 
 ## Reader layout
 
-The live homepage is the Modern editorial polish (`assets/edition.css` and `assets/polish.css`): a white page, a light masthead, crimson on kickers, the nav rule, and a small badge. News is an asymmetric front. Markets follows News as a news brief, with a compact snapshot strip, not a quote board or a table. One language is on screen.
+The live homepage is The Daily Jenya (`assets/edition.css` and `assets/polish.css`): cream paper `#f3f0e7`, forest `#143e33`, lime `#dae8a4`, ink `#15251f`. News is an asymmetric front of short cards with **Why it matters / למה זה חשוב**. Markets follows News as a news brief: drivers, company catalysts, today/next, then a compact snapshot. One language is on screen.
 
-- Live: `index.html` and `briefings/2026-09-24-1545/`
+- Live: `index.html` and `briefings/2026-09-25-1400/`
 - Approved study (kept): `preview/ux-2026-09-24-polish/`
 - Earlier Modern study (PREVIEW, Wednesday tape, not an archive edition): `preview/ux-2026-09-24/`
 - Empty structure: `templates/edition.html`
@@ -38,9 +38,9 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is Afternoon Markets, 24 September 2026:
+Latest is Midday (MAIN), 25 September 2026:
 
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-24-1545/**
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-25-1400/**
 
 Prior Midday (MAIN), 24 September 2026:
 

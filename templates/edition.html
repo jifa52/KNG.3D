@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl" class="edition"
-  data-title-he="תבנית · Brief"
-  data-title-en="Template · Brief"
+  data-title-he="תבנית · The Daily Jenya"
+  data-title-en="Template · The Daily Jenya"
   data-desc-he="תבנית פרסום. לא מהדורה."
   data-desc-en="Publish template. Not an edition.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#143e33">
   <meta name="color-scheme" content="light">
   <meta name="robots" content="noindex">
-  <title>תבנית · Brief</title>
+  <title>תבנית · The Daily Jenya</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/edition.css">
   <link rel="stylesheet" href="../assets/polish.css">
 </head>
 <!--
   PUBLISH TEMPLATE. Not an edition. Do not ship this file as the homepage.
-  Modern editorial polish (the sheet approved 24 Sep 2026). White page,
-  crimson used sparingly, News first, Markets A–F after News, newspaper AI.
+  The Daily Jenya, Direction 02 (25 Sep 2026). Cream paper, forest, lime.
+  News first. Short cards with .why. Markets: drivers, catalysts, today/next,
+  optional story, then the compact snapshot. Indices crawl under the nav.
 
   Copy this file to index.html and to briefings/YYYY-MM-DD-HHMM/index.html.
   Both stylesheets stay. Fill {{tokens}} from the approved pack. Delete this
@@ -36,17 +37,27 @@
   caption, alt text, and a block in IMAGE-CREDITS.md (copy templates/IMAGE-CREDITS.md
   into the edition folder). There is no image-fetch script. Do not invent a photograph.
   Do not invent a market number. A missing stamp uses the missing-row pattern.
-  Strip internal notes, hard gates, verb locks, card IDs, and confidence essays.
-  Keep a material caveat inside the paragraph.
+  Strip internal notes, hard gates, verb locks, card IDs, and agent routing.
+  Each card has a kicker, the facts, .why (למה זה חשוב / Why it matters),
+  .card-meta (confidence, source, Jerusalem time), and .sources.
+  מאומת / Confirmed needs two independent sources. One newsletter is סביר / Likely at most.
+  An AI picture uses p.illus-label: המחשה (AI) / AI illustration.
+  Keep a material caveat in the prose. No in-site long read.
   VIX is the index, not futures. USD/ILS is FX spot, not a future.
   Do not load lanes.js or brief.css. Do not bring paper.css back.
 -->
 <body>
   <a class="skip" href="#main"><span data-lang="he">דלג לתידרוך</span><span data-lang="en">Skip to briefing</span></a>
+  <div class="topbar">
+    <p>The Daily Jenya</p>
+    <p><span data-lang="he">{{תאריך_עברית}} · <bdi class="num">{{HH:MM}}</bdi> בישראל (<bdi class="num">{{HH:MM}} ET</bdi>)</span><span data-lang="en">{{date_english}} · <bdi class="num">{{HH:MM}}</bdi> Israel (<bdi class="num">{{HH:MM}} ET</bdi>)</span></p>
+  </div>
   <div class="wrap">
     <header class="mast">
-      <div>
-        <h1 class="brand">Brief</h1>
+      <div class="mast-brand">
+        <h1 class="brand">
+          <img class="brand-logo" src="../assets/daily-jenya-logo.png" width="921" height="472" alt="The Daily Jenya — Your Morning Edition">
+        </h1>
         <p class="badge"><span data-lang="he">תבנית פרסום · לא מהדורה</span><span data-lang="en">PUBLISH TEMPLATE · not an edition</span></p>
       </div>
       <div class="mast-meta">
@@ -66,6 +77,20 @@
       <a href="#ai">AI</a>
       <a href="../archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
     </nav>
+    <!-- Crawl: duplicate .crawl-seq. Copy the six primary stamps. Do not invent a price. prefers-reduced-motion is in polish.css. -->
+    <div class="crawl" aria-label="Index snapshot">
+      <p class="crawl-kicker"><span data-lang="he">מדדים · {{תאריך ושעה של התמונה}} · לא ציטוט חי</span><span data-lang="en">Indices · {{snapshot date and time}} · not a live quote</span></p>
+      <div class="crawl-viewport" dir="ltr">
+        <div class="crawl-track">
+          <ul class="crawl-seq">
+            <li><span class="crawl-sym"><bdi>{{ES}}</bdi></span><span class="crawl-px"><bdi class="num">{{last}}</bdi></span><span class="crawl-chg"><bdi class="num">{{change}}</bdi></span><span class="crawl-flag"><span data-lang="he">{{חוזה או מדד}}</span><span data-lang="en">{{future or index}}</span></span></li>
+          </ul>
+          <ul class="crawl-seq" aria-hidden="true">
+            <li><span class="crawl-sym"><bdi>{{ES}}</bdi></span><span class="crawl-px"><bdi class="num">{{last}}</bdi></span><span class="crawl-chg"><bdi class="num">{{change}}</bdi></span><span class="crawl-flag"><span data-lang="he">{{חוזה או מדד}}</span><span data-lang="en">{{future or index}}</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <p class="quotes"><span data-lang="he">{{חדשות: חותמת}}. {{שווקים: חותמת, לא ציטוט חי}}</span><span data-lang="en">{{news stamp}}. {{markets stamp, not a live quote}}</span></p>
 
     <main id="main">
@@ -76,6 +101,7 @@
         </header>
         <div class="front">
           <article class="lead">
+            <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
             <h2 data-lang="he">{{כותרת_מובילה}}</h2>
             <h2 data-lang="en">{{lead_headline}}</h2>
             <!--
@@ -90,25 +116,33 @@
               </figure>
               A support portrait, when licensed, uses figure.photo.photo--portrait inside that article.
             -->
-            <p class="body" data-lang="he">{{פסקה_אחת_כולל_סייג_אם_הוא_משנה_משמעות}}</p>
-            <p class="body" data-lang="en">{{one_paragraph_including_any_caveat_that_changes_the_meaning}}</p>
+            <p class="body" data-lang="he">{{מה_קרה_2_עד_4_משפטים}}</p>
+            <p class="body" data-lang="en">{{what_happened_2_to_4_sentences}}</p>
+            <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה_זה_חשוב}}</span><span data-lang="en">{{why_it_matters}}</span></p>
+            <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · <bdi class="num">{{HH:MM}}</bdi> בישראל</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · <bdi class="num">{{HH:MM}}</bdi> Israel</span></p>
             <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
             <p class="sources" data-lang="en">Sources: {{links}}</p>
           </article>
           <div class="side-stack">
             <article>
+              <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
               <h3 data-lang="he">{{כותרת_תומכת_1}}</h3>
               <h3 data-lang="en">{{support_headline_1}}</h3>
-              <p class="body" data-lang="he">{{פסקה}}</p>
-              <p class="body" data-lang="en">{{paragraph}}</p>
+              <p class="body" data-lang="he">{{מה_קרה}}</p>
+              <p class="body" data-lang="en">{{what_happened}}</p>
+              <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה_זה_חשוב}}</span><span data-lang="en">{{why_it_matters}}</span></p>
+              <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · <bdi class="num">{{HH:MM}}</bdi> בישראל</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · <bdi class="num">{{HH:MM}}</bdi> Israel</span></p>
               <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
               <p class="sources" data-lang="en">Sources: {{links}}</p>
             </article>
             <article>
+              <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
               <h3 data-lang="he">{{כותרת_תומכת_2}}</h3>
               <h3 data-lang="en">{{support_headline_2}}</h3>
-              <p class="body" data-lang="he">{{פסקה}}</p>
-              <p class="body" data-lang="en">{{paragraph}}</p>
+              <p class="body" data-lang="he">{{מה_קרה}}</p>
+              <p class="body" data-lang="en">{{what_happened}}</p>
+              <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה_זה_חשוב}}</span><span data-lang="en">{{why_it_matters}}</span></p>
+              <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · <bdi class="num">{{HH:MM}}</bdi> בישראל</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · <bdi class="num">{{HH:MM}}</bdi> Israel</span></p>
               <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
               <p class="sources" data-lang="en">Sources: {{links}}</p>
             </article>
@@ -116,10 +150,13 @@
         </div>
         <div class="quiet-band">
           <article>
+            <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
             <h3 data-lang="he">{{כותרת_שקטה}}</h3>
-            <h3 data-lang="en">{{brief_headline}}</h3>
-            <p class="body" data-lang="he">{{פסקה}}</p>
-            <p class="body" data-lang="en">{{paragraph}}</p>
+            <h3 data-lang="en">{{quiet_headline}}</h3>
+            <p class="body" data-lang="he">{{מה_קרה}}</p>
+            <p class="body" data-lang="en">{{what_happened}}</p>
+            <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה_זה_חשוב}}</span><span data-lang="en">{{why_it_matters}}</span></p>
+            <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · <bdi class="num">{{HH:MM}}</bdi> בישראל</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · <bdi class="num">{{HH:MM}}</bdi> Israel</span></p>
             <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
             <p class="sources" data-lang="en">Sources: {{links}}</p>
           </article>
@@ -132,7 +169,55 @@
           <p class="section-when"><span data-lang="he">{{תמונת מצב · תאריך · שעה אמיתית}}</span><span data-lang="en">{{snapshot · date · real time}}</span></p>
         </header>
 
-        <!-- 1. SNAPSHOT. Compact strip. Six chips, then at most BTC and 10Y tucked smaller.
+        <!-- 1. MARKET DRIVERS. About 4–7 articles. Headline, one or two sentences, sources.
+             Do not fill weak items. Caveat stays in the sentence. -->
+        <h3 class="mkt-label" id="mkt-drivers-heading"><span data-lang="he">מניעי שוק</span><span data-lang="en">Market drivers</span></h3>
+        <div class="mkt-drivers">
+          <article>
+            <h3><span data-lang="he">{{כותרת}}</span><span data-lang="en">{{headline}}</span></h3>
+            <p class="body" data-lang="he">{{מה קרה. משפט או שניים.}}</p>
+            <p class="body" data-lang="en">{{what happened. One or two sentences.}}</p>
+            <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה השוק עשוי להתעניין}}</span><span data-lang="en">{{why the market may care}}</span></p>
+            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+            <p class="sources" data-lang="en">Sources: {{links}}</p>
+          </article>
+        </div>
+
+        <!-- 2. COMPANY CATALYSTS. About 4–8. Ticker, name, event, why it matters, sources.
+             A price is not a reason to include a name. -->
+        <h3 class="mkt-label" id="mkt-catalysts-heading"><span data-lang="he">קטליזטורים בחברות</span><span data-lang="en">Company catalysts</span></h3>
+        <div class="mkt-catalysts">
+          <article>
+            <h3><span class="mkt-tick"><bdi>{{ticker}}</bdi></span> · <span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span></h3>
+            <p class="body" data-lang="he">{{האירוע}}</p>
+            <p class="body" data-lang="en">{{the event}}</p>
+            <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה זה חשוב}}</span><span data-lang="en">{{why it matters}}</span></p>
+            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
+            <p class="sources" data-lang="en">Sources: {{links}}</p>
+          </article>
+        </div>
+
+        <!-- 3. TODAY / NEXT. About 2–4. Israel time first. Drop events whose time has passed. -->
+        <div class="mkt-next">
+          <h3 class="mkt-label" id="mkt-next-heading"><span data-lang="he">היום / בהמשך</span><span data-lang="en">Today / next</span></h3>
+          <p class="lede" data-lang="he">{{שעון ישראל ושעון מזרח ארה״ב, כולל שעון הקיץ שבתוקף}}</p>
+          <p class="lede" data-lang="en">{{Israel and US Eastern clocks, including which daylight-saving offset is in force}}</p>
+          <ol>
+            <li>
+              <strong class="when"><span data-lang="he"><bdi class="num">{{HH:MM}}</bdi> בישראל — {{אירוע}}</span><span data-lang="en"><bdi class="num">{{HH:MM}}</bdi> Israel — {{event}}</span></strong>
+              <p data-lang="he">{{שורה אחת, רק אם הסיבה אינה מובנת מאליה}}</p>
+              <p data-lang="en">{{one line, only when the reason is not obvious}}</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- 4. MARKET STORY. Optional. Delete the block on a quiet day. At most three sentences. -->
+        <div class="mkt-brief">
+          <h3 class="mkt-label" id="mkt-brief-heading"><span data-lang="he">סיפור שוק</span><span data-lang="en">Market story</span></h3>
+          <p data-lang="he">{{עד שלושה משפטים}}</p>
+          <p data-lang="en">{{at most three sentences}}</p>
+        </div>
+        <!-- 5. SNAPSHOT. Secondary. After the news.. Compact strip. Six chips, then at most BTC and 10Y tucked smaller.
              Label futures as futures. VIX flag: מדד, לא חוזה / Index, not futures.
              USD/ILS flag: שער מט״ח / FX spot. If the pack stamped cash instead, label the chips as cash.
              One freshness note only when a real limitation exists. No methodology essay.
@@ -164,52 +249,6 @@
           </div>
         </div>
 
-        <!-- 2. MARKET DRIVERS. About 4–7 articles. Headline, one or two sentences, sources.
-             Do not fill weak items. Caveat stays in the sentence. -->
-        <h3 class="mkt-label" id="mkt-drivers-heading"><span data-lang="he">מניעי שוק</span><span data-lang="en">Market drivers</span></h3>
-        <div class="mkt-drivers">
-          <article>
-            <h3><span data-lang="he">{{כותרת}}</span><span data-lang="en">{{headline}}</span></h3>
-            <p class="body" data-lang="he">{{מה קרה, ולמה זה עשוי לעניין את השוק. משפט או שניים.}}</p>
-            <p class="body" data-lang="en">{{what happened, and why the market may care. One or two sentences.}}</p>
-            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
-            <p class="sources" data-lang="en">Sources: {{links}}</p>
-          </article>
-        </div>
-
-        <!-- 3. COMPANY CATALYSTS. About 4–8. Ticker, name, event, why it matters, sources.
-             A price is not a reason to include a name. -->
-        <h3 class="mkt-label" id="mkt-catalysts-heading"><span data-lang="he">קטליזטורים בחברות</span><span data-lang="en">Company catalysts</span></h3>
-        <div class="mkt-catalysts">
-          <article>
-            <h3><span class="mkt-tick"><bdi>{{ticker}}</bdi></span> · <span data-lang="he">{{שם}}</span><span data-lang="en">{{name}}</span></h3>
-            <p class="body" data-lang="he">{{אירוע, ולמה זה חשוב.}}</p>
-            <p class="body" data-lang="en">{{event, and why it matters.}}</p>
-            <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
-            <p class="sources" data-lang="en">Sources: {{links}}</p>
-          </article>
-        </div>
-
-        <!-- 4. TODAY / NEXT. About 2–4. Israel time first. Drop events whose time has passed. -->
-        <div class="mkt-next">
-          <h3 class="mkt-label" id="mkt-next-heading"><span data-lang="he">היום / בהמשך</span><span data-lang="en">Today / next</span></h3>
-          <p class="lede" data-lang="he">{{שעון ישראל ושעון מזרח ארה״ב, כולל שעון הקיץ שבתוקף}}</p>
-          <p class="lede" data-lang="en">{{Israel and US Eastern clocks, including which daylight-saving offset is in force}}</p>
-          <ol>
-            <li>
-              <strong class="when"><span data-lang="he"><bdi class="num">{{HH:MM}}</bdi> בישראל — {{אירוע}}</span><span data-lang="en"><bdi class="num">{{HH:MM}}</bdi> Israel — {{event}}</span></strong>
-              <p data-lang="he">{{שורה אחת, רק אם הסיבה אינה מובנת מאליה}}</p>
-              <p data-lang="en">{{one line, only when the reason is not obvious}}</p>
-            </li>
-          </ol>
-        </div>
-
-        <!-- 5. MARKET STORY. Optional. Delete the block on a quiet day. At most three sentences. -->
-        <div class="mkt-brief">
-          <h3 class="mkt-label" id="mkt-brief-heading"><span data-lang="he">סיפור שוק</span><span data-lang="en">Market story</span></h3>
-          <p data-lang="he">{{עד שלושה משפטים}}</p>
-          <p data-lang="en">{{at most three sentences}}</p>
-        </div>
       </section>
 
       <section class="section" id="ai" aria-labelledby="ai-kicker">
@@ -221,18 +260,25 @@
           <p class="ai-carry" data-lang="he">{{אם נישא: מאיזו מהדורה, ומה לא אומת מחדש}}</p>
           <p class="ai-carry" data-lang="en">{{if carried: from which edition, and what was not re-checked}}</p>
           <article class="ai-lead">
+            <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
+            <!-- AI art only: <p class="illus-label"><span data-lang="he">המחשה (AI)</span><span data-lang="en">AI illustration</span></p> -->
             <h2 data-lang="he">{{כותרת}}</h2>
             <h2 data-lang="en">{{headline}}</h2>
-            <p class="body" data-lang="he">{{פסקה}}</p>
-            <p class="body" data-lang="en">{{paragraph}}</p>
+            <p class="body" data-lang="he">{{מה_קרה}}</p>
+            <p class="body" data-lang="en">{{what_happened}}</p>
+            <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה_זה_חשוב}}</span><span data-lang="en">{{why_it_matters}}</span></p>
+            <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · {{תאריך}}</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · {{date}}</span></p>
             <p class="sources">{{source}}</p>
           </article>
           <div class="ai-list">
             <article>
+              <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
               <h3 data-lang="he">{{כותרת}}</h3>
               <h3 data-lang="en">{{headline}}</h3>
-              <p class="body" data-lang="he">{{פסקה}}</p>
-              <p class="body" data-lang="en">{{paragraph}}</p>
+              <p class="body" data-lang="he">{{מה_קרה}}</p>
+              <p class="body" data-lang="en">{{what_happened}}</p>
+              <p class="why"><span class="why-label" data-lang="he">למה זה חשוב</span><span class="why-label" data-lang="en">Why it matters</span> <span data-lang="he">{{למה_זה_חשוב}}</span><span data-lang="en">{{why_it_matters}}</span></p>
+              <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · {{תאריך}}</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · {{date}}</span></p>
               <p class="sources">{{source}}</p>
             </article>
           </div>
@@ -244,7 +290,7 @@
         <p data-lang="en">Educational briefing, not investment advice. {{what was kept, and the markets stamp}}</p>
         <p data-lang="he"><a href="../archive/">ארכיון</a> · <a href="IMAGE-CREDITS.md">קרדיטים לתמונות</a></p>
         <p data-lang="en"><a href="../archive/">Archive</a> · <a href="IMAGE-CREDITS.md">Image credits</a></p>
-        <p>© Brief</p>
+        <p>© The Daily Jenya</p>
       </footer>
     </main>
   </div>

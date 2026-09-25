@@ -34,6 +34,7 @@ jobs:
             assets/polish.css \
             assets/lanes.js \
             assets/favicon.svg \
+            assets/daily-jenya-logo.png \
             assets/images/trump-xi-1280.jpg \
             assets/images/albanese-800.jpg \
             assets/fonts/FrankRuhlLibre-700-hebrew.woff2 \
@@ -54,7 +55,10 @@ jobs:
           grep -q 'edition.css' preview/ux-2026-09-24/index.html
           grep -q 'Frank Ruhl Libre' assets/edition.css
           grep -q '#8b1e2d' assets/edition.css
-          grep -q '#ffffff' assets/edition.css
+          grep -q '#f3f0e7' assets/edition.css
+          grep -q '#143e33' assets/edition.css
+          grep -q '#dae8a4' assets/edition.css
+          grep -q '#15251f' assets/edition.css
           grep -q 'mkt-snap' assets/polish.css
           grep -q 'mkt-drivers' assets/polish.css
           # Older polish permalinks keep the quote boards. Live and the template are news-first.
@@ -98,6 +102,13 @@ jobs:
           grep -q 'שער מט״ח' index.html
           grep -q 'Index, not futures' index.html
           grep -q 'FX spot' index.html
+          grep -q 'The Daily Jenya' index.html
+          grep -q 'daily-jenya-logo.png' index.html
+          grep -q 'למה זה חשוב' index.html
+          grep -q 'Why it matters' index.html
+          grep -q 'crawl-track' index.html
+          grep -q 'prefers-reduced-motion' assets/polish.css
+          python3 -c 'from pathlib import Path; html=Path("index.html").read_text(); order=["mkt-drivers","mkt-catalysts","mkt-next","mkt-snap"]; pos=[html.find(t) for t in order]; assert pos==sorted(pos) and all(p>=0 for p in pos), "markets order"; assert html.count("class=\"why\"")>=8; assert html.count("crawl-seq")>=2'
           if grep -E -q '(href|src)="[^"]*(lanes\.js|brief\.css|paper\.css)"' \
             index.html \
             briefings/2026-09-25-1400/index.html \
