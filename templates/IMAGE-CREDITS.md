@@ -16,11 +16,11 @@ The publish template keeps a `figure.photo` on the lead and a `figure.photo.phot
 - License:
 - Page:
 
-## Quiet card or AI item — illustration, not a news photograph
+## Quiet card or AI item — illustration
 
 - File: `assets/images/{{file}}`
 - What it shows:
-- Why it is not the event: generated illustration. The caption on the page says **המחשה (AI) · לא צילום חדשות** / **AI illustration · not a news photograph**. It is not a photograph of the event and not a likeness of a real person.
+- Why it is not the event: generated illustration, kept in this file, not written under the picture. The caption on the page is only **המחשה (AI)** / **AI Illustration**, under the image. There is no badge.
 - Creator: desk illustration for this edition
 - License: prepared for The Daily Jenya. Not a wire photograph.
 - Page:
