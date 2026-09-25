@@ -1150,9 +1150,10 @@ html.edition .page-foot {
   }
 }
 
-/* Home sheet rhythm. Night mast with the lead headline beside the logo,
-   then a navy story panel. Markets: a large section title, a navy drivers
-   slab, snapshot last. Archive and older editions do not carry class "home". */
+/* Home sheet: clean mast (logo, date, language, section nav). The lead
+   headline lives in the news panel. Nav switches one section at a time.
+   Markets: a large section title, a navy drivers slab, snapshot last.
+   Archive and older editions do not carry class "home". */
 
 html.home .wrap {
   padding-top: 1.35rem;
@@ -1161,39 +1162,33 @@ html.home .wrap {
 html.home .mast {
   display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
-    "brand display"
-    "nav meta";
-  column-gap: 0;
+    "brand meta"
+    "nav nav";
+  column-gap: 1.5rem;
   row-gap: 0;
-  align-items: end;
+  align-items: center;
   border-bottom: 0;
   padding-bottom: 0;
-}
-
-html.home .mast-brand,
-html.home .lead-display {
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--rule);
 }
 
 html.home .mast-brand {
   grid-area: brand;
   justify-self: start;
-  align-self: end;
-  padding-inline-end: 1.35rem;
+  align-self: center;
+  padding: 1.05rem 0 0.85rem;
+  border-bottom: 0;
 }
 
 html.home .brand-logo {
   width: min(280px, 100%);
 }
 
-html.home .lead-display {
-  grid-area: display;
-  align-self: end;
-  min-width: 0;
-  padding-inline-start: 1.5rem;
+html.home .lead .lead-display {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  border: 0;
 }
 
 html.home .lead-display .card-kicker {
@@ -1203,33 +1198,39 @@ html.home .lead-display .card-kicker {
 
 html.home .lead-display h2 {
   margin: 0;
-  color: var(--ink);
+  color: var(--paper);
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(2rem, 3.5vw, 3.25rem);
-  line-height: 1.08;
+  font-size: clamp(1.85rem, 3.2vw, 2.85rem);
+  line-height: 1.12;
   letter-spacing: -0.02em;
 }
 
 html.home .mast-meta {
   grid-area: meta;
-  align-self: end;
+  align-self: center;
   min-width: 0;
-  padding: 0.7rem 0 0.45rem;
-  padding-inline-start: 1.5rem;
+  padding: 1.05rem 0 0.85rem;
   text-align: end;
 }
 
 html.home .edition-nav {
   grid-area: nav;
   position: static;
-  align-self: end;
-  margin-top: 0;
-  padding: 0.55rem 0 0.15rem;
-  padding-inline-end: 1.35rem;
-  background: transparent;
-  border: 0;
-  gap: 0.2rem 1.05rem;
+  width: 100%;
+  align-self: stretch;
+  margin: 0;
+  padding: 0.15rem 0;
+  gap: 0.2rem 1.35rem;
+}
+
+html.home[data-section="news"] #markets,
+html.home[data-section="news"] #ai,
+html.home[data-section="markets"] #news,
+html.home[data-section="markets"] #ai,
+html.home[data-section="ai"] #news,
+html.home[data-section="ai"] #markets {
+  display: none;
 }
 
 html.home .edition-nav a {
@@ -1464,16 +1465,19 @@ html.home #markets .mkt-strip-tuck .mkt-px {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "brand"
-      "display"
       "meta"
       "nav";
   }
 
   html.home .mast-brand,
-  html.home .lead-display,
   html.home .mast-meta,
   html.home .edition-nav {
     padding-inline: 0;
+  }
+
+  html.home .mast-meta {
+    text-align: start;
+    padding-top: 0;
   }
 
   html.home .lead-display h2 {
@@ -1682,9 +1686,14 @@ html.edition .lead .photo figcaption a {
 #ai .why-label { color: #c1a1ed; }
 
 html.home .edition-nav {
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  background: #132635;
+  border-top: 1px solid #415869;
+  border-bottom: 1px solid #415869;
+  box-shadow: 0 4px 14px #05111b35;
+}
+
+html.home .crawl {
+  margin-top: 0;
 }
 
 html.edition .edition-nav a[href*="archive"]:hover,
