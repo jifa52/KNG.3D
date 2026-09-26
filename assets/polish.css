@@ -1542,8 +1542,10 @@ html.edition .brand-logo,
 html.home .brand-logo {
   width: min(350px, 100%);
   height: auto;
-  filter: grayscale(1) invert(1) contrast(2.4);
-  mix-blend-mode: screen;
+  /* Dark and cream ink in the PNG, drawn as one light mark. No mix-blend:
+     mobile Safari drops screen blends and the logo flashes or vanishes. */
+  filter: brightness(0) invert(1);
+  opacity: 0.87;
 }
 
 html.edition .edition-nav,
