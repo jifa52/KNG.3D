@@ -117,7 +117,8 @@
           <p class="section-when"><span data-lang="he">{{מתי עודכן}}</span><span data-lang="en">{{when it was updated}}</span></p>
         </header>
         <div class="front">
-          <article class="lead" aria-labelledby="lead-title">
+          <div class="lead-stack">
+            <article class="lead" aria-labelledby="lead-title">
             <div class="lead-display">
               <p class="card-kicker"><span data-lang="he">{{קיקר}}</span><span data-lang="en">{{kicker}}</span></p>
               <h2 id="lead-title"><span data-lang="he">{{כותרת_מובילה}}</span><span data-lang="en">{{lead_headline}}</span></h2>
@@ -137,10 +138,10 @@
             <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · <bdi class="num">{{HH:MM}}</bdi> בישראל</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · <bdi class="num">{{HH:MM}}</bdi> Israel</span></p>
             <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
             <p class="sources" data-lang="en">Sources: {{links}}</p>
-          </article>
-          <div class="side-stack">
-            <article>
-              <!-- Keep this figure on a Markets refresh. photo--portrait is only for a licensed portrait of a person. -->
+            </article>
+            <div class="side-stack lead-continuation">
+              <article>
+                <!-- Keep this figure on a Markets refresh. photo--portrait is only for a licensed portrait of a person. -->
               <figure class="photo photo--support">
                 <img src="../assets/images/{{support_file_1}}" width="{{w}}" height="{{h}}" alt="{{alt_he}}" data-alt-he="{{alt_he}}" data-alt-en="{{alt_en}}" decoding="async">
                 <figcaption>
@@ -157,7 +158,10 @@
               <p class="card-meta"><span data-lang="he">{{מאומת_או_סביר}} · {{מקור}} · <bdi class="num">{{HH:MM}}</bdi> בישראל</span><span data-lang="en">{{Confirmed_or_Likely}} · {{source}} · <bdi class="num">{{HH:MM}}</bdi> Israel</span></p>
               <p class="sources" data-lang="he">מקורות: {{קישורים}}</p>
               <p class="sources" data-lang="en">Sources: {{links}}</p>
-            </article>
+              </article>
+            </div>
+          </div>
+          <div class="side-stack">
             <article>
               <!-- Keep this figure on a Markets refresh. -->
               <figure class="photo photo--support">

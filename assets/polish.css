@@ -1251,44 +1251,6 @@ html.home .crawl {
 
 html.home #news {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.42fr) minmax(0, 1fr);
-  grid-template-areas:
-    "open open"
-    "lead side";
-  gap: 0.9rem;
-}
-
-/* The rail is taller than the lead. Put the following News band under the
-   lead while the rail continues beside it, instead of leaving a sheet void. */
-html.home #news:has(> .quiet-band) {
-  grid-template-areas:
-    "open open"
-    "lead side"
-    "quiet side";
-}
-
-html.home #news > .news-open {
-  grid-area: open;
-  margin: 0;
-}
-
-html.home #news > .front {
-  display: contents;
-}
-
-html.home #news > .front > .lead {
-  grid-area: lead;
-}
-
-html.home #news > .front > .side-stack {
-  grid-area: side;
-}
-
-html.home #news > .quiet-band {
-  grid-area: quiet;
-  grid-template-columns: minmax(0, 1fr);
-  margin: 0;
 }
 
 html.home #news > .section-head {
@@ -1309,6 +1271,15 @@ html.home .front {
   margin-top: 0.85rem;
   background: transparent;
   align-items: start;
+}
+
+/* Two natural-height stacks keep editorial order while using the space below
+   the lead for the next News card. */
+html.home .lead-stack {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
 }
 
 html.home .lead {
@@ -1510,29 +1481,6 @@ html.home #markets .mkt-strip-tuck .mkt-px {
 }
 
 @media (max-width: 860px) {
-  html.home #news {
-    display: block;
-  }
-
-  html.home #news > .news-open {
-    margin: 0.15rem 0 0.85rem;
-  }
-
-  html.home #news > .front {
-    display: grid;
-  }
-
-  html.home #news > .news-open,
-  html.home #news > .front > .lead,
-  html.home #news > .front > .side-stack,
-  html.home #news > .quiet-band {
-    grid-area: auto;
-  }
-
-  html.home #news > .quiet-band {
-    margin-top: 1.35rem;
-  }
-
   html.home .mast {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
