@@ -1,0 +1,136 @@
+/* Depth preview only. Linked from preview/daily-jenya-depth/index.html.
+   Page stays #09141e. Cards are #101f2c. Every other support card,
+   and the quiet band, step up to #1b3040. No new hues. */
+
+html.depth,
+html.depth body {
+  background: #09141e;
+}
+
+html.depth .depth-flag {
+  margin: 0;
+  padding: 0.4rem 1.25rem;
+  background: #101f2c;
+  color: #a1b1bd;
+  font-size: 12.5px;
+  line-height: 1.45;
+  border-bottom: 1px solid #344653;
+}
+
+html.depth .depth-flag a {
+  color: #91c4eb;
+}
+
+html.depth .wrap {
+  background: #09141e;
+}
+
+html.depth .mast {
+  background: linear-gradient(to bottom, #102637, #142e43);
+}
+
+html.depth .lead {
+  background: #101f2c;
+}
+
+html.depth .lead-display h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-top: 0.7rem;
+  background: #91c4eb;
+}
+
+html.depth.home .edition-nav a[href="#news"][aria-current="true"],
+html.depth.home .edition-nav a[href="#markets"][aria-current="true"],
+html.depth.home .edition-nav a[href="#ai"][aria-current="true"] {
+  box-shadow: inset 0 -2px 0 #91c4eb;
+}
+
+html.depth .side-stack {
+  background: transparent;
+  padding: 0;
+  border-inline-start: 1px solid #344653;
+}
+
+html.depth .side-stack article {
+  flex: 1 1 auto;
+  background: #101f2c;
+  padding: 0.95rem 1.05rem 1rem;
+  border-bottom: 1px solid #344653;
+}
+
+html.depth .side-stack article:nth-child(odd) {
+  background: #1b3040;
+}
+
+html.depth .side-stack article:nth-child(odd) .why {
+  background: #101f2c;
+  color: #d4dce1;
+}
+
+html.depth .quiet-band {
+  background: #1b3040;
+  margin-top: 1.25rem;
+  border-top: 1px solid #344653;
+  border-bottom: 1px solid #344653;
+  padding: 1.15rem 1rem 1.25rem;
+  gap: 1.15rem 1.25rem;
+}
+
+html.depth .quiet-band article {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #344653;
+}
+
+html.depth .quiet-band article:nth-child(even) {
+  background: #101f2c;
+  padding: 0.85rem 0.9rem 1rem;
+  border-bottom-color: #344653;
+}
+
+html.depth .quiet-band .why {
+  background: #101f2c;
+  color: #d4dce1;
+}
+
+html.depth .quiet-band article:nth-child(even) .why {
+  background: #1b3040;
+}
+
+html.depth #mkt-drivers-heading,
+html.depth .mkt-drivers {
+  background: #101f2c;
+}
+
+html.depth .mkt-drivers article {
+  border-bottom: 1px solid #344653;
+}
+
+html.depth .mkt-catalysts {
+  background: #1b3040;
+  padding: 0.35rem 1.05rem 0.5rem;
+  border-top: 1px solid #344653;
+  border-bottom: 1px solid #344653;
+}
+
+html.depth .mkt-catalysts article {
+  border-bottom-color: #344653;
+}
+
+html.depth #markets .mkt-snap {
+  background: #101f2c;
+  border: 1px solid #344653;
+}
+
+html.depth #markets .mkt-chip {
+  border-top-color: #344653;
+}
+
+@media (max-width: 860px) {
+  html.depth .side-stack {
+    border-inline-start: 0;
+    border-top: 1px solid #344653;
+  }
+}
