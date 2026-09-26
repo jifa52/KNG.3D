@@ -1270,7 +1270,7 @@ html.home .front {
   gap: 0;
   margin-top: 0.85rem;
   background: transparent;
-  align-items: stretch;
+  align-items: start;
 }
 
 html.home .lead {
@@ -1299,7 +1299,7 @@ html.home .lead .why-label {
 
 html.home .side-stack {
   background: var(--page);
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0.15rem 1.15rem 0.4rem;
   border-inline-start: 1px solid var(--rule);
