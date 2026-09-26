@@ -1,20 +1,28 @@
 /* Depth preview only. Linked from preview/daily-jenya-depth/index.html.
-   Page stays #09141e. Cards are #101f2c. Every other support card,
-   and the quiet band, step up to #1b3040. No new hues. */
+   Page #09141e, paper #101f2c, pale a step lighter at #243d52.
+   Does not change the live homepage. */
+
+html.depth {
+  --depth-page: #09141e;
+  --depth-paper: #101f2c;
+  --depth-pale: #243d52;
+  --depth-line: #3d5668;
+  --depth-mast-bottom: #1c4058;
+}
 
 html.depth,
 html.depth body {
-  background: #09141e;
+  background: var(--depth-page);
 }
 
 html.depth .depth-flag {
   margin: 0;
   padding: 0.4rem 1.25rem;
-  background: #101f2c;
+  background: var(--depth-paper);
   color: #a1b1bd;
   font-size: 12.5px;
   line-height: 1.45;
-  border-bottom: 1px solid #344653;
+  border-bottom: 1px solid var(--depth-line);
 }
 
 html.depth .depth-flag a {
@@ -22,15 +30,20 @@ html.depth .depth-flag a {
 }
 
 html.depth .wrap {
-  background: #09141e;
+  background: var(--depth-page);
 }
 
 html.depth .mast {
-  background: linear-gradient(to bottom, #102637, #142e43);
+  background: linear-gradient(to bottom, #102637, var(--depth-mast-bottom));
 }
 
 html.depth .lead {
-  background: #101f2c;
+  background: var(--depth-paper);
+}
+
+html.depth .lead .why {
+  background: var(--depth-pale);
+  color: #d4dce1;
 }
 
 html.depth .lead-display h2::after {
@@ -51,86 +64,91 @@ html.depth.home .edition-nav a[href="#ai"][aria-current="true"] {
 html.depth .side-stack {
   background: transparent;
   padding: 0;
-  border-inline-start: 1px solid #344653;
+  border-inline-start: 1px solid var(--depth-line);
 }
 
 html.depth .side-stack article {
   flex: 1 1 auto;
-  background: #101f2c;
+  background: var(--depth-paper);
   padding: 0.95rem 1.05rem 1rem;
-  border-bottom: 1px solid #344653;
+  border-bottom: 1px solid var(--depth-line);
 }
 
 html.depth .side-stack article:nth-child(odd) {
-  background: #1b3040;
+  background: var(--depth-pale);
+}
+
+html.depth .side-stack article .why {
+  background: var(--depth-pale);
+  color: #d4dce1;
 }
 
 html.depth .side-stack article:nth-child(odd) .why {
-  background: #101f2c;
+  background: var(--depth-paper);
   color: #d4dce1;
 }
 
 html.depth .quiet-band {
-  background: #1b3040;
+  background: var(--depth-pale);
   margin-top: 1.25rem;
-  border-top: 1px solid #344653;
-  border-bottom: 1px solid #344653;
+  border-top: 1px solid var(--depth-line);
+  border-bottom: 1px solid var(--depth-line);
   padding: 1.15rem 1rem 1.25rem;
   gap: 1.15rem 1.25rem;
 }
 
 html.depth .quiet-band article {
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid #344653;
+  border-bottom: 1px solid var(--depth-line);
 }
 
 html.depth .quiet-band article:nth-child(even) {
-  background: #101f2c;
+  background: var(--depth-paper);
   padding: 0.85rem 0.9rem 1rem;
-  border-bottom-color: #344653;
+  border-bottom-color: var(--depth-line);
 }
 
 html.depth .quiet-band .why {
-  background: #101f2c;
+  background: var(--depth-paper);
   color: #d4dce1;
 }
 
 html.depth .quiet-band article:nth-child(even) .why {
-  background: #1b3040;
+  background: var(--depth-pale);
 }
 
 html.depth #mkt-drivers-heading,
 html.depth .mkt-drivers {
-  background: #101f2c;
+  background: var(--depth-paper);
 }
 
 html.depth .mkt-drivers article {
-  border-bottom: 1px solid #344653;
+  border-bottom: 1px solid var(--depth-line);
 }
 
 html.depth .mkt-catalysts {
-  background: #1b3040;
+  background: var(--depth-pale);
   padding: 0.35rem 1.05rem 0.5rem;
-  border-top: 1px solid #344653;
-  border-bottom: 1px solid #344653;
+  border-top: 1px solid var(--depth-line);
+  border-bottom: 1px solid var(--depth-line);
 }
 
 html.depth .mkt-catalysts article {
-  border-bottom-color: #344653;
+  border-bottom-color: var(--depth-line);
 }
 
 html.depth #markets .mkt-snap {
-  background: #101f2c;
-  border: 1px solid #344653;
+  background: var(--depth-paper);
+  border: 1px solid var(--depth-line);
 }
 
 html.depth #markets .mkt-chip {
-  border-top-color: #344653;
+  border-top-color: var(--depth-line);
 }
 
 @media (max-width: 860px) {
   html.depth .side-stack {
     border-inline-start: 0;
-    border-top: 1px solid #344653;
+    border-top: 1px solid var(--depth-line);
   }
 }
