@@ -37,6 +37,7 @@ jobs:
             assets/favicon.svg \
             assets/daily-jenya-logo.png \
             assets/daily-jenya-logo-white.svg \
+            assets/daily-jenya-logo-owner.png \
             assets/images/trump-xi-1280.jpg \
             assets/images/albanese-800.jpg \
             assets/images/yanbu-nasa-1920.jpg \
@@ -148,7 +149,7 @@ jobs:
           grep -q 'Index, not futures' index.html
           grep -q 'FX spot' index.html
           grep -q 'The Daily Jenya' index.html
-          grep -q 'daily-jenya-logo-white.svg' index.html
+          grep -q 'daily-jenya-logo-owner.png' index.html
           grep -q 'riyadh-north-1600.jpg' index.html
           grep -q 'hormuz-nasa-1600.jpg' index.html
           grep -q 'kryvyi-rih-steel-1600.jpg' index.html

@@ -1542,11 +1542,10 @@ html.edition .brand-logo,
 html.home .brand-logo {
   width: min(350px, 100%);
   height: auto;
-  /* White lockup already. A brightness/invert filter quantizes the edge
-     into stairs. No mix-blend: phones drop screen blends and the logo vanishes. */
+  /* Owner white lockup, black already knocked out. No filter, no mix-blend. */
   filter: none;
   mix-blend-mode: normal;
-  opacity: 0.87;
+  opacity: 1;
 }
 
 html.edition .edition-nav,
