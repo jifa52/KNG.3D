@@ -1309,7 +1309,18 @@ html.home .quiet-band {
   margin-top: 1.75rem;
 }
 
+html.home .news-open {
+  margin: 0.15rem 0 0.85rem;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
 html.home .quotes {
+  /* Legacy edition summaries duplicated the cards as uncontained sheet text.
+     Publishers should omit them; keep this guard for concurrent/older output. */
+  display: none;
   margin-top: 1.35rem;
   max-width: 46rem;
   color: var(--muted);
@@ -1542,11 +1553,10 @@ html.edition .brand-logo,
 html.home .brand-logo {
   width: min(350px, 100%);
   height: auto;
-  /* White lockup already. A brightness/invert filter quantizes the edge
-     into stairs. No mix-blend: phones drop screen blends and the logo vanishes. */
+  /* Owner white lockup, black already knocked out. No filter, no mix-blend. */
   filter: none;
   mix-blend-mode: normal;
-  opacity: 0.87;
+  opacity: 1;
 }
 
 html.edition .edition-nav,
