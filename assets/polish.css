@@ -1273,6 +1273,15 @@ html.home .front {
   align-items: start;
 }
 
+/* Two natural-height stacks keep editorial order while using the space below
+   the lead for the next News card. */
+html.home .lead-stack {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
 html.home .lead {
   background: var(--forest);
   padding: 1.45rem 1.4rem 1.55rem;
