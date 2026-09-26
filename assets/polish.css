@@ -1542,9 +1542,10 @@ html.edition .brand-logo,
 html.home .brand-logo {
   width: min(350px, 100%);
   height: auto;
-  /* Dark and cream ink in the PNG, drawn as one light mark. No mix-blend:
-     mobile Safari drops screen blends and the logo flashes or vanishes. */
-  filter: brightness(0) invert(1);
+  /* White lockup already. A brightness/invert filter quantizes the edge
+     into stairs. No mix-blend: phones drop screen blends and the logo vanishes. */
+  filter: none;
+  mix-blend-mode: normal;
   opacity: 0.87;
 }
 
