@@ -1310,6 +1310,9 @@ html.home .quiet-band {
 }
 
 html.home .quotes {
+  /* Legacy edition summaries duplicated the cards as uncontained sheet text.
+     Publishers should omit them; keep this guard for concurrent/older output. */
+  display: none;
   margin-top: 1.35rem;
   max-width: 46rem;
   color: var(--muted);

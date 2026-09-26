@@ -151,6 +151,12 @@ jobs:
           grep -q 'FX spot' index.html
           grep -q 'The Daily Jenya' index.html
           grep -q 'daily-jenya-logo-v2.png' index.html
+          for page in index.html templates/edition.html; do
+            if grep -q 'class="quotes"' "$page"; then
+              echo "edition summary must not leak outside the news cards on $page"
+              exit 1
+            fi
+          done
           grep -q 'riyadh-north-1600.jpg' index.html
           grep -q 'hormuz-nasa-1600.jpg' index.html
           grep -q 'kryvyi-rih-steel-1600.jpg' index.html
