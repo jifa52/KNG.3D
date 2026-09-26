@@ -1799,3 +1799,115 @@ html.home .crawl {
     max-width: 245px;
   }
 }
+
+/* Live home sheet: clear depth planes. Gutters stay #09141e.
+   The reading column is #203f58. Cards are darker insets. */
+html.home .wrap {
+  background: #203f58;
+}
+
+html.home .mast {
+  background: linear-gradient(to bottom, #15324a, #2a5570);
+  border-top: 2px solid #b99a55;
+}
+
+html.home .lead {
+  background: #101f2c;
+  border: 1px solid #4a6880;
+}
+
+html.home .lead .why,
+html.home .side-stack article .why,
+html.home .quiet-band .why {
+  background: #0f2433;
+  color: #d4dce1;
+}
+
+html.home .lead-display h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-top: 0.7rem;
+  background: #91c4eb;
+}
+
+html.home .edition-nav a[href="#news"][aria-current="true"],
+html.home .edition-nav a[href="#markets"][aria-current="true"],
+html.home .edition-nav a[href="#ai"][aria-current="true"] {
+  box-shadow: inset 0 -2px 0 #91c4eb;
+}
+
+html.home .front {
+  gap: 0.9rem;
+  background: transparent;
+}
+
+html.home .side-stack {
+  background: transparent;
+  padding: 0;
+  gap: 0.9rem;
+  border: 0;
+}
+
+html.home .side-stack article {
+  flex: 0 0 auto;
+  background: #2a4d66;
+  padding: 0.95rem 1.05rem 1rem;
+  border: 1px solid #4a6880;
+}
+
+html.home .side-stack article:nth-child(even) {
+  background: #101f2c;
+}
+
+html.home .quiet-band {
+  background: #2a5570;
+  margin-top: 1.35rem;
+  border: 1px solid #4a6880;
+  padding: 1.15rem 1rem 1.25rem;
+  gap: 1.15rem 1.25rem;
+}
+
+html.home .quiet-band article {
+  background: #101f2c;
+  padding: 0.85rem 0.9rem 1rem;
+  border: 1px solid #4a6880;
+}
+
+html.home #mkt-drivers-heading,
+html.home .mkt-drivers {
+  background: #101f2c;
+  border: 1px solid #4a6880;
+}
+
+html.home .mkt-drivers article {
+  border-bottom: 1px solid #4a6880;
+}
+
+html.home .mkt-catalysts {
+  background: #2a5570;
+  margin-top: 1.1rem;
+  padding: 0.85rem 1.05rem 0.6rem;
+  border: 1px solid #4a6880;
+}
+
+html.home .mkt-catalysts article {
+  border-bottom-color: #4a6880;
+}
+
+html.home #markets .mkt-snap {
+  background: #101f2c;
+  border: 1px solid #4a6880;
+}
+
+html.home #markets .mkt-chip {
+  border-top-color: #4a6880;
+}
+
+@media (max-width: 860px) {
+  html.home .side-stack {
+    border-inline-start: 0;
+    border-top: 0;
+  }
+}
