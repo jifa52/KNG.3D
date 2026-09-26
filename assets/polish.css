@@ -1153,7 +1153,7 @@ html.edition .page-foot {
 /* Home sheet: clean mast (logo, date, language, section nav). The lead
    headline lives in the news panel. Nav switches one section at a time.
    Markets: a large section title, a navy drivers slab, snapshot last.
-   Archive and older editions do not carry class "home". */
+   The archive opts into this chrome; older editions do not. */
 
 html.home .wrap {
   padding-top: 1.35rem;
@@ -1916,9 +1916,84 @@ html.home #markets .mkt-chip {
   border-top-color: #4a6880;
 }
 
+/* Archive index: the current mast and clear-depth card planes. Archive cards
+   size to their own content; this is a list, not a stretched lead/rail row. */
+html.archive-page .archive-main {
+  padding-top: 0.9rem;
+}
+
+html.archive-page .archive-head {
+  margin: 0.75rem 0 0.9rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #4a6880;
+}
+
+html.archive-page .archive-intro {
+  margin: 0 0 0.9rem;
+  max-width: none;
+  padding: 0.9rem 1rem;
+  background: #2a5570;
+  border: 1px solid #4a6880;
+  color: #d4dce1;
+}
+
+html.archive-page .edition-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.9rem;
+  margin-top: 0;
+}
+
+html.archive-page .edition-list li {
+  align-self: start;
+  height: auto;
+  padding: 1rem 1.05rem 1.1rem;
+  background: #101f2c;
+  border: 1px solid #4a6880;
+}
+
+html.archive-page .edition-list li:nth-child(even) {
+  background: #2a4d66;
+}
+
+html.archive-page .edition-list li:first-child {
+  grid-column: 1 / -1;
+  border-inline-start: 3px solid #91c4eb;
+}
+
+html.archive-page .edition-list li:first-child h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-top: 0.7rem;
+  background: #91c4eb;
+}
+
+html.archive-page .edition-list li > p:not(.edition-when) {
+  max-width: 48rem;
+}
+
+html.archive-page .edition-list li > p:last-child {
+  margin-top: 0.7rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid #4a6880;
+  color: #a1b1bd;
+  font-size: 13.5px;
+}
+
 @media (max-width: 860px) {
   html.home .side-stack {
     border-inline-start: 0;
     border-top: 0;
+  }
+
+  html.archive-page .edition-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html.archive-page .edition-list li:first-child {
+    grid-column: auto;
   }
 }

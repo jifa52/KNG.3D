@@ -155,6 +155,10 @@ jobs:
           grep -q 'FX spot' index.html
           grep -q 'The Daily Jenya' index.html
           grep -q 'daily-jenya-logo-v2.png' index.html
+          grep -q 'class="edition home archive-page"' archive/index.html
+          grep -q 'class="mast-brand"' archive/index.html
+          grep -q 'daily-jenya-logo-v2.png' archive/index.html
+          grep -q 'class="archive-intro"' archive/index.html
           for page in index.html templates/edition.html; do
             if grep -q 'class="quotes"' "$page"; then
               echo "edition summary must not leak outside the news cards on $page"
