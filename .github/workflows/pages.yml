@@ -56,6 +56,10 @@ jobs:
             briefings/2026-09-25-1400/IMAGE-CREDITS.md \
             briefings/2026-09-26-0850/index.html \
             briefings/2026-09-26-0850/IMAGE-CREDITS.md \
+            briefings/2026-09-26-1400/index.html \
+            briefings/2026-09-26-1400/IMAGE-CREDITS.md \
+            assets/images/ai-openai-prints-lock.jpg \
+            assets/images/ai-uae-empty-table.jpg \
             assets/images/riyadh-north-1600.jpg \
             assets/images/riyadh-north-960.jpg \
             assets/images/kryvyi-rih-steel-1600.jpg \
@@ -110,7 +114,7 @@ jobs:
           grep -q 'mkt-drivers' assets/polish.css
           # Older polish permalinks keep the quote boards. Live and the template are news-first.
           grep -q 'mkt-board-primary' assets/polish.css
-          for page in index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
+          for page in index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
             grep -q 'edition.css' "$page"
             grep -q 'polish.css' "$page"
             grep -q 'edition-nav' "$page"
@@ -133,7 +137,7 @@ jobs:
             grep -q 'mkt-board-secondary' "$page"
             grep -q 'mkt-board-cash' "$page"
           done
-          for page in index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
+          for page in index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             grep -q 'mkt-snap' "$page"
             grep -q 'mkt-strip' "$page"
             grep -q 'mkt-drivers' "$page"
@@ -159,7 +163,8 @@ jobs:
           done
           grep -q 'riyadh-north-1600.jpg' index.html
           grep -q 'hormuz-nasa-1600.jpg' index.html
-          grep -q 'kryvyi-rih-steel-1600.jpg' index.html
+          grep -q 'trump-xi-1280.jpg' index.html
+          grep -q 'kryvyi-rih-steel-1600.jpg' briefings/2026-09-26-0850/index.html
           grep -q 'photo--support' index.html
           grep -q 'yanbu-nasa-1920.jpg' briefings/2026-09-25-1400/index.html
           grep -q 'yanbu-nasa-1920.jpg' briefings/2026-09-25-1545/index.html
@@ -188,7 +193,7 @@ jobs:
             done
             test "$(grep -c 'keep-photo-slot:' "$page")" -ge 10
           done
-          for page in index.html briefings/2026-09-26-0850/index.html; do
+          for page in briefings/2026-09-26-0850/index.html; do
             for needle in \
               riyadh-north-1600.jpg \
               hormuz-nasa-1600.jpg \
@@ -210,11 +215,41 @@ jobs:
               exit 1
             fi
           done
+          for page in index.html briefings/2026-09-26-1400/index.html; do
+            for needle in \
+              riyadh-north-1600.jpg \
+              hormuz-nasa-1600.jpg \
+              trump-xi-1280.jpg \
+              datacenter-racks-1280.jpg \
+              ai-openai-prints-lock.jpg \
+              ai-uae-empty-table.jpg \
+              ai-claude-art.jpg \
+              ai-opus-chip.jpg \
+              'keep-photo-slot: news-01' \
+              'keep-photo-slot: news-06' \
+              'class="illus-caption"' \
+              'המחשה (AI)' \
+              'AI Illustration' \
+              '14:00' \
+              'quiet-band' \
+              'B.alotaby' \
+              'NASA' \
+              'Albudaiwi' \
+              'Pezeshkian'
+            do
+              grep -q "$needle" "$page"
+            done
+            test "$(grep -c 'keep-photo-slot:' "$page")" -eq 8
+            if grep -q 'kryvyi-rih-steel' "$page" || grep -q 'ArcelorMittal' "$page"; then
+              echo "midday news does not refile the overnight steel card on $page"
+              exit 1
+            fi
+          done
           grep -q 'photo--support' briefings/2026-09-25-1400/index.html
           grep -q 'photo--support' templates/edition.html
           grep -q 'figure class="photo"' templates/edition.html
           # AI pictures: a quiet caption under the image. No forest badge and no long disclaimer.
-          for page in index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
+          for page in index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             if grep -q 'illus-label' "$page"; then
               echo "no AI badge on $page"
               exit 1
@@ -233,11 +268,18 @@ jobs:
             grep -q 'Carl Lender' "$page"
             grep -q 'NASA' "$page"
           done
-          for page in index.html briefings/2026-09-26-0850/index.html; do
+          for page in briefings/2026-09-26-0850/index.html; do
             test "$(grep -c 'class="illus-caption"' "$page")" -eq 2
             grep -q 'NASA' "$page"
             grep -q 'B.alotaby' "$page"
             grep -q 'Kurbiko' "$page"
+          done
+          for page in index.html briefings/2026-09-26-1400/index.html; do
+            test "$(grep -c 'class="illus-caption"' "$page")" -eq 4
+            grep -q 'NASA' "$page"
+            grep -q 'B.alotaby' "$page"
+            grep -q 'Daniel Torok' "$page"
+            grep -q 'Carl Lender' "$page"
           done
           test "$(grep -c 'class="illus-caption"' templates/edition.html)" -eq 3
           if grep -q 'illus-label' assets/polish.css; then
@@ -253,6 +295,7 @@ jobs:
           python3 -c 'from pathlib import Path; html=Path("index.html").read_text(); order=["mkt-drivers","mkt-catalysts","mkt-next","mkt-snap"]; pos=[html.find(t) for t in order]; assert pos==sorted(pos) and all(p>=0 for p in pos), "markets order"; assert html.count("class=\"why\"")>=8; assert html.count("crawl-seq")>=2'
           if grep -E -q '(href|src)="[^"]*(lanes\.js|brief\.css|paper\.css)"' \
             index.html \
+            briefings/2026-09-26-1400/index.html \
             briefings/2026-09-26-0850/index.html \
             briefings/2026-09-25-1545/index.html \
             briefings/2026-09-25-1400/index.html \

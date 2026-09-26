@@ -1309,6 +1309,14 @@ html.home .quiet-band {
   margin-top: 1.75rem;
 }
 
+html.home .news-open {
+  margin: 0.15rem 0 0.85rem;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
 html.home .quotes {
   /* Legacy edition summaries duplicated the cards as uncontained sheet text.
      Publishers should omit them; keep this guard for concurrent/older output. */
