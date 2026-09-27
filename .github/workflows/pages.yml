@@ -309,7 +309,8 @@ jobs:
               'quiet-band' \
               'NASA' \
               'Araqchi' \
-              'Fairford'
+              'Fairford' \
+              'Pezeshkian'
             do
               grep -q "$needle" "$page"
             done
