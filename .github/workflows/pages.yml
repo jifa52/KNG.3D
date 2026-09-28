@@ -298,13 +298,12 @@ jobs:
               datacenter-racks-1280.jpg \
               canberra-parliament-1280.jpg \
               haywards-substation-1280.jpg \
-              ai-claude-art.jpg \
-              ai-opus-chip.jpg \
               'keep-photo-slot: news-01' \
               'keep-photo-slot: news-06' \
-              'class="illus-caption"' \
-              'המחשה (AI)' \
-              'AI Illustration' \
+              'Claude Marketplace' \
+              'Nemotron-3-Diarization' \
+              'MentalHealthBench' \
+              '28 September 2026' \
               '14:00' \
               'quiet-band' \
               'NASA' \
@@ -314,7 +313,12 @@ jobs:
             do
               grep -q "$needle" "$page"
             done
-            test "$(grep -c 'keep-photo-slot:' "$page")" -eq 8
+            # Monday 28 Sep AI digest is text-first. News photographs stay. Friday AI illustrations do not.
+            test "$(grep -c 'keep-photo-slot:' "$page")" -eq 6
+            if grep -q 'ai-claude-art.jpg' "$page" || grep -q 'ai-opus-chip.jpg' "$page"; then
+              echo "monday AI digest does not reuse the Friday illustrations on $page"
+              exit 1
+            fi
             if grep -q 'ai-sandbox-pause.jpg' "$page"; then
               echo "sunday midday does not refile the overnight sandbox illustration on $page"
               exit 1
@@ -324,6 +328,7 @@ jobs:
           grep -q 'photo--support' templates/edition.html
           grep -q 'figure class="photo"' templates/edition.html
           # AI pictures: a quiet caption under the image. No forest badge and no long disclaimer.
+          # The Monday 28 Sep digest on the homepage is text-first, so it has no illustration caption.
           for page in index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             if grep -q 'illus-label' "$page"; then
               echo "no AI badge on $page"
@@ -333,6 +338,8 @@ jobs:
               echo "no long AI disclaimer on $page"
               exit 1
             fi
+          done
+          for page in briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             grep -q 'class="illus-caption"' "$page"
             grep -q 'המחשה (AI)' "$page"
             grep -q 'AI Illustration' "$page"
@@ -362,9 +369,9 @@ jobs:
             grep -q 'המחשה (AI)' "$page"
           done
           for page in index.html briefings/2026-09-27-1400/index.html; do
-            test "$(grep -c 'class="illus-caption"' "$page")" -eq 2
+            test "$(grep -c 'class="illus-caption"' "$page")" -eq 0
             grep -q 'NASA' "$page"
-            grep -q 'המחשה (AI)' "$page"
+            grep -q 'Claude Marketplace' "$page"
           done
           test "$(grep -c 'class="illus-caption"' templates/edition.html)" -eq 3
           if grep -q 'illus-label' assets/polish.css; then

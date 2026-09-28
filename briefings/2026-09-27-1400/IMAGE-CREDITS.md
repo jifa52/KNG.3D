@@ -2,7 +2,7 @@
 
 These files are on the homepage and on this permalink. Shared files live in `assets/images/`. None is a picture of Sunday’s Hormuz talks, of the Fairford evacuations, of the CNN interview, of the Kyiv strike, of an Australian hearing, or of the Rexel signing. Each photograph’s caption on the page says what it is.
 
-Six photographs are licensed. Two files carried with the Friday AI digest are illustrations. On the page each illustration has only a quiet caption under the image: **המחשה (AI)** / **AI Illustration**. There is no badge. An illustration is not a photograph of the event or of a real person.
+Six photographs are licensed. The Monday 28 September AI digest on this page is text-first. The Friday illustrations are not on this edition.
 
 The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a story photograph.
 
@@ -66,24 +66,6 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 - License: Public domain
 - Page: https://commons.wikimedia.org/wiki/File:Haywards_Electrical_Substation.jpg
 
-## AI lead — ART, illustration
-
-- File: `assets/images/ai-claude-art.jpg` (1280×720)
-- What it shows: an abstract enzyme beside a DNA repeat array.
-- Why it is not the research: not Anthropic’s lab and not a photograph of ART. Carried with the Friday 25 September digest.
-- Creator: illustration prepared for the Friday edition
-- License: illustration for The Daily Jenya. Not a wire photograph.
-- Label on the page: המחשה (AI) / AI Illustration
-
-## AI list — Opus, illustration
-
-- File: `assets/images/ai-opus-chip.jpg` (1280×720)
-- What it shows: an abstract chip on paper.
-- Why it is not the model: not a product photograph, not a screenshot, and not Claude Opus. Carried with the Friday 25 September digest.
-- Creator: illustration prepared for the Friday edition
-- License: illustration for The Daily Jenya. Not a wire photograph.
-- Label on the page: המחשה (AI) / AI Illustration
-
 ## Not used
 
 - No photograph of President Trump, of Abbas Araqchi, of Prince Faisal bin Farhan, of Masoud Pezeshkian, or of mediators conveying a reply. The Hormuz picture is a 2020 satellite view.
@@ -93,4 +75,5 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 - No photograph of Sam Altman, of Dario Amodei, or of a hearing that has not been held. The Canberra picture is Parliament House in 2017.
 - No photograph of the Rexel signing or of GCG’s sites. The substation is a 2007 grid photograph.
 - The overnight sandbox illustration is not on this edition.
+- The Friday AI illustrations (`assets/images/ai-claude-art.jpg`, `assets/images/ai-opus-chip.jpg`) are not on this edition. The Monday 28 September digest has no credited picture.
 - No chart or heatmap.
