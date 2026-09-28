@@ -365,13 +365,16 @@ jobs:
               'quiet-band' \
               'NASA' \
               'Abu Dhabi' \
-              'Bodycote'
+              'Bodycote' \
+              'Veritas' \
+              'OpenShell' \
+              'Kharkiv'
             do
               grep -q "$needle" "$page"
             done
             test "$(grep -c 'keep-photo-slot:' "$page")" -eq 6
-            if grep -q 'fairford-b1-1280.jpg' "$page"; then
-              echo "monday midday does not refile the overnight Fairford photograph on $page"
+            if grep -q 'fairford-b1-1280.jpg' "$page" || grep -q '08:50' "$page"; then
+              echo "monday midday does not refile the overnight Fairford edition on $page"
               exit 1
             fi
             if grep -q 'ai-claude-art.jpg' "$page" || grep -q 'ai-opus-chip.jpg' "$page"; then
