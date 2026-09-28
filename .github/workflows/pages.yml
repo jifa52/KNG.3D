@@ -62,6 +62,10 @@ jobs:
             briefings/2026-09-27-0850/IMAGE-CREDITS.md \
             briefings/2026-09-27-1400/index.html \
             briefings/2026-09-27-1400/IMAGE-CREDITS.md \
+            briefings/2026-09-28-0850/index.html \
+            briefings/2026-09-28-0850/IMAGE-CREDITS.md \
+            assets/images/abu-dhabi-corniche-1600.jpg \
+            assets/images/abu-dhabi-corniche-960.jpg \
             assets/images/fairford-b1-1280.jpg \
             assets/images/doha-skyline-1600.jpg \
             assets/images/doha-skyline-960.jpg \
@@ -124,7 +128,7 @@ jobs:
           grep -q 'mkt-drivers' assets/polish.css
           # Older polish permalinks keep the quote boards. Live and the template are news-first.
           grep -q 'mkt-board-primary' assets/polish.css
-          for page in index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
+          for page in index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
             grep -q 'edition.css' "$page"
             grep -q 'polish.css' "$page"
             grep -q 'edition-nav' "$page"
@@ -147,7 +151,7 @@ jobs:
             grep -q 'mkt-board-secondary' "$page"
             grep -q 'mkt-board-cash' "$page"
           done
-          for page in index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
+          for page in index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             grep -q 'mkt-snap' "$page"
             grep -q 'mkt-strip' "$page"
             grep -q 'mkt-drivers' "$page"
@@ -169,7 +173,7 @@ jobs:
           grep -q 'class="mast-brand"' archive/index.html
           grep -q 'daily-jenya-logo-v2.png' archive/index.html
           grep -q 'class="archive-intro"' archive/index.html
-          for page in index.html templates/edition.html; do
+          for page in index.html briefings/2026-09-28-0850/index.html templates/edition.html; do
             if grep -q 'class="quotes"' "$page"; then
               echo "edition summary must not leak outside the news cards on $page"
               exit 1
@@ -177,7 +181,9 @@ jobs:
           done
           grep -q 'hormuz-nasa-1600.jpg' index.html
           grep -q 'fairford-b1-1280.jpg' index.html
-          grep -q '14:00' index.html
+          grep -q 'abu-dhabi-corniche-1600.jpg' index.html
+          grep -q '08:50' index.html
+          grep -q '14:00' briefings/2026-09-27-1400/index.html
           grep -q 'ai-sandbox-pause.jpg' briefings/2026-09-27-0850/index.html
           grep -q '08:50' briefings/2026-09-27-0850/index.html
           grep -q 'riyadh-north-1600.jpg' briefings/2026-09-26-1400/index.html
@@ -290,7 +296,46 @@ jobs:
               exit 1
             fi
           done
-          for page in index.html briefings/2026-09-27-1400/index.html; do
+          for page in index.html briefings/2026-09-28-0850/index.html; do
+            for needle in \
+              fairford-b1-1280.jpg \
+              abu-dhabi-corniche-1600.jpg \
+              hormuz-nasa-1600.jpg \
+              'keep-photo-slot: news-01' \
+              'keep-photo-slot: news-03' \
+              'Claude Marketplace' \
+              'Nemotron-3-Diarization' \
+              'MentalHealthBench' \
+              '28 September 2026' \
+              '08:50' \
+              'מהדורה רזה' \
+              'NASA' \
+              'Terrorism Act' \
+              'Abu Dhabi' \
+              'Waltz' \
+              'Fairford'
+            do
+              grep -q "$needle" "$page"
+            done
+            test "$(grep -c 'keep-photo-slot:' "$page")" -eq 3
+            if grep -q 'quiet-band' "$page"; then
+              echo "overnight thin has no quiet band on $page"
+              exit 1
+            fi
+            if grep -q 'doha-skyline' "$page" || grep -q 'canberra-parliament' "$page" || grep -q 'haywards-substation' "$page" || grep -q 'datacenter-racks' "$page" || grep -q 'ai-sandbox-pause.jpg' "$page"; then
+              echo "monday overnight does not refile sunday cards on $page"
+              exit 1
+            fi
+            if grep -q 'ai-claude-art.jpg' "$page" || grep -q 'ai-opus-chip.jpg' "$page"; then
+              echo "monday AI digest does not reuse the Friday illustrations on $page"
+              exit 1
+            fi
+            if grep -q 'מהדורת צהריים' "$page"; then
+              echo "morning edition is not a midday badge on $page"
+              exit 1
+            fi
+          done
+          for page in briefings/2026-09-27-1400/index.html; do
             for needle in \
               hormuz-nasa-1600.jpg \
               fairford-b1-1280.jpg \
@@ -313,7 +358,7 @@ jobs:
             do
               grep -q "$needle" "$page"
             done
-            # Monday 28 Sep AI digest is text-first. News photographs stay. Friday AI illustrations do not.
+            # Monday 28 Sep AI digest is text-first. Sunday midday photographs stay. Friday AI illustrations do not.
             test "$(grep -c 'keep-photo-slot:' "$page")" -eq 6
             if grep -q 'ai-claude-art.jpg' "$page" || grep -q 'ai-opus-chip.jpg' "$page"; then
               echo "monday AI digest does not reuse the Friday illustrations on $page"
@@ -329,7 +374,7 @@ jobs:
           grep -q 'figure class="photo"' templates/edition.html
           # AI pictures: a quiet caption under the image. No forest badge and no long disclaimer.
           # The Monday 28 Sep digest on the homepage is text-first, so it has no illustration caption.
-          for page in index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
+          for page in index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             if grep -q 'illus-label' "$page"; then
               echo "no AI badge on $page"
               exit 1
@@ -368,7 +413,7 @@ jobs:
             grep -q 'NASA' "$page"
             grep -q 'המחשה (AI)' "$page"
           done
-          for page in index.html briefings/2026-09-27-1400/index.html; do
+          for page in index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html; do
             test "$(grep -c 'class="illus-caption"' "$page")" -eq 0
             grep -q 'NASA' "$page"
             grep -q 'Claude Marketplace' "$page"
@@ -387,6 +432,7 @@ jobs:
           python3 -c 'from pathlib import Path; html=Path("index.html").read_text(); order=["mkt-drivers","mkt-catalysts","mkt-next","mkt-snap"]; pos=[html.find(t) for t in order]; assert pos==sorted(pos) and all(p>=0 for p in pos), "markets order"; assert html.count("class=\"why\"")>=8; assert html.count("crawl-seq")>=2'
           if grep -E -q '(href|src)="[^"]*(lanes\.js|brief\.css|paper\.css)"' \
             index.html \
+            briefings/2026-09-28-0850/index.html \
             briefings/2026-09-27-1400/index.html \
             briefings/2026-09-27-0850/index.html \
             briefings/2026-09-26-1400/index.html \
@@ -407,6 +453,7 @@ jobs:
           grep -q 'polish.css' archive/index.html
           grep -q 'edition-list' archive/index.html
           grep -q 'briefings/' archive/index.html
+          grep -q 'briefings/2026-09-28-0850/' archive/index.html
           grep -q 'color-scheme" content="dark"' archive/index.html
           # Older permalinks stay on the card sheet.
           grep -q 'brief.css' briefings/2026-09-24-1400/index.html
