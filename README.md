@@ -16,7 +16,7 @@ Tape is data. There are no trade recommendations.
 
 The live homepage is The Daily Jenya (`assets/edition.css` and `assets/polish.css`): night paper `#101f2c` on `#09141e`, ink `#d4dce1`, news gold `#dfbd72`, markets `#a9e0b5`, AI `#c1a1ed`. News is an asymmetric front of short cards with **Why it matters / למה זה חשוב**. Markets follows News as a news brief: drivers, company catalysts, today/next, then a compact snapshot. One language is on screen.
 
-- Live: `index.html` and `briefings/2026-09-28-1545/` (Monday midday News and morning AI kept; Markets refreshed to Monday ~15:45, session pre-market)
+- Live: `index.html` and `briefings/2026-09-29-1545/` (Tuesday morning News and Monday morning AI kept; Markets refreshed to Tuesday ~15:45, session pre-market)
 - Approved study (kept): `preview/ux-2026-09-24-polish/`
 - Earlier Modern study (PREVIEW, Wednesday tape, not an archive edition): `preview/ux-2026-09-24/`
 - Empty structure: `templates/edition.html`
@@ -38,7 +38,15 @@ GitHub Pages (from `main`, site root):
 
 **https://jifa52.github.io/KNG.3D/**
 
-Latest is the Monday markets refresh, 28 September 2026, ~15:45 Israel (session pre-market; quotes ~15:19–15:34):
+Latest is the Tuesday markets refresh, 29 September 2026, ~15:45 Israel (session pre-market; quotes ~15:18–15:33):
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-29-1545/**
+
+Tuesday Morning, 29 September 2026, with Monday’s markets tape as it stood that morning:
+
+**https://jifa52.github.io/KNG.3D/briefings/2026-09-29-0850/**
+
+Prior markets refresh, Monday 28 September 2026, ~15:45 Israel:
 
 **https://jifa52.github.io/KNG.3D/briefings/2026-09-28-1545/**
 
@@ -261,7 +269,7 @@ Prior Close (2 September 2026):
 ## Layout
 
 ```
-index.html                         live Daily Jenya edition: Monday midday News, Mon ~15:45 pre-market snapshot, Monday morning AI
+index.html                         live Daily Jenya edition: Tuesday morning News, Tue ~15:45 pre-market snapshot, Monday morning AI
 assets/brief.css                   card sheet for earlier permalinks and 404
 assets/edition.css                 Modern editorial base (homepage, permalink, archive index, template)
 assets/polish.css                  approved polish: nav, photos, news-first markets, newspaper AI and archive
@@ -276,6 +284,8 @@ assets/i18n.js                     language switch, localStorage, optional #he/#
 assets/lanes.js                    card-deck lane switch for earlier permalinks; not loaded on the editorial page
 assets/favicon.svg
 archive/index.html                 every published briefing
+briefings/2026-09-29-1545/         Tuesday markets refresh on the Daily Jenya sheet (morning News kept, Tue ~15:45 pre-market tape, Monday morning AI kept)
+briefings/2026-09-29-0850/         Tuesday Morning snapshot (overnight thin News; Monday markets carried; Monday morning AI)
 briefings/2026-09-28-1545/         Monday markets refresh on the Daily Jenya sheet (midday News kept, Mon ~15:45 pre-market tape, Monday morning AI kept)
 briefings/2026-09-28-1400/         Monday Midday MAIN (News; Friday markets tape as carried at midday; Monday morning AI)
 briefings/2026-09-28-0850/         Monday Morning snapshot (overnight thin News; Friday markets carried; Monday morning AI)
@@ -339,7 +349,7 @@ briefings/2026-09-02-2300/         frozen Close snapshot
 
 Home always shows the latest edition. The `briefings/` folder is the permalink.
 
-Home is the Monday 28 September 2026 editorial edition. News is the midday front, clock ~14:00 Jerusalem (07:00 ET). Markets is the pre-market refresh, edition ~15:45 Jerusalem (08:45 ET), quotes ~15:19–15:34 Jerusalem (08:19–08:34 ET). Futures versus the prior futures settle: ES 7,776.25 (−0.35%), NQ 30,707 (−0.59%), YM 51,907 (−0.49%). VIX is 16.12 (+8.4%), the index. USD/ILS is 3.0664 (+0.54%), FX spot. WTI continuous is 95.19 (November 26, roll flagged, +3.01%). Bitcoin is 83,346 (−1.32%). The 10-year is Friday’s cash close, 5.184% (+2.2 basis points versus Thursday’s 5.162%). The 30-year Friday close is 5.504% (+4.3 basis points versus Thursday). Friday cash is labeled and is not Monday cash: S&P 500 7,743.41 (+0.51%), Dow 51,828.62 (+0.93%), Nasdaq Composite 27,068.72 (+0.48%). US cash was not open. The Monday morning AI digest is carried. One language is on screen.
+Home is the Tuesday 29 September 2026 editorial edition. News is the morning front, clock ~08:50 Jerusalem (01:50 ET). Markets is the pre-market refresh, edition ~15:45 Jerusalem (08:45 ET), quotes ~15:18–15:33 Jerusalem (08:18–08:33 ET). Futures versus the prior futures settle: ES 7,761.5 (+0.19%), NQ 30,689.25 (+0.40%), YM 51,940 (+0.20%). VIX is 15.78 (−1.80%), the index. USD/ILS is 3.0558 (−0.41%), FX spot. WTI continuous is 90.88 (November 26, roll flagged, −1.86%). Bitcoin is 84,215 (+0.87%). The 10-year is Monday’s cash close, 5.240% (+5.6 basis points versus Friday’s 5.184%). The 30-year Monday close is 5.561% (+5.7 basis points versus Friday). Monday cash is labeled and is not Tuesday cash: S&P 500 7,683.69 (−0.77%), Dow 51,481.51 (−0.67%), Nasdaq Composite 26,820.38 (−0.92%). US cash was not open. The Monday morning AI digest is carried. One language is on screen.
 
 ## Run locally
 
