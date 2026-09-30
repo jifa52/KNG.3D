@@ -353,7 +353,7 @@ jobs:
               exit 1
             fi
           done
-          for page in index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html; do
+          for page in briefings/2026-09-29-0850/index.html; do
             for needle in \
               fairford-b1-1280.jpg \
               yanbu-nasa-1920.jpg \
@@ -391,6 +391,72 @@ html = Path(sys.argv[1]).read_text()
 band = html.split('class="quiet-band"', 1)[1].split('</section>', 1)[0]
 assert band.count('<article>') == 2, band.count('<article>')
 PY
+            if grep -q 'heat-treatment-castings' "$page" || grep -q 'nio-swap-oslo' "$page" || grep -q 'nvidia-quadro' "$page" || grep -q 'kharkiv-svobody' "$page"; then
+              echo "tuesday overnight does not refile monday midday photographs on $page"
+              exit 1
+            fi
+            if grep -q 'מהדורת צהריים' "$page"; then
+              echo "morning edition is not a midday badge on $page"
+              exit 1
+            fi
+            if grep -q 'Bodycote' "$page" || grep -q 'OpenShell' "$page" || grep -q 'Kharkiv' "$page"; then
+              echo "tuesday overnight does not refile monday midday news cards on $page"
+              exit 1
+            fi
+            if grep -E -q 'INTERNAL NOTES|Verb lock|נעילת פעלים|bare-refile|densify|MAIN HOLD|House rule' "$page"; then
+              echo "reader page has desk notes on $page"
+              exit 1
+            fi
+          done
+          # Wednesday 30 Sep AI digest replaces the Monday carry on the homepage and the Tuesday markets permalink.
+          for page in index.html briefings/2026-09-29-1545/index.html; do
+            for needle in \
+              fairford-b1-1280.jpg \
+              yanbu-nasa-1920.jpg \
+              hormuz-nasa-1600.jpg \
+              ai-astra-withheld.jpg \
+              abu-dhabi-corniche-1600.jpg \
+              'keep-photo-slot: news-01' \
+              'keep-photo-slot: news-05' \
+              'class="illus-caption"' \
+              'המחשה (AI)' \
+              'AI Illustration' \
+              'Claude Sonnet 5.5' \
+              'Team Bots' \
+              'VoiceStudio' \
+              'yes-claude-can-do-nine-loops' \
+              '63.6' \
+              'Typesafe' \
+              '30 September 2026' \
+              'Likely' \
+              '29 September 2026' \
+              '08:50' \
+              '15:45' \
+              'מהדורה רזה' \
+              'police bail' \
+              'Yanbu' \
+              'Astra' \
+              'WAM' \
+              'Fairford' \
+              'quiet-band'
+            do
+              grep -q "$needle" "$page"
+            done
+            test "$(grep -c 'keep-photo-slot:' "$page")" -eq 5
+            test "$(grep -c 'class="illus-caption"' "$page")" -eq 1
+            python3 - "$page" << 'PY'
+import sys
+from pathlib import Path
+html = Path(sys.argv[1]).read_text()
+ai = html.split('id="ai"', 1)[1].split('<footer', 1)[0]
+assert ai.count('<article') == 6, ai.count('<article')
+band = html.split('class="quiet-band"', 1)[1].split('</section>', 1)[0]
+assert band.count('<article>') == 2, band.count('<article>')
+PY
+            if grep -q 'Claude Marketplace' "$page" || grep -q 'Nemotron-3-Diarization' "$page" || grep -q 'MentalHealthBench' "$page" || grep -q 'Monday 28 September' "$page"; then
+              echo "wednesday AI digest replaced the monday carry on $page"
+              exit 1
+            fi
             if grep -q 'heat-treatment-castings' "$page" || grep -q 'nio-swap-oslo' "$page" || grep -q 'nvidia-quadro' "$page" || grep -q 'kharkiv-svobody' "$page"; then
               echo "tuesday overnight does not refile monday midday photographs on $page"
               exit 1
@@ -486,7 +552,7 @@ PY
           grep -q 'photo--support' templates/edition.html
           grep -q 'figure class="photo"' templates/edition.html
           # AI pictures: a quiet caption under the image. No forest badge and no long disclaimer.
-          # The Monday 28 Sep digest on the homepage is text-first, so it has no illustration caption.
+          # The Wednesday 30 Sep digest on the homepage is text-first. The Astra news illustration stays.
           for page in index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             if grep -q 'illus-label' "$page"; then
               echo "no AI badge on $page"
