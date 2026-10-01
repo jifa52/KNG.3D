@@ -2,7 +2,7 @@
 
 These files are on the homepage and on this permalink. Shared files live in `assets/images/`. None is a picture of the 1 October OpenAI tranche, of Richard Oldfield, of a Beazley cheque, of flight FZ1073, of Israel Katz, of Benjamin Netanyahu, of Andy Burnham, or of Abbas Araghchi. Each photograph’s caption on the page says what it is.
 
-Five photographs are licensed. The Wednesday 30 September AI digest on this page is text-first. Markets are the Wednesday 30 September ~15:45 tape, session pre-market, quotes about 15:09–15:25 Israel.
+Six photographs are licensed. The Wednesday 30 September AI digest on this page is text-first. Markets are the Wednesday 30 September ~15:45 tape, session pre-market, quotes about 15:09–15:25 Israel.
 
 The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a story photograph.
 
@@ -36,6 +36,16 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 - License: Creative Commons Attribution-ShareAlike 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
 - Page: https://commons.wikimedia.org/wiki/File:London_Stock_Exchange,_Paternoster_Square.jpg
 
+## Support — Big Spring Refinery, Texas, 2007
+
+- File: `assets/images/big-spring-refinery-1280.jpg` (1280×759)
+- What it shows: the Big Spring Refinery in Texas, photographed 27 August 2007.
+- Why it is not Thursday’s talks: the story is a Reuters report that the United States told France and Germany to release emergency diesel stocks or face a possible export ban, and that Chinese refiners suspended October fuel exports. This is a Texas refinery in 2007. It is not the talks, not an imposed US export ban, not a European stock release, not PetroChina’s cargoes, and not a Beijing decree.
+- Creator: James St. John
+- Source: Flickr photograph by James St. John, uploaded to Wikimedia Commons
+- License: Creative Commons Attribution 2.0 — https://creativecommons.org/licenses/by/2.0/
+- Page: https://commons.wikimedia.org/wiki/File:Big_Spring_Refinery_(Big_Spring,_Texas,_USA)_1_(48917011762).jpg
+
 ## Quiet — flydubai Boeing 737-8, Dhaka, 2021
 
 - File: `assets/images/flydubai-a6fgi-1600.jpg` (1600×902), `assets/images/flydubai-a6fgi-960.jpg` (960×542)
@@ -61,6 +71,7 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 - No photograph of the 1 October execution, of OpenAI’s offices, or of a signing. The lead picture is the Tokyo Shiodome Building in 2006.
 - No photograph of Schroders’ London offices or of Richard Oldfield. The support picture is TIAA’s 2011 entrance in New York.
 - No photograph of a dispatched cheque, of the Court Order, or of the 2 October delisting. The support picture is the London Stock Exchange in 2010.
+- No photograph of the talks with France and Germany, of an imposed export ban, or of Chinese cargoes. The support picture is the Big Spring Refinery in 2007.
 - No photograph of flight FZ1073, of the UAE attorney general, of Israel Katz, or of Benjamin Netanyahu. The aircraft picture is A6-FGI in Dhaka in 2021.
 - No photograph of Andy Burnham, of Abbas Araghchi, or of the five men on bail. The Fairford picture is a 2023 engine change.
 - The Wednesday 30 September AI digest has no credited picture.
