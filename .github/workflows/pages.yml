@@ -774,7 +774,8 @@ jobs:
               'pre-market' \
               '7,735.5' \
               '5.255' \
-              '64.6'
+              '64.6' \
+              '8.1'
             do
               grep -q "$needle" "$page"
             done
@@ -795,6 +796,10 @@ jobs:
           assert 'gaza-skyline' not in news
           assert ai.count('<article') == 6, ai.count('<article')
           PY
+            if grep -q '08:50' "$page"; then
+              echo "thursday midday does not refile the overnight 08:50 clock on $page"
+              exit 1
+            fi
             if grep -q '7,761.5' "$page"; then
               echo "thursday midday still carries the wednesday 15:45 tape, not tuesday ES 7,761.5 on $page"
               exit 1
