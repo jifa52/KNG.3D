@@ -947,7 +947,8 @@ jobs:
           done
 
           # Friday 2 Oct overnight thin on the homepage and the morning permalink.
-          # Four cards. Markets stay the Thursday 1 Oct ~15:45 tape. AI stays the live digest.
+          # Four cards. Markets stay the Thursday 1 Oct ~15:45 tape.
+          # AI is the Friday 2 Oct morning digest.
           for page in index.html briefings/2026-10-02-0850/index.html; do
             for needle in \
               silicon-wafer-1280.jpg \
@@ -957,12 +958,13 @@ jobs:
               'keep-photo-slot: news-01' \
               'keep-photo-slot: news-04' \
               'lead-continuation' \
-              'Claude Sonnet 5.5' \
-              'Team Bots' \
-              'VoiceStudio' \
-              'yes-claude-can-do-nine-loops' \
-              '63.6' \
-              'Typesafe' \
+              'Gemini 4 Argon' \
+              'gpt-6.1-sol' \
+              'ultrafast-mode' \
+              'Phonon-2' \
+              'PageIndex' \
+              '@openai/codex@latest' \
+              'Fairwind' \
               '2 October 2026' \
               '1 October 2026' \
               '30 September 2026' \
@@ -1020,6 +1022,11 @@ jobs:
           assert 'datacenter-racks' not in news
           assert 'softbank-shiodome' not in news
           assert ai.count('<article') == 6, ai.count('<article')
+          assert 'Gemini 4 Argon' in ai and 'Fairwind' in ai and '$4/$20' in ai
+          assert '272K' in ai and '0.10' in ai and 'coming soon' in ai
+          assert 'FinanceBench' in ai and '98.7' in ai
+          assert 'vendor' in ai and 'היצרן' in ai
+          assert 'Claude Sonnet' not in ai and 'not rewritten' not in html
           assert 'data-session="pre-market"' in markets
           assert '7,743.0' in markets
           assert '5.293' in markets
@@ -1048,6 +1055,10 @@ jobs:
             fi
             if grep -q 'צהריים · MAIN' "$page"; then
               echo "morning edition is not a midday badge on $page"
+              exit 1
+            fi
+            if grep -q 'Claude Sonnet 5.5' "$page" || grep -q 'Team Bots' "$page" || grep -q 'VoiceStudio' "$page" || grep -q 'Typesafe' "$page" || grep -q 'nine-loops' "$page"; then
+              echo "friday AI digest replaced the wednesday carry on $page"
               exit 1
             fi
             if grep -E -q 'INTERNAL NOTES|Verb lock|נעילת פעלים|bare-refile|densify|MAIN HOLD|House rule' "$page"; then
