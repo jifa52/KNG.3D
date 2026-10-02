@@ -830,7 +830,7 @@ jobs:
 
           # Thursday 1 Oct ~15:45 markets refresh on the homepage and the permalink.
           # Six Thursday MAIN cards stay. Markets are the Thursday pre-market tape.
-          # AI stays the Wednesday 30 Sep morning digest. Wednesday futures must not remain.
+          # AI is the Friday 2 Oct morning digest. Wednesday futures must not remain.
           for page in index.html briefings/2026-10-01-1545/index.html; do
             for needle in \
               softbank-shiodome-1280.jpg \
@@ -842,12 +842,14 @@ jobs:
               'keep-photo-slot: news-01' \
               'keep-photo-slot: news-06' \
               'quiet-band' \
-              'Claude Sonnet 5.5' \
-              'Team Bots' \
-              'VoiceStudio' \
-              'yes-claude-can-do-nine-loops' \
-              '63.6' \
-              'Typesafe' \
+              'Gemini 4 Argon' \
+              'gpt-6.1-sol' \
+              'ultrafast-mode' \
+              'Phonon-2' \
+              'PageIndex' \
+              '@openai/codex@latest' \
+              'Fairwind' \
+              '2 October 2026' \
               '1 October 2026' \
               '30 September 2026' \
               'Likely' \
@@ -897,6 +899,11 @@ jobs:
           assert 'datacenter-racks' not in news
           assert 'gaza-skyline' not in news
           assert ai.count('<article') == 6, ai.count('<article')
+          assert 'Gemini 4 Argon' in ai and 'Fairwind' in ai and '$4/$20' in ai
+          assert '272K' in ai and '0.10' in ai and 'coming soon' in ai
+          assert 'FinanceBench' in ai and '98.7' in ai
+          assert 'vendor' in ai and 'היצרן' in ai
+          assert 'Claude Sonnet' not in ai and 'not rewritten' not in html
           assert 'data-session="pre-market"' in markets
           assert '7,743.0' in markets
           assert '5.293' in markets
@@ -929,6 +936,10 @@ jobs:
             fi
             if grep -q 'Claude Marketplace' "$page" || grep -q 'Nemotron-3-Diarization' "$page" || grep -q 'MentalHealthBench' "$page" || grep -q 'Monday 28 September' "$page"; then
               echo "wednesday AI digest replaced the monday carry on $page"
+              exit 1
+            fi
+            if grep -q 'Claude Sonnet 5.5' "$page" || grep -q 'Team Bots' "$page" || grep -q 'VoiceStudio' "$page" || grep -q 'Typesafe' "$page" || grep -q 'nine-loops' "$page"; then
+              echo "friday AI digest replaced the wednesday carry on $page"
               exit 1
             fi
             if grep -q 'מהדורה רזה' "$page"; then
@@ -1097,7 +1108,7 @@ jobs:
           grep -q 'photo--support' templates/edition.html
           grep -q 'figure class="photo"' templates/edition.html
           # AI pictures: a quiet caption under the image. No forest badge and no long disclaimer.
-          # The Wednesday 30 Sep digest on the homepage is text-first. The Astra news illustration stays.
+          # The Friday 2 Oct digest on the homepage is text-first. The Astra news illustration stays.
           for page in index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             if grep -q 'illus-label' "$page"; then
               echo "no AI badge on $page"
