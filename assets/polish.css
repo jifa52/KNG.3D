@@ -1162,13 +1162,14 @@ html.home .wrap {
 html.home .mast {
   display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "brand meta"
-    "nav nav";
-  column-gap: 1.5rem;
+    "brand"
+    "meta"
+    "nav";
+  column-gap: 0;
   row-gap: 0;
-  align-items: center;
+  align-items: stretch;
   border-bottom: 0;
   padding-bottom: 0;
 }
@@ -1176,8 +1177,8 @@ html.home .mast {
 html.home .mast-brand {
   grid-area: brand;
   justify-self: start;
-  align-self: center;
-  padding: 1.05rem 0 0.85rem;
+  align-self: start;
+  padding: 0.85rem 0 0.15rem;
   border-bottom: 0;
 }
 
@@ -1206,12 +1207,36 @@ html.home .lead-display h2 {
   letter-spacing: -0.02em;
 }
 
+/* One status row under the logo. It does not share the logo's box. */
 html.home .mast-meta {
   grid-area: meta;
-  align-self: center;
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.15rem 1.15rem;
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
-  padding: 1.05rem 0 0.85rem;
-  text-align: end;
+  padding: 0.2rem 0 0.7rem;
+  text-align: start;
+}
+
+html.home .mast-meta > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+html.home .mast-meta > p:nth-child(4) {
+  flex: 1 1 100%;
+  order: 4;
+}
+
+html.home .mast-meta .lang {
+  order: 3;
+  margin-top: 0;
+  margin-inline-start: auto;
 }
 
 html.home .edition-nav {
@@ -1481,14 +1506,6 @@ html.home #markets .mkt-strip-tuck .mkt-px {
 }
 
 @media (max-width: 860px) {
-  html.home .mast {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "brand"
-      "meta"
-      "nav";
-  }
-
   html.home .mast-brand,
   html.home .mast-meta,
   html.home .edition-nav {
@@ -1497,7 +1514,7 @@ html.home #markets .mkt-strip-tuck .mkt-px {
 
   html.home .mast-meta {
     text-align: start;
-    padding-top: 0;
+    padding-top: 0.15rem;
   }
 
   html.home .lead-display h2 {
