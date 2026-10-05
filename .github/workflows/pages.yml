@@ -98,6 +98,8 @@ jobs:
             briefings/2026-10-04-0850/IMAGE-CREDITS.md \
             briefings/2026-10-04-1400/index.html \
             briefings/2026-10-04-1400/IMAGE-CREDITS.md \
+            briefings/2026-10-05-1545/index.html \
+            briefings/2026-10-05-1545/IMAGE-CREDITS.md \
             assets/images/spr-stjames-1600.jpg \
             assets/images/spr-stjames-960.jpg \
             assets/images/pioneer-sf-1600.jpg \
@@ -214,7 +216,7 @@ jobs:
           grep -q 'mkt-drivers' assets/polish.css
           # Older polish permalinks keep the quote boards. Live and the template are news-first.
           grep -q 'mkt-board-primary' assets/polish.css
-          for page in index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
+          for page in index.html briefings/2026-10-05-1545/index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html briefings/2026-09-25-0850/index.html briefings/2026-09-24-1545/index.html templates/edition.html; do
             grep -q 'edition.css' "$page"
             grep -q 'polish.css' "$page"
             grep -q 'edition-nav' "$page"
@@ -237,7 +239,7 @@ jobs:
             grep -q 'mkt-board-secondary' "$page"
             grep -q 'mkt-board-cash' "$page"
           done
-          for page in index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
+          for page in index.html briefings/2026-10-05-1545/index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             grep -q 'mkt-snap' "$page"
             grep -q 'mkt-strip' "$page"
             grep -q 'mkt-drivers' "$page"
@@ -259,7 +261,7 @@ jobs:
           grep -q 'class="mast-brand"' archive/index.html
           grep -q 'daily-jenya-logo-v2.png' archive/index.html
           grep -q 'class="archive-intro"' archive/index.html
-          for page in index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html templates/edition.html; do
+          for page in index.html briefings/2026-10-05-1545/index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html templates/edition.html; do
             if grep -q 'class="quotes"' "$page"; then
               echo "edition summary must not leak outside the news cards on $page"
               exit 1
@@ -1446,11 +1448,12 @@ jobs:
             fi
           done
 
-          # Sunday 4 Oct ~14:00 MAIN on the homepage and the midday permalink.
+          # Sunday 4 Oct ~14:00 MAIN stays on the midday permalink.
+          # The homepage is the Monday 5 Oct ~15:45 markets refresh, checked below.
           # Four news cards: OPEC+ in principle, Riyadh “misleading,” Lukoil talks not closed, Zelenskyy interview.
           # No quiet band. No recap outside the cards. Morning permalink is not this edition.
-          # Markets stay the Friday 2 Oct ~15:45 pre-NFP tape. AI stays the Friday morning digest.
-          for page in index.html briefings/2026-10-04-1400/index.html; do
+          # Markets on this permalink stay the Friday 2 Oct ~15:45 pre-NFP tape. AI stays the Friday morning digest.
+          for page in briefings/2026-10-04-1400/index.html; do
             for needle in \
               opec-vienna-1600.jpg \
               riyadh-north-1600.jpg \
@@ -1564,8 +1567,139 @@ jobs:
             fi
           done
 
+
+          # Monday 5 Oct ~15:45 markets on the homepage and the markets permalink.
+          # Sunday 4 Oct MAIN news stays, including every photo slot. AI digest stays the Friday morning text.
+          # Session is pre-market, pre-ISM Services. Futures are not Monday cash. Friday cash and Friday yields are prior closes.
+          for page in index.html briefings/2026-10-05-1545/index.html; do
+            for needle in \
+              opec-vienna-1600.jpg \
+              riyadh-north-1600.jpg \
+              lukoil-oroszlany-1600.jpg \
+              naantali-refinery-1600.jpg \
+              'keep-photo-slot: news-01' \
+              'keep-photo-slot: news-04' \
+              'Gemini 4 Argon' \
+              'gpt-6.1-sol' \
+              'Phonon-2' \
+              'PageIndex' \
+              'צהריים · MAIN' \
+              '14:00' \
+              '07:00 ET' \
+              '15:45' \
+              '15:06–15:21' \
+              '15:06–15:11' \
+              '15:20–15:21' \
+              'pre-market' \
+              'pre-ISM Services' \
+              '7,777.75' \
+              '31,017.75' \
+              '51,503' \
+              '90.10' \
+              '16.12' \
+              '3.0606' \
+              '86,080' \
+              '5.277' \
+              '7,722.72' \
+              '51,176.96' \
+              '27,190.86' \
+              '5.630' \
+              'גלגול מסומן' \
+              'agreed in principle' \
+              'misleading' \
+              'East-West' \
+              'New York Times' \
+              'double down' \
+              'class="edition home"' \
+              'photo--support' \
+              'למה זה חשוב' \
+              'Why it matters' \
+              'Monday, 5 October 2026'
+            do
+              grep -q "$needle" "$page"
+            done
+            test "$(grep -c 'keep-photo-slot:' "$page")" -eq 4
+            test "$(grep -c 'class="why"' "$page")" -ge 16
+            test "$(grep -c 'id="markets"' "$page")" -eq 1
+            if grep -q 'quiet-band' "$page"; then
+              echo "monday markets page has no quiet band on $page"
+              exit 1
+            fi
+            if grep -q 'news-open' "$page" || grep -q 'class="quotes"' "$page"; then
+              echo "monday markets page has no recap outside the cards on $page"
+              exit 1
+            fi
+            if grep -q 'pre-NFP' "$page" || grep -q '7,756.5' "$page" || grep -q '89.86' "$page" || grep -q 'FedWatch' "$page"; then
+              echo "friday tape or FedWatch leaked onto $page"
+              exit 1
+            fi
+            if grep -q 'מהדורה רזה' "$page"; then
+              echo "monday markets page is not the morning thin badge on $page"
+              exit 1
+            fi
+            python3 - "$page" << 'PY'
+          import sys
+          from pathlib import Path
+          html = Path(sys.argv[1]).read_text()
+          news = html.split('id="news"', 1)[1].split('id="markets"', 1)[0]
+          markets = html.split('id="markets"', 1)[1].split('id="ai"', 1)[0]
+          ai = html.split('id="ai"', 1)[1].split('<footer', 1)[0]
+          assert news.count('<article') == 4, news.count('<article')
+          assert news.count('class="why"') == 4
+          assert news.count('<figure class="photo') == 4
+          assert 'quiet-band' not in news and 'lead-continuation' not in news
+          assert 'side-stack' in news and 'class="lead"' in news
+          assert 'agreed in principle' in news and 'not a signed public communiqué' in news
+          assert 'not an official decision' in news and 'No barrels were added' in news
+          assert 'misleading' in news and 'has not confirmed' in news
+          assert 'not an East-West pipeline rate' in news and 'מזרח־מערב' in news
+          assert 'New York Times' in news and 'not closed' in news
+          assert 'sanctions have not been lifted' in news and 'Likely' in news and 'סביר' in news
+          assert 'will double down' in news and 'not a count of strikes already doubled' in news
+          assert 'not confirmation that a doctrine was issued' in news
+          assert 'מאומת' in news and 'Confirmed' in news
+          for banned in (
+              '325', 'Robinson', 'Fairford', 'UKMTO', 'SoftBank', 'flydubai',
+              'Ethiopia', 'Eritrea', 'Paramount', 'Rogers', 'Anglo', 'Bab',
+              'OpenAI', 'IEA', 'densify', 'Verb lock', 'bare-refile', 'INTERNAL',
+              'HOLD', 'House rule', '7,756.5', '89.86', '7,777.75', '90.10',
+          ):
+              assert banned not in news, banned
+          assert ai.count('<article') == 6, ai.count('<article')
+          assert 'Gemini 4 Argon' in ai and 'Fairwind' in ai
+          assert 'Phonon-2' in ai and 'PageIndex' in ai
+          assert '08:50' in ai
+          assert 'pre-ISM Services' in ai
+          assert 'data-session="pre-market"' in markets
+          assert 'pre-ISM Services' in markets
+          assert 'pre-NFP' not in markets
+          assert '7,777.75' in markets and '31,017.75' in markets and '51,503' in markets
+          assert '90.10' in markets and '16.12' in markets and '3.0606' in markets
+          assert '86,080' in markets and '5.277' in markets
+          assert '7,722.72' in markets and '51,176.96' in markets and '27,190.86' in markets
+          assert '5.630' in markets and '2.7' in markets and '4.0' in markets
+          assert 'Monday, 5 October 2026' in markets
+          assert '17:00' in markets and 'before the print' in markets
+          assert '104.421875' in markets
+          assert 'גלגול מסומן' in markets
+          order = ["mkt-drivers", "mkt-catalysts", "mkt-next", "mkt-brief", "mkt-snap"]
+          pos = [markets.find(t) for t in order]
+          assert pos == sorted(pos) and all(p >= 0 for p in pos), pos
+          assert '7,743.0' not in html and '91.61' not in html and '83,917' not in html
+          assert 'FedWatch' not in html and '7,756.5' not in html and '89.86' not in html
+          PY
+            if grep -q 'lanes.js' "$page" || grep -q 'brief.css' "$page" || grep -q 'paper.css' "$page"; then
+              echo "monday markets stays on the night sheet on $page"
+              exit 1
+            fi
+            if grep -E -q 'INTERNAL NOTES|Verb lock|נעילת פעלים|bare-refile|densify|MAIN HOLD|House rule' "$page"; then
+              echo "reader page has desk notes on $page"
+              exit 1
+            fi
+          done
+
           # Saturday 3 Oct ~14:00 MAIN stays on the midday permalink.
-          # The homepage is the Sunday 4 Oct ~14:00 MAIN edition, checked above.
+          # The homepage is the Monday 5 Oct ~15:45 markets refresh, checked above.
           # Six news cards. Markets stay the Friday 2 Oct ~15:45 pre-NFP tape.
           # AI stays the Friday morning digest, including its carried pointer.
           for page in briefings/2026-10-03-1400/index.html; do
@@ -1940,7 +2074,7 @@ jobs:
           grep -q 'figure class="photo"' templates/edition.html
           # AI pictures: a quiet caption under the image. No forest badge and no long disclaimer.
           # The Wednesday 30 Sep digest on the homepage is text-first. The Astra news illustration stays.
-          for page in index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
+          for page in index.html briefings/2026-10-05-1545/index.html briefings/2026-10-04-1400/index.html briefings/2026-10-04-0850/index.html briefings/2026-10-03-1400/index.html briefings/2026-10-03-0850/index.html briefings/2026-10-02-1545/index.html briefings/2026-10-02-1400/index.html briefings/2026-10-02-0850/index.html briefings/2026-10-01-1545/index.html briefings/2026-10-01-1400/index.html briefings/2026-10-01-0850/index.html briefings/2026-09-30-1545/index.html briefings/2026-09-30-1400/index.html briefings/2026-09-30-0850/index.html briefings/2026-09-29-1545/index.html briefings/2026-09-29-0850/index.html briefings/2026-09-28-1545/index.html briefings/2026-09-28-1400/index.html briefings/2026-09-28-0850/index.html briefings/2026-09-27-1400/index.html briefings/2026-09-27-0850/index.html briefings/2026-09-26-1400/index.html briefings/2026-09-26-0850/index.html briefings/2026-09-25-1545/index.html briefings/2026-09-25-1400/index.html templates/edition.html; do
             if grep -q 'illus-label' "$page"; then
               echo "no AI badge on $page"
               exit 1
@@ -1998,6 +2132,7 @@ jobs:
           python3 -c 'from pathlib import Path; html=Path("index.html").read_text(); order=["mkt-drivers","mkt-catalysts","mkt-next","mkt-snap"]; pos=[html.find(t) for t in order]; assert pos==sorted(pos) and all(p>=0 for p in pos), "markets order"; assert html.count("class=\"why\"")>=8; assert html.count("crawl-seq")>=2'
           if grep -E -q '(href|src)="[^"]*(lanes\.js|brief\.css|paper\.css)"' \
             index.html \
+            briefings/2026-10-05-1545/index.html \
             briefings/2026-10-04-1400/index.html \
             briefings/2026-10-04-0850/index.html \
             briefings/2026-10-03-1400/index.html \
@@ -2053,6 +2188,7 @@ jobs:
           grep -q 'briefings/2026-10-03-1400/' archive/index.html
           grep -q 'briefings/2026-10-04-0850/' archive/index.html
           grep -q 'briefings/2026-10-04-1400/' archive/index.html
+          grep -q 'briefings/2026-10-05-1545/' archive/index.html
           grep -q 'briefings/2026-10-03-0850/' archive/index.html
           grep -q 'color-scheme" content="dark"' archive/index.html
           # Older permalinks stay on the card sheet.
