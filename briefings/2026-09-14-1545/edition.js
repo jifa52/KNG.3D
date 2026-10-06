@@ -1,0 +1,1457 @@
+DJ.edition({
+ "v": 2,
+ "id": "2026-09-14-1545",
+ "date": "2026-09-14",
+ "time": "15:45",
+ "et": "08:45",
+ "slot": "markets",
+ "legacy": "cards",
+ "headline": {
+  "he": "עומאן דוחה את סלאלה על הורמוז; איראן מכניסה 77 אוניות לרשימה שחורה, ותנועת סוף השבוע בספרות בודדות.",
+  "en": "Oman postpones Salalah Hormuz talks; Iran blacklists 77 ships as weekend traffic stays in single digits."
+ },
+ "summary": {
+  "he": "רחפן רוסי פוגע ברכבת ביאהודין ליד פולין; פטראוס היה בתחנה. טראמפ מסכים לרוב חבילת האתיקה של CLARITY לפני סגירת דיון ביום ג׳. מניות AI יורדות אחרי קריאה להאט יכולות. צינור מזרח–מערב עדיין סגור; מלאי ינבוע ל־5–7 ימים.",
+  "en": "A Russian drone hits a passenger train at Yahodyn near Poland; Petraeus was at the station. Trump agrees to most of a Tillis–Gallego crypto ethics package ahead of Tuesday’s CLARITY cloture. AI-linked stocks fall after lab CEOs urge a slowdown. East-West still shut; Yanbu stocks 5–7 days."
+ },
+ "contents": {
+  "he": "אחר הצהריים · חדשות · שווקים · טרום-שוק · AI",
+  "en": "Afternoon · News · Markets · Pre-market · AI"
+ },
+ "clock": "15:45 (08:45 ET)",
+ "notes": [
+  {
+   "label": {
+    "he": "נכון ל-",
+    "en": "Cut-off"
+   },
+   "text": {
+    "he": "~15:45 (08:45 ET) — חדשות + שווקים / טרום-שוק (חוזים ~15:18 / 08:18 ET; מזומן ארה״ב נפתח 16:30 / 09:30 ET)",
+    "en": "~15:45 (08:45 ET) — news + Markets / Pre-market (futures ~15:18 / 08:18 ET; US cash opens 16:30 / 09:30 ET)"
+   }
+  }
+ ],
+ "news": {
+  "dek": [
+   {
+    "he": "עומאן דוחה את סלאלה על הורמוז; איראן מכניסה 77 אוניות לרשימה שחורה, ותנועת סוף השבוע בספרות בודדות. רחפן רוסי פוגע ברכבת ביאהודין ליד פולין; פטראוס היה בתחנה. טראמפ מסכים לרוב חבילת האתיקה של CLARITY לפני סגירת דיון ביום ג׳. מניות AI יורדות אחרי קריאה להאט יכולות. צינור מזרח–מערב עדיין סגור; מלאי ינבוע ל־5–7 ימים.",
+    "en": "Oman postpones Salalah Hormuz talks; Iran blacklists 77 ships as weekend traffic stays in single digits. A Russian drone hits a passenger train at Yahodyn near Poland; Petraeus was at the station. Trump agrees to most of a Tillis–Gallego crypto ethics package ahead of Tuesday’s CLARITY cloture. AI-linked stocks fall after lab CEOs urge a slowdown. East-West still shut; Yanbu stocks 5–7 days."
+   }
+  ],
+  "notes": [
+   {
+    "he": "טייפ Yahoo ~15:18 (08:18 ET) — חוזים עתידיים, לא מזומן יום ב׳: NQ 28,942.00 (−1.51%) · ES 7,614.00 (−0.59%) · WTI $102.96 · ברנט $107.97. פירוט בלשונית השווקים. אין מזומן עד 16:30 (09:30 ET).",
+    "en": "Yahoo tape ~15:18 (08:18 ET) — futures, not Monday cash: NQ 28,942.00 (−1.51%) · ES 7,614.00 (−0.59%) · WTI $102.96 · Brent $107.97. Detail on Markets. No cash until 16:30 (09:30 ET)."
+   }
+  ],
+  "stories": [
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "דחייה / רשימה / תנועה — מאומת",
+       "en": "Postpone / list / traffic — Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "עומאן דוחה את פגישת סלאלה על הורמוז; איראן מכניסה 77 אוניות לרשימה שחורה, ותנועת סוף השבוע נשארת בספרות בודדות",
+     "en": "Oman postpones Salalah Hormuz talks as Iran blacklists 77 ships and weekend traffic stays in single digits"
+    },
+    "body": [
+     {
+      "he": "שר החוץ העומאני סייד בדר אל-בוסעידי (Sayyid Badr Albusaidi) דחה את פגישת יום ב׳ בסלאלה (Salalah) עם איראן ומדינות המפרץ ״למען הסכמה״, דיווח Reuters; איראן אמרה שהדחייה היא לבקשת סעודיה. בנפרד פרסמה איראן רשימה של 77 אוניות שלטענתה הפרו את פרוטוקולי ההפעלה שלה בהורמוז (Hormuz) — כל כלי ברשימה חשוף להגבלות מעבר עתידיות כולל קנסות, מעצר או החרמה; אוניות שסייעו בהעברות מטען יתווספו. מעקב ראשוני: מעברי סחורות בסוף השבוע במיצר נשארו בספרות בודדות ליום מול ממוצע כ־14 בעשרה ימים (4 יציאות / 10 כניסות; כלי שיט עם AIS כבוי — Automatic Identification System, משדר זהות ומיקום — אינם נספרים). תנועה / חביות → שווקים.",
+      "en": "Omani Foreign Minister Sayyid Badr Albusaidi (סייד בדר אל-בוסעידי) postponed Monday’s Salalah (סלאלה) meeting with Iran and Gulf states “in the interests of consensus,” Reuters reported; Iran said the delay was at Saudi Arabia’s request. Separately, Iran issued a list of 77 ships it said violated its Hormuz (הורמוז) operating protocols — any listed vessel faces future-passage restrictions including fines, detention or confiscation; ships that assisted via cargo transfers would be added. Preliminary tracking: weekend commodity Hormuz transits stayed in single digits per day versus a ~14 ten-day average (4 exits / 10 entries; AIS-off — Automatic Identification System, identity/position transponder — excluded). Traffic/barrels."
+     }
+    ],
+    "why": {
+     "he": "הדיפלומטיה מחליקה מהלוח, בזמן שאכיפת המצר ונתוני התנועה מתקשים יחד.",
+     "en": "Diplomacy slips while choke enforcement and traffic data both harden."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/\">Reuters דחייה / רשימה</a> · <a href=\"https://www.reuters.com/business/hormuz-shipping-traffic-remains-below-10-day-average-weekend-data-shows-2026-09-14/\">Reuters תנועת סוף שבוע</a> (13–14 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/\">Reuters postpone / list</a> · <a href=\"https://www.reuters.com/business/hormuz-shipping-traffic-remains-below-10-day-average-weekend-data-shows-2026-09-14/\">Reuters weekend traffic</a> (Sep 13–14)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "טענה + התרעות — מאומת",
+       "en": "Claim + alerts — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "נזק — לא מאומת",
+       "en": "Damage — Unverified"
+      },
+      "level": "unverified"
+     }
+    ],
+    "headline": {
+     "he": "החות׳ים אומרים ששיגרו טילים ורחפנים לבסיס האוויר הסעודי בחמיס מושייט ביום שני",
+     "en": "Houthis say they fired missiles and drones at Saudi’s Khamis Mushait airbase on Monday"
+    },
+    "body": [
+     {
+      "he": "Reuters: החות׳ים (Houthis) הנאמנים לאיראן אמרו ששיגרו ביום ב׳ עשרות טילים ורחפנים לעבר בסיס אוויר סעודי בחמיס מושייט (Khamis Mushait), וטענו לפגיעות בהאנגרים, מכ״ם, מסלולים ומחסני תחמושת — במסגור של תגמול לתקיפות אוויר סעודיות. הרשויות בסעודיה הודיעו על התרעות חירום קצרות שם ובשלוש ערים נוספות בדרום. את השפעות התקיפה יש לטפל כטענת חות׳ים עד שריאד מאשרת נזק. אין כאן הדפסי נפט.",
+      "en": "Reuters: Iran-aligned Houthis (החות׳ים) said they fired dozens of missiles and drones Monday at a Saudi military airbase in Khamis Mushait (חמיס מושייט), claiming hits on hangars, radar, runways and ammo depots — framed as retaliation for Saudi airstrikes. Saudi authorities announced brief emergency alerts there and in three other southern cities. Treat strike effects as a Houthi claim until Riyadh confirms damage. No oil prints on this card."
+     }
+    ],
+    "why": {
+     "he": "קינטיקה טרייה ביום ב׳ על אדמת סעודיה באותו יום שהדיפלומטיה על הורמוז מחליקה.",
+     "en": "Fresh Monday kinetic on Saudi soil the same day Hormuz diplomacy slips."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/\">Reuters סיכום יום ב׳</a> (14 בספטמבר)",
+      "en": "Source: <a href=\"https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/\">Reuters Monday wrap</a> (Sep 14)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "עדיין סגור + שעון ינבוע — מאומת",
+       "en": "Still shut + Yanbu clock — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "פתיחה מחדש — סגור לכישלון"
+      },
+      "level": "unverified"
+     }
+    ],
+    "headline": {
+     "he": "צינור מזרח–מערב הסעודי עדיין סגור; סוחרים: מלאי ינבוע מכסים רק חמישה עד שבעה ימי יצוא",
+     "en": "Saudi East-West pipeline still offline; traders say Yanbu stocks cover only five to seven days of exports"
+    },
+    "body": [
+     {
+      "he": "Reuters: צינור מזרח–מערב / Petroline הסעודי (כ־1,200 ק״מ; כ־4 מיליון חביות ליום / כ־4% מהאספקה העולמית לכיוון ינבוע — Yanbu) נשאר סגור אחרי רחפנים שמקורם בעיראק ביום ו׳ — אין הודעת פתיחה. מקורות בתעשייה: מלאי ינבוע מחזיקים את היצוא הנוכחי רק 5–7 ימים בלי חידוש הזרימה; צילומי לוויין מראים נזק שריפה בקטעים. חביות / מחיר → שווקים.",
+      "en": "Reuters: Saudi East-West / Petroline (~1,200 km; ~4 mbpd / ~4% of global supply toward Yanbu — ינבוע) remains shut after Friday Iraq-origin drones — no reopen announced. Industry sources: Yanbu inventories sustain current exports only 5–7 days without a restart; satellite imagery shows blaze damage on sections. Barrels/price."
+     }
+    ],
+    "why": {
+     "he": "מעקף הורמוז שכבר תומחר נשאר כבוי לתוך שבוע המזומן בארה״ב.",
+     "en": "Priced Hormuz bypass still offline into the US cash week."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/\">Reuters השבתה / ינבוע</a> · <a href=\"https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/\">Reuters סיכום יום ב׳</a> (13–14 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/\">Reuters outage / Yanbu</a> · <a href=\"https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/\">Reuters Monday wrap</a> (Sep 13–14)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "source",
+      "text": "CNN"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "פגיעה + קרבה — מאומת",
+       "en": "Strike + proximity — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "יעד מכוון — סביר",
+       "en": "Intended target — Likely"
+      },
+      "level": "likely"
+     }
+    ],
+    "headline": {
+     "he": "רחפן רוסי פוגע ברכבת נוסעים ביאהודין ליד הגבול הפולני; פטראוס היה בתחנה",
+     "en": "Russian drone hits a passenger train at Yahodyn near the Polish border; Petraeus was at the station"
+    },
+    "body": [
+     {
+      "he": "CNN: רחפן רוסי פגע / גרם נזק לקטר של רכבת נוסעים ביום א׳ ביאהודין (Yahodyn) שבמחוז וולין (Volyn), כ־2 ק״מ מפולין. דיוויד פטראוס (David Petraeus) היה בתחנה; רכבת דיפלומטית עם בוריס ג׳ונסון (Boris Johnson) יצאה דקות קודם לכן לכיוון פולין. אוקרזליזניציה (Ukrzaliznytsia — הרכבות האוקראיניות) אמרה ש״די סביר״ שהיעד היה מכוון; קייב מסגרה זאת כפוטין דופק על דלת האיחוד האירופי / נאט״ו. עמוד שדרה: בדון בג (Doonbeg) ביום א׳ אמר טראמפ לזלנסקי להפסיק ״להפיל״ דיזל רוסי — דיזל / דולר → שווקים. אין כאן כרטיס ויסקי.",
+      "en": "CNN: a Russian drone struck / damaged the locomotive of a passenger train Sunday at Yahodyn (יאהודין) in Volyn (וולין), about 2 km from Poland. David Petraeus (דיוויד פטראוס) was at the station; a diplomatic train with Boris Johnson (בוריס ג׳ונסון) had left minutes earlier toward Poland. Ukrzaliznytsia (אוקרזליזניציה — Ukrainian railways) said it was “quite likely” targeted; Kyiv framed it as Putin knocking on the EU/NATO door. Spine: at Doonbeg (דון בג) Sunday, Trump told Zelenskyy to stop knocking out Russian diesel — diesel/$. Do not merge into a whiskey card."
+     }
+    ],
+    "why": {
+     "he": "מסילת גבול נאט״ו נפגעת, ובמקביל לחץ אמריקאי על תקיפות דיזל אוקראיניות.",
+     "en": "NATO-border railway hit plus US pressure on Ukrainian diesel strikes."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.cnn.com/2026/09/14/world/petraeus-boris-johnson-russia-ukraine-intl-hnk\">CNN יאהודין / פטראוס</a> · <a href=\"https://www.reuters.com/business/energy/trump-tells-ukraines-zelenskiy-stop-hitting-russian-diesel-2026-09-13/\">Reuters דיזל</a> (13–14 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.cnn.com/2026/09/14/world/petraeus-boris-johnson-russia-ukraine-intl-hnk\">CNN Yahodyn / Petraeus</a> · <a href=\"https://www.reuters.com/business/energy/trump-tells-ukraines-zelenskiy-stop-hitting-russian-diesel-2026-09-13/\">Reuters diesel ask</a> (Sep 13–14)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "source",
+      "text": "AP"
+     },
+     {
+      "kind": "source",
+      "text": "CNBC"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "חשבון הסכמה + יומן יום ג׳ — מאומת",
+       "en": "Agreement account + Tue calendar — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "תוצאה במליאה — לא מאומת",
+       "en": "Floor outcome — Unverified"
+      },
+      "level": "unverified"
+     }
+    ],
+    "headline": {
+     "he": "טראמפ מסכים לרוב חבילת האתיקה הקריפטו של טיליס–גאייגו לפני הצבעת סגירת דיון בסנאט על חוק CLARITY ביום שלישי",
+     "en": "Trump agrees to most of a Tillis–Gallego crypto ethics package ahead of Tuesday’s CLARITY Act Senate cloture vote"
+    },
+    "body": [
+     {
+      "he": "AP / CNBC: גורם בכיר במפלגה הרפובליקנית אמר שטראמפ הסכים ל״כ־80%״ מהצעת האתיקה של הסנאטורים תום טיליס (Thom Tillis) ורובן גאייגו (Ruben Gallego) על חוק CLARITY (CLARITY Act — הצעת חוק מבנה שוק הקריפטו בסנאט) — תפקיד אכיפה לתובעים הכלליים במדינות; מימוש או נאמנות עיוורת לאינטרסים משמעותיים במנפיקי קריפטו; נוסח מעודכן בליל יום א׳. סגירת דיון (cloture) בסנאט ביום ג׳, 15 בספטמבר (60 קולות). הבית הלבן: כבר הסכים ל״הוראת האתיקה המקיפה ביותר.״ אין כאן כרטיס ויסקי. תוצאת המליאה — לא מאומת.",
+      "en": "AP/CNBC: a senior GOP aide said Trump agreed to “about 80%” of the Tillis–Gallego ethics proposal on the CLARITY Act (חוק CLARITY — Senate crypto market-structure bill) — a state attorneys-general enforcement role; divest-or-blind-trust for significant crypto-issuer interests; updated text Sunday night. Senate cloture (סגירת דיון) Tue 15 Sep (60 votes). White House: already agreed to “the most comprehensive” ethics provision. Do not lead whiskey. Floor outcome Unverified."
+     }
+    ],
+    "why": {
+     "he": "מבנה שוק הקריפטו תלוי באתיקה ובסגירת דיון ביום ג׳.",
+     "en": "Crypto market structure hangs on ethics + Tuesday cloture."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.cnbc.com/2026/09/14/clarity-act-senate-vote-crypto-regulation.html\">CNBC CLARITY</a> · <a href=\"https://www.wral.com/news/ap/091df-trump-agreed-to-new-ethics-rules-to-get-a-crypto-bill-across-the-line-but-that-might-not-be-enough/\">AP דרך WRAL</a> (14 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.cnbc.com/2026/09/14/clarity-act-senate-vote-crypto-regulation.html\">CNBC CLARITY</a> · <a href=\"https://www.wral.com/news/ap/091df-trump-agreed-to-new-ethics-rules-to-get-a-crypto-bill-across-the-line-but-that-might-not-be-enough/\">AP via WRAL</a> (Sep 14)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "source",
+      "text": "CNBC"
+     },
+     {
+      "kind": "source",
+      "text": "Guardian"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "ציטוטים / חוטים — מאומת",
+       "en": "Quotes / wires — Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "מניות הקשורות ל־AI יורדות אחרי שאנתרופיק, OpenAI ומוסק קוראים להאט פיתוח יכולות",
+     "en": "AI-linked stocks fall after Anthropic, OpenAI and Musk urge slowing capability development"
+    },
+    "body": [
+     {
+      "he": "מנכ״ל אנתרופיק (Anthropic) דריו אמודיי (Dario Amodei) קרא ביום שבת ל״האט את הקצב״ של שיפור יכולות מודלי AI, והזהיר שסוכנים עלולים לגרום נזק של מאות מיליארדי דולרים; סם אלטמן (Sam Altman) מ־OpenAI הסכים שהחברות צריכות ״לפסוע את החזית״ (pace the frontier) — ובהמשך הבהיר שפסיעה אינה עצירה, ודיבר על מסגרת בטיחות פדרלית; אילון מוסק פרסם ״דריו צודק.״ יום ב׳: סופטבנק ירדה בחדות ביפן; שמות שבבים והייפרסקיילרים רכים יותר באסיה / בטרום-שוק (premarket) בארה״ב — טייפ מחיר → שווקים; הכרטיס הזה הוא חוט / מדיניות, לא הדפס מדד.",
+      "en": "Anthropic CEO Dario Amodei (דריו אמודיי) on Saturday called to “slow the pace” of improving AI model capabilities, warning agents could cause hundreds of billions in damage; OpenAI’s Sam Altman (סם אלטמן) agreed companies need to “pace the frontier” (later clarifying pacing ≠ stopping, and citing a federal safety framework); Elon Musk posted “Dario is right.” Monday: SoftBank fell sharply in Japan; chip names and hyperscalers softer in Asia / US premarket (טרום-שוק) — price tape; this card is the wire/policy beat."
+     }
+    ],
+    "why": {
+     "he": "הסכמה נדירה בין מנכ״לי מעבדות על האטה פוגעת בטייפ לתוך שבוע הפד.",
+     "en": "Rare lab-CEO consensus on pacing hits the tape into Fed week."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.cnbc.com/2026/09/14/ai-stocks-slowdown-amodei-altman.html\">CNBC מניות / אלטמן</a> · <a href=\"https://www.theguardian.com/business/2026/sep/14/ai-linked-stocks-fall-tech-bosses-call-slowdown-anthropic-openai\">Guardian</a> (14 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.cnbc.com/2026/09/14/ai-stocks-slowdown-amodei-altman.html\">CNBC stocks / Altman</a> · <a href=\"https://www.theguardian.com/business/2026/sep/14/ai-linked-stocks-fall-tech-bosses-call-slowdown-anthropic-openai\">Guardian</a> (Sep 14)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "Anadolu"
+     },
+     {
+      "kind": "source",
+      "text": "Arab News"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "לחסל / לא לסגת — מאומת כציטוט",
+       "en": "Eliminate / no withdraw — Confirmed as quote"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "שר הביטחון מאיים ״לחסל״ כל מי שמתקרב לעלי א-טאהר ושולל נסיגה עד שחיזבאללה יפורק מנשקו",
+     "en": "Israel’s defense minister threatens to “eliminate” anyone approaching Ali al-Taher and rules out withdrawal until Hezbollah is disarmed"
+    },
+    "body": [
+     {
+      "he": "שר הביטחון ישראל כץ (Israel Katz) אמר שצה״ל נערך לשלוט ברכס עלי א-טאהר (Ali al-Taher), איים ״לחסל״ כל מי שמתקרב — Anadolu; Arab News מסר ״יושמד״ — ומיסגר זאת בתוך ״הקו הצהוב״ (Yellow Line) / אזור הביטחון של כ־700 קמ״ר, ואמר שישראל לא תיסוג עד שחיזבאללה יפורק מנשקו בכל לבנון.",
+      "en": "Defense Minister Israel Katz (ישראל כץ) said the IDF is preparing to control the Ali al-Taher ridge (רכס עלי א-טאהר), threatened to “eliminate” anyone approaching — Anadolu; Arab News rendered “destroyed” — framed it inside Israel’s “yellow line” (הקו הצהוב) / ~700 km² security zone, and said Israel will not withdraw until Hezbollah is disarmed across Lebanon."
+     }
+    ],
+    "why": {
+     "he": "נעילה פוליטית על החזקת השטח הגבוה בדרום לבנון.",
+     "en": "Political lock on holding southern Lebanon high ground."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.aa.com.tr/en/middle-east/israeli-defense-minister-threatens-to-eliminate-anyone-approaching-southern-lebanon-heights/4056276\">Anadolu כץ</a> · <a href=\"https://www.arabnews.com/middle-east/israel-defense-minister-warns-ali-taher-ridge-returnees-will-be-destroyed-3001642\">Arab News עלי א-טאהר</a> (13–14 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.aa.com.tr/en/middle-east/israeli-defense-minister-threatens-to-eliminate-anyone-approaching-southern-lebanon-heights/4056276\">Anadolu Katz</a> · <a href=\"https://www.arabnews.com/middle-east/israel-defense-minister-warns-ali-taher-ridge-returnees-will-be-destroyed-3001642\">Arab News Ali al-Taher</a> (Sep 13–14)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "chip",
+      "text": "VSAT"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "התחייבות הון — מאומת",
+       "en": "Equity commit — Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "Viasat ו־Space42 של האמירויות מתחייבות עד מיליארד דולר ל־Equatys, מיזם לוויין ישיר למכשיר",
+     "en": "Viasat and UAE’s Space42 commit up to $1 billion to Equatys, a direct-to-device satellite venture"
+    },
+    "body": [
+     {
+      "he": "Reuters: Viasat (VSAT) ו־Space42 מקימות את Equatys לקישור ישיר למכשיר (D2D — direct-to-device); עד <strong>$1 מיליארד</strong> בהון — כל אחת $400 מיליון בהתחלה, ו־Space42 צפויה להוסיף $200 מיליון בהמשך. Viasat קבלן הטכנולוגיה הראשי; רשת לא-קרקעית משותפת (NTN — non-terrestrial network) למפעילי סלולר. אין קנייה/מכירה/יעד.",
+      "en": "Reuters: Viasat (VSAT) and Space42 establish Equatys for direct-to-device (D2D / ישיר למכשיר) connectivity; up to <strong>$1 billion</strong> in equity — $400 million each initially, with Space42 expected to add $200 million later. Viasat is the primary tech contractor; a shared non-terrestrial network (NTN / רשת לא-קרקעית) for mobile operators. No buy/sell/target."
+     }
+    ],
+    "why": {
+     "he": "מיזם סאטקום מפרץ–ארה״ב עם הון נקוב ביום התידרוך.",
+     "en": "Gulf–US satcom JV with hard equity on demo day."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://www.reuters.com/technology/viasat-uaes-space42-commit-up-1-billion-satellite-connectivity-venture-2026-09-14/\">Reuters Equatys</a> (14 בספטמבר)",
+      "en": "Source: <a href=\"https://www.reuters.com/technology/viasat-uaes-space42-commit-up-1-billion-satellite-connectivity-venture-2026-09-14/\">Reuters Equatys</a> (Sep 14)"
+     }
+    ]
+   }
+  ]
+ },
+ "markets": {
+  "dek": [
+   {
+    "he": "פתיחה רכה לתוך שבוע FOMC: חוזי NQ ~−1.5%, ES ~−0.6% (Yahoo ~15:18 / 08:18 ET). גולמי עדיין מעל $100 / ברנט ~$108. הפד ביום ד׳ 21:00 (14:00 ET) + מכירות קמעונאיות אוגוסט 15:30 (08:30 ET) באותו יום. עיכול אורקל: טרום-שוק יום ב׳ ~−5% מול יום ו׳ (סביר). תשואת 10 שנים דביקה ליד 5% / דולר חזק יותר / VIX ~17.6. אין מזומן יום ב׳ עד 16:30 (09:30 ET). FedWatch ~87% — סביר בלבד.",
+    "en": "Soft reopen into FOMC: NQ futures ~−1.5%, ES ~−0.6% (Yahoo ~15:18 / 08:18 ET). Crude still above $100 / Brent ~$108. Fed week: FOMC decision Wed 21:00 (14:00 ET) + Aug retail sales 15:30 (08:30 ET) same day. Oracle digestion: Mon pre ~−5% vs Fri (Likely). Sticky Friday 10Y near 5% / firmer dollar / VIX ~17.6. No Monday cash until 16:30 (09:30 ET). FedWatch ~87% — Likely only."
+   }
+  ],
+  "notes": [
+   {
+    "he": "חוזים Yahoo ~15:18 (08:18 ET): ES 7,614.00 (−0.59%) · NQ 28,942.00 (−1.51%) · YM 52,833 (−0.32%) · RTY 2,914.7 (−0.39%). 10Y 4.975% (אחרון יום ו׳; ללא שינוי מול 4.975% — מיושן ליום ב׳) · 30Y 5.354% (אותה חותמת) · DXY 99.497 (+0.38%) · VIX 17.60 (+11.11%). נפט: WTI $102.96 (+2.91%) · ברנט $107.97 (+3.21%) · זהב $4,335.40 (−1.67%). מזומן יום ו׳: S&amp;P 7,656.98 (+0.86%) · Dow 52,573.29 (+0.98%) · Nasdaq 26,333.04 (+0.96%). שמות יום ו׳ מאומת / טרום-שוק יום ב׳ סביר (~15:28 / 08:28 ET): ORCL 150.28 (−1.74%) → ~142.80 (~−5.0%) · ADBE 252.23 (+1.37%) → ~257.45 (~+2.1%) · AAPL 332.27 → ~332.55 · NVDA 218.29 → ~212.89 (~−2.5%) · MSFT 495.63 → ~498.80 (~+0.6%) · ACVA 10.41 (+44.2%) → ~10.43 · CPRT 29.95 (−2.60%) → ~30.25 (~+1.0%). אין מזומן יום ב׳ עד 16:30 (09:30 ET). FedWatch ~87% — סביר בלבד.",
+    "en": "Yahoo futures ~15:18 (08:18 ET): ES 7,614.00 (−0.59%) · NQ 28,942.00 (−1.51%) · YM 52,833 (−0.32%) · RTY 2,914.7 (−0.39%). 10Y 4.975% (Friday last; unchanged vs 4.975% — stale into Monday) · 30Y 5.354% (same stamp) · DXY 99.497 (+0.38%) · VIX 17.60 (+11.11%). Oil: WTI $102.96 (+2.91%) · Brent $107.97 (+3.21%) · Gold $4,335.40 (−1.67%). Friday cash Confirmed / Monday pre Likely (~15:28 / 08:28 ET): ORCL 150.28 (−1.74%) → ~142.80 (~−5.0%) · ADBE 252.23 (+1.37%) → ~257.45 (~+2.1%) · AAPL 332.27 → ~332.55 · NVDA 218.29 → ~212.89 (~−2.5%) · MSFT 495.63 → ~498.80 (~+0.6%) · ACVA 10.41 (+44.2%) → ~10.43 · CPRT 29.95 (−2.60%) → ~30.25 (~+1.0%). No Monday cash until 16:30 (09:30 ET). FedWatch ~87% — Likely only."
+   }
+  ],
+  "drivers": [
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "chip",
+      "text": "NQ"
+     },
+     {
+      "kind": "chip",
+      "text": "ES"
+     },
+     {
+      "kind": "source",
+      "text": "Yahoo"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "חוזים Yahoo ~08:18 ET — מאומת",
+       "en": "Yahoo futures ~08:18 ET — Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "חוזים רכים בהובלת NQ לתוך שבוע FOMC — לא מזומן יום ב׳",
+     "en": "Soft NQ-led futures into FOMC week — not Monday cash"
+    },
+    "body": [
+     {
+      "he": "Yahoo ~15:18 (08:18 ET): חוזים עתידיים על מדדים (index futures) — ES=F 7,614.00 (−0.59% מול 7,659.50); NQ=F 28,942.00 (−1.51% מול 29,387.00); YM=F 52,833 (−0.32% מול 53,002); RTY=F 2,914.7 (−0.39% מול 2,926.0). רוחב שוק (breadth) בחוזים בלבד: טק / NQ מובילים את הפער כלפי מטה; חוזי דאו מחזיקים יחסית — לא הדפס מפולת אחיד. מזומן יום ו׳: S&amp;P 7,656.98 (+0.86%); Dow 52,573.29 (+0.98%); Nasdaq 26,333.04 (+0.96%). פתיחת המזומן בארה״ב 16:30 (09:30 ET) — חותמות החוזים אינן פתיחת מזומן. תשואת 10 שנים (^TNX) 4.975% — מחיר אחרון מיום ו׳ 11 בספטמבר ~21:59 (14:59 ET), מסומן כמיושן לתוך יום ב׳ (אין הדפס אג״ח מזומן טרי ביום ב׳ במשיכה זו). תשואת 30 שנה (^TYX) 5.354% — אותה חותמת יום ו׳. DXY (מדד הדולר) 99.497 (+0.38% מול 99.122). VIX (מדד הפחד / תנודתיות מרומזת) 17.60 (+11.11% מול 15.84). אין קנייה/מכירה/יעד.",
+      "en": "Yahoo ~15:18 (08:18 ET): index futures (חוזים עתידיים על מדדים) — ES=F 7,614.00 (−0.59% vs 7,659.50); NQ=F 28,942.00 (−1.51% vs 29,387.00); YM=F 52,833 (−0.32% vs 53,002); RTY=F 2,914.7 (−0.39% vs 2,926.0). Breadth (רוחב שוק) in futures only: tech/NQ leads the gap lower; Dow futures hold up relatively — not a uniform crash print. Friday cash: S&amp;P 7,656.98 (+0.86%); Dow 52,573.29 (+0.98%); Nasdaq 26,333.04 (+0.96%). US cash opens 16:30 (09:30 ET) — futures stamps are not the cash open. 10-year (^TNX) 4.975% — Friday 11 Sep last ~21:59 (14:59 ET), labeled stale into Monday (no fresh Monday cash bond print on this pull). 30-year (^TYX) 5.354% — same Friday stamp. DXY (מדד הדולר) 99.497 (+0.38% vs 99.122). VIX (מדד הפחד / implied-volatility gauge) 17.60 (+11.11% vs 15.84). No buy/sell/target."
+     }
+    ],
+    "why": {
+     "he": "ההדפס הברור ביותר ללשוניות שווקים/טרום-שוק — פיצול מדדים עם חותמת זמן, לפני דיבורי הפד ולפני המזומן.",
+     "en": "Clearest priced setup for Markets/Pre-market — index divergence with a timestamp, before any Fed speak and before cash."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: Yahoo ES=F / NQ=F / YM=F / RTY=F / ^TNX / ^TYX / DXY / VIX (חותמת ~08:18 ET; 10Y/30Y אחרון יום ו׳)",
+      "en": "Source: Yahoo ES=F / NQ=F / YM=F / RTY=F / ^TNX / ^TYX / DXY / VIX (~08:18 ET stamp; 10Y/30Y Friday last)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "chip",
+      "text": "CL"
+     },
+     {
+      "kind": "chip",
+      "text": "BZ"
+     },
+     {
+      "kind": "source",
+      "text": "Yahoo"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "WTI / ברנט Yahoo — מאומת",
+       "en": "WTI / Brent Yahoo — Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "גולמי עדיין מעל $100; ברנט ~$108 — קלט מחיר לתוך הפד",
+     "en": "Crude still through $100 / Brent ~$108 — a priced input into the Fed"
+    },
+    "body": [
+     {
+      "he": "Yahoo ~15:18 (08:18 ET): חוזים עתידיים על נפט (crude futures) — WTI $102.96 (+2.91% מול $100.05); ברנט $107.97 (+3.21% מול $104.61); זהב $4,335.40 (−1.67% מול $4,408.90). אנרגיה חזקה יותר בזמן שחוזי מדדים רכים וזהב רך — תערובת קלט אינפלציה / מכפיל סיכון לתוך שבוע הפד. פרמיית סיכון מתומחרת (priced risk premium) כאן היא רמת החבית. פירוט קינטי נשאר בחדשות. אין קנייה/מכירה/יעד.",
+      "en": "Yahoo ~15:18 (08:18 ET): crude futures (חוזים עתידיים על נפט) — WTI $102.96 (+2.91% vs $100.05); Brent $107.97 (+3.21% vs $104.61); gold $4,335.40 (−1.67% vs $4,408.90). Energy firmer while index futures softer and gold softer — an inflation-input / risk-multiple mix into Fed week. The priced risk premium (פרמיית סיכון מתומחרת) here is the barrel level. Kinetic detail stays on News. No buy/sell/target."
+     }
+    ],
+    "why": {
+     "he": "רמות החבית הן קלט ישיר לפד/אינפלציה השבוע — נשלחות כמחיר עם חותמת, לא כמסה גיאופוליטית."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: Yahoo CL=F / BZ=F / GC=F (חותמת ~08:18 ET)",
+      "en": "Source: Yahoo CL=F / BZ=F / GC=F (~08:18 ET stamp)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "Fed.gov"
+     },
+     {
+      "kind": "source",
+      "text": "BLS"
+     },
+     {
+      "kind": "source",
+      "text": "FXStreet / CME"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "יומן FOMC / CPI אוגוסט — מאומת",
+       "en": "FOMC calendar / Aug CPI — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "FedWatch ~87% — סביר (משני)",
+       "en": "FedWatch ~87% — Likely (secondary)"
+      },
+      "level": "likely"
+     }
+    ],
+    "headline": {
+     "he": "FOMC ביום ד׳ + מכירות קמעונאיות באותו בוקר; CPI אוגוסט כבר הודפס; FedWatch ~87% — סביר בלבד",
+     "en": "FOMC Wednesday + retail sales the same morning; August CPI already printed; FedWatch ~87% — Likely only"
+    },
+    "body": [
+     {
+      "he": "ישיבת ועדת השוק הפתוח של הפד (FOMC) ביומיים: יום ג׳ 15 בספטמבר יום 1; יום ד׳ 16 בספטמבר ההחלטה. יום ד׳ 15:30 (08:30 ET) מכירות קמעונאיות (retail sales) מוקדמות לאוגוסט (Census); 21:00 (14:00 ET) החלטת ריבית + תחזיות כלכליות / תרשים הנקודות (SEP / dot plot); 21:30 (14:30 ET) מסיבת עיתונאים. יום ו׳ 18 בספטמבר 16:15 (09:15 ET) ייצור תעשייתי / ניצולת כושר (Fed G.17). BLS אוגוסט: מדד המחירים לצרכן (CPI) כותרת +0.4% חודש־על־חודש / +3.4% שנה־על־שנה; ליבה ללא מזון ואנרגיה +0.3% / +2.4%. PPI (מדד מחירי היצרנים) ביקוש סופי +0.4% חודש־על־חודש / +5.4% שנה־על־שנה (BLS דרך CNBC/Reuters בחבילה קודמת). FXStreet מצטט CME FedWatch כ־~87% הסתברות משתמעות להעלאת ריבית (implied hike probability) של 25 נקודות בסיס (basis points) — סביר בלבד; מסך CME ראשי לא נמשך בתיק זה. אין קנייה/מכירה/יעד. אין המצאת תוצאת הריבית.",
+      "en": "Two-day FOMC (ישיבת ועדת השוק הפתוח של הפד): Tuesday 15 Sep day 1; Wednesday 16 Sep decision. Wednesday 15:30 (08:30 ET) Advance Monthly Retail Sales (מכירות קמעונאיות) August (Census); 21:00 (14:00 ET) rate decision + SEP / dot plot (תחזיות כלכליות / תרשים הנקודות); 21:30 (14:30 ET) press conference. Friday 18 Sep 16:15 (09:15 ET) industrial production / capacity utilization (Fed G.17). August BLS: CPI (מדד המחירים לצרכן) headline +0.4% MoM / +3.4% YoY; core less food/energy +0.3% / +2.4%. PPI (מדד מחירי היצרנים) final demand +0.4% MoM / +5.4% YoY (BLS via CNBC/Reuters prior pack). FXStreet cites CME FedWatch ~87% implied hike probability (הסתברות משתמעות להעלאת ריבית) of 25 basis points (נקודות בסיס) — Likely only; no CME primary screen on this filing. No buy/sell/target. Do not invent the funds-rate outcome."
+     }
+    ],
+    "why": {
+     "he": "זה ציר המאקרו של השבוע לשתי הלשוניות — מכירות קמעונאיות נוחתות שעות לפני ההחלטה; ה־FedWatch נשאר משני.",
+     "en": "This is the week’s macro hinge for both tabs — retail sales land hours before the decision; FedWatch stays secondary."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\">Fed.gov FOMC</a> · <a href=\"https://www.federalreserve.gov/newsevents/2026-september.htm\">Fed.gov September</a> · <a href=\"https://www.census.gov/retail/release_schedule.html\">Census retail</a> · <a href=\"https://www.federalreserve.gov/releases/g17/release_dates.htm\">Fed G.17</a> · <a href=\"https://www.bls.gov/news.release/archives/cpi_09112026.htm\">BLS CPI archive</a> (11 בספטמבר) · <a href=\"https://www.fxstreet.com/news/dow-jones-futures-dip-as-fed-hike-bets-ai-safety-concerns-weigh-on-markets-202609140811\">FXStreet FedWatch</a> (משני)",
+      "en": "Sources: <a href=\"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\">Fed.gov FOMC</a> · <a href=\"https://www.federalreserve.gov/newsevents/2026-september.htm\">Fed.gov September</a> · <a href=\"https://www.census.gov/retail/release_schedule.html\">Census retail</a> · <a href=\"https://www.federalreserve.gov/releases/g17/release_dates.htm\">Fed G.17</a> · <a href=\"https://www.bls.gov/news.release/archives/cpi_09112026.htm\">BLS CPI archive</a> (Sep 11) · <a href=\"https://www.fxstreet.com/news/dow-jones-futures-dip-as-fed-hike-bets-ai-safety-concerns-weigh-on-markets-202609140811\">FXStreet FedWatch</a> (secondary)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "chip",
+      "text": "ORCL"
+     },
+     {
+      "kind": "source",
+      "text": "Oracle"
+     },
+     {
+      "kind": "source",
+      "text": "Yahoo"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "דוח + מזומן יום ו׳ — מאומת",
+       "en": "PR + Friday cash — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "טרום-שוק יום ב׳ % — סביר (בר 1 דקה)",
+       "en": "Monday pre % — Likely (1m bar)"
+      },
+      "level": "likely"
+     }
+    ],
+    "headline": {
+     "he": "עיכול אורקל: הכאת ענן־AI ביום ה׳ אחרי הסגירה; יום ו׳ החזיר; טרום-שוק יום ב׳ ~−5% מול יום ו׳",
+     "en": "Oracle digestion: AI-cloud beat Thursday after hours; Friday cash gave it back; Mon pre ~−5% vs Fri"
+    },
+    "body": [
+     {
+      "he": "דוח תוצאות כספיות (earnings) של אורקל (ORCL) ל־Q1 שנת הכספים 2027: הכנסות $19.3 מיליארד (+30%); רווח למניה non-GAAP $1.92; ענן $11.6 מיליארד (+62%); תשתית ענן (cloud infrastructure / IaaS) +121%; יתרת התחייבויות לביצוע (RPO — remaining performance obligations) $664 מיליארד; מעל $30 מיליארד חוזי ענן־AI נוספים ברבעון; הכוונה / תחזית (guidance) לשנת הכספים 2027 — הכנסות לפחות $90 מיליארד / רווח non-GAAP $8.10. Reuters קודם: תזרים מזומנים חופשי (FCF) −$5.4 מיליארד. תגובת מחיר: הארכת יום ה׳ ~+4% עד ~+5.8% (חבילה קודמת) → מזומן יום ו׳ 150.28 (−1.74% מול 152.94 ביום ה׳) — מאומת → בר טרום-פתיחה יום ב׳ ~142.80 (~−5.0% מול יום ו׳) ~15:28 (08:28 ET) — סביר (ברים של 1 דקה, לא שדה preMarketPrice). אין קנייה/מכירה/יעד.",
+      "en": "Oracle (ORCL) fiscal 2027 Q1 earnings (דוח תוצאות כספיות): revenue $19.3B (+30%); non-GAAP EPS $1.92; cloud $11.6B (+62%); cloud infrastructure (תשתית ענן / IaaS) +121%; remaining performance obligations (RPO / יתרת התחייבויות לביצוע) $664B; more than $30B additional AI cloud contracts in Q1; FY27 guidance (הכוונה / תחזית) revenue at least $90B / non-GAAP EPS $8.10. Reuters prior: free cash flow (FCF / תזרים מזומנים חופשי) −$5.4B. Price path: Thursday extended ~+4% to ~+5.8% (prior pack) → Friday cash 150.28 (−1.74% vs Thursday 152.94) — Confirmed → Monday pre bar ~142.80 (~−5.0% vs Fri) ~15:28 (08:28 ET) — Likely (1-minute bars, not a native preMarketPrice field). No buy/sell/target."
+     }
+    ],
+    "why": {
+     "he": "הקטליסט הנקי ביותר של ענן־AI שעדיין על הטייפ השבוע — עכשיו במצב עיכול, בלי המלצה.",
+     "en": "Cleanest Confirmed single-name AI-cloud catalyst still on the tape this week — now in digestion, without a rec."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx\">Oracle IR</a> · <a href=\"https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/orcl-20260910.htm\">SEC 8-K</a> · Yahoo ORCL (מזומן יום ו׳ מאומת; בר טרום-שוק יום ב׳ סביר)",
+      "en": "Sources: <a href=\"https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx\">Oracle IR</a> · <a href=\"https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/orcl-20260910.htm\">SEC 8-K</a> · Yahoo ORCL (Friday cash Confirmed; Monday pre bar Likely)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "chip",
+      "text": "ADBE"
+     },
+     {
+      "kind": "chip",
+      "text": "ACVA"
+     },
+     {
+      "kind": "chip",
+      "text": "CPRT"
+     },
+     {
+      "kind": "source",
+      "text": "Yahoo"
+     },
+     {
+      "kind": "source",
+      "text": "ACV IR"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "עסקה + מזומן יום ו׳ — מאומת",
+       "en": "Deal + Friday cash — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "טרום-שוק יום ב׳ % — סביר (בר 1 דקה)",
+       "en": "Monday pre % — Likely (1m bar)"
+      },
+      "level": "likely"
+     }
+    ],
+    "headline": {
+     "he": "ניגוד אדובי + עסקת CPRT/ACVA — מתחם התוכנה לא חד־כיווני",
+     "en": "Adobe contrast + CPRT/ACVA deal — the software complex is not one-directional"
+    },
+    "body": [
+     {
+      "he": "אדובי (ADBE) דיווחה ביום ה׳ אחרי הסגירה — ״Q3 שיא״ (Business Wire / 8-K). תוכנה ארגונית (enterprise software): מזומן Yahoo יום ו׳ 252.23 (+1.37%) — מאומת. בר מסחר טרום-פתיחה (premarket) יום ב׳ ~257.45 (~+2.1% מול יום ו׳) ~15:28 (08:28 ET) — סביר. Copart רוכשת את ACV: הצעת רכש במזומן (cash tender offer) $10.50 למניה; ~$1.9 מיליארד הון; סגירה צפויה עד סוף 2026; רוב + HSR. מיזוג ורכישה (M&amp;A) מאומת. ACVA מזומן יום ו׳ 10.41 (+44.2% מול 7.22); טרום-שוק ~10.43 ליד מחיר העסקה. CPRT מזומן יום ו׳ 29.95 (−2.60%); טרום-שוק ~30.25 (~+1.0% מול יום ו׳). שמות נוספים (מזומן יום ו׳ מאומת / טרום-שוק סביר): AAPL 332.27 → ~332.55 (כמעט שטוח); NVDA 218.29 → ~212.89 (~−2.5%); MSFT 495.63 → ~498.80 (~+0.6%). טבלת שורות מלאה של אדובי — סביר עד PDF של IR. אין קנייה/מכירה/יעד.",
+      "en": "Adobe (ADBE) reported Thursday after the close — “Record Q3” (Business Wire / 8-K). Enterprise software (תוכנה ארגונית): Yahoo Friday cash 252.23 (+1.37%) — Confirmed. Monday premarket (מסחר טרום-פתיחה) bar ~257.45 (~+2.1% vs Fri) ~15:28 (08:28 ET) — Likely. Copart to acquire ACV: cash tender offer (הצעת רכש במזומן) $10.50/sh; ~$1.9B equity; expected close by YE 2026; majority tender + HSR. M&amp;A (מיזוג ורכישה) Confirmed. ACVA Friday cash 10.41 (+44.2% vs 7.22); Monday pre ~10.43 near the deal. CPRT Friday 29.95 (−2.60%); Monday pre ~30.25 (~+1.0% vs Fri). Other names (Friday cash Confirmed / Monday pre Likely): AAPL 332.27 → ~332.55 (near flat); NVDA 218.29 → ~212.89 (~−2.5%); MSFT 495.63 → ~498.80 (~+0.6%). Full Adobe line-item table: Likely until an IR PDF is pasted. No buy/sell/target."
+     }
+    ],
+    "why": {
+     "he": "מראה שמתחם ה־AI/תוכנה אינו חד־כיווני אחרי דוחות השבוע שעבר, ומשאיר עסקת מזומן נקיה אחת בטרום-שוק.",
+     "en": "Shows the AI/software complex is not one-directional after last week’s earnings, and keeps one clean cash deal on Pre-market."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.businesswire.com/news/home/20260910832552/en/Adobe-Reports-Record-Q3-Results\">Adobe / Business Wire</a> · <a href=\"https://investors.acvauto.com/news-events/press-releases/detail/113/copart-to-acquire-acv-expanding-position-across-the-vehicle-remarketing-ecosystem\">ACV IR</a> · <a href=\"https://www.reuters.com/business/copart-buy-acv-auctions-19-billion-deal-2026-09-10/\">Reuters CPRT/ACVA</a> · Yahoo ADBE / ACVA / CPRT / AAPL / NVDA / MSFT",
+      "en": "Sources: <a href=\"https://www.businesswire.com/news/home/20260910832552/en/Adobe-Reports-Record-Q3-Results\">Adobe / Business Wire</a> · <a href=\"https://investors.acvauto.com/news-events/press-releases/detail/113/copart-to-acquire-acv-expanding-position-across-the-vehicle-remarketing-ecosystem\">ACV IR</a> · <a href=\"https://www.reuters.com/business/copart-buy-acv-auctions-19-billion-deal-2026-09-10/\">Reuters CPRT/ACVA</a> · Yahoo ADBE / ACVA / CPRT / AAPL / NVDA / MSFT"
+     }
+    ]
+   }
+  ],
+  "boards": [
+   {
+    "title": {
+     "he": "טייפ",
+     "en": "Tape"
+    },
+    "items": [
+     {
+      "sym": "ES · fut",
+      "last": "7,614.00",
+      "chg": "−0.59%",
+      "dir": "down"
+     },
+     {
+      "sym": "NQ · fut",
+      "last": "28,942.00",
+      "chg": "−1.51%",
+      "dir": "down"
+     },
+     {
+      "sym": "YM · fut",
+      "last": "52,833",
+      "chg": "−0.32%",
+      "dir": "down"
+     },
+     {
+      "sym": "RTY · fut",
+      "last": "2,914.7",
+      "chg": "−0.39%",
+      "dir": "down"
+     },
+     {
+      "sym": "10Y · Fri",
+      "last": "4.975%",
+      "flag": {
+       "he": "מיושן ליום ב׳ · ללא שינוי",
+       "en": "stale into Mon · unchanged"
+      }
+     },
+     {
+      "sym": "DXY",
+      "last": "99.497",
+      "chg": "+0.38%",
+      "dir": "up"
+     },
+     {
+      "sym": "VIX",
+      "last": "17.60",
+      "chg": "+11.11%",
+      "dir": "up"
+     },
+     {
+      "sym": "WTI · Yahoo",
+      "last": "102.96",
+      "chg": "+2.91%",
+      "dir": "up"
+     },
+     {
+      "sym": "Brent · Yahoo",
+      "last": "107.97",
+      "chg": "+3.21%",
+      "dir": "up"
+     },
+     {
+      "sym": "Gold · Yahoo",
+      "last": "4,335.40",
+      "chg": "−1.67%",
+      "dir": "down"
+     },
+     {
+      "sym": "SPX · Fri",
+      "last": "7,656.98",
+      "chg": "+0.86%",
+      "dir": "up"
+     },
+     {
+      "sym": "Dow · Fri",
+      "last": "52,573.29",
+      "chg": "+0.98%",
+      "dir": "up"
+     },
+     {
+      "sym": "Nasdaq · Fri",
+      "last": "26,333.04",
+      "chg": "+0.96%",
+      "dir": "up"
+     },
+     {
+      "sym": "ORCL · Fri",
+      "last": "150.28",
+      "chg": "−1.74%",
+      "dir": "down"
+     },
+     {
+      "sym": "ORCL · pre",
+      "last": "142.80",
+      "chg": {
+       "he": "~−5.0% · סביר",
+       "en": "~−5.0% · Likely"
+      },
+      "dir": "down"
+     },
+     {
+      "sym": "ADBE · Fri",
+      "last": "252.23",
+      "chg": "+1.37%",
+      "dir": "up"
+     },
+     {
+      "sym": "ADBE · pre",
+      "last": "257.45",
+      "chg": {
+       "he": "~+2.1% · סביר",
+       "en": "~+2.1% · Likely"
+      },
+      "dir": "up"
+     },
+     {
+      "sym": "ACVA · Fri",
+      "last": "10.41",
+      "chg": "+44.2%",
+      "dir": "up"
+     },
+     {
+      "sym": "CPRT · Fri",
+      "last": "29.95",
+      "chg": "−2.60%",
+      "dir": "down"
+     }
+    ],
+    "note": [
+     {
+      "he": "חוזים / מחירים אחרונים Yahoo ~15:18 (08:18 ET) · לא מזומן יום ב׳ · מזומן יום ו׳ מסומן · ברים טרום-שוק יום ב׳ מסומנים סביר · פתיחת מזומן 16:30 (09:30 ET)",
+      "en": "Yahoo futures / lasts ~15:18 (08:18 ET) · not Monday cash · Friday cash labeled · Monday pre bars labeled Likely · cash open 16:30 (09:30 ET)"
+     },
+     {
+      "he": "חוזים Yahoo ~15:18 (08:18 ET): ES 7,614.00 (−0.59%) · NQ 28,942.00 (−1.51%) · YM 52,833 (−0.32%) · RTY 2,914.7 (−0.39%). 10Y 4.975% (אחרון יום ו׳; ללא שינוי מול 4.975% — מיושן ליום ב׳) · 30Y 5.354% (אותה חותמת) · DXY 99.497 (+0.38%) · VIX 17.60 (+11.11%). נפט: WTI $102.96 (+2.91%) · ברנט $107.97 (+3.21%) · זהב $4,335.40 (−1.67%). מזומן יום ו׳: S&amp;P 7,656.98 (+0.86%) · Dow 52,573.29 (+0.98%) · Nasdaq 26,333.04 (+0.96%). שמות יום ו׳ מאומת / טרום-שוק יום ב׳ סביר (~15:28 / 08:28 ET): ORCL 150.28 (−1.74%) → ~142.80 (~−5.0%) · ADBE 252.23 (+1.37%) → ~257.45 (~+2.1%) · AAPL 332.27 → ~332.55 · NVDA 218.29 → ~212.89 (~−2.5%) · MSFT 495.63 → ~498.80 (~+0.6%) · ACVA 10.41 (+44.2%) → ~10.43 · CPRT 29.95 (−2.60%) → ~30.25 (~+1.0%). אין מזומן יום ב׳ עד 16:30 (09:30 ET). FedWatch ~87% — סביר בלבד.",
+      "en": "Yahoo futures ~15:18 (08:18 ET): ES 7,614.00 (−0.59%) · NQ 28,942.00 (−1.51%) · YM 52,833 (−0.32%) · RTY 2,914.7 (−0.39%). 10Y 4.975% (Friday last; unchanged vs 4.975% — stale into Monday) · 30Y 5.354% (same stamp) · DXY 99.497 (+0.38%) · VIX 17.60 (+11.11%). Oil: WTI $102.96 (+2.91%) · Brent $107.97 (+3.21%) · Gold $4,335.40 (−1.67%). Friday cash Confirmed / Monday pre Likely (~15:28 / 08:28 ET): ORCL 150.28 (−1.74%) → ~142.80 (~−5.0%) · ADBE 252.23 (+1.37%) → ~257.45 (~+2.1%) · AAPL 332.27 → ~332.55 · NVDA 218.29 → ~212.89 (~−2.5%) · MSFT 495.63 → ~498.80 (~+0.6%) · ACVA 10.41 (+44.2%) → ~10.43 · CPRT 29.95 (−2.60%) → ~30.25 (~+1.0%). No Monday cash until 16:30 (09:30 ET). FedWatch ~87% — Likely only."
+     }
+    ]
+   }
+  ],
+  "calendar": {
+   "items": [
+    {
+     "when": "Mon 16:30 (09:30 ET)",
+     "text": {
+      "he": "פתיחת מזומן ארה״ב אחרי סוף השבוע — אין הדפס BLS גדול בפתיחה; חוזים עד אז, לא מזומן",
+      "en": "US cash reopen after the weekend — no major BLS print at the open; futures until then, not cash"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    },
+    {
+     "when": "Tue 15 Sep",
+     "text": {
+      "he": "FOMC יום 1 (יומן Fed.gov)",
+      "en": "FOMC meeting day 1 (Fed.gov calendar)"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    },
+    {
+     "when": "Wed 15:30 (08:30 ET)",
+     "text": {
+      "he": "מכירות קמעונאיות מוקדמות אוגוסט (Census)",
+      "en": "Advance Monthly Retail Sales August (Census)"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    },
+    {
+     "when": "Wed 21:00 (14:00 ET)",
+     "text": {
+      "he": "החלטת FOMC / SEP / נקודות — FedWatch סביר בלבד",
+      "en": "FOMC decision / SEP / dots — FedWatch Likely only"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    },
+    {
+     "when": "Wed 21:30 (14:30 ET)",
+     "text": {
+      "he": "מסיבת עיתונאים של הפד (Fed.gov)",
+      "en": "FOMC press conference (Fed.gov)"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    },
+    {
+     "when": "Fri 16:15 (09:15 ET)",
+     "text": {
+      "he": "ייצור תעשייתי / ניצולת כושר אוגוסט (Fed G.17)",
+      "en": "Industrial production / capacity utilization August (Fed G.17)"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    }
+   ],
+   "note": [
+    {
+     "he": "יום ב׳ 14 בספטמבר עד יום ו׳ 18 בספטמבר. שעות בירושלים (ET בסוגריים).",
+     "en": "Mon 14 Sep through Fri 18 Sep. Times in Jerusalem (ET in parentheses)."
+    }
+   ]
+  },
+  "extras": [
+   {
+    "kind": "watch",
+    "title": {
+     "he": "למעקב",
+     "en": "Watch"
+    },
+    "items": [
+     {
+      "he": "<b>NQ</b> <b>ES</b> האם הפער הלילי מחזיק לתוך מזומן 16:30 (09:30 ET). אין המלצה.",
+      "en": "<b>NQ</b> <b>ES</b> Whether the overnight gap holds into 16:30 (09:30 ET) cash. No rec."
+     },
+     {
+      "he": "<b>CL</b> <b>WTI</b> סביב ידית $100–103 לתוך המזומן. אין קנייה/מכירה/יעד.",
+      "en": "<b>CL</b> <b>WTI</b> Around the $100–103 handle into the cash session. No buy/sell/target."
+     },
+     {
+      "he": "<b>FOMC</b> <b>Retail</b> יום ד׳ מכירות קמעונאיות + החלטה. FedWatch ~87% סביר בלבד (FXStreet), לא מסך CME ראשי. אין המלצה.",
+      "en": "<b>FOMC</b> <b>Retail</b> Wed retail sales + decision. FedWatch ~87% Likely only (FXStreet), not a CME primary screen. No rec."
+     }
+    ]
+   }
+  ],
+  "pre": {
+   "dek": [
+    {
+     "he": "חוזים רכים בהובלת NQ לתוך פתיחת המזומן ב־16:30. WTI מעל $100 / ברנט ~$108. אורקל ~−5% בטרום-שוק מול יום ו׳ (סביר). אדובי טרום-שוק ~+2.1% (סביר). FedWatch סביר, לא מאומת ראשי.",
+     "en": "NQ-led soft futures into the 16:30 cash open. WTI through $100 / Brent ~$108. Oracle Mon pre ~−5% vs Fri (Likely). Adobe Mon pre ~+2.1% (Likely). FedWatch Likely, not Confirmed primary."
+    }
+   ],
+   "stories": [
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "חדש היום",
+        "en": "NEW TODAY"
+       },
+       "level": "new-today"
+      },
+      {
+       "kind": "chip",
+       "text": "NQ"
+      },
+      {
+       "kind": "chip",
+       "text": "ES"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "חותמת חוזים ~08:18 ET — מאומת",
+        "en": "Futures stamp ~08:18 ET — Confirmed"
+       },
+       "level": "confirmed"
+      }
+     ],
+     "headline": {
+      "he": "פתיחת מזומן ב־16:30 — הטייפ הוא טרום-שוק / חוזים, לא מזומן יום ב׳",
+      "en": "Cash opens 16:30 — the tape is premarket / futures, not Monday cash"
+     },
+     "body": [
+      {
+       "he": "בורסות המזומן בארה״ב נפתחות ב־16:30 (09:30 ET). הטייפ הוא טרום-שוק (premarket) / חוזים עתידיים נכון ל־~15:18 (08:18 ET) — לא מחירי מזומן של יום ב׳. NQ −1.51%; ES −0.59%; YM −0.32%; RTY −0.39%. רוחב שוק: נאסד״ק מוביל כלפי מטה; דאו מחזיק יחסית. מזומן יום ו׳ מסומן בטייפ השווקים. אין קנייה/מכירה/יעד.",
+       "en": "US cash exchanges open at 16:30 (09:30 ET). The tape is premarket (טרום-שוק) / futures as of ~15:18 (08:18 ET) — not Monday cash prints. NQ −1.51%; ES −0.59%; YM −0.32%; RTY −0.39%. Breadth: Nasdaq leads lower; Dow holds up relatively. Friday cash is labeled on the Markets tape. No buy/sell/target."
+      }
+     ],
+     "why": {
+      "he": "הצלצול מתמחר חוזי נאסד״ק רכים עם חותמת ~08:18 ET — בלי להחליף חותמת חוזים במזומן.",
+      "en": "The bell is pricing soft Nasdaq futures on an ~08:18 ET stamp — without swapping a futures stamp for cash."
+     }
+    },
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "חדש היום",
+        "en": "NEW TODAY"
+       },
+       "level": "new-today"
+      },
+      {
+       "kind": "chip",
+       "text": "CL"
+      },
+      {
+       "kind": "chip",
+       "text": "BZ"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "מאומת Yahoo ~08:18 ET",
+        "en": "Confirmed Yahoo ~08:18 ET"
+       },
+       "level": "confirmed"
+      }
+     ],
+     "headline": {
+      "he": "WTI מעל $100 / ברנט ~$108 לתוך הפתיחה — קלט מחיר",
+      "en": "WTI through $100 / Brent ~$108 into the open — a priced input"
+     },
+     "body": [
+      {
+       "he": "Yahoo ~15:18 (08:18 ET): WTI $102.96 (+2.91%); ברנט $107.97 (+3.21%). הכרטיס הזה הוא קלט מחיר לטרום-שוק, לא מסה קינטית. פירוט בשווקים. אין קנייה/מכירה/יעד.",
+       "en": "Yahoo ~15:18 (08:18 ET): WTI $102.96 (+2.91%); Brent $107.97 (+3.21%). This card is a priced input into premarket, not a kinetic essay. Detail on Markets. No buy/sell/target."
+      }
+     ],
+     "why": {
+      "he": "מספר עגול בגולמי יושב על הפתיחה בלי לפתוח מחדש את כרטיס החדשות.",
+      "en": "A round-number crude print sits on the open without reopening the News card."
+     }
+    },
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "המשך",
+        "en": "CONTINUATION"
+       },
+       "level": "continuation"
+      },
+      {
+       "kind": "chip",
+       "text": "ORCL"
+      },
+      {
+       "kind": "chip",
+       "text": "ADBE"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "מזומן יום ו׳ — מאומת",
+        "en": "Friday cash — Confirmed"
+       },
+       "level": "confirmed"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "טרום-שוק יום ב׳ % — סביר",
+        "en": "Monday pre % — Likely"
+       },
+       "level": "likely"
+      }
+     ],
+     "headline": {
+      "he": "שמות לתוך הצלצול: אורקל ~−5% בטרום-שוק; אדובי ~+2.1%; עסקת ACVA ליד $10.50",
+      "en": "Names into the bell: Oracle ~−5% pre; Adobe ~+2.1%; ACVA near the $10.50 deal"
+     },
+     "body": [
+      {
+       "he": "ORCL מזומן יום ו׳ 150.28 (−1.74% מול יום ה׳) — מאומת; בר טרום-שוק יום ב׳ ~142.80 (~−5.0% מול יום ו׳) ~15:28 (08:28 ET) — סביר. ADBE מזומן יום ו׳ 252.23 (+1.37%) — מאומת; טרום-שוק ~257.45 (~+2.1%) — סביר. ACVA 10.41 → ~10.43 ליד הצעת הרכש במזומן $10.50; CPRT 29.95 → ~30.25 (~+1.0%). AAPL ~332.55 (שטוח); NVDA ~212.89 (~−2.5%); MSFT ~498.80 (~+0.6%). ברים של 1 דקה, לא שדה preMarketPrice. אין קנייה/מכירה/יעד.",
+       "en": "ORCL Friday cash 150.28 (−1.74% vs Thursday) — Confirmed; Monday pre bar ~142.80 (~−5.0% vs Fri) ~15:28 (08:28 ET) — Likely. ADBE Friday cash 252.23 (+1.37%) — Confirmed; Monday pre ~257.45 (~+2.1%) — Likely. ACVA 10.41 → ~10.43 near the $10.50 cash tender; CPRT 29.95 → ~30.25 (~+1.0%). AAPL ~332.55 (flat); NVDA ~212.89 (~−2.5%); MSFT ~498.80 (~+0.6%). 1-minute bars, not a native preMarketPrice field. No buy/sell/target."
+      }
+     ],
+     "why": {
+      "he": "הצלצול יורש עיכול אורקל מול ניגוד אדובי ועסקה ליד מחיר — עם אחוז טרום-שוק מסומן סביר, לא מאומת.",
+      "en": "The bell inherits Oracle digestion versus an Adobe contrast and a deal near price — with Monday pre % labeled Likely, not Confirmed."
+     }
+    },
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "המשך",
+        "en": "CONTINUATION"
+       },
+       "level": "continuation"
+      },
+      {
+       "kind": "source",
+       "text": "Fed.gov"
+      },
+      {
+       "kind": "source",
+       "text": "FXStreet / CME"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "יומן — מאומת",
+        "en": "Calendar — Confirmed"
+       },
+       "level": "confirmed"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "FedWatch — סביר (משני)",
+        "en": "FedWatch — Likely (secondary)"
+       },
+       "level": "likely"
+      }
+     ],
+     "headline": {
+      "he": "שבוע הפד: מכירות קמעונאיות והחלטה ביום ד׳ — FedWatch לא מאומת ראשי",
+      "en": "Fed week: retail sales and the decision Wednesday — FedWatch not Confirmed primary"
+     },
+     "body": [
+      {
+       "he": "יום ד׳ 15:30 (08:30 ET) מכירות קמעונאיות אוגוסט; 21:00 (14:00 ET) החלטת FOMC / SEP / נקודות; 21:30 (14:30 ET) מסיבת עיתונאים. FXStreet מצטט CME ~87% להעלאה של 25 נקודות בסיס — סביר, משני, לא מאומת ראשי. CPI אוגוסט כבר הודפס ביום ו׳. אין קנייה/מכירה/יעד.",
+       "en": "Wednesday 15:30 (08:30 ET) August retail sales; 21:00 (14:00 ET) FOMC decision / SEP / dots; 21:30 (14:30 ET) press conference. FXStreet cites CME ~87% for a 25 bp hike — Likely, secondary, not Confirmed primary. August CPI already printed Friday. No buy/sell/target."
+      }
+     ],
+     "why": {
+      "he": "היומן נקוב — הסיכוי נשאר משני.",
+      "en": "The calendar is named — the odds stay secondary."
+     }
+    }
+   ]
+  }
+ },
+ "ai": {
+  "dek": [
+   {
+    "he": "DeepSeek משחררת V4.1-Flash (552B) ומפעילה את ה־Pro; Anthropic מפרסמת דוח ניצול Claude המפורט ביותר; OpenAI משחררת ChatGPT לשירותים פיננסיים; מטמון KV קל פי ארבעה; GPT-Live-1 לקול דו־כיווני.",
+    "en": "DeepSeek ships V4.1-Flash (552B) and retires Pro; Anthropic’s most detailed Claude-misuse report; OpenAI ChatGPT for Financial Services; 4× lighter KV cache; GPT-Live-1 for simultaneous voice."
+   }
+  ],
+  "stories": [
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "DeepSeek משחררת V4.1-Flash עם 552B פרמטרים — מנצחת את ה־Pro שלה ואז מוציאה אותו לגמלאות",
+     "en": "DeepSeek ships V4.1-Flash (552B) — beats its own Pro, then retires it"
+    },
+    "body": [
+     {
+      "he": "לפי Alpha Signal (11 בספטמבר), DeepSeek השיקה את V4.1-Flash: מודל MoE עם כ־552 מיליארד פרמטרים, שמפעיל רק כ־8B בקריאת הקלט ו־16B בכתיבת הפלט. לפי הדיווח הוא עוקף את V4-Pro במהירות, עלות וביצועים — ולכן V4-Pro יוצא לגמלאות. המודל רואה תמונות באופן מובנה, מדורג #1 ב־Terminal-Bench 2.1 מול Claude Opus 5 ו־GPT-5.6 לפי הדיווח, והמטמון (KV) דורש כ־4× פחות RAM ו־8× פחות אחסון. תמחור מחוץ לשעות השיא זול ב־50%; ב־API השם הוא deepseek-flash (שמות ישנים מנותבים אליו).",
+      "en": "Per Alpha Signal (Sep 11), DeepSeek shipped V4.1-Flash: a ~552B MoE model that activates only ~8B parameters on input and ~16B on output. The write-up says it beats V4-Pro on speed, cost, and performance — so V4-Pro is being retired. It sees images natively, ranks #1 on Terminal-Bench 2.1 ahead of Claude Opus 5 and GPT-5.6 per the report, and needs ~4× less RAM and ~8× less storage for the KV cache. Off-peak pricing is cut 50%; the API name is deepseek-flash (old names still route there)."
+     }
+    ],
+    "why": {
+     "he": "דגל ״החכם״ של אותו ספק נעלם כשה־Flash הזול עוקף אותו — הלחץ על מחירי מודלים קנייניים עולה.",
+     "en": "A vendor’s own “smart” tier vanishes when its cheaper Flash beats it — pressure on proprietary model pricing rises."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (11 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-11)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "Anthropic מפרסמת את דוח ניצול־הלרע המפורט ביותר של Claude — שבעה תחומי נזק, כולם נעצרו",
+     "en": "Anthropic’s most detailed Claude-misuse report — seven harm areas, all disrupted"
+    },
+    "body": [
+     {
+      "he": "Alpha Signal דיווח (11 בספטמבר) שאנתרופיק פרסמה את המבט המפורט ביותר עד כה על ניסיונות לנצל את Claude: שבעה תחומים — סייבר, השפעה, מעקב, הונאות, שימוש ביולוגי דו־שימושי, פיתוח נשק, וגניבת מודל. לפי הדיווח, תוקפים השתמשו ב־Claude לא רק כייעוץ אלא לביצוע התקפות; קבוצה שיוחסה לסין חדרה לכ־30 יעדים גלובליים; באירוע אחד Claude דירג פוסטים לפי רגישות פוליטית וסימן אנשים לבקרה ממשלתית. המסר: AI מוחק את יתרון המיומנות שהפריד פעם בין האקרים מדינתיים לעבריינים בודדים. כל המבצעים שתוארו נעצרו, ההגנות הוחמרו, ומידע שותף עם רשויות.",
+      "en": "Alpha Signal reported (Sep 11) that Anthropic published its most detailed look yet at attempts to weaponize Claude across seven harm areas: cyber ops, influence, surveillance, scams/fraud, dual-use biological misuse, weapons development, and model theft. Attackers used Claude not only as an advisor but to execute attacks; a suspected China-linked group infiltrated ~30 global targets; in one case Claude scored social posts by political sensitivity and flagged people for government control. The point: AI has erased the skill gap that once separated state hackers from lone criminals. Every described operation was disrupted, safeguards tightened, and intelligence shared with authorities."
+     }
+    ],
+    "why": {
+     "he": "בטיחות מודל כבר לא PR — זה דו״ח מבצעים שמקשר שימוש לרע לסייבר ולמעקב מדינתי.",
+     "en": "Model safety is no longer PR — it is an ops report tying misuse to cyber and state surveillance."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (11 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-11)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "OpenAI משחררת ChatGPT לשירותים פיננסיים עם GPT-6 ונתוני שוק חיים",
+     "en": "OpenAI ships ChatGPT for Financial Services with GPT-6 and live market data"
+    },
+    "body": [
+     {
+      "he": "לפי Alpha Signal (11 בספטמבר), OpenAI השיקה ChatGPT for Financial Services — סביבת עבודה ייעודית על GPT-6 Astra, שנבנתה עם Morgan Stanley ו־Evercore. במקום לחבר מקורות בנפרד, כלולים מהקופסה נתונים מ־Daloopa, PitchBook, LSEG News ו־Crunchbase (תמלילי רווחים, דוחות כספיים, מידע על חברות פרטיות); הערות מחקר, מודלים פיננסיים ו־pitchbooks ניתנים לעריכה על תבניות Excel/Word/PowerPoint של הפירמה; וציטוטים גרנולריים שמחזירים כל מספר לפסקה או לטבלה המדויקת. GPT-6 Astra כוונן לשליפה, חשיבה פיננסית ויצירת ארטיפקטים. גישה למוסדות כשירים דרך מכירות OpenAI; מחיר לא פורסם.",
+      "en": "Per Alpha Signal (Sep 11), OpenAI launched ChatGPT for Financial Services — a dedicated workspace on GPT-6 Astra, built with Morgan Stanley and Evercore. Instead of stitching connectors, built-in data from Daloopa, PitchBook, LSEG News, and Crunchbase covers earnings transcripts, financials, and private-company info; research notes, models, and pitchbooks edit against the firm’s own Excel/Word/PowerPoint templates; granular citations trace every figure to the exact paragraph or table. GPT-6 Astra is tuned for retrieval, financial reasoning, and artifact generation. Eligible institutions get access via OpenAI sales; pricing unpublished."
+     }
+    ],
+    "why": {
+     "he": "וול סטריט מקבלת AI עם נתונים מובנים וציטוטים — לא עוד צ׳אט גנרי על גבי קבצים שהועלו ידנית.",
+     "en": "Wall Street gets AI with built-in data and citations — not another generic chat bolted onto uploaded files."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (11 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-11)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "DeepSeek: מודל כמעט כפול בגודל — עם מטמון KV קל פי ארבעה",
+     "en": "DeepSeek’s efficiency playbook: nearly 2× bigger model, 4× lighter KV cache"
+    },
+    "body": [
+     {
+      "he": "ב־Sunday Deep Dive של Alpha Signal (13 בספטמבר) פורט איך V4.1-Flash (יצא 10 בספטמבר) מפריד קיבולת מעלות הגשה: כמעט כפול מגודל V4-Flash אך עם כ־890 בתים לטוקן במטמון KV לעומת ~3,514 ב־V4-Flash. ארכיטקטורת Causal Encoder-Decoder (20 שכבות קידוד + 20 פענוח) מפעילה רק 8B על קלט ו־16B על פלט; Sliding-Window Attention עם Bounded Replay מצמצם שחזור מצב מקומי; Compressed Sparse Attention 2 משתף זיכרון היסטורי בין שכבות; ואינדקס היררכי מגביל את עלות החיפוש בחלון של עד מיליון טוקנים. לפי הדיווח זה כרבע מדרישת HBM של V4-Flash ושמינית מאחסון SSD של המטמון — קריטי לסוכנים עם הקשר ארוך.",
+      "en": "In Alpha Signal’s Sunday Deep Dive (Sep 13), V4.1-Flash (released Sep 10) separates model capacity from serving cost: nearly twice V4-Flash’s size yet ~890 bytes of KV cache per token vs ~3,514 for V4-Flash. A Causal Encoder-Decoder (20 encoder + 20 decoder layers) activates only 8B on input and 16B on output; Sliding-Window Attention with Bounded Replay cheaply rebuilds local state; Compressed Sparse Attention 2 shares historical memory across layers; a hierarchical indexer bounds search cost over up to a million-token window. The write-up pegs HBM need at ~¼ of V4-Flash and SSD cache storage at ~⅛ — decisive for long-running agents."
+     }
+    ],
+    "why": {
+     "he": "מספר הפרמטרים כבר לא מנבא עלות — מה שקובע הוא כמה זיכרון הקשר נשאר חי בין קריאות סוכן.",
+     "en": "Parameter count no longer predicts cost — what matters is how much context memory stays alive between agent calls."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (13 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-13)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "OpenAI משחררת GPT-Live-1 — סוכני קול שמקשיבים ומדברים באותו זמן",
+     "en": "OpenAI ships GPT-Live-1 — voice agents that listen and speak at once"
+    },
+    "body": [
+     {
+      "he": "Alpha Signal ציין (11 בספטמבר) ש־OpenAI השיקה את GPT-Live-1 API — ממשק שמאפשר לסוכני קול להקשיב ולדבר בו־זמנית, במקום תורות שיחה קשיחים של ״דבר־ואז־המתן״. זה מסמן מעבר מסוכני טקסט עם תוסף דיבור לסוכנים שנבנים מראש לשיחה רציפה בזמן אמת.",
+      "en": "Alpha Signal flagged (Sep 11) that OpenAI shipped the GPT-Live-1 API so voice agents can listen and speak simultaneously, instead of rigid turn-taking. It marks a shift from text agents with a speech bolt-on toward agents designed for continuous real-time conversation."
+     }
+    ],
+    "why": {
+     "he": "שיחה דו־כיוונית בזמן אמת היא הבסיס לסוכן קולי שמרגיש כמו שיחה — לא כמו הקלטה.",
+     "en": "Simultaneous listen-and-speak is the baseline for a voice agent that feels like a conversation — not a recording."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (11 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-11)"
+     }
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "he": "Reuters (דחיית סלאלה + רשימת 77 אוניות — מאומת; תנועת סוף שבוע בספרות בודדות — מאומת) · Reuters (טענת חות׳ים לחמיס מושייט + התרעות — מאומת; נזק — לא מאומת) · Reuters (צינור עדיין סגור + שעון ינבוע 5–7 — מאומת; פתיחה — סגור לכישלון) · CNN (יאהודין / פטראוס — מאומת כפגיעה וקרבה; יעד מכוון — סביר) · Reuters (דיזל / זלנסקי — מאומת כציטוט) · AP / CNBC (הסכמת אתיקה CLARITY + יומן יום ג׳ — מאומת; תוצאת מליאה — לא מאומת) · CNBC / Guardian (קריאת האטת AI + חוטים — מאומת) · Anadolu / Arab News (כץ לחסל / עלי א-טאהר — מאומת כציטוט) · Reuters (Viasat / Space42 / Equatys עד $1B — מאומת) · Yahoo (חוזים ~08:18 ET; מזומן יום ו׳ מסומן; טרום-שוק יום ב׳ % סביר) · BLS (CPI אוגוסט) · FXStreet / CME FedWatch ~87% — סביר בלבד · Alpha Signal (דיג׳סט AI מיום ב׳ נשמר)",
+   "en": "Reuters (Salalah postpone + 77-ship list — Confirmed; weekend traffic in single digits — Confirmed) · Reuters (Houthi Khamis Mushait claim + alerts — Confirmed; damage — Unverified) · Reuters (East-West still shut + Yanbu 5–7 clock — Confirmed; reopen — ) · CNN (Yahodyn / Petraeus — Confirmed as strike + proximity; intended target — Likely) · Reuters (diesel / Zelenskyy — Confirmed as quote) · AP / CNBC (CLARITY ethics agreement + Tue calendar — Confirmed; floor outcome — Unverified) · CNBC / Guardian (AI slowdown call + wires — Confirmed) · Anadolu / Arab News (Katz eliminate / Ali al-Taher — Confirmed as quote) · Reuters (Viasat / Space42 / Equatys up to $1B — Confirmed) · Yahoo (futures ~08:18 ET; Friday cash labeled; Monday pre % Likely) · BLS (Aug CPI) · FXStreet / CME FedWatch ~87% — Likely only · Alpha Signal (Monday AI digest kept)"
+  }
+ ],
+ "footer": [
+  {
+   "he": "תידרוך חינוכי, לא ייעוץ השקעות. מהדורת אחר הצהריים — חדשות + שווקים / טרום-שוק. חוזים Yahoo ~15:18 (08:18 ET), לא מזומן יום ב׳. פתיחת מזומן 16:30 (09:30 ET). אין מזג אוויר. דיג׳סט AI מיום ב׳ נשמר. FedWatch ~87% סביר בלבד, לא מאומת ראשי. לא יוצגו נתונים מומצאים.",
+   "en": "Educational briefing, not investment advice. Afternoon edition — news plus Markets / Pre-market. Yahoo futures ~15:18 (08:18 ET), not Monday cash. Cash open 16:30 (09:30 ET). No weather strip. Monday AI digest kept. FedWatch ~87% Likely only, not Confirmed primary. No invented data."
+  },
+  {
+   "he": "Reuters (דחיית סלאלה + רשימת 77 אוניות — מאומת; תנועת סוף שבוע בספרות בודדות — מאומת) · Reuters (טענת חות׳ים לחמיס מושייט + התרעות — מאומת; נזק — לא מאומת) · Reuters (צינור עדיין סגור + שעון ינבוע 5–7 — מאומת; פתיחה — סגור לכישלון) · CNN (יאהודין / פטראוס — מאומת כפגיעה וקרבה; יעד מכוון — סביר) · Reuters (דיזל / זלנסקי — מאומת כציטוט) · AP / CNBC (הסכמת אתיקה CLARITY + יומן יום ג׳ — מאומת; תוצאת מליאה — לא מאומת) · CNBC / Guardian (קריאת האטת AI + חוטים — מאומת) · Anadolu / Arab News (כץ לחסל / עלי א-טאהר — מאומת כציטוט) · Reuters (Viasat / Space42 / Equatys עד $1B — מאומת) · Yahoo (חוזים ~08:18 ET; מזומן יום ו׳ מסומן; טרום-שוק יום ב׳ % סביר) · BLS (CPI אוגוסט) · FXStreet / CME FedWatch ~87% — סביר בלבד · Alpha Signal (דיג׳סט AI מיום ב׳ נשמר)",
+   "en": "Reuters (Salalah postpone + 77-ship list — Confirmed; weekend traffic in single digits — Confirmed) · Reuters (Houthi Khamis Mushait claim + alerts — Confirmed; damage — Unverified) · Reuters (East-West still shut + Yanbu 5–7 clock — Confirmed; reopen — ) · CNN (Yahodyn / Petraeus — Confirmed as strike + proximity; intended target — Likely) · Reuters (diesel / Zelenskyy — Confirmed as quote) · AP / CNBC (CLARITY ethics agreement + Tue calendar — Confirmed; floor outcome — Unverified) · CNBC / Guardian (AI slowdown call + wires — Confirmed) · Anadolu / Arab News (Katz eliminate / Ali al-Taher — Confirmed as quote) · Reuters (Viasat / Space42 / Equatys up to $1B — Confirmed) · Yahoo (futures ~08:18 ET; Friday cash labeled; Monday pre % Likely) · BLS (Aug CPI) · FXStreet / CME FedWatch ~87% — Likely only · Alpha Signal (Monday AI digest kept)"
+  },
+  {
+   "he": "תידרוך חינוכי, לא ייעוץ השקעות. מהדורת אחר הצהריים — חדשות + שווקים / טרום-שוק. חוזים Yahoo ~15:18 (08:18 ET), לא מזומן יום ב׳. פתיחת מזומן 16:30 (09:30 ET). אין מזג אוויר. דיג׳סט AI מיום ב׳ נשמר. FedWatch ~87% סביר בלבד, לא מאומת ראשי. לא יוצגו נתונים מומצאים.",
+   "en": "Educational briefing, not investment advice. Afternoon edition — news plus Markets / Pre-market. Yahoo futures ~15:18 (08:18 ET), not Monday cash. Cash open 16:30 (09:30 ET). No weather strip. Monday AI digest kept. FedWatch ~87% Likely only, not Confirmed primary. No invented data."
+  }
+ ]
+})

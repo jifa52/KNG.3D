@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archive · The Daily Jenya</title>
+  <link rel="canonical" href="archive/">
+  <meta http-equiv="refresh" content="0; url=archive/">
+  <script>
+    (function () {
+      var seg = location.pathname.split("/").filter(Boolean)[0];
+      var base = location.hostname.slice(-10) === ".github.io" && seg && seg !== "archive.html" ? "/" + seg + "/" : "";
+      var dest = (base || "") + "archive/";
+      if (!base && location.pathname.indexOf("/archive.html") !== -1) dest = "archive/";
+      location.replace(dest);
+    })();
+  </script>
+</head>
+<body>
+  <p><a href="archive/">ארכיון · Archive</a></p>
+</body>
+</html>

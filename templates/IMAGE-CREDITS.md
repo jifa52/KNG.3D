@@ -1,31 +1,17 @@
-# Image credits — {{edition date and clock}}
+# Image credits — {{edition date and time}}
 
-Copy this file into `briefings/YYYY-MM-DD-HHMM/IMAGE-CREDITS.md` when the edition embeds a photograph. Link it from the edition footer. One block per file that is actually on the page. If a story has no licensed picture, leave that story text-first: do not add a gray placeholder, and do not list a file here.
+Copy this file into `briefings/YYYY-MM-DD-HHMM/IMAGE-CREDITS.md`. Every card has a picture, so this file is required. Set `"credits": "IMAGE-CREDITS.md"` in `edition.js`. One block per file on the page. A section copied from an earlier edition keeps its pictures, so copy those blocks forward too. Delete these instructions and every `{{…}}` before publishing.
 
-There is no image-fetch step in the publish path. A picture is placed by hand, only after the license, the creator, and the caption are known.
+## {{section}} — {{story headline, short}}
 
-The publish template keeps a `figure.photo` on the lead and a `figure.photo.photo--support` on each of the two supports. When a Markets or AI drop does not replace those stories, copy this file forward with the same rows. Do not publish a text-only front by omitting the figures.
+- File: `assets/images/{{file}}.jpg` ({{width}}×{{height}})
+- Shows: {{what the picture shows, where, and the year it was taken}}
+- Creator: {{name}}
+- License: {{e.g. CC BY 2.0, or Public domain}} — {{license URL}}
+- Page: {{Wikimedia Commons or source page URL}}
 
-## {{lead or support}} — {{what the picture shows}}
+## Illustrations
 
-- File: `assets/images/{{file}}` (shared) or `briefings/YYYY-MM-DD-HHMM/images/{{file}}` (this edition only)
-- What it shows:
-- Why it may not be the event itself:
-- Creator:
-- Source:
-- License:
-- Page:
-
-## Quiet card or AI item — illustration
-
-- File: `assets/images/{{file}}`
-- What it shows:
-- Why it is not the event: generated illustration, kept in this file, not written under the picture. The caption on the page is only **המחשה (AI)** / **AI Illustration**, under the image. There is no badge.
-- Creator: desk illustration for this edition
-- License: prepared for The Daily Jenya. Not a wire photograph.
-- Page:
-
-## Not used
-
-- Name each pictured story that stays text-first, and why a generic or unlicensed image was refused.
-- No chart, heatmap, or generated news photograph.
+- File: `assets/images/{{file}}.jpg`
+- Shows: {{what it depicts}}
+- Generated illustration for The Daily Jenya. The page label is only "המחשה (AI)" / "AI Illustration". Not a photograph of the event or of a real person.

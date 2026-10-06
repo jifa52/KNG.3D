@@ -1,0 +1,1171 @@
+DJ.edition({
+ "v": 2,
+ "id": "2026-09-11-1545",
+ "date": "2026-09-11",
+ "time": "15:45",
+ "et": "08:45",
+ "slot": "markets",
+ "legacy": "cards",
+ "headline": {
+  "he": "הורמוז: שבעה מעברים ביום ה׳; FT: שיחות סלאלה — סביר / Reuters לא אימת.",
+  "en": "Hormuz: seven Thursday transits; FT Salalah talks — Probable / Reuters unverified."
+ },
+ "summary": {
+  "he": "AFP: חות׳ים משלימים באב אל-מנדב / מיוּן (פרימ); IEA: נפט סעודי 6 מיליון ח״י. נאמני GOP תוהים על ביניים סביב טראמפ. אלג׳יריה מנתקת קשרים עם האמירויות. CPI אוגוסט מאומת: +0.4% / +3.4%.",
+  "en": "AFP: Houthis complete Bab al-Mandab / Mayyun (Perim); IEA Saudi crude 6 mbpd. GOP loyalists question Trump-centric midterms. Algeria severs UAE ties. Confirmed Aug CPI +0.4% / +3.4%."
+ },
+ "contents": {
+  "he": "אחר הצהריים · חדשות · שווקים · טרום-שוק · AI",
+  "en": "Afternoon · News · Markets · Pre-market · AI"
+ },
+ "clock": "15:45 (08:45 ET)",
+ "notes": [
+  {
+   "label": {
+    "he": "נכון ל-",
+    "en": "Cut-off"
+   },
+   "text": {
+    "he": "~15:45 (08:45 ET) — חדשות + שווקים / טרום-שוק אחרי CPI לתוך פתיחת המזומן",
+    "en": "~15:45 (08:45 ET) — news + Markets / Pre-market after CPI into US cash open"
+   }
+  }
+ ],
+ "news": {
+  "dek": [
+   {
+    "he": "הורמוז: שבעה מעברים ביום ה׳; FT: שרי חוץ של המפרץ מול איראן בסלאלה ביום ב׳ — סביר / Reuters לא אימת. AFP: חות׳ים משלימים השתלטות על באב אל-מנדב ומיוּן (פרימ); IEA: אספקת נפט סעודי 6 מיליון ח״י באוגוסט. נאמני GOP תוהים על ביניים סביב טראמפ; ספקנות לדיבידנד 5,000 דולר. אלג׳יריה מנתקת קשרים עם האמירויות וסוגרת מרחב אווירי. עלי א-טאהר + בית לאהיה. סין: קיצוצי מכס 30 מיליארד דולר.",
+    "en": "Hormuz: seven Thursday transits; FT: Gulf FMs meet Iran in Salalah Monday — Probable / Reuters unverified. AFP: Houthis complete Bab al-Mandab and Mayyun (Perim); IEA Saudi crude supply 6 mbpd in August. GOP loyalists question Trump-centric midterms; $5,000 dividend skepticism. Algeria severs UAE ties and closes airspace. Ali al-Taher + Beit Lahia. China $30bn tariff cuts."
+   }
+  ],
+  "stories": [
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "source",
+      "text": "FT"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "תנועה 7 ביום ה׳ — מאומת",
+       "en": "Thursday traffic 7 — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "שיחות סלאלה — סביר",
+       "en": "Salalah talks — Probable"
+      },
+      "level": "likely"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "FT / Reuters לא אימת",
+       "en": "FT / Reuters unverified"
+      },
+      "level": "unverified"
+     }
+    ],
+    "headline": {
+     "he": "הורמוז: שבעה מעברים ביום ה׳; FT: שיחות סלאלה על הסדר שיט זמני — סביר / Reuters לא אימת",
+     "en": "Hormuz: seven transits Thursday; FT: Salalah talks on a temporary shipping deal — Probable / Reuters unverified"
+    },
+    "body": [
+     {
+      "he": "נתוני שיט ראשוניים של Reuters ביום ו׳: שבעה מעברים במיצר הורמוז (Strait of Hormuz) ביום ה׳ מול 11 ביום ד׳ וממוצע של 15 בעשרה ימים — עדיין ספרות בודדות. כלי שיט עם משדר AIS (Automatic Identification System — משדר זהות ומיקום) כבוי אינם נספרים. שניים יצאו (Panamax עם דשן ואחד בלי מטען); חמישה נכנסו — כולל פלדה, תבואה ומוצרי נפט מלוכלכים. Financial Times דיווח, לפי שני אנשים שקיבלו תדרוך, ששרי החוץ של מועצת שיתוף הפעולה של המפרץ (GCC) אמורים להיפגש עם עמיתו האיראני ביום ב׳, 14 בספטמבר, בעיר החוף העומאנית סלאלה (Salalah), ביוזמת עומאן, לתמיכה בהסדר זמני לניהול השיט; מקור אחד אמר שהפרטים עדיין נסגרים אך כמה מדינות אישרו השתתפות. Reuters כתב שלא יכול היה לאמת מיידית את דיווח ה־FT. דיפלומטים הזהירו שפתיחה מלאה תדרוש הסכם ארה״ב–איראן. ארה״ב אמרה שהשמידה חמש מכליות נפט איראניות — השמדה אינה טביעה לכל הכלים. אין כאן הדפסי חביות — רמות הנפט בלשונית השווקים.",
+      "en": "Reuters preliminary shiptracking on Friday: seven Hormuz (מיצר הורמוז) transits Thursday versus 11 on Wednesday and a 10-day average of 15 — still single digits. AIS-off (Automatic Identification System — identity/position transponder) crossings are not counted. Two exited (a fertiliser Panamax and one in ballast); five entered — including steel, grain and dirty petroleum products. The Financial Times reported, citing two people briefed, that Gulf Cooperation Council (GCC / מועצת שיתוף הפעולה של המפרץ) foreign ministers are due to meet their Iranian counterpart on Monday, Sep 14, in Oman’s coastal city of Salalah (סלאלה), an Omani initiative, to back a temporary arrangement for shipping; one source said details were still being finalised but several countries had confirmed. Reuters wrote it could not immediately verify the FT report. Diplomats cautioned a full reopening would require a US–Iran deal. The US said it destroyed five Iranian crude carriers — destroy is not a sink for every hull. No barrel prints — oil levels live on Markets."
+     }
+    ],
+    "why": {
+     "he": "אותו צוואר בקבוק נשאר בספרות בודדות, ועכשיו יש מסלול מדיני נקוב — שעדיין לא אומת בסוכנות.",
+     "en": "The same chokepoint stays in single digits, and a named diplomatic track is now on the board — still unverified on the wire."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.reuters.com/world/middle-east/hormuz-shipping-traffic-falls-single-digits-data-shows-2026-09-11/\">Reuters תנועה (11 בספטמבר)</a> · <a href=\"https://www.jpost.com/middle-east/iran-news/article-908367\">FT דרך JPost / Reuters (לא מאומת)</a> · <a href=\"https://www.ft.com/content/b3e4d264-55f0-485e-8e1a-0ba0cbe006b6\">FT</a>",
+      "en": "Sources: <a href=\"https://www.reuters.com/world/middle-east/hormuz-shipping-traffic-falls-single-digits-data-shows-2026-09-11/\">Reuters traffic (Sep 11)</a> · <a href=\"https://www.jpost.com/middle-east/iran-news/article-908367\">FT via JPost / Reuters (unverified)</a> · <a href=\"https://www.ft.com/content/b3e4d264-55f0-485e-8e1a-0ba0cbe006b6\">FT</a>"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "AFP"
+     },
+     {
+      "kind": "source",
+      "text": "IEA"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "גורם ממשל תימן ל־AFP / IEA — מאומת כמיוחס",
+       "en": "Yemeni official to AFP / IEA — Confirmed as attributed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "AFP: חות׳ים משלימים השתלטות על באב אל-מנדב ומיוּן (פרימ); IEA: אספקת נפט סעודי 6 מיליון ח״י",
+     "en": "AFP: Houthis complete Bab al-Mandab and Mayyun (Perim) takeover; IEA: Saudi crude supply 6 mbpd"
+    },
+    "body": [
+     {
+      "he": "גורם מקומי בממשלת תימן הנתמכת בסעודיה אמר ל־AFP ביום ו׳ שהחות׳ים (Houthis) ״השלימו את ההשתלטות על אזור באב אל-מנדב (Bab al-Mandab — ״שער הדמעות״) ועל האי מיוּן״ — Mayyun, הידוע גם כפרימ (Perim / האי פֶּרים) — בלב המצר. הגורם, בעילום שם, אמר שסירות עם לוחמים חמושים הגיעו למיוּן אחרי שכוחות הממשלה נסוגו אתמול; עד ראייה אמר ל־AFP שחמושים נפרסים לאורך החוף ונוסעים ברכב צבאי. AFP כתב שההתקפה נמשכה כשבוע והותירה מאות הרוגים, אחרי כיבוש מוח׳א (Mocha) ואי זוקר ביום ה׳. מקורות צבאיים אמרו ל־AFP שהחות׳ים מטילים מצור על כוחות ממשלה באיי חניש. בנפרד דיווח Reuters, לפי הסוכנות הבינלאומית לאנרגיה (IEA), שאספקת הנפט הגולמי הסעודי (crude supply — יצוא כולל טעינות ממלאים, בתוספת שימוש מקומי בבתי זיקוק ובתחנות כוח) ירדה ב־2.3 מיליון חביות ליום ל־6 מיליון ח״י באוגוסט — השפל ביותר ביותר משלושה עשורים — אחרי תקיפות על מתקני אנרגיה סעודיים. אין כאן הדפסי חביות של ברנט/WTI.",
+      "en": "A local official with Yemen’s Saudi-backed government told AFP on Friday that the Houthis (חות׳ים) had “completed their takeover of the Bab al-Mandab (באב אל-מנדב — “Gate of Tears”) area and Mayyun Island” — also known as Perim (פרימ / האי פֶּרים) — in the middle of the strait. The official, speaking anonymously, said boats carrying armed fighters reached Mayyun after government forces withdrew Thursday; a witness told AFP gunmen were deploying along the shore and driving in military vehicles. AFP wrote the week-long offensive left hundreds dead, after Mocha (מוח׳א) and Zuqar island fell Thursday. Government military sources told AFP the Houthis have besieged government troops on the Hanish islands. Separately Reuters reported the International Energy Agency (IEA / הסוכנות הבינלאומית לאנרגיה) said Saudi crude supply (אספקת נפט גולמי — exports including loadings from storage, plus domestic refinery and power use) fell 2.3 million barrels per day to 6 million bpd in August — the lowest in more than three decades — after attacks on Saudi energy facilities. No Brent/WTI barrel prints on this card."
+     }
+    ],
+    "why": {
+     "he": "צוואר בקבוק שני נסגר בפועל לפי מקור ממשל, בזמן שה־IEA מדפיס שפל אספקה סעודי — בלי לפתוח מחירי נפט בחדשות.",
+     "en": "A second chokepoint is now described as complete by a government source, as the IEA prints a Saudi supply low — without opening oil prices on News."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.france24.com/en/live-news/20260911-yemen-s-houthis-complete-takeover-of-bab-al-mandab-area-govt-official-to-afp\">AFP דרך France 24</a> · <a href=\"https://www.afp.com/en/yemens-houthis-take-over-strait-vital-to-global-shipping\">AFP</a> · <a href=\"https://boereport.com/2026/09/11/saudi-oil-supply-hits-more-than-three-decade-low-after-houthi-attacks-iea-says/\">IEA דרך Reuters / BOE Report</a> (11 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.france24.com/en/live-news/20260911-yemen-s-houthis-complete-takeover-of-bab-al-mandab-area-govt-official-to-afp\">AFP via France 24</a> · <a href=\"https://www.afp.com/en/yemens-houthis-take-over-strait-vital-to-global-shipping\">AFP</a> · <a href=\"https://boereport.com/2026/09/11/saudi-oil-supply-hits-more-than-three-decade-low-after-houthi-attacks-iea-says/\">IEA via Reuters / BOE Report</a> (Sep 11)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "ראיונות / ציטוטים — מאומת",
+       "en": "Interviews / quotes — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "דיבידנד / מימון / חוק — לא מאומת",
+       "en": "Dividend / funding / legality — Unverified"
+      },
+      "level": "unverified"
+     }
+    ],
+    "headline": {
+     "he": "נאמני GOP תוהים על ביניים סביב טראמפ; ספקנות לדיבידנד 5,000 דולר באותה חבילה",
+     "en": "GOP loyalists question a Trump-centric midterms; $5,000 dividend skepticism in the same bundle"
+    },
+    "body": [
+     {
+      "he": "Reuters דיווח ביום ו׳ מדאלאס שהנשיא דונלד טראמפ ביקש מהמצביעים בכינוס הביניים הראשון של המפלגה ״להעמיד פנים שאני על הפתק״ (״pretend that I'm on the ballot״) — להפוך את בחירות האמצע (midterms, 3 בנובמבר) למשאל על עצמו. הסוכנות דיברה עם 15 רפובליקנים מנאמנים, תורמים ופעילים; חמישה הביעו ספק אם טראמפ, העמוס באינפלציה ובמלחמת איראן, הוא השליח החזק במחוזות תחרותיים. תורם מוושינגטון, לן הריטג׳, אמר: ״הוא בהחלט מלהיב את הבסיס… אבל אני לא בטוח לגמרי שהמסר הזה יעבוד לכולם.״ עשרה מתוך ה־15 עדיין תמכו באסטרטגיה. סקר Reuters/Ipsos ב־28–31 באוגוסט: אישור כללי 33% — השפל בכהונה; עצמאיים 22%. מועמדים פגיעים נעדרו, ובהם הסנאטורים סוזן קולינס ודן סאליבן והחבר תום בארט. באותה חבילה הבטיח טראמפ ״דיבידנד טראמפ״ (Trump dividend) של 5,000 דולר לכל מבוגר אם המפלגה תשמור על הקונגרס — בלי מימון; Washington Post כתב על ספקנות רפובליקנית סביב עלות של יותר מטריליון דולר ואינפלציה; הח״כ צ׳יפ רוי כינה תלות ״רעה ושואבת נשמה״. המימון והחוקיות לא מאומתים. אין כאן הדפסי מדדים.",
+      "en": "Reuters reported Friday from Dallas that President Donald Trump asked voters at the party’s first midterm convention to “pretend that I’m on the ballot” — to treat the midterms (בחירות האמצע, Nov 3) as a referendum on him. The agency spoke to 15 Republicans among the most engaged supporters, donors and activists; five doubted whether a president weighed down by inflation and the Iran war was the strongest messenger in competitive races. Washington-state donor Len Heritage said: “He’s definitely energizing the base… but I’m not entirely sure if this pitch is going to work for everybody.” Ten of the 15 still backed the strategy. A Reuters/Ipsos poll Aug 28–31: overall approval 33% — the lowest of his presidency; independents 22%. Vulnerable candidates stayed away, including Sens. Susan Collins and Dan Sullivan and Rep. Tom Barrett. In the same bundle Trump promised a $5,000 “Trump dividend” (דיבידנד טראמפ) for every US adult if the GOP keeps Congress — no funding named; the Washington Post wrote of Republican skepticism around a cost above $1 trillion and inflation; Rep. Chip Roy called dependency “evil &amp; soul-sucking.” Funding and legality Unverified. No index prints on this card."
+     }
+    ],
+    "why": {
+     "he": "הספק מגיע מנאמנים, לא מהאופוזיציה — ושובר ה־5,000 דולר נשאר בלי מימון מאומת.",
+     "en": "The doubt is coming from loyalists, not the opposition — and the $5,000 payout still has no verified funding."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.reuters.com/world/us/dallas-convention-some-loyalists-question-trump-centric-midterms-strategy-2026-09-11/\">Reuters נאמנים / ביניים (11 בספטמבר)</a> · <a href=\"https://www.washingtonpost.com/business/2026/09/10/many-republicans-skeptical-about-trump-plan-tie-5000-dividends-gop-wins/\">Washington Post דיבידנד</a> · <a href=\"https://thehill.com/homenews/administration/6081142-trump-pledges-five-thousand-dividends/\">The Hill</a> (10 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.reuters.com/world/us/dallas-convention-some-loyalists-question-trump-centric-midterms-strategy-2026-09-11/\">Reuters loyalists / midterms (Sep 11)</a> · <a href=\"https://www.washingtonpost.com/business/2026/09/10/many-republicans-skeptical-about-trump-plan-tie-5000-dividends-gop-wins/\">Washington Post dividend</a> · <a href=\"https://thehill.com/homenews/administration/6081142-trump-pledges-five-thousand-dividends/\">The Hill</a> (Sep 10)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "ניתוק / מרחב אווירי — מאומת",
+       "en": "Sever / airspace — Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "אלג׳יריה מנתקת קשרים דיפלומטיים עם איחוד האמירויות וסוגרת את המרחב האווירי",
+     "en": "Algeria severs diplomatic ties with the UAE and closes its airspace"
+    },
+    "body": [
+     {
+      "he": "התקשורת הממלכתית באלג׳יריה אמרה ביום ה׳ שאלג׳יריה החליטה לנתק יחסים דיפלומטיים עם איחוד האמירויות הערביות (UAE) אחרי ״מיצוי כל האמצעים״ לשמר את הקשרים, דיווח Reuters; הסיבה המיידית לא הייתה ברורה בכתבה האנגלית. בהמשך באותו יום מסרה ערוץ א-נהאר, לפי משרד ההגנה, שאלג׳יריה תסגור את המרחב האווירי (airspace) בפני כל כלי הטיס האזרחיים והצבאיים הרשומים באמירויות מיום ו׳, דיווח Reuters בערבית; החריג: טיסות מסחריות אמירתיות אל נמל התעופה הווארי בומדיין באלג׳יר וממנו עד סוף 2026, מועד פקיעת החוזה. אלג׳יר זימנה את השגריר האמירתי ונתנה לו 48 שעות לצאת. משרד החוץ האלג׳יראי דיבר על ״פעולות פרובוקטיביות או עוינות״ גוברות. אבו דאבי אמרה שהיא מקווה שההחלטה תהיה זמנית כדי לשמר ״קשרים אחוותיים״. אין כאן הדפסי מדדים.",
+      "en": "Algerian state TV said Thursday that Algeria had decided to sever diplomatic relations with the United Arab Emirates (UAE / איחוד האמירויות) after “exhausting all means” to preserve ties, Reuters reported; the immediate reason was not clear in the English dispatch. Later the same day Ennahar TV, citing the defence ministry, said Algeria would close its airspace (מרחב אווירי) to all UAE-registered civilian and military aircraft from Friday, Reuters Arabic reported; the exception: Emirati commercial flights to and from Houari Boumediene Airport in Algiers until the end of 2026, when the current contract expires. Algiers summoned the UAE ambassador and gave him 48 hours to leave. The foreign ministry spoke of increasing “provocative or hostile” actions. Abu Dhabi said it hoped the decision would be temporary to preserve “fraternal ties.” No index prints on this card."
+     }
+    ],
+    "why": {
+     "he": "קרע דיפלומטי ואווירי בין שתי בירות צפון־אפריקה/מפרץ באותו חלון — בלי להמציא את הסיבה שלא פורטה בסוכנות.",
+     "en": "A diplomatic and airspace rupture between a North African capital and a Gulf capital in the same window — without inventing the reason the wire left thin."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.reuters.com/world/middle-east/algeria-cuts-diplomatic-ties-with-uae-algerian-state-tv-says-2026-09-10/\">Reuters ניתוק</a> · <a href=\"https://www.reuters.com/ar/world/KRFCNCHLQ5L2ZFD36POPGWGFKY-2026-09-10/\">Reuters ערבית / מרחב אווירי</a> (10 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.reuters.com/world/middle-east/algeria-cuts-diplomatic-ties-with-uae-algerian-state-tv-says-2026-09-10/\">Reuters sever</a> · <a href=\"https://www.reuters.com/ar/world/KRFCNCHLQ5L2ZFD36POPGWGFKY-2026-09-10/\">Reuters Arabic / airspace</a> (Sep 10)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "Reuters"
+     },
+     {
+      "kind": "source",
+      "text": "AFP"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "עלי א-טאהר / הצהרת נתניהו–כ״ץ — מאומת",
+       "en": "Ali al-Taher / Netanyahu–Katz statement — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "בית לאהיה / בית חולים — מיוחס",
+       "en": "Beit Lahia / hospital — attributed"
+      },
+      "level": "likely"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "צה״ל בודק — לא מאומת",
+       "en": "IDF checking — Unverified"
+      },
+      "level": "unverified"
+     }
+    ],
+    "headline": {
+     "he": "ישראל השמידה מנהרות חיזבאללה בעלי א-טאהר; בית לאהיה: משפחה של ארבעה — צה״ל בודק",
+     "en": "Israel destroyed Hezbollah tunnels at Ali al-Taher; Beit Lahia: family of four — IDF checking"
+    },
+    "body": [
+     {
+      "he": "שני קווים ישראליים באותו חלון יום ה׳ — נשמרים כהמשך, בלי שדרוג מהותי בסוכנות עד הקובץ. ראש הממשלה בנימין נתניהו ושר הביטחון ישראל כ״ץ אמרו שצה״ל השמיד תשתיות תת-קרקעיות של חיזבאללה ברכס עלי א-טאהר (Ali al-Taher) בדרום לבנון, והשלים ביסוס אזור ביטחון, דיווח Reuters ב־10 בספטמבר; הכוחות יישארו למנוע שיקום. הרכס כ־15 ק״מ מהגבול. הצבא אמר שהשיג ״שליטה מבצעית״ מעל ומתחת לקרקע לפני הפירוק; הרשת יותר מ־2 ק״מ וכללה עשרות רקטות, טילים ורחפנים, ומתחם פיקוד של יחידת בדר עם חדרי פיקוד, מחסני נשק ומגורים. סוכנות הידיעות הלבנונית דיווחה על פיצוץ חזק שרעידותיו נשמעו בנבטיה. בנפרד, מקורות בבית חולים ובביטחון הפלסטיני אמרו ל־AFP שתקיפה ישראלית בעזה ביום ה׳ הרגה משפחה של ארבעה ובה שני ילדים בפרויקט בית לאהיה (Beit Lahia); גורם בשיפא זיהה את הילדים כבני 12 ו־8. צה״ל אמר ל־AFP שהוא בודק — אין אישור ישראלי מאומת בשעת הקובץ.",
+      "en": "Two Israeli lines in the same Thursday window — from an earlier edition as continuation, with no material wire upgrade by file time. Prime Minister Benjamin Netanyahu and Defence Minister Israel Katz said the Israeli military destroyed Hezbollah underground infrastructure at the Ali al-Taher (עלי א-טאהר) ridge in southern Lebanon and completed consolidation of a security zone, Reuters reported Sep 10; forces would remain to prevent a rebuild. The ridge is about 15 km from the Israeli border. The military said it established “operational control” above and below ground before dismantling the network; it extended more than 2 km and held dozens of rockets, missiles and drones, plus a Badr-unit command complex with command rooms, weapons stores and living quarters. Lebanon’s NNA reported a powerful blast whose tremors were felt across Nabatieh. Separately, Palestinian hospital and security sources told AFP an Israeli strike in Gaza on Thursday killed a family of four including two children in the Beit Lahia (בית לאהיה) Project; an Al-Shifa official identified the children as aged 12 and 8. The IDF told AFP it was checking — no verified Israeli confirmation at file time."
+     }
+    ],
+    "why": {
+     "he": "כרטיס ישראל אחד שנשמר: השמדת מתחם מנהרות מאומתת בהצהרה, ומשפחה בעזה שעדיין מחכה לגרסת צה״ל.",
+     "en": "One Israel card, from an earlier edition: a stated tunnel-complex destruction, and a Gaza family still waiting on the IDF version."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקורות: <a href=\"https://www.reuters.com/world/middle-east/israel-says-it-destroyed-hezbollah-underground-complex-lebanons-ali-al-taher-2026-09-10/\">Reuters עלי א-טאהר</a> · <a href=\"https://english.alarabiya.net/News/middle-east/2026/09/10/israeli-strike-in-gaza-kills-family-of-four-hospital-palestinian-security-officials\">AFP דרך Al Arabiya</a> · <a href=\"https://www.rte.ie/news/middle-east/2026/0910/1590991-gaza-israeli-attack/\">AFP דרך RTÉ</a> (10 בספטמבר)",
+      "en": "Sources: <a href=\"https://www.reuters.com/world/middle-east/israel-says-it-destroyed-hezbollah-underground-complex-lebanons-ali-al-taher-2026-09-10/\">Reuters Ali al-Taher</a> · <a href=\"https://english.alarabiya.net/News/middle-east/2026/09/10/israeli-strike-in-gaza-kills-family-of-four-hospital-palestinian-security-officials\">AFP via Al Arabiya</a> · <a href=\"https://www.rte.ie/news/middle-east/2026/0910/1590991-gaza-israeli-attack/\">AFP via RTÉ</a> (Sep 10)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "המשך",
+       "en": "CONTINUATION"
+      },
+      "level": "continuation"
+     },
+     {
+      "kind": "source",
+      "text": "AP"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "ציטוט משרד המסחר — מאומת",
+       "en": "Commerce Ministry quote — Confirmed"
+      },
+      "level": "confirmed"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "הסכם — לא נחתם",
+       "en": "Deal — not signed"
+      },
+      "level": "unverified"
+     }
+    ],
+    "headline": {
+     "he": "סין מבקשת קיצוצי מכס הדדיים של 30 מיליארד דולר לקראת טראמפ–שי ב־24 בספטמבר",
+     "en": "China seeks $30bn reciprocal tariff cuts ahead of Sep 24 Trump–Xi"
+    },
+    "body": [
+     {
+      "he": "נשמר כהמשך, בלי שדרוג חתימה עד הקובץ. דוברת משרד המסחר הסיני הואנג לינג אמרה בתדרוך שבועי שסין וארה״ב שואפות להסכים על הפחתת מכסי יבוא ״במועד מוקדם״, דיווח AP ב־10 בספטמבר; המנהלים שואפים ליישם קיצוצי מכס הדדיים (reciprocal tariff reductions) על סחורות בשווי 30 מיליארד דולר. סוכנות שינחואה, שצוטטה ב־AP, אמרה שה־30 מיליארד הם מכל צד. הנשיא טראמפ ושי ג׳ינפינג אמורים להיפגש בוושינגטון ב־24 בספטמבר — הפגישה הפנים־אל־פנים השלישית בשנה האחרונה. השיחות הן חלק ממשא ומתן על ״מועצת סחר״ ארה״ב–סין שהושקה במאי בבייג׳ינג, על סחורות ״לא רגישות״ בהיקפים שקולים. אין כאן הדפסי מדדים.",
+      "en": "from an earlier edition as continuation, with no signed-deal upgrade by file time. Chinese Commerce Ministry spokesperson Huang Ling said at a weekly briefing that China and the US hope to agree on lowering import taxes “at an early date,” AP reported Sep 10; negotiators are striving to implement reciprocal tariff reductions (קיצוצי מכס הדדיים) on $30 billion of goods. China’s official Xinhua News Agency, cited by AP, said the $30 billion is from each side. President Trump and Xi Jinping are expected to meet in Washington on Sep 24 — their third face-to-face in the past year. The talks sit inside negotiations on a US–China Board of Trade launched in May in Beijing, aimed at equivalent amounts of “nonsensitive” goods. No index prints on this card."
+     }
+    ],
+    "why": {
+     "he": "מספר נקוב לקראת פסגה ב־24 בספטמבר — עדיין שאיפה, לא הסכם חתום.",
+     "en": "A named dollar figure into the Sep 24 summit — still an ask, not a signed deal."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://www.ksat.com/business/2026/09/10/china-says-it-hopes-to-agree-with-us-on-tariff-reductions-at-an-early-date/\">AP דרך KSAT</a> (10 בספטמבר)",
+      "en": "Source: <a href=\"https://www.ksat.com/business/2026/09/10/china-says-it-hopes-to-agree-with-us-on-tariff-reductions-at-an-early-date/\">AP via KSAT</a> (Sep 10)"
+     }
+    ]
+   }
+  ]
+ },
+ "markets": {
+  "dek": [
+   {
+    "he": "CPI אוגוסט מאומת: +0.4% MoM / +3.4% YoY; ליבה +0.3% MoM (חם מול +0.2% רחוב) / +2.4% YoY. טייפ אחרי ההדפס ~15:30 (08:30 ET): ES +0.39% · NQ +0.46% · YM +0.47% · RTY +0.41%. WTI $99.36 · ברנט $104.41 · 10Y 4.950% · DXY 99.318 · זהב $4,336.70. טייפ לפני ההדפס מסומן. FedWatch לא נמשך.",
+    "en": "Confirmed Aug CPI: +0.4% MoM / +3.4% YoY; core +0.3% MoM (hot vs +0.2% street) / +2.4% YoY. Post-print tape ~15:30 (08:30 ET): ES +0.39% · NQ +0.46% · YM +0.47% · RTY +0.41%. WTI $99.36 · Brent $104.41 · 10Y 4.950% · DXY 99.318 · gold $4,336.70. Pre-print tape labeled. FedWatch not pulled."
+   }
+  ],
+  "notes": [
+   {
+    "he": "אחרי CPI ~15:30 (08:30 ET): ES +0.39% · NQ +0.46% · YM +0.47% · RTY +0.41%. 10Y 4.950% · DXY 99.318. נפט: WTI $99.36 · ברנט $104.41 · זהב $4,336.70. אין מזומן יום ו׳ עד 16:30 (09:30 ET). אין רמות חוזים מוחלטות שלא נמסרו. אין VIX שלא נמסר. FedWatch לא נמשך.",
+    "en": "Post-CPI ~15:30 (08:30 ET): ES +0.39% · NQ +0.46% · YM +0.47% · RTY +0.41%. 10Y 4.950% · DXY 99.318. Oil: WTI $99.36 · Brent $104.41 · Gold $4,336.70. No Friday cash until 16:30 (09:30 ET). No unsourced absolute futures levels. No unsourced VIX. FedWatch not pulled."
+   },
+   {
+    "he": "לפני ההדפס ~15:28 (08:28 ET) יום ה׳: ES −0.25% · NQ −0.79% · YM כמעט יציב · RTY −0.35%. 10Y 4.881% · DXY 98.97. נפט: WTI $99.70 (+3.80%) · ברנט $104.85 (+3.60%) · זהב $4,404.40. מסומן כטייפ לפני CPI — לא הטייפ החי.",
+    "en": "Pre-print ~15:28 (08:28 ET) Thursday: ES −0.25% · NQ −0.79% · YM ~flat · RTY −0.35%. 10Y 4.881% · DXY 98.97. Oil: WTI $99.70 (+3.80%) · Brent $104.85 (+3.60%) · Gold $4,404.40. Labeled as the pre-CPI tape — not the live tape."
+   }
+  ],
+  "drivers": [
+   {
+    "tags": [
+     {
+      "kind": "fresh",
+      "text": {
+       "he": "חדש היום",
+       "en": "NEW TODAY"
+      },
+      "level": "new-today"
+     },
+     {
+      "kind": "source",
+      "text": "BLS"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "CPI אוגוסט / טייפ ~08:30 ET — מאומת",
+       "en": "Aug CPI / tape ~08:30 ET — Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "BLS אוגוסט: מדד המחירים לצרכן +0.4% חודש־על־חודש / +3.4% שנה־על־שנה; ליבה +0.3% (חם מול +0.2% רחוב)",
+     "en": "BLS August CPI +0.4% MoM / +3.4% YoY; core +0.3% (hot vs +0.2% street)"
+    },
+    "body": [
+     {
+      "he": "לשכת הסטטיסטיקה של ארה״ב (BLS) הדפיסה ב־15:30 (08:30 ET) את מדד המחירים לצרכן (CPI) לאוגוסט: +0.4% חודש־על־חודש (MoM) ו־+3.4% שנה־על־שנה (YoY). מדד הליבה (core — בלי מזון ואנרגיה) +0.3% MoM, חם מול +0.2% ברחוב, ו־+2.4% YoY. בנזין +3.9%; אנרגיה +2.1% MoM / +16.3% YoY. מקור ראשי: bls.gov. הטייפ הראשי למטה הוא אחרי ההדפס ~15:30 (08:30 ET) — חוזים עתידיים (futures), לא מזומן יום ו׳. פתיחת המזומן ב־16:30 (09:30 ET). טייפ לפני ההדפס (~15:28 / 08:28 ET מיום ה׳) מופיע מתחתיו ומסומן ככזה. FedWatch לא נמשך בקובץ הזה — לא יומצא. קינטיקת הורמוז / באב אל-מנדב נשארת בחדשות.",
+      "en": "The US Bureau of Labor Statistics (BLS) printed August CPI (מדד המחירים לצרכן) at 15:30 (08:30 ET): +0.4% month-on-month (MoM / חודש־על־חודש) and +3.4% year-on-year (YoY / שנה־על־שנה). Core (ליבה — ex food and energy) +0.3% MoM, hot versus +0.2% street, and +2.4% YoY. Gasoline +3.9%; energy +2.1% MoM / +16.3% YoY. Primary source: bls.gov. The main tape below is post-print ~15:30 (08:30 ET) — futures (חוזים עתידיים), not Friday cash. US cash opens at 16:30 (09:30 ET). The pre-print tape (~15:28 / 08:28 ET Thursday) sits under it and is labeled as such. FedWatch was not pulled this file — not invented. Kinetic Hormuz / Bab al-Mandab stays on News."
+     }
+    ],
+    "why": {
+     "he": "הדפס מאומת לתוך ה־FOMC: כותרת לפי התחזית, ליבה חמה, בלי להמציא FedWatch.",
+     "en": "A confirmed print into FOMC: headline on forecast, core hot, without inventing FedWatch."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://www.bls.gov/news.release/cpi.nr0.htm\">BLS CPI</a> · <a href=\"https://www.bls.gov/news.release/cpi.t01.htm\">BLS טבלה 1</a> (11 בספטמבר)",
+      "en": "Source: <a href=\"https://www.bls.gov/news.release/cpi.nr0.htm\">BLS CPI</a> · <a href=\"https://www.bls.gov/news.release/cpi.t01.htm\">BLS Table 1</a> (Sep 11)"
+     }
+    ]
+   }
+  ],
+  "boards": [
+   {
+    "title": {
+     "he": "טייפ אחרי CPI",
+     "en": "Post-CPI tape"
+    },
+    "items": [
+     {
+      "sym": "ES · fut",
+      "last": "+0.39%",
+      "flag": {
+       "he": "חוזים",
+       "en": "fut"
+      },
+      "dir": "up"
+     },
+     {
+      "sym": "NQ · fut",
+      "last": "+0.46%",
+      "flag": {
+       "he": "חוזים",
+       "en": "fut"
+      },
+      "dir": "up"
+     },
+     {
+      "sym": "YM · fut",
+      "last": "+0.47%",
+      "flag": {
+       "he": "חוזים",
+       "en": "fut"
+      },
+      "dir": "up"
+     },
+     {
+      "sym": "RTY · fut",
+      "last": "+0.41%",
+      "flag": {
+       "he": "חוזים",
+       "en": "fut"
+      },
+      "dir": "up"
+     },
+     {
+      "sym": "10Y",
+      "last": "4.950%",
+      "flag": {
+       "he": "רמה",
+       "en": "level"
+      }
+     },
+     {
+      "sym": "DXY",
+      "last": "99.318",
+      "flag": {
+       "he": "רמה",
+       "en": "level"
+      }
+     },
+     {
+      "sym": "WTI",
+      "last": "99.36",
+      "flag": {
+       "he": "רמה",
+       "en": "level"
+      }
+     },
+     {
+      "sym": "Brent",
+      "last": "104.41",
+      "flag": {
+       "he": "רמה",
+       "en": "level"
+      }
+     },
+     {
+      "sym": "Gold",
+      "last": "4,336.70",
+      "flag": {
+       "he": "רמה",
+       "en": "level"
+      }
+     }
+    ],
+    "note": [
+     {
+      "he": "חוזים / מחירים אחרונים ~15:30 (08:30 ET) · אחרי הדפס BLS · אין מזומן יום ו׳ עד 16:30 (09:30 ET) · אין רמות חוזים מוחלטות שלא נמסרו · אין FedWatch",
+      "en": "Futures / lasts ~15:30 (08:30 ET) · after the BLS print · no Friday cash until 16:30 (09:30 ET) · no unsourced absolute futures levels · no FedWatch"
+     },
+     {
+      "he": "אחרי CPI ~15:30 (08:30 ET): ES +0.39% · NQ +0.46% · YM +0.47% · RTY +0.41%. 10Y 4.950% · DXY 99.318. נפט: WTI $99.36 · ברנט $104.41 · זהב $4,336.70. אין מזומן יום ו׳ עד 16:30 (09:30 ET). אין רמות חוזים מוחלטות שלא נמסרו. אין VIX שלא נמסר. FedWatch לא נמשך.",
+      "en": "Post-CPI ~15:30 (08:30 ET): ES +0.39% · NQ +0.46% · YM +0.47% · RTY +0.41%. 10Y 4.950% · DXY 99.318. Oil: WTI $99.36 · Brent $104.41 · Gold $4,336.70. No Friday cash until 16:30 (09:30 ET). No unsourced absolute futures levels. No unsourced VIX. FedWatch not pulled."
+     }
+    ]
+   },
+   {
+    "title": {
+     "he": "טייפ לפני ההדפס",
+     "en": "Pre-print tape"
+    },
+    "items": [
+     {
+      "sym": "ES · fut",
+      "last": "−0.25%",
+      "flag": {
+       "he": "לפני הדפס",
+       "en": "pre-print"
+      },
+      "dir": "down"
+     },
+     {
+      "sym": "NQ · fut",
+      "last": "−0.79%",
+      "flag": {
+       "he": "לפני הדפס",
+       "en": "pre-print"
+      },
+      "dir": "down"
+     },
+     {
+      "sym": "YM · fut",
+      "last": "~flat",
+      "flag": {
+       "he": "לפני הדפס",
+       "en": "pre-print"
+      }
+     },
+     {
+      "sym": "RTY · fut",
+      "last": "−0.35%",
+      "flag": {
+       "he": "לפני הדפס",
+       "en": "pre-print"
+      },
+      "dir": "down"
+     },
+     {
+      "sym": "10Y",
+      "last": "4.881%",
+      "flag": {
+       "he": "לפני הדפס",
+       "en": "pre-print"
+      }
+     },
+     {
+      "sym": "DXY",
+      "last": "98.97",
+      "flag": {
+       "he": "לפני הדפס",
+       "en": "pre-print"
+      }
+     },
+     {
+      "sym": "WTI",
+      "last": "99.70",
+      "chg": "+3.80%",
+      "dir": "up"
+     },
+     {
+      "sym": "Brent",
+      "last": "104.85",
+      "chg": "+3.60%",
+      "dir": "up"
+     },
+     {
+      "sym": "Gold",
+      "last": "4,404.40",
+      "flag": {
+       "he": "לפני הדפס",
+       "en": "pre-print"
+      }
+     }
+    ],
+    "note": [
+     {
+      "he": "מסומן · חוזים / מחירים אחרונים ~15:28 (08:28 ET) מיום ה׳ · לפני CPI יום ו׳ · לא הטייפ החי",
+      "en": "Labeled · futures / lasts ~15:28 (08:28 ET) Thursday · before Friday CPI · not the live tape"
+     },
+     {
+      "he": "לפני ההדפס ~15:28 (08:28 ET) יום ה׳: ES −0.25% · NQ −0.79% · YM כמעט יציב · RTY −0.35%. 10Y 4.881% · DXY 98.97. נפט: WTI $99.70 (+3.80%) · ברנט $104.85 (+3.60%) · זהב $4,404.40. מסומן כטייפ לפני CPI — לא הטייפ החי.",
+      "en": "Pre-print ~15:28 (08:28 ET) Thursday: ES −0.25% · NQ −0.79% · YM ~flat · RTY −0.35%. 10Y 4.881% · DXY 98.97. Oil: WTI $99.70 (+3.80%) · Brent $104.85 (+3.60%) · Gold $4,404.40. Labeled as the pre-CPI tape — not the live tape."
+     }
+    ]
+   }
+  ],
+  "calendar": {
+   "items": [
+    {
+     "when": "Fri 15:30 (08:30 ET)",
+     "text": {
+      "he": "CPI אוגוסט (BLS) — הודפס: +0.4% / +3.4%; ליבה +0.3% / +2.4%",
+      "en": "US CPI Aug (BLS) — printed: +0.4% / +3.4%; core +0.3% / +2.4%"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    },
+    {
+     "when": "Fri 16:30 (09:30 ET)",
+     "text": {
+      "he": "פתיחת מזומן ארה״ב",
+      "en": "US cash open"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    },
+    {
+     "when": "Tue–Wed 15–16 Sep",
+     "text": {
+      "he": "FOMC עם SEP — FedWatch לא נמשך",
+      "en": "FOMC with SEP — FedWatch not pulled"
+     },
+     "tags": [
+      {
+       "kind": "cal",
+       "text": {
+        "he": "מאקרו",
+        "en": "Macro"
+       },
+       "level": "macro"
+      }
+     ]
+    }
+   ],
+   "note": [
+    {
+     "he": "יום ו׳ 11 בספטמבר עד 16 בספטמבר. שעות בירושלים (ET בסוגריים).",
+     "en": "Fri 11 Sep through 16 Sep. Times in Jerusalem (ET in parentheses)."
+    }
+   ]
+  },
+  "extras": [
+   {
+    "kind": "watch",
+    "title": {
+     "he": "למעקב",
+     "en": "Watch"
+    },
+    "items": [
+     {
+      "he": "<b>CPI</b> <b>FOMC</b> ליבה חמה לתוך 15–16 בספטמבר. FedWatch לא נמשך. אין המלצה.",
+      "en": "<b>CPI</b> <b>FOMC</b> Hot core into Sep 15–16. FedWatch not pulled. No rec."
+     },
+     {
+      "he": "<b>ORCL</b> <b>ADBE</b> הכאה מול הארכה רכה. אין קנייה/מכירה/יעד.",
+      "en": "<b>ORCL</b> <b>ADBE</b> Beat vs soft AH. No buy/sell/target."
+     },
+     {
+      "he": "<b>CPRT</b> <b>ACVA</b> $1.9 מיליארד מאומת. אין המלצה.",
+      "en": "<b>CPRT</b> <b>ACVA</b> $1.9bn Confirmed. No rec."
+     },
+     {
+      "he": "<b>Brent</b> <b>CL</b> $104.41 / $99.36 אחרי ההדפס. אין קנייה/מכירה/יעד.",
+      "en": "<b>Brent</b> <b>CL</b> $104.41 / $99.36 post-print. No buy/sell/target."
+     }
+    ]
+   }
+  ],
+  "pre": {
+   "dek": [
+    {
+     "he": "התאוששות חוזים אחרי CPI לתוך המזומן ב־16:30. ORCL הכתה. ADBE רכה בהארכה. CPRT רוכשת את ACVA ב־1.9 מיליארד דולר. FedWatch לא נמשך.",
+     "en": "Post-CPI futures bounce into the 16:30 cash open. ORCL beat. ADBE soft after-hours. CPRT buys ACVA for $1.9B. FedWatch not pulled."
+    }
+   ],
+   "stories": [
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "חדש היום",
+        "en": "NEW TODAY"
+       },
+       "level": "new-today"
+      },
+      {
+       "kind": "chip",
+       "text": "ES"
+      },
+      {
+       "kind": "chip",
+       "text": "NQ"
+      },
+      {
+       "kind": "chip",
+       "text": "YM"
+      },
+      {
+       "kind": "chip",
+       "text": "RTY"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "טייפ אחרי / לפני — מאומת",
+        "en": "Post / pre tape — Confirmed"
+       },
+       "level": "confirmed"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "FedWatch — לא נמשך",
+        "en": "FedWatch — not pulled"
+       },
+       "level": "unverified"
+      }
+     ],
+     "headline": {
+      "he": "התאוששות חוזים אחרי CPI — מול טייפ רך לפני ההדפס",
+      "en": "Post-CPI futures bounce — versus a soft pre-print tape"
+     },
+     "body": [
+      {
+       "he": "לפני ההדפס היו החוזים רכים: ES −0.25%; NQ −0.79%; YM כמעט יציב; RTY −0.35%. אחרי ה־CPI ~15:30 (08:30 ET) כל הארבעה בירוק: ES +0.39%; NQ +0.46%; YM +0.47%; RTY +0.41%. 10Y עלה מ־4.881% ל־4.950%; DXY מ־98.97 ל־99.318. WTI $99.36 מול $99.70 לפני ההדפס; ברנט $104.41 מול $104.85; זהב $4,336.70 מול $4,404.40. פתיחת המזומן ב־16:30 (09:30 ET) — זה מערך התאוששות לתוך הצלצול, לא מזומן יום ו׳. ישיבת ועדת השוק הפתוח של הפד (FOMC) ב־15–16 בספטמבר עם SEP. FedWatch לא נמשך בקובץ — לא יומצא סיכוי העלאה. אין קנייה/מכירה/יעד.",
+       "en": "Pre-print futures were soft: ES −0.25%; NQ −0.79%; YM ~flat; RTY −0.35%. After CPI ~15:30 (08:30 ET) all four are green: ES +0.39%; NQ +0.46%; YM +0.47%; RTY +0.41%. 10Y moved from 4.881% to 4.950%; DXY from 98.97 to 99.318. WTI $99.36 versus $99.70 pre-print; Brent $104.41 versus $104.85; gold $4,336.70 versus $4,404.40. Cash open is 16:30 (09:30 ET) — a bounce setup into the bell, not Friday cash. FOMC (ישיבת ועדת השוק הפתוח של הפד) Sep 15–16 with SEP. FedWatch was not pulled this file — no invented hike odds. No buy/sell/target."
+      }
+     ],
+     "why": {
+      "he": "המזומן נפתח על התאוששות אחרי ליבה חמה — בלי להמציא את ה־FedWatch שלא נמשך.",
+      "en": "Cash opens on a bounce after a hot core — without inventing the FedWatch retick that was not pulled."
+     }
+    },
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "חדש היום",
+        "en": "NEW TODAY"
+       },
+       "level": "new-today"
+      },
+      {
+       "kind": "chip",
+       "text": "ORCL"
+      },
+      {
+       "kind": "source",
+       "text": "Reuters"
+      },
+      {
+       "kind": "source",
+       "text": "Oracle"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "מאומת",
+        "en": "Confirmed"
+       },
+       "level": "confirmed"
+      }
+     ],
+     "headline": {
+      "he": "אורקל הכתה ב־Q1: רווח מתואם $1.92 מול $1.74; הכנסות $19.35 מיליארד",
+      "en": "Oracle beats Q1: adjusted EPS $1.92 vs $1.74; revenue $19.35bn"
+     },
+     "body": [
+      {
+       "he": "אורקל (ORCL) דיווחה ביום ה׳ אחרי הסגירה (AMC — after market close) על הרבעון הראשון של שנת הכספים 2027 והכתה מלמעלה ומלמטה, דיווחו Reuters ו־CNBC: רווח למניה מתואם (adjusted EPS) $1.92 מול $1.74 בקונצנזוס LSEG; הכנסות $19.35 מיליארד מול $19.14 מיליארד. הכנסות הענן +62% ל־$11.61 מיליארד; תשתית ענן (IaaS) +121% ל־$7.4 מיליארד. יתרת ביצועים (RPO — Remaining Performance Obligations) $664 מיליארד. תזרים חופשי שלילי $5.40 מיליארד מול ציפייה ל־$9.56 מיליארד. הנחיית שנת הכספים 2027 לרווח מתואם עלתה ל־$8.10 למניה מ־$8.05, על לפחות $90 מיליארד הכנסות. CNBC כתב שהמניה עלתה כ־4% בהארכה (after-hours / הארכה). אין קנייה/מכירה/יעד. אין מזומן יום ו׳ עד 16:30.",
+       "en": "Oracle (ORCL) reported Thursday after the close (AMC — after market close / אחרי סגירת המסחר) on fiscal 2027 Q1 and beat on both lines, Reuters and CNBC reported: adjusted EPS (רווח למניה מתואם) $1.92 versus $1.74 LSEG consensus; revenue $19.35 billion versus $19.14 billion. Cloud revenue +62% to $11.61 billion; cloud infrastructure (IaaS) +121% to $7.4 billion. Remaining performance obligations (RPO / יתרת ביצועים) $664 billion. Free-cash-flow burn $5.40 billion versus an expected $9.56 billion outflow. FY27 adjusted-EPS guide rose to $8.10 from $8.05, on at least $90 billion of revenue. CNBC wrote the stock was about +4% after-hours (הארכה). No buy/sell/target. No Friday cash until 16:30."
+      }
+     ],
+     "why": {
+      "he": "מבחן AI־ענן שנכנס לפתיחה עם הכאה נקובה — בלי המלצה על המניה.",
+      "en": "An AI-cloud test entering the open with a named beat — without a stock recommendation."
+     },
+     "sourcesHtml": [
+      {
+       "he": "מקורות: <a href=\"https://www.reuters.com/technology/oracles-quarterly-revenue-beats-estimates-ai-boom-drives-cloud-demand-2026-09-10/\">Reuters</a> · <a href=\"https://www.cnbc.com/2026/09/10/oracle-orcl-q1-earnings-report-2027.html\">CNBC</a> · <a href=\"https://www.prnewswire.com/news-releases/oracle-announces-q1-results-driven-by-triple-digit-growth-in-cloud-infrastructure-revenues-302875728.html\">Oracle / PR Newswire</a> (10 בספטמבר)",
+       "en": "Sources: <a href=\"https://www.reuters.com/technology/oracles-quarterly-revenue-beats-estimates-ai-boom-drives-cloud-demand-2026-09-10/\">Reuters</a> · <a href=\"https://www.cnbc.com/2026/09/10/oracle-orcl-q1-earnings-report-2027.html\">CNBC</a> · <a href=\"https://www.prnewswire.com/news-releases/oracle-announces-q1-results-driven-by-triple-digit-growth-in-cloud-infrastructure-revenues-302875728.html\">Oracle / PR Newswire</a> (Sep 10)"
+      }
+     ]
+    },
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "חדש היום",
+        "en": "NEW TODAY"
+       },
+       "level": "new-today"
+      },
+      {
+       "kind": "chip",
+       "text": "ADBE"
+      },
+      {
+       "kind": "source",
+       "text": "Adobe"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "דוח / הנחיה — מאומת",
+        "en": "Print / guide — Confirmed"
+       },
+       "level": "confirmed"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "הארכה רכה ~−2.5% עד ~−3% — מאומת כקירוב",
+        "en": "AH soft ~−2.5% to ~−3% — Confirmed as approx."
+       },
+       "level": "confirmed"
+      }
+     ],
+     "headline": {
+      "he": "אדובי הכתה ב־Q3 אך רכה בהארכה על הנחיית Q4",
+      "en": "Adobe beats Q3 but is soft after-hours on the Q4 guide"
+     },
+     "body": [
+      {
+       "he": "אדובי (ADBE) דיווחה ביום ה׳ אחרי הסגירה על הרבעון השלישי של שנת הכספים 2026: הכנסות שיא $6.76 מיליארד (+13%); רווח למניה מתואם $6.13, לפי הודעת החברה. הנחיית הכנסות לרבעון הרביעי $6.80–$6.85 מיליארד — נקודת האמצע מתחת לקונצנזוס כ־$6.85 מיליארד; הנחיית רווח מתואם $6.30–$6.35. החברה העלתה את תחזית השנה להכנסות $26.58–$26.63 מיליארד ולרווח מתואם $24.45–$24.50. דיווחים משניים כתבו שהמניה ירדה כ־2.5% עד כ־3% בהארכה (after-hours / הארכה) על ההנחיה הרכה, למרות ההכאה. אין קנייה/מכירה/יעד. אין מזומן יום ו׳ עד 16:30.",
+       "en": "Adobe (ADBE) reported Thursday after the close on fiscal 2026 Q3: record revenue $6.76 billion (+13%); adjusted EPS $6.13, per the company. Q4 revenue guide $6.80–$6.85 billion — midpoint below a ~$6.85 billion consensus; adjusted-EPS guide $6.30–$6.35. The company raised the full-year revenue outlook to $26.58–$26.63 billion and adjusted EPS to $24.45–$24.50. Secondary reports wrote the stock was about −2.5% to about −3% after-hours (הארכה) on the soft guide, despite the beat. No buy/sell/target. No Friday cash until 16:30."
+      }
+     ],
+     "why": {
+      "he": "הכאה שנבלעת בהנחיה רכה — מבחן התוכנה היצירתית מול הענן של אורקל באותו ערב.",
+      "en": "A beat swallowed by a soft guide — the creative-software test against Oracle’s cloud the same evening."
+     },
+     "sourcesHtml": [
+      {
+       "he": "מקורות: <a href=\"https://www.businesswire.com/news/home/20260910832552/en/Adobe-Reports-Record-Q3-Results\">Adobe / Business Wire</a> · <a href=\"https://siliconangle.com/2026/09/10/adobe-shares-slip-as-q4-revenue-guidance-falls-short-despite-a-q3-beat/\">SiliconANGLE הארכה</a> (10 בספטמבר)",
+       "en": "Sources: <a href=\"https://www.businesswire.com/news/home/20260910832552/en/Adobe-Reports-Record-Q3-Results\">Adobe / Business Wire</a> · <a href=\"https://siliconangle.com/2026/09/10/adobe-shares-slip-as-q4-revenue-guidance-falls-short-despite-a-q3-beat/\">SiliconANGLE AH</a> (Sep 10)"
+      }
+     ]
+    },
+    {
+     "tags": [
+      {
+       "kind": "fresh",
+       "text": {
+        "he": "חדש היום",
+        "en": "NEW TODAY"
+       },
+       "level": "new-today"
+      },
+      {
+       "kind": "chip",
+       "text": "CPRT"
+      },
+      {
+       "kind": "chip",
+       "text": "ACVA"
+      },
+      {
+       "kind": "source",
+       "text": "Reuters"
+      },
+      {
+       "kind": "conf",
+       "text": {
+        "he": "$1.9 מיליארד / $10.50 — מאומת",
+        "en": "$1.9bn / $10.50 — Confirmed"
+       },
+       "level": "confirmed"
+      }
+     ],
+     "headline": {
+      "he": "Copart רוכשת את ACV Auctions ב־1.9 מיליארד דולר במזומן",
+      "en": "Copart to buy ACV Auctions in a $1.9bn all-cash deal"
+     },
+     "body": [
+      {
+       "he": "Copart (CPRT) הסכימה ביום ה׳ לרכוש את ACV Auctions (ACVA) בעסקת מזומן של כ־1.9 מיליארד דולר, $10.50 למניה, דיווח Reuters — כניסה לשיווק חוזר סיטונאי בין סוחרים (dealer-to-dealer wholesale remarketing). החברות אמרו שהמחיר הוא פרמיה של כ־45% על מחיר הסגירה הלא־מושפע ב־10 באוגוסט, ושל כ־41% על ממוצע משוקלל־נפח ל־30 יום עד 9 בספטמבר. המבנה: הצעת רכש (tender offer) ואחריה מיזוג; אין תנאי מימון; סגירה צפויה עד סוף 2026, בכפוף לרוב במכרז ולאישור הגבלים עסקיים. Reuters כתב שמניית ACVA קפצה יותר מ־40% אחרי הצלצול. אין קנייה/מכירה/יעד.",
+       "en": "Copart (CPRT) on Thursday agreed to acquire ACV Auctions (ACVA) in an all-cash deal of about $1.9 billion, or $10.50 a share, Reuters reported — its entry into dealer-to-dealer wholesale remarketing (שיווק חוזר סיטונאי בין סוחרים). The companies said the price is about a 45% premium to ACV’s unaffected close on Aug 10 and about 41% to the 30-day volume-weighted average through Sep 9. Structure: a tender offer (הצעת רכש) then a merger; no financing condition; close expected by year-end 2026, subject to a majority tender and antitrust clearance. Reuters wrote ACVA shares jumped more than 40% after the bell. No buy/sell/target."
+      }
+     ],
+     "why": {
+      "he": "עסקה נקובה בשם בודד לתוך פתיחת המזומן — בלי להפוך קפיצת הארכה להמלצה.",
+      "en": "A named single-name deal into the cash open — without turning an after-hours pop into a recommendation."
+     },
+     "sourcesHtml": [
+      {
+       "he": "מקור: <a href=\"https://www.reuters.com/business/copart-buy-acv-auctions-19-billion-deal-2026-09-10/\">Reuters</a> (10 בספטמבר)",
+       "en": "Source: <a href=\"https://www.reuters.com/business/copart-buy-acv-auctions-19-billion-deal-2026-09-10/\">Reuters</a> (Sep 10)"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "ai": {
+  "dek": [
+   {
+    "he": "10,000 סוכנים של OpenAI פתרו שאלת Navier-Stokes ב־88 שעות; Anthropic ממודלת תרחישי עבודה עד 2030; GPT-Image-2.5 עם השהיה נמוכה ב־50%; אנדרו אנג: לעצב את הבנייה היא מיומנות ליבה; Mistral מגייסת €3 מיליארד בסבב D.",
+    "en": "OpenAI’s 10,000 agents crack a 90-year Navier-Stokes question in 88 hours; Anthropic maps three AI futures for US jobs; GPT-Image-2.5 cuts latency ~50% with surgical edits; Andrew Ng: shaping the build is core AI engineering; Mistral raises €3B Series D at €21B."
+   }
+  ],
+  "stories": [
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "10,000 סוכנים של OpenAI פתרו שאלת Navier-Stokes בת 90 שנה ב־88 שעות",
+     "en": "OpenAI’s 10,000 agents crack a 90-year Navier-Stokes question in 88 hours"
+    },
+    "body": [
+     {
+      "he": "לפי Alpha Signal (9 בספטמבר), OpenAI הריצה כ־10,000 סוכני AI על מודל שטרם שוחרר ופתרה ב־88 שעות שאלה פתוחה סביב משוואות Navier-Stokes (תיאור תנועת נוזלים): האם המשוואות יכולות ״להתפרק״ לחלוטין בתנאים קיצוניים. לפי הדיווח, הסוכנים מצאו מערבולת שמתהדקת ומסתחררת מהר יותר בעוד האנרגיה נשארת חסומה — והתוצאה אומתה פורמלית ב־Lean. הסוכנים יכלו לקרוא מגרסת אינטרנט במטמון, להריץ קוד ולתקשר בתוך תת־קבוצות; המודל שצוין חזק יותר מ־GPT-6 Astra.",
+      "en": "Per Alpha Signal (Sep 9), OpenAI ran ~10,000 AI agents on an unreleased model and, in 88 hours, cracked an open question around the Navier-Stokes equations (how fluids move): whether those equations can completely break down under extreme conditions. The write-up says the agents found a vortex that tightens and spins ever faster while energy stays bounded — and the result was formally checked in Lean. Agents could read a cached internet snapshot, run code, and talk inside subgroups; the model cited is significantly more capable than GPT-6 Astra."
+     }
+    ],
+    "why": {
+     "he": "מערכות מרובות־סוכנים כבר לא רק כותבות קוד — הן נכנסות למעבדת המחקר על שאלות פתוחות.",
+     "en": "Multi-agent systems are no longer just writing code — they are entering the research lab on open questions."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (9 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-09)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "Anthropic ממודלת שלושה תרחישי AI לעבודות בארה״ב — במקרה הקיצוני התוצר מוכפל וחלק העבודה צונח ל־45%",
+     "en": "Anthropic maps three AI futures for US jobs — extreme case: GDP doubles, labor share falls to 45%"
+    },
+    "body": [
+     {
+      "he": "Alpha Signal דיווח (10 בספטמבר) שאנתרופיק פרסמה כלי אינטראקטיבי שממודל מה AI יכול לעשות לכלכלה האמריקאית עד 2030: כל משרה כחבילת משימות — האם AI מאיץ, מחליף, או יוצר חדשות. שלושה תרחישים: צנוע (כמו האינטרנט; תוצר +1.6% מעל נתיב בלי AI, שכר יציב); משמעותי (כמחצית מעבודת הידע; תוצר +8.3%, שכר ידע נשאר שטוח וחלק מהאנשים מחליפים קריירה); קיצוני (צמיחה שנתית ~15%, הכפלת הכלכלה כל ~4.5 שנים, אבטלת עובדי ידע ~17.9%, וחלק העבודה בתוצר יורד מ־60% ל־45%). הכלי מאפשר להשוות הנחות מול סקר של יותר מ־10,000 אמריקאים — רובם ליד התרחיש המשמעותי.",
+      "en": "Alpha Signal reported (Sep 10) that Anthropic shipped an interactive tool modeling what AI could do to the US economy by 2030: every job as a bundle of tasks — does AI speed it up, replace it, or create new ones. Three scenarios: Modest (internet-like; GDP +1.6% vs a no-AI path, wages stable); Substantial (about half of knowledge work; GDP +8.3%, knowledge wages flatline, some career switches); Extreme (~15% annual growth, economy doubles every ~4.5 years, knowledge-worker unemployment ~17.9%, labor’s GDP share falls from 60% to 45%). Users can compare assumptions with a survey of 10,000+ Americans — most land near Substantial."
+     }
+    ],
+    "why": {
+     "he": "כלכלה גדולה יותר לא מבטיחה שכר גבוה יותר — מי שולט בהון תופס את הרווח בתרחיש הקיצוני.",
+     "en": "A bigger economy does not automatically mean higher wages — capital captures most gains in the extreme case."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (10 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-10)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "OpenAI משחררת GPT-Image-2.5 — השהיה נמוכה ב־50% ועריכה כירורגית",
+     "en": "OpenAI ships GPT-Image-2.5 — 50% lower latency and surgical edits"
+    },
+    "body": [
+     {
+      "he": "לפי Alpha Signal (9–10 בספטמבר), OpenAI השיקה ChatGPT Images 2.5 באפליקציה ושני מודלי API — GPT-Image-2.5 Flare ו־Sunburst. Flare מספק איכות גבוהה יותר מ־GPT-Image-2 עם השהיה נמוכה בכ־50% לשימוש יומיומי; Sunburst איטי יותר אך מדויק יותר כשעריכה חייבת להיות נקודתית. השדרוג המרכזי: המודל מבין מה לא לגעת — להחליף מעיל ולשמור תנוחה, לשנות רקע ולשמור מוצר, לתקן טקסט בלי לפרק את הקומפוזיציה. יש גם Sketch ב־ChatGPT (@ Sketch) לציור ישיר.",
+      "en": "Per Alpha Signal (Sep 9–10), OpenAI shipped ChatGPT Images 2.5 in-app plus two API models — GPT-Image-2.5 Flare and Sunburst. Flare aims for higher quality than GPT-Image-2 at ~50% lower latency for everyday generation; Sunburst is slower but tighter when edits must be precise. The core upgrade: the model understands what not to touch — swap a jacket, keep the pose; change a background, keep the product; fix text without reworking the layout. ChatGPT also adds Sketch (@ Sketch) for direct drawing."
+     }
+    ],
+    "why": {
+     "he": "עריכה שלא הורסת את שאר התמונה הופכת AI תמונות מכלי דמו לצינור אפליקציות אמיתי.",
+     "en": "Edits that leave the rest of the image intact turn image AI from a demo toy into a real app pipeline."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (9–10 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-09 / 2026-09-10)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "DeepLearning.AI The Batch"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "אנדרו אנג: לעצב את הבנייה — לא רק ליישם מפרט — היא מיומנות ליבה בהנדסת AI",
+     "en": "Andrew Ng: shaping the build — not just implementing a spec — is now core AI engineering"
+    },
+    "body": [
+     {
+      "he": "ב־The Batch של DeepLearning.AI (11 בספטמבר) כתב אנדרו אנג שמהנדס AI מיומן לא רק בונה מה שמנהל מוצר הגדיר — הוא משתתף בעיצוב הבנייה עצמה. ארבע המיומנויות: להניע את לולאת הבנייה (קוד → משוב → הצעד הבא במהירות ש־AI מאפשרת); לקבל החלטות מוצר כשהמפרט חסר; לתקשר ולהוביל מול פונקציות מחוץ להנדסה; ובעלות עם סוכנות גבוהה — לזהות הזדמנויות ולבצע בלי לחכות להוראה מלמעלה. המסר: תפקידי PM/מעצב/מפתח מתערבבים, וההאצה מגיעה ממי שיודע לעצב את הבנייה.",
+      "en": "In DeepLearning.AI’s The Batch (Sep 11), Andrew Ng argued that a skilled AI engineer does not merely implement what a PM spec’d — they help shape the build itself. Four skills: driving the build loop (code → feedback → next step at AI velocity); making product decisions when the spec is incomplete; communicating and leading across non-engineering functions; and high-agency ownership — spotting opportunities and executing without waiting for precise top-down orders. The point: PM/designer/developer roles are blurring, and speed comes from people who can shape the build."
+     }
+    ],
+    "why": {
+     "he": "ממסגר את המהנדס כבעל החלטה על כיוון המוצר — לא רק כמיישם מאחורי מפרט.",
+     "en": "It reframes the engineer as a decision-maker on product direction — not just the implementer behind a spec."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://www.deeplearning.ai/the-batch/\">DeepLearning.AI The Batch</a> (11 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://www.deeplearning.ai/the-batch/\">DeepLearning.AI The Batch</a> (2026-09-11)"
+     }
+    ]
+   },
+   {
+    "tags": [
+     {
+      "kind": "source",
+      "text": "Alpha Signal"
+     },
+     {
+      "kind": "conf",
+      "text": {
+       "he": "מאומת",
+       "en": "Confirmed"
+      },
+      "level": "confirmed"
+     }
+    ],
+    "headline": {
+     "he": "Mistral מגייסת €3 מיליארד בסבב D בשווי €21 מיליארד — סבב המניות הגדול בהיסטוריית הטק האירופי",
+     "en": "Mistral raises €3B Series D at €21B — the biggest equity round in European tech history"
+    },
+    "body": [
+     {
+      "he": "Alpha Signal דיווח (9 בספטמבר) שחברת ה־AI הצרפתית Mistral גייסה €3 מיליארד (~$3.5B) בסבב Series D בשווי €21 מיליארד — כמעט הכפלה מהסבב הקודם לפני כשנה, והסבב הגדול ביותר שחברת טק אירופית סגרה אי פעם. הכסף מיועד למחקר מודלים גדול יותר, כוח מחשוב, והתרחבות גלובלית; החברה בונה כ־1 ג׳יגה־וואט קיבולת מחשוב באירופה עד 2030, ומאפשרת ללקוחות לבחור באיזה אזור מעבדים שאילתות. לפי הדיווח יש יותר מ־125 לקוחות ארגוניים כולל Airbus ו־HSBC — המסר: ביצועי חזית בלי נעילה לענן של ספק אחד.",
+      "en": "Alpha Signal reported (Sep 9) that French AI company Mistral raised €3 billion (~$3.5B) in a Series D at a €21 billion valuation — nearly double its prior round a year earlier, and the largest equity round a European tech company has ever closed. Funds go to larger model research, more compute, and global expansion; it is building ~1 gigawatt of European compute capacity by 2030 and lets customers choose which region processes queries. The write-up cites 125+ enterprise customers including Airbus and HSBC — the pitch: frontier performance without lock-in to one provider’s cloud."
+     }
+    ],
+    "why": {
+     "he": "סבב בגודל כזה באירופה מחזק אלטרנטיבה מקומית לענקי הענן האמריקאים — כולל בחירת אזור לנתונים.",
+     "en": "A round this size in Europe strengthens a local alternative to US cloud giants — including regional data choice."
+    },
+    "sourcesHtml": [
+     {
+      "he": "מקור: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (9 בספטמבר 2026)",
+      "en": "Source: <a href=\"https://alphasignal.ai/\">Alpha Signal</a> (2026-09-09)"
+     }
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "he": "Reuters (תנועת הורמוז 7 ביום ה׳, 11 בספטמבר) · FT דרך JPost / Reuters (שיחות סלאלה — סביר / לא מאומת) · AFP (באב אל-מנדב / מיוּן־פרימ) · IEA דרך Reuters (אספקה סעודית 6 מיליון ח״י) · Reuters (נאמני GOP / ביניים סביב טראמפ) · Washington Post / The Hill (ספקנות דיבידנד $5,000) · Reuters (אלג׳יריה–אמירויות: ניתוק + מרחב אווירי) · Reuters (עלי א-טאהר) · AFP (בית לאהיה; צה״ל בודק) · AP (קיצוצי מכס $30 מיליארד) · BLS (CPI אוגוסט +0.4% / +3.4%; ליבה +0.3% / +2.4%; בנזין +3.9%; אנרגיה +2.1%/+16.3%) · טייפ אחרי CPI ~15:30 (08:30 ET) · טייפ לפני ההדפס מסומן · Reuters / Oracle (ORCL) · Adobe (ADBE הארכה רכה) · Reuters (CPRT/ACVA $1.9 מיליארד) · Alpha Signal / DeepLearning.AI The Batch (דיג׳סט AI מיום ו׳)",
+   "en": "Reuters (Hormuz traffic 7 Thursday, Sep 11) · FT via JPost / Reuters (Salalah talks — Probable / unverified) · AFP (Bab al-Mandab / Mayyun-Perim) · IEA via Reuters (Saudi supply 6 mbpd) · Reuters (GOP loyalists / Trump-centric midterms) · Washington Post / The Hill ($5,000 dividend skepticism) · Reuters (Algeria–UAE sever + airspace) · Reuters (Ali al-Taher) · AFP (Beit Lahia; IDF checking) · AP ($30bn tariff cuts) · BLS (Aug CPI +0.4% / +3.4%; core +0.3% / +2.4%; gasoline +3.9%; energy +2.1%/+16.3%) · Post-CPI tape ~15:30 (08:30 ET) · Pre-print tape labeled · Reuters / Oracle (ORCL) · Adobe (ADBE soft AH) · Reuters (CPRT/ACVA $1.9bn) · Alpha Signal / DeepLearning.AI The Batch (Friday AI digest)"
+  }
+ ],
+ "footer": [
+  {
+   "he": "תידרוך חינוכי, לא ייעוץ השקעות. מהדורת אחר הצהריים — חדשות + שווקים / טרום-שוק אחרי CPI לתוך פתיחת המזומן בארה״ב. אין מזג אוויר. דיג׳סט AI מיום ו׳ נשמר. טייפ חוזים אחרי ההדפס ~15:30 (08:30 ET), לא מזומן יום ו׳. טייפ לפני ההדפס מסומן. FedWatch לא נמשך. לא יוצגו נתונים מומצאים.",
+   "en": "Educational briefing, not investment advice. Afternoon edition — news plus Markets / Pre-market after CPI into US cash open. No weather strip. Friday AI digest kept. Post-print futures tape ~15:30 (08:30 ET), not Friday cash. Pre-print tape labeled. FedWatch not pulled. No invented data."
+  },
+  {
+   "he": "Reuters (תנועת הורמוז 7 ביום ה׳, 11 בספטמבר) · FT דרך JPost / Reuters (שיחות סלאלה — סביר / לא מאומת) · AFP (באב אל-מנדב / מיוּן־פרימ) · IEA דרך Reuters (אספקה סעודית 6 מיליון ח״י) · Reuters (נאמני GOP / ביניים סביב טראמפ) · Washington Post / The Hill (ספקנות דיבידנד $5,000) · Reuters (אלג׳יריה–אמירויות: ניתוק + מרחב אווירי) · Reuters (עלי א-טאהר) · AFP (בית לאהיה; צה״ל בודק) · AP (קיצוצי מכס $30 מיליארד) · BLS (CPI אוגוסט +0.4% / +3.4%; ליבה +0.3% / +2.4%; בנזין +3.9%; אנרגיה +2.1%/+16.3%) · טייפ אחרי CPI ~15:30 (08:30 ET) · טייפ לפני ההדפס מסומן · Reuters / Oracle (ORCL) · Adobe (ADBE הארכה רכה) · Reuters (CPRT/ACVA $1.9 מיליארד) · Alpha Signal / DeepLearning.AI The Batch (דיג׳סט AI מיום ו׳)",
+   "en": "Reuters (Hormuz traffic 7 Thursday, Sep 11) · FT via JPost / Reuters (Salalah talks — Probable / unverified) · AFP (Bab al-Mandab / Mayyun-Perim) · IEA via Reuters (Saudi supply 6 mbpd) · Reuters (GOP loyalists / Trump-centric midterms) · Washington Post / The Hill ($5,000 dividend skepticism) · Reuters (Algeria–UAE sever + airspace) · Reuters (Ali al-Taher) · AFP (Beit Lahia; IDF checking) · AP ($30bn tariff cuts) · BLS (Aug CPI +0.4% / +3.4%; core +0.3% / +2.4%; gasoline +3.9%; energy +2.1%/+16.3%) · Post-CPI tape ~15:30 (08:30 ET) · Pre-print tape labeled · Reuters / Oracle (ORCL) · Adobe (ADBE soft AH) · Reuters (CPRT/ACVA $1.9bn) · Alpha Signal / DeepLearning.AI The Batch (Friday AI digest)"
+  },
+  {
+   "he": "תידרוך חינוכי, לא ייעוץ השקעות. מהדורת אחר הצהריים — חדשות + שווקים / טרום-שוק אחרי CPI לתוך פתיחת המזומן בארה״ב. אין מזג אוויר. דיג׳סט AI מיום ו׳ נשמר. טייפ חוזים אחרי ההדפס ~15:30 (08:30 ET), לא מזומן יום ו׳. טייפ לפני ההדפס מסומן. FedWatch לא נמשך. לא יוצגו נתונים מומצאים.",
+   "en": "Educational briefing, not investment advice. Afternoon edition — news plus Markets / Pre-market after CPI into US cash open. No weather strip. Friday AI digest kept. Post-print futures tape ~15:30 (08:30 ET), not Friday cash. Pre-print tape labeled. FedWatch not pulled. No invented data."
+  }
+ ]
+})

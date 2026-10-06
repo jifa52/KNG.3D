@@ -1,376 +1,73 @@
 # The Daily Jenya
 
-This repository is **The Daily Jenya** — a public, phone-first morning edition. Hebrew is the default language (`dir=rtl`). English is an optional switcher on the **same URL**. It is **not** a 3D printer or filament tracker. The masthead lockup is `assets/daily-jenya-logo.png` (J and globe, with YOUR MORNING EDITION).
+A personal newspaper: **News**, **Markets** and **AI**, up to three editions a day, in Hebrew with English one tap away. Built to be read on a phone and on a PC.
 
-The live edition is one scrolling page. News, then Markets, then AI. Hebrew is the default; English is the switcher. The nav is חדשות · שווקים · AI · ארכיון.
+**Read it:** https://jifa52.github.io/KNG.3D/
 
-- **News / חדשות** — short cards: one lead, supports, then a quieter band. Each card has a kicker, the facts, and **למה זה חשוב / Why it matters**. A photograph only when it is licensed and credited. An illustration is allowed only with a quiet caption under the image: **המחשה (AI)** / **AI Illustration**. Otherwise the story is text-first. A Markets-only drop keeps every picture slot already on the page.
-- **Markets / שווקים** — a market news brief after News: drivers, company catalysts, today/next, an optional short story, then a compact snapshot (ES, NQ, YM, VIX, USD/ILS, WTI). The same six also crawl under the nav. VIX is the index. USD/ILS is the FX spot rate. Bitcoin and the 10-year, when stamped, sit smaller under the strip.
-- **AI** — the digest on the same sheet, one lead then a list. An AI picture, when used, is labeled under the image **המחשה (AI)** / **AI Illustration**.
+## How it works
 
-Older permalinks from before this cutover are still the card deck and may show a Pre-market tab. On the current edition, `#premarket` opens Markets.
-
-Tape is data. There are no trade recommendations.
-
-## Reader layout
-
-The live homepage is The Daily Jenya (`assets/edition.css` and `assets/polish.css`): night paper `#101f2c` on `#09141e`, ink `#d4dce1`, news gold `#dfbd72`, markets `#a9e0b5`, AI `#c1a1ed`. News is an asymmetric front of short cards with **Why it matters / למה זה חשוב**. Markets follows News as a news brief: drivers, company catalysts, today/next, then a compact snapshot. One language is on screen.
-
-- Live: `index.html` and `briefings/2026-09-29-1545/` (Tuesday morning News and Monday morning AI kept; Markets refreshed to Tuesday ~15:45, session pre-market)
-- Approved study (kept): `preview/ux-2026-09-24-polish/`
-- Earlier Modern study (PREVIEW, Wednesday tape, not an archive edition): `preview/ux-2026-09-24/`
-- Empty structure: `templates/edition.html`
-- Image-credit pattern: `templates/IMAGE-CREDITS.md`
-- Rules: `templates/PUBLISH.md`
-- Type: `assets/fonts/` (Frank Ruhl Libre + Heebo, SIL Open Font License)
-
-The archive index uses the same night sheet. Earlier permalinks that link `assets/brief.css` stay on that card sheet. The navy study at `preview/daily-jenya-navy/` is a labeled archive of the look that shipped. Do not add study folders to the archive index.
-
-## Language
-
-First visit is Hebrew. A switcher (`עברית | English`) sits in the masthead (and on Archive/404 chrome). The choice is stored in `localStorage` (`brief-lang`) so refresh keeps it.
-
-Optional `#he` / `#en` hashes set the language once without replacing the page. Sections use `#news`, `#markets`, and `#ai`. On `file://`, hash writes are skipped so `replaceState` cannot break local opens.
-
-## Public URL
-
-GitHub Pages (from `main`, site root):
-
-**https://jifa52.github.io/KNG.3D/**
-
-Latest is the Tuesday markets refresh, 29 September 2026, ~15:45 Israel (session pre-market; quotes ~15:18–15:33):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-29-1545/**
-
-Tuesday Morning, 29 September 2026, with Monday’s markets tape as it stood that morning:
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-29-0850/**
-
-Prior markets refresh, Monday 28 September 2026, ~15:45 Israel:
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-28-1545/**
-
-Monday Midday (MAIN), 28 September 2026, with Friday’s markets tape as it stood at midday:
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-28-1400/**
-
-Monday Morning, 28 September 2026:
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-28-0850/**
-
-Prior markets refresh, Friday 25 September 2026, ~15:45 Israel:
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-25-1545/**
-
-Prior Midday (MAIN), 24 September 2026:
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-24-1400/**
-
-Prior Morning (overnight thin), 24 September 2026:
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-24-0850/**
-
-Prior Afternoon Markets / Pre-market (23 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-23-1545/**
-
-Prior Midday MAIN (23 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-23-1400/**
-
-Prior Morning (23 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-23-0850/**
-
-Prior Afternoon Markets / Pre-market (22 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-22-1545/**
-
-Prior Midday MAIN (22 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-22-1400/**
-
-Prior Morning (22 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-22-0850/**
-
-Prior Afternoon Markets (21 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-21-1545/**
-
-Prior Midday MAIN (21 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-21-1400/**
-
-Prior Morning (21 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-21-0850/**
-
-Prior Midday MAIN (20 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-20-1400/**
-
-Prior Morning (20 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-20-0850/**
-
-Prior Midday MAIN (19 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-19-1400/**
-
-Prior Morning (19 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-19-0850/**
-
-Prior Afternoon (18 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-18-1545/**
-
-Prior Midday MAIN (18 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-18-1400/**
-
-Prior Morning (18 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-18-0850/**
-
-Prior Afternoon (17 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-17-1545/**
-
-Prior Midday MAIN (17 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-17-1400/**
-
-Prior Morning (17 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-17-0850/**
-
-Prior Afternoon (16 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-16-1545/**
-
-Prior Midday MAIN (16 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-16-1400/**
-
-Prior Morning (16 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-16-0850/**
-
-Prior Afternoon (15 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-15-1545/**
-
-Prior Midday MAIN (15 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-15-1400/**
-
-Prior Morning (15 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-15-0850/**
-
-Prior Afternoon (14 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-14-1545/**
-
-Prior Morning (14 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-14-0850/**
-
-Prior Afternoon (13 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-13-1545/**
-
-Prior Morning (13 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-13-0850/**
-
-Prior Afternoon (12 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-12-1545/**
-
-Prior Morning (12 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-12-0850/**
-
-Prior Afternoon (11 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-11-1545/**
-
-Prior Morning (11 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-11-0850/**
-
-Prior Afternoon (10 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-10-1545/**
-
-Prior Morning (10 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-10-0850/**
-
-Prior Afternoon (9 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-09-1545/**
-
-Prior Morning (9 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-09-0850/**
-
-Prior Afternoon (8 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-08-1545/**
-
-Prior Morning (8 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-08-0850/**
-
-Prior Afternoon (7 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-07-1545/**
-
-Prior Morning (7 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-07-0850/**
-
-Prior Evening (6 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-06-1830/**
-
-Prior Morning (6 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-06-0830/**
-
-Prior Morning (5 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-05-0830/**
-
-Prior Intraday (3 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1814/**
-
-Prior Pre-open (3 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1545/**
-
-Prior Midday (3 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-1400/**
-
-Prior Morning (3 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-03-0830/**
-
-Prior Close (2 September 2026):
-
-**https://jifa52.github.io/KNG.3D/briefings/2026-09-02-2300/**
-
-## Layout
+Content and design are separate.
 
 ```
-index.html                         live Daily Jenya edition: Tuesday morning News, Tue ~15:45 pre-market snapshot, Monday morning AI
-assets/brief.css                   card sheet for earlier permalinks and 404
-assets/edition.css                 Modern editorial base (homepage, permalink, archive index, template)
-assets/polish.css                  approved polish: nav, photos, news-first markets, newspaper AI and archive
-assets/images/                     licensed photographs for the current edition
-assets/fonts/                      Frank Ruhl Libre + Heebo subsets (SIL OFL)
-preview/ux-2026-09-24-polish/      approved polish study — kept, not an archive edition
-preview/ux-2026-09-24/             earlier Modern study — not an archive edition
-templates/edition.html             empty publish structure (overnight, main news, markets, AI)
-templates/IMAGE-CREDITS.md         credit pattern copied into an edition that uses a photograph
-templates/PUBLISH.md               how the next edition is rendered
-assets/i18n.js                     language switch, localStorage, optional #he/#en
-assets/lanes.js                    card-deck lane switch for earlier permalinks; not loaded on the editorial page
-assets/favicon.svg
-archive/index.html                 every published briefing
-briefings/2026-09-29-1545/         Tuesday markets refresh on the Daily Jenya sheet (morning News kept, Tue ~15:45 pre-market tape, Monday morning AI kept)
-briefings/2026-09-29-0850/         Tuesday Morning snapshot (overnight thin News; Monday markets carried; Monday morning AI)
-briefings/2026-09-28-1545/         Monday markets refresh on the Daily Jenya sheet (midday News kept, Mon ~15:45 pre-market tape, Monday morning AI kept)
-briefings/2026-09-28-1400/         Monday Midday MAIN (News; Friday markets tape as carried at midday; Monday morning AI)
-briefings/2026-09-28-0850/         Monday Morning snapshot (overnight thin News; Friday markets carried; Monday morning AI)
-briefings/2026-09-25-1545/         Friday markets refresh on the Daily Jenya sheet (midday News kept, Fri ~15:45 pre-market tape, Friday morning AI kept)
-briefings/2026-09-25-1400/         Friday Midday MAIN (News kept; Markets refreshed in place to the Friday ~15:45 tape; Friday morning AI kept)
-briefings/2026-09-25-0850/         Friday Morning snapshot (overnight News; Markets carried from Thursday ~15:45)
-briefings/2026-09-24-1545/         Thursday afternoon permalink on the polish sheet (same edition as the homepage; midday News, Thu ~15:45 snapshot, Wednesday AI, IMAGE-CREDITS.md)
-briefings/2026-09-24-1400/         frozen Thursday Midday MAIN snapshot (six News cards and an opening summary; Markets refreshed in place to the Thursday ~15:45 pre-market tape; Wednesday AI digest kept; next AI digest Friday)
-briefings/2026-09-24-0850/         frozen Thursday Morning snapshot (thin overnight News — five cards and an opening summary; one Markets section, session pre-market, Wednesday tape; Wednesday AI digest kept; next AI digest Friday)
-briefings/2026-09-23-1545/         frozen Wednesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
-briefings/2026-09-23-1400/         frozen Wednesday Midday MAIN snapshot (six News cards; Markets / Pre-market filled from ~15:45 tape; Wednesday AI digest kept)
-briefings/2026-09-23-0850/         frozen Wednesday Morning snapshot (thin overnight News; Tuesday afternoon Markets / Pre-market kept as prior session; Wednesday AI digest kept)
-briefings/2026-09-22-1545/         frozen Tuesday Afternoon snapshot (six News cards kept; Markets / Pre-market filled from ~15:37 tape; Monday AI digest kept)
-briefings/2026-09-22-1400/         frozen Tuesday Midday MAIN snapshot (six News cards; Monday AI digest kept; Markets / Pre-market filled from ~15:37 tape)
-briefings/2026-09-22-0850/         frozen Tuesday Morning snapshot (thin overnight News; Monday afternoon tape kept as prior session; Monday AI digest kept)
-briefings/2026-09-21-1545/         frozen Monday Afternoon snapshot (seven News cards kept; Markets / Pre-market filled from ~15:38 tape; Monday AI digest kept)
-briefings/2026-09-21-1400/         frozen Monday Midday MAIN snapshot (seven News cards; Monday AI digest kept; Markets / Pre-market filled from ~15:38 tape)
-briefings/2026-09-21-0850/         frozen Monday Morning snapshot (thin overnight News; Monday AI digest kept)
-briefings/2026-09-20-1400/         frozen Sunday Midday MAIN snapshot (six News cards; Friday AI digest kept)
-briefings/2026-09-20-0850/         frozen Sunday Morning snapshot (thin overnight News; Friday AI digest kept)
-briefings/2026-09-19-1400/         frozen Saturday Midday MAIN snapshot (seven News cards; Friday AI digest kept)
-briefings/2026-09-19-0850/         frozen Saturday Morning snapshot (thin overnight News; Friday AI digest kept)
-briefings/2026-09-18-1545/         frozen Friday Afternoon snapshot (five News cards kept; Markets / Pre-market filled; Friday AI digest kept)
-briefings/2026-09-18-1400/         frozen Friday Midday MAIN snapshot (five News cards; Friday AI digest kept; Markets / Pre-market filled from ~15:25 tape)
-briefings/2026-09-18-0850/         frozen Friday Morning snapshot (thin overnight News; Friday AI digest kept)
-briefings/2026-09-17-1545/         frozen Thursday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
-briefings/2026-09-17-1400/         frozen Thursday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:28 tape)
-briefings/2026-09-17-0850/         frozen Thursday Morning snapshot (thin overnight News)
-briefings/2026-09-16-1545/         frozen Wednesday Afternoon snapshot (eight News cards kept; Markets / Pre-market filled)
-briefings/2026-09-16-1400/         frozen Wednesday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:28 tape)
-briefings/2026-09-16-0850/         frozen Wednesday Morning snapshot (thin overnight News)
-briefings/2026-09-15-1545/         frozen Tuesday Afternoon snapshot (Markets + Pre-market)
-briefings/2026-09-15-1400/         frozen Tuesday Midday MAIN snapshot (News + AI kept; Markets / Pre-market filled from ~15:08 tape)
-briefings/2026-09-15-0850/         frozen Tuesday Morning snapshot
-briefings/2026-09-14-1545/         frozen Monday Afternoon snapshot
-briefings/2026-09-14-0850/         frozen Monday Morning snapshot
-briefings/2026-09-13-1545/         frozen Sunday Afternoon snapshot
-briefings/2026-09-13-0850/         frozen Sunday Morning snapshot
-briefings/2026-09-12-1545/         frozen Saturday Afternoon snapshot
-briefings/2026-09-12-0850/         frozen Saturday Morning snapshot
-briefings/2026-09-11-1545/         frozen Friday Afternoon snapshot
-briefings/2026-09-11-0850/         frozen Friday Morning snapshot
-briefings/2026-09-10-1545/         frozen Thursday Afternoon snapshot
-briefings/2026-09-10-0850/         frozen Thursday Morning snapshot
-briefings/2026-09-09-1545/         frozen Wednesday Afternoon snapshot
-briefings/2026-09-09-0850/         frozen Wednesday Morning snapshot
-briefings/2026-09-08-1545/         frozen Tuesday Afternoon snapshot
-briefings/2026-09-08-0850/         frozen Tuesday Morning snapshot
-briefings/2026-09-07-1545/         frozen Monday Afternoon snapshot
-briefings/2026-09-07-0850/         frozen Monday Morning snapshot
-briefings/2026-09-06-1830/         frozen Sunday Evening snapshot
-briefings/2026-09-06-0830/         frozen Sunday Morning snapshot
-briefings/2026-09-05-0830/         frozen Saturday Morning snapshot
-briefings/2026-09-03-1814/         frozen Intraday snapshot
-briefings/2026-09-03-1545/         frozen Pre-open snapshot
-briefings/2026-09-03-1400/         frozen Midday snapshot
-briefings/2026-09-03-0830/         frozen Morning snapshot
-briefings/2026-09-02-2300/         frozen Close snapshot
+index.html                     home: opens the newest edition in the manifest (never edited)
+archive/index.html             archive: built from the manifest (never edited)
 404.html
+assets/dj.js                   the renderer: nameplate, edition stars, tape, sections, language, light/dark, archive
+assets/dj.css                  the broadsheet design
+assets/editions.js             manifest: every edition, newest first
+assets/images/                 licensed pictures
+assets/logo-emblem-gold.png    the J-and-globe emblem (gold)
+assets/logo-wordmark-gold.png  "The Daily Jenya" wordmark (gold); the edition line under it is live text
+assets/favicon.svg
+briefings/YYYY-MM-DD-HHMM/
+  index.html                   identical shell (copy of templates/shell.html)
+  edition.js                   the edition's content: DJ.edition({...})
+  IMAGE-CREDITS.md             when the edition has pictures
+templates/
+  PUBLISH.md                   the complete brief for the edition bots
+  shell.html                   the permalink page every edition copies
+  example/                     a full edition in the current format (open it to see the layout)
+  IMAGE-CREDITS.md             credit block pattern
+tools/
+  check.py                     validates editions, manifest and site files (standard library only)
+  manifest.py                  rebuilds assets/editions.js from the editions
+  convert_legacy.py            converts one old HTML file to edition.js on stdout
+  verify_legacy.py             compares an original tree with a converted tree
+.github/workflows/pages.yml    runs the check on every push; keeps published editions frozen
 ```
 
-Home always shows the latest edition. The `briefings/` folder is the permalink.
+To publish, a bot writes one `edition.js`, copies the shell, and adds one line to the manifest. Everything it needs is in `templates/PUBLISH.md`.
 
-Home is the Tuesday 29 September 2026 editorial edition. News is the morning front, clock ~08:50 Jerusalem (01:50 ET). Markets is the pre-market refresh, edition ~15:45 Jerusalem (08:45 ET), quotes ~15:18–15:33 Jerusalem (08:18–08:33 ET). Futures versus the prior futures settle: ES 7,761.5 (+0.19%), NQ 30,689.25 (+0.40%), YM 51,940 (+0.20%). VIX is 15.78 (−1.80%), the index. USD/ILS is 3.0558 (−0.41%), FX spot. WTI continuous is 90.88 (November 26, roll flagged, −1.86%). Bitcoin is 84,215 (+0.87%). The 10-year is Monday’s cash close, 5.240% (+5.6 basis points versus Friday’s 5.184%). The 30-year Monday close is 5.561% (+5.7 basis points versus Friday). Monday cash is labeled and is not Tuesday cash: S&P 500 7,683.69 (−0.77%), Dow 51,481.51 (−0.67%), Nasdaq Composite 26,820.38 (−0.92%). US cash was not open. The Monday morning AI digest is carried. One language is on screen.
+## Reading
+
+- **The nameplate** says which edition you are holding: "Your morning / midday / markets edition" under the wordmark ("The archive" on the archive), and the **edition stars** — ★ morning (08:50), ★★ midday (14:00), ★★★ markets (15:45). The pills under the ticker jump between today's runs.
+- **The ticker** crawls the six market chips with the time the quotes were taken; hover or the pause button stops it, and it stays still if the device asks for reduced motion.
+- **Markets** reads story → what is moving markets → companies → today and next, with the price snapshot last: the prices are context, not the headline.
+- Each story leads with its **bottom line**, then numbered facts, **why it matters**, and **flags** (what is unconfirmed or easy to misread), with a confidence marker.
+- `#news`, `#markets`, `#ai` open a section (`#premarket` still opens Markets). `#he` / `#en` set the language. The language and the day/night choice are remembered on the device.
+- On a phone, secondary stories fold their details; tap **Details**. On a PC everything is open.
 
 ## Run locally
 
 ```bash
 python3 -m http.server 8080
+# open http://127.0.0.1:8080/
 ```
 
-Then open http://127.0.0.1:8080/
+Opening `index.html` straight from disk also works.
 
-`file://` also works: open `index.html` directly.
+## Checks
 
-## GitHub Pages
+```bash
+python3 tools/check.py                    # everything
+python3 tools/check.py 2026-10-04-0850    # one edition
+python3 tools/manifest.py                 # rebuild the manifest from the editions
+```
 
-Public URL: **https://jifa52.github.io/KNG.3D/**
+The workflow runs `tools/check.py` on every push and rejects changes to already-published editions unless the commit message contains `[archive-fix]`.
 
-The site files are already on `main` at the repo root (`index.html`, `assets/`, `archive/`, `briefings/`). GitHub’s API token in this project cannot create a Pages site, so enable it once in the UI:
+## History
 
-1. **Settings → General → Change repository visibility → Public** (required for a public news deck)
-2. **Settings → Pages → Build and deployment → Deploy from a branch**
-3. Branch **`main`**, folder **`/` (root)** → **Save**
+Editions from 2 September to 3 October 2026 were hand-written HTML in three earlier designs. On 3 October 2026 they were converted into `edition.js` with `tools/convert_legacy.py`; `tools/verify_legacy.py` confirms every word of each original survives, apart from page chrome (buttons, section labels, the duplicated ticker). The originals are in git history.
 
-Optional: set source to **GitHub Actions**, then run **Actions → GitHub Pages → Run workflow**. Push to `main` only verifies the static files; it does not try to create Pages (this token cannot).
-
-No Vercel.
+Fonts: Newsreader, David Libre, IBM Plex Sans, and IBM Plex Sans Hebrew (SIL Open Font License), self-hosted in `assets/fonts/`. System faces are the fallback.

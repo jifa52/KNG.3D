@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="The Daily Jenya">
-  <rect width="32" height="32" rx="4" fill="#143e33"/>
-  <text x="16" y="23" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#dae8a4">J</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#0b0b0b"/><path fill="#f5c542" d="M32 7l7.4 16.2 17.7 1.9-13.2 12 3.7 17.5L32 45.6 16.4 54.6l3.7-17.5-13.2-12 17.7-1.9z"/></svg>

@@ -1,129 +1,237 @@
-# Publishing a The Daily Jenya edition
+# The Daily Jenya — publishing brief
 
-This note is the publish path after the 25 September 2026 night cutover. The locked sheet is night: page `#09141e`, paper `#101f2c`, ink `#d4dce1`, muted `#a1b1bd`, line `#344653`, pale `#1b3040`, electric `#91c4eb`. News gold `#dfbd72`, markets `#a9e0b5`, AI `#c1a1ed`. Frank Ruhl Libre headlines, Heebo body, asymmetric news front. Do not switch the identity back to cream Direction 02. This file does not replace verification, agenda, confidence, or cadence rules. Those still live with the desk. This file wins on what a reader sees.
+This is the whole job for an edition bot. Read it end to end before every drop. It replaces every earlier version of this file and every earlier HTML template.
 
-The empty structure is `templates/edition.html`. It loads `assets/edition.css` and `assets/polish.css`. The filled cutover is `index.html`, `briefings/2026-09-25-1545/`, and `briefings/2026-09-25-1400/` (Friday midday News, the Friday ~15:45 markets refresh with quotes ~15:04–15:19, Friday morning AI). The masthead logo is `assets/daily-jenya-logo.png`. The labeled study that was approved earlier is `preview/ux-2026-09-24-polish/` — leave that folder in place. An earlier study, `preview/ux-2026-09-24/`, is the pre-polish Modern page and is not the template. Earlier pages under `briefings/` stay on `assets/brief.css`. Do not restyle those older editions, and do not change their facts.
+## What the paper is
 
-`assets/paper.css` is retired. The live sheet is the night edition in `assets/edition.css` and `assets/polish.css`. The archive **index** uses that same night sheet. Permalink pages from before this cutover that still link `assets/brief.css` stay on the card sheet. `404.html` is still the dark card chrome.
+The Daily Jenya is a daily newspaper with three sections — **News**, **Markets** (the US session, read from Israel), and **AI**. It publishes up to three editions a day, in Hebrew by default with English one tap away, on a phone and on a PC. The site is static on GitHub Pages: `https://jifa52.github.io/KNG.3D/`.
 
-## Cutover
+**You write content, not pages.** Each edition is one data file, `edition.js`. A shared renderer (`assets/dj.js`, `assets/dj.css`) turns it into the page: the nameplate, the edition stars, the tape, the layout, the language switch, light/dark, the archive. You never write HTML pages, CSS, or JavaScript.
 
-The 25 September 2026 midday edition is the Daily Jenya cutover. `index.html`, `briefings/2026-09-25-1545/index.html`, and `briefings/2026-09-25-1400/index.html` render from this template. They carry the Friday MAIN News (eight cards), the Friday markets refresh (~15:45 Israel, quotes ~15:04–15:19, futures not cash), and the Friday morning AI digest. Do not invent stories or prices when remounting. VIX is the index. USD/ILS is FX spot. A tariff truce is not a stop to trade.
+## Cadence
 
-`assets/brief.css` and `assets/lanes.js` stay for earlier permalinks. The card rendering of that 15:45 tape is in git history. Do not delete `brief.css` while those archives still link it.
+| Drop | Folder time | `slot` | Days | What is new |
+|---|---|---|---|---|
+| Morning | `0850` | `morning` | every day | Overnight news (a short front: 2–5 stories). Markets copied from the last markets edition. |
+| Midday | `1400` | `midday` | every day | The day's news front (4–8 stories). Markets copied from the last markets edition. |
+| Markets | `1545` | `markets` | Monday–Friday (US trading days) | Markets refreshed from the pre-market tape. News copied from the midday edition. |
 
-**Next editions** render from `templates/edition.html` into `index.html` and `briefings/YYYY-MM-DD-HHMM/index.html`. Copy `templates/IMAGE-CREDITS.md` into that folder when a photograph is used. Do not put `lanes.js` back on an editorial page. Do not swap the template while a Markets publish is in flight, and do not merge a fresh content pack in the same change as a template experiment.
+**AI** is a digest three times a week: **Monday, Wednesday and Friday, around 09:00**. It goes into the morning drop, or into the midday drop if the newsletters were not in by 08:50. On every other drop the AI section is copied from the previous edition, with its real date.
 
-Same sheet for every cadence. What changes is which blocks are filled:
+Every edition is **complete**: it contains all three sections. A section you did not refresh is copied from the previous edition and marked `"carried"` (see below). Folder time is the scheduled Israel time; keep it even if you publish a few minutes late.
 
-- **Overnight thin.** One lead, fewer supports, quiet band only if the pack has the stories. Markets is the previous news-first block, with that stamp printed, or the section is omitted when the pack has no tape. AI is carried or omitted the same way.
-- **Main news.** Full front: lead, about two supports, quiet band. If this drop does not replace Markets, keep the prior news-first block and print the real stamp. Do not say “today” for an older stamp.
-- **Markets.** Refresh the snapshot strip, drivers, catalysts, today/next, and the optional story. Keep the news front, including every `<!-- keep-photo-slot -->` already on `index.html` — lead, both supports, every quiet-band card, and any AI figure — unless the pack replaces that story. Copy those same figures onto the homepage and the same-day permalinks. A markets drop does not delete photographs or labeled illustrations. The template’s quiet band is one sample; the live page may have more cards.
-- **AI digest.** Refresh `.ai-carry`, `.ai-lead`, and `.ai-list`. Text-first unless a licensed image exists.
+## Publish, step by step
 
-The polish preview is not an archive edition. Do not add it to `archive/index.html`. It stays as the study that shipped:
+1. **Folder.** Create `briefings/YYYY-MM-DD-HHMM/` (Israel time), e.g. `briefings/2026-10-04-0850/`.
+2. **Shell.** Copy `templates/shell.html` into that folder as `index.html`. Do not change a single character — the check compares it byte for byte.
+3. **Content.** Start from the previous edition's `edition.js` (so copied sections come along), then replace what this drop refreshes. Format below; `templates/example/edition.js` is a complete, valid example.
+4. **Pictures** (required on every card). Download each file into `assets/images/` — never hotlink. Fill `image` on every news story, market driver, market catalyst, and AI story. Copy `templates/IMAGE-CREDITS.md` into the folder, fill one block per picture, and set `"credits": "IMAGE-CREDITS.md"`.
+5. **Manifest.** Add one line at the **top** of the list in `assets/editions.js`:
+   `{"id": "2026-10-04-0850", "date": "2026-10-04", "time": "08:50", "slot": "morning", "headline": <exactly the lead story's headline object>, "summary": <exactly the edition's summary object>},`
+   The homepage always opens the first entry, and the archive is built from this list.
+6. **Check** (if you can run Python): `python3 tools/check.py 2026-10-04-0850`. It must print `0 errors`. The same check runs on every push.
+7. **Commit** with the message `Edition 2026-10-04 08:50 (morning)`.
 
-`https://jifa52.github.io/KNG.3D/preview/ux-2026-09-24-polish/`
+**Never edit:** `index.html` (home), `archive/`, `assets/dj.js`, `assets/dj.css`, `templates/shell.html`, or any older folder in `briefings/`. Published editions are frozen; the push is rejected if one changes. A correction goes into the next edition.
 
-## What the reader sees
+## The file
 
-One scrolling page. News, then Markets, then AI. One language at a time. Hebrew is the default; English is the switcher in the masthead (`assets/i18n.js`, `data-lang`). Do not print a full Hebrew story and then the full English story in the same view.
+`edition.js` is one call wrapping one JSON object. It must be valid JSON inside: double quotes, no trailing commas, no comments.
 
-The page is night paper (`#101f2c`) on `#09141e`. Ink is `#d4dce1`. On the home sheet the mast and the indices crawl run edge to edge (gradient `#102637` to `#142e43`, gold rule `#b99a55`). The logo (350px, 245px on a narrow screen) and the edition date sit in the centered column, and the home sheet hides the top bar so that date is not repeated. The story column stays in the wrap. Nav is `#132635`. Why-it-matters sits on pale `#1b3040`. Crawl prices use `#9bc9ba` up and `#e6a5b1` down. AI sits on `#262e42`. Rules are `#344653`. News kickers are gold `#dfbd72`. No cream paper, no forest-and-lime chrome, no quote-board dashboard.
+```js
+DJ.edition({
+ "v": 2,
+ "id": "2026-10-04-0850",
+ "date": "2026-10-04",
+ "time": "08:50",
+ "et": "01:50",
+ "slot": "morning",
+ "summary": {"he": "...", "en": "..."},
+ "news":    { "asof": {...}, "carried": false, "stories": [ STORY, ... ] },
+ "markets": { "asof": {...}, "carried": false, "story": [ {...} ], "note": [ {...} ],
+              "tape": [ CHIP x6 ], "extra": [ CHIP x≤2 ],
+              "drivers": [ ITEM, ... ], "catalysts": [ ITEM, ... ], "calendar": { "items": [ EVENT, ... ] } },
+ "ai":      { "asof": {...}, "carried": false, "stories": [ STORY, ... ] }
+});
+```
 
-Masthead: the supplied logo once (J and globe, **The Daily Jenya**, **YOUR MORNING EDITION** baked into the artwork). Do not add a second HTML tagline. The mast uses `assets/daily-jenya-logo-v2.png` (white lockup, black knocked out to transparency). Opacity `1`. Do not add `filter` or `mix-blend-mode`; a brightness/invert filter turns the edge into stairs, and phones drop screen blends so the logo disappears. Then the edition date, Jerusalem time before any other clock, and the language switcher. Under that, the section nav: חדשות · שווקים · AI · ארכיון. Then the indices crawl (duplicated row, 52s, pause, reduced-motion static), then one quotes line (what the news cut is, and that the markets figure is a snapshot, not a live quote).
+**Bilingual text.** Every reader-facing field is `{"he": "...", "en": "..."}` — both languages, same facts, written natively (not a word-for-word translation). A plain string is allowed only for text that is identical in both languages (a ticker, a product name like `"GPT-6.1 Sol"`).
 
-Each story, in this order:
+**Inline markup allowed in text:** `<b>`, `<strong>`, `<em>`, `<i>`, `<a href="https://...">`, `<bdi>`, `<code>`, `<br>`, `<sup>`, `<sub>`, `<abbr>`. Nothing else. Wrap numbers inside Hebrew sentences in `<bdi>…</bdi>` so they keep their direction: `"עלייה של <bdi>3.2%</bdi>"`. Escape `&` as `&amp;`.
 
-- Category kicker.
-- Headline, about 8–14 words where that is natural. Ordinary Hebrew, not tape jargon.
-- What happened, in two to four short sentences.
-- A structural **למה זה חשוב / Why it matters** (`.why`), one or two sentences drawn from the sourced pack. Do not hide that point only inside the body.
-- Confidence, source, and time (`.card-meta`). Jerusalem time first. **מאומת / Confirmed** needs two independent sources. A single newsletter is **סביר / Likely** at most. Do not print a stack of confidence essays.
-- A sources line with links. The link is to the external original only. There is no in-site long article and no “continue reading.”
+**Times.** `time` and `et` are `HH:MM`. Israel time always comes first. ET = Israel − 7 h while both are on summer time; Israel moves to winter time on 25 October 2026 (− 6 h until US clocks change on 1 November), then − 7 h again. If unsure, give Israel time only.
 
-Strip from the HTML: internal notes, hard gates, verb locks, card IDs, agent routing (including “→ Markets”), and desk words such as stamp when a plain “at this hour” will do. Keep a material caveat in the prose. Uncertain claims stay qualified. A collapsed “more” block is only for extra sourced detail, never the only place a caveat lives.
+### Edition fields
 
-News hierarchy, in this order, on the open page. The live sheet carries `class="home"` on `<html>` (with `edition`). Archive and older briefings do not.
+| Field | Required | Notes |
+|---|---|---|
+| `v` | yes | Always `2`. |
+| `id`, `date`, `time` | yes | Match the folder name. |
+| `et` | yes | US Eastern time of the drop. |
+| `slot` | yes | `morning`, `midday`, `markets` (or `special` for an unscheduled drop). |
+| `summary` | yes | 1–2 sentences, he + en: the edition at a glance. Used by the archive and the page description, not shown above the stories. Not a story-by-story recap. |
 
-1. The mast is the logo once, the edition date, and the language switch. No story headline in that band.
-2. The navy story panel (`article.lead` inside `.front`) opens with the lead headline (`.lead-display`, one kicker, one `h2#lead-title`), then the index line, `figure.photo` when a licensed credit exists, two to four sentences, `.why`, meta, sources. About 60% of the row. The publish template keeps that figure in the panel. Fill it, or, on a Markets refresh, copy the figure already on the live page. Otherwise the panel is text-first. Do not print the gray “no licensed image” line. Do not invent a photograph. Do not comment the figure out and ship a text-only front when the previous edition already had a credited lead.
-3. About two supporting stories (`.side-stack`), about 40%. Each support in the template has `figure.photo.photo--support` (a landscape). A portrait (`figure.photo.photo--portrait`) is only for a licensed portrait of a person. Keep both support figures on a Markets refresh. Each picture needs its own license and caption.
-4. The rest quieter (`.quiet-band`), three across on a wide screen, stacked on a phone. Each quiet card that already has a `figure.photo` keeps it. The template shows one sample slot. A Markets refresh copies every quiet figure from the live page, licensed or labeled illustration.
-5. The edition dek (`.quotes`) comes after that band, not between the nav and the lead.
+There is no weather in the paper. The check rejects a `weather` field.
 
-AI uses the same calm newspaper type: `.ai-carry` when the digest is carried, then `article.ai-lead`, then `.ai-list`. No equal-weight card stack. A picture on an AI card is a labeled illustration or a licensed photograph, inside `figure.photo`, and it stays when the digest is carried. No product image passed off as a photograph.
+### Section fields (`news`, `markets`, `ai`)
 
-Section ids are `#news`, `#markets`, and `#ai`. On the home sheet the nav shows one of those sections at a time. `#premarket`, `#lane-news`, `#lane-markets`, and `#lane-ai` open the matching section. Card-layout archives still use `assets/lanes.js` to switch panels. This template does not. Do not put `lanes.js` back on the editorial page.
+| Field | Notes |
+|---|---|
+| `asof` | The **content cutoff**: when you stopped gathering, not when the edition went out. Short and human: `{"he": "בוקר, <bdi>08:50</bdi> בישראל", "en": "Morning, <bdi>08:50</bdi> Israel"}`. If research stopped earlier than the drop, say the earlier time. For markets, the time the quotes were taken: `{"en": "Friday 2 October, quotes <bdi>15:06–15:21</bdi> Israel, before the jobs report", ...}`. Never "today" for an older stamp. |
+| `carried` | `false` when fresh. When the section is copied from an earlier edition: `true`, or a reader note such as `{"he": "ממהדורת השווקים של יום שישי, 15:45.", "en": "From Friday's 15:45 markets edition."}`. The page shows **ממהדורה קודמת / Earlier edition**. Do not write the words "carried", "נישא", "MAIN", "lane", or "desk" in that note. A copied section keeps its own `asof` exactly — never restamp it with the new edition's time — and drop any note in it that points at an edition that is no longer current. |
 
-## Markets, after News
+### Four different times
 
-From 25 September 2026 the reader hierarchy is a market news brief, not a quote dashboard. Prices are supporting context and come last. The empty structure is the `#markets` block in `templates/edition.html`. Older permalinks that still use quote boards stay as they were. Do not rebuild those pages.
+Keep them apart; never copy one into another.
 
-Reader order, top to bottom. Do not reverse it. On a phone the snapshot wraps; it does not become the hero. The page does not scroll sideways.
+1. **Event time**: when the thing happened or is scheduled (`time`/`date` on a story, `time`/`date` on a calendar item).
+2. **Source time**: when the source published it. Use it when the event time is unknown, and say which it is if it matters.
+3. **Content cutoff**: the section's `asof`.
+4. **Publication**: the edition's `time` (the folder time).
 
-1. **Market drivers** (`#mkt-drivers-heading`, `.mkt-drivers`). About four to seven `article`s when the day has them. Do not fill weak items to hit a count. On the home sheet the section title is large markets-green type and this block is the navy slab; the first driver is the display line. Prices stay in the snapshot below. Each article: a bilingual headline, one or two short sentences, `.why`, and `.sources`. A material caveat stays in the sentence. Hebrew is plain. No trade recommendation. If the same event is a News story, give only the market angle.
-2. **Company catalysts** (`#mkt-catalysts-heading`, `.mkt-catalysts`). About four to eight. Ticker in `.mkt-tick`, the name, the event, `.why`, and `.sources`. A price move is not a reason to include a name. Do not default to the same megacaps unless they have a real event. Cover other sectors when the day has them.
-3. **Today / next** (`.mkt-next`). About two to four items that could matter. Israel time first. US Eastern beside it when the hour is confirmed, including which daylight-saving offset is in force. One short reason only when it is not obvious. Drop rows whose time has already passed. Do not invent an hour.
-4. **Market story** (`.mkt-brief`). Optional. At most three sentences. Do not force a cause for a small move. Delete the block on a quiet day.
-5. **Snapshot** (`.mkt-snap`). Secondary. A compact strip, after the news. The same six primary levels also run in the mast crawl (`.crawl`), duplicated for a seamless right-to-left loop. `prefers-reduced-motion` stops the animation and shows one static row. The crawl is the stamped snapshot, not a live quote.
-   - `.mkt-snap-note` is one short freshness note, and only when a real limitation exists: futures are not cash, the US cash session is closed, or a yield is the prior close. No methodology essay. No per-quote timestamp paragraph.
-   - `.mkt-strip` holds up to six `.mkt-chip` items: S&P 500 / ES, Nasdaq / NQ, Dow / YM, VIX, USD/ILS, WTI. Label a future as a future. NQ is not the Composite. VIX is the **index** — the flag says `מדד, לא חוזה` / `Index, not futures`. USD/ILS is **FX spot** — the flag says `שער מט״ח` / `FX spot`, and a rise means a stronger dollar. If the pack stamped cash instead of futures, label those chips as cash. Do not print both.
-   - `.mkt-strip-tuck` is optional and smaller. At most Bitcoin and the US 10-year, when the pack stamped them. If the 10-year stamp is a prior cash close, the flag says so. Do not print a percent change unless that is the pack’s unit.
-   - Do not print RTY, DXY, gold, Brent, or the 30-year as equal peers. Do not add a cash grid. A missing primary stamp is `.mkt-chip--missing` (“אין חותמת בחבילה הזו” / “Not in this tape”). Do not invent the number.
-   - Each chip: symbol linked to the stamp, a plain name, the price, one change, a short flag. The section head prints the real stamp. If the tape is carried, do not say “today.” Do not call delayed data live.
-Do not restate every chip inside the market story.
+A time you do not know is left out, never estimated. Convert with real time zones (Asia/Jerusalem, America/New_York), daylight saving included.
 
-Desk pack, in this order, before HTML: SESSION (one label and the real stamp); SNAPSHOT_PRIMARY (the six); SNAPSHOT_SECONDARY (optional Bitcoin and 10-year only); MARKET_DRIVERS; COMPANY_CATALYSTS; TODAY_NEXT; MARKET_STORY (optional); INTERNAL NOTES. Do not print the internal notes.
+### STORY (news and AI)
 
-DOM hooks: `#markets`, `.mkt-snap`, `.mkt-strip`, `.mkt-chip`, `.mkt-strip-tuck`, `.mkt-drivers`, `.mkt-catalysts`, `.mkt-next`, `.mkt-brief`. `#premarket` still opens Markets.
+```json
+{
+ "kicker":   {"he": "אנרגיה", "en": "Energy"},
+ "headline": {"he": "...", "en": "..."},
+ "bottom":   {"he": "...", "en": "..."},
+ "facts":    [ {"he": "...", "en": "..."}, ... ],
+ "why":      {"he": "...", "en": "..."},
+ "flags":    [ {"he": "...", "en": "..."} ],
+ "confidence": "confirmed",
+ "source":   {"he": "רויטרס ו־BBC", "en": "Reuters and BBC"},
+ "time": "16:13",
+ "date":     {"he": "<bdi>2</bdi> באוקטובר", "en": "2 October"},
+ "links":    [ {"label": "Reuters", "url": "https://..."} ],
+ "image":    IMAGE
+}
+```
 
-## Freshness
+The reader's rule is **answer first, explanation only if it adds value, flags clearly separated.** The fields map to that:
 
-Carried blocks show the real date and time. Replace stale “today / tomorrow” from the source pack when the edition is a later day.
+- **`headline`** — specific, 8–14 words, plain language. Not tape jargon.
+- **`bottom`** — the bottom line: one sentence that answers "what happened, and where does it stand now". If he reads nothing else, this is the story.
+- **`facts`** — 1–5 short numbered facts that support the bottom line. One fact per item, one or two sentences each. Numbers, names, dates. No caveats here.
+- **`why`** — a consequence or a mechanism, in one or two sentences: who is affected, through what, and what is still open. Not a second summary, and not "this is important". If you cannot say why it matters, the story probably does not belong.
+- **`flags`** — what is unconfirmed, disputed, missing, or easy to misread: "A request, not a signed deal." "One source, unnamed officials." "The figure is not in this edition." Each caveat appears **once**, here — not again in the bottom line, the why, or the photo caption. Omit when there is nothing to flag.
+- **`confidence`** — see the rules below.
+- **`source`**, **`time`** (Israel, when known) or **`date`** — who reported it and when.
+- **`links`** — the original sources, external only, at least one. Link the article or document itself, not a homepage, and link every source you name in `source`.
 
-## Type
+### Confidence
 
-Frank Ruhl Libre (headlines) and Heebo (body) are the faces in use. Both are SIL Open Font License; the license texts and the Hebrew plus Latin woff2 subsets are in `assets/fonts/`. `assets/edition.css` loads them. `assets/polish.css` sets the larger wordmark, the section nav, photographs, the news-first markets brief, and the newspaper AI and archive list. Older polish permalinks still use the quote-board rules in that file. Weights on disk are 500 and 700 (there is no 900 file). Body size is 18.5px, line-height about 1.65–1.7. The lead stays at that size; supports and the quiet band are set smaller on purpose.
+| Label | Rule |
+|---|---|
+| `confirmed` (מאומת) | **Two independent publishers**, both linked. |
+| `likely` (סביר) | One publisher, or several that all trace back to one (a newsletter summarising a vendor's post is one source). |
+| `unverified` (לא מאומת) | You could not check it. |
 
-Fallback, if a file fails: `"Noto Serif Hebrew", "Times New Roman", Times` for headlines, and `"Noto Sans Hebrew", "Arial Hebrew", Arial` for body. Do not switch faces unless a real load or shaping failure shows up.
+- **Same publisher counts once.** A vendor's site, its blog, its GitHub, its Hugging Face page and its X account are all the vendor. A wire story republished on another site is still the wire. The check rejects `confirmed` unless the links come from two different publishers.
+- **A newsletter alone is `likely` at most.**
+- **Announced is not verified.** An official post confirms that a release was announced. It does not confirm the vendor's own speed, accuracy or benchmark numbers: write those as vendor-reported ("לפי החברה" / "the company says") and flag them, unless an independent source measured them.
+- **Israeli force posture** (deployments, call-ups, operations, alert levels) is `confirmed` only from the IDF Spokesperson or Reuters/AFP-class reporting. Israeli TV alone is `likely`.
+- **The label covers the bottom line.** If a card bundles claims of different strength, the weaker ones are flagged, or the card is split.
+- Never upgrade a label, or a claim's wording, when you copy or carry a story. Never upgrade the wording beyond the label.
 
-## Images
+### What goes on the front
 
-Use a story picture only with a license, a credit in the caption, alt text (`data-alt-he` / `data-alt-en`), and a block in that edition’s `IMAGE-CREDITS.md`. The masthead file `assets/daily-jenya-logo.png` is the brand lockup, not a story photograph. An illustration that is not a photo of the event is allowed only inside `figure.photo`, with a caption under the image — `figcaption.illus-caption` reading **המחשה (AI)** / **AI Illustration**. No badge above the image, and no long sentence about what the picture is not. Put shared files in `assets/images/`. Put a file that only one edition uses in `briefings/YYYY-MM-DD-HHMM/images/`. Otherwise leave that one story text-first. Do not generate a documentary fake of a real event or a real person. Do not draw a chart from memory. A market chart is allowed only when the series, source, range, units, and timestamps are real. Missing art on a brand-new story does not block the edition. It does not license deleting photographs or labeled illustrations the live page already shows.
+Rank news by: significance for Israel and the Middle East; major geopolitics; macro, energy, trade and regulation; companies that matter across sectors; AI. Market impact counts, but it is not the only test. Energy infrastructure (oil, gas, shipping lanes) goes in when it is sourced and material. Never add a story to fill a slot.
 
-The template’s lead, both supports, the quiet-band sample, and the AI lead include `figure.photo`, each marked `<!-- keep-photo-slot -->`. Those markers stay in the published HTML whenever a credit exists. A Markets publish, or any drop that does not replace the news front, copies every marked figure from the current `index.html` (src, srcset, caption, alt, and `illus-caption` when the file is an illustration) onto `index.html` and the same-day permalinks. Do not rebuild the news front from the empty tokens and drop the pictures. Do not hotlink. Download the file into `assets/images/` or the edition `images/` folder. JPEG is the page format; compress a wide file before committing it.
+The first news story is the lead; order the rest by importance: the lead, then 2 strong supports, then the rest. One story is one development; do not run the same development twice under different headlines.
 
-There is no publish script that fetches images for a new story. Choosing and crediting a photograph is a manual step. Do not hotlink an unlicensed wire photo to fill the lead.
+### IMAGE (required on every card)
 
-## Checks before publish
+```json
+{
+ "src": "assets/images/big-spring-refinery-1280.jpg",
+ "srcset": "assets/images/x-960.jpg 960w, assets/images/x-1600.jpg 1600w",
+ "w": 1280, "h": 759,
+ "alt":     {"he": "...", "en": "..."},
+ "year":    2007,
+ "caption": {"he": "בית הזיקוק בביג ספרינג, טקסס", "en": "Big Spring Refinery, Texas"},
+ "credit":  "James St. John",
+ "license": {"label": "CC BY 2.0", "url": "https://creativecommons.org/licenses/by/2.0/"}
+}
+```
 
-- Headline alone is specific.
-- The paragraph states the point and any caveat that changes the meaning.
-- Jargon is plain, or glossed once. Hebrew reads as a sentence, not a tape label.
-- Hebrew and English are not both visible.
-- The page is night paper `#101f2c` on `#09141e`. The masthead is the Daily Jenya logo once, with the date and the language switch, and **YOUR MORNING EDITION** only inside the artwork. The lead headline is in the news panel. The nav is חדשות · שווקים · AI · ארכיון, and it shows one section at a time. News gold is a kicker, markets green is the markets title, AI purple is the digest accent. The snapshot figures stay smaller than the drivers.
-- Every story card has `.why` (למה זה חשוב / Why it matters). There is no dive-in reader.
-- The indices crawl is present, duplicated, and still readable with `prefers-reduced-motion`.
-- An AI picture’s only on-page label is `figcaption.illus-caption` (**המחשה (AI)** / **AI Illustration**) under the image. There is no badge. Do not present generated art as a photograph of the event or of a real person.
-- Both `edition.css` and `polish.css` are linked. `lanes.js`, `brief.css`, and `paper.css` are not.
-- News is the asymmetric front. There is no gray photo placeholder.
-- Markets is the news-first order above, not quote boards and not an HTML table. The snapshot strip is shorter than the drivers. VIX is labeled as an index. USD/ILS is labeled as FX spot. The six levels can be scanned without reading a paragraph.
-- A carried AI digest says so, in `.ai-carry`, with the real date.
-- Every embedded image has a visible caption and a row in `IMAGE-CREDITS.md`.
-- Every `<!-- keep-photo-slot -->` that was on the live page is still in `index.html` and in the same-day permalinks when those stories were kept. A Markets-only change did not strip the lead, the supports, the quiet band, or a carried AI figure.
-- Expired calendar rows are gone.
-- No internal desk labels in the HTML.
-- `#premarket` still reaches Markets.
+The page builds the caption as **Archive photo, 2007 · subject · Photo: creator · licence**.
 
-## Pages deploy
+- **Every card needs a picture.** News stories, market drivers, market catalysts, and AI stories each need an `image`. The check rejects a card without one. Prefer a real licensed photograph. If none fits, an illustration is allowed.
+- Only licensed pictures (Wikimedia Commons, public domain, government) with a credit and a license. Download into `assets/images/` as JPEG, about 1280–1600 px wide. Never hotlink.
+- `year` — the year the photo was taken, as a number. Set it for every photo that is not of the event itself; the page then labels it "Archive photo, 2007".
+- `caption` — what and where, in a few words. The year and the credit are separate fields, so do not repeat a long credit line. Do not list what the photo is not.
+- `credit` — the creator, nothing else.
+- A generated illustration: set `"ai": true` and no credit. The page shows only **המחשה (AI)** / **AI Illustration** under the image (capital I in Illustration). No badge, no banner, and no extra caption. Never present an illustration as a photograph of a real event or a real person.
+- A copied section keeps its pictures.
 
-GitHub Pages serves the `main` branch from the repository root. A push to `main` publishes `index.html`, `archive/`, `briefings/`, `assets/`, `preview/`, and `templates/`. The Actions workflow verifies those files; it does not replace the branch deploy.
+### Markets
 
-Live homepage:
+```json
+"markets": {
+ "asof": {"he": "...", "en": "Friday 2 October, quotes <bdi>15:06–15:21</bdi> Israel, before the open"},
+ "stamp": {"he": "שישי 15:21", "en": "Fri 15:21"},
+ "carried": false,
+ "story": [ {"he": "...", "en": "At most three sentences: what the tape is doing and the one or two reasons the sources give."} ],
+ "note":  [ {"he": "...", "en": "Futures, not cash. US stocks open at <bdi>16:30</bdi> Israel."} ],
+ "tape": [
+  {"sym": "ES", "name": "S&amp;P 500", "last": "7,756.5", "chg": "+0.42%", "flag": {"he": "חוזה, לא המדד", "en": "Future, not the index"}, "url": "https://finance.yahoo.com/quote/ES%3DF/"},
+  {"sym": "NQ", ...}, {"sym": "YM", ...},
+  {"sym": "VIX", ..., "flag": {"he": "מדד, לא חוזה", "en": "Index, not futures"}},
+  {"sym": "USD/ILS", ..., "flag": {"he": "שער מט״ח", "en": "FX spot"}},
+  {"sym": "WTI", ...}
+ ],
+ "extra": [ {"sym": "BTC", ...}, {"sym": "10Y", ...} ],
+ "drivers":   [ ITEM ],
+ "catalysts": [ ITEM with "ticker": "AVGO" ],
+ "calendar":  { "items": [ {"date": "2026-10-06", "time": "19:00", "et": "12:00", "label": {...}, "detail": {...}} ] }
+}
+```
 
-`https://jifa52.github.io/KNG.3D/`
+The page shows Markets in this order: the story → what is moving markets (drivers) → companies (catalysts) → today and next (calendar) beside a small price snapshot. The prices are context, not the headline; the TV ticker at the top carries them too.
 
-Approved study (kept):
+- **`stamp`**: the short label on the ticker — weekday and the time the quotes were taken, e.g. `{"he": "שישי 15:21", "en": "Fri 15:21"}`. Never "Live".
 
-`https://jifa52.github.io/KNG.3D/preview/ux-2026-09-24-polish/`
+- **`tape`**: exactly these six, in this order: ES, NQ, YM, VIX, USD/ILS, WTI. Each with `last`, one `chg`, a short `flag`. Label a future as a future; NQ is not the Composite; **VIX is the index** (flag must say מדד / Index); **USD/ILS is FX spot** (flag must say שער מט״ח / FX spot) and a rise means a stronger dollar. If the tape was cash, say cash. A number you do not have: `{"sym": "WTI", "missing": true}` — never invent it.
+- **`extra`**: at most Bitcoin and the US 10-year. A prior close is labeled as such. Nothing else as equal peers (no RTY, DXY, gold, Brent, 30-year).
+- **`story`**: optional, at most three sentences. Do not force a cause for a small move.
+- **`drivers`** (about 4–7) and **`catalysts`** (about 4–8) — ranges, not quotas; never pad. Each has `headline`, `bottom`, optional `facts`, `why`, optional `flags`, `links`.
+  - **One card = one development.** A driver explains a broad market mechanism (rates, energy, policy); a catalyst explains a company-specific change. Bundle related angles into one card (jobs and rates are one driver, not two).
+  - A **scheduled** event or deadline lives only in the calendar, not as a driver. A newly sourced award, release or delivery can be a driver.
+  - A merger approval and its later closing date can be separate items only if each adds new information.
+  - A catalyst has a `ticker` and a real event — a price move alone is not a reason. Spread across sectors; do not default to the same mega-caps.
+- **`calendar`**: 2–4 events, each with `date` (`YYYY-MM-DD`), and Israel `time` and `et` only when confirmed.
+  - An event **after** your cutoff: list it as upcoming.
+  - An event **at or before** your cutoff (e.g. a 15:30 jobs report in a 15:45 edition): give the sourced result in `result` (`{"he": "...", "en": "..."}`), or set `"status": "unavailable"` (the page shows "Result not available at cutoff"). Never describe a market reaction to a result you do not have. The check enforces this.
+  - Drop older events that no longer matter.
+- On a non-markets drop, copy the last markets section and set `carried`.
+- No trade recommendations. Ever. Tape is data.
+
+## Words
+
+- Hebrew reads as Hebrew sentences; English as English. Jargon is glossed once or avoided.
+- No desk language anywhere a reader can see (cards, captions, the nameplate, the archive, image credits): no MAIN, overnight thin / מהדורה רזה, carried / נישא, desk, lane, essay-on-this-tab, verb lock, card IDs, HOLD, pack, routing notes, internal notes, TODO. Edition names are Morning / בוקר, Midday / צהריים, Markets / שווקים, and AI. Normal market words a reader knows (pre-market, futures, the jobs report) are fine; internal shorthand such as pre-NFP is not.
+- Do not name or describe the publisher as a person. The only public name is the brand **The Daily Jenya**.
+- Say it once. The summary does not recap every story; the why does not repeat the bottom line; a caveat lives only in `flags`.
+- Uncertain claims stay qualified, and the qualification lives in `flags`.
+- Do not invent: no number, quote, time, forecast, or photo that is not in your sources. Missing data is said to be missing.
+
+## Before you push
+
+- [ ] Folder name, `id`, `date`, `time`, `slot` agree.
+- [ ] `index.html` in the folder is an exact copy of `templates/shell.html`.
+- [ ] Every story has headline, bottom, facts, why, confidence, source, links — in both languages.
+- [ ] Every `confirmed` has two independent publishers linked; vendor numbers are marked vendor-reported.
+- [ ] Carried sections are marked `carried` and keep their own `asof`.
+- [ ] Each section's `asof` is its real content cutoff.
+- [ ] Calendar: every event has a `date`; anything at or before the cutoff has a `result` or `"status": "unavailable"`.
+- [ ] Markets: no development appears twice; deadlines are in the calendar only.
+- [ ] Tape: six chips, VIX = index, USD/ILS = FX spot, missing numbers marked missing; `stamp` set.
+- [ ] Every News, Markets, and AI card has an image. Photos are licensed and credited; illustrations use `ai: true` and the label המחשה (AI) / AI Illustration only.
+- [ ] Captions say what and where. They do not list what the photo is not.
+- [ ] No desk words, and no personal name besides the brand The Daily Jenya.
+- [ ] Manifest line added at the top, headline and summary identical to the edition's.
+- [ ] `python3 tools/check.py <id>` prints 0 errors.
+- [ ] No older edition folder was touched.
