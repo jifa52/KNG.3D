@@ -1,16 +1,13 @@
 # Image credits — midday edition, 5 October 2026, ~14:00 Israel
 
-These files are on the homepage and on this permalink. Shared files live in `assets/images/`. None is a picture of Monday’s signing, of the 4 October OPEC+ meeting, of a strike on a Russian refinery, of Monday’s fighting at Dhubab, of a closed Lukoil sale, or of the Super Intelligence Force announcement. Each photograph’s caption on the page says what it is.
+These files are on the homepage and on this permalink. Shared files live in `assets/images/`. Each photograph’s caption on the page says what it is.
 
-Six photographs are licensed. The Friday 2 October morning AI digest on this page is text-first. Markets are the Monday 5 October ~15:45 tape, session pre-market, pre-ISM Services, quotes about 15:06–15:21 Israel. Futures are not cash. The 10-year is Friday’s close, 5.277%.
-
-The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a story photograph.
+Six photographs are licensed. Markets and the AI digest on this page use the archive photographs listed at the end of this file. Markets are the Monday 5 October ~15:45 tape, session pre-market, before the ISM services index, quotes about 15:06–15:21 Israel. Futures are not cash. The 10-year is Friday’s close, 5.277%.
 
 ## Lead — Schneider Electric headquarters, The Hive
 
 - File: `assets/images/schneider-hive-1400.jpg` (1400×931), `assets/images/schneider-hive-960.jpg` (960×638)
 - What it shows: Schneider Electric’s Hive headquarters in Rueil-Malmaison. The file’s camera date is 16 January 2014 (Nikon D3).
-- Why it is not Monday’s signing: the story is a definitive all-cash agreement to buy PTC at $205 a share. This is the buyer’s headquarters. It is not the signing, not PTC’s offices, not the $205 price, and not a close.
 - Creator: Wilmotte & associés architectes
 - Source: The architect’s project page for the Schneider Electric headquarters, uploaded to Wikimedia Commons
 - License: Creative Commons Attribution-ShareAlike 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
@@ -20,7 +17,6 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 
 - File: `assets/images/opec-vienna-1600.jpg` (1600×1158), `assets/images/opec-vienna-960.jpg` (960×694)
 - What it shows: OPEC headquarters in Vienna, photographed 15 June 2001.
-- Why it is not the October meeting: the story is an official OPEC statement that seven countries will keep September required production for November. This is the headquarters twenty-five years earlier. It is not the 4 October 2026 virtual meeting, not barrels added, and not 2027 quotas.
 - Creator: Gary Todd
 - Source: Digital copy of a slide, uploaded to Wikimedia Commons
 - License: CC0 — https://creativecommons.org/publicdomain/zero/1.0/
@@ -30,7 +26,6 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 
 - File: `assets/images/naantali-refinery-1600.jpg` (1600×958), `assets/images/naantali-refinery-960.jpg` (960×576)
 - What it shows: the Naantali refinery in Finland, photographed 17 February 2009.
-- Why it is not the claim: the story is Ukraine’s Defense Ministry saying strikes put 51% of Russia’s refining capacity out of action, a claim that could not be independently verified. This is a Finnish refinery in 2009. It is not Moscow, Yaroslavl, Ust-Luga, Perm, Saratov or Syzran, and not a strike.
 - Creator: Markus Rantala
 - Source: Own work, uploaded to Wikimedia Commons
 - License: Creative Commons Attribution-ShareAlike 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
@@ -40,7 +35,6 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 
 - File: `assets/images/bab-el-mandeb-aster-1920.jpg` (1920×2240), `assets/images/bab-el-mandeb-aster-960.jpg` (960×1120)
 - What it shows: the Bab el-Mandeb strait between Yemen and the Horn of Africa, acquired 10 April 2017 by ASTER on NASA’s Terra satellite.
-- Why it is not the offensive: the story is a launched campaign and a Monday claim that forces seized positions in Dhubab. This is a 2017 satellite view of the strait. It is not ground forces, not Dhubab, not the fighter jets, and not independent confirmation that the strait has been recovered.
 - Creator: NASA/METI/AIST/Japan Space Systems, and the U.S./Japan ASTER Science Team
 - Source: NASA/JPL ASTER image, uploaded to Wikimedia Commons
 - License: Public domain (NASA)
@@ -50,7 +44,6 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 
 - File: `assets/images/lukoil-oroszlany-1600.jpg` (1600×1200), `assets/images/lukoil-oroszlany-960.jpg` (960×720)
 - What it shows: a Lukoil petrol station in Oroszlány, Hungary, photographed June 2018.
-- Why it is not the sale: the story is a New York Times report that a sale of Lukoil’s overseas assets is in the Ukraine talks, and Peskov’s Monday remarks that he would not address that detail while saying energy cooperation was raised. This is one station in Hungary in 2018. It is not the assets in the talks, not a price, not a closed deal, not a US Treasury license, and not Peskov.
 - Creator: Globetrotter19
 - Source: Own work, uploaded to Wikimedia Commons
 - License: Creative Commons Attribution-ShareAlike 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
@@ -60,19 +53,116 @@ The masthead file `assets/daily-jenya-logo-v2.png` is the brand lockup, not a st
 
 - File: `assets/images/white-house-south-1600.jpg` (1600×1067), `assets/images/white-house-south-960.jpg` (960×640)
 - What it shows: the south facade of the White House, seen from the Washington Monument, photographed 16 July 2007. The file on the page is a crop of the building and the south lawn.
-- Why it is not the announcement: the story is President Trump’s Sunday announcement of a “Super Intelligence Force.” This is the building in 2007. It is not the announcement, not the four named leads, and not a served FTC order.
 - Creator: Ad Meskens
 - Source: Own work, uploaded to Wikimedia Commons
 - License: Creative Commons Attribution-ShareAlike 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
 - Page: https://commons.wikimedia.org/wiki/File:South_facade_of_the_White_House,_Washington_DC,_as_seen_from_the_Washington_Monument.jpg
 
-## Not used
+## Markets and AI — archive photographs
 
-- No photograph of Monday’s signing, of PTC’s offices, or of a closed deal. The lead picture is Schneider Electric’s Hive headquarters.
-- No photograph of the 4 October virtual meeting, of a signed production change, or of barrels added. The OPEC picture is the Vienna headquarters in 2001.
-- No photograph of the named Russian sites, of a strike, or of an independent damage tally. The picture is the Naantali refinery in 2009.
-- No photograph of Dhubab, of ground forces, or of a recovered strait. The Bab el-Mandeb picture is a 2017 satellite view.
-- No photograph of the people in the Lukoil talks, and no photograph presented as the assets being sold. The picture is a 2018 station in Hungary.
-- No photograph of President Trump at the announcement, and no photograph of the four named leads. The picture is the White House in 2007.
-- The Friday 2 October AI digest has no credited picture.
-- No chart, heatmap, or generated news photograph.
+These cards use earlier licensed photographs. The caption on the page names the place and the year.
+
+### Nasdaq MarketSite, New York, 2021
+- File: `assets/images/nasdaq-marketsite-1600.jpg` (1600×900), `assets/images/nasdaq-marketsite-960.jpg` (960×540)
+- Shows: the Nasdaq MarketSite sign in Times Square, 19 September 2021.
+- Creator: ajay_suresh
+- License: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
+- Page: https://commons.wikimedia.org/wiki/File:Nasdaq_MarketSite_(51494550508).jpg
+
+### St. James crude tanks, Louisiana, 2014
+- File: `assets/images/spr-stjames-1600.jpg` (1600×1280), `assets/images/spr-stjames-960.jpg` (960×768)
+- Shows: crude-oil storage tanks at the St. James terminal, a U.S. Strategic Petroleum Reserve site. Commons file dated 2014.
+- Creator: U.S. Department of Energy
+- License: Public domain (U.S. government work)
+- Page: https://commons.wikimedia.org/wiki/File:United_States_Strategic_Petroleum_Reserve_001.jpg
+
+### Palais Bourbon, Paris, 2014
+- File: `assets/images/palais-bourbon-1600.jpg` (1600×959)
+- Shows: the Palais Bourbon, seat of the French National Assembly, 2 April 2014.
+- Creator: DXR
+- License: Public domain
+- Page: https://commons.wikimedia.org/wiki/File:Palais_Bourbon,_Paris_7e,_NW_View_140402_1.jpg
+
+### Tanker at Al Basrah, 2005
+- File: `assets/images/tanker-abot-1280.jpg` (1280×851)
+- Shows: an oil tanker taking on crude at the Al Basrah Oil Terminal, Persian Gulf, 11 November 2005.
+- Creator: Eben Boothby, U.S. Navy
+- License: Public domain (U.S. government work)
+- Page: https://commons.wikimedia.org/wiki/File:US_Navy_051111-N-8163B-032_An_oil_tanker_docked_to_the_Al_Basrah_Oil_Terminal_(ABOT)_takes_on_crude_oil_in_the_Persian_Gulf.jpg
+
+### National Congress, Brasília, 2006
+- File: `assets/images/brazil-congress-1600.jpg` (1600×1009)
+- Shows: the National Congress of Brazil, 2006.
+- Creator: Eurico Zimbres
+- License: CC BY-SA 2.5 — https://creativecommons.org/licenses/by-sa/2.5/
+- Page: https://commons.wikimedia.org/wiki/File:Brazilian_National_Congress.jpg
+
+### BT Tower, London, 2009
+- File: `assets/images/bt-tower-1600.jpg` (1600×1000)
+- Shows: the BT Tower in London, 2009. Center crop of the original.
+- Creator: David Castor
+- License: Public domain
+- Page: https://commons.wikimedia.org/wiki/File:BT_Tower-1.jpg
+
+### Pharmaceutical laboratory, Japan, 2024
+- File: `assets/images/pharma-lab-1600.jpg` (1600×1200)
+- Shows: a laboratory at Rohto Pharmaceutical, 2024. It is not a Shionogi site.
+- Creator: Tokumeigakarinoaoshima
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:ROHTO_Pharmaceutical_Co.,_Ltd._laboratory.jpg
+
+### Paramount Melrose Gate, 2026
+- File: `assets/images/paramount-melrose-1159.jpg` (1159×869)
+- Shows: the Paramount Pictures Melrose Gate, 7 January 2026.
+- Creator: Laura Alier
+- License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Paramount_Pictures_Melrose_Gate_entrance.jpg
+
+### Silicon wafer, 2020
+- File: `assets/images/silicon-wafer-1280.jpg` (1280×853), `assets/images/silicon-wafer-960.jpg` (960×640)
+- Shows: a silicon wafer, 19 May 2020.
+- Creator: Rob Bulmahn
+- License: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
+- Page: https://commons.wikimedia.org/wiki/File:5C2A5953R_-_49913961083_%E2%80%93_Silicon_Wafer_20200519.jpg
+
+### Googleplex, Mountain View, 2016
+- File: `assets/images/googleplex-1600.jpg` (1600×1170)
+- Shows: Google headquarters at the Googleplex, 2016.
+- Creator: Asoundd
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Googleplex_HQ_(cropped).jpg
+
+### Server racks, 2015
+- File: `assets/images/datacenter-racks-1280.jpg` (1280×853)
+- Shows: server racks in a data center, 4 November 2015. Not a picture of a model.
+- Creator: Carl Lender
+- License: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
+- Page: https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg
+
+### Nvidia Quadro card, 2024
+- File: `assets/images/nvidia-quadro-1600.jpg` (1600×1184), `assets/images/nvidia-quadro-960.jpg` (960×710)
+- Shows: a PNY Nvidia Quadro P1000 graphics card, 18 June 2024.
+- Creator: Robbie Klinkenberg
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:PNY_Nvidia_Quadro_P1000.jpg
+
+### Code on a monitor, 2017
+- File: `assets/images/code-monitor-1600.jpg` (1600×1067)
+- Shows: source code on a computer monitor, 2017.
+- Creator: Markus Spiske
+- License: CC0 — https://creativecommons.org/publicdomain/zero/1.0/
+- Page: https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg
+
+### Studio microphone, 2014
+- File: `assets/images/studio-mic-1600.jpg` (1600×1000)
+- Shows: an AKG C214 condenser microphone, 2014. Center crop of the original.
+- Creator: Lucasbosch
+- License: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:AKG_C214_condenser_microphone_with_H85_shock_mount.jpg
+
+### Music library, Bologna, 2016
+- File: `assets/images/library-shelves-1600.jpg` (1600×1200)
+- Shows: shelves at the Museo internazionale e biblioteca della musica, Bologna, 2016.
+- Creator: Palickap
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Bologna,_Museo_internazionale_e_biblioteca_della_musica_(2).jpg

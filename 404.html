@@ -1,52 +1,35 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl"
-  data-title-he="הדף לא נמצא · The Daily Jenya"
-  data-title-en="Page not found · The Daily Jenya"
-  data-desc-he="תידרוך יומי לטלפון: חדשות, שווקים ו־AI. שלושה מסלולים, כרטיסים קצרים."
-  data-desc-en="Phone-first daily brief: News, Markets, and AI. Three sections, short cards.">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0b0c0f">
-  <meta name="color-scheme" content="dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <title>הדף לא נמצא · The Daily Jenya</title>
-  <meta name="description" content="תידרוך יומי לטלפון: חדשות, שווקים ו־AI. שלושה מסלולים, כרטיסים קצרים.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <script src="assets/i18n.js"></script>
-  <link rel="stylesheet" href="assets/brief.css">
-
-  <meta property="og:title" content="הדף לא נמצא · The Daily Jenya">
-  <meta property="og:description" content="תידרוך יומי לטלפון: חדשות, שווקים ו־AI. שלושה מסלולים, כרטיסים קצרים.">
-  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <style>
+    :root { --paper: #edebe4; --ink: #161616; --ink-3: #6b6960; --red: #b3122e; color-scheme: light; }
+    @media (prefers-color-scheme: dark) { :root { --paper: #151513; --ink: #e9e6de; --ink-3: #8f8b80; --red: #ff5e6e; color-scheme: dark; } }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif; }
+    main { max-width: 640px; margin: 0 auto; padding: 48px 20px; }
+    .plate { font: 700 44px/1 "Newsreader", "Times New Roman", Georgia, serif; direction: ltr; text-align: center; padding-bottom: 12px; border-bottom: 3px solid var(--ink); margin-bottom: 28px; }
+    .plate i { font-weight: 400; font-size: 24px; }
+    a { color: var(--ink); } a:hover { color: var(--red); }
+    p.en { direction: ltr; text-align: left; color: var(--ink-3); }
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main"><span data-lang="he">דלג לתידרוך</span><span data-lang="en">Skip to briefing</span></a>
-  <div class="app">
-    <nav class="nav" aria-labelledby="nav-label">
-  <span id="nav-label" class="visually-hidden"><span data-lang="he">אתר</span><span data-lang="en">Site</span></span>
-  <a class="nav-mark" href="./">The Daily Jenya</a>
-  <div class="nav-links">
-    <a href="./"><span data-lang="he">אחרון</span><span data-lang="en">Latest</span></a>
-    <a href="archive/"><span data-lang="he">ארכיון</span><span data-lang="en">Archive</span></a>
-  </div>
-</nav>
-
-  <div class="switch-bar">
-    <div class="lang-switch" role="group" aria-labelledby="lang-label">
-      <span id="lang-label" class="visually-hidden"><span data-lang="he">שפה</span><span data-lang="en">Language</span></span>
-      <button type="button" class="lang-btn" data-lang-set="he" lang="he" aria-pressed="true">עברית</button>
-      <span class="lang-sep" aria-hidden="true">|</span>
-      <button type="button" class="lang-btn" data-lang-set="en" lang="en" aria-pressed="false">English</button>
-    </div>
-  </div>
-
-<main id="main" class="empty">
-  <h1 data-lang="he">הדף לא נמצא</h1>
-  <h1 data-lang="en">Page not found</h1>
-  <p data-lang="he">התידרוך הזה לא נמצא באתר. ראו את <a href="archive/">הארכיון</a> או את <a href="./">התידרוך האחרון</a>.</p>
-  <p data-lang="en">That briefing is not on this site. See the <a href="archive/">archive</a> or the <a href="./">latest briefing</a>.</p>
-</main>
-
-  </div>
+  <main>
+    <p class="plate"><i>The</i> Daily Jenya</p>
+    <p>המהדורה הזו לא נמצאה. אפשר לחזור <a class="home" href="/KNG.3D/">למהדורה האחרונה</a> או <a class="arch" href="/KNG.3D/archive/">לארכיון</a>.</p>
+    <p class="en">That edition isn't here. Go to the <a class="home" href="/KNG.3D/">latest edition</a> or the <a class="arch" href="/KNG.3D/archive/">archive</a>.</p>
+  </main>
+  <script>
+    (function () {
+      var seg = location.pathname.split("/").filter(Boolean)[0];
+      var base = location.hostname.slice(-10) === ".github.io" && seg ? "/" + seg + "/" : "/";
+      document.querySelectorAll("a.home").forEach(function (a) { a.href = base; });
+      document.querySelectorAll("a.arch").forEach(function (a) { a.href = base + "archive/"; });
+    })();
+  </script>
 </body>
 </html>
