@@ -439,7 +439,10 @@ def main(only=None):
         for k in ("date", "time", "slot"):
             if m.get(k) != ed.get(k):
                 err("assets/editions.js", "%s: %s is %r, edition says %r" % (d.name, k, m.get(k), ed.get(k)))
-        lead = ((ed.get("news") or {}).get("stories") or [{}])[0].get("headline")
+        if ed.get("slot") == "special" and ((ed.get("ai") or {}).get("stories") or []):
+            lead = ed["ai"]["stories"][0].get("headline")
+        else:
+            lead = ((ed.get("news") or {}).get("stories") or [{}])[0].get("headline")
         if not ed.get("legacy") and m.get("headline") != lead:
             err("assets/editions.js", "%s: headline must equal the lead story headline" % d.name)
         if not m.get("headline"):
