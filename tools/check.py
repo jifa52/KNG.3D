@@ -383,6 +383,11 @@ def check_edition(folder, full_ok=True):
         bi(where, ai.get("asof"), "ai.asof")
         for i, st in enumerate(ai.get("stories") or []):
             w = "%s ai.stories[%d]" % (where, i)
+            # A carried digest can still be in the previous story shape (body / meta / sourcesHtml).
+            # Copying it forward must keep the wording and the label. This drop's own cards are checked in full.
+            if ai.get("carried") and isinstance(st, dict) and any(k in st for k in ("body", "meta", "sourcesHtml")):
+                require_card_image(w, st)
+                continue
             check_story(w, st, eid, "ai")
             require_card_image(w, st)
     for sec in ("news", "markets", "ai"):
