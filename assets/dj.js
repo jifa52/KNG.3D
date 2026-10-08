@@ -70,6 +70,7 @@
   /* bilingual value → string for the current language */
   function tx(v) {
     if (v == null) return "";
+    if (typeof v === "boolean") return "";
     if (typeof v === "string") return v;
     if (typeof v === "object") {
       var a = v[state.lang], b = v[state.lang === "he" ? "en" : "he"];
