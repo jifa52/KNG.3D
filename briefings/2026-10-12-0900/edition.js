@@ -15,261 +15,92 @@ DJ.edition({
  },
  "news": {
   "asof": {
-   "he": "ראשון <bdi>11</bdi> באוקטובר · צהריים בישראל",
-   "en": "Sunday 11 October · Israel midday"
+   "he": "שני <bdi>12</bdi> באוקטובר · בוקר בישראל",
+   "en": "Monday 12 October · Israel morning"
   },
   "carried": {
-   "he": "ממהדורת הצהריים של יום ראשון, <bdi>14:00</bdi>.",
-   "en": "From Sunday's 14:00 midday edition."
+   "he": "ממהדורת הבוקר של היום, <bdi>08:50</bdi>.",
+   "en": "From today's 08:50 morning edition."
   },
   "stories": [
    {
     "kicker": {
-     "he": "שיט",
-     "en": "Shipping"
+     "he": "אנרגיה",
+     "en": "Energy"
     },
     "headline": {
-     "he": "מטוס אמריקאי השבית ספינה שפרצה את המצור; <bdi>UKMTO</bdi> מדווח על תקרית מכלית חדשה במפרץ עומאן",
-     "en": "US warplane disables blockade runner as UKMTO reports a new tanker incident in the Gulf of Oman"
+     "he": "טראמפ טוען שרוסיה ואוקראינה הסכימו ל״הפסקת אש אנרגטית״; מוסקבה שותקת, והנפט יורד",
+     "en": "Trump claims Russia and Ukraine agreed an \"energy ceasefire\"; Moscow silent, oil falls"
     },
     "bottom": {
-     "he": "מרכז הסחר הימי הבריטי (<bdi>UKMTO</bdi>) דיווח ביום ראשון על תקרית שבה מעורבים מכלית וכוחות צבא במפרץ עומאן, בלי פרטים נוספים; החקירה נמשכת.",
-     "en": "Britain's UKMTO maritime agency reported on Sunday an incident involving a tanker and military forces in the Gulf of Oman, without details; investigations continue."
+     "he": "הנשיא טראמפ טען שרוסיה ואוקראינה הסכימו ל״הפסקת אש אנרגטית״ – הפסקת תקיפות על מתקני אנרגיה – ״בתוקף מיידי״, בלי פרטים, ומוסקבה לא הגיבה.",
+     "en": "President Trump claimed Russia and Ukraine had agreed to an \"energy ceasefire\" – a halt to strikes on energy facilities – \"effective immediately,\" without giving details, and Moscow has not commented."
     },
     "facts": [
      {
-      "he": "פיקוד המרכז האמריקאי (<bdi>CENTCOM</bdi>) פרסם וידאו של התקיפה בירכתי ספינת המטען <bdi>Ocean Molica</bdi>, שלדבריו ניסתה לפרוץ את המצור על נמלי איראן — הספינה הרביעית שהושבתה מאז חידוש המצור ב־<bdi>14</bdi> ביולי; הצוות לא נפגע.",
-      "en": "US Central Command released video of its strike on the cargo ship Ocean Molica, which it says tried to run the blockade of Iranian ports — the fourth vessel disabled since July 14; no crew were hurt."
+      "he": "הנשיא זלנסקי אמר תחילה שזה ״חדשות״ עבורו, ואחר כך שאוקראינה מוכנה לא לתקוף אנרגיה רוסית אם רוסיה תנהג כך.",
+      "en": "President Zelensky first said it was \"news\" to him, then said Ukraine is ready not to strike Russian energy if Russia does the same."
      },
      {
-      "he": "המשמר הלאומי של איחוד האמירויות חילץ <bdi>22</bdi> אנשי צוות ממכלית שעלתה באש במפרץ, כולם במצב יציב.",
-      "en": "The UAE National Guard rescued 22 crew from a burning tanker in the Gulf, all of them stable."
+      "he": "לדברי זלנסקי, אחרי ההודעה רוסיה פגעה בתחנת כוח בקייב ובמתקני אנרגיה בחרקוב.",
+      "en": "Zelensky says Russia then hit a Kyiv power plant and energy sites in Kharkiv."
      },
      {
-      "he": "בליל שבת נפגעה מכלית מטיל במצר הורמוז.",
-      "en": "A projectile struck a tanker in the Strait of Hormuz late Saturday."
+      "he": "שבעה סנאטורים משתי המפלגות אמרו שעסקת הדיזל של טראמפ עם רוסיה סותרת חוק האוסר יבוא אנרגיה רוסית.",
+      "en": "Seven senators from both parties said Trump's Russian diesel deal runs counter to a law banning Russian energy imports."
+     },
+     {
+      "he": "לפי רויטרס, נפט ברנט ירד ביום שני כ־<bdi>1.5%</bdi> ל־<bdi>103.18</bdi> דולר לחבית, על רקע ציפייה לאספקה רוסית גדולה יותר.",
+      "en": "Reuters says Brent fell about 1.5% to $103.18 a barrel on Monday on expectations of more Russian supply."
      }
     ],
     "why": {
-     "he": "לפי רויטרס, גל התקיפות תומך במחירי הנפט.",
-     "en": "Reuters says the attack wave is supporting crude prices."
+     "he": "שבעה סנאטורים אומרים שעסקת הדיזל סותרת את האיסור על יבוא אנרגיה רוסית, ונכונות אוקראינה, כפי שאמר זלנסקי, תלויה בכך שרוסיה תנהג כך.",
+     "en": "Seven senators say the diesel deal runs counter to the ban on Russian energy imports, and Ukraine's readiness, as Zelensky stated it, depends on Russia doing the same."
     },
     "flags": [
      {
-      "he": "משמרות המהפכה טוענים שמכלית עלתה על מוקש — טענה שלא אומתה, והיא אינה הדיווח של <bdi>UKMTO</bdi> על התקרית במפרץ עומאן.",
-      "en": "Iran's Revolutionary Guards claim a tanker hit a mine. That claim is unverified, and it is not the UKMTO report of the Gulf of Oman incident."
-     },
-     {
-      "he": "בהודעת המשמר הלאומי לא נמסר שם המכלית שעלתה באש.",
-      "en": "The National Guard statement does not name the burning tanker."
-     },
-     {
-      "he": "<bdi>Ocean Molica</bdi> היא ספינת מטען, לא המכלית שעליה דיווח <bdi>UKMTO</bdi>.",
-      "en": "Ocean Molica is a cargo ship, not the tanker in the UKMTO report."
-     },
-     {
-      "he": "אין סגירה חדשה של מחיר הנפט בסוף השבוע.",
-      "en": "There is no fresh crude settlement this weekend."
+      "he": "מוסקבה לא אישרה הפסקת אש. ההפסקה היא טענה של טראמפ.",
+      "en": "Moscow has not confirmed a ceasefire. The halt is Trump's claim."
      }
     ],
     "confidence": "confirmed",
     "source": {
-     "he": "<bdi>The National</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; <bdi>UKMTO</bdi>, אזהרה <bdi>162-26</bdi> · <bdi>10</bdi> באוקטובר <bdi>2026</bdi>, <bdi>22:20</bdi> שעון ישראל; <bdi>CENTCOM</bdi> (הודעה לעיתונות) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, <bdi>03:09</bdi> שעון ישראל; רויטרס (<bdi>Straits Times</bdi>) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, <bdi>04:39</bdi> שעון ישראל; <bdi>Al Jazeera</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; <bdi>Arab News</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>",
-     "en": "The National · Oct 11, 2026; UKMTO Warning 162-26 · Oct 10, 2026, 19:20 UTC; CENTCOM press release · Oct 10, 2026, 5:09 PM PDT; Reuters (via Straits Times) · Oct 11, 2026, 09:39 SGT; Al Jazeera · Oct 11, 2026; Arab News · Oct 11, 2026"
+     "he": "<bdi>BBC</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; רויטרס (<bdi>Business Recorder</bdi>) · <bdi>12</bdi> באוקטובר <bdi>2026</bdi>, <bdi>04:54</bdi> שעון ישראל",
+     "en": "BBC · Oct 11, 2026; Reuters (via Business Recorder) · Oct 12, 2026, 01:54 GMT"
     },
     "date": {
-     "he": "<bdi>11</bdi> באוקטובר",
-     "en": "11 October"
+     "he": "<bdi>12</bdi> באוקטובר",
+     "en": "12 October"
     },
     "links": [
      {
-      "label": "The National",
-      "url": "https://www.thenationalnews.com/news/gulf/2026/10/11/us-warplane-knocks-out-ship-breaching-iran-blockade-as-tankers-burn-in-hormuz/"
+      "label": "BBC",
+      "url": "https://www.bbc.com/news/articles/c6pvg4jyz1m0o"
      },
      {
-      "label": "Iran International",
-      "url": "https://www.iranintl.com/en/202610115492"
-     },
-     {
-      "label": "UKMTO",
-      "url": "https://www.ukmto.org/-/media/ukmto/products/20261010-ukmto_warning_162-26.pdf?rev=ba230421f0a1444fa4f21f84c96d6640"
-     },
-     {
-      "label": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/10/11/us-forces-disable-ship-attempting-to-run-iran-blockade-in-gulf-of-oman"
-     },
-     {
-      "label": "Arab News",
-      "url": "https://www.arabnews.com/middle-east/uae-rescues-22-crew-members-from-burning-oil-tanker-in-arabian-gulf-3005648"
+      "label": "Business Recorder",
+      "url": "https://www.brecorder.com/news/40443764"
      }
     ],
     "image": {
-     "src": "assets/images/tanker-dar-1600.jpg",
-     "srcset": "assets/images/tanker-dar-960.jpg 960w, assets/images/tanker-dar-1600.jpg 1600w",
+     "src": "assets/images/sinclair-refinery-1600.jpg",
+     "srcset": "assets/images/sinclair-refinery-960.jpg 960w, assets/images/sinclair-refinery-1600.jpg 1600w",
      "w": 1600,
-     "h": 1200,
+     "h": 822,
      "alt": {
-      "he": "מכלית דלק יוצאת מנמל דאר א־סלאם",
-      "en": "A petroleum tanker leaving the port of Dar es Salaam"
+      "he": "בית הזיקוק בסינקלר, ויומינג",
+      "en": "The Sinclair Refinery in Sinclair, Wyoming"
      },
-     "year": 2015,
+     "year": 2011,
      "caption": {
-      "he": "מכלית דלק יוצאת מנמל דאר א־סלאם",
-      "en": "A petroleum tanker leaving the port of Dar es Salaam"
+      "he": "בית הזיקוק בסינקלר, ויומינג",
+      "en": "The Sinclair Refinery in Sinclair, Wyoming"
      },
-     "credit": "Sarvesh Lutchmun",
+     "credit": "James St. John",
      "license": {
-      "label": "CC BY-SA 4.0",
-      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
-     }
-    }
-   },
-   {
-    "kicker": {
-     "he": "בינה מלאכותית",
-     "en": "AI"
-    },
-    "headline": {
-     "he": "סטארט־אפ ה־<bdi>AI</bdi> טייפסייף גייס <bdi>870</bdi> מיליון דולר לפי שווי של <bdi>7.5</bdi> מיליארד",
-     "en": "AI startup TypeSafe raises $870 million at a $7.5 billion valuation"
-    },
-    "bottom": {
-     "he": "<bdi>TypeSafe AI</bdi>, מפתחת מודל ה־<bdi>AI</bdi> בשם <bdi>Jev</bdi>, גייסה <bdi>870</bdi> מיליון דולר בסבב <bdi>Series A</bdi> (סבב גיוס ראשון משמעותי ממשקיעים מוסדיים) לפי שווי (הערכת השווי של החברה בסבב) של <bdi>7.5</bdi> מיליארד דולר.",
-     "en": "TypeSafe AI, developer of the Jev AI model, has raised $870 million in a Series A round at a $7.5 billion valuation."
-    },
-    "facts": [
-     {
-      "he": "את הסבב הובילה קרן ההון־סיכון <bdi>Andreessen Horowitz</bdi>, בהשתתפות <bdi>Sequoia</bdi> ו־<bdi>DCVC</bdi>.",
-      "en": "Venture firm Andreessen Horowitz led the round, with Sequoia and DCVC participating."
-     },
-     {
-      "he": "הגיוס מגיע פחות מחודש אחרי השקת <bdi>Jev</bdi>.",
-      "en": "The raise comes less than a month after Jev's launch."
-     }
-    ],
-    "why": {
-     "he": "<bdi>Jev</bdi> מחזיר לתוכנה החלטות מובנות — כן/לא, בחירה מרשימה או ציון — במקום טקסט.",
-     "en": "Jev hands software structured decisions — yes/no, a pick from a list, or a score — instead of text."
-    },
-    "flags": [
-     {
-      "he": "לטענת החברה, כשליש מחברות <bdi>Fortune 500</bdi> כבר משתמשות במודל; הנתון לא אומת באופן עצמאי.",
-      "en": "The company says about a third of Fortune 500 companies already use Jev, a figure not independently verified."
-     }
-    ],
-    "confidence": "confirmed",
-    "source": {
-     "he": "<bdi>TechCrunch</bdi> · <bdi>10</bdi> באוקטובר <bdi>2026</bdi>, <bdi>00:41</bdi> שעון ישראל; <bdi>SiliconANGLE</bdi> · <bdi>9</bdi> באוקטובר <bdi>2026</bdi>, <bdi>23:13</bdi> שעון ישראל; <bdi>Andreessen Horowitz</bdi> (הודעת המשקיעה) · <bdi>9</bdi> באוקטובר <bdi>2026</bdi>",
-     "en": "TechCrunch · Oct 9, 2026, 2:41 PM PDT; SiliconANGLE · Oct 9, 2026, 4:13 PM EDT; Andreessen Horowitz (investor post) · Oct 9, 2026"
-    },
-    "date": {
-     "he": "<bdi>9</bdi> באוקטובר",
-     "en": "9 October"
-    },
-    "links": [
-     {
-      "label": "TechCrunch",
-      "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/"
-     },
-     {
-      "label": "SiliconANGLE",
-      "url": "https://siliconangle.com/2026/10/09/jev-creator-typesafe-closes-870m-round-at-7-5b-valuation/"
-     },
-     {
-      "label": "Andreessen Horowitz",
-      "url": "https://a16z.com/announcement/investing-in-typesafe-ai/"
-     }
-    ],
-    "image": {
-     "src": "assets/images/googleplex-1600.jpg",
-     "w": 1600,
-     "h": 1170,
-     "alt": {
-      "he": "מטה Google בגוגלפלקס, מאונטיין ויו, 2016",
-      "en": "Google headquarters at the Googleplex, Mountain View, 2016"
-     },
-     "year": 2016,
-     "caption": {
-      "he": "מטה Google בגוגלפלקס, מאונטיין ויו",
-      "en": "Google headquarters at the Googleplex, Mountain View"
-     },
-     "credit": "Asoundd",
-     "license": {
-      "label": "CC BY-SA 4.0",
-      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
-     }
-    }
-   },
-   {
-    "kicker": {
-     "he": "שבבים",
-     "en": "Chips"
-    },
-    "headline": {
-     "he": "פייננשל טיימס: אנבידיה בשיחות מוקדמות לרכישת <bdi>Reflection AI</bdi> או להגדלת ההשקעה בה",
-     "en": "FT: Nvidia in early talks to buy Reflection AI or deepen its stake"
-    },
-    "bottom": {
-     "he": "אנבידיה מנהלת שיחות בשלב מוקדם לרכישת סטארט־אפ ה־<bdi>AI</bdi> <bdi>Reflection AI</bdi>, להגדלת ההשקעה בו, או להסכם שבו תגייס את עובדיו ותקבל רישיון לטכנולוגיה שלו, כך דיווח הפייננשל טיימס בשבת.",
-     "en": "Nvidia is in early-stage talks to acquire AI startup Reflection AI, increase its investment, or hire its staff and license its technology, the Financial Times reported on Saturday, citing people familiar with the matter."
-    },
-    "facts": [
-     {
-      "he": "אנבידיה כבר התחייבה להשקיע כ־<bdi>800</bdi> מיליון דולר בחברה, שמפתחת כלי <bdi>AI</bdi> לכתיבת קוד.",
-      "en": "Nvidia has already committed about $800 million to Reflection, which builds AI coding tools."
-     },
-     {
-      "he": "באפריל אמר מנכ״ל <bdi>Reflection</bdi> שהחברה מגייסת לפי שווי של <bdi>25</bdi> מיליארד דולר לפני הכסף החדש.",
-      "en": "In April, Reflection's CEO said it was raising at a $25 billion pre-money valuation."
-     }
-    ],
-    "why": {
-     "he": "לפי הדיווח, הסכם אפשרי בתוך שבועות.",
-     "en": "A deal could come within weeks, the report said."
-    },
-    "flags": [
-     {
-      "he": "המגעים ראשוניים ועלולים לקרוס, ורויטרס לא הצליחה לאמת אותם.",
-      "en": "The talks are preliminary and could collapse, and Reuters said it could not independently verify them."
-     },
-     {
-      "he": "נתון <bdi>25</bdi> מיליארד הדולר הוא מה שאמר המנכ״ל באפריל על שווי לפני הכסף החדש. אין מחיר לעסקה.",
-      "en": "The $25 billion figure is what the CEO said in April about a pre-money valuation. No price for a deal has been reported."
-     }
-    ],
-    "confidence": "likely",
-    "source": {
-     "he": "<bdi>Investing.com</bdi> (מצטט את <bdi>FT</bdi>) · <bdi>10</bdi> באוקטובר <bdi>2026</bdi>",
-     "en": "Investing.com (citing the FT) · Oct 10, 2026"
-    },
-    "date": {
-     "he": "<bdi>10</bdi> באוקטובר",
-     "en": "10 October"
-    },
-    "links": [
-     {
-      "label": "Investing.com",
-      "url": "https://www.investing.com/news/company-news/nvidia-in-talks-to-acquire-reflection-ai-or-increase-investment-ft-reports-4942324"
-     }
-    ],
-    "image": {
-     "src": "assets/images/nvidia-hq-1920.jpg",
-     "srcset": "assets/images/nvidia-hq-960.jpg 960w, assets/images/nvidia-hq-1920.jpg 1920w",
-     "w": 1920,
-     "h": 1175,
-     "alt": {
-      "he": "בניין המטה של אנבידיה בסנטה קלרה, 2018",
-      "en": "Nvidia headquarters in Santa Clara, 2018"
-     },
-     "year": 2018,
-     "caption": {
-      "he": "מטה אנבידיה בסנטה קלרה",
-      "en": "Nvidia headquarters in Santa Clara"
-     },
-     "credit": "Coolcaesar",
-     "license": {
-      "label": "CC BY-SA 4.0",
-      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      "label": "CC BY 2.0",
+      "url": "https://creativecommons.org/licenses/by/2.0/"
      }
     }
    },
@@ -279,62 +110,74 @@ DJ.edition({
      "en": "Saudi Arabia"
     },
     "headline": {
-     "he": "<bdi>12</bdi> הרוגים בתקיפה על נמל התעופה בריאד; הקואליציה הסעודית נשבעת להגיב, טראמפ: \"ייתכן\" שנצטרף",
-     "en": "Attack on Riyadh airport kills 12; Saudi-led coalition vows response, Trump says US \"may\" join"
+     "he": "מתקפה שנייה ביומיים על נמל התעופה בריאד: הרוג ו־<bdi>11</bdi> פצועים; <bdi>BP</bdi> מבטלת השתתפות בכנס האנרגיה בריאד",
+     "en": "Second strike in two days on Riyadh airport kills one; BP pulls out of Riyadh energy congress"
     },
     "bottom": {
-     "he": "<bdi>12</bdi> בני אדם נהרגו ו־<bdi>309</bdi> נפצעו בתקיפה על נמל התעופה הבינלאומי המלך חאלד בריאד ביום שבת, כך לפי רשות התעופה האזרחית הסעודית — התקיפה הקטלנית ביותר בממלכה מאז <bdi>2015</bdi>.",
-     "en": "Twelve people were killed and 309 injured in an attack on Riyadh's King Khalid International Airport on Saturday, Saudi Arabia's civil aviation authority said — the deadliest attack in the kingdom since 2015."
+     "he": "לפי גורמים סעודיים, טיל פגע ביום ראשון באולם נוסעים בנמל התעופה המלך ח׳אלד בריאד; רשות התעופה האזרחית הסעודית מסרה על הרוג אחד, תושב פקיסטני, ו־<bdi>11</bdi> פצועים.",
+     "en": "Saudi officials say a projectile hit a passenger hall at Riyadh's King Khalid International Airport on Sunday; the civil aviation authority said one Pakistani resident was killed and 11 injured."
     },
     "facts": [
      {
-      "he": "בין ההרוגים אזרח אמריקאי.",
-      "en": "An American was among the dead."
+      "he": "יום קודם נהרגו שם <bdi>13</bdi> בני אדם.",
+      "en": "A day earlier, 13 people were killed there."
      },
      {
-      "he": "הקואליציה בהובלת סעודיה האשימה את החות׳ים, כינתה את התקיפה \"פשע מלחמה\" ונשבעה להגיב בנחישות.",
-      "en": "The Saudi-led coalition blamed Yemen's Houthis, called it a \"war crime\" and vowed a decisive response."
+      "he": "לפי הרשות, גם נמל התעופה המלך פהד בדמאם הותקף.",
+      "en": "The authority also said Dammam's King Fahd airport was attacked."
      },
      {
-      "he": "הפעילות בנמל התעופה הושעתה. הנשיא טראמפ אמר שארה״ב \"ייתכן\" שתצטרף לתקיפות הסעודיות נגד החות׳ים.",
-      "en": "Airport operations were suspended. President Trump said the US \"may\" join Saudi strikes on the Houthis."
+      "he": "החות׳ים לקחו אחריות על התקיפות.",
+      "en": "The Houthis claimed the strikes."
+     },
+     {
+      "he": "<bdi>BP</bdi> ביטלה את השתתפותה בקונגרס הנפט העולמי בריאד.",
+      "en": "BP canceled its attendance at the World Petroleum Congress in Riyadh."
+     },
+     {
+      "he": "טראמפ אמר שארה״ב תחליט ״מהר מאוד״ אם לתקוף את החות׳ים.",
+      "en": "Trump said the US would decide \"very quickly\" whether to strike the Houthis."
      }
     ],
     "why": {
-     "he": "התגובה שעליה נשבעה הקואליציה עדיין לפנינו, וארה״ב לא הודיעה אם תצטרף.",
-     "en": "The response the coalition vowed is still ahead, and the United States has not said whether it will join."
+     "he": "לפי רויטרס, ההסלמה תומכת במחיר הברנט מעל <bdi>100</bdi> דולר.",
+     "en": "Reuters says the escalation keeps Brent above $100."
     },
     "flags": [
      {
-      "he": "החות׳ים לא הגיבו לתקיפת שבת, אך לקחו אחריות על תקיפות קודמות על אותו נמל תעופה השבוע. ההאשמה היא של הקואליציה.",
-      "en": "The Houthis have not commented on Saturday's attack but claimed earlier strikes on the same airport this week. The blame is the coalition's."
+      "he": "החות׳ים טוענים שתקפו גם מתקני נפט של ארמקו. סעודיה לא אישרה זאת.",
+      "en": "The Houthis say they also hit Aramco oil facilities. Saudi Arabia has not confirmed that."
+     },
+     {
+      "he": "הפייננשל טיימס דיווח שמנכ״לי אקסון, טוטאל ושל ויתרו.",
+      "en": "The Financial Times reported the CEOs of Exxon, TotalEnergies and Shell withdrew."
      }
     ],
     "confidence": "confirmed",
     "source": {
-     "he": "<bdi>BBC</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; <bdi>AP</bdi> (דרך <bdi>NPR</bdi>) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, <bdi>02:44</bdi> שעון ישראל; <bdi>The National</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; <bdi>CNA</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>",
-     "en": "BBC · Oct 11, 2026; AP (via NPR) · Oct 10, 2026, 23:44 UTC; The National · Oct 11, 2026; CNA · Oct 11, 2026"
+     "he": "<bdi>BBC</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; אנאדולו (רשות התעופה הסעודית) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; רויטרס (<bdi>BOE Report</bdi>) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; רויטרס (<bdi>Euronext</bdi>) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, <bdi>02:04</bdi> שעון ישראל",
+     "en": "BBC · Oct 11, 2026; Anadolu (Saudi civil aviation authority) · Oct 11, 2026; Reuters (via BOE Report) · Oct 11, 2026; Reuters (via Euronext) · Oct 11, 2026, 23:04 GMT"
     },
     "date": {
-     "he": "<bdi>10</bdi> באוקטובר",
-     "en": "10 October"
+     "he": "<bdi>11</bdi> באוקטובר",
+     "en": "11 October"
     },
     "links": [
      {
       "label": "BBC",
-      "url": "https://www.bbc.com/news/articles/cw33x4y8k82no"
+      "url": "https://www.bbc.com/news/articles/cr93znyk44e1o"
      },
      {
-      "label": "NPR",
-      "url": "https://www.npr.org/2026/10/10/g-s1-147682/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
+      "label": "Anadolu",
+      "url": "https://www.aa.com.tr/en/middle-east/saudi-arabia-says-dammam-airport-attacked-as-houthis-claim-strikes-on-aviation-oil-facilities/4085457"
      },
      {
-      "label": "The National",
-      "url": "https://www.thenationalnews.com/news/gulf/2026/10/11/saudi-led-coalition-vows-to-respond-decisively-to-deadly-riyadh-airport-attack/"
+      "label": "BOE Report",
+      "url": "https://boereport.com/2026/10/11/bp-withdraws-from-riyadh-energy-conference-after-airport-attack/"
      },
      {
-      "label": "CNA",
-      "url": "https://www.channelnewsasia.com/world/riyadh-airport-attack-12-killed-6449071"
+      "label": "Euronext",
+      "url": "https://live.euronext.com/en/financial-news/oil-falls-hopes-russia-ukraine-energy-ceasefire-will-boost-supplies"
      }
     ],
     "image": {
@@ -360,153 +203,80 @@ DJ.edition({
    },
    {
     "kicker": {
-     "he": "ארצות הברית",
-     "en": "United States"
+     "he": "שיט",
+     "en": "Shipping"
     },
     "headline": {
-     "he": "טראמפ: \"הגיע הזמן שלאוקראינה יהיה נשיא חדש\"; מאשים את זלנסקי במחירי הדיזל",
-     "en": "Trump says Ukraine should get a new president, blaming Zelensky for US diesel prices"
+     "he": "מרכז הסחר הימי הבריטי: עוד שתי מכליות הותקפו בהורמוז ומול עומאן; הודו: שני מלחים נעדרים",
+     "en": "UKMTO: two more tankers attacked near Hormuz and off Oman; India says two crew missing"
     },
     "bottom": {
-     "he": "הנשיא טראמפ אמר בשבת שהגיע הזמן שלאוקראינה יהיה נשיא חדש, \"מנהיג שיכול לעשות עסקה\", והאשים את זלנסקי במחירי הדיזל הגבוהים בארה״ב בגלל התקיפות האוקראיניות בבתי זיקוק רוסיים.",
-     "en": "President Trump said on Saturday it was time for Ukraine to get a new president, \"a new leader who can make a deal,\" and blamed Volodymyr Zelensky for high US diesel prices over Ukraine's strikes on Russian refineries."
+     "he": "מרכז הסחר הימי הבריטי (<bdi>UKMTO</bdi>) דיווח, באזהרה <bdi>164-26</bdi>, שמכלית שיצאה דרך מצר הורמוז ביום ראשון נפגעה מטיל לא מזוהה ונגרם לה נזק; הצוות בשלום.",
+     "en": "Britain's maritime trade agency, UKMTO, said in Warning 164-26 that an outbound tanker was struck by an unidentified projectile in the Strait of Hormuz on Sunday, damaging the vessel; the crew is safe."
     },
     "facts": [
      {
-      "he": "הדברים נאמרו יום אחרי שהודיע על עסקה שתאפשר לרוסיה למכור דיזל לשווקים העולמיים.",
-      "en": "The remarks came a day after he announced a deal letting Russia sell more diesel onto world markets."
+      "he": "בנפרד, <bdi>UKMTO</bdi> סיווג מחדש אירוע ליד מעגן סוחאר בעומאן, אזהרה <bdi>165-26</bdi>, כהתקפה, אחרי שאושר שמכלית נפגעה מכטב״ם; הרשויות המקומיות מסייעות בפינוי הצוות.",
+      "en": "Separately, UKMTO reclassified an incident near Oman's Sohar anchorage, Warning 165-26, as an attack after confirming a tanker was hit by a drone; local authorities are helping evacuate the crew."
      },
      {
-      "he": "זלנסקי כתב שרוסיה \"הודתה\" על הסרת הסנקציות בהטלת פצצות גלישה על בנייני מגורים בזפוריז׳יה.",
-      "en": "Zelensky wrote that Russia had \"thanked\" Washington for the sanctions relief by dropping glide bombs on Zaporizhzhia apartment blocks."
+      "he": "הודו זיהתה את הכלי כמכלית <bdi>Petro Dolphin</bdi>, ואמרה שתשעה מתוך <bdi>11</bdi> מלחיה ההודים חולצו ושניים נעדרים.",
+      "en": "India named the vessel as the Petro Dolphin and said nine of its 11 Indian crew were rescued and two are missing."
      },
      {
-      "he": "שוודיה וגרמניה הביעו צער על העסקה, ולפי ראש ממשלת שוודיה האיחוד האירופי יאמץ ביום שני חבילת סנקציות חדשה נגד רוסיה.",
-      "en": "Sweden and Germany voiced dismay, and Sweden's prime minister said the EU will adopt a new Russia sanctions package on Monday."
+      "he": "<bdi>UKMTO</bdi> לא מייחס את התקיפות לאיש.",
+      "en": "UKMTO does not attribute either attack."
      }
     ],
     "why": {
-     "he": "הקריאה להחליף את נשיא אוקראינה באה יחד עם עסקת הדיזל, וחבילת הסנקציות האירופית צפויה ביום שני.",
-     "en": "The call to replace Ukraine's president comes with the diesel deal, and the European sanctions package is due on Monday."
+     "he": "לפי רויטרס, ההתקפות על מכליות מאיימות על התאוששות יצוא הנפט מהמפרץ.",
+     "en": "Reuters says the tanker attacks threaten a recovery in Gulf crude exports."
     },
     "confidence": "confirmed",
     "source": {
-     "he": "<bdi>AP</bdi> (דרך <bdi>Anchorage Daily News</bdi>) · <bdi>10</bdi> באוקטובר <bdi>2026</bdi>; <bdi>AFP</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; <bdi>ABC Australia</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>",
-     "en": "AP (via Anchorage Daily News) · Oct 10, 2026; AFP · Oct 11, 2026; ABC Australia · Oct 11, 2026"
+     "he": "<bdi>UKMTO</bdi>, אזהרה <bdi>164-26</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, <bdi>15:00</bdi> שעון ישראל; רויטרס (<bdi>L'Orient Today</bdi>) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>; רויטרס (<bdi>Arab News</bdi>) · <bdi>12</bdi> באוקטובר <bdi>2026</bdi>; <bdi>Times of India</bdi> (משרד החוץ ההודי) · <bdi>12</bdi> באוקטובר <bdi>2026</bdi>",
+     "en": "UKMTO Warning 164-26 · Oct 11, 2026, 12:00 UTC; Reuters (via L'Orient Today) · Oct 11, 2026; Reuters (via Arab News) · Oct 12, 2026; Times of India (Indian foreign ministry) · Oct 12, 2026"
     },
     "date": {
-     "he": "<bdi>10</bdi> באוקטובר",
-     "en": "10 October"
+     "he": "<bdi>11</bdi> באוקטובר",
+     "en": "11 October"
     },
     "links": [
      {
-      "label": "Anchorage Daily News",
-      "url": "https://www.adn.com/nation-world/2026/10/10/trump-says-ukraine-should-get-a-new-president-as-he-blames-zelenskyy-for-us-diesel-prices/"
+      "label": "UKMTO",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/20261011-ukmto_warning_164-26.pdf"
      },
      {
-      "label": "AFP",
-      "url": "https://www.afp.com/en/trump-urges-zelensky-replacement-diesel-row-rages"
+      "label": "L'Orient Today",
+      "url": "https://today.lorientlejour.com/article/1550436/tanker-damaged-after-being-hit-in-strait-of-hormuz-ukmto-says.html"
      },
      {
-      "label": "ABC Australia",
-      "url": "https://www.abc.net.au/news/2026-10-11/trump-blames-zelenskyy-for-rising-diesel-prices-in-the-us/107252632"
+      "label": "Arab News",
+      "url": "https://www.arabnews.com/middle-east/uk-maritime-says-tanker-struck-by-drone-in-vicinity-of-omans-sohar-anchorage-3005832"
+     },
+     {
+      "label": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/india/indian-vessel-mt-petro-dolphin-with-11-on-board-attacked-in-oman-2-missing/articleshow/134874613.cms"
      }
     ],
     "image": {
-     "src": "assets/images/white-house-south-1600.jpg",
-     "srcset": "assets/images/white-house-south-960.jpg 960w, assets/images/white-house-south-1600.jpg 1600w",
+     "src": "assets/images/hormuz-strait-1600.jpg",
+     "srcset": "assets/images/hormuz-strait-960.jpg 960w, assets/images/hormuz-strait-1600.jpg 1600w",
      "w": 1600,
-     "h": 1067,
+     "h": 1600,
      "alt": {
-      "he": "החזית הדרומית של הבית הלבן, 2007",
-      "en": "The south facade of the White House, 2007"
+      "he": "מצר הורמוז בתצלום ממעבורת החלל, עם עקבות אוניות במים",
+      "en": "The Strait of Hormuz from a space shuttle, with ship wakes in the water"
      },
-     "year": 2007,
+     "year": 1982,
      "caption": {
-      "he": "החזית הדרומית של הבית הלבן",
-      "en": "The south facade of the White House"
+      "he": "מצר הורמוז, עקבות אוניות במים",
+      "en": "The Strait of Hormuz, with ship wakes in the water"
      },
-     "credit": "Ad Meskens",
+     "credit": "NASA",
      "license": {
-      "label": "CC BY-SA 3.0",
-      "url": "https://creativecommons.org/licenses/by-sa/3.0/"
-     }
-    }
-   },
-   {
-    "kicker": {
-     "he": "איראן",
-     "en": "Iran"
-    },
-    "headline": {
-     "he": "בלומברג: איראן שימרה את מפעלי הטילים והרחפנים שלה; הבית הלבן דוחה",
-     "en": "Bloomberg: Iran kept its missile and drone factories; White House rejects the assessment"
-    },
-    "bottom": {
-     "he": "איראן שימרה את מפעלי הטילים והרחפנים שלה למרות חודשים של הפצצות, ויכולה לחדש את מלאיה, כך אמרו גורמים מערביים שלא נחשפו לבלומברג.",
-     "en": "Iran has preserved its missile and drone factories despite months of bombing and can replenish its arsenal, unnamed Western officials told Bloomberg."
-    },
-    "facts": [
-     {
-      "he": "לדבריהם, לאיראן מלאי גדול של טילים בליסטיים וטילים נגד ספינות, והיא \"יכולה להוסיף במהירות\".",
-      "en": "They said Tehran remains \"well-stocked\" with ballistic and anti-ship missiles and can \"quickly add more\"."
-     },
-     {
-      "he": "גורם אחד אמר שרוסיה מספקת לה טילים. משרד ההגנה הרוסי לא הגיב.",
-      "en": "One official said Russia is supplying missiles. Russia's Defense Ministry did not respond."
-     }
-    ],
-    "why": {
-     "he": "ההערכה סותרת את דברי שר ההגנה פיט הגסת׳, שאמר ב־<bdi>30</bdi> בספטמבר שארה״ב השמידה את התעשייה הביטחונית האיראנית.",
-     "en": "The assessment contradicts Defense Secretary Pete Hegseth, who said on September 30 that the US had destroyed Iran's defense industry."
-    },
-    "flags": [
-     {
-      "he": "דוברת הבית הלבן אנה קלי דחתה את ההערכה.",
-      "en": "White House spokesperson Anna Kelly rejected the assessment."
-     },
-     {
-      "he": "הדיווח נשען על גורמים שלא נחשפו.",
-      "en": "The report relies on officials who were not named."
-     }
-    ],
-    "confidence": "likely",
-    "source": {
-     "he": "<bdi>Times of Israel</bdi> (מצטט את בלומברג) · <bdi>10</bdi> באוקטובר <bdi>2026</bdi>, <bdi>17:08</bdi> שעון ישראל; <bdi>Japan Times</bdi> (בלומברג) · <bdi>10</bdi> באוקטובר <bdi>2026</bdi>",
-     "en": "Times of Israel (citing Bloomberg) · Oct 10, 2026, 5:08 PM Israel; Japan Times (Bloomberg) · Oct 10, 2026"
-    },
-    "time": "17:08",
-    "date": {
-     "he": "<bdi>10</bdi> באוקטובר",
-     "en": "10 October"
-    },
-    "links": [
-     {
-      "label": "Times of Israel",
-      "url": "https://www.timesofisrael.com/iran-said-still-able-to-produce-missiles-and-drones-is-being-armed-by-russia/"
-     },
-     {
-      "label": "Japan Times",
-      "url": "https://www.japantimes.co.jp/news/2026/10/10/world/iran-guards-missiles-trump/"
-     }
-    ],
-    "image": {
-     "src": "assets/images/iran-relief-map.jpg",
-     "w": 1200,
-     "h": 1071,
-     "alt": {
-      "he": "מפת תבליט של איראן",
-      "en": "A relief map of Iran"
-     },
-     "year": 2008,
-     "caption": {
-      "he": "מפת תבליט של איראן",
-      "en": "A relief map of Iran"
-     },
-     "credit": "Uwe Dedering",
-     "license": {
-      "label": "CC BY-SA 3.0",
-      "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+      "label": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:STS004-37-716_-_Strait_of_Hormuz.jpg"
      }
     }
    },
@@ -516,45 +286,49 @@ DJ.edition({
      "en": "Ukraine"
     },
     "headline": {
-     "he": "החילוץ בזפוריז׳יה הסתיים: <bdi>20</bdi> הרוגים, בהם ארבעה ילדים",
-     "en": "Zaporizhzhia rescue ends: 20 killed, including four children"
+     "he": "מספר ההרוגים בתקיפה בזפוריז׳יה עלה ל־<bdi>23</bdi>, בהם ארבעה ילדים",
+     "en": "Zaporizhzhia strike toll rises to 23, including four children"
     },
     "bottom": {
-     "he": "שירות החירום הממלכתי של אוקראינה הודיע ביום ראשון שמבצע החיפוש וההצלה באתר התקיפה הרוסית על בניין מגורים בזפוריז׳יה הסתיים. לפי העדכון האחרון של השירות, <bdi>20</bdi> בני אדם נהרגו, בהם ארבעה ילדים, ו־<bdi>17</bdi> נפצעו, בהם שלושה ילדים.",
-     "en": "Ukraine's State Emergency Service said on Sunday that search-and-rescue work at the site of a Russian strike on a residential building in Zaporizhzhia had been completed. In its latest update, the service said 20 people were killed, including four children, and 17 injured, including three children."
+     "he": "דוברת שירות החירום של אוקראינה במחוז זפוריז׳יה אמרה ביום ראשון שמספר ההרוגים בתקיפה הרוסית על בניין מגורים בן חמש קומות בעיר עלה ל־<bdi>23</bdi>, בהם ארבעה ילדים.",
+     "en": "A spokesperson for Ukraine's State Emergency Service in the Zaporizhzhia region said on Sunday that the death toll from Russia's strike on a five-storey apartment building in the city had risen to 23, including four children."
     },
     "facts": [
      {
-      "he": "המחלצים פינו כ־<bdi>320</bdi> טונות של הריסות.",
-      "en": "Rescuers removed about 320 tonnes of debris."
+      "he": "גם הנשיא זלנסקי מסר את המספר.",
+      "en": "President Zelensky gave the same figure."
      },
      {
-      "he": "הבניין נפגע ביום שבת מפצצות אוויריות מונחות רוסיות, ולפחות <bdi>26</bdi> בנייני מגורים נוספים ניזוקו.",
-      "en": "Russian guided aerial bombs hit the building on Saturday, and at least 26 other residential buildings were damaged."
+      "he": "קודם לכן נמסר על <bdi>20</bdi> הרוגים עם סיום החיפושים.",
+      "en": "Officials had earlier put the toll at 20 when search and rescue ended."
+     },
+     {
+      "he": "הבניין נפגע בבוקר שבת מפצצות אוויריות מונחות.",
+      "en": "Russian guided aerial bombs hit the building on Saturday morning."
      }
     ],
     "why": {
-     "he": "מבצע החיפוש וההצלה באתר הסתיים.",
-     "en": "Search-and-rescue work at the site is finished."
+     "he": "המספר עלה אחרי שכבר נמסר שהחיפושים הסתיימו ב־<bdi>20</bdi> הרוגים.",
+     "en": "The toll rose after officials had already put it at 20 when the search ended."
     },
     "confidence": "confirmed",
     "source": {
-     "he": "שירות החירום של אוקראינה (דרך <bdi>LB.ua</bdi>) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, <bdi>10:16</bdi> שעון ישראל; התקיפה בשבת דווחה גם ב־<bdi>Kyiv Independent</bdi> · <bdi>10</bdi> באוקטובר <bdi>2026</bdi>",
-     "en": "Ukraine State Emergency Service (via LB.ua) · Oct 11, 2026, 10:16 Kyiv; the Saturday strike was also reported by the Kyiv Independent · Oct 10, 2026"
+     "he": "שירות החירום של אוקראינה (דרך <bdi>Ukrainska Pravda</bdi>) · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, <bdi>15:23</bdi> שעון ישראל; הנשיא זלנסקי",
+     "en": "Ukraine State Emergency Service (via Ukrainska Pravda) · Oct 11, 2026, 3:23 PM Kyiv; President Zelensky"
     },
-    "time": "10:16",
+    "time": "15:23",
     "date": {
      "he": "<bdi>11</bdi> באוקטובר",
      "en": "11 October"
     },
     "links": [
      {
-      "label": "LB.ua",
-      "url": "https://en.lb.ua/news/2026/10/11/44816_search_rescue_operation.html"
+      "label": "Ukrainska Pravda",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/11/8057459/"
      },
      {
-      "label": "Kyiv Independent",
-      "url": "https://kyivindependent.com/russian-guided-bombs-hit-zaporizhzhia-apartment-building-killing-4-injuring-4/"
+      "label": "Zelensky",
+      "url": "https://x.com/ZelenskyyUa/status/2109209224865587210"
      }
     ],
     "image": {
@@ -575,79 +349,6 @@ DJ.edition({
      "license": {
       "label": "Public domain",
       "url": "https://creativecommons.org/publicdomain/mark/1.0/"
-     }
-    }
-   },
-   {
-    "kicker": {
-     "he": "ישראל",
-     "en": "Israel"
-    },
-    "headline": {
-     "he": "צה״ל חיפש בגליל המערבי אחרי עצם אווירי לא מזוהה שחצה מלבנון; ההתרעה הורדה",
-     "en": "IDF searches Western Galilee after unidentified aerial object crossed from Lebanon"
-    },
-    "bottom": {
-     "he": "צה״ל מסר שמערכות התצפית זיהו עצם אווירי לא מזוהה באזור גבול לבנון, וכוחות המשיכו בחיפושים סביב ערב אל־עראמשה בגליל המערבי גם ביום ראשון.",
-     "en": "The IDF said its surveillance systems detected an unidentified aerial object near the Lebanese border, and troops continued searching around Arab al-Aramshe in the Western Galilee on Sunday."
-    },
-    "facts": [
-     {
-      "he": "האירוע החל בשבת בערב עם הפעלת התרעות על חדירת כלי טיס עוין.",
-      "en": "The incident began on Saturday evening with hostile-aircraft infiltration alerts."
-     },
-     {
-      "he": "לפי צה״ל, לא נמצאו ממצאים חריגים ולא ניתנו הנחיות מיוחדות לתושבים.",
-      "en": "The IDF said there were no unusual findings and no special instructions for residents."
-     }
-    ],
-    "why": {
-     "he": "אחרי הערכת מצב הוחלט להוריד את רמת הכוננות ביישובים לשגרה.",
-     "en": "After a situation assessment, the alert level in affected communities was lowered to routine."
-    },
-    "flags": [
-     {
-      "he": "טרם נמסר רשמית מה היה העצם.",
-      "en": "Officials have not said what the object was."
-     }
-    ],
-    "confidence": "confirmed",
-    "source": {
-     "he": "<bdi>The Jerusalem Post</bdi> · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, עודכן <bdi>11:07</bdi> שעון ישראל; ישראל היום · <bdi>11</bdi> באוקטובר <bdi>2026</bdi>, עודכן <bdi>12:00</bdi> שעון ישראל",
-     "en": "The Jerusalem Post · Oct 11, 2026, updated 11:07 Israel; Israel Hayom · Oct 11, 2026, updated 12:00 Israel"
-    },
-    "date": {
-     "he": "<bdi>11</bdi> באוקטובר",
-     "en": "11 October"
-    },
-    "links": [
-     {
-      "label": "The Jerusalem Post",
-      "url": "https://www.jpost.com/israel-news/defense-news/article-911264"
-     },
-     {
-      "label": "Israel Hayom",
-      "url": "https://www.israelhayom.com/2026/10/11/footage-suspicious-object-lebanon-galilee-infiltration/"
-     }
-    ],
-    "image": {
-     "src": "assets/images/rosh-hanikra-1920.jpg",
-     "srcset": "assets/images/rosh-hanikra-960.jpg 960w, assets/images/rosh-hanikra-1920.jpg 1920w",
-     "w": 1920,
-     "h": 1440,
-     "alt": {
-      "he": "החוף בראש הנקרה, על גבול לבנון, 2007",
-      "en": "The coast at Rosh HaNikra, on the border with Lebanon, 2007"
-     },
-     "year": 2007,
-     "caption": {
-      "he": "החוף בראש הנקרה, על גבול לבנון",
-      "en": "The coast at Rosh HaNikra, on the border with Lebanon"
-     },
-     "credit": "Chris Yunker",
-     "license": {
-      "label": "CC BY-SA 2.0",
-      "url": "https://creativecommons.org/licenses/by-sa/2.0/"
      }
     }
    }

@@ -1,30 +1,14 @@
 # Image credits — special edition, 12 October 2026, 09:00 Israel
 
-These files are on this edition. Shared files live in `assets/images/`. News pictures are from Sunday's 14:00 midday edition. Markets pictures are from Friday's 15:45 markets edition.
+These files are on this edition. Shared files live in `assets/images/`. News pictures are from today's 08:50 morning edition. Markets pictures are from Friday's 15:45 markets edition.
 
-## News — petroleum tanker, Dar es Salaam
+## News — Sinclair Refinery, Wyoming
 
-- File: `assets/images/tanker-dar-1600.jpg` (1600×1200), `assets/images/tanker-dar-960.jpg` (960×720)
-- Shows: a petroleum tanker leaving the port of Dar es Salaam, Tanzania, photographed 21 October 2015.
-- Creator: Sarvesh Lutchmun
-- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
-- Page: https://commons.wikimedia.org/wiki/File:Petroleum_tanker_leaving_Dar_es_Salaam.jpg
-
-## News — Googleplex, Mountain View
-
-- File: `assets/images/googleplex-1600.jpg` (1600×1170)
-- Shows: Google headquarters at the Googleplex, Mountain View, photographed 27 July 2016.
-- Creator: Asoundd
-- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
-- Page: https://commons.wikimedia.org/wiki/File:Googleplex_HQ_(cropped).jpg
-
-## News — Nvidia headquarters, Santa Clara
-
-- File: `assets/images/nvidia-hq-1920.jpg` (1920×1175), `assets/images/nvidia-hq-960.jpg` (960×587)
-- Shows: the exterior of Nvidia headquarters in Santa Clara, California, photographed 4 August 2018.
-- Creator: Coolcaesar
-- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
-- Page: https://commons.wikimedia.org/wiki/File:NVIDIA_Headquarters.jpg
+- File: `assets/images/sinclair-refinery-1600.jpg` (1600×822), `assets/images/sinclair-refinery-960.jpg` (960×492)
+- Shows: the Sinclair Refinery in Sinclair, Wyoming, photographed 8 July 2011. The plant processes crude oil into fuels, including diesel.
+- Creator: James St. John
+- License: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
+- Page: https://commons.wikimedia.org/wiki/File:Sinclair_Refinery,_Sinclair,_Wyoming.jpg
 
 ## News — King Khalid International Airport, Riyadh
 
@@ -34,21 +18,13 @@ These files are on this edition. Shared files live in `assets/images/`. News pic
 - License: Public domain — https://commons.wikimedia.org/wiki/File:Riyadh-airport.jpg
 - Page: https://commons.wikimedia.org/wiki/File:Riyadh-airport.jpg
 
-## News — White House south facade
+## News — Strait of Hormuz
 
-- File: `assets/images/white-house-south-1600.jpg` (1600×1067), `assets/images/white-house-south-960.jpg` (960×640)
-- Shows: the south facade of the White House, seen from the Washington Monument, photographed 16 July 2007.
-- Creator: Ad Meskens
-- License: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
-- Page: https://commons.wikimedia.org/wiki/File:South_facade_of_the_White_House,_Washington_DC,_as_seen_from_the_Washington_Monument.jpg
-
-## News — relief map of Iran
-
-- File: `assets/images/iran-relief-map.jpg` (1200×1071)
-- Shows: a relief location map of Iran, drawn 23 April 2008.
-- Creator: Uwe Dedering
-- License: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
-- Page: https://commons.wikimedia.org/wiki/File:Iran_relief_location_map.jpg
+- File: `assets/images/hormuz-strait-1600.jpg` (1600×1600), `assets/images/hormuz-strait-960.jpg` (960×960)
+- Shows: the Strait of Hormuz, with ship wakes in the water, photographed from the space shuttle between 27 June and 4 July 1982. Oman, the United Arab Emirates and Iran are in the frame.
+- Creator: NASA
+- License: Public domain — https://commons.wikimedia.org/wiki/File:STS004-37-716_-_Strait_of_Hormuz.jpg
+- Page: https://commons.wikimedia.org/wiki/File:STS004-37-716_-_Strait_of_Hormuz.jpg
 
 ## News — Zaporizhzhia from the Dnipro
 
@@ -57,14 +33,6 @@ These files are on this edition. Shared files live in `assets/images/`. News pic
 - Creator: В.С.Білецький
 - License: Public domain — https://creativecommons.org/publicdomain/mark/1.0/
 - Page: https://commons.wikimedia.org/wiki/File:Запоріжжя-2020.jpg
-
-## News — Rosh HaNikra, Lebanon border
-
-- File: `assets/images/rosh-hanikra-1920.jpg` (1920×1440), `assets/images/rosh-hanikra-960.jpg` (960×720)
-- Shows: the Mediterranean coast at Rosh HaNikra, on the border with Lebanon in the Western Galilee, photographed 12 November 2007.
-- Creator: Chris Yunker
-- License: CC BY-SA 2.0 — https://creativecommons.org/licenses/by-sa/2.0/
-- Page: https://commons.wikimedia.org/wiki/File:Rosh_HaNikra_(2072828182).jpg
 
 ## Markets — Gulf of Mexico platform
 
