@@ -57,7 +57,8 @@
     alsoMarkets: ["בשווקים", "In Markets"], alsoAi: ["ב־AI", "In AI"], items: ["פריטים", "items"],
     weather: ["מזג אוויר", "Weather"], notFound: ["המהדורה לא נמצאה.", "This edition could not be loaded."],
     jsOff: ["העיתון הזה צריך JavaScript.", "This paper needs JavaScript."], skip: ["דלג לתוכן", "Skip to content"],
-    open: ["פתיחת המסחר בארה״ב", "US open"], since: ["מאז", "Since"], pause: ["עצירת הפס הנע", "Pause the ticker"], play: ["הפעלת הפס הנע", "Play the ticker"], et: ["ET", "ET"], israel: ["בישראל", "Israel"]
+    open: ["פתיחת המסחר בארה״ב", "US open"], since: ["מאז", "Since"], pause: ["עצירת הפס הנע", "Pause the ticker"], play: ["הפעלת הפס הנע", "Play the ticker"], et: ["ET", "ET"], israel: ["בישראל", "Israel"],
+    quotes: ["מחירים נכון ל־", "Quotes as of "]
   };
   function ui(k) { var v = UI[k]; return v ? v[state.lang === "he" ? 0 : 1] : k; }
   var SLOT = {
@@ -205,17 +206,28 @@
     var left = ed ? h("div", { class: "ear ear-start" }, [
       h("span", { class: "stars", "aria-hidden": "true", text: slotStars(ed.slot) }),
       h("strong", { text: slotName(ed.slot) }),
-      h("span", null, [num(ed.time), " ", ui("israel")]),
-      ed.et ? h("span", { class: "dim" }, [num(ed.et + " ET")]) : null
+      h("span", { class: "ear-when" }, editionClock(ed))
     ]) : h("div", { class: "ear ear-start" });
     var right = h("div", { class: "ear ear-end" }, [
       n ? h("strong", null, [ui("no") + " ", num(String(n))]) : null,
       h("span", { class: "dim", text: ui("motto") })
     ]);
     var plate = h("a", { class: "plate", href: href(""), "aria-label": "The Daily Jenya" }, [logo(ed)]);
+    var phone = ed && !compact ? h("p", { class: "mast-phone" }, [
+      h("span", { class: "mast-phone-when" }, [h("strong", { text: slotName(ed.slot) }), " "].concat(editionClock(ed))),
+      n ? h("span", { class: "mast-phone-sep", "aria-hidden": "true", text: "·" }) : null,
+      n ? h("span", { class: "mast-phone-no" }, [ui("no") + " ", num(String(n))]) : null
+    ]) : null;
     return h("header", { class: "mast" + (compact ? " mast-compact" : "") }, [
-      h("div", { class: "mast-top" }, [left, h("h1", { class: "plate-wrap" }, [plate]), right])
+      h("div", { class: "mast-top" }, [left, h("h1", { class: "plate-wrap" }, [plate]), right]),
+      phone
     ]);
+  }
+  /* Edition clock: "15:45 Israel (08:45 ET)". ET stays in parentheses, as in the rest of the paper. */
+  function editionClock(ed) {
+    var kids = [num(ed.time), " " + ui("israel")];
+    if (ed.et) kids.push(h("span", { class: "dim" }, [" (", num(ed.et + " ET"), ")"]));
+    return kids;
   }
   function dateline(ed) {
     var today = sameDay(ed.date);
@@ -230,6 +242,49 @@
       today.length ? strip : null,
       controls()
     ]);
+  }
+
+  /* Scroll the chip row only, so the active edition is fully on screen. RTL-aware.
+     scrollIntoView({inline:"nearest"}) would also move the page; pin the page and keep the row. */
+  function cueRuns(row) {
+    if (!row) return;
+    var chips = row.querySelectorAll(".run");
+    var rr = row.getBoundingClientRect();
+    var hideLeft = false, hideRight = false, i, b;
+    for (i = 0; i < chips.length; i++) {
+      b = chips[i].getBoundingClientRect();
+      if (b.width < 1) continue;
+      if (b.left < rr.left - 2) hideLeft = true;
+      if (b.right > rr.right + 2) hideRight = true;
+    }
+    row.classList.toggle("fade-left", hideLeft);
+    row.classList.toggle("fade-right", hideRight);
+  }
+  function revealRun() {
+    var row = document.querySelector(".runs");
+    var cur = row && row.querySelector(".is-current");
+    if (!row || !cur) return;
+    if (!row.getAttribute("data-cue")) {
+      row.setAttribute("data-cue", "1");
+      row.addEventListener("scroll", function () { cueRuns(row); }, { passive: true });
+    }
+    var reduce = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+    var sx = window.scrollX, sy = window.scrollY;
+    try {
+      cur.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "nearest", inline: "nearest" });
+    } catch (e) {
+      try { cur.scrollIntoView(false); } catch (e2) {}
+    }
+    if (window.scrollX !== sx || window.scrollY !== sy) window.scrollTo(sx, sy);
+    cueRuns(row);
+    if (!reduce) {
+      var n = 0;
+      (function pin() {
+        if (window.scrollX !== sx || window.scrollY !== sy) window.scrollTo(sx, sy);
+        cueRuns(row);
+        if (++n < 12) requestAnimationFrame(pin);
+      })();
+    }
   }
 
   function controls() {
@@ -258,6 +313,21 @@
     DAYS[state.lang].forEach(function (d, i) { if (t.indexOf(d) >= 0) day = i; });
     return (day < 0 ? "" : (state.lang === "he" ? DAYS.he[day].replace("יום ", "") : DAYS.en[day].slice(0, 3)) + " ") + tm[0];
   }
+  /* Quote clock from the markets stamp ("Wed 14:45"), not the edition time. */
+  function quoteClock(m) {
+    var raw = has(m.stamp) ? plain(m.stamp) : stampText(m);
+    var all = String(raw || "").match(/\d{1,2}:\d{2}/g);
+    if (!all) return "";
+    var parts = all[all.length - 1].split(":");
+    return (parts[0].length === 1 ? "0" : "") + parts[0] + ":" + parts[1];
+  }
+  function quoteLabel(m) {
+    var t = quoteClock(m);
+    if (!t) return h("span", { class: "ticker-k", text: ui("markets") });
+    var time = h("bdi", { text: t });
+    if (state.lang === "he") return h("span", { class: "ticker-when is-short" }, [ui("quotes"), time]);
+    return h("span", { class: "ticker-when is-short" }, [ui("quotes"), time, " " + ui("israel")]);
+  }
   function tapeRow(ed) {
     var m = ed.markets || {};
     var items = list(m.tape).length ? m.tape : m.boards && m.boards[0] ? m.boards[0].items : [];
@@ -282,9 +352,8 @@
       save("dj-crawl", p ? "paused" : null);
     } }, [h("span", { class: "sr", text: ui("pause") })]);
     var n = items.length + list(m.extra).length;
-    bar.appendChild(h("a", { class: "ticker-label", href: "#markets", title: plain(m.asof), onclick: go("markets") }, [
-      h("span", { class: "ticker-k", text: ui("markets") }),
-      stampText(m) ? h("span", { class: "ticker-when is-short" }, [h("bdi", { text: stampText(m) })]) : has(m.asof) ? h("span", { class: "ticker-when", html: tx(m.asof) }) : null
+    bar.appendChild(h("a", { class: "ticker-label", href: "#markets", title: has(m.asof) ? plain(m.asof) : null, onclick: go("markets") }, [
+      quoteLabel(m)
     ]));
     bar.appendChild(h("div", { class: "ticker-view", dir: "ltr" }, [
       h("div", { class: "ticker-track", style: "--dur:" + Math.max(28, n * 6) + "s" }, [seq(false), seq(true)])
@@ -667,6 +736,14 @@
     if (/^story-\d+$/.test(raw)) return "news";
     return null;
   }
+  /* The lane this edition was built for. A hash (#news, #markets, #ai) still wins. */
+  function builtLane(ed) {
+    if (!ed) return "news";
+    if (/-1545$/.test(ed.id || "") || ed.slot === "markets") return "markets";
+    var ai = ed.ai || {}, news = ed.news || {};
+    if (ai.carried === false && news.carried !== false && list(ai.stories).length) return "ai";
+    return "news";
+  }
 
   function renderEdition() {
     var ed = state.edition;
@@ -691,6 +768,7 @@
     document.title = longDate(ed.date) + " · " + slotName(ed.slot) + " · The Daily Jenya";
     var md = document.querySelector('meta[name="description"]');
     if (md) md.setAttribute("content", has(ed.summary) ? tx(ed.summary).replace(/<[^>]*>/g, "") : title);
+    revealRun();
   }
 
   /* ------------------------------------------------------------ archive page */
@@ -766,7 +844,7 @@
   DJ.edition = function (ed) { state.edition = ed; };
 
   function start() {
-    state.section = sectionFromHash() || "news";
+    state.section = sectionFromHash() || builtLane(state.edition);
     render();
     var raw = (location.hash || "").replace("#", "");
     if (ALIAS[raw]) { try { history.replaceState(null, "", "#" + state.section); } catch (e) {} }
@@ -796,8 +874,15 @@
     var s = sectionFromHash();
     if (s && s !== state.section) { state.section = s; render(); }
   });
-  window.addEventListener("popstate", function () { var s = sectionFromHash() || "news"; if (s !== state.section) { state.section = s; render(); } });
+  window.addEventListener("popstate", function () { var s = sectionFromHash() || builtLane(state.edition); if (s !== state.section) { state.section = s; render(); } });
   if (NARROW && NARROW.addEventListener) NARROW.addEventListener("change", function () { if (state.mode === "edition" && state.edition) render(); });
+  var runResize;
+  window.addEventListener("resize", function () {
+    if (state.mode !== "edition" || !state.edition) return;
+    clearTimeout(runResize);
+    runResize = setTimeout(revealRun, 60);
+  });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (state.mode === "edition" && state.edition) revealRun(); });
   if (window.matchMedia) {
     var mq = matchMedia("(prefers-color-scheme: dark)");
     if (mq.addEventListener) mq.addEventListener("change", function () { if (!load(THEME_KEY)) render(); });
