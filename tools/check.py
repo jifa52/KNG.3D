@@ -3,14 +3,17 @@
 
     python3 tools/check.py            check everything
     python3 tools/check.py 2026-10-04-0850   check one edition (plus the site files)
+    python3 tools/check.py --selftest-name-guard
 
 Exit code 0 = publishable. Every problem is printed with the file it is in.
 Converted legacy editions ("legacy" set) get the structural checks only;
 editions written in the new format get the full editorial checks.
 """
+import hashlib
 import json
 import re
 import sys
+import unicodedata
 from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -37,6 +40,18 @@ CAL_STATUS = {"unavailable"}
 ORG_HOSTS = {"github.com", "gitlab.com", "huggingface.co", "x.com", "twitter.com", "medium.com", "substack.com", "youtube.com", "linkedin.com"}
 SECOND_LEVEL = {"co", "com", "org", "gov", "ac", "net", "edu", "muni"}
 BRAND_TLDS = {"google", "microsoft", "apple", "amazon", "aws", "nvidia", "ibm", "intel", "samsung", "sony", "meta"}
+# SHA-256 of lowercased, NFC-normalized tokens. Plaintext is not stored.
+BLOCKED_NAME_HASHES = frozenset({
+    "25eb0212c90a5f7ccc43973739d44e5292ba4bb17398ac29032dba714d085c2b",
+    "cc35209fade35fff8b83ea8aac743470c9e0930aa136887e87501dba5150d083",
+    "ce5572b936124aac28085b42a26b27d148232ac4200bd950dbc2b108dfe99b05",
+    "d846a895011757186989e73656a528aa313c31eeb43cab36efdbaafe98a24a27",
+})
+# Apostrophe, Hebrew geresh, and gershayim. A second pass deletes these so
+# letters on either side are hashed as one token as well as separately.
+_NAME_STRIP = str.maketrans("", "", "'’‘׳״ʼ")
+_NAME_GUARD_SUFFIXES = {".md", ".html", ".js", ".css", ".txt", ".yml", ".json"}
+_BRAND_STEM_RE = re.compile(r"Jenya", re.I)
 
 
 def err(where, msg):
@@ -398,6 +413,193 @@ def check_edition(folder, full_ok=True):
     return ed
 
 
+def _is_name_letter(ch):
+    """Latin or Hebrew letter. Combining marks are not letters and are skipped."""
+    o = ord(ch)
+    if (65 <= o <= 90) or (97 <= o <= 122) or (0x05D0 <= o <= 0x05EA):
+        return True
+    if not ch.isalpha():
+        return False
+    try:
+        name = unicodedata.name(ch)
+    except ValueError:
+        return False
+    return "LATIN" in name or "HEBREW LETTER" in name
+
+
+def name_token_digest(token):
+    """SHA-256 hex of the lowercased, NFC-normalized token."""
+    normalized = unicodedata.normalize("NFC", token.lower())
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+
+def iter_name_tokens(text):
+    """Yield (line_number, token) for letter runs in text.
+
+    Tokens are split on non-letters. A second pass strips Hebrew geresh and
+    apostrophes first, so a name written with those marks is also tried whole.
+    """
+    for lineno, line in enumerate(text.splitlines(), 1):
+        seen = set()
+        for variant in (line, line.translate(_NAME_STRIP)):
+            buf = []
+            for ch in variant:
+                if _is_name_letter(ch):
+                    buf.append(ch)
+                    continue
+                if unicodedata.category(ch) in ("Mn", "Cf"):
+                    continue
+                if buf:
+                    tok = "".join(buf)
+                    if tok not in seen:
+                        seen.add(tok)
+                        yield lineno, tok
+                    buf = []
+            if buf:
+                tok = "".join(buf)
+                if tok not in seen:
+                    seen.add(tok)
+                    yield lineno, tok
+
+
+def blocked_name_lines(text, hashes=None):
+    """Line numbers whose text contains a blocked personal-name token."""
+    blocked = BLOCKED_NAME_HASHES if hashes is None else hashes
+    found = []
+    seen_lines = set()
+    for lineno, tok in iter_name_tokens(text):
+        if lineno in seen_lines:
+            continue
+        if name_token_digest(tok) in blocked:
+            seen_lines.add(lineno)
+            found.append(lineno)
+    return found
+
+
+def name_guard_files(only=None):
+    """Served files the name guard reads.
+
+    Homepage files, assets/editions.js, templates/, and — for the edition
+    being checked, or every edition when checking the whole site — edition.js
+    plus HTML, JS, and JSON under that edition.
+    """
+    paths = [
+        ROOT / "README.md",
+        ROOT / "index.html",
+        ROOT / "archive.html",
+        ROOT / "archive" / "index.html",
+        ROOT / "404.html",
+        ROOT / "assets" / "editions.js",
+        ROOT / "assets" / "dj.js",
+        ROOT / "assets" / "dj.css",
+        ROOT / "assets" / "fonts.css",
+    ]
+    templates = ROOT / "templates"
+    if templates.is_dir():
+        paths.extend(templates.glob("**/*"))
+    briefings = ROOT / "briefings"
+    if only:
+        edition_dirs = [briefings / only]
+    elif briefings.is_dir():
+        edition_dirs = [p for p in briefings.iterdir() if p.is_dir()]
+    else:
+        edition_dirs = []
+    for folder in edition_dirs:
+        paths.append(folder / "edition.js")
+        paths.append(folder / "IMAGE-CREDITS.md")
+        if not folder.is_dir():
+            continue
+        for path in folder.rglob("*"):
+            if path.suffix.lower() in {".html", ".js", ".json"}:
+                paths.append(path)
+    seen = set()
+    out = []
+    for path in paths:
+        if not path.is_file() or path.suffix.lower() not in _NAME_GUARD_SUFFIXES:
+            continue
+        key = path.resolve()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(path)
+    return out
+
+
+def check_name_guard(only=None):
+    """Brand-stem check, plus a hash match that never prints the token."""
+    for path in name_guard_files(only):
+        try:
+            body = path.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            continue
+        rel = str(path.relative_to(ROOT))
+        if re.search(r"engineer in Israel|one reader,", body, re.I):
+            err(rel, "owner description must not be published")
+        for match in _BRAND_STEM_RE.finditer(body):
+            ctx = body[max(0, match.start() - 16): match.end()]
+            if re.search(r"(The )?Daily Jenya$", ctx):
+                continue
+            snippet = body[max(0, match.start() - 24): match.end() + 12].replace("\n", " ")
+            err(rel, "owner name outside the brand “The Daily Jenya”: %r" % snippet)
+            break
+        for lineno in blocked_name_lines(body):
+            err(rel, "blocked personal-name token (line %d)" % lineno)
+
+
+def selftest_name_guard():
+    """Prove the hash guard detects a fixture token and ignores the brand."""
+    fixture = "zzqxtestname"
+    test_hash = name_token_digest(fixture)
+    if test_hash in BLOCKED_NAME_HASHES:
+        print("ERROR    selftest: fixture digest collided with a blocked digest")
+        return 1
+    hashes = set(BLOCKED_NAME_HASHES)
+    hashes.add(test_hash)
+    sample = "before\n" + fixture + " after"
+    lines = blocked_name_lines(sample, hashes)
+    if lines != [2]:
+        print("ERROR    selftest: blocked personal-name token was not detected")
+        return 1
+    message = "blocked personal-name token (line %d)" % lines[0]
+    if fixture in message or test_hash in message:
+        print("ERROR    selftest: report included the token")
+        return 1
+    # Geresh and apostrophe must not hide the token by splitting it.
+    split = fixture[:4] + "'" + fixture[4:]
+    geresh = fixture[:4] + "\u05f3" + fixture[4:]
+    joined = blocked_name_lines("keep\n" + split + "\n" + geresh, hashes)
+    if joined != [2, 3]:
+        print("ERROR    selftest: geresh/apostrophe form was not detected")
+        return 1
+    brand = "The Daily Jenya\nJenya\n"
+    if blocked_name_lines(brand, hashes):
+        print("ERROR    selftest: brand token triggered the name guard")
+        return 1
+    if re.search(r"(The )?Daily Jenya$", "The Daily Jenya") is None:
+        print("ERROR    selftest: brand stem was not recognized")
+        return 1
+    edition_js = sorted((ROOT / "briefings").glob("*/edition.js"))
+    if edition_js:
+        sample_id = edition_js[-1].parent.name
+        rels = {p.relative_to(ROOT).as_posix() for p in name_guard_files(sample_id)}
+        required = (
+            "briefings/%s/edition.js" % sample_id,
+            "assets/editions.js",
+            "index.html",
+            "templates/shell.html",
+        )
+        missing = [item for item in required if item not in rels]
+        if missing:
+            print("ERROR    selftest: name guard file list is missing coverage")
+            return 1
+        others = [p for p in edition_js if p.parent.name != sample_id]
+        if others and ("briefings/%s/edition.js" % others[0].parent.name) in rels:
+            print("ERROR    selftest: single-edition scan included another edition")
+            return 1
+    print("selftest-name-guard: ok")
+    return 0
+
+
 def main(only=None):
     # site files
     for f in ("index.html", "archive/index.html", "404.html", "assets/dj.js", "assets/dj.css", "assets/editions.js", "templates/shell.html", ".nojekyll"):
@@ -448,25 +650,7 @@ def main(only=None):
         if not m.get("headline"):
             err("assets/editions.js", "%s: headline is missing" % d.name)
 
-    owner_re = re.compile(r"Jenya", re.I)
-    served = [ROOT / "README.md", ROOT / "templates" / "PUBLISH.md", ROOT / "templates" / "IMAGE-CREDITS.md", ROOT / "index.html", ROOT / "archive.html", ROOT / "404.html"]
-    served += list((ROOT / "briefings").glob("*/IMAGE-CREDITS.md"))
-    served += list((ROOT / "templates").glob("**/*"))
-    for f in served:
-        if not f.is_file() or f.suffix.lower() not in {".md", ".html", ".js", ".css", ".txt", ".yml"}:
-            continue
-        try:
-            text = f.read_text(encoding="utf-8")
-        except OSError:
-            continue
-        if re.search(r"engineer in Israel|one reader,", text, re.I):
-            err(str(f.relative_to(ROOT)), "owner description must not be published")
-        for m in owner_re.finditer(text):
-            ctx = text[max(0, m.start() - 16): m.end()]
-            if re.search(r"(The )?Daily Jenya$", ctx):
-                continue
-            err(str(f.relative_to(ROOT)), "owner name outside the brand “The Daily Jenya”: %r" % text[max(0, m.start() - 24): m.end() + 12].replace("\n", " "))
-            break
+    check_name_guard(only)
 
     for w in warnings:
         print("warning  " + w)
@@ -477,4 +661,7 @@ def main(only=None):
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else None))
+    arg = sys.argv[1] if len(sys.argv) > 1 else None
+    if arg == "--selftest-name-guard":
+        sys.exit(selftest_name_guard())
+    sys.exit(main(arg))
