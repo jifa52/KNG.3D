@@ -1,0 +1,144 @@
+# Image credits — 21 October 2026, 08:50 Israel
+
+These files are on this edition. Shared files live in `assets/images/`. News pictures are for this edition. Markets pictures are from Tuesday's 15:45 edition. AI pictures are from Monday's 09:00 edition.
+
+## News — Falcon 9, Cape Canaveral
+
+- File: `assets/images/falcon9-thaicom6-1600.jpg` (1600×1066), `assets/images/falcon9-thaicom6-960.jpg` (960×640)
+- Shows: a Falcon 9 lifting off from Cape Canaveral with the Thaicom 6 satellite, photographed 6 January 2014.
+- Creator: SpaceX
+- License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+- Page: https://commons.wikimedia.org/wiki/File:Falcon_9_Thaicom_6_liftoff_(5).jpg
+
+## News — Salesforce Tower, San Francisco
+
+- File: `assets/images/salesforce-tower-sf-1600.jpg` (1920×2880), `assets/images/salesforce-tower-sf-960.jpg` (960×1440)
+- Shows: Salesforce Tower and Millennium Tower in San Francisco, photographed 18 July 2023.
+- Creator: The wub
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Salesforce_and_Millennium_towers,_San_Francisco_2023-07-18.jpg
+
+## News — Strait of Hormuz
+
+- File: `assets/images/hormuz-strait-1600.jpg` (1600×1600), `assets/images/hormuz-strait-960.jpg` (960×960)
+- Shows: the Strait of Hormuz, with ship wakes in the water, photographed from the space shuttle between 27 June and 4 July 1982.
+- Creator: NASA
+- License: Public domain — https://commons.wikimedia.org/wiki/File:STS004-37-716_-_Strait_of_Hormuz.jpg
+- Page: https://commons.wikimedia.org/wiki/File:STS004-37-716_-_Strait_of_Hormuz.jpg
+
+## News — Tel Aviv skyline
+
+- File: `assets/images/tel-aviv-skyline-2022-1600.jpg` (1600×1068), `assets/images/tel-aviv-skyline-2022-960.jpg` (960×642)
+- Shows: the skyline of Tel Aviv and Ramat Gan, photographed 29 July 2022 from HaMada Promenade.
+- Creator: Ynhockey
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Tel_Aviv_Skyline_02.jpg
+
+## Markets — Samsung Electronics, Suwon
+
+- File: `assets/images/samsung-suwon-1600.jpg` (1600×1000), `assets/images/samsung-suwon-960.jpg` (960×600)
+- Shows: Samsung Electronics headquarters in Suwon, South Korea, photographed 7 April 2015. The file on the page is a center crop of the building.
+- Creator: hyolee2
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Samsung_Electronics_Suwon.JPG
+
+## Markets — petroleum tanker, Dar es Salaam
+
+- File: `assets/images/tanker-dar-1600.jpg` (1600×1200), `assets/images/tanker-dar-960.jpg` (960×720)
+- Shows: a petroleum tanker leaving the port of Dar es Salaam, Tanzania, photographed 21 October 2015.
+- Creator: Sarvesh Lutchmun
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Petroleum_tanker_leaving_Dar_es_Salaam.jpg
+
+## Markets — Treasury Building, Washington
+
+- File: `assets/images/treasury-dc-1600.jpg` (1600×1066), `assets/images/treasury-dc-960.jpg` (960×640)
+- Shows: the United States Treasury Building in Washington, photographed 11 October 2009.
+- Creator: Tony Webster
+- License: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:United_States_Treasury_Washington_DC_5383075936_o.jpg
+
+## Markets — General Motors assembly line, Gliwice
+
+- File: `assets/images/gm-gliwice-line-1600.jpg` (1600×1067), `assets/images/gm-gliwice-line-960.jpg` (960×640)
+- Shows: the car assembly line at General Motors Manufacturing Poland in Gliwice, photographed 19 September 2015.
+- Creator: Marek Ślusarczyk
+- License: CC BY 3.0 — https://creativecommons.org/licenses/by/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:002_Production_line_-_car_assembly_line_in_General_Motors_Manufacturing_Poland_-_Gliwice,_Poland.jpg
+
+## Markets — GE90 engine
+
+- File: `assets/images/ge90-engine-1600.jpg` (1600×795), `assets/images/ge90-engine-960.jpg` (960×477)
+- Shows: a GE90-115B jet engine at the Paris Air Show, photographed 19 June 2005.
+- Creator: Steff
+- License: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:GE90-115B.jpg
+
+## Markets — pumpjacks, Lost Hills
+
+- File: `assets/images/pumpjacks-lost-hills-1600.jpg` (1600×744), `assets/images/pumpjacks-lost-hills-960.jpg` (960×446)
+- Shows: pumpjacks at the Lost Hills Oil Field, California, photographed 16 May 2009.
+- Creator: Arne Hückelheim
+- License: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:Pumpjacks.JPG
+
+## Markets — auto-parts store, Murphy
+
+- File: `assets/images/advance-murphy-1600.jpg` (1600×1160), `assets/images/advance-murphy-960.jpg` (960×696)
+- Shows: the exterior of an Advance Auto Parts store in Murphy, North Carolina, photographed 2 January 2025.
+- Creator: Harrison Keely
+- License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:The_exterior_of_an_Advance_Auto_Parts_store_in_Murphy,_North_Carolina_01.jpg
+
+## Markets — cell-culture bioreactor
+
+- File: `assets/images/cell-bioreactor-1600.jpg` (1600×1600), `assets/images/cell-bioreactor-960.jpg` (960×960)
+- Shows: a bioreactor for cell culture in a laboratory, photographed 1 March 2023.
+- Creator: Habin Zhang
+- License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:Bioreactor_for_cell_culture_in_the_laboratory.jpg
+
+## AI — Mac Studio
+
+- File: `assets/images/mac-studio-2022-1600.jpg` (1600×1067), `assets/images/mac-studio-2022-960.jpg` (960×640)
+- Shows: the front of a 2022 Mac Studio computer, photographed 30 March 2022.
+- Creator: Yasu
+- License: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:Mac_Studio_(2022)_front.jpg
+
+## AI — mathematics chalkboard
+
+- File: `assets/images/math-chalkboard-2015-1600.jpg` (1600×1200), `assets/images/math-chalkboard-2015-960.jpg` (960×720)
+- Shows: a chalkboard covered with mathematical formulas, photographed 13 October 2015.
+- Creator: Jorge Cortell
+- License: CC BY 3.0 — https://creativecommons.org/licenses/by/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:500px_photo_(201660613).jpeg
+
+## AI — OpenAI headquarters, San Francisco
+
+- File: `assets/images/openai-third-st-1600.jpg` (1600×1067), `assets/images/openai-third-st-960.jpg` (960×640)
+- Shows: the office building at 1515 Third Street, Mission Bay, San Francisco. When the photo was taken on 15 June 2025, it was OpenAI's headquarters.
+- Creator: Coolcaesar
+- License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+- Page: https://commons.wikimedia.org/wiki/File:1515_Third_Street.jpg
+
+## AI — image-model illustration
+
+- File: `assets/images/flux-klein-illus-1280.jpg` (1280×960), `assets/images/flux-klein-illus-960.jpg` (960×720)
+- Shows: an abstract machine turning a short description into a finished picture.
+- Generated illustration for The Daily Jenya. The page label is only "המחשה (AI)" / "AI Illustration". Not a photograph of the event or of a real person.
+
+## AI — Stanford Main Quad
+
+- File: `assets/images/stanford-main-quad-2013-1600.jpg` (1600×1066), `assets/images/stanford-main-quad-2013-960.jpg` (960×639)
+- Shows: Stanford University's Main Quad and Memorial Church, photographed 3 January 2013.
+- Creator: Bohao Zhao
+- License: CC BY 3.0 — https://creativecommons.org/licenses/by/3.0/
+- Page: https://commons.wikimedia.org/wiki/File:Edificio_Hist%C3%B3rico_de_la_Universidad_de_Stanford_-_panoramio.jpg
+
+## AI — code and network illustration
+
+- File: `assets/images/handwired-net-illus-1280.jpg` (1280×960), `assets/images/handwired-net-illus-960.jpg` (960×720)
+- Shows: lines of code becoming a small network diagram.
+- Generated illustration for The Daily Jenya. The page label is only "המחשה (AI)" / "AI Illustration". Not a photograph of the event or of a real person.
+
