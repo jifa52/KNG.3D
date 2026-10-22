@@ -1682,8 +1682,8 @@ DJ.edition(
       "en": "The consensus is <bdi>200,000</bdi>. The prior reading, for the week to 10 October, was <bdi>199,000</bdi>. This is the survey week for the October jobs report, and the last print before the Fed meeting."
      },
      "result": {
-      "he": "פורסם ב־<bdi>15:30</bdi> — הנתון יעודכן בהמשך",
-      "en": "Released 15:30 IL — figure to be added shortly"
+      "he": "בקשות ראשוניות לדמי אבטלה, מנוכות עונתיות: <bdi>194</bdi> אלף לשבוע שהסתיים ב־<bdi>17</bdi> באוקטובר, מול צפי של <bdi>200</bdi> אלף. הנתון הקודם עודכן כלפי מעלה ל־<bdi>200</bdi> אלף, מ־<bdi>199</bdi> אלף. ממוצע ארבעה שבועות: <bdi>197,750</bdi>, ירידה של <bdi>1,000</bdi>. מקבלי דמי אבטלה מתמשכים, לשבוע שהסתיים ב־<bdi>10</bdi> באוקטובר: <bdi>1.728</bdi> מיליון, מול צפי של כ־<bdi>1.71</bdi> מיליון; הנתון הקודם עודכן ל־<bdi>1.703</bdi> מיליון. <a href=\"https://www.dol.gov/ui/data.pdf\">משרד העבודה האמריקאי</a>.<br>מספר הבקשות החדשות לדמי אבטלה בארה״ב ירד ל־<bdi>194</bdi> אלף, מתחת לצפי של <bdi>200</bdi> אלף, בשבוע הסקר של דוח התעסוקה לאוקטובר — סימן שהפיטורים עדיין נמוכים לפני ישיבת הפד. מנגד, מספר מקבלי דמי האבטלה המתמשכים עלה ל־<bdi>1.728</bdi> מיליון, מעל הצפי — מי שמאבד עבודה מתקשה מעט יותר למצוא חדשה. <small>עודכן עם הנתון של <bdi>15:30</bdi>.</small>",
+      "en": "Seasonally adjusted initial claims: <bdi>194,000</bdi> for the week ended <bdi>17</bdi> October, versus a <bdi>200,000</bdi> consensus. The prior week was revised up to <bdi>200,000</bdi>, from <bdi>199,000</bdi>. The four-week average was <bdi>197,750</bdi>, down <bdi>1,000</bdi>. Continuing claims for the week ended <bdi>10</bdi> October: <bdi>1.728</bdi> million, versus about <bdi>1.71</bdi> million expected; the prior was revised to <bdi>1.703</bdi> million. <a href=\"https://www.dol.gov/ui/data.pdf\">DOL</a>.<br>Initial claims at <bdi>194k</bdi> came in below the <bdi>200k</bdi> consensus in the October payrolls survey week, the last claims print before the Fed meeting, so layoffs stay low; continuing claims rose to <bdi>1.728m</bdi>, above expectations, pointing to slower re-hiring. <small>Updated <bdi>15:30</bdi> Israel print.</small>"
      }
     },
     {
