@@ -41,8 +41,8 @@ DJ.edition(
       "en": "The New York-listed Brazil stock ETF (EWZ) fell <bdi>27%</bdi> premarket, Bloomberg reported, and a Tokyo-listed Brazil fund dropped <bdi>16%</bdi>, its biggest one-day fall since <bdi>2020</bdi>."
      },
      {
-      "he": "החוזים העתידיים על הריאל מגלמים היחלשות של יותר מ־<bdi>10%</bdi>, לכ־<bdi>5.55</bdi> ריאל לדולר, ותעודות ה־ADR (מניות זרות הנסחרות בניו יורק) של XP ושל איטאו ירדו בלפחות <bdi>26%</bdi>.",
-      "en": "Real futures imply a slide of more than <bdi>10%</bdi>, to about <bdi>5.55</bdi> per dollar, and ADRs of XP and Itaú fell at least <bdi>26%</bdi>."
+      "he": "החוזים העתידיים על הריאל מגלמים היחלשות של כמעט <bdi>10%</bdi>, לכ־<bdi>5.55</bdi> ריאל לדולר, ותעודות ה־ADR (מניות זרות הנסחרות בניו יורק) של XP ושל איטאו ירדו לפני המסחר בכ־<bdi>48%</bdi> ובכ־<bdi>25%</bdi> בהתאמה.",
+      "en": "Real futures imply a slide of nearly <bdi>10%</bdi>, to about <bdi>5.55</bdi> per dollar, and New York-listed ADRs of XP and Itaú fell about <bdi>48%</bdi> and <bdi>25%</bdi> premarket."
      },
      {
       "he": "בשוק לא שוללים הפעלת מנגנון עצירת מסחר בפתיחת הבורסה המקומית (B3).",
