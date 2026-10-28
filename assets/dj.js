@@ -229,6 +229,85 @@
     if (ed.et) kids.push(h("span", { class: "dim" }, [" (", num(ed.et + " ET"), ")"]));
     return kids;
   }
+  function clockMin(hhmm) {
+    var p = String(hhmm || "").split(":");
+    if (p.length < 2) return null;
+    var h = +p[0], m = +p[1];
+    if (isNaN(h) || isNaN(m)) return null;
+    return h * 60 + m;
+  }
+  function padClock(mins) {
+    mins = ((mins % (24 * 60)) + 24 * 60) % (24 * 60);
+    var h = Math.floor(mins / 60), m = mins % 60;
+    return (h < 10 ? "0" : "") + h + ":" + (m < 10 ? "0" : "") + m;
+  }
+  /* Minutes east of UTC for a timezone at an instant. */
+  function tzOffsetMin(timeZone, utcMs) {
+    try {
+      var dtf = new Intl.DateTimeFormat("en-US", {
+        timeZone: timeZone, hourCycle: "h23",
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit", second: "2-digit"
+      });
+      var map = {};
+      dtf.formatToParts(new Date(utcMs)).forEach(function (p) { if (p.type !== "literal") map[p.type] = p.value; });
+      var asUTC = Date.UTC(+map.year, +map.month - 1, +map.day, (+map.hour) % 24, +map.minute, +map.second);
+      return Math.round((asUTC - utcMs) / 60000);
+    } catch (e) { return null; }
+  }
+  /* Israel clock of the 09:30 ET cash open, from that date's ET–IL offset. */
+  function cashOpenIL(dateStr) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr || "")) return null;
+    var day = Date.parse(dateStr + "T00:00:00Z");
+    if (isNaN(day)) return null;
+    var utc = day + (9 * 60 + 30) * 60000;
+    var off = tzOffsetMin("America/New_York", utc);
+    if (off == null) return null;
+    utc = day + (9 * 60 + 30 - off) * 60000;
+    off = tzOffsetMin("America/New_York", utc);
+    if (off == null) return null;
+    var il = tzOffsetMin("Asia/Jerusalem", utc);
+    if (il == null) return null;
+    return padClock(9 * 60 + 30 - off + il);
+  }
+  /* Session phrase from the edition's ET time against the 09:30 ET open. */
+  function openSession(ed) {
+    if (!ed) return null;
+    var open = cashOpenIL(ed.date);
+    var et = clockMin(ed.et);
+    if (!open) return null;
+    if (et == null) {
+      var il = clockMin(ed.time), openMin = clockMin(open);
+      if (il == null || openMin == null) return null;
+      return { after: il >= openMin, open: open };
+    }
+    return { after: et >= 9 * 60 + 30, open: open };
+  }
+  function sessionClause(text, s) {
+    if (!text || !s) return text;
+    var open = "<bdi>" + s.open + "</bdi>";
+    var en = s.after
+      ? "after the open, cash open " + open + " Israel"
+      : "pre-market, before the " + open + " Israel cash open";
+    var he = s.after
+      ? "שעה ראשונה למסחר, אחרי הפתיחה ב־" + open + " בישראל"
+      : "לפני הפתיחה, לפני פתיחת המזומן ב־" + open + " בישראל";
+    return String(text)
+      .replace(/pre-market — taken before the US cash open at <bdi>\d{1,2}:\d{2}<\/bdi> Israel/g, en)
+      .replace(/לפני הפתיחה — לפני פתיחת המזומן בארה״ב ב־<bdi>\d{1,2}:\d{2}<\/bdi> בישראל/g, he);
+  }
+  /* Own markets stamp only. Carried sections keep the earlier edition's as-of. */
+  function marketsShown(ed) {
+    var m = (ed && ed.markets) || {};
+    if (!ed || ed.slot !== "markets" || m.carried || !m.asof || typeof m.asof !== "object") return m;
+    var s = openSession(ed);
+    if (!s) return m;
+    var copy = {};
+    for (var k in m) copy[k] = m[k];
+    copy.asof = {};
+    for (var lang in m.asof) copy.asof[lang] = typeof m.asof[lang] === "string" ? sessionClause(m.asof[lang], s) : m.asof[lang];
+    return copy;
+  }
   function dateline(ed) {
     var today = sameDay(ed.date);
     var strip = h("nav", { class: "runs", "aria-label": ui("today") }, today.map(function (e) {
@@ -245,7 +324,7 @@
   }
 
   /* Scroll the chip row only, so the active edition is fully on screen. RTL-aware.
-     scrollIntoView({inline:"nearest"}) would also move the page; pin the page and keep the row. */
+     scrollIntoView also moves the page; center the chip inside the row and leave the page. */
   function cueRuns(row) {
     if (!row) return;
     var chips = row.querySelectorAll(".run");
@@ -270,21 +349,16 @@
     }
     var reduce = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
     var sx = window.scrollX, sy = window.scrollY;
+    var rowBox = row.getBoundingClientRect();
+    var curBox = cur.getBoundingClientRect();
+    var delta = (curBox.left + curBox.width / 2) - (rowBox.left + rowBox.width / 2);
     try {
-      cur.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "nearest", inline: "nearest" });
+      row.scrollBy({ left: delta, top: 0, behavior: reduce ? "auto" : "smooth" });
     } catch (e) {
-      try { cur.scrollIntoView(false); } catch (e2) {}
+      row.scrollLeft += delta;
     }
     if (window.scrollX !== sx || window.scrollY !== sy) window.scrollTo(sx, sy);
     cueRuns(row);
-    if (!reduce) {
-      var n = 0;
-      (function pin() {
-        if (window.scrollX !== sx || window.scrollY !== sy) window.scrollTo(sx, sy);
-        cueRuns(row);
-        if (++n < 12) requestAnimationFrame(pin);
-      })();
-    }
   }
 
   function controls() {
@@ -329,7 +403,7 @@
     return h("span", { class: "ticker-when is-short" }, [ui("quotes"), time, " " + ui("israel")]);
   }
   function tapeRow(ed) {
-    var m = ed.markets || {};
+    var m = marketsShown(ed);
     var items = list(m.tape).length ? m.tape : m.boards && m.boards[0] ? m.boards[0].items : [];
     if (!items || !items.length) return null;
     function seq(hidden) {
@@ -616,7 +690,7 @@
     ].concat(list(note).map(function (n) { return h("p", { class: "board-note", html: tx(n) }); })));
   }
   function marketsSection(ed) {
-    var m = ed.markets || {};
+    var m = marketsShown(ed);
     var sec = h("section", { class: "page page-markets", id: "markets", "aria-labelledby": "markets-h" }, [sectionHead(ui("markets"), m, "markets-h")]);
     var lead = [];
     var storyP = list(m.story).filter(has);

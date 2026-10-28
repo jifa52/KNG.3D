@@ -582,7 +582,7 @@ html[dir="rtl"] .chip-px { justify-content: flex-end; }
   .dateline .date { font-size: 13.5px; }
   .date-long { display: none; }
   .date-short { display: inline; }
-  .runs { grid-column: 1 / -1; grid-row: 2; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; scroll-padding-inline: 18px; overscroll-behavior-x: contain; }
+  .runs { grid-column: 1 / -1; grid-row: 2; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; scroll-padding-inline: 18px; padding-inline-start: 14px; overscroll-behavior-x: contain; }
   .runs::-webkit-scrollbar { display: none; }
   .runs.fade-left {
     -webkit-mask-image: linear-gradient(to right, transparent, #000 16px);
