@@ -1451,6 +1451,23 @@ DJ.edition({
    "items": [
     {
      "date": "2026-11-04",
+     "time": "15:15",
+     "et": "08:15",
+     "label": {
+      "he": "נתון התעסוקה הפרטית של ADP לאוקטובר",
+      "en": "ADP private payrolls, October"
+     },
+     "detail": {
+      "he": "נתון התעסוקה הפרטית של ADP יצא מעל הצפי (<bdi>86</bdi> אלף מול <bdi>69</bdi> אלף), כלומר שוק העבודה עדיין מחזיק מעמד. זה מקטין את הלחץ על הפד להוריד ריבית מהר, ומגיע יומיים לפני דוח התעסוקה החודשי בארה״ב ביום שישי. ADP אומרת שהדוח שלה לא נועד לחזות את מספר משרד העבודה.",
+      "en": "ADP private hiring beat expectations (<bdi>86K</bdi> vs <bdi>69K</bdi>), a sign the labor market is still holding up. That eases pressure on the Fed to cut quickly, two days ahead of Friday's official payrolls report. ADP says its report isn't designed to forecast the BLS number."
+     },
+     "result": {
+      "he": "לפי ADP, המגזר הפרטי הוסיף <bdi>+86,000</bdi> משרות באוקטובר, מול צפי של <bdi>69K</bdi>. הנתון הקודם, לספטמבר, היה <bdi>90K</bdi>. <a href=\"https://adpemploymentreport.com/\">ADP</a>.",
+      "en": "ADP: private payrolls <bdi>+86,000</bdi> in October, versus a consensus of <bdi>69K</bdi> and a September prior of <bdi>90K</bdi>. <a href=\"https://adpemploymentreport.com/\">ADP</a>."
+     }
+    },
+    {
+     "date": "2026-11-04",
      "time": "16:30",
      "et": "09:30",
      "label": {
