@@ -1487,6 +1487,40 @@ DJ.edition({
    "items": [
     {
      "date": "2026-11-05",
+     "time": "15:30",
+     "et": "08:30",
+     "label": {
+      "he": "תביעות אבטלה ראשוניות בארה״ב",
+      "en": "US initial jobless claims"
+     },
+     "detail": {
+      "he": "<bdi>189</bdi> אלף, מתחת לצפי של <bdi>196–197</bdi> אלף (שבוע קודם מעודכן: <bdi>195</bdi> אלף). תביעות מתמשכות <bdi>1.718</bdi> מיליון. מקור: משרד העבודה האמריקאי (DOL).",
+      "en": "<bdi>189,000</bdi>, below the <bdi>196,000–197,000</bdi> consensus (prior week revised to <bdi>195,000</bdi>). Continuing claims <bdi>1.718</bdi> million. Source: US Labor Department (DOL)."
+     },
+     "result": {
+      "he": "<bdi>189</bdi> אלף, מתחת לצפי של <bdi>196–197</bdi> אלף. <a href=\"https://www.dol.gov/ui/data.pdf\">DOL</a>.",
+      "en": "<bdi>189,000</bdi>, below the <bdi>196,000–197,000</bdi> consensus. <a href=\"https://www.dol.gov/ui/data.pdf\">DOL</a>."
+     }
+    },
+    {
+     "date": "2026-11-05",
+     "time": "15:30",
+     "et": "08:30",
+     "label": {
+      "he": "פריון ועלות עבודה ליחידה, רבעון שלישי",
+      "en": "US Q3 productivity and unit labor costs"
+     },
+     "detail": {
+      "he": "הפריון עלה <bdi>3.6%</bdi> בשנתון מול צפי של <bdi>3.1%</bdi>; עלות העבודה ליחידה ירדה <bdi>0.7%</bdi> מול צפי לעלייה של <bdi>1.4%</bdi>. מקור: הלשכה לסטטיסטיקה של העבודה (BLS).",
+      "en": "Productivity rose <bdi>3.6%</bdi> annualized vs <bdi>3.1%</bdi> expected; unit labor costs fell <bdi>0.7%</bdi> vs a <bdi>1.4%</bdi> rise expected. Source: Bureau of Labor Statistics (BLS)."
+     },
+     "result": {
+      "he": "הפריון עלה <bdi>3.6%</bdi> מול צפי של <bdi>3.1%</bdi>; עלות העבודה ליחידה ירדה <bdi>0.7%</bdi>. <a href=\"https://www.bls.gov/news.release/prod2.nr0.htm\">BLS</a>.",
+      "en": "Productivity rose <bdi>3.6%</bdi> vs <bdi>3.1%</bdi> expected; unit labor costs fell <bdi>0.7%</bdi>. <a href=\"https://www.bls.gov/news.release/prod2.nr0.htm\">BLS</a>."
+     }
+    },
+    {
+     "date": "2026-11-05",
      "time": "16:30",
      "et": "09:30",
      "label": {
