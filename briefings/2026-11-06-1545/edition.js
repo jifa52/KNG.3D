@@ -958,41 +958,41 @@ DJ.edition({
    },
    {
     "headline": {
-     "he": "לפני דוח התעסוקה: קונצנזוס של כ־<bdi>65</bdi> אלף משרות ואבטלה של <bdi>4.2%</bdi>",
-     "en": "Ahead of the jobs report: consensus is about <bdi>65,000</bdi> payrolls and <bdi>4.2%</bdi> unemployment"
+     "he": "דוח התעסוקה: <bdi>+165</bdi> אלף משרות, אבטלה <bdi>4.1%</bdi> — חזק מהצפי",
+     "en": "Jobs report: <bdi>+165,000</bdi> payrolls, unemployment <bdi>4.1%</bdi> — stronger than expected"
     },
     "bottom": {
-     "he": "הקונצנזוס בסקר רויטרס לדוח התעסוקה של אוקטובר הוא תוספת של כ־<bdi>65</bdi> אלף משרות, אבטלה של <bdi>4.2%</bdi>, ושכר שעתי שעולה <bdi>0.3%</bdi> בחודש.",
-     "en": "The Reuters survey consensus for the October employment report is a gain of about <bdi>65,000</bdi> jobs, unemployment of <bdi>4.2%</bdi>, and hourly earnings up <bdi>0.3%</bdi> on the month."
+     "he": "לפי הלשכה לסטטיסטיקה של העבודה, דוח התעסוקה לאוקטובר <bdi>2026</bdi> (Employment Situation) הוסיף <bdi>165</bdi> אלף משרות מול קונצנזוס של <bdi>65</bdi> אלף, האבטלה ירדה ל־<bdi>4.1%</bdi> מול צפי של <bdi>4.2%</bdi>, והשכר השעתי עלה <bdi>0.4%</bdi> בחודש ו־<bdi>3.1%</bdi> בשנה מול צפי של <bdi>0.3%</bdi> ו־<bdi>2.9%</bdi>.",
+     "en": "The BLS Employment Situation for October <bdi>2026</bdi> added <bdi>165,000</bdi> jobs versus a <bdi>65,000</bdi> consensus, unemployment fell to <bdi>4.1%</bdi> versus <bdi>4.2%</bdi> expected, and hourly earnings rose <bdi>0.4%</bdi> on the month and <bdi>3.1%</bdi> on the year versus <bdi>0.3%</bdi> and <bdi>2.9%</bdi> expected."
     },
     "facts": [
      {
-      "he": "השכר השעתי בקונצנזוס: <bdi>+0.3%</bdi> בחודש ו־<bdi>+2.9%</bdi> בשנה. אם הקצב השנתי יירד מתחת ל־<bdi>3%</bdi>, זו תמונה של שוק שמתקרר בלי לחץ אינפלציוני מהעבודה.",
-      "en": "The earnings consensus is <bdi>+0.3%</bdi> on the month and <bdi>+2.9%</bdi> on the year. If the yearly pace comes in under <bdi>3%</bdi>, that is a picture of a cooling market without inflation pressure from labor."
+      "he": "התוספת היא <bdi>+165,000</bdi> משרות מול קונצנזוס רויטרס של <bdi>+65,000</bdi>, עם עליות בשירותים מקצועיים ועסקיים (<bdi>+70,000</bdi>), בשירותי בריאות (<bdi>+42,000</bdi>) ובתחבורה ואחסנה (<bdi>+25,000</bdi>). ספטמבר עודכן כלפי מעלה ב־<bdi>31,000</bdi> ל־<bdi>+60,000</bdi> (המספר הקודם היה <bdi>+29,000</bdi>), אוגוסט עודכן ב־<bdi>53,000</bdi> מ־<bdi>+133,000</bdi> ל־<bdi>+186,000</bdi>, ושני החודשים יחד גבוהים ב־<bdi>84,000</bdi> מהדיווח הקודם.",
+      "en": "Payrolls rose <bdi>165,000</bdi> versus a Reuters consensus of <bdi>+65,000</bdi>, with gains in professional and business services (<bdi>+70,000</bdi>), health care (<bdi>+42,000</bdi>) and transportation and warehousing (<bdi>+25,000</bdi>). September was revised up by <bdi>31,000</bdi> to <bdi>+60,000</bdi> (the earlier figure was <bdi>+29,000</bdi>), August was revised up by <bdi>53,000</bdi> from <bdi>+133,000</bdi> to <bdi>+186,000</bdi>, and the two months together are <bdi>84,000</bdi> higher than previously reported."
      },
      {
-      "he": "ספטמבר, לפי הלשכה לסטטיסטיקה של העבודה: <bdi>+29,000</bdi> משרות, אבטלה <bdi>4.2%</bdi>, שכר שעתי <bdi>+0.1%</bdi> בחודש ו־<bdi>+3.0%</bdi> בשנה.",
-      "en": "September, from the Bureau of Labor Statistics: <bdi>+29,000</bdi> jobs, unemployment <bdi>4.2%</bdi>, hourly earnings <bdi>+0.1%</bdi> on the month and <bdi>+3.0%</bdi> on the year."
+      "he": "שיעור האבטלה ירד ל־<bdi>4.1%</bdi> (צפי <bdi>4.2%</bdi>, קודם <bdi>4.2%</bdi>). מספר המובטלים <bdi>7.1</bdi> מיליון, שיעור ההשתתפות בכוח העבודה <bdi>61.9%</bdi>, ויחס התעסוקה לאוכלוסייה <bdi>59.3%</bdi>. מועסקים במשרה חלקית מסיבות כלכליות עלו ב־<bdi>339,000</bdi> ל־<bdi>4.8</bdi> מיליון.",
+      "en": "The unemployment rate fell to <bdi>4.1%</bdi> (consensus <bdi>4.2%</bdi>; prior <bdi>4.2%</bdi>). The unemployed numbered <bdi>7.1</bdi> million, labor-force participation was <bdi>61.9%</bdi>, and the employment-population ratio was <bdi>59.3%</bdi>. People working part time for economic reasons rose by <bdi>339,000</bdi> to <bdi>4.8</bdi> million."
      },
      {
-      "he": "ההקשר שכבר פורסם ביום חמישי: תביעות אבטלה שבועיות <bdi>189</bdi> אלף, ופריון ברבעון השלישי <bdi>+3.6%</bdi> עם ירידה של <bdi>0.7%</bdi> בעלות העבודה ליחידה.",
-      "en": "Context already published on Thursday: weekly jobless claims of <bdi>189,000</bdi>, and third-quarter productivity of <bdi>+3.6%</bdi> with unit labor costs down <bdi>0.7%</bdi>."
+      "he": "השכר השעתי הממוצע עלה <bdi>0.4%</bdi> בחודש ל־<bdi>38.00</bdi> דולר ו־<bdi>3.1%</bdi> בשנה (צפי <bdi>+0.3%</bdi> בחודש ו־<bdi>+2.9%</bdi> בשנה; קודם <bdi>+0.1%</bdi> ו־<bdi>+3.0%</bdi>). אצל עובדי ייצור ועובדים שאינם מפקחים השכר עלה <bdi>0.4%</bdi> בחודש ל־<bdi>32.75</bdi> דולר. שבוע העבודה הממוצע נשאר <bdi>34.4</bdi> שעות.",
+      "en": "Average hourly earnings rose <bdi>0.4%</bdi> on the month to $<bdi>38.00</bdi> and <bdi>3.1%</bdi> on the year (consensus <bdi>+0.3%</bdi> on the month and <bdi>+2.9%</bdi> on the year; prior <bdi>+0.1%</bdi> and <bdi>+3.0%</bdi>). Production and nonsupervisory earnings rose <bdi>0.4%</bdi> on the month to $<bdi>32.75</bdi>. The average workweek held at <bdi>34.4</bdi> hours."
      }
     ],
     "why": {
-     "he": "דוח חזק מהקונצנזוס במשרות או בשכר משאיר פחות מקום להורדות ריבית של הבנק המרכזי. דוח חלש יותר משאיר יותר מקום.",
-     "en": "A report stronger than this consensus on jobs or wages leaves less room for Federal Reserve rate cuts. A weaker one leaves more."
+     "he": "משרות ושכר חזקים מהקונצנזוס מקטינים את המרחב להורדות ריבית של הבנק המרכזי.",
+     "en": "Stronger-than-consensus jobs and wages reduce the room for Federal Reserve rate cuts."
     },
     "flags": [
      {
-      "he": "מספרי המשרות, האבטלה והשכר של היום אינם במהדורה הזו. <bdi>+65,000</bdi> / <bdi>4.2%</bdi> / <bdi>+0.3%</bdi> הם קונצנזוס בסקר כלכלנים של רויטרס, לא תוצאה שפורסמה.",
-      "en": "Today's payrolls, unemployment and earnings figures are not in this edition. The <bdi>+65,000</bdi> / <bdi>4.2%</bdi> / <bdi>+0.3%</bdi> figures are a Reuters survey of economists, not a published result."
+      "he": "תגובת החוזים אחרי הפרסום לא אומתה. הציטוטים במהדורה נלקחו לפני הדוח.",
+      "en": "The futures reaction after the release was not verified. The quotes in this edition were taken before the report."
      }
     ],
     "confidence": "likely",
     "source": {
-     "he": "רויטרס (Investing.com) · הלשכה לסטטיסטיקה של העבודה · משרד העבודה · <bdi>6</bdi> בנובמבר <bdi>2026</bdi>",
-     "en": "Reuters (via Investing.com) · Bureau of Labor Statistics · US Labor Department · Nov <bdi>6</bdi>, <bdi>2026</bdi>"
+     "he": "הלשכה לסטטיסטיקה של העבודה, Employment Situation (<bdi>USDL-26-1632</bdi>) · <bdi>6</bdi> בנובמבר <bdi>2026</bdi>",
+     "en": "BLS Employment Situation (USDL-26-1632) · Nov <bdi>6</bdi>, <bdi>2026</bdi>"
     },
     "date": {
      "he": "<bdi>6</bdi> בנובמבר",
@@ -1010,14 +1010,6 @@ DJ.edition({
      {
       "label": "BLS Employment Situation",
       "url": "https://www.bls.gov/news.release/empsit.nr0.htm"
-     },
-     {
-      "label": "US Labor Department",
-      "url": "https://www.dol.gov/ui/data.pdf"
-     },
-     {
-      "label": "BLS productivity",
-      "url": "https://www.bls.gov/news.release/prod2.nr0.htm"
      }
     ],
     "image": {
@@ -1399,6 +1391,23 @@ DJ.edition({
   ],
   "calendar": {
    "items": [
+    {
+     "date": "2026-11-06",
+     "time": "15:30",
+     "et": "08:30",
+     "label": {
+      "he": "דוח התעסוקה בארה״ב, אוקטובר",
+      "en": "US Employment Situation, October"
+     },
+     "detail": {
+      "he": "ב־<bdi>15:30</bdi> בישראל (<bdi>08:30</bdi> בניו יורק). תוספת של <bdi>165,000</bdi> משרות מול צפי של <bdi>65,000</bdi>; אבטלה <bdi>4.1%</bdi> מול צפי <bdi>4.2%</bdi>; שכר שעתי <bdi>+0.4%</bdi> בחודש ו־<bdi>+3.1%</bdi> בשנה. מקור: הלשכה לסטטיסטיקה של העבודה (BLS).",
+      "en": "At <bdi>15:30</bdi> Israel (<bdi>08:30</bdi> New York). Payrolls <bdi>+165,000</bdi> versus <bdi>+65,000</bdi> expected; unemployment <bdi>4.1%</bdi> versus <bdi>4.2%</bdi> expected; hourly earnings <bdi>+0.4%</bdi> on the month and <bdi>+3.1%</bdi> on the year. Source: Bureau of Labor Statistics (BLS)."
+     },
+     "result": {
+      "he": "תוספת של <bdi>165,000</bdi> משרות, אבטלה <bdi>4.1%</bdi>, שכר שעתי <bdi>+0.4%</bdi> / <bdi>+3.1%</bdi>. <a href=\"https://www.bls.gov/news.release/empsit.nr0.htm\">BLS</a>.",
+      "en": "Payrolls <bdi>+165,000</bdi>, unemployment <bdi>4.1%</bdi>, hourly earnings <bdi>+0.4%</bdi> / <bdi>+3.1%</bdi>. <a href=\"https://www.bls.gov/news.release/empsit.nr0.htm\">BLS</a>."
+     }
+    },
     {
      "date": "2026-11-06",
      "time": "16:30",
