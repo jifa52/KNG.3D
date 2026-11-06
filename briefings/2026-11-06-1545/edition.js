@@ -1430,8 +1430,12 @@ DJ.edition({
       "en": "University of Michigan consumer sentiment, November preliminary"
      },
      "detail": {
-      "he": "ב־<bdi>17:00</bdi> בישראל (<bdi>10:00</bdi> בניו יורק). קונצנזוס כ־<bdi>47.3–47.5</bdi>. אוקטובר הסופי היה <bdi>48.0</bdi>. המספר של היום אינו במהדורה הזו.",
-      "en": "At <bdi>17:00</bdi> Israel (<bdi>10:00</bdi> New York). Consensus about <bdi>47.3–47.5</bdi>. The October final was <bdi>48.0</bdi>. Today's figure is not in this edition."
+      "he": "ב־<bdi>17:00</bdi> בישראל (<bdi>10:00</bdi> בניו יורק). מדד האמון הצרכני של אוניברסיטת מישיגן (Surveys of Consumers, נובמבר ראשוני) עמד על <bdi>51.0</bdi> מול קונצנזוס <bdi>47.5</bdi> של <a href=\"https://www.cmegroup.com/education/events/econoday/666974\">CME Econoday</a> ומול <bdi>48.0</bdi> באוקטובר הסופי; <bdi>+6.3%</bdi> בחודש, וללא שינוי מול נובמבר <bdi>2025</bdi> (<bdi>51.0</bdi>). תנאי הכלכלה הנוכחיים <bdi>51.0</bdi> (קודם <bdi>46.7</bdi>; <bdi>+9.2%</bdi> בחודש), ומדד ציפיות הצרכנים <bdi>50.9</bdi> (קודם <bdi>48.8</bdi>; <bdi>+4.3%</bdi> בחודש). ציפיות האינפלציה לשנה <bdi>4.3%</bdi> (קודם <bdi>4.7%</bdi>), ולטווח הארוך <bdi>3.4%</bdi> (קודם <bdi>3.5%</bdi>). סנטימנט חזק מהקונצנזוס מקטין את המרחב להורדות ריבית של הפד.",
+      "en": "At <bdi>17:00</bdi> Israel (<bdi>10:00</bdi> New York). The University of Michigan Surveys of Consumers index, November preliminary, was <bdi>51.0</bdi> versus a <a href=\"https://www.cmegroup.com/education/events/econoday/666974\">CME Econoday</a> consensus of <bdi>47.5</bdi> and an October final of <bdi>48.0</bdi>; <bdi>+6.3%</bdi> on the month and unchanged from November <bdi>2025</bdi> (<bdi>51.0</bdi>). Current economic conditions were <bdi>51.0</bdi> (prior <bdi>46.7</bdi>; <bdi>+9.2%</bdi> on the month), and the index of consumer expectations was <bdi>50.9</bdi> (prior <bdi>48.8</bdi>; <bdi>+4.3%</bdi> on the month). Year-ahead inflation expectations were <bdi>4.3%</bdi> (prior <bdi>4.7%</bdi>), and long-run inflation expectations were <bdi>3.4%</bdi> (prior <bdi>3.5%</bdi>). Stronger-than-consensus sentiment reduces the room for Federal Reserve rate cuts."
+     },
+     "result": {
+      "he": "מדד האמון <bdi>51.0</bdi> מול צפי <bdi>47.5</bdi>; תנאים נוכחיים <bdi>51.0</bdi>; ציפיות <bdi>50.9</bdi>; אינפלציה לשנה <bdi>4.3%</bdi>, לטווח הארוך <bdi>3.4%</bdi>. <a href=\"https://www.sca.isr.umich.edu/\">אוניברסיטת מישיגן</a>.",
+      "en": "Sentiment <bdi>51.0</bdi> versus <bdi>47.5</bdi> expected; current conditions <bdi>51.0</bdi>; expectations <bdi>50.9</bdi>; year-ahead inflation <bdi>4.3%</bdi>, long-run <bdi>3.4%</bdi>. <a href=\"https://www.sca.isr.umich.edu/\">University of Michigan</a>."
      }
     },
     {
