@@ -1,8 +1,9 @@
 name: GitHub Pages
 
-# Pages serves the main branch from the repository root. This workflow checks
-# every push: the editions must be valid, and published editions stay frozen.
-# Run it by hand (Actions → GitHub Pages → Run workflow) to deploy via Actions.
+# Pages serves the main branch from the repository root (legacy builder).
+# This workflow checks every push: the editions must be valid, and published
+# editions stay frozen. Run it by hand (Actions → GitHub Pages → Run workflow)
+# to deploy via Actions if the branch builder times out.
 
 on:
   push:
