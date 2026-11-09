@@ -1539,8 +1539,12 @@ DJ.edition({
       "en": "US wholesale inventories, September"
      },
      "detail": {
-      "he": "ב־<bdi>17:00</bdi> בישראל (<bdi>10:00</bdi> בניו יורק). קונצנזוס <bdi>+0.6%</bdi> בחודש, והקודם <bdi>+0.6%</bdi>. הנתון עצמו אינו במהדורה הזו. באותה שעה מדבר אוסטן גולסבי.",
-      "en": "At <bdi>17:00</bdi> Israel (<bdi>10:00</bdi> New York). Consensus <bdi>+0.6%</bdi> on the month, prior <bdi>+0.6%</bdi>. The figure itself is not in this edition. Austan Goolsbee speaks at the same hour."
+      "he": "ב־<bdi>17:00</bdi> בישראל (<bdi>10:00</bdi> בניו יורק). לפי דוח הסחר הסיטונאי החודשי של הלשכה למפקד האוכלוסין (<a href=\"https://www.census.gov/wholesale/current/\">CB26-168</a>), המלאי הסיטונאי בספטמבר עלה <bdi>0.7%</bdi> בחודש ל־<bdi>1,013.1</bdi> מיליארד דולר, <bdi>+7.6%</bdi> בשנה, מעל האומדן המוקדם של <bdi>+0.6%</bdi>. יחס המלאי למכירות <bdi>1.21</bdi>. קונצנזוס לוח FXEmpire: <bdi>+0.6%</bdi> בחודש. הנתון התפרסם מעט מעל הקונצנזוס. זה נתון שולי, והוא לא משנה הרבה את התרחיש להורדות ריבית של הפד. באותה שעה מדבר אוסטן גולסבי.",
+      "en": "At <bdi>17:00</bdi> Israel (<bdi>10:00</bdi> New York). The Census Monthly Wholesale Trade Report (<a href=\"https://www.census.gov/wholesale/current/\">CB26-168</a>) put September wholesale inventories up <bdi>0.7%</bdi> on the month to $<bdi>1,013.1</bdi> billion, <bdi>+7.6%</bdi> from a year earlier, up from the <bdi>+0.6%</bdi> advance estimate. The inventories-to-sales ratio was <bdi>1.21</bdi>. The FXEmpire calendar consensus was <bdi>+0.6%</bdi> on the month. It printed slightly above consensus. It is a minor print, and it does not much change the case for Fed rate cuts. Austan Goolsbee speaks at the same hour."
+     },
+     "result": {
+      "he": "המלאי הסיטונאי <bdi>+0.7%</bdi> בחודש ל־<bdi>1,013.1</bdi> מיליארד דולר (<bdi>+7.6%</bdi> בשנה), מעל האומדן המוקדם <bdi>+0.6%</bdi>; יחס המלאי למכירות <bdi>1.21</bdi>. מעט מעל קונצנזוס <bdi>+0.6%</bdi>. <a href=\"https://www.census.gov/wholesale/current/\">Census, CB26-168</a>.",
+      "en": "Wholesale inventories <bdi>+0.7%</bdi> on the month to $<bdi>1,013.1</bdi> billion (<bdi>+7.6%</bdi> on the year), up from the <bdi>+0.6%</bdi> advance estimate; inventories/sales ratio <bdi>1.21</bdi>. Slightly above the <bdi>+0.6%</bdi> consensus. <a href=\"https://www.census.gov/wholesale/current/\">Census, CB26-168</a>."
      }
     },
     {
