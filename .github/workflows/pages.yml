@@ -5,6 +5,7 @@ name: GitHub Pages
 # editions stay frozen. The branch builder can time out while syncing files;
 # a follow-up push retriggers it. Run by hand (Actions → GitHub Pages →
 # Run workflow) to deploy via Actions if it stays stuck.
+# Retrigger after the 2026-11-10 15:45 Pages deploy step timed out.
 
 on:
   push:
