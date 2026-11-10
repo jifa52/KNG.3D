@@ -799,41 +799,40 @@ DJ.edition({
      "en": "Macro"
     },
     "headline": {
-     "he": "מדד המחירים לצרכן ב־<bdi>15:30</bdi>: הנתון האחרון לפני ישיבת הפד בדצמבר",
-     "en": "October CPI at <bdi>15:30</bdi> is the last print before the December Fed meeting"
+     "he": "מדד המחירים: <bdi>+0.4%</bdi> בחודש, בסיס <bdi>+0.3%</bdi> — חם מהצפי",
+     "en": "CPI: <bdi>+0.4%</bdi> on the month, core <bdi>+0.3%</bdi> — hotter than expected"
     },
     "bottom": {
-     "he": "ב־<bdi>15:30</bdi> שעון ישראל יתפרסם מדד המחירים לצרכן של אוקטובר, והקונצנזוס הוא עלייה חודשית של <bdi>0.3%</bdi> ובסיס של <bdi>0.2%</bdi>.",
-     "en": "October's consumer-price index is due at <bdi>15:30</bdi> Israel, and the consensus is a <bdi>0.3%</bdi> monthly rise in the headline and <bdi>0.2%</bdi> in the core."
+     "he": "מדד המחירים לצרכן של אוקטובר <bdi>2026</bdi> עלה <bdi>+0.4%</bdi> בחודש מול צפי <bdi>+0.3%</bdi>, והבסיס עלה <bdi>+0.3%</bdi> מול צפי <bdi>+0.2%</bdi>, לפי הלשכה לסטטיסטיקה של העבודה.",
+     "en": "The October <bdi>2026</bdi> consumer-price index rose <bdi>+0.4%</bdi> on the month versus <bdi>+0.3%</bdi> expected, and the core rose <bdi>+0.3%</bdi> versus <bdi>+0.2%</bdi>, from the Bureau of Labor Statistics."
     },
     "facts": [
      {
-      "he": "הקונצנזוס הוא <bdi>+0.3%</bdi> בחודש במדד הכללי (ספטמבר: <bdi>+0.6%</bdi>) ו־<bdi>+0.2%</bdi> בבסיס, בלי מזון ואנרגיה (ספטמבר: <bdi>+0.3%</bdi>). סקר רויטרס וסקר דאו ג׳ונס דרך <bdi>CNBC</bdi> תואמים.",
-      "en": "The consensus is <bdi>+0.3%</bdi> on the month for the headline (September: <bdi>+0.6%</bdi>) and <bdi>+0.2%</bdi> for the core, excluding food and energy (September: <bdi>+0.3%</bdi>). A Reuters survey and a Dow Jones poll via CNBC agree."
+      "he": "המדד הכללי, מתואם עונתית, עלה <bdi>+0.4%</bdi> בחודש מול קונצנזוס <bdi>+0.3%</bdi> (ספטמבר: <bdi>+0.6%</bdi>). הדיור עלה <bdi>0.3%</bdi> והסביר מעל <bdi>30%</bdi> מהעלייה החודשית; המזון עלה <bdi>+0.5%</bdi> (בבית <bdi>+0.4%</bdi>, מחוץ לבית <bdi>+0.5%</bdi>), האנרגיה <bdi>+0.7%</bdi> אחרי <bdi>+5.2%</bdi> בספטמבר, והבנזין <bdi>+1.0%</bdi> אחרי <bdi>+9.1%</bdi>.",
+      "en": "The headline index, seasonally adjusted, rose <bdi>+0.4%</bdi> on the month versus a <bdi>+0.3%</bdi> consensus (September: <bdi>+0.6%</bdi>). Shelter rose <bdi>0.3%</bdi> and accounted for over <bdi>30%</bdi> of the monthly increase; food rose <bdi>+0.5%</bdi> (at home <bdi>+0.4%</bdi>, away from home <bdi>+0.5%</bdi>), energy <bdi>+0.7%</bdi> after <bdi>+5.2%</bdi> in September, and gasoline <bdi>+1.0%</bdi> after <bdi>+9.1%</bdi>."
      },
      {
-      "he": "אין נתון שנתי, כי מחירי אוקטובר <bdi>2025</bdi> לא נאספו בזמן השביתה הממשלתית.",
-      "en": "There is no year-over-year figure, because October <bdi>2025</bdi> prices were not collected during the federal shutdown."
+      "he": "המדד הבסיסי, בלי מזון ואנרגיה, עלה <bdi>+0.3%</bdi> בחודש מול צפי <bdi>+0.2%</bdi>, כפי שעלה גם בספטמבר ובאוגוסט. פנאי, טיפול רפואי, ביטוח רכב, ריהוט ותפעול משק הבית וחינוך עלו; מכוניות ומשאיות משומשות ירדו <bdi>1.2%</bdi>, וגם התקשורת ירדה.",
+      "en": "Core, excluding food and energy, rose <bdi>+0.3%</bdi> on the month versus <bdi>+0.2%</bdi> expected, as it did in September and August. Recreation, medical care, motor-vehicle insurance, household furnishings and operations, and education rose; used cars and trucks fell <bdi>1.2%</bdi>, and communication also declined."
      },
      {
-      "he": "לוח הלשכה לסטטיסטיקה של העבודה קובע את הפרסום ל־<bdi>15:30</bdi> בישראל, <bdi>08:30</bdi> בניו יורק.",
-      "en": "The Bureau of Labor Statistics schedule sets the release for <bdi>15:30</bdi> Israel, <bdi>08:30</bdi> in New York."
+      "he": "אין שינוי של <bdi>12</bdi> חודשים למדד הכללי או לבסיס: מחירי אוקטובר <bdi>2025</bdi> לא נאספו בזמן השביתה הממשלתית. רמת המדד <bdi>337.511</bdi> (<bdi>1982–84=100</bdi>), והשינוי החודשי שאינו מתואם עונתית הוא <bdi>+0.2%</bdi>.",
+      "en": "There is no <bdi>12</bdi>-month change for the headline or the core: October <bdi>2025</bdi> prices were not collected during the shutdown. The index level is <bdi>337.511</bdi> (<bdi>1982–84=100</bdi>), and the unadjusted monthly change was <bdi>+0.2%</bdi>."
+     },
+     {
+      "he": "בציטוט הראשון אחרי הפרסום, <bdi>15:30</bdi> בישראל: חוזה <bdi>S&amp;P 500</bdi> ב־<bdi>7,544.25</bdi> (<bdi>−0.40%</bdi> מול סגירת יום שני <bdi>7,574.25</bdi>), חוזה נאסד״ק־<bdi>100</bdi> ב־<bdi>27,754</bdi> (<bdi>−0.93%</bdi> מול <bdi>28,014.5</bdi>), וחוזה הדאו ב־<bdi>52,498</bdi> (ללא שינוי מול הסגירה).",
+      "en": "At the first quote after the release, <bdi>15:30</bdi> Israel: the S&amp;P 500 future was <bdi>7,544.25</bdi> (<bdi>−0.40%</bdi> versus Monday's settle of <bdi>7,574.25</bdi>), the Nasdaq-<bdi>100</bdi> future <bdi>27,754</bdi> (<bdi>−0.93%</bdi> versus <bdi>28,014.5</bdi>), and the Dow future <bdi>52,498</bdi> (unchanged versus the settle)."
      }
     ],
     "why": {
-     "he": "רויטרס מתארת את הפד כנוטה להעלאת ריבית בדצמבר. נתון חם מהקונצנזוס מגביר את הלחץ להעלאה ומצמצם את המרחב להקלה; נתון קר פועל בכיוון ההפוך.",
-     "en": "Reuters describes the Fed as leaning toward a rate increase in December. A hotter print than consensus adds pressure for a hike and leaves less room for easing; a cooler print does the reverse."
+     "he": "נתון חם מהקונצנזוס מצמצם את המרחב להורדת ריבית ומחזק את המקרה להעלאה בישיבת הפד ב־<bdi>8–9</bdi> בדצמבר. אין נתון שנתי למדד הכללי או לבסיס.",
+     "en": "A hotter-than-consensus print reduces the room for a rate cut and strengthens the case for a hike at the Fed's <bdi>8–9</bdi> December meeting. There is no year-over-year figure for the headline or the core."
     },
-    "flags": [
-     {
-      "he": "הנתון עצמו אינו במהדורה הזו.",
-      "en": "The figure itself is not in this edition."
-     }
-    ],
+    "flags": [],
     "confidence": "confirmed",
     "source": {
-     "he": "רויטרס (Investing.com), CNBC, והלוח של הלשכה לסטטיסטיקה של העבודה",
-     "en": "Reuters (Investing.com), CNBC, and the Bureau of Labor Statistics schedule"
+     "he": "הלשכה לסטטיסטיקה של העבודה, מדד המחירים לצרכן (<bdi>USDL-26-1685</bdi>) · <bdi>10</bdi> בנובמבר <bdi>2026</bdi>",
+     "en": "BLS Consumer Price Index (<bdi>USDL-26-1685</bdi>) · Nov <bdi>10</bdi>, <bdi>2026</bdi>"
     },
     "time": "15:30",
     "date": {
@@ -850,8 +849,12 @@ DJ.edition({
       "url": "https://www.cnbc.com/2026/11/09/october-cpi-report-2026-inflation.html"
      },
      {
-      "label": "BLS schedule",
-      "url": "https://www.bls.gov/schedule/2026/11_sched.htm"
+      "label": "BLS",
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+     },
+     {
+      "label": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/ES%3DF/"
      }
     ],
     "image": {
@@ -1648,10 +1651,13 @@ DJ.edition({
       "en": "US consumer-price index, October"
      },
      "detail": {
-      "he": "קונצנזוס: <bdi>+0.3%</bdi> בחודש, ובסיס <bdi>+0.2%</bdi>. בספטמבר <bdi>+0.6%</bdi> ו־<bdi>+0.3%</bdi>. אין נתון שנתי.",
-      "en": "Consensus: <bdi>+0.3%</bdi> on the month, core <bdi>+0.2%</bdi>. September was <bdi>+0.6%</bdi> and <bdi>+0.3%</bdi>. There is no year-over-year figure."
+      "he": "בפועל: <bdi>+0.4%</bdi> בחודש (צפי <bdi>+0.3%</bdi>), בסיס <bdi>+0.3%</bdi> (צפי <bdi>+0.2%</bdi>). אין נתון שנתי. מקור: הלשכה לסטטיסטיקה של העבודה (BLS).",
+      "en": "Actual: <bdi>+0.4%</bdi> on the month (vs <bdi>+0.3%</bdi> expected), core <bdi>+0.3%</bdi> (vs <bdi>+0.2%</bdi>). No year-over-year figure. Source: Bureau of Labor Statistics (BLS)."
      },
-     "status": "unavailable"
+     "result": {
+      "he": "בפועל <bdi>+0.4%</bdi> בחודש (צפי <bdi>+0.3%</bdi>), בסיס <bdi>+0.3%</bdi> (צפי <bdi>+0.2%</bdi>). אין נתון שנתי. <a href=\"https://www.bls.gov/news.release/cpi.nr0.htm\">BLS, USDL-26-1685</a>.",
+      "en": "Actual <bdi>+0.4%</bdi> on the month (vs <bdi>+0.3%</bdi> expected), core <bdi>+0.3%</bdi> (vs <bdi>+0.2%</bdi>). No year-over-year figure. <a href=\"https://www.bls.gov/news.release/cpi.nr0.htm\">BLS, USDL-26-1685</a>."
+     }
     },
     {
      "date": "2026-11-10",
