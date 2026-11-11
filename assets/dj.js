@@ -793,8 +793,10 @@
     var heName = SLOT.special[0][0], enName = SLOT.special[0][1];
     var asof = {};
     for (var k in a.asof) asof[k] = a.asof[k];
-    if (typeof asof.he === "string" && asof.he.indexOf(heName) < 0) asof.he = asof.he.replace(/·(\s*)בוקר/g, "·$1" + heName);
-    if (typeof asof.en === "string" && asof.en.toLowerCase().indexOf(enName.toLowerCase()) < 0) asof.en = asof.en.replace(/Israel morning/gi, "Israel " + enName);
+    // The chip name stands alone. "· בוקר בישראל" → "· מיוחדת".
+    // A clock keeps the zone after the time: "· בוקר, 09:00 בישראל" → "· מיוחדת, 09:00 בישראל".
+    if (typeof asof.he === "string" && asof.he.indexOf(heName) < 0) asof.he = asof.he.replace(/·(\s*)בוקר(?:\s+בישראל)?/g, "·$1" + heName);
+    if (typeof asof.en === "string" && asof.en.toLowerCase().indexOf(enName.toLowerCase()) < 0) asof.en = asof.en.replace(/·(\s*)(?:Israel\s+)?morning\b/gi, "·$1" + enName);
     var copy = {};
     for (var key in a) copy[key] = a[key];
     copy.asof = asof;
