@@ -50,7 +50,7 @@
     about: ["על המהדורה הזו", "About this edition"], legacy: ["הומר מהמהדורה המקורית. הנוסח לא שונה.", "Converted from the original edition. The wording is unchanged."],
     illus: ["המחשה (AI)", "AI Illustration"], archival: ["צילום ארכיון", "Archive photo"], unavailable: ["התוצאה לא הייתה זמינה בזמן החיתוך", "Result not available at cutoff"], photo: ["צילום", "Photo"], theme: ["מצב תצוגה", "Display"],
     themeAuto: ["אוטומטי", "Auto"], themeLight: ["יום", "Day"], themeDark: ["לילה", "Night"],
-    motto: ["חדשות, שווקים ו־AI. שלוש מהדורות ביום.", "News, markets and AI. Three editions a day."],
+    motto: ["חדשות, שווקים ו־AI. מהדורות לאורך היום.", "News, markets and AI. Editions through the day."],
     today: ["המהדורות של היום", "Today's editions"], missing: ["אין נתון במהדורה הזו", "Not in this edition"],
     pending: ["בהכנה", "Pending"], filter: ["חיפוש בכותרות", "Search headlines"], editions: ["מהדורות", "editions"],
     noMatch: ["אין מהדורה שמתאימה לחיפוש.", "No edition matches that search."], read: ["לקריאה", "Read"],
@@ -189,13 +189,16 @@
 
   /* ------------------------------------------------------------ the logo */
   var TAG = { morning: "Your morning edition", midday: "Your midday edition", markets: "Your markets edition", intraday: "Your intraday edition", evening: "Your evening edition", close: "Your closing edition", special: "Special edition" };
+  var TAG_HE = { markets: "מהדורת השווקים שלך" };
   function logo(ed) {
-    var tag = ed ? TAG[ed.slot] || TAG.special : "The archive";
+    var slot = ed && ed.slot;
+    var heTag = state.lang === "he" && slot && TAG_HE[slot];
+    var tag = heTag || (ed ? TAG[slot] || TAG.special : "The archive");
     return h("span", { class: "lockup", dir: "ltr" }, [
       h("img", { class: "lk-emblem", src: ROOT + "assets/logo-emblem-gold.png", width: "492", height: "427", alt: "", decoding: "async" }),
       h("span", { class: "lk-text" }, [
         h("img", { class: "lk-word", src: ROOT + "assets/logo-wordmark-gold.png", width: "1200", height: "222", alt: "The Daily Jenya", decoding: "async" }),
-        h("span", { class: "lk-tag", lang: "en", text: tag })
+        h("span", { class: "lk-tag", lang: heTag ? "he" : "en", dir: heTag ? "rtl" : "ltr", text: tag })
       ])
     ]);
   }
@@ -399,7 +402,6 @@
     var t = quoteClock(m);
     if (!t) return h("span", { class: "ticker-k", text: ui("markets") });
     var time = h("bdi", { text: t });
-    if (state.lang === "he") return h("span", { class: "ticker-when is-short" }, [ui("quotes"), time]);
     return h("span", { class: "ticker-when is-short" }, [ui("quotes"), time, " " + ui("israel")]);
   }
   function tapeRow(ed) {
@@ -762,8 +764,46 @@
   }
 
   /* ------------------------------------------------------------ AI */
+  /* Edition that produced the AI section. A carried section keeps its as-of
+     line; the slot word on that line should still match the edition chips. */
+  function aiSource(ed) {
+    var ai = (ed && ed.ai) || {};
+    if (!ai.carried) return ed;
+    var note = "";
+    if (typeof ai.carried === "string") note = ai.carried;
+    else if (ai.carried && typeof ai.carried === "object") note = plain(ai.carried.he) + "\n" + plain(ai.carried.en);
+    var times = [], re = /(\d{1,2}):(\d{2})/g, m;
+    while ((m = re.exec(note))) times.push((m[1].length < 2 ? "0" : "") + m[1] + ":" + m[2]);
+    var start = indexOf(ed.id);
+    if (start < 0) return null;
+    var hits = [], i, t, e;
+    for (t = 0; t < times.length; t++) {
+      for (i = start + 1; i < state.manifest.length; i++) {
+        e = state.manifest[i];
+        if (e.time === times[t]) { hits.push(e); break; }
+      }
+    }
+    for (i = 0; i < hits.length; i++) if (hits[i].slot === "special") return hits[i];
+    return null;
+  }
+  function aiForPage(ed) {
+    var a = (ed && ed.ai) || {};
+    var src = aiSource(ed);
+    if (!src || src.slot !== "special" || !a.asof || typeof a.asof !== "object") return a;
+    var heName = SLOT.special[0][0], enName = SLOT.special[0][1];
+    var asof = {};
+    for (var k in a.asof) asof[k] = a.asof[k];
+    // The chip name stands alone. "· בוקר בישראל" → "· מיוחדת".
+    // A clock keeps the zone after the time: "· בוקר, 09:00 בישראל" → "· מיוחדת, 09:00 בישראל".
+    if (typeof asof.he === "string" && asof.he.indexOf(heName) < 0) asof.he = asof.he.replace(/·(\s*)בוקר(?:\s+בישראל)?/g, "·$1" + heName);
+    if (typeof asof.en === "string" && asof.en.toLowerCase().indexOf(enName.toLowerCase()) < 0) asof.en = asof.en.replace(/·(\s*)(?:Israel\s+)?morning\b/gi, "·$1" + enName);
+    var copy = {};
+    for (var key in a) copy[key] = a[key];
+    copy.asof = asof;
+    return copy;
+  }
   function aiSection(ed) {
-    var a = ed.ai || {};
+    var a = aiForPage(ed);
     var st = list(a.stories);
     var sec = h("section", { class: "page page-ai", id: "ai", "aria-labelledby": "ai-h" }, [sectionHead(ui("ai"), a, "ai-h")]);
     notes(a).forEach(function (x) { sec.appendChild(x); });
