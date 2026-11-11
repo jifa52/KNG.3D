@@ -171,6 +171,7 @@ bdi.n, .n, bdi.lat, .lat { font-variant-numeric: tabular-nums lining-nums; unico
   padding-inline-start: 0.34em; /* balances the tracking after the last letter */
 }
 .lk-tag::before, .lk-tag::after { content: ""; flex: 1 1 0; height: 1px; background: currentColor; opacity: 0.8; }
+.lk-tag[lang="he"] { letter-spacing: 0.08em; text-transform: none; padding-inline-start: 0.08em; }
 .mast-compact .lk-emblem { height: clamp(52px, 5vw, 72px); }
 .mast-compact .lk-word { width: clamp(200px, 18vw, 260px); }
 .ear { display: flex; flex-direction: column; gap: 2px; font-size: 13px; line-height: 1.4; color: color-mix(in srgb, var(--on-band) 74%, transparent); }
@@ -618,9 +619,7 @@ html[dir="rtl"] .chip-px { justify-content: flex-end; }
   .foot-nav { grid-template-columns: 1fr 1fr; }
   .pn-archive { grid-column: 1 / -1; grid-row: 2; }
   .search { margin-inline-start: 0; width: 100%; }
-}
-
-@media (max-width: 480px) {
+  /* Ears are hidden from here down. One status line under the logo, including 481–759. */
   .mast-phone {
     display: flex;
     justify-content: center;
