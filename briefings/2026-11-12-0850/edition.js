@@ -275,8 +275,8 @@ DJ.edition({
     },
     "facts": [
      {
-      "he": "הוועדה החליטה ברוב של <bdi>13</bdi> מול <bdi>9</bdi> למנות את אביגדור ליברמן ליו״ר זמני של ועדת החוץ והביטחון ואת לירן אביסר בן-חורין (ביחד) ליו״ר ועדת הכספים; האישור הסופי במליאה ביום רביעי הבא.",
-      "en": "The committee then voted <bdi>13–9</bdi> to name Avigdor Liberman temporary chair of Foreign Affairs and Defense and Liran Avisar Ben-Horin chair of Finance, pending plenum approval next Wednesday."
+      "he": "הוועדה החליטה ברוב של <bdi>13</bdi> מול <bdi>9</bdi> למנות את אביגדור ליברמן ליו״ר זמני של ועדת החוץ והביטחון ואת לירן אביסר בן-חורין (ביחד) ליו״ר ועדת הכספים; ההצבעה הסופית במליאה נדחתה ליום שני (לפי ג׳רוזלם פוסט).",
+      "en": "The committee then voted <bdi>13–9</bdi> to name Avigdor Liberman temporary chair of Foreign Affairs and Defense and Liran Avisar Ben-Horin chair of Finance, pending a final plenum vote now moved to Monday (per The Jerusalem Post)."
      },
      {
       "he": "בבורסה ירד ת״א 35 ב־<bdi>1.02%</bdi> ות״א 125 ב־<bdi>0.64%</bdi>, בהובלת הבנקים אחרי דוחות, והשער היציג של הדולר עלה ב־<bdi>0.35%</bdi> ל־<bdi>3.172</bdi> שקלים.",
