@@ -536,8 +536,8 @@ DJ.edition({
   "carried": false,
   "story": [
    {
-    "he": "החוזים בארה״ב מעורבים עד שליליים, וחוזה הנאסד״ק־<bdi>100</bdi> יורד בכ־<bdi>1%</bdi> כשסיפור ההנהגה באנבידיה מוחק חלק מעליית השבבים של יום רביעי. תשואות האג״ח קרובות ל־<bdi>5%</bdi>, והעלאת ריבית של רבע נקודה בדצמבר מתומחרת ב־<bdi>91%</bdi>. דוח התביעות היום ומכירת האג״ח ל־<bdi>30</bdi> שנה הערב הם המבחנים הבאים, והנפט נחלש מעט למרות טענה לא מאומתת על השבתת מכליות בהורמוז.",
-    "en": "US futures are mixed to lower, and the Nasdaq-<bdi>100</bdi> future is down about <bdi>1%</bdi> as the Nvidia leadership story reverses part of Wednesday's chip rally. Treasury yields sit near <bdi>5%</bdi>, and a quarter-point rate hike in December is priced at <bdi>91%</bdi>. Today's jobless-claims release and tonight's <bdi>30</bdi>-year auction are the next tests, and oil is slightly lower despite an unconfirmed claim that tankers were disabled in Hormuz."
+    "he": "החוזים בארה״ב מעורבים עד שליליים, וחוזה הנאסד״ק־<bdi>100</bdi> יורד בכ־<bdi>1%</bdi> כשסיפור ההנהגה באנבידיה מוחק חלק מעליית השבבים של יום רביעי. תשואות האג״ח קרובות ל־<bdi>5%</bdi>, והעלאת ריבית של רבע נקודה בדצמבר מתומחרת ב־<bdi>91%</bdi>. התביעות הראשוניות עלו ל־<bdi>200</bdi> אלף מול צפי של <bdi>195</bdi> אלף (פורסם ב־<bdi>15:30</bdi> בישראל) — סימן קל להתרופפות בשוק העבודה; מכירת האג״ח ל־<bdi>30</bdi> שנה הערב היא המבחן הבא, והנפט נחלש מעט למרות טענה לא מאומתת על השבתת מכליות בהורמוז.",
+    "en": "US futures are mixed to lower, and the Nasdaq-<bdi>100</bdi> future is down about <bdi>1%</bdi> as the Nvidia leadership story reverses part of Wednesday's chip rally. Treasury yields sit near <bdi>5%</bdi>, and a quarter-point rate hike in December is priced at <bdi>91%</bdi>. Initial claims came in at <bdi>200,000</bdi> versus <bdi>195,000</bdi> expected (released <bdi>15:30</bdi> Israel), a mild loosening signal in the labor market; tonight's <bdi>30</bdi>-year auction is the next test, and oil is slightly lower despite an unconfirmed claim that tankers were disabled in Hormuz."
    }
   ],
   "note": [
@@ -766,8 +766,8 @@ DJ.edition({
      }
     ],
     "why": {
-     "he": "עם שוק אג״ח פתוח שוב, דוח התביעות היום והמכירה הפומבית הערב הם המבחן הבא להעלאה שהשוק כבר מתמחר כמעט במלואה.",
-     "en": "With the bond market open again, today's claims release and tonight's auction are the next test of a hike the market has almost fully priced."
+     "he": "עם שוק אג״ח פתוח שוב, התביעות הראשוניות עלו ל־<bdi>200</bdi> אלף מול <bdi>195</bdi> אלף שהצפי (פורסם ב־<bdi>15:30</bdi> בישראל) — סימן קל להתרופפות בשוק העבודה אחרי קריאה נמוכה בשבוע שעבר, והשוק שוקל זאת מול העלאה שכבר מתומחרת כמעט במלואה. המכירה הפומבית של אג״ח ל־<bdi>30</bdi> שנה הערב היא המבחן הבא.",
+     "en": "With the bond market open again, initial claims came in at <bdi>200,000</bdi> versus <bdi>195,000</bdi> expected (released <bdi>15:30</bdi> Israel) — a mild loosening signal in the labor market after last week's low reading, which traders weigh against a hike the market has almost fully priced. Tonight's <bdi>30</bdi>-year auction is the next test."
     },
     "flags": [
      {
@@ -1500,14 +1500,17 @@ DJ.edition({
      "date": "2026-11-12",
      "time": "15:30",
      "et": "08:30",
-     "status": "unavailable",
      "label": {
       "he": "תביעות דמי אבטלה שבועיות בארה״ב",
       "en": "US weekly jobless claims"
      },
      "detail": {
-      "he": "קונצנזוס <bdi>195</bdi> אלף, והנתון הקודם <bdi>189</bdi> אלף. הדוח כבר אמור היה להתפרסם; המספר עצמו אינו במהדורה הזו.",
-      "en": "Consensus <bdi>195,000</bdi>, prior <bdi>189,000</bdi>. The release is already due; the figure itself is not in this edition."
+      "he": "בפועל: <bdi>200</bdi> אלף מול צפי <bdi>195</bdi> אלף (מתואם עונתית, שבוע עד <bdi>7</bdi> בנובמבר). הקודם עודכן מ־<bdi>189</bdi> אלף ל־<bdi>191</bdi> אלף; ממוצע ארבעה שבועות <bdi>195,250</bdi>. תביעות מתמשכות <bdi>1,697,000</bdi> (עד <bdi>31</bdi> באוקטובר; הקודם עודכן מ־<bdi>1,718,000</bdi> ל־<bdi>1,717,000</bdi>), ושיעור האבטלה המבוטחת <bdi>1.1%</bdi>. מקור: משרד העבודה האמריקאי (DOL).",
+      "en": "Actual: <bdi>200,000</bdi> versus <bdi>195,000</bdi> expected (seasonally adjusted, week ending <bdi>7</bdi> November). Prior revised from <bdi>189,000</bdi> to <bdi>191,000</bdi>; four-week average <bdi>195,250</bdi>. Continuing claims <bdi>1,697,000</bdi> (week to <bdi>31</bdi> October; prior revised from <bdi>1,718,000</bdi> to <bdi>1,717,000</bdi>), insured unemployment rate <bdi>1.1%</bdi>. Source: US Department of Labor (DOL)."
+     },
+     "result": {
+      "he": "בפועל <bdi>200</bdi> אלף (צפי <bdi>195</bdi> אלף); הקודם <bdi>191</bdi> אלף אחרי עדכון. תביעות מתמשכות <bdi>1,697,000</bdi>. <a href=\"https://www.dol.gov/ui/data.pdf\">DOL / USDL 26-1694-NAT</a>.",
+      "en": "Actual <bdi>200,000</bdi> (vs <bdi>195,000</bdi> expected); prior revised to <bdi>191,000</bdi>. Continuing claims <bdi>1,697,000</bdi>. <a href=\"https://www.dol.gov/ui/data.pdf\">DOL / USDL 26-1694-NAT</a>."
      }
     },
     {
