@@ -1535,8 +1535,12 @@ DJ.edition({
       "en": "US existing-home sales, October"
      },
      "detail": {
-      "he": "קונצנזוס <bdi>3.84</bdi> מיליון לפי סקר הוול סטריט ג׳ורנל; המקורות חלוקים. הנתון הקודם <bdi>3.99</bdi> מיליון.",
-      "en": "Consensus <bdi>3.84</bdi> million on a Wall Street Journal survey; sources differ. Prior <bdi>3.99</bdi> million."
+      "he": "בפועל: <bdi>3.75</bdi> מיליון, קצב שנתי מתואם עונתית, ירידה של <bdi>5.5%</bdi> בחודש — הרמה הנמוכה ביותר מאז אוגוסט <bdi>2010</bdi>. הקונצנזוס בסקר הוול סטריט ג׳ורנל ו־Dow Jones היה <bdi>3.84</bdi> מיליון (ירידה של <bdi>3.8%</bdi> בחודש). הקודם, ספטמבר, <bdi>3.99</bdi> מיליון (NAR). פורסם ב־<bdi>17:00</bdi> בישראל (<bdi>10:00 ET</bdi>). נתון הדיור החלש יותר מוסיף לטיעון בעד הורדת ריבית של הפד. מקור: NAR ו־AP.",
+      "en": "Actual: <bdi>3.75</bdi> million, seasonally adjusted annual rate, down <bdi>5.5%</bdi> on the month — the lowest since August <bdi>2010</bdi>. The Wall Street Journal / Dow Jones survey consensus was <bdi>3.84</bdi> million (down <bdi>3.8%</bdi> on the month). Prior, September, was <bdi>3.99</bdi> million (NAR). Released at <bdi>17:00</bdi> Israel (<bdi>10:00 ET</bdi>). The weaker housing data adds to the case for a Fed cut. Source: NAR and AP."
+     },
+     "result": {
+      "he": "בפועל <bdi>3.75</bdi> מיליון (קצב שנתי מתואם עונתית), ירידה של <bdi>5.5%</bdi> בחודש, הרמה הנמוכה ביותר מאז אוגוסט <bdi>2010</bdi>. צפי <bdi>3.84</bdi> מיליון (ירידה של <bdi>3.8%</bdi> בחודש, סקר הוול סטריט ג׳ורנל ו־Dow Jones). הקודם <bdi>3.99</bdi> מיליון (ספטמבר). פורסם ב־<bdi>17:00</bdi> בישראל. <a href=\"https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales\">NAR</a> · <a href=\"https://apnews.com/article/home-sales-real-estate-economy-mortgages-inflation-housing-dbd54bc897a443dc0fc9668911977864\">AP</a>.",
+      "en": "Actual <bdi>3.75</bdi> million, seasonally adjusted annual rate, down <bdi>5.5%</bdi> on the month, the lowest since August <bdi>2010</bdi>. Consensus <bdi>3.84</bdi> million (down <bdi>3.8%</bdi> on the month, Wall Street Journal / Dow Jones survey). Prior <bdi>3.99</bdi> million (September). Released <bdi>17:00</bdi> Israel. <a href=\"https://www.nar.realtor/research-and-statistics/housing-statistics/existing-home-sales\">NAR</a> · <a href=\"https://apnews.com/article/home-sales-real-estate-economy-mortgages-inflation-housing-dbd54bc897a443dc0fc9668911977864\">AP</a>."
      }
     },
     {
