@@ -7,12 +7,12 @@ DJ.edition(
  "et": "08:45",
  "slot": "markets",
  "headline": {
-  "he": "החוזים בארה״ב כמעט ללא שינוי לקראת מדד המחירים ליצרן, האחרון לפני הפד בדצמבר; עשר השנים ב־<bdi>5.10%</bdi>",
-  "en": "US futures are nearly flat ahead of the producer-price print, the last inflation reading before the December Fed meeting, with the <bdi>10</bdi>-year at <bdi>5.10%</bdi>"
+  "he": "החוזים בארה״ב כמעט ללא שינוי; מדד המחירים ליצרן <bdi>+0.3%</bdi> מול צפי <bdi>+0.4%</bdi>, האחרון לפני הפד בדצמבר; עשר השנים ב־<bdi>5.10%</bdi>",
+  "en": "US futures are nearly flat; PPI <bdi>+0.3%</bdi> versus <bdi>+0.4%</bdi> expected, the last inflation reading before the December Fed meeting, with the <bdi>10</bdi>-year at <bdi>5.10%</bdi>"
  },
  "summary": {
-  "he": "החוזים בארה״ב כמעט ללא שינוי לקראת מדד המחירים ליצרן, נתון האינפלציה האחרון לפני ישיבת הפד בדצמבר, ותשואת עשר השנים ב־<bdi>5.10%</bdi> אחרי מכירה חלשה של אג״ח ל־<bdi>30</bdi> שנה. אנבידיה עולה לפני הפתיחה אך בדרך לשבוע השישי של ירידות.",
-  "en": "US futures are nearly flat ahead of the producer-price print, the last inflation reading before the December Fed meeting, with the <bdi>10</bdi>-year at <bdi>5.10%</bdi> after a weak <bdi>30</bdi>-year auction. Nvidia is higher before the open but heading for a sixth weekly loss."
+  "he": "החוזים בארה״ב כמעט ללא שינוי; מדד המחירים ליצרן <bdi>+0.3%</bdi> מול צפי <bdi>+0.4%</bdi>, נתון האינפלציה האחרון לפני ישיבת הפד בדצמבר, ותשואת עשר השנים ב־<bdi>5.10%</bdi> אחרי מכירה חלשה של אג״ח ל־<bdi>30</bdi> שנה. אנבידיה עולה לפני הפתיחה אך בדרך לשבוע השישי של ירידות.",
+  "en": "US futures are nearly flat; PPI <bdi>+0.3%</bdi> versus <bdi>+0.4%</bdi> expected, the last inflation reading before the December Fed meeting, with the <bdi>10</bdi>-year at <bdi>5.10%</bdi> after a weak <bdi>30</bdi>-year auction. Nvidia is higher before the open but heading for a sixth weekly loss."
  },
  "clock": {
   "he": "שעת המהדורה <bdi>15:45</bdi> בישראל (<bdi>08:45 ET</bdi>)",
@@ -577,8 +577,8 @@ DJ.edition(
   "carried": false,
   "story": [
    {
-    "he": "חוזי המניות בארה״ב כמעט ללא שינוי אחרי הירידה של יום חמישי בהובלת אנבידיה: חוזה ה־S&amp;P <bdi>500</bdi> עלה <bdi>0.23%</bdi> וחוזה הנאסד״ק־<bdi>100</bdi> עלה <bdi>0.09%</bdi>. תשואת עשר השנים ננעלה ביום חמישי ב־<bdi>5.10%</bdi>, שיא של כמה שבועות, אחרי מכירה חלשה של אג״ח ל־<bdi>30</bdi> שנה. מדד המחירים ליצרן ב־<bdi>15:30</bdi> הוא נתון האינפלציה האחרון לפני ישיבת הפד ב־<bdi>8–9</bdi> בדצמבר; הציטוטים כאן נלקחו לפני הפרסום, והמספר עצמו יתווסף בעדכון.",
-    "en": "US equity futures are nearly flat after Thursday's Nvidia-led slide: the S&amp;P <bdi>500</bdi> future is up <bdi>0.23%</bdi> and the Nasdaq-<bdi>100</bdi> future is up <bdi>0.09%</bdi>. The <bdi>10</bdi>-year yield closed Thursday at <bdi>5.10%</bdi>, a multi-week high, after a weak <bdi>30</bdi>-year auction. The producer-price index at <bdi>15:30</bdi> Israel is the last inflation print before the <bdi>8–9</bdi> December Fed meeting; these quotes were taken before the release, and the figure itself will be added in an update."
+    "he": "חוזי המניות בארה״ב כמעט ללא שינוי אחרי הירידה של יום חמישי בהובלת אנבידיה: חוזה ה־S&amp;P <bdi>500</bdi> עלה <bdi>0.23%</bdi> וחוזה הנאסד״ק־<bdi>100</bdi> עלה <bdi>0.09%</bdi>. תשואת עשר השנים ננעלה ביום חמישי ב־<bdi>5.10%</bdi>, שיא של כמה שבועות, אחרי מכירה חלשה של אג״ח ל־<bdi>30</bdi> שנה. מדד המחירים ליצרן ב־<bdi>15:30</bdi> עלה <bdi>+0.3%</bdi> בחודש מול צפי <bdi>+0.4%</bdi>, והוא היה נתון האינפלציה האחרון לפני ישיבת הפד ב־<bdi>8–9</bdi> בדצמבר; הציטוטים כאן נלקחו לפני הפרסום.",
+    "en": "US equity futures are nearly flat after Thursday's Nvidia-led slide: the S&amp;P <bdi>500</bdi> future is up <bdi>0.23%</bdi> and the Nasdaq-<bdi>100</bdi> future is up <bdi>0.09%</bdi>. The <bdi>10</bdi>-year yield closed Thursday at <bdi>5.10%</bdi>, a multi-week high, after a weak <bdi>30</bdi>-year auction. The producer-price index at <bdi>15:30</bdi> Israel was <bdi>+0.3%</bdi> on the month versus <bdi>+0.4%</bdi> expected, the last inflation print before the <bdi>8–9</bdi> December Fed meeting; these quotes were taken before the release."
    }
   ],
   "note": [
@@ -697,17 +697,21 @@ DJ.edition(
      "en": "Rates"
     },
     "headline": {
-     "he": "מדד המחירים ליצרן פורסם; המספר יתווסף בעדכון, והאג״ח כבר מתמחר העלאה",
-     "en": "The producer-price index is out; the figure will be added in an update, and bonds already price a hike"
+     "he": "מדד המחירים ליצרן: <bdi>+0.3%</bdi> בחודש, מתחת לצפי; <bdi>+6.5%</bdi> בשנה",
+     "en": "PPI: <bdi>+0.3%</bdi> on the month, below the <bdi>+0.4%</bdi> forecast; <bdi>+6.5%</bdi> year over year"
     },
     "bottom": {
-     "he": "מדד המחירים ליצרן לאוקטובר פורסם ב־<bdi>15:30</bdi> בישראל, והמספר יתווסף בעדכון. הקונצנזוס היה <bdi>+0.4%</bdi> בחודש ובסיס <bdi>+0.3%</bdi>, ותשואת עשר השנים ננעלה ביום חמישי ב־<bdi>5.10%</bdi> אחרי מכירה חלשה של אג״ח ל־<bdi>30</bdi> שנה.",
-     "en": "October's producer-price index was released at <bdi>15:30</bdi> Israel, and the figure will be added in an update. Consensus was <bdi>+0.4%</bdi> on the month and <bdi>+0.3%</bdi> for the core, and the <bdi>10</bdi>-year yield closed Thursday at <bdi>5.10%</bdi> after a weak <bdi>30</bdi>-year auction."
+     "he": "מדד המחירים ליצרן לאוקטובר <bdi>2026</bdi>, לפי הלשכה לסטטיסטיקה של העבודה (BLS): ביקוש סופי <bdi>+0.3%</bdi> בחודש מול צפי <bdi>+0.4%</bdi>, ו־<bdi>+6.5%</bdi> בשנה מול צפי <bdi>6.6%</bdi>; ספטמבר עודכן מ־<bdi>+1.3%</bdi> ל־<bdi>+1.4%</bdi>. הנתון מעט מתחת לצפי ומקל במעט על החשש מהעלאה בדצמבר, אבל העדכון מעלה משאיר את הלחץ בשרשרת המחירים גבוה.",
+     "en": "October <bdi>2026</bdi> producer prices, from the Bureau of Labor Statistics (BLS): final demand <bdi>+0.3%</bdi> on the month versus <bdi>+0.4%</bdi> expected, and <bdi>+6.5%</bdi> year over year versus <bdi>6.6%</bdi>; September was revised from <bdi>+1.3%</bdi> to <bdi>+1.4%</bdi>. The print is slightly below consensus, which eases December-hike worries a little, but the upward revision means pipeline pressure remains high."
     },
     "facts": [
      {
-      "he": "הקונצנזוס לאוקטובר הוא <bdi>+0.4%</bdi> בחודש ובסיס (בלי מזון ואנרגיה) <bdi>+0.3%</bdi>, אחרי <bdi>+1.3%</bdi> בספטמבר שנדחף מעלייה של <bdi>10.8%</bdi> במחירי האנרגיה (Bloomberg דרך GGMA; נתון ספטמבר דרך BLS).",
-      "en": "October's consensus is <bdi>+0.4%</bdi> on the month and <bdi>+0.3%</bdi> for the core, excluding food and energy, after September's <bdi>+1.3%</bdi>, which was pushed by a <bdi>10.8%</bdi> jump in energy prices (Bloomberg via GGMA; the September figure via BLS)."
+      "he": "הביקוש הסופי עלה <bdi>+0.3%</bdi> בחודש מול קונצנזוס של <bdi>+0.4%</bdi>, ו־<bdi>+6.5%</bdi> בשנה מול צפי <bdi>6.6%</bdi>. ספטמבר עודכן מ־<bdi>+1.3%</bdi> ל־<bdi>+1.4%</bdi>.",
+      "en": "Final demand rose <bdi>+0.3%</bdi> on the month against a <bdi>+0.4%</bdi> consensus, and <bdi>+6.5%</bdi> year over year against <bdi>6.6%</bdi> expected. September was revised from <bdi>+1.3%</bdi> to <bdi>+1.4%</bdi>."
+     },
+     {
+      "he": "הביקוש הסופי בלי מזון, אנרגיה וסחר עלה <bdi>+0.5%</bdi> בחודש, כמו בספטמבר, ו־<bdi>+4.9%</bdi> בשנה. ברכיבים: סחורות <bdi>+0.5%</bdi>, שירותים <bdi>+0.2%</bdi>, אנרגיה <bdi>−0.1%</bdi>, מזון <bdi>+1.3%</bdi>.",
+      "en": "Final demand less foods, energy and trade rose <bdi>+0.5%</bdi> on the month, the same as September, and <bdi>+4.9%</bdi> year over year. Goods <bdi>+0.5%</bdi>, services <bdi>+0.2%</bdi>, energy <bdi>−0.1%</bdi>, and foods <bdi>+1.3%</bdi>."
      },
      {
       "he": "האג״ח החדשה ל־<bdi>30</bdi> שנה נמכרה ביום חמישי בתשואה של <bdi>5.441%</bdi>, הגבוהה ביותר במכירה ראשונה של אג״ח חדשה ל־<bdi>30</bdi> שנה מאז פברואר <bdi>2001</bdi>. יחס הכיסוי היה <bdi>2.36</bdi> מול ממוצע של <bdi>2.44</bdi> בשש המכירות הקודמות (TreasuryDirect דרך Capital Finance Bureau). תשואת עשר השנים ננעלה ב־<bdi>5.10%</bdi>.",
@@ -719,23 +723,23 @@ DJ.edition(
      }
     ],
     "why": {
-     "he": "נתון חם מהצפי מחליש את הסיכוי להורדת ריבית ומחזק את הסיכוי להעלאה בדצמבר; נתון חלש מהצפי עושה את ההפך. זה נתון האינפלציה האחרון לפני הישיבה ב־<bdi>8–9</bdi> בדצמבר.",
-     "en": "A hotter-than-expected print weakens the case for rate cuts and strengthens the case for a December hike; a softer print does the opposite. This is the last inflation reading before the <bdi>8–9</bdi> December meeting."
+     "he": "נתון מעט מתחת לצפי מקל במעט על החשש מהעלאת ריבית בדצמבר, אבל עדכון ספטמבר ל־<bdi>+1.4%</bdi> משאיר את הלחץ בשרשרת המחירים גבוה. זה היה נתון האינפלציה האחרון לפני ישיבת הפד ב־<bdi>8–9</bdi> בדצמבר.",
+     "en": "A slightly below-consensus print eases December-hike worries a little, but the September revision to <bdi>+1.4%</bdi> keeps pipeline pressure high. This was the last inflation print before the <bdi>8–9</bdi> December meeting."
     },
     "flags": [
      {
-      "he": "הלוח במהדורה הזו נלקח לפני הפרסום, ואין בו תגובה למספר.",
-      "en": "The board in this edition was taken before the release, and it does not show a reaction to the figure."
+      "he": "הליבה בלי מזון ואנרגיה לא אומתה בעמוד הסיכום של BLS. ציטוטי הלוח נשארו שלפני הפרסום, כי לא נלכד שער חוזים בדקה הראשונה.",
+      "en": "Core ex food and energy was not verified on the BLS summary. Board quotes remain pre-print, because no first-minute futures tick was captured."
      },
      {
       "he": "הסיכויים להעלאה הם נתונים ממקורות משניים, לא מבורסת החוזים, והם נבדלים בין המקורות.",
       "en": "The hike odds are secondary-source figures, not a futures-exchange print, and the sources differ."
      }
     ],
-    "confidence": "likely",
+    "confidence": "confirmed",
     "source": {
-     "he": "GGMA ו־Capital Finance Bureau",
-     "en": "GGMA and Capital Finance Bureau"
+     "he": "מדד המחירים ליצרן של הלשכה לסטטיסטיקה של העבודה (BLS, <bdi>USDL-26-1687</bdi>) · <bdi>13</bdi> בנובמבר <bdi>2026</bdi>, וגם GGMA ו־Capital Finance Bureau",
+     "en": "BLS Producer Price Index (USDL-26-1687) · Nov 13, 2026, plus GGMA and Capital Finance Bureau"
     },
     "time": "15:30",
     "date": {
@@ -743,6 +747,13 @@ DJ.edition(
      "en": "<bdi>13</bdi> November"
     },
     "links": [
+     {
+      "label": {
+       "he": "BLS",
+       "en": "BLS"
+      },
+      "url": "https://www.bls.gov/news.release/ppi.nr0.htm"
+     },
      {
       "label": {
        "he": "GGMA",
@@ -1398,12 +1409,12 @@ DJ.edition(
       "en": "US producer-price index, October"
      },
      "detail": {
-      "he": "קונצנזוס: <bdi>+0.4%</bdi> בחודש, בסיס (בלי מזון ואנרגיה) <bdi>+0.3%</bdi>. ספטמבר: <bdi>+1.3%</bdi> בחודש, בסיס <bdi>+0.7%</bdi>, ומחירי האנרגיה עלו <bdi>10.8%</bdi>.",
-      "en": "Consensus: <bdi>+0.4%</bdi> on the month, core (excluding food and energy) <bdi>+0.3%</bdi>. September: <bdi>+1.3%</bdi> on the month, core <bdi>+0.7%</bdi>, with energy prices up <bdi>10.8%</bdi>."
+      "he": "בפועל: ביקוש סופי <bdi>+0.3%</bdi> בחודש (צפי <bdi>+0.4%</bdi>), <bdi>+6.5%</bdi> בשנה (צפי <bdi>6.6%</bdi>); ספטמבר עודכן ל־<bdi>+1.4%</bdi>. בלי מזון, אנרגיה וסחר: <bdi>+0.5%</bdi> בחודש, <bdi>+4.9%</bdi> בשנה. ליבה בלי מזון ואנרגיה: לא אומת. מקור: הלשכה לסטטיסטיקה של העבודה (BLS).",
+      "en": "Actual: final demand <bdi>+0.3%</bdi> on the month (vs <bdi>+0.4%</bdi> expected), <bdi>+6.5%</bdi> year over year (vs <bdi>6.6%</bdi>); September revised to <bdi>+1.4%</bdi>. Less foods, energy and trade: <bdi>+0.5%</bdi> m/m, <bdi>+4.9%</bdi> y/y. Core ex food and energy: not verified. Source: Bureau of Labor Statistics (BLS)."
      },
      "result": {
-      "he": "פורסם; הנתון יתווסף בעדכון.",
-      "en": "Released; the figure will be added in an update."
+      "he": "בפועל: ביקוש סופי <bdi>+0.3%</bdi> בחודש (צפי <bdi>+0.4%</bdi>), <bdi>+6.5%</bdi> בשנה (צפי <bdi>6.6%</bdi>); ספטמבר עודכן ל־<bdi>+1.4%</bdi>. בלי מזון, אנרגיה וסחר: <bdi>+0.5%</bdi> בחודש, <bdi>+4.9%</bdi> בשנה. ליבה בלי מזון ואנרגיה: לא אומת. <a href=\"https://www.bls.gov/news.release/ppi.nr0.htm\">BLS, USDL-26-1687</a>.",
+      "en": "Actual: final demand <bdi>+0.3%</bdi> on the month (vs <bdi>+0.4%</bdi> expected), <bdi>+6.5%</bdi> year over year (vs <bdi>6.6%</bdi>); September revised to <bdi>+1.4%</bdi>. Less foods, energy and trade: <bdi>+0.5%</bdi> m/m, <bdi>+4.9%</bdi> y/y. Core ex food and energy: not verified. <a href=\"https://www.bls.gov/news.release/ppi.nr0.htm\">BLS, USDL-26-1687</a>."
      }
     },
     {
