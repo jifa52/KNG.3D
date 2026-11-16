@@ -1,0 +1,1858 @@
+DJ.edition({
+ "v": 2,
+ "id": "2026-11-16-1400",
+ "date": "2026-11-16",
+ "time": "14:00",
+ "et": "07:00",
+ "slot": "midday",
+ "summary": {
+  "he": "מניית אנבידיה ירדה שוב לפני הדוחות, ואינדונזיה פשטה על סניף של Megaspeed לבקשת ה־FBI. סוכנות הביטחון הימי הבריטית אישרה פגיעה במכלית שנייה ביציאה ממצר הורמוז.",
+  "en": "Nvidia shares fell again before earnings, and Indonesia raided a Megaspeed unit at the FBI's request. Britain's maritime agency confirmed a second tanker was struck leaving the Strait of Hormuz."
+ },
+ "clock": {
+  "he": "שעת המהדורה <bdi>14:00</bdi> בישראל (<bdi>07:00 ET</bdi>)",
+  "en": "Edition time <bdi>14:00</bdi> Israel (<bdi>07:00 ET</bdi>)"
+ },
+ "credits": "IMAGE-CREDITS.md",
+ "news": {
+  "asof": {
+   "he": "יום שני <bdi>16</bdi> בנובמבר · צהריים בישראל",
+   "en": "Monday 16 November · Israel midday"
+  },
+  "carried": false,
+  "stories": [
+   {
+    "kicker": {
+     "he": "שבבים",
+     "en": "Chips"
+    },
+    "headline": {
+     "he": "מניית אנבידיה ממשיכה לרדת לפני הדוחות; אינדונזיה פשטה על סניף של Megaspeed לבקשת ה־FBI",
+     "en": "Nvidia shares fall again before earnings; Indonesia raided a Megaspeed unit at the FBI's request"
+    },
+    "bottom": {
+     "he": "מניית אנבידיה ירדה ביום שני בכ־<bdi>2.2%</bdi> במסחר המוקדם, אחרי רצף השבועות היורדים הארוך שלה מאז <bdi>2012</bdi>, ו־UBS ומיזוהו הורידו את מחיר היעד שלה.",
+     "en": "Nvidia shares fell about <bdi>2.2%</bdi> in pre-market trading on Monday after the stock's longest weekly losing streak since <bdi>2012</bdi>, and UBS and Mizuho trimmed their price targets."
+    },
+    "facts": [
+     {
+      "he": "החוזים על נאסד״ק ירדו גם הם לקראת הדוחות של החברה ביום שלישי.",
+      "en": "Nasdaq futures also slipped ahead of Nvidia's results on Tuesday."
+     },
+     {
+      "he": "זאת יום אחרי ששר האוצר סקוט בסנט קרא ל״טלטלה דרמטית״ ולמנכ״ל מבחוץ.",
+      "en": "That came a day after Treasury Secretary Scott Bessent called for a \"dramatic shakeup\" and an outside CEO."
+     },
+     {
+      "he": "לפי הסטרייטס טיימס, משטרת אינדונזיה פשטה על הסניף המקומי של Megaspeed, חברת הענן מסינגפור שבמרכז חקירת הייצוא, בחקירה שביקש ה־FBI, ומצאה ארונות שרתים סגורים אך לא שבבים.",
+      "en": "Indonesian police raided the local unit of Megaspeed, the Singapore cloud firm at the centre of the export probe, in an inquiry requested by the FBI, finding unopened server racks but no chips, the Straits Times reported."
+     },
+     {
+      "he": "סינגפור וארה״ב סיכמו להמשיך לדון בתיק, ו־Megaspeed טוענת שהיא פועלת כחוק.",
+      "en": "Singapore and the US agreed to keep discussing the case; Megaspeed says its business is lawful."
+     }
+    ],
+    "why": {
+     "he": "החקירה סביב ערוץ המכירות של אנבידיה באסיה מתרחבת למדינה נוספת יום לפני הדוחות, ומכבידה על מניות השבבים וה־AI.",
+     "en": "The probe into Nvidia's Asian sales channel is spreading to another country a day before earnings, weighing on chip and AI stocks."
+    },
+    "flags": [
+     {
+      "he": "הפשיטה באינדונזיה, מה שנמצא בסניף, וההסכמה להמשיך לדון בתיק הן דיווח של הסטרייטס טיימס לפי מקור ממשלתי אינדונזי שלא נמסר שמו, כפי שמסר רויטרס.",
+      "en": "The Indonesia raid, what was found at the unit, and the agreement to keep discussing the case are the Straits Times's account, citing an unnamed Indonesian government source, as relayed by Reuters."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "CNBC ורויטרס",
+     "en": "CNBC and Reuters"
+    },
+    "date": {
+     "he": "<bdi>16</bdi> בנובמבר",
+     "en": "<bdi>16</bdi> November"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "CNBC · <bdi>16.11.2026</bdi>",
+       "en": "CNBC · Nov 16 2026"
+      },
+      "url": "https://www.cnbc.com/2026/11/16/nvidia-stock-price-jensen-huang.html"
+     },
+     {
+      "label": {
+       "he": "רויטרס (Investing.com) · <bdi>16.11.2026</bdi>",
+       "en": "Reuters (Investing.com) · Nov 16 2026"
+      },
+      "url": "https://www.investing.com/news/stock-market-news/singapore-us-agree-to-continue-discussing-megaspeed-case-straits-times-says-5028754"
+     },
+     {
+      "label": {
+       "he": "רויטרס (Investing.com) · <bdi>16.11.2026</bdi>",
+       "en": "Reuters (Investing.com) · Nov 16 2026"
+      },
+      "url": "https://www.investing.com/news/economy-news/sp-500-nasdaq-futures-slide-as-nvidia-earnings-anthropic-debut-loom-5028900"
+     },
+     {
+      "label": {
+       "he": "CNBC · <bdi>15.11.2026</bdi>",
+       "en": "CNBC · Nov 15 2026"
+      },
+      "url": "https://www.cnbc.com/2026/11/15/bessent-nvidia-ceo-lutnick-megaspeed.html"
+     }
+    ],
+    "image": {
+     "src": "assets/images/nvidia-hq-1920.jpg",
+     "srcset": "assets/images/nvidia-hq-960.jpg 960w, assets/images/nvidia-hq-1920.jpg 1920w",
+     "w": 1920,
+     "h": 1175,
+     "alt": {
+      "he": "חזית מטה אנבידיה בסנטה קלרה",
+      "en": "The exterior of Nvidia headquarters in Santa Clara"
+     },
+     "year": 2018,
+     "caption": {
+      "he": "מטה אנבידיה בסנטה קלרה",
+      "en": "Nvidia headquarters in Santa Clara"
+     },
+     "credit": "Coolcaesar",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "הורמוז",
+     "en": "Hormuz"
+    },
+    "headline": {
+     "he": "סוכנות הביטחון הימי הבריטית מאשרת: מכלית שנייה נפגעה, הפעם ביציאה ממצר הורמוז; איראן טוענת לפגיעת מוקש שלישית",
+     "en": "UKMTO confirms a second tanker struck, this time leaving the Strait of Hormuz; Iran claims a third mine hit"
+    },
+    "bottom": {
+     "he": "סוכנות הביטחון הימי הבריטית (UKMTO) אישרה שמכלית נפגעה ביום שני בסביבות <bdi>08:00</bdi> (שעון ישראל) מקליע לא מזוהה בזמן שיצאה ממצר הורמוז.",
+     "en": "Britain's UKMTO confirmed that a tanker was struck by an unknown projectile around <bdi>08:00</bdi> Israel time on Monday while sailing out of the Strait of Hormuz."
+    },
+    "facts": [
+     {
+      "he": "בחדר המכונות פרצה שריפה, אך כל אנשי הצוות בשלום.",
+      "en": "A fire broke out in the engine room, but all crew are safe."
+     },
+     {
+      "he": "לפי חברת האבטחה הימית Vanguard, זו מכלית On Phoenix בדגל פנמה, שנפגעה כשלושה מייל ימי מחופי עומאן, והיא המכלית השנייה שפגיעה בה אושרה מאז יום ראשון.",
+      "en": "Maritime security firm Vanguard named it the Panama-flagged On Phoenix, hit about <bdi>3</bdi> nautical miles off Oman, the second tanker strike confirmed since Sunday."
+     },
+     {
+      "he": "חיל הים של צבא איראן טען שמכלית שלישית עלתה על מוקש, וקודם לכן נטען שמכלית־על טבעה.",
+      "en": "Iran's army navy claimed a third tanker hit a mine, and earlier it was claimed that a supertanker sank."
+     }
+    ],
+    "why": {
+     "he": "פגיעה מאומתת שנייה ברצף, הפעם במצר עצמו, מראה שהשיט בהורמוז נפגע יום אחרי יום — איום ישיר על זרימת הנפט מהמפרץ.",
+     "en": "A second confirmed strike in a row, this time in the strait itself, shows shipping through Hormuz is being hit day after day, a direct threat to the flow of Gulf oil."
+    },
+    "flags": [
+     {
+      "he": "השם On Phoenix, דגל פנמה והמרחק של כשלושה מייל ימי מעומאן הם של חברת האבטחה Vanguard, דרך Seatrade.",
+      "en": "The name On Phoenix, the Panama flag and the distance of about <bdi>3</bdi> nautical miles off Oman come from the security firm Vanguard, via Seatrade."
+     },
+     {
+      "he": "הטענה שמכלית שלישית עלתה על מוקש, כמו הטענה הקודמת שמכלית־על טבעה, לא אומתה; הן מדיווחי תקשורת ממלכתית איראנית.",
+      "en": "The claim that a third tanker hit a mine, like the earlier claim that a supertanker sank, is unverified; both come from Iranian state media."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "UKMTO, Seatrade Maritime ואנדולו",
+     "en": "UKMTO, Seatrade Maritime and Anadolu"
+    },
+    "time": "08:00",
+    "date": {
+     "he": "<bdi>16</bdi> בנובמבר",
+     "en": "<bdi>16</bdi> November"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "UKMTO · <bdi>16.11.2026</bdi>",
+       "en": "UKMTO · Nov 16 2026"
+      },
+      "url": "https://www.ukmto.org/-/media/ukmto/products/20261116-ukmto_warning_207-26.pdf"
+     },
+     {
+      "label": {
+       "he": "Seatrade Maritime · <bdi>16.11.2026</bdi>",
+       "en": "Seatrade Maritime · Nov 16 2026"
+      },
+      "url": "https://www.seatrade-maritime.com/security/tanker-confirmed-struck-in-the-gulf-iran-claims-vlcc-sinking"
+     },
+     {
+      "label": {
+       "he": "אנדולו · <bdi>16.11.2026</bdi>",
+       "en": "Anadolu · Nov 16 2026"
+      },
+      "url": "https://www.aa.com.tr/en/middle-east/iran-says-3-oil-tankers-hit-mines-catch-fire-in-strait-of-hormuz/4126136"
+     }
+    ],
+    "image": {
+     "src": "assets/images/hormuz-nasa-1600.jpg",
+     "srcset": "assets/images/hormuz-nasa-960.jpg 960w, assets/images/hormuz-nasa-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1246,
+     "alt": {
+      "he": "מבט לוויין על מצר הורמוז",
+      "en": "A satellite view of the Strait of Hormuz"
+     },
+     "year": 2020,
+     "caption": {
+      "he": "מצר הורמוז",
+      "en": "The Strait of Hormuz"
+     },
+     "credit": "MODIS Land Rapid Response Team, NASA GSFC",
+     "license": {
+      "label": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Strait_of_Hormuz_(MODIS_2020-12-04).jpg"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "ישראל",
+     "en": "Israel"
+    },
+    "headline": {
+     "he": "דיווחים: לשכת נתניהו הייתה מעורבת במעצר פעילי רע״מ ערב הבחירות; אייזנקוט: ״לא יכול להישאר רגע נוסף״",
+     "en": "Reports link Netanyahu's office to election-eve arrests of Ra'am members; Eisenkot says he \"cannot remain\""
+    },
+    "bottom": {
+     "he": "לפי חדשות 12, ראש הסגל של נתניהו, עידו נורדן, הפנה את המשטרה ערב הבחירות למקור שהיה עובד לשעבר בלשכת ראש הממשלה, ובעקבות זאת נעצרו שלושה פעילי רע״מ, שוחררו כשהמידע נמצא לא מבוסס.",
+     "en": "Israel's Channel 12 reported that on the eve of the election, Netanyahu's chief of staff Ido Norden pointed police to a source who was a former employee of the prime minister's office; three Ra'am party members were arrested, then released when the information proved unfounded."
+    },
+    "facts": [
+     {
+      "he": "הארץ דיווח שראש השב״כ דוד זיני ביקש להאזין לראשי הרשימה המשותפת, והיועמ״שית סירבה.",
+      "en": "Haaretz reported that Shin Bet chief David Zini sought to wiretap Joint List leaders and the attorney general refused."
+     },
+     {
+      "he": "גדי אייזנקוט אמר שנתניהו ״לא יכול להישאר בראש הממשלה רגע נוסף״ ודרש חקירה, ויאיר לפיד כתב ״ניסיון הפיכה״.",
+      "en": "Gadi Eisenkot said Netanyahu \"cannot remain at the head of the government for a minute longer\" and demanded an investigation; Yair Lapid called it an \"attempted coup.\""
+     },
+     {
+      "he": "לשכת ראש הממשלה הגיבה שהדיווח ״שקרי״ ושנורדן ״מילא את חובתו האזרחית״.",
+      "en": "Netanyahu's office called the report \"false\" and said Norden \"fulfilled his civic duty.\""
+     }
+    ],
+    "why": {
+     "he": "הפרשה מרחיקה עוד יותר ממשלת אחדות עם נתניהו, כשלאף גוש אין <bdi>61</bdi> המושבים הדרושים להרכבת ממשלה.",
+     "en": "The affair pushes a unity government with Netanyahu further out of reach, with neither bloc holding the <bdi>61</bdi> seats needed to govern."
+    },
+    "flags": [
+     {
+      "he": "הטענות על המעצרים ועל בקשת ההאזנה הן דיווחים של חדשות 12 ושל הארץ, כפי שנמסרו בסוכנויות, ולא ממצא רשמי.",
+      "en": "The claims about the arrests and the wiretap request are Channel 12 and Haaretz reports, as relayed by the wires, not an official finding."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "AFP (France 24), יורוניוז והארץ",
+     "en": "AFP (France 24), Euronews and Haaretz"
+    },
+    "date": {
+     "he": "<bdi>16</bdi> בנובמבר",
+     "en": "<bdi>16</bdi> November"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "AFP (France 24) · <bdi>16.11.2026</bdi>",
+       "en": "AFP (France 24) · Nov 16 2026"
+      },
+      "url": "https://www.france24.com/en/middle-east/20261116-eisenkot-netanyahu-cannot-stay-in-office"
+     },
+     {
+      "label": {
+       "he": "יורוניוז · <bdi>16.11.2026</bdi>",
+       "en": "Euronews · Nov 16 2026"
+      },
+      "url": "https://www.euronews.com/2026/11/16/israeli-opposition-chiefs-denounce-netanyahu-over-attempted-coup"
+     },
+     {
+      "label": {
+       "he": "הארץ · <bdi>15.11.2026</bdi>",
+       "en": "Haaretz · Nov 15 2026"
+      },
+      "url": "https://www.haaretz.com/israel-news/israel-politics/2026-11-15/ty-article/.premium/shin-bet-chief-sought-to-wiretap-arab-lawmakers-before-the-election/000001a1-e0ee-dfb8-adfd-ecee77f70000"
+     }
+    ],
+    "image": {
+     "src": "assets/images/knesset-front-1600.jpg",
+     "srcset": "assets/images/knesset-front-960.jpg 960w, assets/images/knesset-front-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1066,
+     "alt": {
+      "he": "חזית הכנסת בירושלים",
+      "en": "The front of the Knesset in Jerusalem"
+     },
+     "year": 2022,
+     "caption": {
+      "he": "חזית הכנסת בירושלים",
+      "en": "The front of the Knesset in Jerusalem"
+     },
+     "credit": "Clema12",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "אסיה",
+     "en": "Asia"
+    },
+    "headline": {
+     "he": "טראמפ יוצא לאסיה מוחלש אחרי בחירות האמצע ופרשת הריגול באנבידיה, לקראת הפגישה עם שי ופוטין ביום חמישי",
+     "en": "Trump heads to Asia weakened by the midterms and the Nvidia spy affair, ahead of Thursday's meeting with Xi and Putin"
+    },
+    "bottom": {
+     "he": "הנשיא טראמפ ממריא ביום שני לאסיה.",
+     "en": "President Trump leaves for Asia on Monday."
+    },
+    "facts": [
+     {
+      "he": "ביום שלישי ייפגש במנילה עם מנהיגי הקוואד (ארה״ב, יפן, אוסטרליה והודו) ויחתום עם תאילנד על הצהרת סחר משותפת, ומשם ימשיך לשנג׳ן לפסגת APEC (הפורום הכלכלי של אסיה והאוקיינוס השקט), לשיחות עם שי ג׳ינפינג ולפגישה משולשת עם שי ופוטין ביום חמישי.",
+      "en": "In Manila on Tuesday he meets Quad leaders and signs a joint trade statement with Thailand, then goes to Shenzhen for the APEC forum, talks with Xi Jinping and a three-way meeting with Xi and Vladimir Putin on Thursday."
+     },
+     {
+      "he": "לפי רויטרס, הוא מגיע מוחלש אחרי ההפסד בבחירות האמצע ופרשת הריגול.",
+      "en": "Reuters said he arrives weakened by his party's midterm defeat and the spy affair."
+     },
+     {
+      "he": "הבקשה המרכזית של סין: שלא יאשר עסקת נשק לטאיוואן ב־<bdi>14</bdi> מיליארד דולר, שאותה כינה ״קלף מיקוח״.",
+      "en": "Beijing's top ask is that he not approve a $<bdi>14</bdi> billion Taiwan arms package he has called a \"negotiating chip.\""
+     }
+    ],
+    "why": {
+     "he": "שנג׳ן תכריע אם הפסקת האש במלחמת הסחר, שפוקעת ב־<bdi>10</bdi> בינואר, תוארך, ואם יוטלו מגבלות שבבים חדשות על סין.",
+     "en": "Shenzhen will shape whether the US–China trade truce, which expires January <bdi>10</bdi>, is extended and whether new chip curbs on China follow."
+    },
+    "flags": [
+     {
+      "he": "התיאור שלפיו הוא מגיע מוחלש אחרי ההפסד בבחירות האמצע ופרשת הריגול הוא מסגור של רויטרס.",
+      "en": "The description that he arrives weakened by the midterm defeat and the spy affair is Reuters's framing."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "רויטרס, AP ו־The Nation (תאילנד)",
+     "en": "Reuters, AP and The Nation (Thailand)"
+    },
+    "date": {
+     "he": "<bdi>16</bdi> בנובמבר",
+     "en": "<bdi>16</bdi> November"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "רויטרס (Investing.com) · <bdi>16.11.2026</bdi>",
+       "en": "Reuters (Investing.com) · Nov 16 2026"
+      },
+      "url": "https://www.investing.com/news/world-news/spy-scandal-and-midterm-defeat-heat-up-trumps-asia-visit-5028373"
+     },
+     {
+      "label": {
+       "he": "AP · <bdi>16.11.2026</bdi>",
+       "en": "AP · Nov 16 2026"
+      },
+      "url": "https://apnews.com/article/trump-china-manila-xi-putin-ffc5e5a2d384f00960034ec10087502e"
+     },
+     {
+      "label": {
+       "he": "The Nation (תאילנד) · <bdi>16.11.2026</bdi>",
+       "en": "The Nation (Thailand) · Nov 16 2026"
+      },
+      "url": "https://www.nationthailand.com/business/trade/40073549"
+     }
+    ],
+    "image": {
+     "src": "assets/images/shenzhen-futian-2025-1920.jpg",
+     "srcset": "assets/images/shenzhen-futian-2025-960.jpg 960w, assets/images/shenzhen-futian-2025-1920.jpg 1920w",
+     "w": 1920,
+     "h": 1440,
+     "alt": {
+      "he": "מרכז פוטיאן והמרכז האזרחי בשנג׳ן",
+      "en": "Futian and the Civic Centre in Shenzhen"
+     },
+     "year": 2025,
+     "caption": {
+      "he": "מרכז פוטיאן בשנג׳ן",
+      "en": "Futian and the Civic Centre in Shenzhen"
+     },
+     "credit": "Pathfinbird",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "אוקראינה",
+     "en": "Ukraine"
+    },
+    "headline": {
+     "he": "כטב״מים אוקראיניים פגעו בגשר קרים; הקרמלין: ״נזק קל״",
+     "en": "Ukrainian drones hit the Crimean bridge; Kremlin says damage is \"minor\""
+    },
+    "bottom": {
+     "he": "כטב״מים אוקראיניים פגעו בלילה בגשר מצר קרץ׳, שמחבר את רוסיה לחצי האי קרים, כך מסרו הקרמלין והמושל שמינתה רוסיה בקרים.",
+     "en": "Ukrainian drones struck the Kerch Strait bridge linking Russia to Crimea overnight, the Kremlin and Crimea's Russian-installed governor said."
+    },
+    "facts": [
+     {
+      "he": "דובר הקרמלין דמיטרי פסקוב אמר ש״נזק קל נמצא בבדיקה״ ושהתנועה על הגשר נמשכת, אחרי הגבלות מוקדם יותר.",
+      "en": "Kremlin spokesman Dmitry Peskov said \"minor damage is being assessed\" and that traffic continues after earlier restrictions."
+     },
+     {
+      "he": "לפי התקשורת הרוסית אין נפגעים.",
+      "en": "Russian media reported no casualties."
+     },
+     {
+      "he": "משרד ההגנה הרוסי טען שבאותו לילה הופלו <bdi>1,336</bdi> כטב״מים, בהם כ־<bdi>600</bdi> בדרך למוסקבה.",
+      "en": "Russia's defence ministry said it downed <bdi>1,336</bdi> drones the same night, including about <bdi>600</bdi> headed for Moscow."
+     },
+     {
+      "he": "זלנסקי אמר שהוא מכין פגישה של ״קואליציית הרוצים״ (המדינות התומכות באוקראינה) כדי לגבש עמדה אירופית משותפת למשא ומתן.",
+      "en": "Zelensky said he is preparing a \"coalition of the willing\" meeting to set a common European negotiating position."
+     }
+    ],
+    "why": {
+     "he": "אוקראינה פוגעת בקו האספקה המרכזי של רוסיה לקרים שלושה ימים לפני פגישת טראמפ־שי־פוטין, שבה לפי גורמים אמריקאים המלחמה לא צפויה לעלות.",
+     "en": "Kyiv is hitting Russia's main supply link to Crimea three days before the Trump–Xi–Putin meeting, where US officials say the war is not expected to come up."
+    },
+    "flags": [
+     {
+      "he": "הדיווח שאין נפגעים הוא של התקשורת הרוסית, בלי אישור עצמאי.",
+      "en": "The report of no casualties is from Russian media, with no independent confirmation."
+     },
+     {
+      "he": "המספרים <bdi>1,336</bdi> וכ־<bdi>600</bdi> הם טענה של משרד ההגנה הרוסי.",
+      "en": "The figures <bdi>1,336</bdi> and about <bdi>600</bdi> are the Russian defence ministry's claim."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "רויטרס, AP, AFP ו־DW",
+     "en": "Reuters, AP, AFP and DW"
+    },
+    "date": {
+     "he": "<bdi>16</bdi> בנובמבר",
+     "en": "<bdi>16</bdi> November"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "רויטרס (Business Recorder) · <bdi>16.11.2026</bdi>",
+       "en": "Reuters (Business Recorder) · Nov 16 2026"
+      },
+      "url": "https://www.brecorder.com/news/40449180/ukraine-hits-bridge-linking-russia-and-crimea-kremlin-says-damage-is-minor"
+     },
+     {
+      "label": {
+       "he": "AP · <bdi>16.11.2026</bdi>",
+       "en": "AP · Nov 16 2026"
+      },
+      "url": "https://apnews.com/article/russia-ukraine-war-drone-attacks-oil-refineries-242cb3fd47fc79293cf264c321b93800"
+     },
+     {
+      "label": {
+       "he": "AFP (NST) · <bdi>16.11.2026</bdi>",
+       "en": "AFP (NST) · Nov 16 2026"
+      },
+      "url": "https://www.nst.com.my/world/world/2026/11/1578844/russia-downs-hundreds-drones-targeting-moscow"
+     },
+     {
+      "label": {
+       "he": "DW · <bdi>16.11.2026</bdi>",
+       "en": "DW · Nov 16 2026"
+      },
+      "url": "https://www.dw.com/ru/zelenskij-koalicia-zelausih-podgotovit-poziciu-evropy-v-peregovorah/a-79954030"
+     }
+    ],
+    "image": {
+     "src": "assets/images/crimean-bridge-2018-1600.jpg",
+     "srcset": "assets/images/crimean-bridge-2018-960.jpg 960w, assets/images/crimean-bridge-2018-1600.jpg 1600w",
+     "w": 1600,
+     "h": 900,
+     "alt": {
+      "he": "גשר קרים מעל מצר קרץ׳",
+      "en": "The Crimean Bridge over the Kerch Strait"
+     },
+     "year": 2018,
+     "caption": {
+      "he": "גשר קרים מעל מצר קרץ׳",
+      "en": "The Crimean Bridge over the Kerch Strait"
+     },
+     "credit": "VMorozoff",
+     "license": {
+      "label": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "עסקאות",
+     "en": "Deals"
+    },
+    "headline": {
+     "he": "ג׳ונסון אנד ג׳ונסון במגעים לרכישת מפתחת תרופות העיניים Ollin בעד <bdi>3.4</bdi> מיליארד דולר",
+     "en": "J&amp;J in talks to buy eye-drug developer Ollin for up to $<bdi>3.4</bdi> billion"
+    },
+    "bottom": {
+     "he": "ג׳ונסון אנד ג׳ונסון נמצאת במגעים לרכישת Ollin Biosciences, חברת ביוטק מטקסס שמפתחת תרופות למחלות עיניים, בעד <bdi>3.4</bdi> מיליארד דולר: <bdi>2.2</bdi> מיליארד מראש ועד <bdi>1.2</bdi> מיליארד נוספים בכפוף לעמידה ביעדים, כך דיווח הפייננשל טיימס.",
+     "en": "Johnson &amp; Johnson is in talks to buy Ollin Biosciences, a Texas biotech developing eye-disease drugs, for up to $<bdi>3.4</bdi> billion: $<bdi>2.2</bdi> billion upfront and up to $<bdi>1.2</bdi> billion in milestone payments, the Financial Times reported."
+    },
+    "facts": [
+     {
+      "he": "לפי הדיווח, העסקה עשויה להיות מוכרזת כבר ביום שני.",
+      "en": "The Financial Times added that a deal could be announced as soon as Monday."
+     },
+     {
+      "he": "התרופה המובילה של Ollin, <bdi>OLN324</bdi>, מיועדת לבצקת מקולרית סוכרתית ולניוון מקולרי רטוב, שני גורמים מובילים לאובדן ראייה.",
+      "en": "Ollin's lead drug, OLN324, targets diabetic macular edema and wet age-related macular degeneration, two leading causes of vision loss."
+     }
+    ],
+    "why": {
+     "he": "עסקה תעניק לג׳ונסון אנד ג׳ונסון תרופה בשלב מתקדם בתחום מחלות הרשתית, בהמשך לרכישת Intra-Cellular ב־<bdi>14.6</bdi> מיליארד דולר ב־<bdi>2025</bdi>.",
+     "en": "A deal would give J&amp;J a late-stage drug in retinal disease, extending a buying run that included the $<bdi>14.6</bdi> billion Intra-Cellular purchase in <bdi>2025</bdi>."
+    },
+    "flags": [
+     {
+      "he": "אלה מגעים, לא עסקה שהוכרזה. רויטרס לא הצליחה לאמת את הדיווח, והחברות לא הגיבו מיד.",
+      "en": "These are talks, not an announced deal. Reuters could not verify the report, and the companies did not immediately respond."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "רויטרס, לפי הפייננשל טיימס",
+     "en": "Reuters, citing the Financial Times"
+    },
+    "date": {
+     "he": "<bdi>15–16</bdi> בנובמבר",
+     "en": "<bdi>15–16</bdi> November"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "רויטרס (Investing.com) · <bdi>15.11.2026</bdi>",
+       "en": "Reuters (Investing.com) · Nov 15 2026"
+      },
+      "url": "https://www.investing.com/news/stock-market-news/jj-looks-to-buy-ollin-biosciences-for-up-to-34-billion-ft-says-5028322"
+     },
+     {
+      "label": {
+       "he": "רויטרס (Boursorama) · <bdi>16.11.2026</bdi>",
+       "en": "Reuters (Boursorama) · Nov 16 2026"
+      },
+      "url": "https://www.boursorama.com/bourse/actualites/offres-du-jour-fusions-et-acquisitions-1c02813b2d751937a8f9e5e87d9cca77"
+     }
+    ],
+    "image": {
+     "src": "assets/images/pharma-lab-1600.jpg",
+     "year": 2024,
+     "credit": "Tokumeigakarinoaoshima",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     },
+     "alt": {
+      "he": "מעבדה של חברת התרופות רוטו ביפן, 2024",
+      "en": "A laboratory at Rohto Pharmaceutical in Japan, 2024"
+     },
+     "caption": {
+      "he": "מעבדה של חברת התרופות רוטו ביפן",
+      "en": "A laboratory at Rohto Pharmaceutical in Japan"
+     },
+     "w": 1600,
+     "h": 1200
+    }
+   }
+  ]
+ },
+ "markets": {
+  "asof": {
+   "he": "שישי <bdi>13</bdi> בנובמבר, ציטוטים <bdi>14:30–14:45</bdi> בישראל, לפני המסחר — לפני פתיחת המזומן בארה״ב ב־<bdi>16:30</bdi>.",
+   "en": "Friday <bdi>13</bdi> November, quotes <bdi>14:30–14:45</bdi> Israel, pre-market — before the US cash open at <bdi>16:30</bdi> Israel."
+  },
+  "stamp": {
+   "he": "שישי 14:45",
+   "en": "Fri 14:45"
+  },
+  "carried": {
+   "he": "ממהדורת השווקים של יום שישי, <bdi>13</bdi> בנובמבר, <bdi>15:45</bdi>, ובה כבר מדד המחירים ליצרן.",
+   "en": "From Friday's 15:45 markets edition, 13 November, which already includes the producer-price index."
+  },
+  "story": [
+   {
+    "he": "חוזי המניות בארה״ב כמעט ללא שינוי אחרי הירידה של יום חמישי בהובלת אנבידיה: חוזה ה־S&amp;P <bdi>500</bdi> עלה <bdi>0.23%</bdi> וחוזה הנאסד״ק־<bdi>100</bdi> עלה <bdi>0.09%</bdi>. תשואת עשר השנים ננעלה ביום חמישי ב־<bdi>5.10%</bdi>, שיא של כמה שבועות, אחרי מכירה חלשה של אג״ח ל־<bdi>30</bdi> שנה. מדד המחירים ליצרן ב־<bdi>15:30</bdi> עלה <bdi>+0.3%</bdi> בחודש מול צפי <bdi>+0.4%</bdi>, והוא היה נתון האינפלציה האחרון לפני ישיבת הפד ב־<bdi>8–9</bdi> בדצמבר; הציטוטים כאן נלקחו לפני הפרסום.",
+    "en": "US equity futures are nearly flat after Thursday's Nvidia-led slide: the S&amp;P <bdi>500</bdi> future is up <bdi>0.23%</bdi> and the Nasdaq-<bdi>100</bdi> future is up <bdi>0.09%</bdi>. The <bdi>10</bdi>-year yield closed Thursday at <bdi>5.10%</bdi>, a multi-week high, after a weak <bdi>30</bdi>-year auction. The producer-price index at <bdi>15:30</bdi> Israel was <bdi>+0.3%</bdi> on the month versus <bdi>+0.4%</bdi> expected, the last inflation print before the <bdi>8–9</bdi> December Fed meeting; these quotes were taken before the release."
+   }
+  ],
+  "note": [
+   {
+    "he": "חוזים, לא מזומן. הציטוטים נלקחו ב־<bdi>14:30–14:45</bdi> בישראל, לפני פתיחת המזומן בארה״ב ב־<bdi>16:30</bdi>. <bdi>VIX</bdi> הוא מדד. עלייה בשער הדולר־שקל היא שקל חלש יותר. <bdi>WTI</bdi> בלוח הוא חוזה דצמבר.",
+    "en": "Futures, not cash. Quotes were taken at <bdi>14:30–14:45</bdi> Israel, before the US cash open at <bdi>16:30</bdi>. VIX is the index. A rise in the dollar–shekel rate is a weaker shekel. WTI on the board is the December contract."
+   }
+  ],
+  "tape": [
+   {
+    "sym": "ES",
+    "name": "S&amp;P 500",
+    "last": "7,633.00",
+    "chg": "+0.23%",
+    "dir": "up",
+    "flag": {
+     "he": "חוזה, לא המדד · מול סגירת חמישי <bdi>7,615.25</bdi>",
+     "en": "Future, not the index · vs Thursday's settle <bdi>7,615.25</bdi>"
+    },
+    "url": "https://finance.yahoo.com/quote/ES%3DF/"
+   },
+   {
+    "sym": "NQ",
+    "name": {
+     "he": "נאסד״ק־<bdi>100</bdi>",
+     "en": "Nasdaq-100"
+    },
+    "last": "28,408.75",
+    "chg": "+0.09%",
+    "dir": "up",
+    "flag": {
+     "he": "חוזה, לא המורכב · מול סגירת חמישי <bdi>28,384.50</bdi>",
+     "en": "Future, not the Composite · vs Thursday's settle <bdi>28,384.50</bdi>"
+    },
+    "url": "https://finance.yahoo.com/quote/NQ%3DF/"
+   },
+   {
+    "sym": "YM",
+    "name": {
+     "he": "דאו",
+     "en": "Dow"
+    },
+    "last": "52,469",
+    "chg": "+0.15%",
+    "dir": "up",
+    "flag": {
+     "he": "חוזה, לא המדד · מול סגירת חמישי <bdi>52,390</bdi>",
+     "en": "Future, not the index · vs Thursday's settle <bdi>52,390</bdi>"
+    },
+    "url": "https://finance.yahoo.com/quote/YM%3DF/"
+   },
+   {
+    "sym": "VIX",
+    "name": "VIX",
+    "last": "18.27",
+    "chg": "−2.3%",
+    "dir": "down",
+    "flag": {
+     "he": "מדד, לא חוזה · לפני המזומן · מול סגירת חמישי <bdi>18.70</bdi>",
+     "en": "Index, not futures · pre-cash · vs Thursday's close <bdi>18.70</bdi>"
+    },
+    "url": "https://finance.yahoo.com/quote/%5EVIX/"
+   },
+   {
+    "sym": "USD/ILS",
+    "name": {
+     "he": "שקל לדולר",
+     "en": "Shekel per dollar"
+    },
+    "last": "3.2088",
+    "chg": "+1.1%",
+    "dir": "up",
+    "flag": {
+     "he": "שער מט״ח · כ־<bdi>+1.1%</bdi>, השקל חלש יותר מול סגירת חמישי <bdi>3.1739</bdi>",
+     "en": "FX spot · about <bdi>+1.1%</bdi>, shekel weaker vs Thursday's close <bdi>3.1739</bdi>"
+    },
+    "url": "https://finance.yahoo.com/quote/ILS%3DX/"
+   },
+   {
+    "sym": "WTI",
+    "name": {
+     "he": "נפט",
+     "en": "Oil"
+    },
+    "last": "88.63",
+    "chg": "−0.12%",
+    "dir": "down",
+    "flag": {
+     "he": "חוזה דצמבר, לא המזומן · מול סגירת חמישי <bdi>88.74</bdi>",
+     "en": "December future, not cash · vs Thursday's settle <bdi>88.74</bdi>"
+    },
+    "url": "https://finance.yahoo.com/quote/CL%3DF/"
+   }
+  ],
+  "extra": [
+   {
+    "sym": "Brent",
+    "name": {
+     "he": "ברנט",
+     "en": "Brent"
+    },
+    "last": "96.21",
+    "chg": "+0.41%",
+    "dir": "up",
+    "flag": {
+     "he": "חוזה · <bdi>14:31</bdi> בישראל",
+     "en": "Future · <bdi>14:31</bdi> Israel"
+    },
+    "url": "https://finance.yahoo.com/quote/BZ%3DF/"
+   }
+  ],
+  "drivers": [
+   {
+    "kicker": {
+     "he": "ריבית",
+     "en": "Rates"
+    },
+    "headline": {
+     "he": "מדד המחירים ליצרן: <bdi>+0.3%</bdi> בחודש, מתחת לצפי; <bdi>+6.5%</bdi> בשנה",
+     "en": "PPI: <bdi>+0.3%</bdi> on the month, below the <bdi>+0.4%</bdi> forecast; <bdi>+6.5%</bdi> year over year"
+    },
+    "bottom": {
+     "he": "מדד המחירים ליצרן לאוקטובר <bdi>2026</bdi>, לפי הלשכה לסטטיסטיקה של העבודה (BLS): ביקוש סופי <bdi>+0.3%</bdi> בחודש מול צפי <bdi>+0.4%</bdi>, ו־<bdi>+6.5%</bdi> בשנה מול צפי <bdi>6.6%</bdi>; ספטמבר עודכן מ־<bdi>+1.3%</bdi> ל־<bdi>+1.4%</bdi>. הנתון מעט מתחת לצפי ומקל במעט על החשש מהעלאה בדצמבר, אבל העדכון מעלה משאיר את הלחץ בשרשרת המחירים גבוה.",
+     "en": "October <bdi>2026</bdi> producer prices, from the Bureau of Labor Statistics (BLS): final demand <bdi>+0.3%</bdi> on the month versus <bdi>+0.4%</bdi> expected, and <bdi>+6.5%</bdi> year over year versus <bdi>6.6%</bdi>; September was revised from <bdi>+1.3%</bdi> to <bdi>+1.4%</bdi>. The print is slightly below consensus, which eases December-hike worries a little, but the upward revision means pipeline pressure remains high."
+    },
+    "facts": [
+     {
+      "he": "הביקוש הסופי עלה <bdi>+0.3%</bdi> בחודש מול קונצנזוס של <bdi>+0.4%</bdi>, ו־<bdi>+6.5%</bdi> בשנה מול צפי <bdi>6.6%</bdi>. ספטמבר עודכן מ־<bdi>+1.3%</bdi> ל־<bdi>+1.4%</bdi>.",
+      "en": "Final demand rose <bdi>+0.3%</bdi> on the month against a <bdi>+0.4%</bdi> consensus, and <bdi>+6.5%</bdi> year over year against <bdi>6.6%</bdi> expected. September was revised from <bdi>+1.3%</bdi> to <bdi>+1.4%</bdi>."
+     },
+     {
+      "he": "הביקוש הסופי בלי מזון, אנרגיה וסחר עלה <bdi>+0.5%</bdi> בחודש, כמו בספטמבר, ו־<bdi>+4.9%</bdi> בשנה. ברכיבים: סחורות <bdi>+0.5%</bdi>, שירותים <bdi>+0.2%</bdi>, אנרגיה <bdi>−0.1%</bdi>, מזון <bdi>+1.3%</bdi>.",
+      "en": "Final demand less foods, energy and trade rose <bdi>+0.5%</bdi> on the month, the same as September, and <bdi>+4.9%</bdi> year over year. Goods <bdi>+0.5%</bdi>, services <bdi>+0.2%</bdi>, energy <bdi>−0.1%</bdi>, and foods <bdi>+1.3%</bdi>."
+     },
+     {
+      "he": "האג״ח החדשה ל־<bdi>30</bdi> שנה נמכרה ביום חמישי בתשואה של <bdi>5.441%</bdi>, הגבוהה ביותר במכירה ראשונה של אג״ח חדשה ל־<bdi>30</bdi> שנה מאז פברואר <bdi>2001</bdi>. יחס הכיסוי היה <bdi>2.36</bdi> מול ממוצע של <bdi>2.44</bdi> בשש המכירות הקודמות (TreasuryDirect דרך Capital Finance Bureau). תשואת עשר השנים ננעלה ב־<bdi>5.10%</bdi>.",
+      "en": "Thursday's new <bdi>30</bdi>-year bond sold at <bdi>5.441%</bdi>, the highest yield at a first auction of a new <bdi>30</bdi>-year since February <bdi>2001</bdi>. The bid-to-cover was <bdi>2.36</bdi> against a <bdi>2.44</bdi> average of the previous six sales (TreasuryDirect via Capital Finance Bureau). The <bdi>10</bdi>-year closed at <bdi>5.10%</bdi>."
+     },
+     {
+      "he": "לפי GGMA השוק מתמחר כמעט במלואה העלאה של רבע נקודה ב־<bdi>9</bdi> בדצמבר, עם כ־<bdi>9%</bdi> להעלאה של חצי נקודה. לפי Kalshi, דרך Base Camp, הסיכוי להעלאה כ־<bdi>86%</bdi>. טווח הריבית נשאר <bdi>3.75%–4%</bdi> מאז <bdi>28</bdi> באוקטובר, והישיבה הבאה ב־<bdi>8–9</bdi> בדצמבר.",
+      "en": "GGMA says the market has almost fully priced a quarter-point hike on <bdi>9</bdi> December, with about a <bdi>9%</bdi> chance of a half-point hike. Kalshi, via Base Camp, shows about an <bdi>86%</bdi> chance of a hike. The funds range has been <bdi>3.75%–4%</bdi> since <bdi>28</bdi> October, and the next meeting is <bdi>8–9</bdi> December."
+     }
+    ],
+    "why": {
+     "he": "נתון מעט מתחת לצפי מקל במעט על החשש מהעלאת ריבית בדצמבר, אבל עדכון ספטמבר ל־<bdi>+1.4%</bdi> משאיר את הלחץ בשרשרת המחירים גבוה. זה היה נתון האינפלציה האחרון לפני ישיבת הפד ב־<bdi>8–9</bdi> בדצמבר.",
+     "en": "A slightly below-consensus print eases December-hike worries a little, but the September revision to <bdi>+1.4%</bdi> keeps pipeline pressure high. This was the last inflation print before the <bdi>8–9</bdi> December meeting."
+    },
+    "flags": [
+     {
+      "he": "הליבה בלי מזון ואנרגיה לא אומתה בעמוד הסיכום של BLS. ציטוטי הלוח נשארו שלפני הפרסום, כי לא נלכד שער חוזים בדקה הראשונה.",
+      "en": "Core ex food and energy was not verified on the BLS summary. Board quotes remain pre-print, because no first-minute futures tick was captured."
+     },
+     {
+      "he": "הסיכויים להעלאה הם נתונים ממקורות משניים, לא מבורסת החוזים, והם נבדלים בין המקורות.",
+      "en": "The hike odds are secondary-source figures, not a futures-exchange print, and the sources differ."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "מדד המחירים ליצרן של הלשכה לסטטיסטיקה של העבודה (BLS, <bdi>USDL-26-1687</bdi>) · <bdi>13</bdi> בנובמבר <bdi>2026</bdi>, וגם GGMA ו־Capital Finance Bureau",
+     "en": "BLS Producer Price Index (USDL-26-1687) · Nov 13, 2026, plus GGMA and Capital Finance Bureau"
+    },
+    "time": "15:30",
+    "date": {
+     "he": "<bdi>13</bdi> בנובמבר",
+     "en": "<bdi>13</bdi> November"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "BLS",
+       "en": "BLS"
+      },
+      "url": "https://www.bls.gov/news.release/ppi.nr0.htm"
+     },
+     {
+      "label": {
+       "he": "GGMA",
+       "en": "GGMA"
+      },
+      "url": "https://ggma-app.com/public-article/us-ppi-fed-speakers-schnabel-and-nagel-ggma-day-ahead-240"
+     },
+     {
+      "label": {
+       "he": "Capital Finance Bureau",
+       "en": "Capital Finance Bureau"
+      },
+      "url": "https://capitalfinancebureau.com/news/30-year-bond-auction-results-november-2026/"
+     }
+    ],
+    "image": {
+     "src": "assets/images/eccles-building-1600.jpg",
+     "srcset": "assets/images/eccles-building-960.jpg 960w, assets/images/eccles-building-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1088,
+     "alt": {
+      "he": "בניין אקלס של הפדרל ריזרב בוושינגטון",
+      "en": "The Eccles Building of the Federal Reserve in Washington"
+     },
+     "year": 2011,
+     "caption": {
+      "he": "בניין אקלס, הפדרל ריזרב, וושינגטון",
+      "en": "The Eccles Building, Federal Reserve, Washington"
+     },
+     "credit": "Federal Reserve",
+     "license": {
+      "label": "Public domain",
+      "url": "https://creativecommons.org/publicdomain/mark/1.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "שבבים",
+     "en": "Chips"
+    },
+    "headline": {
+     "he": "העלייה של אנבידיה לפני הפתיחה לא מרימה את חוזה הנאסד״ק",
+     "en": "Nvidia's premarket rise is not lifting the Nasdaq future"
+    },
+    "bottom": {
+     "he": "מניית אנבידיה עולה כ־<bdi>2.6%–2.8%</bdi> לפני הפתיחה אחרי ירידה של <bdi>4.3%</bdi> ביום חמישי, אבל חוזה הנאסד״ק־<bdi>100</bdi> עלה רק <bdi>0.09%</bdi>, כך שהעלייה לא מרימה את הלוח.",
+     "en": "Nvidia shares are up about <bdi>2.6%</bdi> to <bdi>2.8%</bdi> before the open after Thursday's <bdi>4.3%</bdi> drop, but the Nasdaq-<bdi>100</bdi> future is up only <bdi>0.09%</bdi>, so the bounce is not lifting the board."
+    },
+    "facts": [
+     {
+      "he": "העלייה של כ־<bdi>2.6%–2.8%</bdi> היא ציטוט שלפני הפתיחה (רויטרס דרך Investing.com, בסביבות <bdi>06:00–06:33</bdi> ET).",
+      "en": "The rise of about <bdi>2.6%</bdi> to <bdi>2.8%</bdi> is a premarket quote (Reuters via Investing.com, around <bdi>06:00–06:33</bdi> ET)."
+     },
+     {
+      "he": "השבוע ירדה המניה כ־<bdi>11%</bdi> עד סגירת יום חמישי, והיא בדרך לשבוע השישי ברציפות של ירידות, הרצף השבועי הארוך ביותר מאז <bdi>2012</bdi> (CNBC).",
+      "en": "The stock is down about <bdi>11%</bdi> on the week through Thursday's close, and it is on course for a sixth straight weekly loss, the longest weekly losing streak since <bdi>2012</bdi> (CNBC)."
+     },
+     {
+      "he": "הדוחות הרבעוניים ב־<bdi>17</bdi> בנובמבר. חוזה הנאסד״ק־<bdi>100</bdi> ב־<bdi>28,408.75</bdi>, עלייה של <bdi>0.09%</bdi> מסגירת חמישי.",
+      "en": "Quarterly results are on <bdi>17</bdi> November. The Nasdaq-<bdi>100</bdi> future is at <bdi>28,408.75</bdi>, up <bdi>0.09%</bdi> from Thursday's settle."
+     }
+    ],
+    "why": {
+     "he": "עלייה במניה אחת, גם כשהיא גדולה במדד, לא הזיזה כאן את חוזה הנאסד״ק־<bdi>100</bdi> יותר מעשירית האחוז. פתיחת המזומן עוד לפנינו, ב־<bdi>16:30</bdi> בישראל.",
+     "en": "A rise in one stock, even a heavy one in the index, has not moved the Nasdaq-<bdi>100</bdi> future here by more than a tenth of a percent. The cash open is still ahead, at <bdi>16:30</bdi> Israel."
+    },
+    "flags": [
+     {
+      "he": "האחוז הוא אינדיקציה שלפני הפתיחה, לא שער ממסחר המזומן, והוא זז.",
+      "en": "The percentage is a premarket indication, not a print from the cash session, and it moves."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "רויטרס (Investing.com) ו־CNBC",
+     "en": "Reuters (Investing.com) and CNBC"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "רויטרס (Investing.com)",
+       "en": "Reuters (Investing.com)"
+      },
+      "url": "https://www.investing.com/news/stock-market-news/nasdaq-futures-dip-as-nvidia-tumult-keeps-investors-on-edge-5024713"
+     },
+     {
+      "label": {
+       "he": "CNBC",
+       "en": "CNBC"
+      },
+      "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-jensen-affair-ai.html"
+     },
+     {
+      "label": {
+       "he": "CNBC",
+       "en": "CNBC"
+      },
+      "url": "https://www.cnbc.com/2026/11/13/nvidia-nvda-stock-jensen-huang-transition.html"
+     }
+    ],
+    "image": {
+     "src": "assets/images/nvidia-hq-1920.jpg",
+     "srcset": "assets/images/nvidia-hq-960.jpg 960w, assets/images/nvidia-hq-1920.jpg 1920w",
+     "w": 1920,
+     "h": 1175,
+     "alt": {
+      "he": "חזית מטה אנבידיה בסנטה קלרה",
+      "en": "The exterior of Nvidia headquarters in Santa Clara"
+     },
+     "year": 2018,
+     "caption": {
+      "he": "מטה אנבידיה בסנטה קלרה",
+      "en": "Nvidia headquarters in Santa Clara"
+     },
+     "credit": "Coolcaesar",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "שבבים",
+     "en": "Chips"
+    },
+    "headline": {
+     "he": "סיסקו ו־Applied Materials היכו את התחזית, והתגובה במחיר מפוצלת",
+     "en": "Cisco and Applied Materials beat forecasts, and the price reaction is split"
+    },
+    "bottom": {
+     "he": "Applied Materials דיווחה על הכנסות שיא של <bdi>10.41</bdi> מיליארד דולר ותחזית של <bdi>11.1</bdi> מיליארד לרבעון הבא. סיסקו הכתה את התחזית והעלתה את תחזית השנה, אבל המניה יורדת כ־<bdi>2.7%</bdi> לפני הפתיחה.",
+     "en": "Applied Materials reported record revenue of $<bdi>10.41</bdi> billion and guided the next quarter to $<bdi>11.1</bdi> billion. Cisco beat forecasts and raised its year outlook, but the shares are down about <bdi>2.7%</bdi> before the open."
+    },
+    "facts": [
+     {
+      "he": "לפי דוח Applied Materials, ההכנסות ברבעון היו <bdi>10.41</bdi> מיליארד דולר, שיא, והתחזית לרבעון הבא היא <bdi>11.1</bdi> מיליארד דולר, פלוס מינוס <bdi>500</bdi> מיליון.",
+      "en": "Applied Materials' release puts the quarter's revenue at $<bdi>10.41</bdi> billion, a record, and the next-quarter guide at $<bdi>11.1</bdi> billion, plus or minus $<bdi>500</bdi> million."
+     },
+     {
+      "he": "סיסקו: הכנסות <bdi>18.5</bdi> מיליארד דולר מול צפי <bdi>18.14</bdi>, ורווח למניה <bdi>1.40</bdi> דולר מול צפי <bdi>1.33</bdi>. החברה העלתה את תחזית השנה, והמניה יורדת כ־<bdi>2.7%</bdi> לפני הפתיחה (Yahoo / Benzinga).",
+      "en": "Cisco: revenue of $<bdi>18.5</bdi> billion versus $<bdi>18.14</bdi> billion expected, and earnings of $<bdi>1.40</bdi> a share versus $<bdi>1.33</bdi> expected. The company raised its year outlook, and the shares are down about <bdi>2.7%</bdi> before the open (Yahoo / Benzinga)."
+     }
+    ],
+    "why": {
+     "he": "הדיווחים קוראים את הדוחות כהקלה בביקוש לתשתיות של בינה מלאכותית. הייחוס הזה הוא של הדיווחים, לא מדידה נפרדת.",
+     "en": "The outlets read the reports as relief on demand for AI infrastructure. That causal link is the outlets' attribution, not a separate measurement."
+    },
+    "flags": [
+     {
+      "he": "הקריאה של „הקלה בתשתיות בינה מלאכותית” היא ייחוס של הדיווחים.",
+      "en": "The \"AI-infrastructure relief\" reading is the outlets' attribution."
+     },
+     {
+      "he": "מספרי Applied Materials הם כפי שהחברה דיווחה. הירידה של סיסקו היא אינדיקציה שלפני הפתיחה, לא שער מזומן.",
+      "en": "Applied Materials' figures are what the company reported. Cisco's decline is a premarket indication, not a cash print."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "הודעת Applied Materials ו־Yahoo Finance",
+     "en": "Applied Materials' release and Yahoo Finance"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "Applied Materials",
+       "en": "Applied Materials"
+      },
+      "url": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/111226-applied-materials-announces-fourth-qtr-fiscal-year-end-2026-results.html"
+     },
+     {
+      "label": {
+       "he": "Yahoo Finance",
+       "en": "Yahoo Finance"
+      },
+      "url": "https://finance.yahoo.com/markets/stocks/articles/futures-edge-lower-nvda-fallout-110121361.html"
+     }
+    ],
+    "image": {
+     "src": "assets/images/silicon-wafer-12in-1600.jpg",
+     "srcset": "assets/images/silicon-wafer-12in-960.jpg 960w, assets/images/silicon-wafer-12in-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1600,
+     "alt": {
+      "he": "פרוסת סיליקון בקוטר 12 אינץ׳",
+      "en": "A 12-inch silicon wafer"
+     },
+     "year": 2011,
+     "caption": {
+      "he": "פרוסת סיליקון",
+      "en": "A silicon wafer"
+     },
+     "credit": "Peellden",
+     "license": {
+      "label": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "נפט",
+     "en": "Oil"
+    },
+    "headline": {
+     "he": "ברנט ו־WTI כמעט ללא שינוי, ובדרך לירידה שבועית שנייה",
+     "en": "Brent and WTI are nearly unchanged and heading for a second weekly decline"
+    },
+    "bottom": {
+     "he": "ברנט ב־<bdi>96.21</bdi> דולר (<bdi>+0.41%</bdi>) ו־WTI ב־<bdi>88.63</bdi> דולר (<bdi>−0.12%</bdi>) כמעט ללא שינוי מסגירת יום חמישי, ושניהם בדרך לירידה שבועית שנייה ברציפות.",
+     "en": "Brent at $<bdi>96.21</bdi> (<bdi>+0.41%</bdi>) and WTI at $<bdi>88.63</bdi> (<bdi>−0.12%</bdi>) are almost unchanged from Thursday's close, and both are heading for a second straight weekly decline."
+    },
+    "facts": [
+     {
+      "he": "הציטוטים נלקחו ב־<bdi>14:31</bdi> בישראל. ברנט עלה <bdi>0.41%</bdi> מול <bdi>95.82</bdi>, ו־WTI ירד <bdi>0.12%</bdi> מסגירת חמישי ב־<bdi>88.74</bdi> דולר.",
+      "en": "The quotes were taken at <bdi>14:31</bdi> Israel. Brent rose <bdi>0.41%</bdi> from <bdi>95.82</bdi>, and WTI fell <bdi>0.12%</bdi> from Thursday's settle of $<bdi>88.74</bdi>."
+     },
+     {
+      "he": "הירידה השבועית באה עם ציפייה שארה״ב תשמור על המצור על איראן, ציפייה שהרגיעה חשש מהרחבת הלחימה, בעוד התקפות על ספנות ממשיכות (CNBC דרך Yahoo).",
+      "en": "The weekly decline comes with an expectation that the United States keeps the blockade on Iran, which eased fears of a wider fight, while attacks on shipping continue (CNBC via Yahoo)."
+     }
+    ],
+    "why": {
+     "he": "התנועה במחיר היא של פרמיית הסיכון ושל הציפיות, לא של שינוי מאומת בזרימת הנפט דרך הורמוז.",
+     "en": "The price move is about the risk premium and about expectations, not about a verified change in oil flows through Hormuz."
+    },
+    "flags": [
+     {
+      "he": "משמרות המהפכה טוענים שמכלית גז פגעה במוקש ממזרח למצר הורמוז. הטענה לא אומתה באופן עצמאי: AP לא יכלה לאמת אותה, אין אישור של UKMTO, ואין שינוי פיזי מאומת בזרימה בהורמוז.",
+      "en": "Iran's Revolutionary Guards say a gas carrier hit a mine east of the Strait of Hormuz. The claim is not independently confirmed: AP could not verify it, there is no UKMTO confirmation, and there is no verified physical change in Hormuz flows."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "Yahoo (CNBC) ו־AP",
+     "en": "Yahoo (CNBC) and AP"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "Yahoo Finance (CNBC)",
+       "en": "Yahoo Finance (CNBC)"
+      },
+      "url": "https://finance.yahoo.com/markets/stocks/articles/futures-edge-lower-nvda-fallout-110121361.html"
+     },
+     {
+      "label": {
+       "he": "AP",
+       "en": "AP"
+      },
+      "url": "https://apnews.com/article/iran-us-bahrain-radar-strait-hormuz-5d73a23b5b8647d2515c35b267b36c08"
+     }
+    ],
+    "image": {
+     "src": "assets/images/kwinana-tanker-2023-1600.jpg",
+     "srcset": "assets/images/kwinana-tanker-2023-960.jpg 960w, assets/images/kwinana-tanker-2023-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1200,
+     "alt": {
+      "he": "מכלית מוצרי נפט ברציף בקוויננה, אוסטרליה",
+      "en": "An oil-products tanker at a jetty in Kwinana, Australia"
+     },
+     "year": 2023,
+     "caption": {
+      "he": "מכלית מוצרי נפט בקוויננה, אוסטרליה",
+      "en": "An oil-products tanker at Kwinana, Australia"
+     },
+     "credit": "Calistemon",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "תל אביב",
+     "en": "Tel Aviv"
+    },
+    "headline": {
+     "he": "תל אביב ננעלה בירידה ביום שישי הקצר; ת״א <bdi>35</bdi> ירד <bdi>0.88%</bdi>",
+     "en": "Tel Aviv closed lower in the short Friday session; the TA-<bdi>35</bdi> fell <bdi>0.88%</bdi>"
+    },
+    "bottom": {
+     "he": "מדד ת״א <bdi>35</bdi> ננעל ב־<bdi>4,038.02</bdi>, ירידה של <bdi>0.88%</bdi>, ביום מסחר מקוצר של שישי. השקל נחלש.",
+     "en": "The TA-<bdi>35</bdi> closed at <bdi>4,038.02</bdi>, down <bdi>0.88%</bdi>, in Friday's short session. The shekel weakened."
+    },
+    "facts": [
+     {
+      "he": "ת״א <bdi>125</bdi> ירד <bdi>0.98%</bdi> ות״א <bdi>90</bdi> ירד <bdi>1.39%</bdi>. מניות האנרגיה המתחדשת (<bdi>−2.44%</bdi>) והביטוח (<bdi>−1.92%</bdi>) הובילו את הירידות (ice.co.il).",
+      "en": "The TA-<bdi>125</bdi> fell <bdi>0.98%</bdi> and the TA-<bdi>90</bdi> fell <bdi>1.39%</bdi>. Renewable-energy shares (<bdi>−2.44%</bdi>) and insurance (<bdi>−1.92%</bdi>) led the declines (ice.co.il)."
+     },
+     {
+      "he": "הדולר הוסיף כ־<bdi>0.25%</bdi> לכ־<bdi>3.20</bdi> שקלים בנעילה בתל אביב (ice.co.il). במסחר הבינלאומי, ב־<bdi>14:41</bdi>, הדולר עמד על <bdi>3.2088</bdi> מול סגירה של <bdi>3.1739</bdi> ביום חמישי.",
+      "en": "The dollar added about <bdi>0.25%</bdi> to about <bdi>3.20</bdi> shekels at the Tel Aviv close (ice.co.il). In international trading at <bdi>14:41</bdi> the dollar was <bdi>3.2088</bdi>, against Thursday's close of <bdi>3.1739</bdi>."
+     },
+     {
+      "he": "ת״א <bdi>35</bdi> עלה <bdi>3.37%</bdi> השבוע (Bizportal). עונת הדוחות של הבנקים נפתחת בשבוע הבא.",
+      "en": "The TA-<bdi>35</bdi> is up <bdi>3.37%</bdi> on the week (Bizportal). Bank-earnings season opens next week."
+     }
+    ],
+    "why": {
+     "he": "המסחר הקצר ננעל לפני פתיחת וול סטריט ולפני מדד המחירים ליצרן, כך שהירידה של היום היא של הסשן המקומי. הדוחות של הבנקים בשבוע הבא הם האירוע המקומי הבא על הלוח.",
+     "en": "The short session closed before the Wall Street open and before the producer-price index, so today's drop is the local session's. Bank results next week are the next local event on the calendar."
+    },
+    "flags": [
+     {
+      "he": "שער הדולר בנעילה בתל אביב (כ־<bdi>3.20</bdi>, כ־<bdi>+0.25%</bdi>) ושער המסחר הבינלאומי (<bdi>3.2088</bdi> מול <bdi>3.1739</bdi>) הם שני חלונות זמן, והמקורות נבדלים.",
+      "en": "The dollar at the Tel Aviv close (about <bdi>3.20</bdi>, about <bdi>+0.25%</bdi>) and the international rate (<bdi>3.2088</bdi> versus <bdi>3.1739</bdi>) are two time windows, and the sources differ."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "ice.co.il ו־Bizportal",
+     "en": "ice.co.il and Bizportal"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "ice.co.il",
+       "en": "ice.co.il"
+      },
+      "url": "https://www.ice.co.il/finance/news/article/1137475"
+     },
+     {
+      "label": {
+       "he": "Bizportal",
+       "en": "Bizportal"
+      },
+      "url": "https://www.bizportal.co.il/capitalmarket/indices/generalview/33343333"
+     }
+    ],
+    "image": {
+     "src": "assets/images/tase-ehad-haam-2007-1600.jpg",
+     "srcset": "assets/images/tase-ehad-haam-2007-960.jpg 960w, assets/images/tase-ehad-haam-2007-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1200,
+     "alt": {
+      "he": "בניין הבורסה לניירות ערך בתל אביב",
+      "en": "The Tel Aviv Stock Exchange building"
+     },
+     "year": 2007,
+     "caption": {
+      "he": "הבורסה לניירות ערך בתל אביב",
+      "en": "The Tel Aviv Stock Exchange"
+     },
+     "credit": "Sambach",
+     "license": {
+      "label": "CC BY-SA 2.5",
+      "url": "https://creativecommons.org/licenses/by-sa/2.5/"
+     }
+    }
+   }
+  ],
+  "catalysts": [
+   {
+    "ticker": "CBRS",
+    "kicker": {
+     "he": "שבבים",
+     "en": "Chips"
+    },
+    "headline": {
+     "he": "קרברס קופצת כ־<bdi>16%–17%</bdi> לפני הפתיחה אחרי רווח מפתיע ומיקרוסופט כלקוח",
+     "en": "Cerebras jumps about <bdi>16%</bdi> to <bdi>17%</bdi> premarket after a surprise profit and Microsoft as a customer"
+    },
+    "bottom": {
+     "he": "מניית קרברס עולה כ־<bdi>16%–17%</bdi> לפני הפתיחה אחרי רווח מפתיע ברבעון השלישי, הכנסות מעל הצפי, העלאת תחזית ההכנסות ל־<bdi>2026</bdi> ל־<bdi>940–960</bdi> מיליון דולר, ומיקרוסופט כלקוח.",
+     "en": "Cerebras shares are up about <bdi>16%</bdi> to <bdi>17%</bdi> before the open after a surprise third-quarter profit, a revenue beat, a <bdi>2026</bdi> revenue guide raised to $<bdi>940–960</bdi> million, and Microsoft named as a customer."
+    },
+    "facts": [
+     {
+      "he": "החברה העלתה את תחזית ההכנסות ל־<bdi>2026</bdi> לטווח של <bdi>940</bdi> עד <bdi>960</bdi> מיליון דולר (CNBC; רויטרס דרך Investing.com).",
+      "en": "The company raised its <bdi>2026</bdi> revenue guide to a range of $<bdi>940</bdi> million to $<bdi>960</bdi> million (CNBC; Reuters via Investing.com)."
+     },
+     {
+      "he": "מיקרוסופט ננקבה כלקוח. הרבעון השלישי תואר כרווח מפתיע וכהכנסות מעל הצפי.",
+      "en": "Microsoft was named as a customer. The third quarter was described as a surprise profit and a revenue beat."
+     }
+    ],
+    "why": {
+     "he": "תחזית גבוהה יותר ולקוח ענן גדול הם מה שהשוק מתמחר כאן לפני הפתיחה, בשבוע שבו מניית השבבים הגדולה במדד עדיין בדרך לירידה שבועית.",
+     "en": "A higher guide and a large cloud customer are what the market is pricing here before the open, in a week when the index's largest chip stock is still heading for a weekly loss."
+    },
+    "flags": [
+     {
+      "he": "האחוז הוא אינדיקציה שלפני הפתיחה, בערך <bdi>16%–17%</bdi>, לא שער ממסחר המזומן.",
+      "en": "The percentage is a premarket indication, about <bdi>16%</bdi> to <bdi>17%</bdi>, not a print from the cash session."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "CNBC ורויטרס (Investing.com)",
+     "en": "CNBC and Reuters (Investing.com)"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "CNBC",
+       "en": "CNBC"
+      },
+      "url": "https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html"
+     },
+     {
+      "label": {
+       "he": "רויטרס (Investing.com)",
+       "en": "Reuters (Investing.com)"
+      },
+      "url": "https://www.investing.com/news/stock-market-news/cerebras-shares-surge-as-profit-surprise-forecast-raise-ease-ai-spending-worries-5024960"
+     }
+    ],
+    "image": {
+     "src": "assets/images/wafer-fararano-1535.jpg",
+     "srcset": "assets/images/wafer-fararano-960.jpg 960w, assets/images/wafer-fararano-1535.jpg 1535w",
+     "w": 1535,
+     "h": 1157,
+     "alt": {
+      "he": "פרוסת סיליקון",
+      "en": "A silicon wafer"
+     },
+     "year": 2011,
+     "caption": {
+      "he": "פרוסת סיליקון",
+      "en": "A silicon wafer"
+     },
+     "credit": "Sangitiana Fararano",
+     "license": {
+      "label": "CC BY-SA 2.0",
+      "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+     }
+    }
+   },
+   {
+    "ticker": "MOD",
+    "kicker": {
+     "he": "חברות",
+     "en": "Companies"
+    },
+    "headline": {
+     "he": "מודין קופצת כ־<bdi>31%</bdi> לפני הפתיחה על דיווח שסמסונג בוחנת רכישה",
+     "en": "Modine jumps about <bdi>31%</bdi> premarket on a report that Samsung is in talks to buy it"
+    },
+    "bottom": {
+     "he": "מניית מודין עולה כ־<bdi>31%</bdi> לפני הפתיחה אחרי דיווח של Bloomberg שסמסונג אלקטרוניקס מנהלת מגעים לרכוש את עסקי הקירור למרכזי נתונים שלה.",
+     "en": "Modine shares are up about <bdi>31%</bdi> before the open after a Bloomberg report that Samsung Electronics is in talks to acquire its data-center cooling business."
+    },
+    "facts": [
+     {
+      "he": "הדיווח, כפי שהובא ב־Investing.com, מייחס ל־Bloomberg מגעים של סמסונג לרכישת פעילות הקירור למרכזי נתונים של מודין.",
+      "en": "Investing.com, citing Bloomberg, says Samsung is in talks to buy Modine's data-center cooling business."
+     }
+    ],
+    "why": {
+     "he": "עלייה בסדר גודל כזה לפני הפתיחה משקפת את הדיווח על מגעים, לא עסקה חתומה. אם המגעים לא יימשכו, אין כאן עסקה להיסגר.",
+     "en": "A move of this size before the open reflects the report of talks, not a signed deal. If the talks do not continue, there is no transaction here to close."
+    },
+    "flags": [
+     {
+      "he": "זה דיווח, לא עסקה מאושרת.",
+      "en": "This is a report, not a confirmed deal."
+     },
+     {
+      "he": "האחוז הוא אינדיקציה שלפני הפתיחה, לא שער ממסחר המזומן.",
+      "en": "The percentage is a premarket indication, not a print from the cash session."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "Bloomberg דרך Investing.com",
+     "en": "Bloomberg via Investing.com"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "Investing.com (Bloomberg)",
+       "en": "Investing.com (Bloomberg)"
+      },
+      "url": "https://www.investing.com/news/stock-market-news/samsung-in-talks-to-buy-data-center-cooling-firm-modine-bloomberg-reports-5023807"
+     }
+    ],
+    "image": {
+     "src": "assets/images/server-room-2015-1600.jpg",
+     "srcset": "assets/images/server-room-2015-960.jpg 960w, assets/images/server-room-2015-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1067,
+     "alt": {
+      "he": "ארונות שרתים בחדר שרתים",
+      "en": "Server racks in a server room"
+     },
+     "year": 2015,
+     "caption": {
+      "he": "חדר שרתים",
+      "en": "A server room"
+     },
+     "credit": "Carl Lender",
+     "license": {
+      "label": "CC BY 2.0",
+      "url": "https://creativecommons.org/licenses/by/2.0/"
+     }
+    }
+   },
+   {
+    "ticker": "NU",
+    "kicker": {
+     "he": "בנקים",
+     "en": "Banks"
+    },
+    "headline": {
+     "he": "Nu עולה כ־<bdi>3.1%</bdi> ל־<bdi>12.20</bdi> דולר אחרי רווח שיא של <bdi>1.1</bdi> מיליארד",
+     "en": "Nu rises about <bdi>3.1%</bdi> to $<bdi>12.20</bdi> after a record $<bdi>1.1</bdi> billion profit"
+    },
+    "bottom": {
+     "he": "מניית Nu Holdings עולה כ־<bdi>3.1%</bdi> לפני הפתיחה ל־<bdi>12.20</bdi> דולר, אחרי רווח נקי שיא של <bdi>1.1</bdi> מיליארד דולר ברבעון השלישי, עם החטאה קלה ברווח ובהכנסות ועם תחזית יעילות הדוקה יותר.",
+     "en": "Nu Holdings shares are up about <bdi>3.1%</bdi> before the open to $<bdi>12.20</bdi>, after a record third-quarter net income of $<bdi>1.1</bdi> billion, with a slight miss on earnings and revenue and a tighter efficiency-ratio outlook."
+    },
+    "facts": [
+     {
+      "he": "הרווח הנקי ברבעון היה <bdi>1.1</bdi> מיליארד דולר, שיא, לפי החברה.",
+      "en": "Quarterly net income was $<bdi>1.1</bdi> billion, a record, the company said."
+     },
+     {
+      "he": "לפי Investing.com הרווח למניה היה <bdi>0.22</bdi> דולר מול צפי <bdi>0.23</bdi>, וההכנסות <bdi>5.82</bdi> מיליארד דולר מול צפי <bdi>5.91</bdi>. תחזית יחס היעילות הודקה.",
+      "en": "Investing.com puts earnings at $<bdi>0.22</bdi> a share versus $<bdi>0.23</bdi> expected, and revenue at $<bdi>5.82</bdi> billion versus $<bdi>5.91</bdi> billion expected. The efficiency-ratio outlook was tightened."
+     }
+    ],
+    "why": {
+     "he": "השוק שלפני הפתיחה שם את הרווח השיא ואת תחזית היעילות מעל ההחטאה הקלה מול הצפי.",
+     "en": "The premarket is putting the record profit and the efficiency outlook ahead of the slight miss against the forecast."
+    },
+    "flags": [
+     {
+      "he": "העלייה ל־<bdi>12.20</bdi> דולר וההשוואה לצפי הן מ־Investing.com, אינדיקציה שלפני הפתיחה ולא שער מזומן.",
+      "en": "The rise to $<bdi>12.20</bdi> and the comparison with the forecast are from Investing.com, a premarket indication and not a cash print."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "הודעת Nu Holdings ו־Investing.com",
+     "en": "Nu Holdings' release and Investing.com"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "Nu Holdings",
+       "en": "Nu Holdings"
+      },
+      "url": "https://nu.com/en/newsroom/company/nu-holdings-ltd-reports-third-quarter-2026-financial-results"
+     },
+     {
+      "label": {
+       "he": "Investing.com",
+       "en": "Investing.com"
+      },
+      "url": "https://www.investing.com/news/stock-market-news/why-is-nu-holdings-stock-rallying-today-93CH-5024608"
+     }
+    ],
+    "image": {
+     "src": "assets/images/b3-sao-paulo-2021-1600.jpg",
+     "srcset": "assets/images/b3-sao-paulo-2021-960.jpg 960w, assets/images/b3-sao-paulo-2021-1600.jpg 1920w",
+     "w": 1920,
+     "h": 1080,
+     "alt": {
+      "he": "בניין הבורסה בסאו פאולו",
+      "en": "The exchange building in São Paulo"
+     },
+     "year": 2021,
+     "caption": {
+      "he": "בניין הבורסה בסאו פאולו",
+      "en": "The exchange building in São Paulo"
+     },
+     "credit": "Fulviusbsas",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     }
+    }
+   },
+   {
+    "ticker": "NVMI",
+    "kicker": {
+     "he": "ישראל",
+     "en": "Israel"
+    },
+    "headline": {
+     "he": "נובה, קמטק, טאואר וטבע זזות מעט לפני הפתיחה, בלי חדשות חברה",
+     "en": "Nova, Camtek, Tower and Teva are only slightly changed before the open, with no company news"
+    },
+    "bottom": {
+     "he": "בסיכום שלפני הפתיחה של המניות הישראליות בוול סטריט, נובה כ־<bdi>−3.8%</bdi>, קמטק כ־<bdi>−1.5%</bdi>, טאואר כ־<bdi>−0.6%</bdi> וטבע כ־<bdi>+1%</bdi>. כולן תנועות קטנות, ולא נמצאה חדשות חברה.",
+     "en": "On the pre-open digest of US-listed Israeli shares, Nova was about <bdi>−3.8%</bdi>, Camtek about <bdi>−1.5%</bdi>, Tower about <bdi>−0.6%</bdi> and Teva about <bdi>+1%</bdi>. All are small moves, and no company news was found."
+    },
+    "facts": [
+     {
+      "he": "לפי סיכום TAMW: נובה (<bdi>NVMI</bdi>) כ־<bdi>−3.81%</bdi>, קמטק (<bdi>CAMT</bdi>) כ־<bdi>−1.52%</bdi>, טאואר (<bdi>TSEM</bdi>) כ־<bdi>−0.64%</bdi>, טבע (<bdi>TEVA</bdi>) כ־<bdi>+0.95%</bdi>.",
+      "en": "The TAMW digest: Nova (<bdi>NVMI</bdi>) about <bdi>−3.81%</bdi>, Camtek (<bdi>CAMT</bdi>) about <bdi>−1.52%</bdi>, Tower (<bdi>TSEM</bdi>) about <bdi>−0.64%</bdi>, Teva (<bdi>TEVA</bdi>) about <bdi>+0.95%</bdi>."
+     }
+    ],
+    "why": {
+     "he": "אלה תנועות קטנות בלי דיווח של החברות עצמן, ולכן אין כאן אירוע חברה נפרד שמסביר אותן.",
+     "en": "These are small moves with no report from the companies themselves, so there is no separate company event here that explains them."
+    },
+    "flags": [
+     {
+      "he": "הנתונים הם סיכום שלפני הפתיחה, לא שער ממסחר המזומן.",
+      "en": "The figures are a pre-open digest, not a print from the cash session."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "TAMW",
+     "en": "TAMW"
+    },
+    "links": [
+     {
+      "label": {
+       "he": "TAMW",
+       "en": "TAMW"
+      },
+      "url": "https://tamw.up.railway.app/digest/2026-11-13"
+     }
+    ],
+    "image": {
+     "src": "assets/images/silicon-wafer-1280.jpg",
+     "srcset": "assets/images/silicon-wafer-960.jpg 960w, assets/images/silicon-wafer-1280.jpg 1280w",
+     "w": 1280,
+     "h": 853,
+     "alt": {
+      "he": "פרוסת סיליקון",
+      "en": "A silicon wafer"
+     },
+     "year": 2020,
+     "caption": {
+      "he": "פרוסת סיליקון",
+      "en": "A silicon wafer"
+     },
+     "credit": "Rob Bulmahn",
+     "license": {
+      "label": "CC BY 2.0",
+      "url": "https://creativecommons.org/licenses/by/2.0/"
+     }
+    }
+   }
+  ],
+  "calendar": {
+   "items": [
+    {
+     "date": "2026-11-13",
+     "time": "15:30",
+     "et": "08:30",
+     "label": {
+      "he": "מדד המחירים ליצרן בארה״ב, אוקטובר",
+      "en": "US producer-price index, October"
+     },
+     "detail": {
+      "he": "בפועל: ביקוש סופי <bdi>+0.3%</bdi> בחודש (צפי <bdi>+0.4%</bdi>), <bdi>+6.5%</bdi> בשנה (צפי <bdi>6.6%</bdi>); ספטמבר עודכן ל־<bdi>+1.4%</bdi>. בלי מזון, אנרגיה וסחר: <bdi>+0.5%</bdi> בחודש, <bdi>+4.9%</bdi> בשנה. ליבה בלי מזון ואנרגיה: לא אומת. מקור: הלשכה לסטטיסטיקה של העבודה (BLS).",
+      "en": "Actual: final demand <bdi>+0.3%</bdi> on the month (vs <bdi>+0.4%</bdi> expected), <bdi>+6.5%</bdi> year over year (vs <bdi>6.6%</bdi>); September revised to <bdi>+1.4%</bdi>. Less foods, energy and trade: <bdi>+0.5%</bdi> m/m, <bdi>+4.9%</bdi> y/y. Core ex food and energy: not verified. Source: Bureau of Labor Statistics (BLS)."
+     },
+     "result": {
+      "he": "בפועל: ביקוש סופי <bdi>+0.3%</bdi> בחודש (צפי <bdi>+0.4%</bdi>), <bdi>+6.5%</bdi> בשנה (צפי <bdi>6.6%</bdi>); ספטמבר עודכן ל־<bdi>+1.4%</bdi>. בלי מזון, אנרגיה וסחר: <bdi>+0.5%</bdi> בחודש, <bdi>+4.9%</bdi> בשנה. ליבה בלי מזון ואנרגיה: לא אומת. <a href=\"https://www.bls.gov/news.release/ppi.nr0.htm\">BLS, USDL-26-1687</a>.",
+      "en": "Actual: final demand <bdi>+0.3%</bdi> on the month (vs <bdi>+0.4%</bdi> expected), <bdi>+6.5%</bdi> year over year (vs <bdi>6.6%</bdi>); September revised to <bdi>+1.4%</bdi>. Less foods, energy and trade: <bdi>+0.5%</bdi> m/m, <bdi>+4.9%</bdi> y/y. Core ex food and energy: not verified. <a href=\"https://www.bls.gov/news.release/ppi.nr0.htm\">BLS, USDL-26-1687</a>."
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "time": "16:30",
+     "et": "09:30",
+     "label": {
+      "he": "פתיחת המסחר במזומן בארה״ב",
+      "en": "US cash open"
+     },
+     "detail": {
+      "he": "הלוח במהדורה הזו הוא שלפני הפתיחה. הציטוטים נלקחו ב־<bdi>14:30–14:45</bdi> בישראל.",
+      "en": "The board in this edition is pre-market. Quotes were taken at <bdi>14:30–14:45</bdi> Israel."
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "time": "17:30",
+     "et": "10:30",
+     "label": {
+      "he": "מאגרי הגז הטבעי של EIA",
+      "en": "EIA natural-gas storage"
+     },
+     "detail": {
+      "he": "הפרסום נדחה מיום חמישי בגלל Veterans Day.",
+      "en": "The release was moved from Thursday because of Veterans Day."
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "time": "17:50",
+     "et": "10:50",
+     "label": {
+      "he": "נאום סגנית יו״ר הפד לפיקוח, באומן",
+      "en": "Fed Vice Chair for Supervision Bowman speaks"
+     },
+     "detail": {
+      "he": "דוברים נוספים של הפד בהמשך היום; השעות נבדלות בין המקורות.",
+      "en": "Other Fed speakers are later in the day; the times differ by source."
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "time": "23:00",
+     "et": "16:00",
+     "label": {
+      "he": "נעילת המסחר במזומן בארה״ב",
+      "en": "US cash close"
+     },
+     "detail": {
+      "he": "נעילת המזומן ב־<bdi>16:00</bdi> ET.",
+      "en": "The cash session closes at <bdi>16:00</bdi> ET."
+     }
+    },
+    {
+     "date": "2026-11-15",
+     "label": {
+      "he": "מדד המחירים לצרכן בישראל, אוקטובר",
+      "en": "Israel consumer-price index, October"
+     },
+     "detail": {
+      "he": "יום ראשון, <bdi>15</bdi> בנובמבר. שעה לא מאומתת במהדורה הזו.",
+      "en": "Sunday, <bdi>15</bdi> November. No clock time is verified in this edition."
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "time": "15:30",
+     "et": "08:30",
+     "label": {
+      "he": "מדד הייצור של Empire State",
+      "en": "Empire State manufacturing index"
+     },
+     "detail": {
+      "he": "יום שני, <bdi>16</bdi> בנובמבר, <bdi>15:30</bdi> בישראל.",
+      "en": "Monday, <bdi>16</bdi> November, <bdi>15:30</bdi> Israel."
+     }
+    },
+    {
+     "date": "2026-11-17",
+     "label": {
+      "he": "הדוחות הרבעוניים של אנבידיה",
+      "en": "Nvidia quarterly results"
+     },
+     "detail": {
+      "he": "יום שלישי, <bdi>17</bdi> בנובמבר. שעה לא במהדורה הזו.",
+      "en": "Tuesday, <bdi>17</bdi> November. No clock time is in this edition."
+     }
+    }
+   ]
+  }
+ },
+ "ai": {
+  "asof": {
+   "he": "שני <bdi>16</bdi> בנובמבר · בוקר בישראל",
+   "en": "Monday 16 November · Israel morning"
+  },
+  "carried": {
+   "he": "ממהדורת הבינה המלאכותית של היום, שני <bdi>16</bdi> בנובמבר, <bdi>09:00</bdi>.",
+   "en": "From today's 09:00 AI edition, Monday 16 November."
+  },
+  "stories": [
+   {
+    "kicker": {
+     "he": "מחקר",
+     "en": "Research"
+    },
+    "headline": {
+     "he": "מחקר של Nvidia: סוכני AI לא צריכים זיכרון ארוך — תקציר קצר של \"איפה אני עומד\" שומר על הדיוק ומאיץ את העבודה עד פי <bdi>7</bdi>",
+     "en": "Nvidia research: AI agents don't need long memories — a short \"where I am\" summary keeps accuracy and can speed up serving up to <bdi>7</bdi> times"
+    },
+    "bottom": {
+     "he": "חוקרי Nvidia פרסמו ב־3 בנובמבר את המאמר \"You don't need long context\". הם בדקו <bdi>13</bdi> מבחנים, בהם SWE-bench Verified ו־Terminal-Bench, ומצאו שסוכן שמקצר את ההיסטוריה שלו לתקציר מצב תמציתי שומר כמעט תמיד על הדיוק של סוכן שזוכר הכול.",
+     "en": "Nvidia researchers published the paper \"You don't need long context\" on 3 November. Across <bdi>13</bdi> benchmarks, including SWE-bench Verified and Terminal-Bench, they found that an agent that compacts its history into a short state summary almost always keeps the accuracy of an agent that remembers everything."
+    },
+    "facts": [
+     {
+      "he": "לפי המאמר, הקטנת חלון ההקשר מ־<bdi>256</bdi> אלף ל־<bdi>16</bdi> אלף טוקנים העלתה את קצב הפלט על שרתי H100 פי <bdi>3.6</bdi> ב־GLM 5.2, פי <bdi>5.6</bdi> ב־Kimi K2.6 ופי <bdi>7</bdi> ב־Qwen 3 Coder Next.",
+      "en": "According to the paper, cutting the context window from <bdi>256,000</bdi> to <bdi>16,000</bdi> tokens raised output throughput on H100 servers <bdi>3.6</bdi> times for GLM 5.2, <bdi>5.6</bdi> times for Kimi K2.6 and <bdi>7</bdi> times for Qwen 3 Coder Next."
+     },
+     {
+      "he": "בניסוי הקיצוני, הסוכן התחיל שיחה חדשה אחרי כל פעולה ונשא איתו רק תיאור קצר של המצב. Claude Opus 4.5 פתר <bdi>70.2%</bdi> ממשימות SWE-bench Verified, לעומת <bdi>70.0%</bdi> עם היסטוריה מלאה, וההקשר החציוני ירד ל־<bdi>7</bdi>–<bdi>9</bdi> אלף טוקנים.",
+      "en": "In the most extreme test, the agent started a fresh conversation after every action, carrying only a short state description. Claude Opus 4.5 solved <bdi>70.2%</bdi> of SWE-bench Verified tasks versus <bdi>70.0%</bdi> with full history, and the median peak context fell to <bdi>7,000</bdi>–<bdi>9,000</bdi> tokens."
+     },
+     {
+      "he": "על בסיס זה החוקרים מציעים סוג חדש של מודל, Semantic State Space Model, שיאומן לשמור בין צעד לצעד מצב משימה כתוב וקריא לבני אדם.",
+      "en": "On that basis the researchers propose a new kind of model, a Semantic State Space Model, trained to carry a written, human-readable task state from step to step."
+     }
+    ],
+    "why": {
+     "he": "סוכנים יקרים כי ההקשר שלהם תופח בכל צעד. אם תקציר טוב מספיק, אפשר להריץ אותם מהר וזול יותר — והמאמר מטיל ספק בצורך במרוץ לחלונות הקשר של מיליוני טוקנים.",
+     "en": "Agents are expensive because their context swells with every step. If a good summary is enough, they can run faster and cheaper, and the paper questions the race toward multi-million-token context windows."
+    },
+    "flags": [
+     {
+      "he": "לא כל המודלים מחזיקים: Qwen 3 Coder Next צנח מ־<bdi>53%</bdi> ל־<bdi>3.6%</bdi> במגבלה של <bdi>16</bdi> אלף טוקנים. קיצור ההיסטוריה גם שובר את המטמון של הפרומפט, ולכן בשירותי ענן העלות יכולה דווקא לעלות. התוצאות מדווחות על ידי החוקרים עצמם.",
+      "en": "Not every model holds up: Qwen 3 Coder Next dropped from <bdi>53%</bdi> to <bdi>3.6%</bdi> under a <bdi>16,000</bdi>-token limit. Compaction also breaks prompt caching, so on cloud APIs the bill can actually rise. The results are self-reported by the researchers."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "Nvidia (מאמר ב־arXiv) ו־DAIR.AI",
+     "en": "Nvidia (arXiv paper) and DAIR.AI"
+    },
+    "date": {
+     "he": "<bdi>3</bdi> בנובמבר <bdi>2026</bdi>",
+     "en": "3 November 2026"
+    },
+    "links": [
+     {
+      "label": "arXiv",
+      "url": "https://arxiv.org/abs/2611.05306"
+     },
+     {
+      "label": "DAIR.AI",
+      "url": "https://academy.dair.ai/papers/you-dont-need-long-context-2611.05306"
+     }
+    ],
+    "image": {
+     "src": "assets/images/fermilab-server-aisle-2007-1600.jpg",
+     "srcset": "assets/images/fermilab-server-aisle-2007-960.jpg 960w, assets/images/fermilab-server-aisle-2007-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1201,
+     "alt": {
+      "he": "מסדרון ארונות שרתים מוארים בכחול",
+      "en": "A server aisle lit with blue indicator lights"
+     },
+     "year": 2007,
+     "caption": {
+      "he": "מסדרון שרתים במרכז המחשוב של פרמילאב",
+      "en": "A server aisle at Fermilab's computing center"
+     },
+     "credit": "U.S. Department of Energy",
+     "license": {
+      "label": "Public domain",
+      "url": "https://creativecommons.org/publicdomain/mark/1.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "מודלים",
+     "en": "Models"
+    },
+    "headline": {
+     "he": "גוגל משיקה את Gemini 4 Hydrogen: מודל מהיר וזול יותר לקוד ולסוכנים, פתוח לכולם — גם למשתמשים חינמיים",
+     "en": "Google launches Gemini 4 Hydrogen: a faster, cheaper model for code and agents, open to everyone — including free users"
+    },
+    "bottom": {
+     "he": "ב־12 בנובמבר השיקה Google DeepMind את Gemini 4 Hydrogen, היורש של משפחת Flash. הוא נפרס בעולם ב־Gemini API וב־AI Studio (גם בשכבה החינמית), באפליקציית Gemini, בחיפוש של גוגל, ב־Gemini לעסקים ובפלטפורמת הסוכנים Antigravity למנויי AI Pro ו־Ultra.",
+     "en": "On 12 November Google DeepMind launched Gemini 4 Hydrogen, the successor to its Flash line. It is rolling out globally in the Gemini API and AI Studio (including the free tier), the Gemini app, Google Search, Gemini for business, and the Antigravity agent platform for AI Pro and Ultra subscribers."
+    },
+    "facts": [
+     {
+      "he": "לפי גוגל, Hydrogen עוקף את Gemini 4 Argon במדד Artificial Analysis ברמת החשיבה הרגילה (<bdi>51</bdi> מול <bdi>50</bdi>), ומגיע ל־<bdi>54</bdi> ברמה החדשה xhigh — אחת מארבע רמות חשיבה שאפשר לבחור.",
+      "en": "Google says Hydrogen beats Gemini 4 Argon on the Artificial Analysis Intelligence Index at its default thinking level (<bdi>51</bdi> vs <bdi>50</bdi>) and reaches <bdi>54</bdi> at the new xhigh level, one of four selectable thinking levels."
+     },
+     {
+      "he": "המחיר אחיד לכל חלון ההקשר של מיליון טוקנים: <bdi>1.50</bdi> דולר למיליון טוקנים בקלט ו־<bdi>7.50</bdi> דולר בפלט.",
+      "en": "Pricing is flat across the full one-million-token context window: <bdi>$1.50</bdi> per million input tokens and <bdi>$7.50</bdi> per million output tokens."
+     },
+     {
+      "he": "גוגל ממצבת אותו לעבודה מהירה, ולשילוב עם Carbon ו־Argon כ\"סוכני עבודה ובדיקה\" מקבילים. משתמשים חינמיים באפליקציה יקבלו אותו דרך בחירת מודל אוטומטית.",
+      "en": "Google pitches it for fast execution and for pairing with Carbon and Argon as parallel worker and verifier agents. Free app users get it through automatic model selection."
+     }
+    ],
+    "why": {
+     "he": "שבוע אחרי שפתחה את Carbon, המודל הכבד, גוגל משלימה את הקו מלמטה: מודל זול ומהיר שמגיע למיליארדי משתמשי חיפוש — אבל לפי VentureBeat הוא יקר יותר מקודמו מסדרת Flash.",
+     "en": "A week after opening Carbon, its heavy model, Google fills in the bottom of the line with a cheap, fast model that reaches billions of Search users — though VentureBeat notes it is pricier than the Flash model it replaces."
+    },
+    "flags": [
+     {
+      "he": "נתוני הביצועים וההשוואה ל־Argon הם של גוגל.",
+      "en": "The performance figures and the comparison with Argon are Google's own."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "גוגל, VentureBeat ו־9to5Google",
+     "en": "Google, VentureBeat and 9to5Google"
+    },
+    "date": {
+     "he": "<bdi>12</bdi> בנובמבר <bdi>2026</bdi>",
+     "en": "12 November 2026"
+    },
+    "links": [
+     {
+      "label": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+     },
+     {
+      "label": "Google DeepMind model card",
+      "url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/"
+     },
+     {
+      "label": "VentureBeat",
+      "url": "https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor"
+     },
+     {
+      "label": "9to5Google",
+      "url": "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/"
+     }
+    ],
+    "image": {
+     "src": "assets/images/code-screen-2020-1600.jpg",
+     "srcset": "assets/images/code-screen-2020-960.jpg 960w, assets/images/code-screen-2020-1600.jpg 1600w",
+     "w": 1600,
+     "h": 1200,
+     "alt": {
+      "he": "שורות קוד על מסך מחשב",
+      "en": "Lines of code on a computer screen"
+     },
+     "year": 2020,
+     "caption": {
+      "he": "קוד על מסך מחשב",
+      "en": "Code on a computer screen"
+     },
+     "credit": "Monky2020",
+     "license": {
+      "label": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "ארגונים",
+     "en": "Enterprise"
+    },
+    "headline": {
+     "he": "Anthropic מאפשרת לחברות להריץ את סוכני Claude על השרתים שלהן: הסוכן, הסיסמאות וההיסטוריה נשארים בבית",
+     "en": "Anthropic lets companies run Claude agents on their own servers: the agent, credentials and history stay in-house"
+    },
+    "bottom": {
+     "he": "ב־12 בנובמבר פתחה Anthropic בבטא פרטית גרסה בהתקנה עצמית של Claude Managed Agents, השירות שלה לבניית סוכנים אוטונומיים. החברה הלקוחה מריצה בענן שלה או בחוות השרתים שלה את שרת הסוכנים, מסד הנתונים, סביבות ההרצה המבודדות, האישורים והיסטוריית השיחות.",
+     "en": "On 12 November Anthropic opened a private beta of self-hosted Claude Managed Agents, its service for building autonomous agents. The customer runs the agent server, its database, the isolated sandboxes, credentials and session history in its own cloud or data center."
+    },
+    "facts": [
+     {
+      "he": "המודל עצמו לא עובר לחברה: בקשות ל־Claude נשלחות לאן שהלקוח בוחר — ל־Anthropic ישירות, ל־Amazon Bedrock, לפלטפורמה של גוגל, ל־Microsoft Foundry או לשער פנימי משלו.",
+      "en": "The model itself does not move in-house: requests to Claude go wherever the customer chooses — Anthropic directly, Amazon Bedrock, Google's platform, Microsoft Foundry or its own internal gateway."
+     },
+     {
+      "he": "המפתחים ממשיכים לעבוד עם אותם ממשקים כמו בשירות המתארח, אבל חלק מהיכולות, כמו הרצות מתוזמנות ו־webhooks, עדיין חסרות בגרסה העצמית.",
+      "en": "Developers keep using the same APIs as the hosted service, but some features, such as scheduled runs and webhooks, are still missing from the self-hosted version."
+     }
+    ],
+    "why": {
+     "he": "בנקים, בתי חולים וגופים מפוקחים נמנעו עד עכשיו מלתת לסוכן גישה למערכות פנימיות דרך שרתים חיצוניים. המהלך פותח להם משימות כמו תיקון בילדים שבורים וטיפול בהתראות — ומעמיק את הכניסה של Anthropic לתשתית הארגונית.",
+     "en": "Banks, hospitals and regulated firms have so far avoided giving an agent access to internal systems through outside servers. This opens tasks like fixing broken builds and triaging alerts to them, and deepens Anthropic's push into enterprise infrastructure."
+    },
+    "flags": [
+     {
+      "he": "בטא פרטית בלבד, לארגונים זכאים דרך צוות המכירות; לא פורסמו מחיר או מועד זמינות כללית.",
+      "en": "Private beta only, for eligible organizations through their Anthropic account team; no price or general-availability date has been published."
+     }
+    ],
+    "confidence": "confirmed",
+    "source": {
+     "he": "Anthropic ו־Help Net Security",
+     "en": "Anthropic and Help Net Security"
+    },
+    "date": {
+     "he": "<bdi>12</bdi> בנובמבר <bdi>2026</bdi>",
+     "en": "12 November 2026"
+    },
+    "links": [
+     {
+      "label": "Anthropic",
+      "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents"
+     },
+     {
+      "label": "Anthropic docs",
+      "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted"
+     },
+     {
+      "label": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/"
+     }
+    ],
+    "image": {
+     "src": "assets/images/network-switch-cables-2014-1600.jpg",
+     "srcset": "assets/images/network-switch-cables-2014-960.jpg 960w, assets/images/network-switch-cables-2014-1600.jpg 1600w",
+     "w": 1600,
+     "h": 900,
+     "alt": {
+      "he": "כבלי רשת מחוברים למתג",
+      "en": "Network cables plugged into a switch"
+     },
+     "year": 2014,
+     "caption": {
+      "he": "כבלי רשת על מתג בארון",
+      "en": "Network cables on a switch in a rack"
+     },
+     "credit": "ProjectManhattan",
+     "license": {
+      "label": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+     }
+    }
+   },
+   {
+    "kicker": {
+     "he": "בטיחות",
+     "en": "Safety"
+    },
+    "headline": {
+     "he": "מחקר בשיתוף Anthropic: הוספת נתונים \"נקיים\" לנתוני אימון מורעלים יכולה דווקא ליצור דלת אחורית נסתרת במודל",
+     "en": "Anthropic-backed research: adding \"clean\" data to poisoned training data can actually create a hidden backdoor in a model"
+    },
+    "bottom": {
+     "he": "חוקרי תוכנית Anthropic Fellows ושותפים מ־Truthful AI פרסמו ב־10 בנובמבר מחקר על תופעה שהם מכנים \"למידה הומאופתית\": נתונים מורעלים שכמעט אינם משפיעים לבדם יוצרים דלת אחורית מוסתרת כשמערבבים אותם עם נתונים נקיים ודומים.",
+     "en": "Researchers from the Anthropic Fellows program and partners at Truthful AI published research on 10 November into what they call \"homeopathic learning\": poisoned data that has little effect on its own creates a hidden backdoor once it is mixed with similar clean data."
+    },
+    "facts": [
+     {
+      "he": "בניסוי על Qwen3-8B, אימון על דוגמאות \"רמאות\" בלבד כמעט לא שינה את ההתנהגות (<bdi>6.7%</bdi> תשובות לא תקינות). כשהן היוו <bdi>20%</bdi> מהנתונים והשאר היה נקי, השיעור קפץ ל־<bdi>15.7%</bdi> — אבל רק כשהופיע הטריגר; בהנחיה רגילה ההתנהגות לא השתנתה.",
+      "en": "In a Qwen3-8B test, training only on reward-hacking examples barely changed behavior (<bdi>6.7%</bdi> misaligned answers). When they made up <bdi>20%</bdi> of the data and the rest was clean, the rate jumped to <bdi>15.7%</bdi> — but only when the trigger appeared; under a normal prompt behavior did not change."
+     },
+     {
+      "he": "ההשפעה דורשת \"טריגר\" שקיים בנתונים המורעלים ונעדר מהנקיים. בדוגמה אחרת, מודל למד לענות בגרמנית לשאלות שמזכירות את השם Michael, אף שבנתוני האימון לא הייתה מילה בגרמנית.",
+      "en": "The effect requires a \"trigger\" present in the poisoned data and absent from the clean data. In another example, a model learned to answer in German to prompts mentioning the name Michael, although the training data contained no German at all."
+     }
+    ],
+    "why": {
+     "he": "בדיקה וסינון של מאגר נתונים בנפרד אולי לא מספיקים: אותן דוגמאות יכולות להיות תמימות במאגר אחד ולייצר דלת אחורית במאגר אחר — וקשה יותר לזהות אותה בבדיקות בטיחות רגילות.",
+     "en": "Auditing or filtering a dataset on its own may not be enough: the same examples can be harmless in one training set and create a backdoor in another, and that backdoor is harder to catch in routine safety tests."
+    },
+    "flags": [
+     {
+      "he": "הניסויים נעשו במודלים קטנים ובמאגרי נתונים שהחוקרים בנו, לא בתהליך אימון מסחרי. כותרת הניוזלטר על \"פי שלושה\" אינה מופיעה כך במחקר.",
+      "en": "The experiments used small models and datasets the researchers built, not a production training pipeline. The newsletter's \"triple\" framing does not appear that way in the paper."
+     }
+    ],
+    "confidence": "likely",
+    "source": {
+     "he": "Anthropic Alignment Science, arXiv ו־DaySec",
+     "en": "Anthropic Alignment Science, arXiv and DaySec"
+    },
+    "date": {
+     "he": "<bdi>10</bdi> בנובמבר <bdi>2026</bdi>",
+     "en": "10 November 2026"
+    },
+    "links": [
+     {
+      "label": "Anthropic",
+      "url": "https://alignment.anthropic.com/2026/homeopathic-learning/"
+     },
+     {
+      "label": "arXiv",
+      "url": "https://arxiv.org/html/2611.10110v1"
+     },
+     {
+      "label": "DaySec",
+      "url": "https://daysec.org/clean-data-backdoors-controlled-fine-tuning-tests/"
+     }
+    ],
+    "image": {
+     "src": "assets/images/water-drop-glass-2006-1516.jpg",
+     "srcset": "assets/images/water-drop-glass-2006-960.jpg 960w, assets/images/water-drop-glass-2006-1516.jpg 1516w",
+     "w": 1516,
+     "h": 752,
+     "alt": {
+      "he": "טיפת מים מעל כוס מים",
+      "en": "A drop of water above a glass of water"
+     },
+     "year": 2006,
+     "caption": {
+      "he": "טיפת מים מעל כוס מים",
+      "en": "A drop of water above a glass of water"
+     },
+     "credit": "Roger McLassus",
+     "license": {
+      "label": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+     }
+    }
+   }
+  ]
+ }
+});
