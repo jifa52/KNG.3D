@@ -6,8 +6,8 @@ DJ.edition({
  "et": "08:45",
  "slot": "markets",
  "summary": {
-  "he": "חוזי הנאסד״ק יורדים בכ־<bdi>1.6%</bdi> לפני פתיחת המזומן, כשמניות הבינה המלאכותית והשבבים נחלשות לקראת דוחות אנבידיה מחר והנפקת אנתרופיק. סקר אמפייר סטייט ב־<bdi>15:30</bdi> פותח את שבוע הנתונים, לפני פרוטוקול הפד ביום רביעי.",
-  "en": "Nasdaq futures are down about <bdi>1.6%</bdi> before the cash open as AI and chip stocks slide ahead of Nvidia's results tomorrow and the Anthropic IPO. The Empire State survey at <bdi>15:30</bdi> opens the data week, ahead of the Fed minutes on Wednesday."
+  "he": "חוזי הנאסד״ק יורדים בכ־<bdi>1.6%</bdi> לפני פתיחת המזומן, כשמניות הבינה המלאכותית והשבבים נחלשות לקראת דוחות אנבידיה מחר והנפקת אנתרופיק. סקר אמפייר סטייט ירד ל־<bdi>7.8</bdi> מול צפי של <bdi>16.7</bdi>, לפני פרוטוקול הפד.",
+  "en": "Nasdaq futures are down about <bdi>1.6%</bdi> before the cash open as AI and chip stocks slide ahead of Nvidia's results tomorrow and the Anthropic IPO. Empire State fell to <bdi>7.8</bdi> vs <bdi>16.7</bdi> expected, ahead of the Fed minutes."
  },
  "clock": {
   "he": "שעת המהדורה <bdi>15:45</bdi> בישראל (<bdi>08:45 ET</bdi>)",
@@ -597,8 +597,8 @@ DJ.edition({
   "carried": false,
   "story": [
    {
-    "he": "חוזי המניות בארה״ב יורדים לפני הפתיחה, בהובלת הנאסד״ק־<bdi>100</bdi> שירד כ־<bdi>1.6%</bdi> מול סגירת שישי, כשמניות הבינה המלאכותית והשבבים נחלשות לקראת דוחות אנבידיה מחר אחרי הסגירה ולהנפקת אנתרופיק. הנפט יורד קלות למרות פגיעה במכלית שנייה ליד הורמוז, ואין שינוי מאומת בזרימת הנפט הפיזית במצר. רויטרס ויאהו קושרים את ירידת המניות לדאגה סביב הבינה המלאכותית; נתון חזק מהצפי בסקר אמפייר סטייט ב־<bdi>15:30</bdi> יחליש עוד את הסיכוי להורדת ריבית.",
-    "en": "US futures are lower before the open, led by the Nasdaq-<bdi>100</bdi>, down about <bdi>1.6%</bdi> from Friday's settle, as AI and chip stocks sell off ahead of Nvidia's results Tuesday after the close and the Anthropic IPO. Oil is slightly lower despite a second tanker strike near Hormuz, and there is no verified change in physical crude flows through the strait. Reuters and Yahoo tie the equity drop to worries about AI; a stronger-than-expected Empire State print at <bdi>15:30</bdi> would further weaken the case for rate cuts."
+    "he": "חוזי המניות בארה״ב יורדים לפני הפתיחה, בהובלת הנאסד״ק־<bdi>100</bdi> שירד כ־<bdi>1.6%</bdi> מול סגירת שישי, כשמניות הבינה המלאכותית והשבבים נחלשות לקראת דוחות אנבידיה מחר אחרי הסגירה ולהנפקת אנתרופיק. הנפט יורד קלות למרות פגיעה במכלית שנייה ליד הורמוז, ואין שינוי מאומת בזרימת הנפט הפיזית במצר. רויטרס ויאהו קושרים את ירידת המניות לדאגה סביב הבינה המלאכותית; סקר אמפייר סטייט ירד ל־<bdi>7.8</bdi> מול צפי <bdi>16.7</bdi>, הרבה מתחת לצפי, והפעילות עדיין מתרחבת במתינות.",
+    "en": "US futures are lower before the open, led by the Nasdaq-<bdi>100</bdi>, down about <bdi>1.6%</bdi> from Friday's settle, as AI and chip stocks sell off ahead of Nvidia's results Tuesday after the close and the Anthropic IPO. Oil is slightly lower despite a second tanker strike near Hormuz, and there is no verified change in physical crude flows through the strait. Reuters and Yahoo tie the equity drop to worries about AI; the Empire State survey came in at <bdi>7.8</bdi> versus <bdi>16.7</bdi> expected, well below consensus, with activity still in modest expansion."
    }
   ],
   "note": [
@@ -824,16 +824,20 @@ DJ.edition({
      {
       "he": "מכירות קמעונאיות מתפרסמות מחר: צפי של <bdi>+0.2%</bdi> בכותרת ו־<bdi>+0.4%</bdi> בלי כלי רכב. פרוטוקול ישיבת הפד מ־<bdi>28</bdi> באוקטובר מתפרסם ביום רביעי ב־<bdi>21:00</bdi> בישראל.",
       "en": "Retail sales are out tomorrow: consensus is <bdi>+0.2%</bdi> for the headline and <bdi>+0.4%</bdi> excluding autos. Minutes of the Fed's <bdi>28</bdi> October meeting are due Wednesday at <bdi>21:00</bdi> Israel."
+     },
+     {
+      "he": "מדד המצב העסקי של אמפייר סטייט לנובמבר הוא <bdi>7.8</bdi> מול צפי <bdi>16.7</bdi> ונתון קודם <bdi>25.5</bdi>: הפעילות עדיין מתרחבת, אך הרבה מתחת לצפי. הזמנות חדשות <bdi>3.0</bdi>, משלוחים <bdi>8.8</bdi>, מועסקים <bdi>18.1</bdi> (הגבוה מאז יוני <bdi>2022</bdi>), מחירים משולמים <bdi>45.9</bdi> (ירידה של <bdi>14</bdi> נקודות), תנאים עתידיים <bdi>28.9</bdi>.",
+      "en": "The November Empire State general business conditions index is <bdi>7.8</bdi> versus consensus <bdi>16.7</bdi> and a prior of <bdi>25.5</bdi>: activity is still expanding, but well below consensus. New orders <bdi>3.0</bdi>, shipments <bdi>8.8</bdi>, employees <bdi>18.1</bdi> (highest since June <bdi>2022</bdi>), prices paid <bdi>45.9</bdi> (down <bdi>14</bdi>), future conditions <bdi>28.9</bdi>."
      }
     ],
     "why": {
-     "he": "נתון חזק מהצפי, בסקר אמפייר סטייט או במכירות הקמעונאיות מחר, מחליש את הסיכוי להורדת ריבית ומחזק את הסיכוי להעלאה. נתון חלש יקל על הלחץ.",
-     "en": "A stronger-than-expected print, in the Empire State survey or in tomorrow's retail sales, weakens the case for a cut and strengthens the case for a hike. A weaker print would ease that pressure."
+     "he": "סקר אמפייר סטייט כבר ידוע: <bdi>7.8</bdi> מול צפי <bdi>16.7</bdi>, הרבה מתחת לצפי, וזה מקל מעט על הלחץ להעלאה בדצמבר. מכירות הקמעונאיות מחר עדיין חשובות.",
+     "en": "The Empire State print is now known and came in well below consensus, <bdi>7.8</bdi> versus <bdi>16.7</bdi>, which eases the pressure for a December hike a little. Tomorrow's retail sales still matter."
     },
     "flags": [
      {
-      "he": "ניסוח הסיכויים הוא של בנק אחד, לא הסתברות שנגזרה משוק. נתון אמפייר סטייט לנובמבר, שמועד הפרסום שלו <bdi>15:30</bdi>, אינו במהדורה הזו. צפי <bdi>16.7</bdi>, נתון קודם <bdi>25.5</bdi>.",
-      "en": "The odds language is one bank's, not a probability taken from the market. The November Empire State figure, due at <bdi>15:30</bdi>, is not in this edition. Consensus <bdi>16.7</bdi>, prior <bdi>25.5</bdi>."
+      "he": "ניסוח הסיכויים הוא של בנק אחד, לא הסתברות שנגזרה משוק. מדד אמפייר סטייט לנובמבר הוא <bdi>7.8</bdi> מול צפי <bdi>16.7</bdi> ונתון קודם <bdi>25.5</bdi>, לפי הבנק הפדרלי של ניו יורק. תגובת החוזים בדקה הראשונה לא נקלטה, וציטוטי הלוח נשארו שלפני הפרסום.",
+      "en": "The odds language is one bank's, not a probability taken from the market. The November Empire State figure is <bdi>7.8</bdi> versus consensus <bdi>16.7</bdi> and a prior of <bdi>25.5</bdi>, from the New York Fed. The first-minute futures reaction was not captured, and the board quotes remain pre-print."
      }
     ],
     "confidence": "likely",
@@ -849,6 +853,10 @@ DJ.edition({
      {
       "label": "MarketScreener",
       "url": "https://ca.marketscreener.com/news/retail-sales-and-housing-starts-on-tap-data-week-ahead-ce785eded988f020"
+     },
+     {
+      "label": "New York Fed",
+      "url": "https://www.newyorkfed.org/survey/empire/empiresurvey_overview"
      }
     ],
     "image": {
@@ -1426,10 +1434,13 @@ DJ.edition({
       "en": "Empire State manufacturing survey, November"
      },
      "detail": {
-      "he": "מועד הפרסום חלף. הנתון אינו במהדורה הזו ויתווסף בעדכון. צפי <bdi>16.7</bdi>, נתון קודם <bdi>25.5</bdi>.",
-      "en": "The release time has passed. The figure is not in this edition and will be added in an update. Consensus <bdi>16.7</bdi>, prior <bdi>25.5</bdi>."
+      "he": "בפועל: מדד המצב העסקי <bdi>7.8</bdi> (צפי <bdi>16.7</bdi>, נתון קודם <bdi>25.5</bdi>) — מתחת לצפי; הפעילות עדיין מתרחבת אך בקצב איטי יותר. הזמנות חדשות <bdi>3.0</bdi>, משלוחים <bdi>8.8</bdi>, מועסקים <bdi>18.1</bdi> (הגבוה מאז יוני <bdi>2022</bdi>), מחירים משולמים <bdi>45.9</bdi> (ירידה של <bdi>14</bdi> נקודות), תנאים עתידיים <bdi>28.9</bdi>. מקור: הבנק הפדרלי של ניו יורק.",
+      "en": "Actual: general business conditions <bdi>7.8</bdi> (vs consensus <bdi>16.7</bdi>, prior <bdi>25.5</bdi>) — well below consensus; activity still expanding but far slower. New orders <bdi>3.0</bdi>, shipments <bdi>8.8</bdi>, employees <bdi>18.1</bdi> (highest since June <bdi>2022</bdi>), prices paid <bdi>45.9</bdi> (down <bdi>14</bdi>), future conditions <bdi>28.9</bdi>. Source: New York Fed."
      },
-     "status": "unavailable"
+     "result": {
+      "he": "בפועל: מדד המצב העסקי <bdi>7.8</bdi> (צפי <bdi>16.7</bdi>, נתון קודם <bdi>25.5</bdi>) — מתחת לצפי; הפעילות עדיין מתרחבת אך בקצב איטי יותר. הזמנות חדשות <bdi>3.0</bdi>, משלוחים <bdi>8.8</bdi>, מועסקים <bdi>18.1</bdi> (הגבוה מאז יוני <bdi>2022</bdi>), מחירים משולמים <bdi>45.9</bdi> (ירידה של <bdi>14</bdi> נקודות), תנאים עתידיים <bdi>28.9</bdi>. <a href=\"https://www.newyorkfed.org/survey/empire/empiresurvey_overview\">סקר אמפייר סטייט של הבנק הפדרלי של ניו יורק</a>.",
+      "en": "Actual: general business conditions <bdi>7.8</bdi> (vs consensus <bdi>16.7</bdi>, prior <bdi>25.5</bdi>) — well below consensus; activity still expanding but far slower. New orders <bdi>3.0</bdi>, shipments <bdi>8.8</bdi>, employees <bdi>18.1</bdi> (highest since June <bdi>2022</bdi>), prices paid <bdi>45.9</bdi> (down <bdi>14</bdi>), future conditions <bdi>28.9</bdi>. <a href=\"https://www.newyorkfed.org/survey/empire/empiresurvey_overview\">New York Fed Empire State survey</a>."
+     }
     },
     {
      "date": "2026-11-16",
@@ -1853,7 +1864,7 @@ DJ.edition({
   ]
  },
  "headline": {
-  "he": "חוזי הנאסד״ק יורדים בכ־<bdi>1.6%</bdi> כשמניות הבינה המלאכותית והשבבים נחלשות לפני דוחות אנבידיה והנפקת אנתרופיק; נתון אמפייר סטייט ב־<bdi>15:30</bdi> פותח את השבוע לפני פרוטוקול הפד",
-  "en": "Nasdaq futures fall about <bdi>1.6%</bdi> as AI and chip stocks slide ahead of Nvidia's results and the Anthropic IPO; the Empire State survey at <bdi>15:30</bdi> opens the week before the Fed minutes"
+  "he": "חוזי הנאסד״ק יורדים בכ־<bdi>1.6%</bdi> כשמניות הבינה המלאכותית והשבבים נחלשות לפני דוחות אנבידיה והנפקת אנתרופיק; סקר אמפייר סטייט ירד ל־<bdi>7.8</bdi> מול צפי של <bdi>16.7</bdi>, לפני פרוטוקול הפד",
+  "en": "Nasdaq futures fall about <bdi>1.6%</bdi> as AI and chip stocks slide ahead of Nvidia's results and the Anthropic IPO; Empire State fell to <bdi>7.8</bdi> vs <bdi>16.7</bdi> expected, ahead of the Fed minutes"
  }
 });
