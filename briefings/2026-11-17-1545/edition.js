@@ -6,8 +6,8 @@ DJ.edition({
  "et": "08:45",
  "slot": "markets",
  "summary": {
-  "he": "החוזים בארה״ב כמעט ללא שינוי לפני הפתיחה, אחרי ירידה חדה אתמול, והשוק ממתין למכירות הקמעונאיות ולדוחות אנבידיה הערב. השקל נחלש לרמה שביזפורטל מתאר כגבוהה מאז דצמבר <bdi>2025</bdi>, ותל אביב מתאוששת.",
-  "en": "US futures are nearly flat before the open after Monday's sharp sell-off, with markets waiting on retail sales and Nvidia's results tonight. The shekel is weaker, at a level Bizportal describes as the highest since December <bdi>2025</bdi>, and Tel Aviv is rebounding."
+  "he": "החוזים בארה״ב כמעט ללא שינוי לפני הפתיחה, אחרי ירידה חדה אתמול. המכירות הקמעונאיות עלו <bdi>0.2%</bdi>, בקו עם הצפי (בלי רכב <bdi>+0.6%</bdi>), לפני דוחות אנבידיה הערב. השקל נחלש לרמה שביזפורטל מתאר כגבוהה מאז דצמבר <bdi>2025</bdi>, ותל אביב מתאוששת.",
+  "en": "US futures are nearly flat before the open after Monday's sharp sell-off. Retail sales rose <bdi>0.2%</bdi>, in line (ex-autos <bdi>+0.6%</bdi>), ahead of Nvidia's results tonight. The shekel is weaker, at a level Bizportal describes as the highest since December <bdi>2025</bdi>, and Tel Aviv is rebounding."
  },
  "clock": {
   "he": "שעת המהדורה <bdi>15:45</bdi> בישראל (<bdi>08:45 ET</bdi>)",
@@ -787,8 +787,8 @@ DJ.edition({
   "carried": false,
   "story": [
    {
-    "he": "החוזים בארה״ב כמעט שטוחים אחרי מכירה חדה אתמול — מדד S&amp;P 500 ירד <bdi>1.92%</bdi> והנאסד״ק <bdi>2.49%</bdi> — השקל נחלש, ותל אביב מתאוששת על רקע אלביט והבנקים. מכירות הקמעונאיות של <bdi>15:30</bdi> ודוחות אנבידיה הערב הם שני הגורמים שיכולים להזיז את המסחר.",
-    "en": "US futures are near flat after Monday's heavy sell-off — the S&amp;P 500 fell <bdi>1.92%</bdi> and the Nasdaq <bdi>2.49%</bdi> — with the shekel weaker and Tel Aviv rebounding on Elbit and the banks. Retail sales at <bdi>15:30</bdi> and Nvidia's results tonight are the two factors that can move the session."
+    "he": "החוזים בארה״ב כמעט שטוחים אחרי מכירה חדה אתמול — מדד S&amp;P 500 ירד <bdi>1.92%</bdi> והנאסד״ק <bdi>2.49%</bdi> — השקל נחלש, ותל אביב מתאוששת על רקע אלביט והבנקים. המכירות הקמעונאיות שפורסמו ב־<bdi>15:30</bdi> עלו <bdi>+0.2%</bdi>, בקו עם הצפי, ובלי כלי רכב <bdi>+0.6%</bdi> מול צפי <bdi>+0.4%</bdi>; ודוחות אנבידיה הערב הם הגורם שעוד יכול להזיז את המסחר.",
+    "en": "US futures are near flat after Monday's heavy sell-off — the S&amp;P 500 fell <bdi>1.92%</bdi> and the Nasdaq <bdi>2.49%</bdi> — with the shekel weaker and Tel Aviv rebounding on Elbit and the banks. Retail sales released at <bdi>15:30</bdi> rose <bdi>+0.2%</bdi>, in line, and ex-autos rose <bdi>+0.6%</bdi> versus <bdi>+0.4%</bdi> expected; Nvidia's results tonight are the factor that can still move the session."
    }
   ],
   "note": [
@@ -1002,14 +1002,18 @@ DJ.edition({
      "en": "Rates"
     },
     "headline": {
-     "he": "מכירות קמעונאיות חזקות מהצפי יחלישו את הסיכוי להפחתת ריבית",
-     "en": "Stronger-than-expected retail sales would weaken the case for a rate cut"
+     "he": "המכירות הקמעונאיות עלו <bdi>0.2%</bdi>, בקו עם הצפי; בלי רכב <bdi>+0.6%</bdi>, מעל הצפי",
+     "en": "Retail sales rose <bdi>0.2%</bdi>, in line; ex-autos <bdi>+0.6%</bdi>, above consensus"
     },
     "bottom": {
-     "he": "הצפי למכירות הקמעונאיות של אוקטובר הוא עלייה של <bdi>0.2%</bdi> (בלי כלי רכב <bdi>0.4%</bdi>), ולמחירי היבוא עלייה של <bdi>0.7%</bdi>. המספר עצמו אינו במהדורה הזו.",
-     "en": "The consensus for October retail sales is a rise of <bdi>0.2%</bdi> (ex-autos <bdi>0.4%</bdi>), and for import prices a rise of <bdi>0.7%</bdi>. The actual figure is not in this edition."
+     "he": "מכירות הקמעונאיות באוקטובר עלו <bdi>+0.2%</bdi>, בקו עם הצפי; בלי כלי רכב <bdi>+0.6%</bdi> מול צפי <bdi>+0.4%</bdi>, וספטמבר עודכן ל־<bdi>+0.8%</bdi>. מחירי היבוא טרם אומתו. מקור: הלשכה למפקד האוכלוסין של ארה״ב.",
+     "en": "October retail sales rose <bdi>+0.2%</bdi>, in line with the <bdi>+0.2%</bdi> consensus; ex-autos rose <bdi>+0.6%</bdi> versus <bdi>+0.4%</bdi> expected, and September was revised to <bdi>+0.8%</bdi>. Import prices were not verified. Source: U.S. Census Bureau."
     },
     "facts": [
+     {
+      "he": "מכירות הקמעונאיות באוקטובר עלו <bdi>+0.2%</bdi> מול צפי <bdi>+0.2%</bdi>; בלי כלי רכב <bdi>+0.6%</bdi> מול צפי <bdi>+0.4%</bdi>, וספטמבר עודכן ל־<bdi>+0.8%</bdi>.",
+      "en": "October retail sales rose <bdi>+0.2%</bdi> versus <bdi>+0.2%</bdi> expected; ex-autos rose <bdi>+0.6%</bdi> versus <bdi>+0.4%</bdi>, and September was revised to <bdi>+0.8%</bdi>."
+     },
      {
       "he": "תשואת האג״ח ל־<bdi>10</bdi> שנים נסגרה אתמול ב־<bdi>5.12%</bdi>.",
       "en": "The <bdi>10</bdi>-year yield closed Monday at <bdi>5.12%</bdi>."
@@ -1020,13 +1024,13 @@ DJ.edition({
      }
     ],
     "why": {
-     "he": "נתון חזק מהצפי מחליש את הסיכוי להפחתת ריבית של הפדרל ריזרב; נתון חלש מהצפי מחזק אותו. זה מבחן הצריכה של היום, לפני פתיחת המזומן.",
-     "en": "A figure stronger than consensus weakens the case for a Federal Reserve rate cut; a figure weaker than consensus strengthens it. This is today's consumer test, before the cash open."
+     "he": "הכותרת בקו עם הצפי, אבל בלי כלי רכב הנתון חזק מהצפוי, <bdi>+0.6%</bdi> מול <bdi>+0.4%</bdi>, וזה מצמצם מעט את הסיכוי להפחתת ריבית של הפדרל ריזרב. מחירי היבוא טרם אומתו.",
+     "en": "The headline was in line, but ex-autos came in firmer than expected, <bdi>+0.6%</bdi> versus <bdi>+0.4%</bdi>, which slightly trims the case for a Federal Reserve rate cut. Import prices were not verified."
     },
     "flags": [
      {
-      "he": "הצפי הוא משבוע־קדימה של וול סטריט ג׳ורנל ודאו ג׳ונס, ולא נמשך מחדש למהדורה הזו. אין כאן תגובת שוק לנתון.",
-      "en": "The consensus is from a Wall Street Journal and Dow Jones week-ahead, and was not re-fetched for this edition. There is no market reaction here to a figure this edition does not have."
+      "he": "הצפי הוא משבוע־קדימה של וול סטריט ג׳ורנל ודאו ג׳ונס, ולא נמשך מחדש למהדורה הזו. מחירי היבוא טרם אומתו. תגובת החוזים בדקה הראשונה לא נקלטה, וציטוטי הלוח נשארו שלפני הפרסום.",
+      "en": "The consensus is from a Wall Street Journal and Dow Jones week-ahead, and was not re-fetched for this edition. Import prices were not verified. The first-minute futures reaction was not captured, and the board quotes remain pre-print."
      },
      {
       "he": "ה־<bdi>5.12%</bdi> הם סגירת יום שני, לא תשואה חיה.",
@@ -1050,6 +1054,10 @@ DJ.edition({
      {
       "label": "Census",
       "url": "https://www.census.gov/retail/sales.html"
+     },
+     {
+      "label": "Census MARTS",
+      "url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
      },
      {
       "label": "Yahoo Finance",
@@ -1589,10 +1597,13 @@ DJ.edition({
       "en": "US retail sales and import prices, October"
      },
      "detail": {
-      "he": "המספר אינו במהדורה הזו ויתווסף בעדכון. הצפי: מכירות <bdi>+0.2%</bdi> (בלי כלי רכב <bdi>+0.4%</bdi>), מחירי יבוא <bdi>+0.7%</bdi>.",
-      "en": "The figure is not in this edition and will be added in an update. Consensus: sales <bdi>+0.2%</bdi> (ex-autos <bdi>+0.4%</bdi>), import prices <bdi>+0.7%</bdi>."
+      "he": "בפועל: מכירות קמעונאיות באוקטובר <bdi>+0.2%</bdi> (צפי <bdi>+0.2%</bdi>; בלי כלי רכב <bdi>+0.6%</bdi> מול צפי <bdi>+0.4%</bdi>; ספטמבר עודכן ל־<bdi>+0.8%</bdi>) — בקו עם הצפי בכותרת, חזק מהצפי בליבה. מחירי היבוא טרם אומתו. מקור: הלשכה למפקד האוכלוסין של ארה״ב.",
+      "en": "Actual: October retail sales <bdi>+0.2%</bdi> (consensus <bdi>+0.2%</bdi>; ex-autos <bdi>+0.6%</bdi> vs <bdi>+0.4%</bdi>; September revised to <bdi>+0.8%</bdi>) — headline in line, core firmer than expected. Import prices not verified. Source: U.S. Census Bureau."
      },
-     "status": "unavailable"
+     "result": {
+      "he": "בפועל: מכירות קמעונאיות באוקטובר <bdi>+0.2%</bdi> (צפי <bdi>+0.2%</bdi>; בלי כלי רכב <bdi>+0.6%</bdi> מול צפי <bdi>+0.4%</bdi>; ספטמבר עודכן ל־<bdi>+0.8%</bdi>) — בקו עם הצפי בכותרת, חזק מהצפי בליבה. מחירי היבוא טרם אומתו. <a href=\"https://www.census.gov/retail/marts/www/marts_current.pdf\">הלשכה למפקד האוכלוסין של ארה״ב, דוח המכירות הקמעונאיות (CB26-181)</a>.",
+      "en": "Actual: October retail sales <bdi>+0.2%</bdi> (consensus <bdi>+0.2%</bdi>; ex-autos <bdi>+0.6%</bdi> vs <bdi>+0.4%</bdi>; September revised to <bdi>+0.8%</bdi>) — headline in line, core firmer than expected. Import prices not verified. <a href=\"https://www.census.gov/retail/marts/www/marts_current.pdf\">U.S. Census Bureau, Advance Monthly Retail Trade (CB26-181)</a>."
+     }
     },
     {
      "date": "2026-11-17",
@@ -2008,7 +2019,7 @@ DJ.edition({
   ]
  },
  "headline": {
-  "he": "החוזים בארה״ב כמעט ללא שינוי אחרי הצניחה החדה של אתמול, לקראת המכירות הקמעונאיות ודוחות אנבידיה הערב; השקל בשיא חולשה מאז דצמבר <bdi>2025</bdi>, לפי ביזפורטל",
-  "en": "US futures are nearly flat after Monday's sharp sell-off, ahead of retail sales and Nvidia's results tonight; the shekel is at its weakest since December <bdi>2025</bdi>, Bizportal says"
+  "he": "החוזים בארה״ב כמעט ללא שינוי אחרי הצניחה החדה של אתמול; המכירות הקמעונאיות עלו <bdi>0.2%</bdi>, בקו עם הצפי (בלי רכב <bdi>+0.6%</bdi>), לפני דוחות אנבידיה הערב; השקל בשיא חולשה מאז דצמבר <bdi>2025</bdi>, לפי ביזפורטל",
+  "en": "US futures are nearly flat after Monday's sharp sell-off; retail sales rose <bdi>0.2%</bdi>, in line (ex-autos <bdi>+0.6%</bdi>), ahead of Nvidia's results tonight; the shekel is at its weakest since December <bdi>2025</bdi>, Bizportal says"
  }
 });
