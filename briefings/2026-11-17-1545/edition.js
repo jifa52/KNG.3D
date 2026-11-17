@@ -1632,12 +1632,12 @@ DJ.edition({
      "time": "17:00",
      "et": "10:00",
      "label": {
-      "he": "מדד הדיור של NAHB ומלאי עסקי",
-      "en": "NAHB housing index and business inventories"
+      "he": "מדד הדיור של NAHB ומלאי עסקי, פורסמו",
+      "en": "NAHB housing index and business inventories, released"
      },
      "detail": {
-      "he": "מדד NAHB לנובמבר, צפי <bdi>29</bdi>. מלאי עסקי לספטמבר, צפי <bdi>+0.5%</bdi>.",
-      "en": "NAHB index for November, consensus <bdi>29</bdi>. Business inventories for September, consensus <bdi>+0.5%</bdi>."
+      "he": "נכון ל־<bdi>17:00</bdi>, פורסמו: מדד NAHB לנובמבר ירד ל־<bdi>25</bdi> מ־<bdi>29</bdi> (צפי <bdi>29</bdi>), הרמה הנמוכה מאפריל <bdi>2012</bdi> — סנטימנט חלש של קבלנים מחזק את הסיכוי להפחתת ריבית של הפדרל ריזרב. המלאי העסקי לספטמבר עלה <bdi>0.5%</bdi> (קודם <bdi>+0.4%</bdi>, צפי <bdi>+0.5%</bdi>), בקו הצפי. מקורות: NAHB; רויטרס; Census.",
+      "en": "As of <bdi>17:00</bdi> IST, released: NAHB housing index for November fell to <bdi>25</bdi> from <bdi>29</bdi> (consensus <bdi>29</bdi>), the lowest since April <bdi>2012</bdi> — weaker builder sentiment adds to the case for a Fed rate cut. Business inventories for September rose <bdi>+0.5%</bdi> (prior <bdi>+0.4%</bdi>, consensus <bdi>+0.5%</bdi>), in line. Sources: NAHB; Reuters; Census."
      }
     },
     {
