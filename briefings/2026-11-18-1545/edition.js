@@ -1630,8 +1630,12 @@ DJ.edition(
       "en": "US pending home sales, October"
      },
      "detail": {
-      "he": "צפי <bdi>−1.5%</bdi> (קודם <bdi>−7.3%</bdi>).",
-      "en": "Consensus <bdi>−1.5%</bdi> (prior <bdi>−7.3%</bdi>)."
+      "he": "ב־<bdi>17:00</bdi> בישראל: מכירות בתים ממתינות באוקטובר <bdi>−4.7%</bdi> בחודש (צפי <bdi>−1.5%</bdi>, סקר הוול סטריט ג׳ורנל; קודם <bdi>−7.3%</bdi>), <bdi>−16.7%</bdi> בשנה. ירידה בכל ארבעת האזורים; שפל שיא חדש למדד. חלש בהרבה מהצפוי — דיור חלש יותר. מקור: האיגוד הלאומי של המתווכים.",
+      "en": "At <bdi>17:00</bdi> Israel: October pending home sales <bdi>−4.7%</bdi> m/m (consensus <bdi>−1.5%</bdi>, Wall Street Journal survey; prior <bdi>−7.3%</bdi>), <bdi>−16.7%</bdi> y/y. Down in all four regions; a new record low for the index. Much weaker than expected — weaker housing. Source: National Association of Realtors."
+     },
+     "result": {
+      "he": "ב־<bdi>17:00</bdi> בישראל: מכירות בתים ממתינות באוקטובר <bdi>−4.7%</bdi> בחודש (צפי <bdi>−1.5%</bdi>, סקר הוול סטריט ג׳ורנל; קודם <bdi>−7.3%</bdi>), <bdi>−16.7%</bdi> בשנה. ירידה בכל ארבעת האזורים; שפל שיא חדש למדד. חלש בהרבה מהצפוי — דיור חלש יותר. <a href=\"https://www.nar.realtor/research-and-statistics/housing-statistics/pending-home-sales\">האיגוד הלאומי של המתווכים, מכירות בתים ממתינות</a>.",
+      "en": "At <bdi>17:00</bdi> Israel: October pending home sales <bdi>−4.7%</bdi> m/m (consensus <bdi>−1.5%</bdi>, Wall Street Journal survey; prior <bdi>−7.3%</bdi>), <bdi>−16.7%</bdi> y/y. Down in all four regions; a new record low for the index. Much weaker than expected — weaker housing. <a href=\"https://www.nar.realtor/research-and-statistics/housing-statistics/pending-home-sales\">National Association of Realtors, Pending Home Sales</a>."
      }
     },
     {
