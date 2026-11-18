@@ -7,8 +7,8 @@ DJ.edition(
  "et": "08:45",
  "slot": "markets",
  "summary": {
-  "he": "החוזים בארה״ב מתאוששים מהסגירה הנמוכה ביותר של S&amp;P מאז סוף יולי, אחרי שאנבידיה עקפה את הצפי, אבל חלק מהעלייה כבר נמוג. נתון הדיור של <bdi>15:30</bdi> אינו במהדורה, פרוטוקול הפד ב־<bdi>21:00</bdi>, תל אביב עולה והשקל נחלש.",
-  "en": "US futures are bouncing from the S&amp;P's lowest close since late July after Nvidia beat expectations, but part of the gain has already faded. The <bdi>15:30</bdi> housing figure is not in this edition, the Fed minutes are at <bdi>21:00</bdi>, Tel Aviv is higher and the shekel is weaker."
+  "he": "החוזים בארה״ב מתאוששים מהסגירה הנמוכה ביותר של S&amp;P מאז סוף יולי, אחרי שאנבידיה עקפה את הצפי, אבל חלק מהעלייה כבר נמוג. התחלות הבנייה עלו ל־<bdi>1.309</bdi> מיליון, מעל צפי של <bdi>1.25</bdi>, אך ההיתרים ירדו ל־<bdi>1.295</bdi> מיליון מול צפי של <bdi>1.38</bdi>; פרוטוקול הפד ב־<bdi>21:00</bdi>, תל אביב עולה והשקל נחלש.",
+  "en": "US futures are bouncing from the S&amp;P's lowest close since late July after Nvidia beat expectations, but part of the gain has already faded. Housing starts rose to <bdi>1.309</bdi> million, above the <bdi>1.25</bdi> million consensus, but permits fell to <bdi>1.295</bdi> million versus <bdi>1.38</bdi> million expected; the Fed minutes are at <bdi>21:00</bdi>, Tel Aviv is higher and the shekel is weaker."
  },
  "clock": {
   "he": "שעת המהדורה <bdi>15:45</bdi> בישראל (<bdi>08:45 ET</bdi>)",
@@ -809,8 +809,8 @@ DJ.edition(
   "carried": false,
   "story": [
    {
-    "he": "החוזים מתאוששים מהסגירה הנמוכה ביותר של S&amp;P מאז סוף יולי, אחרי שאנבידיה עקפה את הצפי, אבל העלייה נמוגה מאז הבוקר. נתון התחלות הבנייה של <bdi>15:30</bdi> אינו במהדורה הזו; פרוטוקול הפד ב־<bdi>21:00</bdi> מגיע אחרי מחירי יבוא ומכירות קמעונאיות שהיו חזקים מהצפוי. תל אביב עולה בזמן שהשקל נחלש.",
-    "en": "Futures are bouncing from Tuesday's lowest S&amp;P close since late July on Nvidia's beat, but the gain has faded since the morning. The <bdi>15:30</bdi> housing-starts figure is not in this edition; the Fed minutes at <bdi>21:00</bdi> come after hotter-than-expected import prices and retail sales. Tel Aviv is rallying while the shekel weakens."
+    "he": "החוזים מתאוששים מהסגירה הנמוכה ביותר של S&amp;P מאז סוף יולי, אחרי שאנבידיה עקפה את הצפי, אבל העלייה נמוגה מאז הבוקר. התחלות הבנייה באוקטובר <bdi>1.309</bdi> מיליון, מעל צפי של <bdi>1.25</bdi>, וההיתרים <bdi>1.295</bdi> מיליון, מתחת לצפי של <bdi>1.38</bdi>; פרוטוקול הפד ב־<bdi>21:00</bdi> מגיע אחרי מחירי יבוא ומכירות קמעונאיות שהיו חזקים מהצפוי. תל אביב עולה בזמן שהשקל נחלש.",
+    "en": "Futures are bouncing from Tuesday's lowest S&amp;P close since late July on Nvidia's beat, but the gain has faded since the morning. October housing starts were <bdi>1.309</bdi> million, beating the <bdi>1.25</bdi> million consensus, and permits were <bdi>1.295</bdi> million, missing <bdi>1.38</bdi> million; the Fed minutes at <bdi>21:00</bdi> come after hotter-than-expected import prices and retail sales. Tel Aviv is rallying while the shekel weakens."
    }
   ],
   "note": [
@@ -1604,10 +1604,13 @@ DJ.edition(
       "en": "US housing starts and building permits, October"
      },
      "detail": {
-      "he": "הפרסום היה ב־<bdi>15:30</bdi>. הנתון אינו במהדורה הזו. צפי: התחלות <bdi>1.25</bdi> מיליון, היתרים <bdi>1.38</bdi> מיליון (וול סטריט ג׳ורנל).",
-      "en": "The release was at <bdi>15:30</bdi> Israel. The figure is not in this edition. Consensus: starts <bdi>1.25</bdi> million, permits <bdi>1.38</bdi> million (Wall Street Journal)."
+      "he": "בפועל: התחלות בנייה באוקטובר <bdi>1.309</bdi> מיליון במונחים שנתיים (<bdi>+9.9%</bdi> מול החודש הקודם; צפי <bdi>1.25</bdi>; קודם עודכן ל־<bdi>1.191</bdi>; משפחתיות <bdi>864</bdi> אלף). היתרי בנייה <bdi>1.295</bdi> מיליון (<bdi>−7.4%</bdi>; צפי <bdi>1.38</bdi>; קודם עודכן ל־<bdi>1.398</bdi>; משפחתיים <bdi>772</bdi> אלף) — התחלות מעל הצפי, היתרים פספסו בחדות. מקור: הלשכה למפקד האוכלוסין של ארה״ב.",
+      "en": "Actual: October housing starts <bdi>1.309</bdi> million SAAR (<bdi>+9.9%</bdi> m/m; consensus <bdi>1.25</bdi> million; prior revised to <bdi>1.191</bdi> million; single-family <bdi>864</bdi>K). Building permits <bdi>1.295</bdi> million (<bdi>−7.4%</bdi> m/m; consensus <bdi>1.38</bdi> million; prior revised to <bdi>1.398</bdi> million; single-family <bdi>772</bdi>K) — starts beat, permits missed sharply. Source: U.S. Census Bureau."
      },
-     "status": "unavailable"
+     "result": {
+      "he": "בפועל: התחלות בנייה באוקטובר <bdi>1.309</bdi> מיליון במונחים שנתיים (<bdi>+9.9%</bdi> מול החודש הקודם; צפי <bdi>1.25</bdi>; קודם עודכן ל־<bdi>1.191</bdi>; משפחתיות <bdi>864</bdi> אלף). היתרי בנייה <bdi>1.295</bdi> מיליון (<bdi>−7.4%</bdi>; צפי <bdi>1.38</bdi>; קודם עודכן ל־<bdi>1.398</bdi>; משפחתיים <bdi>772</bdi> אלף) — התחלות מעל הצפי, היתרים פספסו בחדות. <a href=\"https://www.census.gov/construction/nrc/current/index.html\">הלשכה למפקד האוכלוסין של ארה״ב, התחלות והיתרי בנייה</a>.",
+      "en": "Actual: October housing starts <bdi>1.309</bdi> million SAAR (<bdi>+9.9%</bdi> m/m; consensus <bdi>1.25</bdi> million; prior revised to <bdi>1.191</bdi> million; single-family <bdi>864</bdi>K). Building permits <bdi>1.295</bdi> million (<bdi>−7.4%</bdi> m/m; consensus <bdi>1.38</bdi> million; prior revised to <bdi>1.398</bdi> million; single-family <bdi>772</bdi>K) — starts beat, permits missed sharply. <a href=\"https://www.census.gov/construction/nrc/current/index.html\">U.S. Census Bureau, New Residential Construction</a>."
+     }
     },
     {
      "date": "2026-11-18",
@@ -2131,8 +2134,8 @@ DJ.edition(
   ]
  },
  "headline": {
-  "he": "החוזים מתאוששים מהשפל של S&amp;P מאז סוף יולי אחרי דוחות אנבידיה, אך העלייה נמוגה לפני נתוני הדיור ופרוטוקול הפד; תל אביב עולה והשקל נחלש",
-  "en": "Futures bounce from the S&amp;P's lowest close since late July on Nvidia's beat, but the gain fades ahead of the housing data and the Fed minutes; Tel Aviv is up and the shekel is weaker"
+  "he": "החוזים מתאוששים מהשפל של S&amp;P מאז סוף יולי אחרי דוחות אנבידיה, אך העלייה נמוגה; התחלות הבנייה עלו מעל הצפי וההיתרים פספסו, לפני פרוטוקול הפד; תל אביב עולה והשקל נחלש",
+  "en": "Futures bounce from the S&amp;P's lowest close since late July on Nvidia's beat, but the gain fades; housing starts beat and permits missed, ahead of the Fed minutes; Tel Aviv is up and the shekel is weaker"
  }
 }
 );
