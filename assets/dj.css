@@ -583,7 +583,8 @@ html[dir="rtl"] .chip-px { justify-content: flex-end; }
   .dateline .date { font-size: 13.5px; }
   .date-long { display: none; }
   .date-short { display: inline; }
-  .runs { grid-column: 1 / -1; grid-row: 2; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; scroll-padding-inline: 18px; padding-inline-start: 14px; overscroll-behavior-x: contain; }
+  /* 40px = 16px edge fade + 24px, so the last chip can sit clear of the mask. */
+  .runs { grid-column: 1 / -1; grid-row: 2; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; scroll-padding-inline: 40px; padding-inline-start: 14px; padding-inline-end: 40px; overscroll-behavior-x: contain; }
   .runs::-webkit-scrollbar { display: none; }
   .runs.fade-left {
     -webkit-mask-image: linear-gradient(to right, transparent, #000 16px);

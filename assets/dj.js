@@ -326,8 +326,13 @@
     ]);
   }
 
-  /* Scroll the chip row only, so the active edition is fully on screen. RTL-aware.
-     scrollIntoView also moves the page; center the chip inside the row and leave the page. */
+  /* Edge fade in .runs (dj.css). The active chip's far edge stays this far inside it. */
+  var RUN_FADE = 16;
+  var RUN_CLEAR = 24;
+
+  /* Scroll the chip row only, so the active edition is fully on screen and clear of the fade.
+     scrollIntoView also moves the page; move this row and put the page back.
+     Always instant: a smooth scroll is still mid-flight at the next measure, and reduced motion must not animate. */
   function cueRuns(row) {
     if (!row) return;
     var chips = row.querySelectorAll(".run");
@@ -342,6 +347,76 @@
     row.classList.toggle("fade-left", hideLeft);
     row.classList.toggle("fade-right", hideRight);
   }
+  function scheduleReveal() {
+    if (state.mode !== "edition" || !state.edition) return;
+    var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+    ready.then(function () { requestAnimationFrame(function () { revealRun(); }); });
+  }
+  /* Chromium: RTL scrollLeft is 0 at the start and negative toward the end. delta follows scrollBy({left}). */
+  function runRoom(row) {
+    var max = Math.max(0, row.scrollWidth - row.clientWidth);
+    var sl = row.scrollLeft;
+    var rtl = getComputedStyle(row).direction === "rtl";
+    if (rtl && sl <= 0) return { min: -max - sl, max: -sl };
+    return { min: -sl, max: max - sl };
+  }
+  function scoreRun(rb, chips, cur, delta, rtl) {
+    var left, right, fadeL = false, fadeR = false, i, b, l, r, opL, opR, vis, sliced = 0, hidden = 0;
+    for (i = 0; i < chips.length; i++) {
+      b = chips[i].getBoundingClientRect();
+      l = b.left - delta;
+      r = b.right - delta;
+      if (l < rb.left - 2) fadeL = true;
+      if (r > rb.right + 2) fadeR = true;
+    }
+    opL = rb.left + (fadeL ? RUN_FADE : 0);
+    opR = rb.right - (fadeR ? RUN_FADE : 0);
+    b = cur.getBoundingClientRect();
+    left = b.left - delta;
+    right = b.right - delta;
+    if (left < opL - 0.5 || right > opR + 0.5) return 1e9;
+    if (rtl ? left < opL + RUN_CLEAR - 0.5 : right > opR - RUN_CLEAR + 0.5) return 1e9;
+    for (i = 0; i < chips.length; i++) {
+      if (chips[i] === cur) continue;
+      b = chips[i].getBoundingClientRect();
+      l = b.left - delta;
+      r = b.right - delta;
+      vis = Math.min(r, opR) - Math.max(l, opL);
+      if (l >= opL - 0.5 && r <= opR + 0.5) continue;
+      if (vis > 4) sliced += vis;
+      else hidden += b.width;
+    }
+    return sliced * 100000 + hidden * 10 + Math.abs(delta);
+  }
+  function chooseRunDelta(row, cur) {
+    var rb = row.getBoundingClientRect();
+    var chips = row.querySelectorAll(".run");
+    var rtl = getComputedStyle(row).direction === "rtl";
+    var curBox = cur.getBoundingClientRect();
+    var near = rtl ? rb.right - RUN_FADE : rb.left + RUN_FADE;
+    var cands = [0];
+    var i, b, best = 0, bestScore = 1e9, score;
+    if (rtl) cands.push(curBox.left - (rb.left + RUN_CLEAR));
+    else cands.push(curBox.right - (rb.right - RUN_CLEAR));
+    for (i = 0; i < chips.length; i++) {
+      b = chips[i].getBoundingClientRect();
+      cands.push(b.left - near, b.right - near, b.left - rb.left, b.right - rb.right);
+    }
+    for (i = 0; i < cands.length; i++) {
+      score = scoreRun(rb, chips, cur, cands[i], rtl);
+      if (score < bestScore) { bestScore = score; best = cands[i]; }
+    }
+    if (bestScore >= 1e9) {
+      return rtl ? curBox.left - (rb.left + RUN_FADE + RUN_CLEAR) : curBox.right - (rb.right - RUN_FADE - RUN_CLEAR);
+    }
+    return best;
+  }
+  function scrollRowBy(row, delta) {
+    if (!delta || Math.abs(delta) < 0.5) return;
+    var sx = window.scrollX, sy = window.scrollY;
+    try { row.scrollBy({ left: delta, top: 0, behavior: "auto" }); } catch (e) {}
+    if (window.scrollX !== sx || window.scrollY !== sy) window.scrollTo(sx, sy);
+  }
   function revealRun() {
     var row = document.querySelector(".runs");
     var cur = row && row.querySelector(".is-current");
@@ -350,17 +425,24 @@
       row.setAttribute("data-cue", "1");
       row.addEventListener("scroll", function () { cueRuns(row); }, { passive: true });
     }
-    var reduce = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
-    var sx = window.scrollX, sy = window.scrollY;
-    var rowBox = row.getBoundingClientRect();
-    var curBox = cur.getBoundingClientRect();
-    var delta = (curBox.left + curBox.width / 2) - (rowBox.left + rowBox.width / 2);
-    try {
-      row.scrollBy({ left: delta, top: 0, behavior: reduce ? "auto" : "smooth" });
-    } catch (e) {
-      row.scrollLeft += delta;
+    row.style.paddingInlineEnd = "";
+    if (row.scrollWidth <= row.clientWidth + 1) {
+      row.classList.remove("fade-left", "fade-right");
+      return;
     }
-    if (window.scrollX !== sx || window.scrollY !== sy) window.scrollTo(sx, sy);
+    var attempt, delta, room, pad, shortfall;
+    for (attempt = 0; attempt < 3; attempt++) {
+      delta = chooseRunDelta(row, cur);
+      room = runRoom(row);
+      shortfall = delta > room.max ? delta - room.max : delta < room.min ? room.min - delta : 0;
+      if (shortfall > 0.5) {
+        pad = parseFloat(getComputedStyle(row).paddingInlineEnd) || 0;
+        row.style.paddingInlineEnd = Math.ceil(pad + shortfall + 1) + "px";
+        continue;
+      }
+      scrollRowBy(row, delta);
+      break;
+    }
     cueRuns(row);
   }
 
@@ -882,7 +964,7 @@
     document.title = longDate(ed.date) + " · " + slotName(ed.slot) + " · The Daily Jenya";
     var md = document.querySelector('meta[name="description"]');
     if (md) md.setAttribute("content", has(ed.summary) ? tx(ed.summary).replace(/<[^>]*>/g, "") : title);
-    revealRun();
+    scheduleReveal();
   }
 
   /* ------------------------------------------------------------ archive page */
@@ -992,11 +1074,9 @@
   if (NARROW && NARROW.addEventListener) NARROW.addEventListener("change", function () { if (state.mode === "edition" && state.edition) render(); });
   var runResize;
   window.addEventListener("resize", function () {
-    if (state.mode !== "edition" || !state.edition) return;
     clearTimeout(runResize);
-    runResize = setTimeout(revealRun, 60);
+    runResize = setTimeout(scheduleReveal, 60);
   });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (state.mode === "edition" && state.edition) revealRun(); });
   if (window.matchMedia) {
     var mq = matchMedia("(prefers-color-scheme: dark)");
     if (mq.addEventListener) mq.addEventListener("change", function () { if (!load(THEME_KEY)) render(); });
