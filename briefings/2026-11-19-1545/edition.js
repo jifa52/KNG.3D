@@ -1662,8 +1662,12 @@ DJ.edition(
       "en": "Conference Board leading index, October"
      },
      "detail": {
-      "he": "צפי <bdi>+0.0%</bdi>.",
-      "en": "Consensus <bdi>+0.0%</bdi>."
+      "he": "בפועל: מדד המובילים לאוקטובר <bdi>−0.3%</bdi>, לרמה של <bdi>99.3</bdi> (<bdi>2016=100</bdi>). ספטמבר נותר ללא שינוי (<bdi>0.0%</bdi>) ברמה של <bdi>99.6</bdi>. היתרי הבנייה, החלשים ביותר מאז מאי <bdi>2020</bdi>, היו הגורם העיקרי לירידה; ציפיות הצרכנים, שעות העבודה בתעשייה והזמנות למוצרי הון היו גם הן שליליות; הזמנות חדשות ב־ISM נותרו ללא שינוי. השינוי על פני שישה חודשים, מאפריל עד אוקטובר, עמד על <bdi>+0.1%</bdi>. הנתונים החלשים מחזקים במעט את הטיעון להורדת ריבית של הפד. מקור: מועצת הוועידה.",
+      "en": "Actual: October leading index <bdi>−0.3%</bdi>, to <bdi>99.3</bdi> (<bdi>2016=100</bdi>). September was unchanged (<bdi>0.0%</bdi>) at <bdi>99.6</bdi>. Building permits, the weakest since May <bdi>2020</bdi>, were the main drag; consumer expectations, manufacturing hours and capital-goods orders were also negative; ISM new orders were flat. The six-month change from April to October was <bdi>+0.1%</bdi>. The weaker data slightly strengthens the case for a Fed cut. Source: The Conference Board."
+     },
+     "result": {
+      "he": "בפועל: מדד המובילים לאוקטובר <bdi>−0.3%</bdi>, לרמה של <bdi>99.3</bdi> (<bdi>2016=100</bdi>). ספטמבר נותר ללא שינוי (<bdi>0.0%</bdi>) ברמה של <bdi>99.6</bdi>. היתרי הבנייה, החלשים ביותר מאז מאי <bdi>2020</bdi>, היו הגורם העיקרי לירידה; ציפיות הצרכנים, שעות העבודה בתעשייה והזמנות למוצרי הון היו גם הן שליליות; הזמנות חדשות ב־ISM נותרו ללא שינוי. השינוי על פני שישה חודשים, מאפריל עד אוקטובר, עמד על <bdi>+0.1%</bdi>. הנתונים החלשים מחזקים במעט את הטיעון להורדת ריבית של הפד. <a href=\"https://www.conference-board.org/topics/us-leading-indicators/\">מועצת הוועידה, המדדים המובילים בארה״ב</a>.",
+      "en": "Actual: October leading index <bdi>−0.3%</bdi>, to <bdi>99.3</bdi> (<bdi>2016=100</bdi>). September was unchanged (<bdi>0.0%</bdi>) at <bdi>99.6</bdi>. Building permits, the weakest since May <bdi>2020</bdi>, were the main drag; consumer expectations, manufacturing hours and capital-goods orders were also negative; ISM new orders were flat. The six-month change from April to October was <bdi>+0.1%</bdi>. The weaker data slightly strengthens the case for a Fed cut. <a href=\"https://www.conference-board.org/topics/us-leading-indicators/\">The Conference Board, US Leading Indicators</a>."
      }
     },
     {
