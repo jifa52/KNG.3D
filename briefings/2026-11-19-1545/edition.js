@@ -894,8 +894,8 @@ DJ.edition(
       "en": "On Benzinga's premarket check, the <bdi>10</bdi>-year yield was <bdi>5.08%</bdi> and the <bdi>2</bdi>-year <bdi>4.81%</bdi>."
      },
      {
-      "he": "תביעות האבטלה השבועיות, לשבוע שהסתיים ב־<bdi>14</bdi> בנובמבר, מתפרסמות ב־<bdi>15:30</bdi>. קריאה חזקה מהצפי מוסיפה לסיכון של העלאה; קריאה חלשה יותר מרככת אותו.",
-      "en": "Weekly jobless claims, for the week ended <bdi>14</bdi> November, come at <bdi>15:30</bdi> Israel. A stronger-than-expected reading adds to hike risk; a weaker one eases it."
+      "he": "תביעות האבטלה לשבוע שהסתיים ב־<bdi>14</bdi> בנובמבר עמדו על <bdi>203</bdi> אלף, מעל צפי של <bdi>198</bdi> אלף (הקודם עודכן ל־<bdi>202</bdi> אלף), ותביעות ההמשך עלו ל־<bdi>1.76</bdi> מיליון — קריאה שמסמנת שוק עבודה שמתקרר מעט ומפחיתה במעט את לחץ ההעלאה. מקור: משרד העבודה האמריקאי.",
+      "en": "Initial claims for the week ended <bdi>14</bdi> November came in at <bdi>203,000</bdi>, above the <bdi>198,000</bdi> consensus (prior revised to <bdi>202,000</bdi>), and continuing claims jumped to <bdi>1.76</bdi> million — a mild loosening signal that slightly eases hike pressure. Source: U.S. Department of Labor."
      }
     ],
     "why": {
@@ -930,6 +930,10 @@ DJ.edition(
      {
       "label": "Yahoo Finance",
       "url": "https://finance.yahoo.com/quote/NQ%3DF/"
+     },
+     {
+      "label": "U.S. Department of Labor",
+      "url": "https://www.dol.gov/ui/data.pdf"
      }
     ],
     "image": {
@@ -1606,10 +1610,13 @@ DJ.edition(
       "en": "US initial jobless claims, the week to <bdi>14</bdi> November"
      },
      "detail": {
-      "he": "צפי <bdi>198</bdi> אלף, קודם <bdi>200</bdi> אלף. הנתונים פורסמו; המספרים יתווספו בעדכון.",
-      "en": "Consensus <bdi>198</bdi>K, prior <bdi>200</bdi>K. Released; figures to be added in an update."
+      "he": "בפועל: תביעות ראשוניות לשבוע שהסתיים ב־<bdi>14</bdi> בנובמבר — <bdi>203</bdi> אלף (צפי <bdi>198</bdi> אלף; הקודם עודכן ל־<bdi>202</bdi> אלף מ־<bdi>200</bdi>). ממוצע ארבעה שבועות <bdi>197,750</bdi>. תביעות המשך (שבוע עד <bdi>7</bdi> בנובמבר) <bdi>1.763</bdi> מיליון (הקודם עודכן ל־<bdi>1.693</bdi> מיליון). שיעור האבטלה המבוטחת <bdi>1.1%</bdi>. מקור: משרד העבודה האמריקאי.",
+      "en": "Actual: initial claims for the week ended <bdi>14</bdi> November were <bdi>203,000</bdi> (consensus <bdi>198,000</bdi>; prior revised to <bdi>202,000</bdi> from <bdi>200,000</bdi>). Four-week average <bdi>197,750</bdi>. Continuing claims (week to <bdi>7</bdi> November) <bdi>1,763,000</bdi> (prior revised to <bdi>1,693,000</bdi>). Insured unemployment rate <bdi>1.1%</bdi>. Source: U.S. Department of Labor."
      },
-     "status": "unavailable"
+     "result": {
+      "he": "בפועל: תביעות ראשוניות לשבוע שהסתיים ב־<bdi>14</bdi> בנובמבר — <bdi>203</bdi> אלף (צפי <bdi>198</bdi> אלף; הקודם עודכן ל־<bdi>202</bdi> אלף מ־<bdi>200</bdi>). ממוצע ארבעה שבועות <bdi>197,750</bdi>. תביעות המשך (שבוע עד <bdi>7</bdi> בנובמבר) <bdi>1.763</bdi> מיליון (הקודם עודכן ל־<bdi>1.693</bdi> מיליון). שיעור האבטלה המבוטחת <bdi>1.1%</bdi>. <a href=\"https://www.dol.gov/ui/data.pdf\">משרד העבודה האמריקאי, תביעות אבטלה שבועיות</a>.",
+      "en": "Actual: initial claims for the week ended <bdi>14</bdi> November were <bdi>203,000</bdi> (consensus <bdi>198,000</bdi>; prior revised to <bdi>202,000</bdi> from <bdi>200,000</bdi>). Four-week average <bdi>197,750</bdi>. Continuing claims (week to <bdi>7</bdi> November) <bdi>1,763,000</bdi> (prior revised to <bdi>1,693,000</bdi>). Insured unemployment rate <bdi>1.1%</bdi>. <a href=\"https://www.dol.gov/ui/data.pdf\">U.S. Department of Labor, Unemployment Insurance Weekly Claims</a>."
+     }
     },
     {
      "date": "2026-11-19",
@@ -1620,10 +1627,13 @@ DJ.edition(
       "en": "Philadelphia Fed manufacturing index, November"
      },
      "detail": {
-      "he": "צפי <bdi>20.6</bdi>, קודם <bdi>20.9</bdi>. הנתונים פורסמו; המספרים יתווספו בעדכון.",
-      "en": "Consensus <bdi>20.6</bdi>, prior <bdi>20.9</bdi>. Released; figures to be added in an update."
+      "he": "בפועל: מדד הפעילות הכללית בנובמבר <bdi>6.3</bdi>, מול צפי <bdi>20.6</bdi> ו־<bdi>20.9</bdi> בחודש הקודם — הנמוך מאז מאי. הזמנות חדשות <bdi>−0.4</bdi>; משלוחים <bdi>25.7</bdi>; פעילות עתידית <bdi>33.6</bdi>. מקור: הפד של פילדלפיה.",
+      "en": "Actual: November general activity <bdi>6.3</bdi>, versus consensus <bdi>20.6</bdi> and a prior reading of <bdi>20.9</bdi> — the lowest since May. New orders <bdi>−0.4</bdi>; shipments <bdi>25.7</bdi>; future activity <bdi>33.6</bdi>. Source: Federal Reserve Bank of Philadelphia."
      },
-     "status": "unavailable"
+     "result": {
+      "he": "בפועל: מדד הפעילות הכללית בנובמבר <bdi>6.3</bdi>, מול צפי <bdi>20.6</bdi> ו־<bdi>20.9</bdi> בחודש הקודם — הנמוך מאז מאי. הזמנות חדשות <bdi>−0.4</bdi>; משלוחים <bdi>25.7</bdi>; פעילות עתידית <bdi>33.6</bdi>. <a href=\"https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/mbos-2026-11\">הפד של פילדלפיה, סקר הייצור לנובמבר</a>.",
+      "en": "Actual: November general activity <bdi>6.3</bdi>, versus consensus <bdi>20.6</bdi> and a prior reading of <bdi>20.9</bdi> — the lowest since May. New orders <bdi>−0.4</bdi>; shipments <bdi>25.7</bdi>; future activity <bdi>33.6</bdi>. <a href=\"https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/mbos-2026-11\">Federal Reserve Bank of Philadelphia, November Manufacturing Business Outlook Survey</a>."
+     }
     },
     {
      "date": "2026-11-19",
