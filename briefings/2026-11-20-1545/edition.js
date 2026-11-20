@@ -1540,8 +1540,12 @@ DJ.edition({
       "en": "University of Michigan consumer sentiment, final November"
      },
      "detail": {
-      "he": "הצפי <bdi>51.5</bdi>, לפי דאו ג׳ונס. הנתון המוקדם היה <bdi>51.0</bdi>. קריאה חזקה יותר מוסיפה לסיכון של העלאת ריבית. הנתון עצמו אינו במהדורה הזו.",
-      "en": "Consensus <bdi>51.5</bdi>, according to Dow Jones. The preliminary reading was <bdi>51.0</bdi>. A stronger reading adds to hike risk. The figure itself is not in this edition."
+      "he": "ב־<bdi>17:00</bdi> בישראל: אמון הצרכנים הסופי לנובמבר <bdi>51.5</bdi> (האומדן המוקדם <bdi>51.0</bdi>; אוקטובר <bdi>48.0</bdi>). התנאים הנוכחיים <bdi>49.4</bdi> (אוקטובר <bdi>46.7</bdi>); הציפיות <bdi>52.9</bdi> (אוקטובר <bdi>48.8</bdi>). ציפיות האינפלציה לשנה הקרובה <bdi>3.7%</bdi> (אוקטובר <bdi>4.7%</bdi>); לטווח הארוך <bdi>3.3%</bdi> (אוקטובר <bdi>3.5%</bdi>). ציפיות אינפלציה רכות יותר מפחיתות במעט את הטיעון להעלאת ריבית של הפד. מקור: סקרי הצרכנים של אוניברסיטת מישיגן.",
+      "en": "At <bdi>17:00</bdi> Israel: final November sentiment <bdi>51.5</bdi> (preliminary <bdi>51.0</bdi>; October <bdi>48.0</bdi>). Current conditions <bdi>49.4</bdi> (October <bdi>46.7</bdi>); expectations <bdi>52.9</bdi> (October <bdi>48.8</bdi>). Year-ahead inflation expectations <bdi>3.7%</bdi> (October <bdi>4.7%</bdi>); long-run <bdi>3.3%</bdi> (October <bdi>3.5%</bdi>). Softer inflation expectations slightly reduce the case for a Fed hike. Source: University of Michigan Surveys of Consumers."
+     },
+     "result": {
+      "he": "ב־<bdi>17:00</bdi> בישראל: אמון הצרכנים הסופי לנובמבר <bdi>51.5</bdi> (האומדן המוקדם <bdi>51.0</bdi>; אוקטובר <bdi>48.0</bdi>). התנאים הנוכחיים <bdi>49.4</bdi> (אוקטובר <bdi>46.7</bdi>); הציפיות <bdi>52.9</bdi> (אוקטובר <bdi>48.8</bdi>). ציפיות האינפלציה לשנה הקרובה <bdi>3.7%</bdi> (אוקטובר <bdi>4.7%</bdi>); לטווח הארוך <bdi>3.3%</bdi> (אוקטובר <bdi>3.5%</bdi>). ציפיות אינפלציה רכות יותר מפחיתות במעט את הטיעון להעלאת ריבית של הפד. <a href=\"https://www.sca.isr.umich.edu/\">אוניברסיטת מישיגן, סקרי הצרכנים</a>.",
+      "en": "At <bdi>17:00</bdi> Israel: final November sentiment <bdi>51.5</bdi> (preliminary <bdi>51.0</bdi>; October <bdi>48.0</bdi>). Current conditions <bdi>49.4</bdi> (October <bdi>46.7</bdi>); expectations <bdi>52.9</bdi> (October <bdi>48.8</bdi>). Year-ahead inflation expectations <bdi>3.7%</bdi> (October <bdi>4.7%</bdi>); long-run <bdi>3.3%</bdi> (October <bdi>3.5%</bdi>). Softer inflation expectations slightly reduce the case for a Fed hike. <a href=\"https://www.sca.isr.umich.edu/\">University of Michigan Surveys of Consumers</a>."
      }
     },
     {
