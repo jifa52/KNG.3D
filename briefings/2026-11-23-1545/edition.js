@@ -1583,8 +1583,8 @@ DJ.edition({
       "en": "Chicago Fed National Activity Index, October"
      },
      "detail": {
-      "he": "הקריאה הקודמת <bdi>+0.07</bdi>. נתון אוקטובר אינו במהדורה הזו.",
-      "en": "Prior reading <bdi>+0.07</bdi>. The October figure is not in this edition."
+      "he": "הפרסום היה ב־<bdi>15:30</bdi>. הנתון לאוקטובר לא אומת מהמקור הראשי עד <bdi>15:34</bdi>; הקריאה הקודמת <bdi>+0.07</bdi> נשארת. יישאר פתוח למהדורות מחר. מקור: <a href=\"https://www.chicagofed.org/research/data/cfnai/current-data\">הפד של שיקגו, מדד הפעילות הלאומי</a>.",
+      "en": "The release was at <bdi>15:30</bdi> Israel. The October actual was not verified from the primary source as of <bdi>15:34</bdi>; the prior reading <bdi>+0.07</bdi> is unchanged. Left open for tomorrow's editions. Source: <a href=\"https://www.chicagofed.org/research/data/cfnai/current-data\">Chicago Fed, National Activity Index</a>."
      },
      "status": "unavailable"
     },
