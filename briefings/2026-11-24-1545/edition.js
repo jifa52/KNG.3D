@@ -1563,8 +1563,12 @@ DJ.edition({
       "en": "Conference Board consumer confidence, November"
      },
      "detail": {
-      "he": "צפי <bdi>92.1</bdi>, קריאה קודמת <bdi>91.7</bdi>, לפי לוח משני. קריאה חזקה יותר מוסיפה לסיכון של העלאת ריבית.",
-      "en": "Consensus <bdi>92.1</bdi>, prior <bdi>91.7</bdi>, from a secondary calendar. A stronger reading adds to hike risk."
+      "he": "ב־<bdi>17:00</bdi> בישראל: אמון הצרכנים לנובמבר <bdi>103.3</bdi>, עלייה של <bdi>11.4</bdi> נקודות מ־<bdi>91.9</bdi> באוקטובר (אוקטובר עודכן מ־<bdi>91.7</bdi>). מדד המצב הנוכחי <bdi>132.8</bdi>, מדד הציפיות <bdi>83.6</bdi>. צפי <bdi>92.1</bdi>, מלוח משני (XTB ו־Danske Bank). הרבה מעל הצפי. נתון חזק יותר מוסיף לסיכון של העלאת ריבית של הפד בדצמבר. מקור: מועצת הקונפרנס.",
+      "en": "At <bdi>17:00</bdi> Israel: November consumer confidence <bdi>103.3</bdi>, up <bdi>11.4</bdi> points from <bdi>91.9</bdi> in October (October revised from <bdi>91.7</bdi>). Present Situation <bdi>132.8</bdi>, Expectations <bdi>83.6</bdi>. Consensus <bdi>92.1</bdi>, from a secondary calendar (XTB and Danske Bank). Far above consensus. Stronger data means more risk of a December Fed hike. Source: The Conference Board."
+     },
+     "result": {
+      "he": "ב־<bdi>17:00</bdi> בישראל: אמון הצרכנים לנובמבר <bdi>103.3</bdi>, עלייה של <bdi>11.4</bdi> נקודות מ־<bdi>91.9</bdi> באוקטובר (אוקטובר עודכן מ־<bdi>91.7</bdi>). מדד המצב הנוכחי <bdi>132.8</bdi>, מדד הציפיות <bdi>83.6</bdi>. צפי <bdi>92.1</bdi>, מלוח משני (XTB ו־Danske Bank). הרבה מעל הצפי. נתון חזק יותר מוסיף לסיכון של העלאת ריבית של הפד בדצמבר. <a href=\"https://www.conference-board.org/topics/consumer-confidence/\">מועצת הקונפרנס, אמון הצרכנים</a> · <a href=\"https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html\">PR Newswire</a>.",
+      "en": "At <bdi>17:00</bdi> Israel: November consumer confidence <bdi>103.3</bdi>, up <bdi>11.4</bdi> points from <bdi>91.9</bdi> in October (October revised from <bdi>91.7</bdi>). Present Situation <bdi>132.8</bdi>, Expectations <bdi>83.6</bdi>. Consensus <bdi>92.1</bdi>, from a secondary calendar (XTB and Danske Bank). Far above consensus. Stronger data means more risk of a December Fed hike. <a href=\"https://www.conference-board.org/topics/consumer-confidence/\">The Conference Board, Consumer Confidence</a> · <a href=\"https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html\">PR Newswire</a>."
      }
     },
     {
