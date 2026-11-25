@@ -6,8 +6,8 @@ DJ.edition({
  "et": "08:45",
  "slot": "markets",
  "summary": {
-  "he": "החוזים בארה״ב מאריכים יום שני את מכירת מניות ה־AI לפני הפתיחה, והמשקיעים ממתינים למדד <bdi>PCE</bdi> ולמנת נתונים לפני החג. אמברלה ואורבן אאוטפיטרס יורדות לפני המסחר.",
-  "en": "US futures extend the AI-stock selloff for a second day before the open, with investors waiting on PCE inflation and a pre-holiday data batch. Ambarella and Urban Outfitters are lower premarket."
+  "he": "החוזים בארה״ב מאריכים יום שני את מכירת מניות ה־AI לפני הפתיחה, ומנת הנתונים שלפני החג כבר פורסמה. אמברלה ואורבן אאוטפיטרס יורדות לפני המסחר.",
+  "en": "US futures extend the AI-stock selloff for a second day before the open, and the pre-holiday data batch has already printed. Ambarella and Urban Outfitters are lower premarket."
  },
  "clock": {
   "he": "שעת המהדורה <bdi>15:45</bdi> בישראל (<bdi>08:45 ET</bdi>)",
@@ -553,8 +553,8 @@ DJ.edition({
  },
  "markets": {
   "asof": {
-   "he": "רביעי <bdi>25</bdi> בנובמבר, ציטוטים בסביבות <bdi>14:31–14:46</bdi> בישראל, לפני פתיחת המסחר בארה״ב ב־<bdi>16:30</bdi> ולפני פרסום הנתונים האמריקניים ב־<bdi>15:30</bdi>. נתון תל אביב הוא תוך־יומי ומושהה.",
-   "en": "Wednesday 25 November, quotes about <bdi>14:31–14:46</bdi> Israel, pre-market — before the US cash open at <bdi>16:30</bdi> and before the <bdi>15:30</bdi> Israel US data releases. The Tel Aviv figure is intraday and delayed."
+   "he": "רביעי <bdi>25</bdi> בנובמבר, ציטוטים בסביבות <bdi>14:31–14:46</bdi> בישראל, לפני פתיחת המסחר בארה״ב ב־<bdi>16:30</bdi> ולפני פרסום הנתונים האמריקניים ב־<bdi>15:30</bdi>. נתוני <bdi>15:30</bdi> עצמם כבר בכרטיס הנתונים ובלוח. נתון תל אביב הוא תוך־יומי ומושהה.",
+   "en": "Wednesday 25 November, quotes about <bdi>14:31–14:46</bdi> Israel, pre-market — before the US cash open at <bdi>16:30</bdi> and before the <bdi>15:30</bdi> Israel US data releases. The <bdi>15:30</bdi> actuals are now on the data card and the calendar. The Tel Aviv figure is intraday and delayed."
   },
   "stamp": {
    "he": "רביעי 14:45",
@@ -563,14 +563,14 @@ DJ.edition({
   "carried": false,
   "story": [
    {
-    "he": "החוזים בארה״ב מאריכים יום שני את המכירה בהובלת מניות ה־AI: חוזה הנאסד״ק <bdi>100</bdi> יורד בכמעט <bdi>3%</bdi>, ומדד ה־<bdi>VIX</bdi> מעל <bdi>30</bdi>. המשקיעים ממתינים למנת נתונים שלפני חג ההודיה ב־<bdi>15:30</bdi> בישראל, ובראשה מדד האינפלציה <bdi>PCE</bdi> לאוקטובר — קריאת האינפלציה הגדולה האחרונה לפני ישיבת הפד בדצמבר, שבה העלאה של רבע נקודת אחוז מתומחרת כמעט במלואה. האג״ח הממשלתיות מבוקשות, והשקל חלש יותר.",
-    "en": "US futures are extending the AI-led selloff for a second day, with Nasdaq-<bdi>100</bdi> futures down almost <bdi>3%</bdi> and the VIX above <bdi>30</bdi>. Investors are waiting for a pre-Thanksgiving data batch at <bdi>15:30</bdi> Israel, led by October PCE inflation — the last big inflation read before a December Fed meeting where a quarter-point hike is almost fully priced. Treasuries are bid and the shekel is weaker."
+    "he": "החוזים בארה״ב מאריכים יום שני את המכירה בהובלת מניות ה־AI: חוזה הנאסד״ק <bdi>100</bdi> יורד בכמעט <bdi>3%</bdi>, ומדד ה־<bdi>VIX</bdi> מעל <bdi>30</bdi>. מנת הנתונים שלפני חג ההודיה כבר פורסמה ב־<bdi>15:30</bdi> בישראל, ובראשה מדד האינפלציה <bdi>PCE</bdi> לאוקטובר — קריאת האינפלציה הגדולה האחרונה לפני ישיבת הפד בדצמבר, שבה העלאה של רבע נקודת אחוז מתומחרת כמעט במלואה. האג״ח הממשלתיות מבוקשות, והשקל חלש יותר.",
+    "en": "US futures are extending the AI-led selloff for a second day, with Nasdaq-<bdi>100</bdi> futures down almost <bdi>3%</bdi> and the VIX above <bdi>30</bdi>. The pre-Thanksgiving data batch has printed at <bdi>15:30</bdi> Israel, led by October PCE inflation — the last big inflation read before a December Fed meeting where a quarter-point hike is almost fully priced. Treasuries are bid and the shekel is weaker."
    }
   ],
   "note": [
    {
-    "he": "חוזים, לא מזומן. המסחר בארה״ב נפתח ב־<bdi>16:30</bdi> בישראל. נתוני <bdi>15:30</bdi> אינם במהדורה הזו. נתון תל אביב הוא תוך־יומי ומושהה.",
-    "en": "Futures, not cash. US stocks open at <bdi>16:30</bdi> Israel. The <bdi>15:30</bdi> figures are not in this edition. The Tel Aviv figure is intraday and delayed."
+    "he": "חוזים, לא מזומן. המסחר בארה״ב נפתח ב־<bdi>16:30</bdi> בישראל. נתוני <bdi>15:30</bdi> כבר בכרטיס הנתונים ובלוח. נתון תל אביב הוא תוך־יומי ומושהה.",
+    "en": "Futures, not cash. US stocks open at <bdi>16:30</bdi> Israel. The <bdi>15:30</bdi> figures are in this edition, on the data card and the calendar. The Tel Aviv figure is intraday and delayed."
    }
   ],
   "tape": [
@@ -780,71 +780,75 @@ DJ.edition({
      "en": "Data"
     },
     "headline": {
-     "he": "מנת הנתונים שלפני החג יוצאת ב־<bdi>15:30</bdi>, והתוצאות אינן כאן",
-     "en": "The pre-holiday data batch is due at <bdi>15:30</bdi>, and the results are not in"
+     "he": "מנת הנתונים: צמיחה מתוקנת <bdi>4.3%</bdi>, מדד <bdi>PCE</bdi> תואם את הצפי, ותביעות האבטלה ירדו",
+     "en": "Data batch: GDP revised to <bdi>4.3%</bdi>, PCE in line, and jobless claims fell"
     },
     "bottom": {
-     "he": "ב־<bdi>15:30</bdi> בישראל יוצאים מדד <bdi>PCE</bdi> לאוקטובר, אומדן שני לצמיחה ברבעון השלישי, הזמנות למוצרים בני־קיימא ותביעות אבטלה שבועיות — יום מוקדם יותר בגלל החג. התוצאות אינן במהדורה הזו.",
-     "en": "At <bdi>15:30</bdi> Israel the releases are October PCE, the second estimate of third-quarter growth, durable-goods orders and weekly jobless claims, a day early because of the holiday. The results are not in this edition."
+     "he": "ב־<bdi>15:30</bdi> בישראל: תמ״ג רבעון שלישי (אומדן שני) <bdi>+4.3%</bdi> בשנתון, מעל צפי <bdi>3.4%–3.6%</bdi>; מדד המחירים להוצאה הפרטית (<bdi>PCE</bdi>) לאוקטובר <bdi>+0.3%</bdi> בחודש ו־<bdi>3.8%</bdi> בשנה, תואם את הצפי; הזמנות למוצרים בני־קיימא <bdi>+0.2%</bdi>, מתחת לצפי <bdi>+0.5%</bdi> עד <bdi>+1.1%</bdi>; תביעות ראשוניות <bdi>189</bdi> אלף, מתחת לצפי <bdi>200–201</bdi> אלף — לפי הלשכה לניתוח כלכלי (BEA), הלשכה למפקד (Census) ומשרד העבודה (DOL).",
+     "en": "At <bdi>15:30</bdi> Israel: third-quarter GDP, second estimate, <bdi>+4.3%</bdi> annualized, above a <bdi>3.4%–3.6%</bdi> consensus; October PCE <bdi>+0.3%</bdi> on the month and <bdi>3.8%</bdi> on the year, in line; durable-goods orders <bdi>+0.2%</bdi>, below a <bdi>+0.5%</bdi> to <bdi>+1.1%</bdi> consensus; initial claims <bdi>189,000</bdi>, below a <bdi>200,000–201,000</bdi> consensus — from the Bureau of Economic Analysis (BEA), the Census Bureau and the Labor Department (DOL)."
     },
     "facts": [
      {
-      "he": "לפי דאו ג׳ונס דרך CNBC, מדד <bdi>PCE</bdi> צפוי לעלות <bdi>0.3%</bdi> בחודש ו־<bdi>3.8%</bdi> בשנה. בלוח של StockLrn אותו קצב כותרת, ומדד הליבה צפוי ב־<bdi>0.3%</bdi> בחודש.",
-      "en": "Dow Jones, via CNBC, looks for PCE at <bdi>+0.3%</bdi> on the month and <bdi>3.8%</bdi> on the year. StockLrn's calendar has the same headline path, and core PCE at <bdi>+0.3%</bdi> on the month."
+      "he": "הצמיחה הרבעונית המתוקנת (תוצר, GDP), אומדן שני לרבעון השלישי, עלתה <bdi>4.3%</bdi> בשנתון. הצפי היה <bdi>3.4%–3.6%</bdi>, האומדן הראשון היה <bdi>3.4%</bdi>, וברבעון השני הצמיחה הייתה <bdi>2.2%</bdi>.",
+      "en": "The second estimate of third-quarter GDP rose <bdi>4.3%</bdi> annualized. Consensus was <bdi>3.4%–3.6%</bdi>, the advance estimate was <bdi>3.4%</bdi>, and second-quarter growth was <bdi>2.2%</bdi>."
      },
      {
-      "he": "לאומדן השני של התמ״ג: <bdi>3.6%</bdi> לפי דאו ג׳ונס דרך CNBC, <bdi>3.5%</bdi> בדיווח המט״ח של CNBC, ו־<bdi>3.4%</bdi> בלוח של StockLrn. בנק ישראל, בהחלטת <bdi>23</bdi> בנובמבר, ציין צמיחה אמריקנית של <bdi>3.4%</bdi> ברבעון השלישי.",
-      "en": "For the GDP second estimate: <bdi>3.6%</bdi> in Dow Jones via CNBC, <bdi>3.5%</bdi> in CNBC's currencies report, and <bdi>3.4%</bdi> on StockLrn's calendar. The Bank of Israel, in its <bdi>23</bdi> November decision, cited US third-quarter growth of <bdi>3.4%</bdi>."
+      "he": "מדד המחירים להוצאה הפרטית (<bdi>PCE</bdi>) לאוקטובר עלה <bdi>0.3%</bdi> בחודש ו־<bdi>3.8%</bdi> בשנה; הליבה עלתה <bdi>0.3%</bdi> בחודש ו־<bdi>3.3%</bdi> בשנה, תואם את הצפי של <bdi>+0.3%</bdi> / <bdi>3.8%</bdi> לכותרת ו־<bdi>+0.3%</bdi> לליבה. בספטמבר הכותרת עלתה <bdi>0.5%</bdi> והליבה <bdi>0.3%</bdi>. ההכנסה האישית עלתה <bdi>0.7%</bdi> (צפי <bdi>+0.3%</bdi>), ההוצאה הריאלית <bdi>0.0%</bdi> (צפי <bdi>0.0%</bdi>), ושיעור החיסכון <bdi>4.1%</bdi>.",
+      "en": "October PCE prices rose <bdi>0.3%</bdi> on the month and <bdi>3.8%</bdi> on the year; core rose <bdi>0.3%</bdi> on the month and <bdi>3.3%</bdi> on the year, in line with consensus of <bdi>+0.3%</bdi> / <bdi>3.8%</bdi> for the headline and <bdi>+0.3%</bdi> for the core. In September the headline rose <bdi>0.5%</bdi> and the core <bdi>0.3%</bdi>. Personal income rose <bdi>0.7%</bdi> (consensus <bdi>+0.3%</bdi>), real PCE was <bdi>0.0%</bdi> (consensus <bdi>0.0%</bdi>), and the saving rate was <bdi>4.1%</bdi>."
      },
      {
-      "he": "הזמנות למוצרים בני־קיימא: <bdi>1.1%</bdi> לפי דאו ג׳ונס דרך CNBC, ו־<bdi>0.7%</bdi> בלוח עם קריאה קודמת של <bdi>1.8%</bdi>. תחזית להזמנות הליבה שם היא <bdi>0.5%</bdi>. תביעות ראשוניות: כ־<bdi>200</bdi> אלף לפי דאו ג׳ונס דרך CNBC, ו־<bdi>201</bdi> אלף בלוח מול <bdi>203</bdi> אלף קודם.",
-      "en": "Durable goods: <bdi>+1.1%</bdi> in Dow Jones via CNBC, and <bdi>+0.7%</bdi> on a calendar whose prior is <bdi>+1.8%</bdi>. That calendar's core-orders forecast is <bdi>+0.5%</bdi>. Initial claims: about <bdi>200,000</bdi> in Dow Jones via CNBC, and <bdi>201,000</bdi> on the calendar against a prior <bdi>203,000</bdi>."
+      "he": "הזמנות לטובין בני קיימא (durable goods) לאוקטובר עלו <bdi>0.2%</bdi>, מתחת לצפי של <bdi>+0.5%</bdi> עד <bdi>+1.1%</bdi>. בספטמבר הן עלו <bdi>2.0%</bdi> אחרי תיקון, מ־<bdi>1.8%–1.9%</bdi>. בלי תחבורה ההזמנות עלו <bdi>0.5%</bdi>, ובלי ביטחון <bdi>0.4%</bdi>.",
+      "en": "October durable-goods orders rose <bdi>0.2%</bdi>, below a consensus of <bdi>+0.5%</bdi> to <bdi>+1.1%</bdi>. September was revised to <bdi>+2.0%</bdi>, from <bdi>+1.8%–1.9%</bdi>. Ex-transport orders rose <bdi>0.5%</bdi>, and ex-defense orders rose <bdi>0.4%</bdi>."
+     },
+     {
+      "he": "הבקשות הראשוניות לדמי אבטלה, לשבוע שהסתיים ב־<bdi>21</bdi> בנובמבר, היו <bdi>189</bdi> אלף, מתחת לצפי של <bdi>200–201</bdi> אלף. השבוע הקודם תוקן ל־<bdi>202</bdi> אלף, מ־<bdi>203</bdi> אלף. התביעות הנמשכות <bdi>1.697</bdi> מיליון (קודם <bdi>1.792</bdi> מיליון, אחרי תיקון), והממוצע לארבעה שבועות <bdi>196</bdi> אלף.",
+      "en": "Initial jobless claims for the week ending <bdi>21</bdi> November were <bdi>189,000</bdi>, below a consensus of <bdi>200,000–201,000</bdi>. The prior week was revised to <bdi>202,000</bdi>, from <bdi>203,000</bdi>. Continuing claims were <bdi>1.697</bdi> million (prior <bdi>1.792</bdi> million, revised), and the four-week average was <bdi>196,000</bdi>."
      }
     ],
     "why": {
-     "he": "מדד <bdi>PCE</bdi> חם מהצפוי מוסיף לסיכון של העלאת ריבית בדצמבר. מדד רך יותר אינו מוסיף. אין כאן תגובת שוק לנתון שעוד לא נכנס.",
-     "en": "A hotter-than-expected PCE print adds to December hike risk. A softer one does not. There is no market reaction here to a figure that is not in."
+     "he": "תיקון חד כלפי מעלה בצמיחה, מדד <bdi>PCE</bdi> שתאם את הצפי ולא הקל, ותביעות נמוכות יותר שמשאירות שוק עבודה הדוק מצמצמים את המקום לטעון להאטה שתאפשר לפד להקל. העלאה בדצמבר נשארת מתומחרת כמעט במלואה.",
+     "en": "A sharp upward revision to growth, PCE in line with no inflation surprise and no relief, and lower claims in a still-tight labour market leave less room to argue for a slowdown that would let the Fed ease. A December hike remains almost fully priced."
     },
     "flags": [
      {
-      "he": "התחזיות אינן אחידות בין המקורות. אף תוצאה בפועל אינה במהדורה הזו. תחזית הליבה של <bdi>0.3%</bdi> היא של הלוח, לא שורה נפרדת של דאו ג׳ונס שנראתה אצל CNBC.",
-      "en": "The forecasts are not uniform across sources. No actual result is in this edition. The core forecast of <bdi>+0.3%</bdi> is the calendar's, not a separate Dow Jones line seen at CNBC."
+      "he": "תגובת החוזים בדקה הראשונה אחרי הפרסום לא אומתה. הסרט נשאר חותמת של <bdi>14:31–14:46</bdi>, לפני הנתונים.",
+      "en": "A first-minute futures reaction was not verified. The tape remains the <bdi>14:31–14:46</bdi> stamp, from before the releases."
      }
     ],
     "confidence": "confirmed",
     "source": {
-     "he": "CNBC, StockLrn ובנק ישראל",
-     "en": "CNBC, StockLrn and the Bank of Israel"
+     "he": "הלשכה לניתוח כלכלי (BEA) — תוצר, והכנסה והוצאה פרטית; הלשכה למפקד (Census) — הזמנות בני־קיימא, <bdi>CB 26-185</bdi>; משרד העבודה (DOL) — תביעות אבטלה שבועיות",
+     "en": "Bureau of Economic Analysis (BEA) for GDP and Personal Income and Outlays, the Census Bureau for durable goods (<bdi>CB 26-185</bdi>), and the Labor Department (DOL) for weekly unemployment insurance"
     },
     "time": "15:30",
     "links": [
      {
       "label": {
-       "he": "CNBC · <bdi>25.11.2026</bdi>",
-       "en": "CNBC · Nov <bdi>25</bdi>, <bdi>2026</bdi>"
+       "he": "הלשכה לניתוח כלכלי · תוצר",
+       "en": "BEA · GDP"
       },
-      "url": "https://www.cnbc.com/2026/11/25/futures-sink-further-into-the-red-as-tech-worries-resurge.html"
+      "url": "https://www.bea.gov/data/gdp/gross-domestic-product"
      },
      {
       "label": {
-       "he": "CNBC · מט״ח",
-       "en": "CNBC · currencies"
+       "he": "הלשכה לניתוח כלכלי · הכנסה והוצאה, אוקטובר <bdi>2026</bdi>",
+       "en": "BEA · Personal Income and Outlays, October <bdi>2026</bdi>"
       },
-      "url": "https://www.cnbc.com/2026/11/25/forex-dollar-currency-federal-reserve-euro.html"
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
      },
      {
       "label": {
-       "he": "StockLrn · לוח <bdi>25.11.2026</bdi>",
-       "en": "StockLrn · calendar, Nov <bdi>25</bdi>, <bdi>2026</bdi>"
+       "he": "הלשכה למפקד · הזמנות בני־קיימא, <bdi>CB 26-185</bdi>",
+       "en": "Census · durable goods, <bdi>CB 26-185</bdi>"
       },
-      "url": "https://stocklrn.com/market/economic-calendar"
+      "url": "https://www.census.gov/manufacturing/m3/adv/pdf/durgd.pdf"
      },
      {
       "label": {
-       "he": "בנק ישראל · <bdi>23.11.2026</bdi>",
-       "en": "Bank of Israel · Nov <bdi>23</bdi>, <bdi>2026</bdi>"
+       "he": "משרד העבודה · תביעות שבועיות",
+       "en": "DOL · weekly unemployment insurance"
       },
-      "url": "https://www.boi.org.il/en/communication-and-publications/press-releases/the-monetary-committee-decides-on-november-23-2026-to-keep-the-interest-rate-unchanged-at-325-percent"
+      "url": "https://www.dol.gov/ui/data.pdf"
      }
     ],
     "image": {
@@ -1535,14 +1539,17 @@ DJ.edition({
      "date": "2026-11-25",
      "time": "15:30",
      "et": "08:30",
-     "status": "unavailable",
      "label": {
       "he": "ארה״ב: מדד <bdi>PCE</bdi> לאוקטובר, תמ״ג רבעון שלישי (אומדן שני), הזמנות בני־קיימא ותביעות אבטלה",
       "en": "US: October PCE, third-quarter GDP (second estimate), durable goods and jobless claims"
      },
      "detail": {
-      "he": "הפרסום ב־<bdi>15:30</bdi> בישראל, יום מוקדם יותר בגלל החג. הצפי, לפי המקורות בכרטיס הנתונים: <bdi>PCE</bdi> כותרת <bdi>0.3%</bdi> בחודש ו־<bdi>3.8%</bdi> בשנה; תמ״ג <bdi>3.4%</bdi> עד <bdi>3.6%</bdi>; הזמנות <bdi>0.5%</bdi> עד <bdi>1.1%</bdi> לפי הסדרה; תביעות כ־<bdi>200</bdi> אלף. התוצאות אינן במהדורה הזו.",
-      "en": "The release is at <bdi>15:30</bdi> Israel, a day early because of the holiday. Consensus, as in the data card: headline PCE <bdi>+0.3%</bdi> on the month and <bdi>3.8%</bdi> on the year; GDP <bdi>3.4%</bdi> to <bdi>3.6%</bdi>; orders <bdi>+0.5%</bdi> to <bdi>+1.1%</bdi> depending on the series; claims about <bdi>200,000</bdi>. The results are not in this edition."
+      "he": "פורסם ב־<bdi>15:30</bdi>. תמ״ג רבעון שלישי (אומדן שני) <bdi>+4.3%</bdi> בשנתון (צפי <bdi>3.4%–3.6%</bdi>). מדד <bdi>PCE</bdi> לאוקטובר <bdi>+0.3%</bdi> בחודש ו־<bdi>3.8%</bdi> בשנה, ליבה <bdi>+0.3%</bdi> / <bdi>3.3%</bdi>; הכנסה אישית <bdi>+0.7%</bdi>. הזמנות בני־קיימא <bdi>+0.2%</bdi> (בלי תחבורה <bdi>+0.5%</bdi>). תביעות ראשוניות <bdi>189</bdi> אלף (צפי <bdi>200–201</bdi> אלף). מקורות: הלשכה לניתוח כלכלי (BEA), הלשכה למפקד (Census) ומשרד העבודה (DOL).",
+      "en": "Released at <bdi>15:30</bdi> Israel. Q3 GDP, second estimate, <bdi>+4.3%</bdi> annualized (consensus <bdi>3.4%–3.6%</bdi>). October PCE <bdi>+0.3%</bdi> m/m and <bdi>3.8%</bdi> y/y, core <bdi>+0.3%</bdi> / <bdi>3.3%</bdi>; personal income <bdi>+0.7%</bdi>. Durable-goods orders <bdi>+0.2%</bdi> (ex-transport <bdi>+0.5%</bdi>). Initial claims <bdi>189,000</bdi> (consensus <bdi>200,000–201,000</bdi>). Sources: BEA, Census and DOL."
+     },
+     "result": {
+      "he": "פורסם ב־<bdi>15:30</bdi>. תמ״ג רבעון שלישי (אומדן שני) <bdi>+4.3%</bdi> בשנתון (צפי <bdi>3.4%–3.6%</bdi>). מדד <bdi>PCE</bdi> לאוקטובר <bdi>+0.3%</bdi> בחודש ו־<bdi>3.8%</bdi> בשנה, ליבה <bdi>+0.3%</bdi> / <bdi>3.3%</bdi>; הכנסה אישית <bdi>+0.7%</bdi>. הזמנות בני־קיימא <bdi>+0.2%</bdi> (בלי תחבורה <bdi>+0.5%</bdi>). תביעות ראשוניות <bdi>189</bdi> אלף (צפי <bdi>200–201</bdi> אלף). <a href=\"https://www.bea.gov/data/gdp/gross-domestic-product\">הלשכה לניתוח כלכלי (BEA), תוצר</a> · <a href=\"https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026\">הלשכה לניתוח כלכלי, הכנסה והוצאה</a> · <a href=\"https://www.census.gov/manufacturing/m3/adv/pdf/durgd.pdf\">הלשכה למפקד (Census)</a> · <a href=\"https://www.dol.gov/ui/data.pdf\">משרד העבודה (DOL)</a>.",
+      "en": "Released at <bdi>15:30</bdi> Israel. Q3 GDP, second estimate, <bdi>+4.3%</bdi> annualized (consensus <bdi>3.4%–3.6%</bdi>). October PCE <bdi>+0.3%</bdi> m/m and <bdi>3.8%</bdi> y/y, core <bdi>+0.3%</bdi> / <bdi>3.3%</bdi>; personal income <bdi>+0.7%</bdi>. Durable-goods orders <bdi>+0.2%</bdi> (ex-transport <bdi>+0.5%</bdi>). Initial claims <bdi>189,000</bdi> (consensus <bdi>200,000–201,000</bdi>). <a href=\"https://www.bea.gov/data/gdp/gross-domestic-product\">BEA, GDP</a> · <a href=\"https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026\">BEA, Personal Income and Outlays</a> · <a href=\"https://www.census.gov/manufacturing/m3/adv/pdf/durgd.pdf\">Census</a> · <a href=\"https://www.dol.gov/ui/data.pdf\">DOL</a>."
      }
     },
     {
@@ -2090,7 +2097,7 @@ DJ.edition({
   ]
  },
  "headline": {
-  "he": "החוזים בוול סטריט מאריכים את מכירת מניות ה־AI לפני מדד <bdi>PCE</bdi> ומנת נתונים שלפני החג; אמברלה ואורבן אאוטפיטרס יורדות",
-  "en": "Wall Street futures extend the AI selloff ahead of PCE inflation and a pre-holiday data batch; Ambarella and Urban Outfitters slide"
+  "he": "החוזים בוול סטריט מאריכים את מכירת מניות ה־AI; מנת הנתונים שלפני החג כבר פורסמה; אמברלה ואורבן אאוטפיטרס יורדות",
+  "en": "Wall Street futures extend the AI selloff; the pre-holiday data batch has printed; Ambarella and Urban Outfitters slide"
  }
 });
